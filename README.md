@@ -1,5 +1,15 @@
 Veno-Echo is a powerful stereo digital delay device for Eurorack synthesizers.
 
+How to flash Firmware:
+
+1) Download the latest firmware .bin file from Veno-Echo/Firmware
+2) Connect the Veno-Echo to your computer via the micro-USB port on the back
+3) Press both buttons on the back of the module (either side of the micro-USB port)
+4) Go to https://electro-smith.github.io/Programmer/ using Chrome
+5) Click Connect, select 'DFU in FS Mode - Paired' and Connect
+6) Under 'Or select a file from your computer' hit Browse, and point it at the downloaded .bin file
+7) Hit Program and wait until it completes.
+
 ABOUT
 • Two separate channels with independent controls for delay time, feedback, and reverse direction. Combine with width and cross feedback, for total control over the stereo soundscape
 
