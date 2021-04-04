@@ -1,0 +1,341 @@
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"scale.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._Z5scalefff9CurveType,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_Z5scalefff9CurveType
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_Z5scalefff9CurveType:
+  27              	.LVL0:
+  28              	.LFB544:
+  29              		.file 1 "scale.cpp"
+   1:scale.cpp     **** // Copyright 2020 Adam Fulford
+   2:scale.cpp     **** // 
+   3:scale.cpp     **** // Permission is hereby granted, free of charge, to any person obtaining a copy
+   4:scale.cpp     **** // of this software and associated documentation files (the "Software"), to deal
+   5:scale.cpp     **** // in the Software without restriction, including without limitation the rights
+   6:scale.cpp     **** // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   7:scale.cpp     **** // copies of the Software, and to permit persons to whom the Software is
+   8:scale.cpp     **** // furnished to do so, subject to the following conditions:
+   9:scale.cpp     **** // 
+  10:scale.cpp     **** // The above copyright notice and this permission notice shall be included in
+  11:scale.cpp     **** // all copies or substantial portions of the Software.
+  12:scale.cpp     **** // 
+  13:scale.cpp     **** // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  14:scale.cpp     **** // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  15:scale.cpp     **** // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  16:scale.cpp     **** // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  17:scale.cpp     **** // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  18:scale.cpp     **** // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  19:scale.cpp     **** // THE SOFTWARE.
+  20:scale.cpp     **** // 
+  21:scale.cpp     **** // See http://creativecommons.org/licenses/MIT/ for more information.
+  22:scale.cpp     **** 
+  23:scale.cpp     **** #include "scale.h"
+  24:scale.cpp     **** 
+  25:scale.cpp     **** float scale(float input, float outputMin, float outputMax, CurveType curve)
+  26:scale.cpp     **** {
+  30              		.loc 1 26 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 2
+
+
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  27:scale.cpp     ****     float val{};
+  34              		.loc 1 27 5 view .LVU1
+  28:scale.cpp     ****     float lmin{logf(outputMin < 0.0000001f ? 0.0000001f : outputMin)};
+  35              		.loc 1 28 5 view .LVU2
+  36              		.loc 1 28 20 is_stmt 0 view .LVU3
+  37 0000 DFED297A 		vldr.32	s15, .L13
+  38 0004 F4EEE70A 		vcmpe.f32	s1, s15
+  26:scale.cpp     ****     float val{};
+  39              		.loc 1 26 1 view .LVU4
+  40 0008 10B5     		push	{r4, lr}
+  41              		.cfi_def_cfa_offset 8
+  42              		.cfi_offset 4, -8
+  43              		.cfi_offset 14, -4
+  44              		.loc 1 28 20 view .LVU5
+  45 000a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+  26:scale.cpp     ****     float val{};
+  46              		.loc 1 26 1 view .LVU6
+  47 000e 0446     		mov	r4, r0
+  48 0010 2DED048B 		vpush.64	{d8, d9}
+  49              		.cfi_def_cfa_offset 24
+  50              		.cfi_offset 80, -24
+  51              		.cfi_offset 81, -20
+  52              		.cfi_offset 82, -16
+  53              		.cfi_offset 83, -12
+  26:scale.cpp     ****     float val{};
+  54              		.loc 1 26 1 view .LVU7
+  55 0014 F0EE418A 		vmov.f32	s17, s2
+  56 0018 B0EE409A 		vmov.f32	s18, s0
+  57              		.loc 1 28 20 view .LVU8
+  58 001c 54BF     		ite	pl
+  59 001e B0EE600A 		vmovpl.f32	s0, s1
+  60 0022 B0EE670A 		vmovmi.f32	s0, s15
+  61              	.LVL1:
+  26:scale.cpp     ****     float val{};
+  62              		.loc 1 26 1 view .LVU9
+  63 0026 B0EE608A 		vmov.f32	s16, s1
+  64              		.loc 1 28 20 view .LVU10
+  65 002a FFF7FEFF 		bl	logf
+  66              	.LVL2:
+  67              		.loc 1 28 20 view .LVU11
+  68 002e F0EE409A 		vmov.f32	s19, s0
+  29:scale.cpp     ****     float lmax{logf(outputMax)};
+  69              		.loc 1 29 20 view .LVU12
+  70 0032 B0EE680A 		vmov.f32	s0, s17
+  71              	.LVL3:
+  72              		.loc 1 29 5 is_stmt 1 view .LVU13
+  73              		.loc 1 29 20 is_stmt 0 view .LVU14
+  74 0036 FFF7FEFF 		bl	logf
+  75              	.LVL4:
+  30:scale.cpp     **** 
+  31:scale.cpp     ****     switch(curve)
+  76              		.loc 1 31 5 is_stmt 1 view .LVU15
+  77 003a 032C     		cmp	r4, #3
+  78 003c 30D8     		bhi	.L10
+  79 003e DFE804F0 		tbb	[pc, r4]
+  80              	.L5:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 3
+
+
+  81 0042 0F       		.byte	(.L8-.L5)/2
+  82 0043 18       		.byte	(.L7-.L5)/2
+  83 0044 23       		.byte	(.L6-.L5)/2
+  84 0045 02       		.byte	(.L4-.L5)/2
+  85              		.p2align 1
+  86              	.L4:
+  32:scale.cpp     ****     {
+  33:scale.cpp     ****         case LINEAR:
+  34:scale.cpp     ****             val = (input * (outputMax - outputMin)) + outputMin;
+  35:scale.cpp     ****         break;
+  36:scale.cpp     **** 
+  37:scale.cpp     ****         case EXPONENTIAL:
+  38:scale.cpp     ****             val = ((input * input ) * (outputMax - outputMin)) + outputMin;
+  39:scale.cpp     ****         break;
+  40:scale.cpp     **** 
+  41:scale.cpp     ****         case LOGARITHMIC:
+  42:scale.cpp     ****             val = expf((input * (lmax - lmin)) + lmin);
+  43:scale.cpp     ****         break;
+  44:scale.cpp     ****         
+  45:scale.cpp     ****         case CUBE:
+  87              		.loc 1 45 9 view .LVU16
+  46:scale.cpp     ****             val = ((input * (input * input)) * (outputMax - outputMin)) + outputMin;
+  88              		.loc 1 46 13 view .LVU17
+  89              		.loc 1 46 36 is_stmt 0 view .LVU18
+  90 0046 29EE090A 		vmul.f32	s0, s18, s18
+  91              	.LVL5:
+  92              		.loc 1 46 59 view .LVU19
+  93 004a 78EEC88A 		vsub.f32	s17, s17, s16
+  94              	.LVL6:
+  95              		.loc 1 46 27 view .LVU20
+  96 004e 20EE099A 		vmul.f32	s18, s0, s18
+  97              	.LVL7:
+  98              		.loc 1 46 17 view .LVU21
+  99 0052 B0EE480A 		vmov.f32	s0, s16
+ 100 0056 A9EE280A 		vfma.f32	s0, s18, s17
+ 101              	.LVL8:
+  47:scale.cpp     ****         break;
+ 102              		.loc 1 47 9 is_stmt 1 view .LVU22
+ 103              	.L1:
+  48:scale.cpp     ****         
+  49:scale.cpp     ****         default: 
+  50:scale.cpp     ****         break;
+  51:scale.cpp     ****     }
+  52:scale.cpp     ****     return val;
+  53:scale.cpp     **** }
+ 104              		.loc 1 53 1 is_stmt 0 view .LVU23
+ 105 005a BDEC048B 		vldm	sp!, {d8-d9}
+ 106              		.cfi_remember_state
+ 107              		.cfi_restore 82
+ 108              		.cfi_restore 83
+ 109              		.cfi_restore 80
+ 110              		.cfi_restore 81
+ 111              		.cfi_def_cfa_offset 8
+ 112              	.LVL9:
+ 113              		.loc 1 53 1 view .LVU24
+ 114 005e 10BD     		pop	{r4, pc}
+ 115              	.LVL10:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 4
+
+
+ 116              	.L8:
+ 117              		.cfi_restore_state
+  33:scale.cpp     ****             val = (input * (outputMax - outputMin)) + outputMin;
+ 118              		.loc 1 33 9 is_stmt 1 view .LVU25
+  34:scale.cpp     ****         break;
+ 119              		.loc 1 34 13 view .LVU26
+  34:scale.cpp     ****         break;
+ 120              		.loc 1 34 39 is_stmt 0 view .LVU27
+ 121 0060 78EEC88A 		vsub.f32	s17, s17, s16
+ 122              	.LVL11:
+  34:scale.cpp     ****         break;
+ 123              		.loc 1 34 17 view .LVU28
+ 124 0064 B0EE480A 		vmov.f32	s0, s16
+ 125              	.LVL12:
+  34:scale.cpp     ****         break;
+ 126              		.loc 1 34 17 view .LVU29
+ 127 0068 A8EE890A 		vfma.f32	s0, s17, s18
+ 128              	.LVL13:
+  35:scale.cpp     **** 
+ 129              		.loc 1 35 9 is_stmt 1 view .LVU30
+ 130              		.loc 1 53 1 is_stmt 0 view .LVU31
+ 131 006c BDEC048B 		vldm	sp!, {d8-d9}
+ 132              		.cfi_remember_state
+ 133              		.cfi_restore 82
+ 134              		.cfi_restore 83
+ 135              		.cfi_restore 80
+ 136              		.cfi_restore 81
+ 137              		.cfi_def_cfa_offset 8
+ 138              	.LVL14:
+ 139              		.loc 1 53 1 view .LVU32
+ 140 0070 10BD     		pop	{r4, pc}
+ 141              	.LVL15:
+ 142              	.L7:
+ 143              		.cfi_restore_state
+  37:scale.cpp     ****             val = ((input * input ) * (outputMax - outputMin)) + outputMin;
+ 144              		.loc 1 37 9 is_stmt 1 view .LVU33
+  38:scale.cpp     ****         break;
+ 145              		.loc 1 38 13 view .LVU34
+  38:scale.cpp     ****         break;
+ 146              		.loc 1 38 27 is_stmt 0 view .LVU35
+ 147 0072 29EE099A 		vmul.f32	s18, s18, s18
+ 148              	.LVL16:
+  38:scale.cpp     ****         break;
+ 149              		.loc 1 38 50 view .LVU36
+ 150 0076 78EEC88A 		vsub.f32	s17, s17, s16
+ 151              	.LVL17:
+  38:scale.cpp     ****         break;
+ 152              		.loc 1 38 17 view .LVU37
+ 153 007a B0EE480A 		vmov.f32	s0, s16
+ 154              	.LVL18:
+  38:scale.cpp     ****         break;
+ 155              		.loc 1 38 17 view .LVU38
+ 156 007e A9EE280A 		vfma.f32	s0, s18, s17
+ 157              	.LVL19:
+  39:scale.cpp     **** 
+ 158              		.loc 1 39 9 is_stmt 1 view .LVU39
+ 159              		.loc 1 53 1 is_stmt 0 view .LVU40
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 5
+
+
+ 160 0082 BDEC048B 		vldm	sp!, {d8-d9}
+ 161              		.cfi_remember_state
+ 162              		.cfi_restore 82
+ 163              		.cfi_restore 83
+ 164              		.cfi_restore 80
+ 165              		.cfi_restore 81
+ 166              		.cfi_def_cfa_offset 8
+ 167              	.LVL20:
+ 168              		.loc 1 53 1 view .LVU41
+ 169 0086 10BD     		pop	{r4, pc}
+ 170              	.LVL21:
+ 171              	.L6:
+ 172              		.cfi_restore_state
+  41:scale.cpp     ****             val = expf((input * (lmax - lmin)) + lmin);
+ 173              		.loc 1 41 9 is_stmt 1 view .LVU42
+  42:scale.cpp     ****         break;
+ 174              		.loc 1 42 13 view .LVU43
+  42:scale.cpp     ****         break;
+ 175              		.loc 1 42 39 is_stmt 0 view .LVU44
+ 176 0088 70EE697A 		vsub.f32	s15, s0, s19
+  42:scale.cpp     ****         break;
+ 177              		.loc 1 42 23 view .LVU45
+ 178 008c B0EE690A 		vmov.f32	s0, s19
+ 179              	.LVL22:
+  42:scale.cpp     ****         break;
+ 180              		.loc 1 42 23 view .LVU46
+ 181 0090 A7EE890A 		vfma.f32	s0, s15, s18
+ 182              		.loc 1 53 1 view .LVU47
+ 183 0094 BDEC048B 		vldm	sp!, {d8-d9}
+ 184              		.cfi_restore 82
+ 185              		.cfi_restore 83
+ 186              		.cfi_restore 80
+ 187              		.cfi_restore 81
+ 188              		.cfi_def_cfa_offset 8
+ 189              	.LVL23:
+ 190              		.loc 1 53 1 view .LVU48
+ 191 0098 BDE81040 		pop	{r4, lr}
+ 192              		.cfi_restore 14
+ 193              		.cfi_restore 4
+ 194              		.cfi_def_cfa_offset 0
+  42:scale.cpp     ****         break;
+ 195              		.loc 1 42 23 view .LVU49
+ 196 009c FFF7FEBF 		b	expf
+ 197              	.LVL24:
+ 198              	.L10:
+  29:scale.cpp     **** 
+ 199              		.loc 1 29 20 view .LVU50
+ 200 00a0 9FED020A 		vldr.32	s0, .L13+4
+ 201              	.LVL25:
+  52:scale.cpp     **** }
+ 202              		.loc 1 52 5 is_stmt 1 view .LVU51
+  52:scale.cpp     **** }
+ 203              		.loc 1 52 12 is_stmt 0 view .LVU52
+ 204 00a4 D9E7     		b	.L1
+ 205              	.L14:
+ 206 00a6 00BF     		.align	2
+ 207              	.L13:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 6
+
+
+ 208 00a8 95BFD633 		.word	869711765
+ 209 00ac 00000000 		.word	0
+ 210              		.cfi_endproc
+ 211              	.LFE544:
+ 213              		.text
+ 214              	.Letext0:
+ 215              		.file 2 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+ 216              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
+ 217              		.file 4 "../libdaisy/Drivers/CMSIS/Include/core_cm7.h"
+ 218              		.file 5 "../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
+ 219              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/c
+ 220              		.file 7 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/b
+ 221              		.file 8 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/a
+ 222              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h"
+ 223              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
+ 224              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
+ 225              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
+ 226              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
+ 227              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ 228              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 229              		.file 16 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
+ 230              		.file 17 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
+ 231              		.file 18 "scale.h"
+ 232              		.file 19 "<built-in>"
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 scale.cpp
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s:17     .text._Z5scalefff9CurveType:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s:26     .text._Z5scalefff9CurveType:0000000000000000 _Z5scalefff9CurveType
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s:81     .text._Z5scalefff9CurveType:0000000000000042 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s:85     .text._Z5scalefff9CurveType:0000000000000046 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s:208    .text._Z5scalefff9CurveType:00000000000000a8 $d
+
+UNDEFINED SYMBOLS
+logf
+expf

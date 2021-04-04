@@ -1,0 +1,1227 @@
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"QSPI_Settings.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN5daisy9DaisySeedD2Ev,"axG",%progbits,_ZN5daisy9DaisySeedD5Ev,comdat
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.weak	_ZN5daisy9DaisySeedD2Ev
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_ZN5daisy9DaisySeedD2Ev:
+  27              	.LVL0:
+  28              	.LFB1703:
+  29              		.file 1 "../libdaisy/src/daisy_seed.h"
+   1:../libdaisy/src/daisy_seed.h **** #pragma once
+   2:../libdaisy/src/daisy_seed.h **** #ifndef DSY_SEED_H
+   3:../libdaisy/src/daisy_seed.h **** #define DSY_SEED_H
+   4:../libdaisy/src/daisy_seed.h **** 
+   5:../libdaisy/src/daisy_seed.h **** #include "daisy.h"
+   6:../libdaisy/src/daisy_seed.h **** 
+   7:../libdaisy/src/daisy_seed.h **** //Uncomment this out if you're still using the rev2 hardware
+   8:../libdaisy/src/daisy_seed.h **** //#define SEED_REV2
+   9:../libdaisy/src/daisy_seed.h **** 
+  10:../libdaisy/src/daisy_seed.h **** namespace daisy
+  11:../libdaisy/src/daisy_seed.h **** {
+  12:../libdaisy/src/daisy_seed.h **** /**
+  13:../libdaisy/src/daisy_seed.h ****    @brief This is the higher-level interface for the Daisy board. \n 
+  14:../libdaisy/src/daisy_seed.h ****     All basic peripheral configuration/initialization is setup here. \n
+  15:../libdaisy/src/daisy_seed.h **** 
+  16:../libdaisy/src/daisy_seed.h ****    @ingroup boards
+  17:../libdaisy/src/daisy_seed.h **** */
+  18:../libdaisy/src/daisy_seed.h **** class DaisySeed
+  19:../libdaisy/src/daisy_seed.h **** {
+  20:../libdaisy/src/daisy_seed.h ****   public:
+  21:../libdaisy/src/daisy_seed.h ****     DaisySeed() {}
+  22:../libdaisy/src/daisy_seed.h ****     ~DaisySeed() {}
+  30              		.loc 1 22 5 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35              	.LBB55:
+  36              	.LBI55:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 2
+
+
+  37              		.file 2 "../libdaisy/src/sys/system.h"
+   1:../libdaisy/src/sys/system.h **** #ifndef DSY_SYSTEM_H
+   2:../libdaisy/src/sys/system.h **** #define DSY_SYSTEM_H
+   3:../libdaisy/src/sys/system.h **** 
+   4:../libdaisy/src/sys/system.h **** #include <cstdint>
+   5:../libdaisy/src/sys/system.h **** #include "per/tim.h"
+   6:../libdaisy/src/sys/system.h **** 
+   7:../libdaisy/src/sys/system.h **** namespace daisy
+   8:../libdaisy/src/sys/system.h **** {
+   9:../libdaisy/src/sys/system.h **** /** A handle for interacting with the Core System. 
+  10:../libdaisy/src/sys/system.h ****  ** This includes the Clock tree, MPU, global DMA initialization,
+  11:../libdaisy/src/sys/system.h ****  ** cache handling, and any other necessary global initiailzation
+  12:../libdaisy/src/sys/system.h ****  **
+  13:../libdaisy/src/sys/system.h ****  ** @author shensley
+  14:../libdaisy/src/sys/system.h ****  ** @addtogroup system
+  15:../libdaisy/src/sys/system.h ****  */
+  16:../libdaisy/src/sys/system.h **** class System
+  17:../libdaisy/src/sys/system.h **** {
+  18:../libdaisy/src/sys/system.h ****   public:
+  19:../libdaisy/src/sys/system.h ****     /** Contains settings for initializing the System */
+  20:../libdaisy/src/sys/system.h ****     struct Config
+  21:../libdaisy/src/sys/system.h ****     {
+  22:../libdaisy/src/sys/system.h ****         /** Specifies the system clock frequency that feeds APB/AHB clocks, etc. */
+  23:../libdaisy/src/sys/system.h ****         enum class SysClkFreq
+  24:../libdaisy/src/sys/system.h ****         {
+  25:../libdaisy/src/sys/system.h ****             FREQ_400MHZ,
+  26:../libdaisy/src/sys/system.h ****             FREQ_480MHZ,
+  27:../libdaisy/src/sys/system.h ****         };
+  28:../libdaisy/src/sys/system.h **** 
+  29:../libdaisy/src/sys/system.h ****         /** Method to call on the struct to set to defaults
+  30:../libdaisy/src/sys/system.h ****          ** CPU Freq set to 400MHz
+  31:../libdaisy/src/sys/system.h ****          ** Cache Enabled 
+  32:../libdaisy/src/sys/system.h ****          ** */
+  33:../libdaisy/src/sys/system.h ****         void Defaults()
+  34:../libdaisy/src/sys/system.h ****         {
+  35:../libdaisy/src/sys/system.h ****             cpu_freq   = SysClkFreq::FREQ_400MHZ;
+  36:../libdaisy/src/sys/system.h ****             use_dcache = true;
+  37:../libdaisy/src/sys/system.h ****             use_icache = true;
+  38:../libdaisy/src/sys/system.h ****         }
+  39:../libdaisy/src/sys/system.h **** 
+  40:../libdaisy/src/sys/system.h ****         /** Method to call on the struct to set to boost mode:
+  41:../libdaisy/src/sys/system.h ****          ** CPU Freq set to 480MHz
+  42:../libdaisy/src/sys/system.h ****          ** Cache Enabled 
+  43:../libdaisy/src/sys/system.h ****          ** */
+  44:../libdaisy/src/sys/system.h ****         void Boost()
+  45:../libdaisy/src/sys/system.h ****         {
+  46:../libdaisy/src/sys/system.h ****             cpu_freq   = SysClkFreq::FREQ_480MHZ;
+  47:../libdaisy/src/sys/system.h ****             use_dcache = true;
+  48:../libdaisy/src/sys/system.h ****             use_icache = true;
+  49:../libdaisy/src/sys/system.h ****         }
+  50:../libdaisy/src/sys/system.h **** 
+  51:../libdaisy/src/sys/system.h ****         SysClkFreq cpu_freq;
+  52:../libdaisy/src/sys/system.h ****         bool       use_dcache;
+  53:../libdaisy/src/sys/system.h ****         bool       use_icache;
+  54:../libdaisy/src/sys/system.h ****     };
+  55:../libdaisy/src/sys/system.h **** 
+  56:../libdaisy/src/sys/system.h ****     System() {}
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 3
+
+
+  57:../libdaisy/src/sys/system.h ****     ~System() {}
+  38              		.loc 2 57 5 view .LVU1
+  39              		.loc 2 57 5 is_stmt 0 view .LVU2
+  40              	.LBE55:
+  41              	.LBB56:
+  42              	.LBI56:
+  43              		.file 3 "../libdaisy/src/hid/usb.h"
+   1:../libdaisy/src/hid/usb.h **** #pragma once
+   2:../libdaisy/src/hid/usb.h **** #ifndef DSY_HID_USB_H
+   3:../libdaisy/src/hid/usb.h **** #define DSY_HID_USB_H
+   4:../libdaisy/src/hid/usb.h **** #include <stdint.h>
+   5:../libdaisy/src/hid/usb.h **** #include <stdlib.h>
+   6:../libdaisy/src/hid/usb.h **** 
+   7:../libdaisy/src/hid/usb.h **** namespace daisy
+   8:../libdaisy/src/hid/usb.h **** /** @addtogroup externals
+   9:../libdaisy/src/hid/usb.h ****     @{
+  10:../libdaisy/src/hid/usb.h **** */
+  11:../libdaisy/src/hid/usb.h **** 
+  12:../libdaisy/src/hid/usb.h **** {
+  13:../libdaisy/src/hid/usb.h **** /** 
+  14:../libdaisy/src/hid/usb.h ****     @brief Interface for initializing and using the USB Peripherals on the daisy
+  15:../libdaisy/src/hid/usb.h ****     @author Stephen Hensley
+  16:../libdaisy/src/hid/usb.h ****     @date December 2019
+  17:../libdaisy/src/hid/usb.h **** */
+  18:../libdaisy/src/hid/usb.h **** class UsbHandle
+  19:../libdaisy/src/hid/usb.h **** {
+  20:../libdaisy/src/hid/usb.h ****   public:
+  21:../libdaisy/src/hid/usb.h ****     /** Return values for USBHandle Functions */
+  22:../libdaisy/src/hid/usb.h ****     enum class Result
+  23:../libdaisy/src/hid/usb.h ****     {
+  24:../libdaisy/src/hid/usb.h ****         OK,
+  25:../libdaisy/src/hid/usb.h ****         ERR,
+  26:../libdaisy/src/hid/usb.h ****     };
+  27:../libdaisy/src/hid/usb.h **** 
+  28:../libdaisy/src/hid/usb.h ****     /** Specified which of the two USB Peripherals to initialize. */
+  29:../libdaisy/src/hid/usb.h ****     enum UsbPeriph
+  30:../libdaisy/src/hid/usb.h ****     {
+  31:../libdaisy/src/hid/usb.h ****         FS_INTERNAL, /**< Internal pin */
+  32:../libdaisy/src/hid/usb.h ****         FS_EXTERNAL, /**< FS External D+ pin is Pin 38 (GPIO32). FS External D- pin is Pin 37 (GPIO
+  33:../libdaisy/src/hid/usb.h ****         FS_BOTH,     /**< Both */
+  34:../libdaisy/src/hid/usb.h ****     };
+  35:../libdaisy/src/hid/usb.h **** 
+  36:../libdaisy/src/hid/usb.h **** 
+  37:../libdaisy/src/hid/usb.h ****     /** Function called upon reception of a buffer */
+  38:../libdaisy/src/hid/usb.h ****     typedef void (*ReceiveCallback)(uint8_t* buff, uint32_t* len);
+  39:../libdaisy/src/hid/usb.h **** 
+  40:../libdaisy/src/hid/usb.h ****     UsbHandle() {}
+  41:../libdaisy/src/hid/usb.h **** 
+  42:../libdaisy/src/hid/usb.h ****     ~UsbHandle() {}
+  44              		.loc 3 42 5 is_stmt 1 view .LVU3
+  45              		.loc 3 42 5 is_stmt 0 view .LVU4
+  46              	.LBE56:
+  47              	.LBB57:
+  48              	.LBI57:
+  49              		.file 4 "../libdaisy/src/per/adc.h"
+   1:../libdaisy/src/per/adc.h **** #pragma once
+   2:../libdaisy/src/per/adc.h **** #ifndef DSY_ADC_H
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 4
+
+
+   3:../libdaisy/src/per/adc.h **** #define DSY_ADC_H /**< Macro */
+   4:../libdaisy/src/per/adc.h **** #include <stdint.h>
+   5:../libdaisy/src/per/adc.h **** #include <stdlib.h>
+   6:../libdaisy/src/per/adc.h **** #include "daisy_core.h"
+   7:../libdaisy/src/per/adc.h **** #include "per/gpio.h"
+   8:../libdaisy/src/per/adc.h **** 
+   9:../libdaisy/src/per/adc.h **** #define DSY_ADC_MAX_CHANNELS 14 /**< Maximum number of ADC channels */
+  10:../libdaisy/src/per/adc.h **** 
+  11:../libdaisy/src/per/adc.h **** namespace daisy
+  12:../libdaisy/src/per/adc.h **** {
+  13:../libdaisy/src/per/adc.h **** /** @addtogroup analog_digital_conversion
+  14:../libdaisy/src/per/adc.h ****     @{
+  15:../libdaisy/src/per/adc.h **** */
+  16:../libdaisy/src/per/adc.h **** 
+  17:../libdaisy/src/per/adc.h **** /* While there may not be many configuration options here,
+  18:../libdaisy/src/per/adc.h **** using a struct like this allows us to add more configuration
+  19:../libdaisy/src/per/adc.h **** later without breaking existing functionality.
+  20:../libdaisy/src/per/adc.h **** */
+  21:../libdaisy/src/per/adc.h **** 
+  22:../libdaisy/src/per/adc.h **** /** Configuration Structure for a given channel */
+  23:../libdaisy/src/per/adc.h **** struct AdcChannelConfig
+  24:../libdaisy/src/per/adc.h **** {
+  25:../libdaisy/src/per/adc.h ****     /** Which pin to use for multiplexing */
+  26:../libdaisy/src/per/adc.h ****     enum MuxPin
+  27:../libdaisy/src/per/adc.h ****     {
+  28:../libdaisy/src/per/adc.h ****         MUX_SEL_0,    /**< & */
+  29:../libdaisy/src/per/adc.h ****         MUX_SEL_1,    /**< & */
+  30:../libdaisy/src/per/adc.h ****         MUX_SEL_2,    /**< & */
+  31:../libdaisy/src/per/adc.h ****         MUX_SEL_LAST, /**< & */
+  32:../libdaisy/src/per/adc.h ****     };
+  33:../libdaisy/src/per/adc.h **** 
+  34:../libdaisy/src/per/adc.h ****     /** Initializes a single ADC pin as an ADC. 
+  35:../libdaisy/src/per/adc.h ****     \param pin Pin to init.
+  36:../libdaisy/src/per/adc.h ****      */
+  37:../libdaisy/src/per/adc.h ****     void InitSingle(dsy_gpio_pin pin);
+  38:../libdaisy/src/per/adc.h **** 
+  39:../libdaisy/src/per/adc.h ****     /** 
+  40:../libdaisy/src/per/adc.h ****     Initializes a single ADC pin as a Multiplexed ADC.
+  41:../libdaisy/src/per/adc.h ****     Requires a CD405X Multiplexer connected to the pin.
+  42:../libdaisy/src/per/adc.h ****     You only need to supply the mux pins that are required,
+  43:../libdaisy/src/per/adc.h ****     e.g. a 4052 mux would only require mux_0 and mux_1.
+  44:../libdaisy/src/per/adc.h ****     Internal Callbacks handle the pin addressing.
+  45:../libdaisy/src/per/adc.h ****     \param mux_channels must be 1-8
+  46:../libdaisy/src/per/adc.h ****     \param mux_0 First mux pin
+  47:../libdaisy/src/per/adc.h ****     \param mux_1 Second mux pin
+  48:../libdaisy/src/per/adc.h ****     \param mux_2 Third mux pin
+  49:../libdaisy/src/per/adc.h ****     \param adc_pin &
+  50:../libdaisy/src/per/adc.h ****     */
+  51:../libdaisy/src/per/adc.h ****     void InitMux(dsy_gpio_pin adc_pin,
+  52:../libdaisy/src/per/adc.h ****                  size_t       mux_channels,
+  53:../libdaisy/src/per/adc.h ****                  dsy_gpio_pin mux_0,
+  54:../libdaisy/src/per/adc.h ****                  dsy_gpio_pin mux_1 = {DSY_GPIOX, 0},
+  55:../libdaisy/src/per/adc.h ****                  dsy_gpio_pin mux_2 = {DSY_GPIOX, 0});
+  56:../libdaisy/src/per/adc.h **** 
+  57:../libdaisy/src/per/adc.h ****     dsy_gpio pin_;                   /**< & */
+  58:../libdaisy/src/per/adc.h ****     dsy_gpio mux_pin_[MUX_SEL_LAST]; /**< & */
+  59:../libdaisy/src/per/adc.h ****     uint8_t  mux_channels_;          /**< & */
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 5
+
+
+  60:../libdaisy/src/per/adc.h **** };
+  61:../libdaisy/src/per/adc.h **** 
+  62:../libdaisy/src/per/adc.h **** /**
+  63:../libdaisy/src/per/adc.h ****    Handler for analog to digital conversion
+  64:../libdaisy/src/per/adc.h **** */
+  65:../libdaisy/src/per/adc.h **** class AdcHandle
+  66:../libdaisy/src/per/adc.h **** {
+  67:../libdaisy/src/per/adc.h ****   public:
+  68:../libdaisy/src/per/adc.h ****     /** Supported oversampling amounts */
+  69:../libdaisy/src/per/adc.h ****     enum OverSampling
+  70:../libdaisy/src/per/adc.h ****     {
+  71:../libdaisy/src/per/adc.h ****         OVS_NONE, /**< & */
+  72:../libdaisy/src/per/adc.h ****         OVS_4,    /**< & */
+  73:../libdaisy/src/per/adc.h ****         OVS_8,    /**< & */
+  74:../libdaisy/src/per/adc.h ****         OVS_16,   /**< & */
+  75:../libdaisy/src/per/adc.h ****         OVS_32,   /**< & */
+  76:../libdaisy/src/per/adc.h ****         OVS_64,   /**< & */
+  77:../libdaisy/src/per/adc.h ****         OVS_128,  /**< & */
+  78:../libdaisy/src/per/adc.h ****         OVS_256,  /**< & */
+  79:../libdaisy/src/per/adc.h ****         OVS_512,  /**< & */
+  80:../libdaisy/src/per/adc.h ****         OVS_1024, /**< & */
+  81:../libdaisy/src/per/adc.h ****         OVS_LAST, /**< & */
+  82:../libdaisy/src/per/adc.h ****     };
+  83:../libdaisy/src/per/adc.h **** 
+  84:../libdaisy/src/per/adc.h ****     AdcHandle() {}
+  85:../libdaisy/src/per/adc.h ****     ~AdcHandle() {}
+  50              		.loc 4 85 5 is_stmt 1 view .LVU5
+  51              		.loc 4 85 5 is_stmt 0 view .LVU6
+  52              	.LBE57:
+  53              	.LBB58:
+  54              	.LBI58:
+  55              		.file 5 "../libdaisy/src/hid/audio.h"
+   1:../libdaisy/src/hid/audio.h **** #ifndef DSY_AUDIO_H
+   2:../libdaisy/src/hid/audio.h **** #define DSY_AUDIO_H /**< & */
+   3:../libdaisy/src/hid/audio.h **** 
+   4:../libdaisy/src/hid/audio.h **** #include "per/sai.h"
+   5:../libdaisy/src/hid/audio.h **** 
+   6:../libdaisy/src/hid/audio.h **** namespace daisy
+   7:../libdaisy/src/hid/audio.h **** {
+   8:../libdaisy/src/hid/audio.h **** class AudioHandle
+   9:../libdaisy/src/hid/audio.h **** {
+  10:../libdaisy/src/hid/audio.h ****   public:
+  11:../libdaisy/src/hid/audio.h ****     /** Manually configurable details about the Audio Engine */
+  12:../libdaisy/src/hid/audio.h ****     /** TODO: Figure out how to get samplerate in here. */
+  13:../libdaisy/src/hid/audio.h ****     struct Config
+  14:../libdaisy/src/hid/audio.h ****     {
+  15:../libdaisy/src/hid/audio.h ****         size_t                        blocksize;
+  16:../libdaisy/src/hid/audio.h ****         SaiHandle::Config::SampleRate samplerate;
+  17:../libdaisy/src/hid/audio.h ****         float                         postgain;
+  18:../libdaisy/src/hid/audio.h ****     };
+  19:../libdaisy/src/hid/audio.h **** 
+  20:../libdaisy/src/hid/audio.h ****     enum class Result
+  21:../libdaisy/src/hid/audio.h ****     {
+  22:../libdaisy/src/hid/audio.h ****         OK,
+  23:../libdaisy/src/hid/audio.h ****         ERR,
+  24:../libdaisy/src/hid/audio.h ****     };
+  25:../libdaisy/src/hid/audio.h **** 
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 6
+
+
+  26:../libdaisy/src/hid/audio.h ****     /** Non-Interleaving Callback format. Both arrays arranged by float[chn][sample] */
+  27:../libdaisy/src/hid/audio.h ****     typedef void (*AudioCallback)(float** in, float** out, size_t size);
+  28:../libdaisy/src/hid/audio.h **** 
+  29:../libdaisy/src/hid/audio.h ****     /** Non-Interleaving Callback format. 
+  30:../libdaisy/src/hid/audio.h ****      ** audio is prepared as { L0, R0, L1, R1, . . . LN, RN }
+  31:../libdaisy/src/hid/audio.h ****      */
+  32:../libdaisy/src/hid/audio.h ****     typedef void (*InterleavingAudioCallback)(float* in,
+  33:../libdaisy/src/hid/audio.h ****                                               float* out,
+  34:../libdaisy/src/hid/audio.h ****                                               size_t size);
+  35:../libdaisy/src/hid/audio.h **** 
+  36:../libdaisy/src/hid/audio.h ****     AudioHandle() : pimpl_(nullptr) {}
+  37:../libdaisy/src/hid/audio.h ****     ~AudioHandle() {}
+  56              		.loc 5 37 5 is_stmt 1 view .LVU7
+  57              		.loc 5 37 5 is_stmt 0 view .LVU8
+  58              	.LBE58:
+  59              		.loc 1 22 19 view .LVU9
+  60 0000 7047     		bx	lr
+  61              		.cfi_endproc
+  62              	.LFE1703:
+  64              		.weak	_ZN5daisy9DaisySeedD1Ev
+  65              		.thumb_set _ZN5daisy9DaisySeedD1Ev,_ZN5daisy9DaisySeedD2Ev
+  66 0002 00BF     		.section	.text._Z12SaveSettingsRK8Settings,"ax",%progbits
+  67              		.align	1
+  68              		.p2align 2,,3
+  69              		.global	_Z12SaveSettingsRK8Settings
+  70              		.syntax unified
+  71              		.thumb
+  72              		.thumb_func
+  73              		.fpu fpv5-d16
+  75              	_Z12SaveSettingsRK8Settings:
+  76              	.LVL1:
+  77              	.LFB3878:
+  78              		.file 6 "QSPI_Settings.cpp"
+   1:QSPI_Settings.cpp **** // Copyright 2020 Adam Fulford
+   2:QSPI_Settings.cpp **** // 
+   3:QSPI_Settings.cpp **** // Permission is hereby granted, free of charge, to any person obtaining a copy
+   4:QSPI_Settings.cpp **** // of this software and associated documentation files (the "Software"), to deal
+   5:QSPI_Settings.cpp **** // in the Software without restriction, including without limitation the rights
+   6:QSPI_Settings.cpp **** // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   7:QSPI_Settings.cpp **** // copies of the Software, and to permit persons to whom the Software is
+   8:QSPI_Settings.cpp **** // furnished to do so, subject to the following conditions:
+   9:QSPI_Settings.cpp **** // 
+  10:QSPI_Settings.cpp **** // The above copyright notice and this permission notice shall be included in
+  11:QSPI_Settings.cpp **** // all copies or substantial portions of the Software.
+  12:QSPI_Settings.cpp **** // 
+  13:QSPI_Settings.cpp **** // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  14:QSPI_Settings.cpp **** // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  15:QSPI_Settings.cpp **** // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  16:QSPI_Settings.cpp **** // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  17:QSPI_Settings.cpp **** // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  18:QSPI_Settings.cpp **** // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  19:QSPI_Settings.cpp **** // THE SOFTWARE.
+  20:QSPI_Settings.cpp **** // 
+  21:QSPI_Settings.cpp **** // See http://creativecommons.org/licenses/MIT/ for more information.
+  22:QSPI_Settings.cpp **** 
+  23:QSPI_Settings.cpp **** #include "QSPI_Settings.h"
+  24:QSPI_Settings.cpp **** #include <string.h>
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 7
+
+
+  25:QSPI_Settings.cpp **** #include <math.h>
+  26:QSPI_Settings.cpp **** 
+  27:QSPI_Settings.cpp **** #define BUFF_SIZE (sizeof(Settings)/sizeof(float))
+  28:QSPI_Settings.cpp **** //using namespace daisy;
+  29:QSPI_Settings.cpp **** 
+  30:QSPI_Settings.cpp **** static uint32_t DSY_QSPI_BSS membuff[(4 * BUFF_SIZE) + 1];   //block of memory in flash
+  31:QSPI_Settings.cpp **** 
+  32:QSPI_Settings.cpp **** 
+  33:QSPI_Settings.cpp **** //constexpr uint32_t base = 0x90000000;
+  34:QSPI_Settings.cpp **** uint32_t base = (uint32_t) &membuff[0]; //this gives same address as above
+  35:QSPI_Settings.cpp **** 
+  36:QSPI_Settings.cpp **** //save data to flash memory
+  37:QSPI_Settings.cpp **** int SaveSettings(const Settings &currentSetting)
+  38:QSPI_Settings.cpp **** {
+  79              		.loc 6 38 1 is_stmt 1 view -0
+  80              		.cfi_startproc
+  81              		@ args = 0, pretend = 0, frame = 72
+  82              		@ frame_needed = 0, uses_anonymous_args = 0
+  39:QSPI_Settings.cpp ****     float inbuff[BUFF_SIZE];
+  83              		.loc 6 39 5 view .LVU11
+  40:QSPI_Settings.cpp **** 
+  41:QSPI_Settings.cpp ****     inbuff[0] = currentSetting.RevLength;
+  84              		.loc 6 41 5 view .LVU12
+  38:QSPI_Settings.cpp ****     float inbuff[BUFF_SIZE];
+  85              		.loc 6 38 1 is_stmt 0 view .LVU13
+  86 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  87              		.cfi_def_cfa_offset 20
+  88              		.cfi_offset 4, -20
+  89              		.cfi_offset 5, -16
+  90              		.cfi_offset 6, -12
+  91              		.cfi_offset 7, -8
+  92              		.cfi_offset 14, -4
+  42:QSPI_Settings.cpp ****     inbuff[1] = currentSetting.tapRatio;
+  93              		.loc 6 42 15 view .LVU14
+  94 0002 4568     		ldr	r5, [r0, #4]	@ float
+  38:QSPI_Settings.cpp ****     float inbuff[BUFF_SIZE];
+  95              		.loc 6 38 1 view .LVU15
+  96 0004 93B0     		sub	sp, sp, #76
+  97              		.cfi_def_cfa_offset 96
+  43:QSPI_Settings.cpp ****     inbuff[2] = currentSetting.ModDepth;
+  98              		.loc 6 43 15 view .LVU16
+  99 0006 8668     		ldr	r6, [r0, #8]	@ float
+  44:QSPI_Settings.cpp ****     inbuff[3] = currentSetting.ModFreq;
+  45:QSPI_Settings.cpp ****     inbuff[4] = currentSetting.HP_Cutoff;
+  46:QSPI_Settings.cpp ****     inbuff[5] = currentSetting.LP_Cutoff;
+  47:QSPI_Settings.cpp ****     inbuff[6] = currentSetting.Resonance;
+  48:QSPI_Settings.cpp ****     inbuff[7] = currentSetting.FilterPrePost;
+  49:QSPI_Settings.cpp ****     
+  50:QSPI_Settings.cpp ****     //split into 8bit chunks:
+  51:QSPI_Settings.cpp ****     //skip first byte - out by one byte for some reason
+  52:QSPI_Settings.cpp **** 
+  53:QSPI_Settings.cpp ****     uint8_t writebuff[(4 * BUFF_SIZE) + 1];
+  54:QSPI_Settings.cpp ****     writebuff[0] = 0; //ignore first value?
+ 100              		.loc 6 54 18 view .LVU17
+ 101 0008 0023     		movs	r3, #0
+  42:QSPI_Settings.cpp ****     inbuff[2] = currentSetting.ModDepth;
+ 102              		.loc 6 42 15 view .LVU18
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 8
+
+
+ 103 000a 0295     		str	r5, [sp, #8]	@ float
+ 104 000c 09A9     		add	r1, sp, #36
+  44:QSPI_Settings.cpp ****     inbuff[3] = currentSetting.ModFreq;
+ 105              		.loc 6 44 15 view .LVU19
+ 106 000e C568     		ldr	r5, [r0, #12]	@ float
+ 107 0010 02AC     		add	r4, sp, #8
+ 108              		.loc 6 54 18 view .LVU20
+ 109 0012 8DF82430 		strb	r3, [sp, #36]
+ 110 0016 0F46     		mov	r7, r1
+  44:QSPI_Settings.cpp ****     inbuff[3] = currentSetting.ModFreq;
+ 111              		.loc 6 44 15 view .LVU21
+ 112 0018 0495     		str	r5, [sp, #16]	@ float
+  46:QSPI_Settings.cpp ****     inbuff[6] = currentSetting.Resonance;
+ 113              		.loc 6 46 15 view .LVU22
+ 114 001a 4569     		ldr	r5, [r0, #20]	@ float
+  41:QSPI_Settings.cpp ****     inbuff[1] = currentSetting.tapRatio;
+ 115              		.loc 6 41 32 view .LVU23
+ 116 001c 0368     		ldr	r3, [r0]	@ float
+  43:QSPI_Settings.cpp ****     inbuff[3] = currentSetting.ModFreq;
+ 117              		.loc 6 43 15 view .LVU24
+ 118 001e 0396     		str	r6, [sp, #12]	@ float
+  46:QSPI_Settings.cpp ****     inbuff[6] = currentSetting.Resonance;
+ 119              		.loc 6 46 15 view .LVU25
+ 120 0020 0695     		str	r5, [sp, #24]	@ float
+  45:QSPI_Settings.cpp ****     inbuff[5] = currentSetting.LP_Cutoff;
+ 121              		.loc 6 45 15 view .LVU26
+ 122 0022 0669     		ldr	r6, [r0, #16]	@ float
+  47:QSPI_Settings.cpp ****     inbuff[7] = currentSetting.FilterPrePost;
+ 123              		.loc 6 47 15 view .LVU27
+ 124 0024 8569     		ldr	r5, [r0, #24]	@ float
+  48:QSPI_Settings.cpp ****     
+ 125              		.loc 6 48 15 view .LVU28
+ 126 0026 C069     		ldr	r0, [r0, #28]	@ float
+ 127              	.LVL2:
+  41:QSPI_Settings.cpp ****     inbuff[1] = currentSetting.tapRatio;
+ 128              		.loc 6 41 15 view .LVU29
+ 129 0028 0193     		str	r3, [sp, #4]	@ float
+  42:QSPI_Settings.cpp ****     inbuff[2] = currentSetting.ModDepth;
+ 130              		.loc 6 42 5 is_stmt 1 view .LVU30
+  43:QSPI_Settings.cpp ****     inbuff[3] = currentSetting.ModFreq;
+ 131              		.loc 6 43 5 view .LVU31
+  44:QSPI_Settings.cpp ****     inbuff[4] = currentSetting.HP_Cutoff;
+ 132              		.loc 6 44 5 view .LVU32
+  45:QSPI_Settings.cpp ****     inbuff[5] = currentSetting.LP_Cutoff;
+ 133              		.loc 6 45 5 view .LVU33
+  45:QSPI_Settings.cpp ****     inbuff[5] = currentSetting.LP_Cutoff;
+ 134              		.loc 6 45 15 is_stmt 0 view .LVU34
+ 135 002a 0596     		str	r6, [sp, #20]	@ float
+  46:QSPI_Settings.cpp ****     inbuff[6] = currentSetting.Resonance;
+ 136              		.loc 6 46 5 is_stmt 1 view .LVU35
+  47:QSPI_Settings.cpp ****     inbuff[7] = currentSetting.FilterPrePost;
+ 137              		.loc 6 47 5 view .LVU36
+  47:QSPI_Settings.cpp ****     inbuff[7] = currentSetting.FilterPrePost;
+ 138              		.loc 6 47 15 is_stmt 0 view .LVU37
+ 139 002c 0795     		str	r5, [sp, #28]	@ float
+  48:QSPI_Settings.cpp ****     
+ 140              		.loc 6 48 5 is_stmt 1 view .LVU38
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 9
+
+
+  48:QSPI_Settings.cpp ****     
+ 141              		.loc 6 48 15 is_stmt 0 view .LVU39
+ 142 002e 0890     		str	r0, [sp, #32]	@ float
+  53:QSPI_Settings.cpp ****     writebuff[0] = 0; //ignore first value?
+ 143              		.loc 6 53 5 is_stmt 1 view .LVU40
+ 144              		.loc 6 54 5 view .LVU41
+  55:QSPI_Settings.cpp ****     for(uint8_t i = 0; i < BUFF_SIZE; i++) 
+ 145              		.loc 6 55 5 view .LVU42
+ 146              	.LVL3:
+ 147              	.LBB59:
+ 148              		.loc 6 55 26 view .LVU43
+ 149 0030 01E0     		b	.L5
+ 150              	.LVL4:
+ 151              	.L8:
+ 152              		.loc 6 55 26 is_stmt 0 view .LVU44
+ 153 0032 54F8043B 		ldr	r3, [r4], #4	@ float
+ 154              	.L5:
+ 155              	.LBB60:
+  56:QSPI_Settings.cpp ****     {
+  57:QSPI_Settings.cpp ****         uint8_t bytes[sizeof(float)];
+ 156              		.loc 6 57 9 is_stmt 1 discriminator 2 view .LVU45
+  58:QSPI_Settings.cpp ****         *(float*)(bytes) = inbuff[i];
+ 157              		.loc 6 58 9 discriminator 2 view .LVU46
+  59:QSPI_Settings.cpp **** 
+  60:QSPI_Settings.cpp ****         writebuff[(4*i) + 1] = bytes[0];
+ 158              		.loc 6 60 9 discriminator 2 view .LVU47
+  61:QSPI_Settings.cpp ****         writebuff[(4*i) + 2] = bytes[1];
+ 159              		.loc 6 61 30 is_stmt 0 discriminator 2 view .LVU48
+ 160 0036 C3F30726 		ubfx	r6, r3, #8, #8
+  62:QSPI_Settings.cpp ****         writebuff[(4*i) + 3] = bytes[2];
+ 161              		.loc 6 62 30 discriminator 2 view .LVU49
+ 162 003a C3F30745 		ubfx	r5, r3, #16, #8
+  63:QSPI_Settings.cpp ****         writebuff[(4*i) + 4] = bytes[3];
+ 163              		.loc 6 63 30 discriminator 2 view .LVU50
+ 164 003e C3F30760 		ubfx	r0, r3, #24, #8
+ 165              	.LBE60:
+  55:QSPI_Settings.cpp ****     {
+ 166              		.loc 6 55 26 discriminator 2 view .LVU51
+ 167 0042 BC42     		cmp	r4, r7
+ 168              	.LBB61:
+  60:QSPI_Settings.cpp ****         writebuff[(4*i) + 2] = bytes[1];
+ 169              		.loc 6 60 30 discriminator 2 view .LVU52
+ 170 0044 4B70     		strb	r3, [r1, #1]
+  61:QSPI_Settings.cpp ****         writebuff[(4*i) + 3] = bytes[2];
+ 171              		.loc 6 61 9 is_stmt 1 discriminator 2 view .LVU53
+  61:QSPI_Settings.cpp ****         writebuff[(4*i) + 3] = bytes[2];
+ 172              		.loc 6 61 30 is_stmt 0 discriminator 2 view .LVU54
+ 173 0046 8E70     		strb	r6, [r1, #2]
+  62:QSPI_Settings.cpp ****         writebuff[(4*i) + 4] = bytes[3];
+ 174              		.loc 6 62 9 is_stmt 1 discriminator 2 view .LVU55
+  62:QSPI_Settings.cpp ****         writebuff[(4*i) + 4] = bytes[3];
+ 175              		.loc 6 62 30 is_stmt 0 discriminator 2 view .LVU56
+ 176 0048 CD70     		strb	r5, [r1, #3]
+ 177              		.loc 6 63 9 is_stmt 1 discriminator 2 view .LVU57
+ 178              		.loc 6 63 30 is_stmt 0 discriminator 2 view .LVU58
+ 179 004a 01F8040F 		strb	r0, [r1, #4]!
+ 180              	.LBE61:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 10
+
+
+  55:QSPI_Settings.cpp ****     {
+ 181              		.loc 6 55 5 is_stmt 1 discriminator 2 view .LVU59
+  55:QSPI_Settings.cpp ****     {
+ 182              		.loc 6 55 26 discriminator 2 view .LVU60
+ 183 004e F0D1     		bne	.L8
+ 184              	.LBE59:
+  64:QSPI_Settings.cpp ****     }
+  65:QSPI_Settings.cpp **** 
+  66:QSPI_Settings.cpp ****     hw.qspi_handle.mode = DSY_QSPI_MODE_INDIRECT_POLLING;
+ 185              		.loc 6 66 5 view .LVU61
+ 186              		.loc 6 66 25 is_stmt 0 view .LVU62
+ 187 0050 0123     		movs	r3, #1
+ 188 0052 0B48     		ldr	r0, .L9
+  67:QSPI_Settings.cpp **** 	dsy_qspi_init(&hw.qspi_handle);
+  68:QSPI_Settings.cpp ****     dsy_qspi_erase(base, base + ((BUFF_SIZE + 1) * sizeof(membuff[0])));
+ 189              		.loc 6 68 19 view .LVU63
+ 190 0054 0B4C     		ldr	r4, .L9+4
+  66:QSPI_Settings.cpp **** 	dsy_qspi_init(&hw.qspi_handle);
+ 191              		.loc 6 66 25 view .LVU64
+ 192 0056 00F8033F 		strb	r3, [r0, #3]!
+  67:QSPI_Settings.cpp **** 	dsy_qspi_init(&hw.qspi_handle);
+ 193              		.loc 6 67 2 is_stmt 1 view .LVU65
+  67:QSPI_Settings.cpp **** 	dsy_qspi_init(&hw.qspi_handle);
+ 194              		.loc 6 67 15 is_stmt 0 view .LVU66
+ 195 005a FFF7FEFF 		bl	dsy_qspi_init
+ 196              	.LVL5:
+ 197              		.loc 6 68 5 is_stmt 1 view .LVU67
+ 198              		.loc 6 68 19 is_stmt 0 view .LVU68
+ 199 005e 2068     		ldr	r0, [r4]
+ 200 0060 00F12401 		add	r1, r0, #36
+ 201 0064 FFF7FEFF 		bl	dsy_qspi_erase
+ 202              	.LVL6:
+  69:QSPI_Settings.cpp **** 
+  70:QSPI_Settings.cpp ****     int retvalue{};
+ 203              		.loc 6 70 5 is_stmt 1 view .LVU69
+  71:QSPI_Settings.cpp ****     retvalue = dsy_qspi_write(base, (BUFF_SIZE + 1) * sizeof(membuff[0]), (uint8_t*)writebuff);
+ 204              		.loc 6 71 5 view .LVU70
+ 205              		.loc 6 71 30 is_stmt 0 view .LVU71
+ 206 0068 09AA     		add	r2, sp, #36
+ 207 006a 2421     		movs	r1, #36
+ 208 006c 2068     		ldr	r0, [r4]
+ 209 006e FFF7FEFF 		bl	dsy_qspi_write
+ 210              	.LVL7:
+ 211 0072 0446     		mov	r4, r0
+ 212              	.LVL8:
+  72:QSPI_Settings.cpp ****     dsy_qspi_deinit();
+ 213              		.loc 6 72 5 is_stmt 1 view .LVU72
+ 214              		.loc 6 72 20 is_stmt 0 view .LVU73
+ 215 0074 FFF7FEFF 		bl	dsy_qspi_deinit
+ 216              	.LVL9:
+  73:QSPI_Settings.cpp ****     return retvalue;
+ 217              		.loc 6 73 5 is_stmt 1 view .LVU74
+  74:QSPI_Settings.cpp **** }
+ 218              		.loc 6 74 1 is_stmt 0 view .LVU75
+ 219 0078 2046     		mov	r0, r4
+ 220 007a 13B0     		add	sp, sp, #76
+ 221              		.cfi_def_cfa_offset 20
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 11
+
+
+ 222              		@ sp needed
+ 223 007c F0BD     		pop	{r4, r5, r6, r7, pc}
+ 224              	.LVL10:
+ 225              	.L10:
+ 226              		.loc 6 74 1 view .LVU76
+ 227 007e 00BF     		.align	2
+ 228              	.L9:
+ 229 0080 00000000 		.word	.LANCHOR0
+ 230 0084 00000000 		.word	.LANCHOR1
+ 231              		.cfi_endproc
+ 232              	.LFE3878:
+ 234              		.section	.text._Z12LoadSettingsv,"ax",%progbits
+ 235              		.align	1
+ 236              		.p2align 2,,3
+ 237              		.global	_Z12LoadSettingsv
+ 238              		.syntax unified
+ 239              		.thumb
+ 240              		.thumb_func
+ 241              		.fpu fpv5-d16
+ 243              	_Z12LoadSettingsv:
+ 244              	.LVL11:
+ 245              	.LFB3879:
+  75:QSPI_Settings.cpp **** 
+  76:QSPI_Settings.cpp **** //retreive data from flash memory
+  77:QSPI_Settings.cpp **** Settings LoadSettings()
+  78:QSPI_Settings.cpp **** {
+ 246              		.loc 6 78 1 is_stmt 1 view -0
+ 247              		.cfi_startproc
+ 248              		@ args = 0, pretend = 0, frame = 72
+ 249              		@ frame_needed = 0, uses_anonymous_args = 0
+  79:QSPI_Settings.cpp ****     uint8_t outbuff[(4 * BUFF_SIZE) + 1];
+ 250              		.loc 6 79 5 view .LVU78
+  80:QSPI_Settings.cpp ****     float readbuff[BUFF_SIZE];
+ 251              		.loc 6 80 5 view .LVU79
+  81:QSPI_Settings.cpp ****     Settings SettingsInFlash{};
+ 252              		.loc 6 81 5 view .LVU80
+  82:QSPI_Settings.cpp **** 
+  83:QSPI_Settings.cpp ****     hw.qspi_handle.mode = DSY_QSPI_MODE_DSY_MEMORY_MAPPED;
+ 253              		.loc 6 83 5 view .LVU81
+  78:QSPI_Settings.cpp ****     uint8_t outbuff[(4 * BUFF_SIZE) + 1];
+ 254              		.loc 6 78 1 is_stmt 0 view .LVU82
+ 255 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 256              		.cfi_def_cfa_offset 20
+ 257              		.cfi_offset 4, -20
+ 258              		.cfi_offset 5, -16
+ 259              		.cfi_offset 6, -12
+ 260              		.cfi_offset 7, -8
+ 261              		.cfi_offset 14, -4
+ 262 0002 0746     		mov	r7, r0
+ 263              		.loc 6 83 25 view .LVU83
+ 264 0004 0025     		movs	r5, #0
+ 265 0006 1A48     		ldr	r0, .L17
+ 266              	.LVL12:
+  78:QSPI_Settings.cpp ****     uint8_t outbuff[(4 * BUFF_SIZE) + 1];
+ 267              		.loc 6 78 1 view .LVU84
+ 268 0008 93B0     		sub	sp, sp, #76
+ 269              		.cfi_def_cfa_offset 96
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 12
+
+
+  84:QSPI_Settings.cpp ****     dsy_qspi_init(&hw.qspi_handle);
+  85:QSPI_Settings.cpp **** 
+  86:QSPI_Settings.cpp ****     //memcpy(outbuff,membuff,sizeof(membuff[0]) * TEST_BUFF_SIZE);
+  87:QSPI_Settings.cpp ****     memcpy((void*)&outbuff,(void*)membuff,sizeof(outbuff));
+ 270              		.loc 6 87 11 view .LVU85
+ 271 000a 1A4E     		ldr	r6, .L17+4
+  83:QSPI_Settings.cpp ****     dsy_qspi_init(&hw.qspi_handle);
+ 272              		.loc 6 83 25 view .LVU86
+ 273 000c 00F8035F 		strb	r5, [r0, #3]!
+  84:QSPI_Settings.cpp ****     dsy_qspi_init(&hw.qspi_handle);
+ 274              		.loc 6 84 5 is_stmt 1 view .LVU87
+ 275              		.loc 6 87 11 is_stmt 0 view .LVU88
+ 276 0010 09AC     		add	r4, sp, #36
+  84:QSPI_Settings.cpp ****     dsy_qspi_init(&hw.qspi_handle);
+ 277              		.loc 6 84 18 view .LVU89
+ 278 0012 FFF7FEFF 		bl	dsy_qspi_init
+ 279              	.LVL13:
+ 280              		.loc 6 87 5 is_stmt 1 view .LVU90
+ 281              		.loc 6 87 11 is_stmt 0 view .LVU91
+ 282 0016 0FCE     		ldmia	r6!, {r0, r1, r2, r3}
+ 283 0018 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 284 001a 0FCE     		ldmia	r6!, {r0, r1, r2, r3}
+ 285 001c 3668     		ldr	r6, [r6]
+ 286 001e 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 287 0020 2670     		strb	r6, [r4]
+  88:QSPI_Settings.cpp ****     dsy_qspi_deinit();
+ 288              		.loc 6 88 5 is_stmt 1 view .LVU92
+ 289 0022 01AC     		add	r4, sp, #4
+ 290              		.loc 6 88 20 is_stmt 0 view .LVU93
+ 291 0024 FFF7FEFF 		bl	dsy_qspi_deinit
+ 292              	.LVL14:
+  89:QSPI_Settings.cpp ****     uint8_t bytes[sizeof(float)];
+ 293              		.loc 6 89 5 is_stmt 1 view .LVU94
+  90:QSPI_Settings.cpp **** 
+  91:QSPI_Settings.cpp ****     for(uint8_t i = 0; i < BUFF_SIZE; i++)
+ 294              		.loc 6 91 5 view .LVU95
+ 295              	.LBB62:
+ 296              		.loc 6 91 26 view .LVU96
+ 297 0028 09AE     		add	r6, sp, #36
+ 298 002a 2046     		mov	r0, r4
+ 299              	.LVL15:
+ 300              	.L13:
+ 301              	.LBB63:
+ 302              	.LBB64:
+  92:QSPI_Settings.cpp ****     {
+  93:QSPI_Settings.cpp ****         //readbuff[i] = float((outbuff[4*i] << 24) | (outbuff[(4*i)+1] << 16) | (outbuff[(4*i)+2] <
+  94:QSPI_Settings.cpp ****         for (uint8_t j = 0; j < sizeof(float); j++)
+ 303              		.loc 6 94 31 view .LVU97
+ 304 002c 6B46     		mov	r3, sp
+ 305              	.LBE64:
+ 306              	.LBE63:
+ 307              	.LBE62:
+  88:QSPI_Settings.cpp ****     uint8_t bytes[sizeof(float)];
+ 308              		.loc 6 88 20 is_stmt 0 view .LVU98
+ 309 002e 3246     		mov	r2, r6
+ 310              	.LVL16:
+ 311              	.L12:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 13
+
+
+ 312              	.LBB68:
+ 313              	.LBB66:
+ 314              	.LBB65:
+  95:QSPI_Settings.cpp ****         {
+  96:QSPI_Settings.cpp ****             bytes[j] = outbuff[(4*i) + j];
+ 315              		.loc 6 96 13 is_stmt 1 discriminator 2 view .LVU99
+ 316              		.loc 6 96 41 is_stmt 0 discriminator 2 view .LVU100
+ 317 0030 12F8011B 		ldrb	r1, [r2], #1	@ zero_extendqisi2
+ 318              	.LVL17:
+ 319              		.loc 6 96 22 discriminator 2 view .LVU101
+ 320 0034 03F8011B 		strb	r1, [r3], #1
+  94:QSPI_Settings.cpp ****         {
+ 321              		.loc 6 94 9 is_stmt 1 discriminator 2 view .LVU102
+ 322              	.LVL18:
+  94:QSPI_Settings.cpp ****         {
+ 323              		.loc 6 94 31 discriminator 2 view .LVU103
+ 324 0038 A342     		cmp	r3, r4
+ 325 003a F9D1     		bne	.L12
+ 326              	.LBE65:
+  97:QSPI_Settings.cpp ****         }
+  98:QSPI_Settings.cpp ****         readbuff[i] = *(float*)(bytes);
+ 327              		.loc 6 98 9 discriminator 2 view .LVU104
+ 328 003c 0435     		adds	r5, r5, #4
+ 329              	.LVL19:
+ 330              		.loc 6 98 21 is_stmt 0 discriminator 2 view .LVU105
+ 331 003e 009B     		ldr	r3, [sp]	@ float
+ 332 0040 0436     		adds	r6, r6, #4
+ 333              	.LBE66:
+  91:QSPI_Settings.cpp ****     {
+ 334              		.loc 6 91 26 discriminator 2 view .LVU106
+ 335 0042 202D     		cmp	r5, #32
+ 336              	.LBB67:
+ 337              		.loc 6 98 21 discriminator 2 view .LVU107
+ 338 0044 40F8043B 		str	r3, [r0], #4	@ float
+ 339              	.LBE67:
+  91:QSPI_Settings.cpp ****     {
+ 340              		.loc 6 91 5 is_stmt 1 discriminator 2 view .LVU108
+  91:QSPI_Settings.cpp ****     {
+ 341              		.loc 6 91 26 discriminator 2 view .LVU109
+ 342 0048 F0D1     		bne	.L13
+ 343              	.LBE68:
+  99:QSPI_Settings.cpp ****     }
+ 100:QSPI_Settings.cpp **** 
+ 101:QSPI_Settings.cpp **** SettingsInFlash.RevLength = readbuff[0];
+ 344              		.loc 6 101 1 view .LVU110
+ 345              		.loc 6 101 27 is_stmt 0 view .LVU111
+ 346 004a 019C     		ldr	r4, [sp, #4]	@ float
+ 102:QSPI_Settings.cpp **** SettingsInFlash.tapRatio = readbuff[1];
+ 103:QSPI_Settings.cpp **** SettingsInFlash.ModDepth = readbuff[2];
+ 104:QSPI_Settings.cpp **** SettingsInFlash.ModFreq = readbuff[3];
+ 105:QSPI_Settings.cpp **** SettingsInFlash.HP_Cutoff = readbuff[4];
+ 106:QSPI_Settings.cpp **** SettingsInFlash.LP_Cutoff = readbuff[5];
+ 107:QSPI_Settings.cpp **** SettingsInFlash.Resonance = readbuff[6];
+ 108:QSPI_Settings.cpp **** SettingsInFlash.FilterPrePost = readbuff[7];
+ 109:QSPI_Settings.cpp **** 
+ 110:QSPI_Settings.cpp **** return SettingsInFlash;
+ 111:QSPI_Settings.cpp **** 
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 14
+
+
+ 112:QSPI_Settings.cpp **** }...
+ 347              		.loc 6 112 1 view .LVU112
+ 348 004c 3846     		mov	r0, r7
+ 102:QSPI_Settings.cpp **** SettingsInFlash.tapRatio = readbuff[1];
+ 349              		.loc 6 102 26 view .LVU113
+ 350 004e 0299     		ldr	r1, [sp, #8]	@ float
+ 103:QSPI_Settings.cpp **** SettingsInFlash.ModDepth = readbuff[2];
+ 351              		.loc 6 103 26 view .LVU114
+ 352 0050 039A     		ldr	r2, [sp, #12]	@ float
+ 353              	.LVL20:
+ 104:QSPI_Settings.cpp **** SettingsInFlash.ModFreq = readbuff[3];
+ 354              		.loc 6 104 25 view .LVU115
+ 355 0052 049B     		ldr	r3, [sp, #16]	@ float
+ 101:QSPI_Settings.cpp **** SettingsInFlash.RevLength = readbuff[0];
+ 356              		.loc 6 101 27 view .LVU116
+ 357 0054 3C60     		str	r4, [r7]	@ float
+ 102:QSPI_Settings.cpp **** SettingsInFlash.tapRatio = readbuff[1];
+ 358              		.loc 6 102 1 is_stmt 1 view .LVU117
+ 102:QSPI_Settings.cpp **** SettingsInFlash.tapRatio = readbuff[1];
+ 359              		.loc 6 102 26 is_stmt 0 view .LVU118
+ 360 0056 7960     		str	r1, [r7, #4]	@ float
+ 103:QSPI_Settings.cpp **** SettingsInFlash.ModDepth = readbuff[2];
+ 361              		.loc 6 103 1 is_stmt 1 view .LVU119
+ 105:QSPI_Settings.cpp **** SettingsInFlash.HP_Cutoff = readbuff[4];
+ 362              		.loc 6 105 27 is_stmt 0 view .LVU120
+ 363 0058 059C     		ldr	r4, [sp, #20]	@ float
+ 106:QSPI_Settings.cpp **** SettingsInFlash.LP_Cutoff = readbuff[5];
+ 364              		.loc 6 106 27 view .LVU121
+ 365 005a 0699     		ldr	r1, [sp, #24]	@ float
+ 103:QSPI_Settings.cpp **** SettingsInFlash.ModDepth = readbuff[2];
+ 366              		.loc 6 103 26 view .LVU122
+ 367 005c BA60     		str	r2, [r7, #8]	@ float
+ 104:QSPI_Settings.cpp **** SettingsInFlash.ModFreq = readbuff[3];
+ 368              		.loc 6 104 1 is_stmt 1 view .LVU123
+ 104:QSPI_Settings.cpp **** SettingsInFlash.ModFreq = readbuff[3];
+ 369              		.loc 6 104 25 is_stmt 0 view .LVU124
+ 370 005e FB60     		str	r3, [r7, #12]	@ float
+ 105:QSPI_Settings.cpp **** SettingsInFlash.HP_Cutoff = readbuff[4];
+ 371              		.loc 6 105 1 is_stmt 1 view .LVU125
+ 107:QSPI_Settings.cpp **** SettingsInFlash.Resonance = readbuff[6];
+ 372              		.loc 6 107 27 is_stmt 0 view .LVU126
+ 373 0060 079A     		ldr	r2, [sp, #28]	@ float
+ 108:QSPI_Settings.cpp **** SettingsInFlash.FilterPrePost = readbuff[7];
+ 374              		.loc 6 108 31 view .LVU127
+ 375 0062 089B     		ldr	r3, [sp, #32]	@ float
+ 105:QSPI_Settings.cpp **** SettingsInFlash.HP_Cutoff = readbuff[4];
+ 376              		.loc 6 105 27 view .LVU128
+ 377 0064 3C61     		str	r4, [r7, #16]	@ float
+ 106:QSPI_Settings.cpp **** SettingsInFlash.LP_Cutoff = readbuff[5];
+ 378              		.loc 6 106 1 is_stmt 1 view .LVU129
+ 106:QSPI_Settings.cpp **** SettingsInFlash.LP_Cutoff = readbuff[5];
+ 379              		.loc 6 106 27 is_stmt 0 view .LVU130
+ 380 0066 7961     		str	r1, [r7, #20]	@ float
+ 107:QSPI_Settings.cpp **** SettingsInFlash.Resonance = readbuff[6];
+ 381              		.loc 6 107 1 is_stmt 1 view .LVU131
+ 107:QSPI_Settings.cpp **** SettingsInFlash.Resonance = readbuff[6];
+ 382              		.loc 6 107 27 is_stmt 0 view .LVU132
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 15
+
+
+ 383 0068 BA61     		str	r2, [r7, #24]	@ float
+ 108:QSPI_Settings.cpp **** SettingsInFlash.FilterPrePost = readbuff[7];
+ 384              		.loc 6 108 1 is_stmt 1 view .LVU133
+ 108:QSPI_Settings.cpp **** SettingsInFlash.FilterPrePost = readbuff[7];
+ 385              		.loc 6 108 31 is_stmt 0 view .LVU134
+ 386 006a FB61     		str	r3, [r7, #28]	@ float
+ 110:QSPI_Settings.cpp **** return SettingsInFlash;
+ 387              		.loc 6 110 1 is_stmt 1 view .LVU135
+ 388              		.loc 6 112 1 is_stmt 0 view .LVU136
+ 389 006c 13B0     		add	sp, sp, #76
+ 390              		.cfi_def_cfa_offset 20
+ 391              		@ sp needed
+ 392 006e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 393              	.LVL21:
+ 394              	.L18:
+ 395              		.loc 6 112 1 view .LVU137
+ 396              		.align	2
+ 397              	.L17:
+ 398 0070 00000000 		.word	.LANCHOR0
+ 399 0074 00000000 		.word	.LANCHOR2
+ 400              		.cfi_endproc
+ 401              	.LFE3879:
+ 403              		.section	.text.startup._GLOBAL__sub_I_base,"ax",%progbits
+ 404              		.align	1
+ 405              		.p2align 2,,3
+ 406              		.syntax unified
+ 407              		.thumb
+ 408              		.thumb_func
+ 409              		.fpu fpv5-d16
+ 411              	_GLOBAL__sub_I_base:
+ 412              	.LFB4417:
+ 413              		.loc 6 112 1 is_stmt 1 view -0
+ 414              		.cfi_startproc
+ 415              		@ args = 0, pretend = 0, frame = 0
+ 416              		@ frame_needed = 0, uses_anonymous_args = 0
+ 417              		@ link register save eliminated.
+ 418              	.LVL22:
+ 419              	.LBB69:
+ 420              	.LBI69:
+ 421              		.loc 6 112 1 view .LVU139
+ 422              	.LBB70:
+ 423              	.LBB71:
+ 424              	.LBI71:
+  21:../libdaisy/src/daisy_seed.h ****     ~DaisySeed() {}
+ 425              		.loc 1 21 5 view .LVU140
+ 426              	.LBB72:
+ 427              	.LBB73:
+ 428              	.LBI73:
+  36:../libdaisy/src/hid/audio.h ****     ~AudioHandle() {}
+ 429              		.loc 5 36 5 view .LVU141
+ 430              	.LBB74:
+ 431              	.LBB75:
+  36:../libdaisy/src/hid/audio.h ****     ~AudioHandle() {}
+ 432              		.loc 5 36 35 is_stmt 0 view .LVU142
+ 433 0000 0348     		ldr	r0, .L20
+ 434 0002 0023     		movs	r3, #0
+ 435              	.LBE75:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 16
+
+
+ 436              	.LBE74:
+ 437              	.LBE73:
+ 438              	.LBE72:
+ 439              	.LBE71:
+ 440              		.file 7 "Veno-Echo.h"
+   1:Veno-Echo.h   **** // Copyright 2020 Adam Fulford
+   2:Veno-Echo.h   **** // 
+   3:Veno-Echo.h   **** // Permission is hereby granted, free of charge, to any person obtaining a copy
+   4:Veno-Echo.h   **** // of this software and associated documentation files (the "Software"), to deal
+   5:Veno-Echo.h   **** // in the Software without restriction, including without limitation the rights
+   6:Veno-Echo.h   **** // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   7:Veno-Echo.h   **** // copies of the Software, and to permit persons to whom the Software is
+   8:Veno-Echo.h   **** // furnished to do so, subject to the following conditions:
+   9:Veno-Echo.h   **** // 
+  10:Veno-Echo.h   **** // The above copyright notice and this permission notice shall be included in
+  11:Veno-Echo.h   **** // all copies or substantial portions of the Software.
+  12:Veno-Echo.h   **** // 
+  13:Veno-Echo.h   **** // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  14:Veno-Echo.h   **** // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  15:Veno-Echo.h   **** // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  16:Veno-Echo.h   **** // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  17:Veno-Echo.h   **** // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  18:Veno-Echo.h   **** // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  19:Veno-Echo.h   **** // THE SOFTWARE.
+  20:Veno-Echo.h   **** // 
+  21:Veno-Echo.h   **** // See http://creativecommons.org/licenses/MIT/ for more information.
+  22:Veno-Echo.h   **** 
+  23:Veno-Echo.h   **** #ifndef VENO_ECHO_H
+  24:Veno-Echo.h   **** #define VENO_ECHO_H
+  25:Veno-Echo.h   **** 
+  26:Veno-Echo.h   **** //#include "daisysp.h"
+  27:Veno-Echo.h   **** #include "daisy_seed.h"
+  28:Veno-Echo.h   **** 
+  29:Veno-Echo.h   **** //using namespace daisysp;
+  30:Veno-Echo.h   **** using namespace daisy;
+  31:Veno-Echo.h   **** 
+  32:Veno-Echo.h   **** static DaisySeed hw;
+ 441              		.loc 7 32 18 view .LVU143
+ 442 0004 034A     		ldr	r2, .L20+4
+ 443 0006 0449     		ldr	r1, .L20+8
+ 444              	.LBB86:
+ 445              	.LBB85:
+ 446              	.LBB78:
+ 447              	.LBB77:
+ 448              	.LBB76:
+  36:../libdaisy/src/hid/audio.h ****     ~AudioHandle() {}
+ 449              		.loc 5 36 35 view .LVU144
+ 450 0008 4361     		str	r3, [r0, #20]
+ 451              	.LVL23:
+  36:../libdaisy/src/hid/audio.h ****     ~AudioHandle() {}
+ 452              		.loc 5 36 35 view .LVU145
+ 453              	.LBE76:
+ 454              	.LBE77:
+ 455              	.LBE78:
+ 456              	.LBB79:
+ 457              	.LBI79:
+  84:../libdaisy/src/per/adc.h ****     ~AdcHandle() {}
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 17
+
+
+ 458              		.loc 4 84 5 is_stmt 1 view .LVU146
+  84:../libdaisy/src/per/adc.h ****     ~AdcHandle() {}
+ 459              		.loc 4 84 5 is_stmt 0 view .LVU147
+ 460              	.LBE79:
+ 461              	.LBB80:
+ 462              	.LBI80:
+ 463              		.file 8 "../libdaisy/src/per/dac.h"
+   1:../libdaisy/src/per/dac.h **** #pragma once
+   2:../libdaisy/src/per/dac.h **** #ifndef DSY_DAC_H
+   3:../libdaisy/src/per/dac.h **** #define DSY_DAC_H
+   4:../libdaisy/src/per/dac.h **** 
+   5:../libdaisy/src/per/dac.h **** #include "daisy_core.h"
+   6:../libdaisy/src/per/dac.h **** 
+   7:../libdaisy/src/per/dac.h **** namespace daisy
+   8:../libdaisy/src/per/dac.h **** {
+   9:../libdaisy/src/per/dac.h **** /** DAC handle for Built-in DAC Peripheral 
+  10:../libdaisy/src/per/dac.h ****  ** 
+  11:../libdaisy/src/per/dac.h ****  ** For now only Normal Mode is supported,
+  12:../libdaisy/src/per/dac.h ****  ** Sample and hold mode provides reduced power consumption, but requires a bit more setup.
+  13:../libdaisy/src/per/dac.h ****  **
+  14:../libdaisy/src/per/dac.h ****  ** For now connecting the DAC through other internal periphearls is also not supported.
+  15:../libdaisy/src/per/dac.h ****  **
+  16:../libdaisy/src/per/dac.h ****  ** Since the DAC channels have dedicated pins we don't need to pass in a pin config like with
+  17:../libdaisy/src/per/dac.h ****  ** other modules. However, it is still important to not try to use the DAC pins for anything else.
+  18:../libdaisy/src/per/dac.h ****  ** DAC Channel 1 is on PA4, and DAC Channel 2 is on PA5
+  19:../libdaisy/src/per/dac.h ****  ***/
+  20:../libdaisy/src/per/dac.h **** class DacHandle
+  21:../libdaisy/src/per/dac.h **** {
+  22:../libdaisy/src/per/dac.h ****   public:
+  23:../libdaisy/src/per/dac.h ****     /** Return Values for the DacHandle class */
+  24:../libdaisy/src/per/dac.h ****     enum class Result
+  25:../libdaisy/src/per/dac.h ****     {
+  26:../libdaisy/src/per/dac.h ****         OK,
+  27:../libdaisy/src/per/dac.h ****         ERR,
+  28:../libdaisy/src/per/dac.h ****     };
+  29:../libdaisy/src/per/dac.h **** 
+  30:../libdaisy/src/per/dac.h ****     /** Selects which channel(s) will be configured for use. */
+  31:../libdaisy/src/per/dac.h ****     enum class Channel
+  32:../libdaisy/src/per/dac.h ****     {
+  33:../libdaisy/src/per/dac.h ****         ONE,
+  34:../libdaisy/src/per/dac.h ****         TWO,
+  35:../libdaisy/src/per/dac.h ****         BOTH,
+  36:../libdaisy/src/per/dac.h ****     };
+  37:../libdaisy/src/per/dac.h **** 
+  38:../libdaisy/src/per/dac.h ****     /** Sets the Mode for the DAC channels.
+  39:../libdaisy/src/per/dac.h ****      **
+  40:../libdaisy/src/per/dac.h ****      ** Polling mode uses the blocking mode to transmit a single value at a time.
+  41:../libdaisy/src/per/dac.h ****      **
+  42:../libdaisy/src/per/dac.h ****      ** DMA mode uses a buffer, and periodically transmits it triggering a 
+  43:../libdaisy/src/per/dac.h ****      ** callback to fill the buffer when it is ready for more samples.
+  44:../libdaisy/src/per/dac.h ****      ***/
+  45:../libdaisy/src/per/dac.h ****     enum class Mode
+  46:../libdaisy/src/per/dac.h ****     {
+  47:../libdaisy/src/per/dac.h ****         POLLING,
+  48:../libdaisy/src/per/dac.h ****         DMA,
+  49:../libdaisy/src/per/dac.h ****     };
+  50:../libdaisy/src/per/dac.h **** 
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 18
+
+
+  51:../libdaisy/src/per/dac.h ****     /** Sets the number of bits per sample transmitted out of the DAC.
+  52:../libdaisy/src/per/dac.h ****      ** The output range will be: 0V - VDDA
+  53:../libdaisy/src/per/dac.h ****      ** The resolution will be roughly: bitdepth / (VDDA - 0V) 
+  54:../libdaisy/src/per/dac.h ****      ***/
+  55:../libdaisy/src/per/dac.h ****     enum class BitDepth
+  56:../libdaisy/src/per/dac.h ****     {
+  57:../libdaisy/src/per/dac.h ****         BITS_8,
+  58:../libdaisy/src/per/dac.h ****         BITS_12
+  59:../libdaisy/src/per/dac.h ****     };
+  60:../libdaisy/src/per/dac.h **** 
+  61:../libdaisy/src/per/dac.h ****     /** Sets whether the DAC output is buffered for higher drive ability. */
+  62:../libdaisy/src/per/dac.h ****     enum class BufferState
+  63:../libdaisy/src/per/dac.h ****     {
+  64:../libdaisy/src/per/dac.h ****         ENABLED,
+  65:../libdaisy/src/per/dac.h ****         DISABLED,
+  66:../libdaisy/src/per/dac.h ****     };
+  67:../libdaisy/src/per/dac.h **** 
+  68:../libdaisy/src/per/dac.h ****     /** Configuration structure for initializing the DAC structure. */
+  69:../libdaisy/src/per/dac.h ****     struct Config
+  70:../libdaisy/src/per/dac.h ****     {
+  71:../libdaisy/src/per/dac.h ****         /** Target Samplerate in Hz used to configure the internal 
+  72:../libdaisy/src/per/dac.h ****          ** timebase for DMA mode. Does nothing in POLLING mode.
+  73:../libdaisy/src/per/dac.h ****          ** If the value is 0 at Init time this will default to 48000Hz 
+  74:../libdaisy/src/per/dac.h ****          ** otherwise the driver will attempt meet the target.*/
+  75:../libdaisy/src/per/dac.h ****         uint32_t target_samplerate;
+  76:../libdaisy/src/per/dac.h **** 
+  77:../libdaisy/src/per/dac.h ****         Channel     chn;
+  78:../libdaisy/src/per/dac.h ****         Mode        mode;
+  79:../libdaisy/src/per/dac.h ****         BitDepth    bitdepth;
+  80:../libdaisy/src/per/dac.h ****         BufferState buff_state;
+  81:../libdaisy/src/per/dac.h ****     };
+  82:../libdaisy/src/per/dac.h **** 
+  83:../libdaisy/src/per/dac.h ****     DacHandle() : pimpl_(nullptr) {}
+ 464              		.loc 8 83 5 is_stmt 1 view .LVU148
+ 465              	.LBB81:
+ 466              	.LBB82:
+ 467              		.loc 8 83 33 is_stmt 0 view .LVU149
+ 468 000a 0362     		str	r3, [r0, #32]
+ 469              	.LVL24:
+ 470              		.loc 8 83 33 view .LVU150
+ 471              	.LBE82:
+ 472              	.LBE81:
+ 473              	.LBE80:
+ 474              	.LBB83:
+ 475              	.LBI83:
+  40:../libdaisy/src/hid/usb.h **** 
+ 476              		.loc 3 40 5 is_stmt 1 view .LVU151
+  40:../libdaisy/src/hid/usb.h **** 
+ 477              		.loc 3 40 5 is_stmt 0 view .LVU152
+ 478              	.LBE83:
+ 479              	.LBB84:
+ 480              	.LBI84:
+  56:../libdaisy/src/sys/system.h ****     ~System() {}
+ 481              		.loc 2 56 5 is_stmt 1 view .LVU153
+  56:../libdaisy/src/sys/system.h ****     ~System() {}
+ 482              		.loc 2 56 5 is_stmt 0 view .LVU154
+ 483              	.LBE84:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 19
+
+
+ 484              	.LBE85:
+ 485              	.LBE86:
+ 486              		.loc 7 32 18 view .LVU155
+ 487 000c FFF7FEBF 		b	__aeabi_atexit
+ 488              	.LVL25:
+ 489              	.L21:
+ 490              		.align	2
+ 491              	.L20:
+ 492 0010 00000000 		.word	.LANCHOR0
+ 493 0014 00000000 		.word	__dso_handle
+ 494 0018 00000000 		.word	_ZN5daisy9DaisySeedD1Ev
+ 495              	.LBE70:
+ 496              	.LBE69:
+ 497              		.cfi_endproc
+ 498              	.LFE4417:
+ 500              		.section	.init_array,"aw",%init_array
+ 501              		.align	2
+ 502 0000 00000000 		.word	_GLOBAL__sub_I_base(target1)
+ 503              		.global	base
+ 504              		.section	.bss._ZL2hw,"aw",%nobits
+ 505              		.align	2
+ 506              		.set	.LANCHOR0,. + 0
+ 509              	_ZL2hw:
+ 510 0000 00000000 		.space	60
+ 510      00000000 
+ 510      00000000 
+ 510      00000000 
+ 510      00000000 
+ 511              		.section	.data.base,"aw"
+ 512              		.align	2
+ 513              		.set	.LANCHOR1,. + 0
+ 516              	base:
+ 517 0000 00000000 		.word	_ZL7membuff
+ 518              		.section	.qspiflash_bss,"aw"
+ 519              		.align	2
+ 520              		.set	.LANCHOR2,. + 0
+ 523              	_ZL7membuff:
+ 524 0000 00000000 		.space	132
+ 524      00000000 
+ 524      00000000 
+ 524      00000000 
+ 524      00000000 
+ 525              		.text
+ 526              	.Letext0:
+ 527              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+ 528              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdin
+ 529              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
+ 530              		.file 12 "../libdaisy/Drivers/CMSIS/Include/core_cm7.h"
+ 531              		.file 13 "../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
+ 532              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
+ 533              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 534              		.file 16 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 535              		.file 17 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 536              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 537              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 538              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 539              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 20
+
+
+ 540              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 541              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 542              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 543              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 544              		.file 26 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 545              		.file 27 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 546              		.file 28 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 547              		.file 29 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 548              		.file 30 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 549              		.file 31 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 550              		.file 32 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 551              		.file 33 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 552              		.file 34 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 553              		.file 35 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 554              		.file 36 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 555              		.file 37 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
+ 556              		.file 38 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
+ 557              		.file 39 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
+ 558              		.file 40 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
+ 559              		.file 41 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ 560              		.file 42 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 561              		.file 43 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
+ 562              		.file 44 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
+ 563              		.file 45 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 564              		.file 46 "../libdaisy/src/daisy_core.h"
+ 565              		.file 47 "../libdaisy/src/per/tim.h"
+ 566              		.file 48 "../libdaisy/src/per/sai.h"
+ 567              		.file 49 "../libdaisy/src/util/wav_format.h"
+ 568              		.file 50 "../libdaisy/src/per/qspi.h"
+ 569              		.file 51 "../libdaisy/src/per/gpio.h"
+ 570              		.file 52 "../libdaisy/src/dev/sdram.h"
+ 571              		.file 53 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
+ 572              		.file 54 "<built-in>"
+ 573              		.file 55 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
+ 574              		.file 56 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/unistd
+ 575              		.file 57 "../libdaisy/src/util/oled_fonts.h"
+ 576              		.file 58 "../libdaisy/Middlewares/Third_Party/FatFs/src/integer.h"
+ 577              		.file 59 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h"
+ 578              		.file 60 "../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h"
+ 579              		.file 61 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
+ 580              		.file 62 "../libdaisy/src/util/sd_diskio.h"
+ 581              		.file 63 "../libdaisy/src/sys/fatfs.h"
+ 582              		.file 64 "../DaisySP/Source/Control/adenv.h"
+ 583              		.file 65 "../DaisySP/Source/Utility/dsp.h"
+ 584              		.file 66 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
+ 585              		.file 67 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/locale.h"
+ 586              		.file 68 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/ctype.h"
+ 587              		.file 69 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
+ 588              		.file 70 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
+ 589              		.file 71 "QSPI_Settings.h"
+ 590              		.file 72 "../libdaisy/src/dev/sr_595.h"
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 21
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 QSPI_Settings.cpp
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:17     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:26     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD2Ev
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:26     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD1Ev
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:67     .text._Z12SaveSettingsRK8Settings:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:75     .text._Z12SaveSettingsRK8Settings:0000000000000000 _Z12SaveSettingsRK8Settings
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:229    .text._Z12SaveSettingsRK8Settings:0000000000000080 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:235    .text._Z12LoadSettingsv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:243    .text._Z12LoadSettingsv:0000000000000000 _Z12LoadSettingsv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:398    .text._Z12LoadSettingsv:0000000000000070 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:404    .text.startup._GLOBAL__sub_I_base:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:411    .text.startup._GLOBAL__sub_I_base:0000000000000000 _GLOBAL__sub_I_base
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:492    .text.startup._GLOBAL__sub_I_base:0000000000000010 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:501    .init_array:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:516    .data.base:0000000000000000 base
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:505    .bss._ZL2hw:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:509    .bss._ZL2hw:0000000000000000 _ZL2hw
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:512    .data.base:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:523    .qspiflash_bss:0000000000000000 _ZL7membuff
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:519    .qspiflash_bss:0000000000000000 $d
+                           .group:0000000000000000 _ZN5daisy9DaisySeedD5Ev
+
+UNDEFINED SYMBOLS
+dsy_qspi_init
+dsy_qspi_erase
+dsy_qspi_write
+dsy_qspi_deinit
+__aeabi_atexit
+__dso_handle
