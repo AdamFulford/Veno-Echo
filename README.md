@@ -13,6 +13,7 @@ ABOUT
 • Tap in the tempo or use the clock input, and select a multiplier or divider for each channel, to generate rhythmic patterns which stay in sync with the rest of your system
 
 FEATURES
+
 • Stereo inputs and outputs
 • High performance op-amps in the audio path
 • Independent delay time, feedback, and reverse controls for each channel
@@ -29,6 +30,7 @@ FEATURES
 • Built around the Electrosmith Daisy embedded platform
 
 SPECIFICATIONS
+
 • Audio quality: 24-bit, 48kHz
 • Width: 20hp
 • Depth: 32mm
