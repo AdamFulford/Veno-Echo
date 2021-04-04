@@ -1,4 +1,4 @@
-Veno-Echo is a powerful stereo digital delay device for Eurorack synthesizers.
+Veno-Echo is a powerful stereo digital delay device for Eurorack synthesizers. This is the first module from Venus Instruments.
 
 ABOUT
 
