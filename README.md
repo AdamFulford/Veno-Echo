@@ -15,27 +15,45 @@ ABOUT
 FEATURES
 
 • Stereo inputs and outputs
+
 • High performance op-amps in the audio path
+
 • Independent delay time, feedback, and reverse controls for each channel
+
 • Tap tempo and externally clockable
+
 • Stereo width and cross feedback controls
+
 • Extensive CV controls, including external modulation input
+
 • Low pass and high pass filters on wet line with adjustable cutoff frequencies and resonance
+
 • Performance oriented filter crossfade control
+
 • Configurable filters to pre or post feedback loop
+
 • Internal modulation with adjustable rate and depth
+
 • Feedback up to 125% to allow for run-away repeats
+
 • Right input normals to the left input for mono to stereo operation
+
 • Gate inputs for reverse switching
+
 • Built around the Electrosmith Daisy embedded platform
 
 SPECIFICATIONS
 
 • Audio quality: 24-bit, 48kHz
+
 • Width: 20hp
+
 • Depth: 32mm
+
 • Current draw: +12V 80mA, -12V 80mA (5V 0mA)
+
 • Delay time range: <5ms to 36s
+
 • CV input range: -5V to +5V
 
 How to flash Firmware:
