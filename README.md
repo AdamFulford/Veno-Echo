@@ -1,6 +1,7 @@
 Veno-Echo is a powerful stereo digital delay device for Eurorack synthesizers.
 
 ABOUT
+
 • Two separate channels with independent controls for delay time, feedback, and reverse direction. Combine with width and cross feedback, for total control over the stereo soundscape
 
 • Warm wet line high-pass and low-pass filters, with configurable cut-off frequencies and resonance, tailor the character of your repeats
