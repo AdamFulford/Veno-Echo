@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
   28:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c **** 
   29:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c **** /**
   30:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   * @brief  Links a compatible diskio driver/lun id and increments the number of active
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 2
 
 
   31:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   *         linked drivers.
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
   33              		@ link register save eliminated.
   81:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c **** {
   82:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   uint8_t DiskNum = 0;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 3
 
 
   83:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   uint8_t ret = 1;
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
   90:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****       disk.lun[DiskNum] = 0;
   70              		.loc 1 90 25 view .LVU17
   71 0020 6C60     		str	r4, [r5, #4]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 4
 
 
   91:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****       disk.nbr--;
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
   40:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   uint8_t ret = 1;
  118              		.loc 1 40 1 is_stmt 1 view -0
  119              		.cfi_startproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 5
 
 
  120              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
   49:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****     path[0] = DiskNum + '0';
  160              		.loc 1 49 19 view .LVU42
  161 001c 5D7A     		ldrb	r5, [r3, #9]	@ zero_extendqisi2
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 6
 
 
   47:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****     disk.lun[disk.nbr] = lun;
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
  197              		.loc 1 52 5 is_stmt 1 view .LVU61
   52:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****     path[3] = 0;
  198              		.loc 1 52 13 is_stmt 0 view .LVU62
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 7
 
 
  199 0040 81F802C0 		strb	ip, [r1, #2]
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
   44:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   {
  244              		.loc 1 44 10 is_stmt 0 view .LVU74
  245 0000 104B     		ldr	r3, .L18
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 8
 
 
  246              	.LBE16:
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
   48:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****     DiskNum = disk.nbr++;
  287              		.loc 1 48 18 view .LVU88
  288 0014 5D7A     		ldrb	r5, [r3, #9]	@ zero_extendqisi2
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 9
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 9
 
 
   51:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****     path[2] = '/';
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
  324 0036 C870     		strb	r0, [r1, #3]
   51:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****     path[2] = '/';
  325              		.loc 1 51 13 view .LVU108
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 10
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 10
 
 
  326 0038 81F801C0 		strb	ip, [r1, #1]
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
  368              		.thumb
  369              		.thumb_func
  370              		.fpu fpv5-d16
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 11
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 11
 
 
  372              	FATFS_UnLinkDriverEx:
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
  104:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   * @retval Returns 0 in case of success, otherwise 1.
  105:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   */
  106:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c **** uint8_t FATFS_UnLinkDriver(char *path)
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 12
 
 
  107:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c **** {
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
  460              		.fpu fpv5-d16
  462              	FATFS_GetAttachedDriversNbr:
  463              	.LFB324:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 13
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 13
 
 
  110:../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c **** 
@@ -773,30 +773,30 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 1
  504              		.file 14 "../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h"
  505              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
  506              		.file 16 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s 			page 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ff_gen_drv.c
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:17     .text.FATFS_UnLinkDriverEx.part.0:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:25     .text.FATFS_UnLinkDriverEx.part.0:0000000000000000 FATFS_UnLinkDriverEx.part.0
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:102    .text.FATFS_UnLinkDriverEx.part.0:0000000000000030 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:107    .text.FATFS_LinkDriverEx:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:115    .text.FATFS_LinkDriverEx:0000000000000000 FATFS_LinkDriverEx
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:221    .text.FATFS_LinkDriverEx:0000000000000050 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:226    .text.FATFS_LinkDriver:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:234    .text.FATFS_LinkDriver:0000000000000000 FATFS_LinkDriver
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:359    .text.FATFS_LinkDriver:0000000000000044 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:364    .text.FATFS_UnLinkDriverEx:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:372    .text.FATFS_UnLinkDriverEx:0000000000000000 FATFS_UnLinkDriverEx
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:400    .text.FATFS_UnLinkDriverEx:0000000000000010 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:405    .text.FATFS_UnLinkDriver:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:413    .text.FATFS_UnLinkDriver:0000000000000000 FATFS_UnLinkDriver
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:449    .text.FATFS_UnLinkDriver:0000000000000010 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:454    .text.FATFS_GetAttachedDriversNbr:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:462    .text.FATFS_GetAttachedDriversNbr:0000000000000000 FATFS_GetAttachedDriversNbr
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:478    .text.FATFS_GetAttachedDriversNbr:0000000000000008 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:488    .bss.disk:0000000000000000 disk
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwOOpiW.s:484    .bss.disk:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:17     .text.FATFS_UnLinkDriverEx.part.0:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:25     .text.FATFS_UnLinkDriverEx.part.0:0000000000000000 FATFS_UnLinkDriverEx.part.0
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:102    .text.FATFS_UnLinkDriverEx.part.0:0000000000000030 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:107    .text.FATFS_LinkDriverEx:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:115    .text.FATFS_LinkDriverEx:0000000000000000 FATFS_LinkDriverEx
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:221    .text.FATFS_LinkDriverEx:0000000000000050 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:226    .text.FATFS_LinkDriver:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:234    .text.FATFS_LinkDriver:0000000000000000 FATFS_LinkDriver
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:359    .text.FATFS_LinkDriver:0000000000000044 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:364    .text.FATFS_UnLinkDriverEx:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:372    .text.FATFS_UnLinkDriverEx:0000000000000000 FATFS_UnLinkDriverEx
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:400    .text.FATFS_UnLinkDriverEx:0000000000000010 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:405    .text.FATFS_UnLinkDriver:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:413    .text.FATFS_UnLinkDriver:0000000000000000 FATFS_UnLinkDriver
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:449    .text.FATFS_UnLinkDriver:0000000000000010 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:454    .text.FATFS_GetAttachedDriversNbr:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:462    .text.FATFS_GetAttachedDriversNbr:0000000000000000 FATFS_GetAttachedDriversNbr
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:478    .text.FATFS_GetAttachedDriversNbr:0000000000000008 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:488    .bss.disk:0000000000000000 disk
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4wynBT.s:484    .bss.disk:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS
