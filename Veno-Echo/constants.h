@@ -82,6 +82,8 @@ constexpr float AudioLimit{2.0f};
 
 constexpr uint32_t ClockInWait{1000}; //in ms
 
+constexpr float pickupTolerance{0.005f};
+
 enum TempoDivs
 {
     DIV6,
@@ -107,6 +109,13 @@ enum TapRatios
     TWELVE,
 
     MAXRATIOS,
+};
+
+enum pickupState
+{
+    BELOW,
+    ABOVE,
+    PICKEDUP,
 };
 
 #endif

@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
   34              		@ link register save eliminated.
   35              	.LBB55:
   36              	.LBI55:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 2
 
 
   37              		.file 2 "../libdaisy/src/sys/system.h"
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
   54:../libdaisy/src/sys/system.h ****     };
   55:../libdaisy/src/sys/system.h **** 
   56:../libdaisy/src/sys/system.h ****     System() {}
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 3
 
 
   57:../libdaisy/src/sys/system.h ****     ~System() {}
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
   49              		.file 4 "../libdaisy/src/per/adc.h"
    1:../libdaisy/src/per/adc.h **** #pragma once
    2:../libdaisy/src/per/adc.h **** #ifndef DSY_ADC_H
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 4
 
 
    3:../libdaisy/src/per/adc.h **** #define DSY_ADC_H /**< Macro */
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
   57:../libdaisy/src/per/adc.h ****     dsy_gpio pin_;                   /**< & */
   58:../libdaisy/src/per/adc.h ****     dsy_gpio mux_pin_[MUX_SEL_LAST]; /**< & */
   59:../libdaisy/src/per/adc.h ****     uint8_t  mux_channels_;          /**< & */
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 5
 
 
   60:../libdaisy/src/per/adc.h **** };
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
   23:../libdaisy/src/hid/audio.h ****         ERR,
   24:../libdaisy/src/hid/audio.h ****     };
   25:../libdaisy/src/hid/audio.h **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 6
 
 
   26:../libdaisy/src/hid/audio.h ****     /** Non-Interleaving Callback format. Both arrays arranged by float[chn][sample] */
@@ -334,7 +334,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
   76              	.LVL1:
   77              	.LFB3878:
   78              		.file 6 "QSPI_Settings.cpp"
-   1:QSPI_Settings.cpp **** // Copyright 2020 Adam Fulford
+   1:QSPI_Settings.cpp **** // Copyright 2021 Adam Fulford
    2:QSPI_Settings.cpp **** // 
    3:QSPI_Settings.cpp **** // Permission is hereby granted, free of charge, to any person obtaining a copy
    4:QSPI_Settings.cpp **** // of this software and associated documentation files (the "Software"), to deal
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
   22:QSPI_Settings.cpp **** 
   23:QSPI_Settings.cpp **** #include "QSPI_Settings.h"
   24:QSPI_Settings.cpp **** #include <string.h>
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 7
 
 
   25:QSPI_Settings.cpp **** #include <math.h>
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  101 0008 0023     		movs	r3, #0
   42:QSPI_Settings.cpp ****     inbuff[2] = currentSetting.ModDepth;
  102              		.loc 6 42 15 view .LVU18
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 8
 
 
  103 000a 0295     		str	r5, [sp, #8]	@ float
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  139 002c 0795     		str	r5, [sp, #28]	@ float
   48:QSPI_Settings.cpp ****     
  140              		.loc 6 48 5 is_stmt 1 view .LVU38
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 9
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 9
 
 
   48:QSPI_Settings.cpp ****     
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  178              		.loc 6 63 30 is_stmt 0 discriminator 2 view .LVU58
  179 004a 01F8040F 		strb	r0, [r1, #4]!
  180              	.LBE61:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 10
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 10
 
 
   55:QSPI_Settings.cpp ****     {
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  219 0078 2046     		mov	r0, r4
  220 007a 13B0     		add	sp, sp, #76
  221              		.cfi_def_cfa_offset 20
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 11
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 11
 
 
  222              		@ sp needed
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  267              		.loc 6 78 1 view .LVU84
  268 0008 93B0     		sub	sp, sp, #76
  269              		.cfi_def_cfa_offset 96
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 12
 
 
   84:QSPI_Settings.cpp ****     dsy_qspi_init(&hw.qspi_handle);
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  309 002e 3246     		mov	r2, r6
  310              	.LVL16:
  311              	.L12:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 13
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 13
 
 
  312              	.LBB68:
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  109:QSPI_Settings.cpp **** 
  110:QSPI_Settings.cpp **** return SettingsInFlash;
  111:QSPI_Settings.cpp **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 14
 
 
  112:QSPI_Settings.cpp **** }...
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  381              		.loc 6 107 1 is_stmt 1 view .LVU131
  107:QSPI_Settings.cpp **** SettingsInFlash.Resonance = readbuff[6];
  382              		.loc 6 107 27 is_stmt 0 view .LVU132
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 15
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 15
 
 
  383 0068 BA61     		str	r2, [r7, #24]	@ float
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  433 0000 0348     		ldr	r0, .L20
  434 0002 0023     		movs	r3, #0
  435              	.LBE75:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 16
 
 
  436              	.LBE74:
@@ -906,7 +906,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  438              	.LBE72:
  439              	.LBE71:
  440              		.file 7 "Veno-Echo.h"
-   1:Veno-Echo.h   **** // Copyright 2020 Adam Fulford
+   1:Veno-Echo.h   **** // Copyright 2021 Adam Fulford
    2:Veno-Echo.h   **** // 
    3:Veno-Echo.h   **** // Permission is hereby granted, free of charge, to any person obtaining a copy
    4:Veno-Echo.h   **** // of this software and associated documentation files (the "Software"), to deal
@@ -931,14 +931,15 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
   23:Veno-Echo.h   **** #ifndef VENO_ECHO_H
   24:Veno-Echo.h   **** #define VENO_ECHO_H
   25:Veno-Echo.h   **** 
-  26:Veno-Echo.h   **** //#include "daisysp.h"
-  27:Veno-Echo.h   **** #include "daisy_seed.h"
+  26:Veno-Echo.h   **** //defines for HW pins:
+  27:Veno-Echo.h   **** 
   28:Veno-Echo.h   **** 
-  29:Veno-Echo.h   **** //using namespace daisysp;
-  30:Veno-Echo.h   **** using namespace daisy;
-  31:Veno-Echo.h   **** 
-  32:Veno-Echo.h   **** static DaisySeed hw;
- 441              		.loc 7 32 18 view .LVU143
+  29:Veno-Echo.h   **** 
+  30:Veno-Echo.h   **** #include "daisy_seed.h"
+  31:Veno-Echo.h   **** using namespace daisy;
+  32:Veno-Echo.h   **** 
+  33:Veno-Echo.h   **** static DaisySeed hw;
+ 441              		.loc 7 33 18 view .LVU143
  442 0004 034A     		ldr	r2, .L20+4
  443 0006 0449     		ldr	r1, .L20+8
  444              	.LBB86:
@@ -957,10 +958,10 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  455              	.LBE78:
  456              	.LBB79:
  457              	.LBI79:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 17
+
+
   84:../libdaisy/src/per/adc.h ****     ~AdcHandle() {}
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 17
-
-
  458              		.loc 4 84 5 is_stmt 1 view .LVU146
   84:../libdaisy/src/per/adc.h ****     ~AdcHandle() {}
  459              		.loc 4 84 5 is_stmt 0 view .LVU147
@@ -1017,10 +1018,10 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
   47:../libdaisy/src/per/dac.h ****         POLLING,
   48:../libdaisy/src/per/dac.h ****         DMA,
   49:../libdaisy/src/per/dac.h ****     };
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 18
+
+
   50:../libdaisy/src/per/dac.h **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 18
-
-
   51:../libdaisy/src/per/dac.h ****     /** Sets the number of bits per sample transmitted out of the DAC.
   52:../libdaisy/src/per/dac.h ****      ** The output range will be: 0V - VDDA
   53:../libdaisy/src/per/dac.h ****      ** The resolution will be roughly: bitdepth / (VDDA - 0V) 
@@ -1077,13 +1078,13 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  481              		.loc 2 56 5 is_stmt 1 view .LVU153
   56:../libdaisy/src/sys/system.h ****     ~System() {}
  482              		.loc 2 56 5 is_stmt 0 view .LVU154
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 19
+
+
  483              	.LBE84:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 19
-
-
  484              	.LBE85:
  485              	.LBE86:
- 486              		.loc 7 32 18 view .LVU155
+ 486              		.loc 7 33 18 view .LVU155
  487 000c FFF7FEBF 		b	__aeabi_atexit
  488              	.LVL25:
  489              	.L21:
@@ -1137,10 +1138,10 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  536              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  537              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  538              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 20
+
+
  539              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 20
-
-
  540              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  541              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  542              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
@@ -1192,30 +1193,30 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 1
  588              		.file 70 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
  589              		.file 71 "QSPI_Settings.h"
  590              		.file 72 "../libdaisy/src/dev/sr_595.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s 			page 21
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 QSPI_Settings.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:17     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:26     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD2Ev
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:26     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD1Ev
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:67     .text._Z12SaveSettingsRK8Settings:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:75     .text._Z12SaveSettingsRK8Settings:0000000000000000 _Z12SaveSettingsRK8Settings
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:229    .text._Z12SaveSettingsRK8Settings:0000000000000080 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:235    .text._Z12LoadSettingsv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:243    .text._Z12LoadSettingsv:0000000000000000 _Z12LoadSettingsv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:398    .text._Z12LoadSettingsv:0000000000000070 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:404    .text.startup._GLOBAL__sub_I_base:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:411    .text.startup._GLOBAL__sub_I_base:0000000000000000 _GLOBAL__sub_I_base
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:492    .text.startup._GLOBAL__sub_I_base:0000000000000010 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:501    .init_array:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:516    .data.base:0000000000000000 base
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:505    .bss._ZL2hw:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:509    .bss._ZL2hw:0000000000000000 _ZL2hw
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:512    .data.base:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:523    .qspiflash_bss:0000000000000000 _ZL7membuff
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceNejSD.s:519    .qspiflash_bss:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:17     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:26     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD2Ev
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:26     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD1Ev
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:67     .text._Z12SaveSettingsRK8Settings:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:75     .text._Z12SaveSettingsRK8Settings:0000000000000000 _Z12SaveSettingsRK8Settings
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:229    .text._Z12SaveSettingsRK8Settings:0000000000000080 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:235    .text._Z12LoadSettingsv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:243    .text._Z12LoadSettingsv:0000000000000000 _Z12LoadSettingsv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:398    .text._Z12LoadSettingsv:0000000000000070 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:404    .text.startup._GLOBAL__sub_I_base:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:411    .text.startup._GLOBAL__sub_I_base:0000000000000000 _GLOBAL__sub_I_base
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:492    .text.startup._GLOBAL__sub_I_base:0000000000000010 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:501    .init_array:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:516    .data.base:0000000000000000 base
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:505    .bss._ZL2hw:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:509    .bss._ZL2hw:0000000000000000 _ZL2hw
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:512    .data.base:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:523    .qspiflash_bss:0000000000000000 _ZL7membuff
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccsHovdv.s:519    .qspiflash_bss:0000000000000000 $d
                            .group:0000000000000000 _ZN5daisy9DaisySeedD5Ev
 
 UNDEFINED SYMBOLS
