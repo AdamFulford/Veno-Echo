@@ -1055,28 +1055,67 @@ void Update_feedbackR_CV()
 
 void Update_feedbackR()
 {
+    static bool lastShift{};
+    static pickupState feedbackR_pickup{};
+    static pickupState LPCutoff_pickup{};
+
+    static float feedbackR_Last{};
+    static float LPCutoff_Last{};
+
+    //get pot values:
     float feedbackR_Pot{hw.adc.GetMuxFloat(7,4)};
-    static float feedbackR_Pot_Last{};
 
     if (!shift) //default controls
     {   
-        //update last values if shift off
-        feedbackR_Pot_Last = feedbackR_Pot;
+        if (shift != lastShift) //recent shift change
+        {
+            lastShift = shift;
+            feedbackR_pickup = checkPickupState(feedbackR_Pot,feedbackR_Last,feedbackR_pickup,true);
+        } 
+        else    //not a default shift change
+        {
+            feedbackR_pickup = checkPickupState(feedbackR_Pot,feedbackR_Last,feedbackR_pickup,false);
+        }
 
-        float feedbackR_Target{scale(PotCVCombo(feedbackR_Pot,feedbackR_CV),0.0,maxFB,LINEAR)};
+        float feedbackR_combo{};
+        
+        if(feedbackR_pickup == PICKEDUP)
+        {
+            feedbackR_combo = PotCVCombo(feedbackR_Pot,feedbackR_CV);
+            feedbackR_Last = feedbackR_Pot;
+        }
+
+        else
+        {
+            feedbackR_combo = PotCVCombo(feedbackR_Last,feedbackR_CV);
+        }
+
+        float feedbackR_Target{scale(feedbackR_combo,0.0,maxFB,LINEAR)};
         fonepole(feedbackR,feedbackR_Target,0.032f);
     }
     else    //alternate controls
     {
-        static float LPCutoff{};
-        if (abs(feedbackR_Pot_Last - feedbackR_Pot) > altControlThresh)
+         if (shift != lastShift) //recent shift change
         {
+            lastShift = shift;
+            LPCutoff_pickup = checkPickupState(feedbackR_Pot,LPCutoff_Last,LPCutoff_pickup,true);
+        }
+
+        else    //not a recent shift change
+        {
+            LPCutoff_pickup = checkPickupState(feedbackR_Pot,LPCutoff_Last,LPCutoff_pickup,false);
+        }
+
+        if(LPCutoff_pickup == PICKEDUP)
+        {
+            float LPCutoff{};
             LPCutoff = scale(feedbackR_Pot,minLPCut,maxLPCut,EXPONENTIAL);
             LPF_L.SetFreq(LPCutoff);
             LPF_R.SetFreq(LPCutoff);
             LPF_L_post.SetFreq(LPCutoff);
             LPF_R_post.SetFreq(LPCutoff);
             AltControls.LP_Cutoff = LPCutoff;
+            LPCutoff_Last = feedbackR_Pot;  //update last value
         }
     }
 }
