@@ -11,8 +11,8 @@
         ],
         "includePath": [
           "${workspaceFolder}/**",
-          "${workspaceFolder}/DaisyExamples/libdaisy/**",
-          "${workspaceFolder}/DaisyExamples/DaisySP/**"
+          "${workspaceFolder}/libdaisy/**",
+          "${workspaceFolder}/DaisySP/**"
         ],
         "name": "Win32",
         "windowsSdkVersion": "10.0.17763.0"
@@ -28,8 +28,8 @@
         ],
         "includePath": [
           "${workspaceFolder}/**",
-          "${workspaceFolder}/DaisyExamples/libDaisy/**",
-          "${workspaceFolder}/DaisyExamples/DaisySP/**"
+          "${workspaceFolder}/libDaisy/**",
+          "${workspaceFolder}/DaisySP/**"
         ],
         "name": "macOS"
       }

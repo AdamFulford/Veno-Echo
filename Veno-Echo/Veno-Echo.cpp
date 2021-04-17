@@ -235,7 +235,8 @@ void TurnOnAllLEDs();
 void ResetAllLEDs();
 float HardLimit(float input, float limit);
 float PotCVCombo(float Pot_Val, float CV_Val);
-pickupState checkPickupState(float value, float lastValue, pickupState lastState, bool ShiftChange);
+bool checkPickupState(float value, float lastvalue, bool lastState, bool ShiftChange);
+pickupState checkPickupState_alt(float value, float lastValue, pickupState lastState, bool ShiftChange);
 
 static void AudioCallback(float *in, float *out, size_t size)
 {
@@ -789,15 +790,13 @@ void Update_DelayTimeL_CV()
     delayTimeL_CV = hw.adc.GetFloat(0);
 }
 
-//samples ADC's and updates parameters. 
-//Delay time controls only update if thresholds for delta and time since last change are exceeded.
 void Update_DelayTimeL()
 {
     static bool lastShift{};
-    static pickupState delayTimeL_pickup{};
+    static bool delayTimeL_pickup{};
     static pickupState Rev_DelayTime_pickup{};
     
-    static float delayTimeL_Pot_Last{};
+    static float delayTimeL_Last{};
     static float Rev_DelayTime_last{};
 
     //update pot values
@@ -814,24 +813,25 @@ void Update_DelayTimeL()
         if (shift != lastShift) //recent shift change
         {
             lastShift = shift;
-            delayTimeL_pickup = checkPickupState(delayTimeL_Pot,delayTimeL_Pot_Last,delayTimeL_pickup,true);
+            delayTimeL_pickup = checkPickupState(delayTimeL_Pot,delayTimeL_Last,delayTimeL_pickup,true);
+            delayTimeL_Last = delayTimeL_Pot;   //reset last value
         } 
-        else    //not a default shift change
+        else    //not a recent shift change
         {
-            delayTimeL_pickup = checkPickupState(delayTimeL_Pot,delayTimeL_Pot_Last,delayTimeL_pickup,false);
+            delayTimeL_pickup = checkPickupState(delayTimeL_Pot,delayTimeL_Last,delayTimeL_pickup,false);
         }
 
         float delayTimeL{};
 
-    if(delayTimeL_pickup == PICKEDUP)
+    if(delayTimeL_pickup)
     {
         delayTimeL = PotCVCombo(delayTimeL_Pot,delayTimeL_CV);  //combine pot value and CV
-        delayTimeL_Pot_Last = delayTimeL_Pot; //update last value
+        delayTimeL_Last = delayTimeL_Pot; //update last value
     }
 
     else
     {
-        delayTimeL = PotCVCombo(delayTimeL_Pot_Last,delayTimeL_CV); //combine last pot value and CV
+        delayTimeL = PotCVCombo(delayTimeL_Last,delayTimeL_CV); //combine last pot value and CV
     }
 
     if (!syncMode)
@@ -861,12 +861,12 @@ else    //shift mode
     if (shift != lastShift) //recent shift change
     {
         lastShift = shift;
-        Rev_DelayTime_pickup = checkPickupState(delayTimeL_Pot,Rev_DelayTime_last,Rev_DelayTime_pickup,true);
+        Rev_DelayTime_pickup = checkPickupState_alt(delayTimeL_Pot,Rev_DelayTime_last,Rev_DelayTime_pickup,true);
     }
 
     else    //not a recent shift change
     {
-        Rev_DelayTime_pickup = checkPickupState(delayTimeL_Pot,Rev_DelayTime_last,Rev_DelayTime_pickup,false);
+        Rev_DelayTime_pickup = checkPickupState_alt(delayTimeL_Pot,Rev_DelayTime_last,Rev_DelayTime_pickup,false);
     }
 
     if(Rev_DelayTime_pickup == PICKEDUP)
@@ -890,10 +890,10 @@ void Update_DelayTimeR_CV()
 void Update_DelayTimeR()
 {
     static bool lastShift{};
-    static pickupState delayTimeR_pickup{};
+    static bool delayTimeR_pickup{};
     static pickupState tapRatio_pickup{};
     
-    static float delayTimeR_Pot_Last{};
+    static float delayTimeR_Last{};
     static float tapRatio_last{};
 
     //update pot values
@@ -910,24 +910,25 @@ void Update_DelayTimeR()
         if (shift != lastShift) //recent shift change
         {
             lastShift = shift;
-            delayTimeR_pickup = checkPickupState(delayTimeR_Pot,delayTimeR_Pot_Last,delayTimeR_pickup,true);
+            delayTimeR_pickup = checkPickupState(delayTimeR_Pot,delayTimeR_Last,delayTimeR_pickup,true);
+            delayTimeR_Last = delayTimeR_Pot;   //reset last value
         } 
         else    //not a default shift change
         {
-            delayTimeR_pickup = checkPickupState(delayTimeR_Pot,delayTimeR_Pot_Last,delayTimeR_pickup,false);
+            delayTimeR_pickup = checkPickupState(delayTimeR_Pot,delayTimeR_Last,delayTimeR_pickup,false);
         }
 
         float delayTimeR{};
 
-        if(delayTimeR_pickup == PICKEDUP)
+        if(delayTimeR_pickup)
         {
             delayTimeR = PotCVCombo(delayTimeR_Pot,delayTimeR_CV);
-            delayTimeR_Pot_Last = delayTimeR_Pot;
+            delayTimeR_Last = delayTimeR_Pot;
         }
 
         else
         {
-            delayTimeR = PotCVCombo(delayTimeR_Pot_Last,delayTimeR_CV);
+            delayTimeR = PotCVCombo(delayTimeR_Last,delayTimeR_CV);
         }
 
         if (!syncMode)
@@ -956,12 +957,12 @@ void Update_DelayTimeR()
         if (shift != lastShift) //recent shift change
         {
             lastShift = shift;
-            tapRatio_pickup = checkPickupState(delayTimeR_Pot,tapRatio_last,tapRatio_pickup,true);
+            tapRatio_pickup = checkPickupState_alt(delayTimeR_Pot,tapRatio_last,tapRatio_pickup,true);
         }
 
         else    //not a recent shift change
         {
-            tapRatio_pickup = checkPickupState(delayTimeR_Pot,tapRatio_last,tapRatio_pickup,false);
+            tapRatio_pickup = checkPickupState_alt(delayTimeR_Pot,tapRatio_last,tapRatio_pickup,false);
         }
 
         if(tapRatio_pickup == PICKEDUP)
@@ -983,7 +984,7 @@ void Update_feedbackL_CV()
 void Update_feedbackL()
 {
     static bool lastShift{};
-    static pickupState feedbackL_pickup{};
+    static bool feedbackL_pickup{};
     static pickupState HPCutoff_pickup{};
 
     static float feedbackL_Last{};
@@ -999,6 +1000,7 @@ void Update_feedbackL()
         {
             lastShift = shift;
             feedbackL_pickup = checkPickupState(feedbackL_Pot,feedbackL_Last,feedbackL_pickup,true);
+            feedbackL_Last = feedbackL_Pot; //update last value
         } 
         else    //not a default shift change
         {
@@ -1007,10 +1009,10 @@ void Update_feedbackL()
 
         float feedbackL_combo{};
 
-        if(feedbackL_pickup == PICKEDUP)
+        if(feedbackL_pickup)
         {
             feedbackL_combo = PotCVCombo(feedbackL_Pot,feedbackL_CV);
-            feedbackL_Last = feedbackL_Pot;
+            feedbackL_Last = feedbackL_Pot; //update last value
         }
 
         else
@@ -1026,12 +1028,12 @@ void Update_feedbackL()
         if (shift != lastShift) //recent shift change
         {
             lastShift = shift;
-            HPCutoff_pickup = checkPickupState(feedbackL_Pot,HPCutoff_Last,HPCutoff_pickup,true);
+            HPCutoff_pickup = checkPickupState_alt(feedbackL_Pot,HPCutoff_Last,HPCutoff_pickup,true);
         }
 
         else    //not a recent shift change
         {
-            HPCutoff_pickup = checkPickupState(feedbackL_Pot,HPCutoff_Last,HPCutoff_pickup,false);
+            HPCutoff_pickup = checkPickupState_alt(feedbackL_Pot,HPCutoff_Last,HPCutoff_pickup,false);
         }
 
         if(HPCutoff_pickup == PICKEDUP)
@@ -1056,7 +1058,7 @@ void Update_feedbackR_CV()
 void Update_feedbackR()
 {
     static bool lastShift{};
-    static pickupState feedbackR_pickup{};
+    static bool feedbackR_pickup{};
     static pickupState LPCutoff_pickup{};
 
     static float feedbackR_Last{};
@@ -1071,6 +1073,7 @@ void Update_feedbackR()
         {
             lastShift = shift;
             feedbackR_pickup = checkPickupState(feedbackR_Pot,feedbackR_Last,feedbackR_pickup,true);
+            feedbackR_Last = feedbackR_Pot; //update last value
         } 
         else    //not a default shift change
         {
@@ -1079,10 +1082,10 @@ void Update_feedbackR()
 
         float feedbackR_combo{};
         
-        if(feedbackR_pickup == PICKEDUP)
+        if(feedbackR_pickup)
         {
             feedbackR_combo = PotCVCombo(feedbackR_Pot,feedbackR_CV);
-            feedbackR_Last = feedbackR_Pot;
+            feedbackR_Last = feedbackR_Pot;  //update last value
         }
 
         else
@@ -1098,12 +1101,12 @@ void Update_feedbackR()
          if (shift != lastShift) //recent shift change
         {
             lastShift = shift;
-            LPCutoff_pickup = checkPickupState(feedbackR_Pot,LPCutoff_Last,LPCutoff_pickup,true);
+            LPCutoff_pickup = checkPickupState_alt(feedbackR_Pot,LPCutoff_Last,LPCutoff_pickup,true);
         }
 
         else    //not a recent shift change
         {
-            LPCutoff_pickup = checkPickupState(feedbackR_Pot,LPCutoff_Last,LPCutoff_pickup,false);
+            LPCutoff_pickup = checkPickupState_alt(feedbackR_Pot,LPCutoff_Last,LPCutoff_pickup,false);
         }
 
         if(LPCutoff_pickup == PICKEDUP)
@@ -1128,7 +1131,7 @@ void Update_drywet_CV()
 void Update_drywet()
 {
     static bool lastShift{};
-    static pickupState drywet_pickup{};
+    static bool drywet_pickup{};
     static pickupState Res_pickup{};
 
     static float drywet_Last{}; //last drywet position (unscaled)
@@ -1141,19 +1144,33 @@ void Update_drywet()
     if (!shift) //default controls
     {   
 
+        static float drywet_new{};
+
         if (shift != lastShift) //recent shift change
         {
             lastShift = shift;
-            drywet_pickup = checkPickupState(drywet_Pot,drywet_Last,drywet_pickup,true);
+            //drywet_pickup = checkPickupState(drywet_Pot,drywet_Last,drywet_pickup,true);
+            drywet_pickup = false;
+            drywet_new = drywet_Pot; //update new value
         } 
-        else    //not a default shift change
+        
+        else    //not a recent shift change
         {
-            drywet_pickup = checkPickupState(drywet_Pot,drywet_Last,drywet_pickup,false);
+            if(!drywet_pickup)  //not pickup
+            {
+                //drywet_pickup = checkPickupState(drywet_Pot,drywet_Last,drywet_pickup,false);
+                if(abs(drywet_Pot - drywet_new) > pickupTolerance)  //check if changed from new value
+                {
+                    drywet_pickup = true;
+                    drywet_new = drywet_Pot;   //update new
+                }
+            }
+
         }
         
         float drywetcombo{};
 
-        if (drywet_pickup == PICKEDUP)
+        if (drywet_pickup)
         {
             drywetcombo = PotCVCombo(drywet_Pot,drywet_CV);    //combine pot and CV
             drywet_Last = drywet_Pot; //update last value
@@ -1188,12 +1205,12 @@ void Update_drywet()
         if (shift != lastShift) //recent shift change
         {
             lastShift = shift;
-            Res_pickup = checkPickupState(drywet_Pot,Res_Last,Res_pickup,true);
+            Res_pickup = checkPickupState_alt(drywet_Pot,Res_Last,Res_pickup,true);
         }
 
         else    //not a recent shift change
         {
-            Res_pickup = checkPickupState(drywet_Pot,Res_Last,Res_pickup,false);
+            Res_pickup = checkPickupState_alt(drywet_Pot,Res_Last,Res_pickup,false);
         }
 
         if(Res_pickup == PICKEDUP)
@@ -1460,10 +1477,10 @@ void Update_Buttons()
 
     if (Tap_Button.getState())
     {
-        //if ( (System::GetNow() - shiftTime) > shiftWait)
-        //{
+        if ( (System::GetNow() - shiftTime) > shiftWait)
+        {
             shift = true;   //turn on shift if button held for longer than shiftWait
-        //} 
+        } 
     }
 
     if (buttonstate == 3) //all buttons held
@@ -1807,7 +1824,50 @@ float PotCVCombo(float Pot_Val, float CV_Val)
     return output;
 }
 
-pickupState checkPickupState(float value, float lastValue, pickupState lastState, bool ShiftChange)
+//checks pickup state of primary controls
+bool checkPickupState(float value, float lastValue, bool lastState, bool ShiftChange)
+{
+    bool retval{};
+    
+    if(ShiftChange) //recent shift change to not picked up, unless there's been no change
+    {
+        if(abs(value - lastValue) > pickupTolerance)
+        {
+            retval = false;
+        }
+        else
+        {
+            retval = true;
+        }
+    }
+
+    else //not recent shift change, change to pickup if there's been a change since last shift change
+    {
+    if(!lastState) //if not picked up
+    {
+        if(abs(value - lastValue) > pickupTolerance)
+        {
+            retval = true;
+        }
+
+        else
+        {
+            retval = false;
+        }
+
+    }
+    else    //previous state is picked up
+    {
+        retval = true;  //always return true
+    }
+
+    }
+    return retval;
+
+}
+
+//Checks pickup state of secondary controls
+pickupState checkPickupState_alt(float value, float lastValue, pickupState lastState, bool ShiftChange)
 {
     pickupState retval{};
 
@@ -1854,3 +1914,5 @@ pickupState checkPickupState(float value, float lastValue, pickupState lastState
     
     return retval;
 }
+
+
