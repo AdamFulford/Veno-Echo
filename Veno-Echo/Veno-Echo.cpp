@@ -1583,9 +1583,13 @@ void UpdateClock()
         tempoLED_BASE.resetPhase();
         if(divCounter == 0)
         {
-            if(BaseTempo.tap()) //if tempo changed
+            if(BaseTempo.tap()) //if valid tap resistered
             {
-                tempoLED_BASE.setTempo(BaseTempo.getTapFreq());
+                tempoLED_BASE.setTempo(BaseTempo.getTapFreq()); //set new base freq
+                
+                //shouldn't need to do this
+                //any clock tempo change or ratio change will trigger 
+                //a phase reset of both sides
                 if(syncMode)
                 {
                     if(div_L <= UNITY)
@@ -1598,6 +1602,7 @@ void UpdateClock()
                         delayR.tempoled.resetPhase();
                     }
                 }
+                
             }
         }
     }
@@ -1746,12 +1751,16 @@ void Update_BaseTempoLED()
     {
         if(delayL_flag) //if left delay time change flag set
         {
+            //reset both sides
             delayL.tempoled.resetPhase();
+            delayR.tempoled.resetPhase();
             delayL_flag = false;
         }
 
         if(delayR_flag) //if right delay time change flag set
         {
+            //rest both sides
+            delayL.tempoled.resetPhase();
             delayR.tempoled.resetPhase();
             delayR_flag = false;
         }
