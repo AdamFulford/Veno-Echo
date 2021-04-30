@@ -64,9 +64,21 @@ void DelayMulti::init(dsy_gpio_pin ledpin,float samplerate)
 }
 
 //Updates delay time in samples. Returns high if tempo was updated
-bool DelayMulti::SetDelayTime(float delaytime)
+bool DelayMulti::SetDelayTime(float delaytime_pot, float baseTempo, bool syncMode)
 {
 
+float delaytime{};
+
+if(syncMode)
+{
+    delaytime = GetDiv(delaytime_pot) * baseTempo * 48.0f;
+}
+
+else
+{
+    delaytime = scale(delaytime_pot,minDelay,maxDelay,LOGARITHMIC);
+}
+    
 //If change in delaytime exceeds 0.5% of last value
 if( abs(delaytime - delayLast_)> (0.005f * delayLast_)) 
 {
@@ -118,7 +130,7 @@ else    //change in delaytime smaller than threshold (I.e. stopped moving)
         timer_ = System::GetNow(); //reset timer
         waiting_flag_ = false;  //reset wait flag
 
-        //update freq of tempo metros and reset phases of both
+        //update freq of tempo LED oscillator
         tempoled.setTempo(1.0f / (delaytime / samplerate_ ));
         return true;
     }
@@ -130,21 +142,19 @@ else    //change in delaytime smaller than threshold (I.e. stopped moving)
 
 }
 
-//converts potentiometer float input (0.0 - 1.0) to samples using log scale and then updates delaytime
-void DelayMulti::SetDelayTime_pot(float delaytime_pot, bool invert)
-{
-    if(!invert)
-        SetDelayTime(scale(delaytime_pot,minDelay,maxDelay,LOGARITHMIC));
-    else
-        SetDelayTime(scale(delaytime_pot,maxDelay,minDelay,LOGARITHMIC));
-}
-
 //Updates xfades, updates delayline with delayTime[] + modulation and 
 //returns combined output from delay heads, and updates LEDs. 
 //Call at audio samplerate
 const float& DelayMulti::GetOutput()
 {
-    tempoled.update();
+    if(syncMode_)
+    {
+        tempoled.update(div_,basePhase_);
+    }
+    else
+    {
+        tempoled.update();
+    }
 
     //float output{};    
     output_ = 0.0f;
@@ -172,8 +182,81 @@ void DelayMulti::Write(const float& in)
     del->Write(in);
 }
 
-//this must be called once per sample
-void DelayMulti::SetModulation(const float& mod)  
+float DelayMulti::GetDiv(float potValue)
 {
-    mod_ = mod;
+    float retVal{};
+
+    if (potValue < 0.0909f)
+    {
+        retVal = (1.0f / 6.0f);
+        div_ = DIV6;
+    }
+
+    else if (potValue < 0.1818f)
+    {
+       retVal = (1.0f / 5.0f);
+       div_ = DIV5;
+    }
+
+    else if (potValue < 0.2727f)
+    {
+        retVal = (1.0f / 4.0f);
+        div_ = DIV4;
+    }
+
+    else if (potValue < 0.3636f)
+    {
+        retVal = (1.0f / 3.0f);
+        div_ = DIV3;
+    }
+
+    else if (potValue < 0.4545f)
+    {
+        retVal = (1.0f / 2.0f);
+        div_ = DIV2;
+    }
+
+    else if (potValue <  0.5455f)
+    {
+        retVal = (1.0f);
+        div_ = UNITY;
+    }
+
+    else if (potValue < 0.6364f)
+    {
+        retVal = 2.0f;
+        div_ = MULT2;
+    }
+
+    else if (potValue < 0.7273f)
+    {
+        retVal = 3.0f;
+        div_ = MULT3;
+    }
+
+    else if (potValue < 0.8182f)
+    {
+        retVal = 4.0f;
+        div_ = MULT4;
+    }
+    
+    else if (potValue < 0.9091f)
+    {
+        retVal = 5.0f;
+        div_ = MULT5;
+    }
+
+    else if (potValue <= 1.0f)
+    {
+       retVal = 6.0f; 
+       div_ = MULT6;
+    }
+    else
+    {
+        retVal = 1.0f; 
+       div_ = UNITY;
+    }
+
+return retVal;
 }
+

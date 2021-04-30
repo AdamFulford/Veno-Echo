@@ -1,0 +1,1207 @@
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"oscillator_p.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN7daisysp12Oscillator_p7ProcessEv,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_ZN7daisysp12Oscillator_p7ProcessEv
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_ZN7daisysp12Oscillator_p7ProcessEv:
+  27              	.LVL0:
+  28              	.LFB2770:
+  29              		.file 1 "oscillator_p.cpp"
+   1:oscillator_p.cpp **** //#include "dsp.h"
+   2:oscillator_p.cpp **** #include "oscillator_p.h"
+   3:oscillator_p.cpp **** 
+   4:oscillator_p.cpp **** using namespace daisysp;
+   5:oscillator_p.cpp **** static inline float Polyblep(float phase_inc, float t);
+   6:oscillator_p.cpp **** 
+   7:oscillator_p.cpp **** constexpr float TWO_PI_RECIP = 1.0f / TWOPI_F;
+   8:oscillator_p.cpp **** 
+   9:oscillator_p.cpp **** float Oscillator_p::Process()
+  10:oscillator_p.cpp **** {
+  30              		.loc 1 10 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  11:oscillator_p.cpp ****     float out, t;
+  34              		.loc 1 11 5 view .LVU1
+  12:oscillator_p.cpp ****     switch(waveform_)
+  35              		.loc 1 12 5 view .LVU2
+  36 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+  10:oscillator_p.cpp ****     float out, t;
+  37              		.loc 1 10 1 is_stmt 0 view .LVU3
+  38 0002 10B5     		push	{r4, lr}
+  39              		.cfi_def_cfa_offset 8
+  40              		.cfi_offset 4, -8
+  41              		.cfi_offset 14, -4
+  42 0004 0446     		mov	r4, r0
+  43 0006 2DED028B 		vpush.64	{d8}
+  44              		.cfi_def_cfa_offset 16
+  45              		.cfi_offset 80, -16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 2
+
+
+  46              		.cfi_offset 81, -12
+  47 000a 072B     		cmp	r3, #7
+  48 000c 00F2C881 		bhi	.L2
+  49 0010 DFE813F0 		tbh	[pc, r3, lsl #1]
+  50              	.L4:
+  51 0014 5F00     		.2byte	(.L11-.L4)/2
+  52 0016 9400     		.2byte	(.L10-.L4)/2
+  53 0018 A900     		.2byte	(.L9-.L4)/2
+  54 001a BA00     		.2byte	(.L8-.L4)/2
+  55 001c C900     		.2byte	(.L7-.L4)/2
+  56 001e D900     		.2byte	(.L6-.L4)/2
+  57 0020 3601     		.2byte	(.L5-.L4)/2
+  58 0022 0800     		.2byte	(.L3-.L4)/2
+  59              		.p2align 1
+  60              	.L3:
+  13:oscillator_p.cpp ****     {
+  14:oscillator_p.cpp ****         case WAVE_SIN: out = sinf(phase_); break;
+  15:oscillator_p.cpp ****         case WAVE_TRI:
+  16:oscillator_p.cpp ****             t   = -1.0f + (2.0f * phase_ * TWO_PI_RECIP);
+  17:oscillator_p.cpp ****             out = 2.0f * (fabsf(t) - 0.5f);
+  18:oscillator_p.cpp ****             break;
+  19:oscillator_p.cpp ****         case WAVE_SAW:
+  20:oscillator_p.cpp ****             out = -1.0f * (((phase_ * TWO_PI_RECIP * 2.0f)) - 1.0f);
+  21:oscillator_p.cpp ****             break;
+  22:oscillator_p.cpp ****         case WAVE_RAMP: out = ((phase_ * TWO_PI_RECIP * 2.0f)) - 1.0f; break;
+  23:oscillator_p.cpp ****         case WAVE_SQUARE: out = phase_ < PI_F ? (1.0f) : -1.0f; break;
+  24:oscillator_p.cpp ****         case WAVE_POLYBLEP_TRI:
+  25:oscillator_p.cpp ****             t   = phase_ * TWO_PI_RECIP;
+  26:oscillator_p.cpp ****             out = phase_ < PI_F ? 1.0f : -1.0f;
+  27:oscillator_p.cpp ****             out += Polyblep(phase_inc_, t);
+  28:oscillator_p.cpp ****             out -= Polyblep(phase_inc_, fmodf(t + 0.5f, 1.0f));
+  29:oscillator_p.cpp ****             // Leaky Integrator:
+  30:oscillator_p.cpp ****             // y[n] = A + x[n] + (1 - A) * y[n-1]
+  31:oscillator_p.cpp ****             out       = phase_inc_ * out + (1.0f - phase_inc_) * last_out_;
+  32:oscillator_p.cpp ****             last_out_ = out;
+  33:oscillator_p.cpp ****             break;
+  34:oscillator_p.cpp ****         case WAVE_POLYBLEP_SAW:
+  35:oscillator_p.cpp ****             t   = phase_ * TWO_PI_RECIP;
+  36:oscillator_p.cpp ****             out = (2.0f * t) - 1.0f;
+  37:oscillator_p.cpp ****             out -= Polyblep(phase_inc_, t);
+  38:oscillator_p.cpp ****             out *= -1.0f;
+  39:oscillator_p.cpp ****             break;
+  40:oscillator_p.cpp ****         case WAVE_POLYBLEP_SQUARE:
+  61              		.loc 1 40 9 is_stmt 1 view .LVU4
+  41:oscillator_p.cpp ****             t   = phase_ * TWO_PI_RECIP;
+  62              		.loc 1 41 13 view .LVU5
+  63              		.loc 1 41 19 is_stmt 0 view .LVU6
+  64 0024 D0ED057A 		vldr.32	s15, [r0, #20]
+  42:oscillator_p.cpp ****             out = phase_ < PI_F ? 1.0f : -1.0f;
+  65              		.loc 1 42 33 view .LVU7
+  66 0028 B7EE000A 		vmov.f32	s0, #1.0e+0
+  41:oscillator_p.cpp ****             t   = phase_ * TWO_PI_RECIP;
+  67              		.loc 1 41 17 view .LVU8
+  68 002c 9FEDE07A 		vldr.32	s14, .L79
+  69              		.loc 1 42 33 view .LVU9
+  70 0030 FFEE008A 		vmov.f32	s17, #-1.0e+0
+  71 0034 DFEDDF6A 		vldr.32	s13, .L79+4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 3
+
+
+  72              	.LBB12:
+  73              	.LBB13:
+  43:oscillator_p.cpp ****             out += Polyblep(phase_inc_, t);
+  44:oscillator_p.cpp ****             out -= Polyblep(phase_inc_, fmodf(t + 0.5f, 1.0f));
+  45:oscillator_p.cpp ****             out *= 0.707f; // ?
+  46:oscillator_p.cpp ****             break;
+  47:oscillator_p.cpp ****         default: out = 0.0f; break;
+  48:oscillator_p.cpp ****     }
+  49:oscillator_p.cpp ****     phase_ += phase_inc_;
+  50:oscillator_p.cpp ****     if(phase_ > TWOPI_F)
+  51:oscillator_p.cpp ****     {
+  52:oscillator_p.cpp ****         phase_ -= TWOPI_F;
+  53:oscillator_p.cpp ****         eoc_ = true;
+  54:oscillator_p.cpp ****     }
+  55:oscillator_p.cpp ****     else
+  56:oscillator_p.cpp ****     {
+  57:oscillator_p.cpp ****         eoc_ = false;
+  58:oscillator_p.cpp ****     }
+  59:oscillator_p.cpp ****     eor_ = (phase_ - phase_inc_ < PI_F && phase_ >= PI_F);
+  60:oscillator_p.cpp **** 
+  61:oscillator_p.cpp ****     return out * amp_;
+  62:oscillator_p.cpp **** }
+  63:oscillator_p.cpp **** 
+  64:oscillator_p.cpp **** float Oscillator_p::CalcPhaseInc(float f)
+  65:oscillator_p.cpp **** {
+  66:oscillator_p.cpp ****     return (TWOPI_F * f) * sr_recip_;
+  67:oscillator_p.cpp **** }
+  68:oscillator_p.cpp **** 
+  69:oscillator_p.cpp **** static float Polyblep(float phase_inc, float t)
+  70:oscillator_p.cpp **** {
+  71:oscillator_p.cpp ****     float dt = phase_inc * TWO_PI_RECIP;
+  74              		.loc 1 71 11 view .LVU10
+  75 0038 90ED068A 		vldr.32	s16, [r0, #24]
+  76              	.LBE13:
+  77              	.LBE12:
+  42:oscillator_p.cpp ****             out = phase_ < PI_F ? 1.0f : -1.0f;
+  78              		.loc 1 42 33 view .LVU11
+  79 003c F4EEE67A 		vcmpe.f32	s15, s13
+  80              	.LBB19:
+  81              	.LBB14:
+  82              		.loc 1 71 11 view .LVU12
+  83 0040 28EE078A 		vmul.f32	s16, s16, s14
+  84              	.LBE14:
+  85              	.LBE19:
+  41:oscillator_p.cpp ****             out = phase_ < PI_F ? 1.0f : -1.0f;
+  86              		.loc 1 41 17 view .LVU13
+  87 0044 67EE877A 		vmul.f32	s15, s15, s14
+  88              	.LVL1:
+  42:oscillator_p.cpp ****             out = phase_ < PI_F ? 1.0f : -1.0f;
+  89              		.loc 1 42 13 is_stmt 1 view .LVU14
+  42:oscillator_p.cpp ****             out = phase_ < PI_F ? 1.0f : -1.0f;
+  90              		.loc 1 42 33 is_stmt 0 view .LVU15
+  91 0048 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+  92              	.LBB20:
+  93              	.LBB15:
+  72:oscillator_p.cpp ****     if(t < dt)
+  94              		.loc 1 72 5 view .LVU16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 4
+
+
+  95 004c F4EEC87A 		vcmpe.f32	s15, s16
+  96              	.LBE15:
+  97              	.LBE20:
+  42:oscillator_p.cpp ****             out += Polyblep(phase_inc_, t);
+  98              		.loc 1 42 33 view .LVU17
+  99 0050 48BF     		it	mi
+ 100 0052 F0EE408A 		vmovmi.f32	s17, s0
+ 101              	.LVL2:
+  43:oscillator_p.cpp ****             out -= Polyblep(phase_inc_, fmodf(t + 0.5f, 1.0f));
+ 102              		.loc 1 43 13 is_stmt 1 view .LVU18
+ 103              	.LBB21:
+ 104              	.LBI12:
+  69:oscillator_p.cpp **** {
+ 105              		.loc 1 69 14 view .LVU19
+ 106              	.LBB16:
+  71:oscillator_p.cpp ****     if(t < dt)
+ 107              		.loc 1 71 5 view .LVU20
+ 108              		.loc 1 72 5 view .LVU21
+ 109 0056 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 110 005a 00F19681 		bmi	.L72
+  73:oscillator_p.cpp ****     {
+  74:oscillator_p.cpp ****         t /= dt;
+  75:oscillator_p.cpp ****         return t + t - t * t - 1.0f;
+  76:oscillator_p.cpp ****     }
+  77:oscillator_p.cpp ****     else if(t > 1.0f - dt)
+ 111              		.loc 1 77 10 view .LVU22
+ 112              		.loc 1 77 22 is_stmt 0 view .LVU23
+ 113 005e 30EE487A 		vsub.f32	s14, s0, s16
+ 114              		.loc 1 77 10 view .LVU24
+ 115 0062 F4EEC77A 		vcmpe.f32	s15, s14
+ 116 0066 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 117 006a 00F34B81 		bgt	.L73
+  78:oscillator_p.cpp ****     {
+  79:oscillator_p.cpp ****         t = (t - 1.0f) / dt;
+  80:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+  81:oscillator_p.cpp ****     }
+  82:oscillator_p.cpp ****     else
+  83:oscillator_p.cpp ****     {
+  84:oscillator_p.cpp ****         return 0.0f;
+ 118              		.loc 1 84 16 view .LVU25
+ 119 006e 9FEDD20A 		vldr.32	s0, .L79+8
+ 120              	.LVL3:
+ 121              	.L31:
+ 122              		.loc 1 84 16 view .LVU26
+ 123              	.LBE16:
+ 124              	.LBE21:
+  44:oscillator_p.cpp ****             out *= 0.707f; // ?
+ 125              		.loc 1 44 28 view .LVU27
+ 126 0072 B6EE007A 		vmov.f32	s14, #5.0e-1
+ 127 0076 F7EE000A 		vmov.f32	s1, #1.0e+0
+  43:oscillator_p.cpp ****             out -= Polyblep(phase_inc_, fmodf(t + 0.5f, 1.0f));
+ 128              		.loc 1 43 17 view .LVU28
+ 129 007a 78EE808A 		vadd.f32	s17, s17, s0
+ 130              	.LVL4:
+  44:oscillator_p.cpp ****             out *= 0.707f; // ?
+ 131              		.loc 1 44 13 is_stmt 1 view .LVU29
+  44:oscillator_p.cpp ****             out *= 0.707f; // ?
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 5
+
+
+ 132              		.loc 1 44 28 is_stmt 0 view .LVU30
+ 133 007e 37EE870A 		vadd.f32	s0, s15, s14
+ 134 0082 FFF7FEFF 		bl	fmodf
+ 135              	.LVL5:
+ 136              	.LBB22:
+ 137              	.LBI22:
+  69:oscillator_p.cpp **** {
+ 138              		.loc 1 69 14 is_stmt 1 view .LVU31
+ 139              	.LBB23:
+  71:oscillator_p.cpp ****     if(t < dt)
+ 140              		.loc 1 71 5 view .LVU32
+  72:oscillator_p.cpp ****     {
+ 141              		.loc 1 72 5 view .LVU33
+ 142 0086 B4EEC80A 		vcmpe.f32	s0, s16
+ 143 008a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 144 008e 00F16281 		bmi	.L74
+  77:oscillator_p.cpp ****     {
+ 145              		.loc 1 77 10 view .LVU34
+  77:oscillator_p.cpp ****     {
+ 146              		.loc 1 77 22 is_stmt 0 view .LVU35
+ 147 0092 B7EE007A 		vmov.f32	s14, #1.0e+0
+ 148 0096 77EE487A 		vsub.f32	s15, s14, s16
+  77:oscillator_p.cpp ****     {
+ 149              		.loc 1 77 10 view .LVU36
+ 150 009a B4EEE70A 		vcmpe.f32	s0, s15
+ 151 009e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 152 00a2 0DDD     		ble	.L35
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 153              		.loc 1 79 9 is_stmt 1 view .LVU37
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 154              		.loc 1 79 16 is_stmt 0 view .LVU38
+ 155 00a4 30EE470A 		vsub.f32	s0, s0, s14
+ 156              	.LVL6:
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 157              		.loc 1 79 11 view .LVU39
+ 158 00a8 C0EE087A 		vdiv.f32	s15, s0, s16
+ 159              	.LVL7:
+  80:oscillator_p.cpp ****     }
+ 160              		.loc 1 80 9 is_stmt 1 view .LVU40
+  80:oscillator_p.cpp ****     }
+ 161              		.loc 1 80 22 is_stmt 0 view .LVU41
+ 162 00ac F0EE676A 		vmov.f32	s13, s15
+ 163 00b0 E7EEA76A 		vfma.f32	s13, s15, s15
+  80:oscillator_p.cpp ****     }
+ 164              		.loc 1 80 26 view .LVU42
+ 165 00b4 77EEA67A 		vadd.f32	s15, s15, s13
+ 166              	.LVL8:
+  80:oscillator_p.cpp ****     }
+ 167              		.loc 1 80 32 view .LVU43
+ 168 00b8 77EE877A 		vadd.f32	s15, s15, s14
+ 169 00bc 78EEE78A 		vsub.f32	s17, s17, s15
+ 170              	.LVL9:
+ 171              	.L35:
+  80:oscillator_p.cpp ****     }
+ 172              		.loc 1 80 32 view .LVU44
+ 173              	.LBE23:
+ 174              	.LBE22:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 6
+
+
+  45:oscillator_p.cpp ****             break;
+ 175              		.loc 1 45 13 is_stmt 1 view .LVU45
+  45:oscillator_p.cpp ****             break;
+ 176              		.loc 1 45 17 is_stmt 0 view .LVU46
+ 177 00c0 9FEDBE0A 		vldr.32	s0, .L79+12
+ 178 00c4 94ED058A 		vldr.32	s16, [r4, #20]
+ 179 00c8 28EE800A 		vmul.f32	s0, s17, s0
+ 180              	.LVL10:
+  46:oscillator_p.cpp ****         default: out = 0.0f; break;
+ 181              		.loc 1 46 13 is_stmt 1 view .LVU47
+ 182 00cc 94ED067A 		vldr.32	s14, [r4, #24]
+ 183 00d0 07E0     		b	.L12
+ 184              	.LVL11:
+ 185              	.L11:
+  14:oscillator_p.cpp ****         case WAVE_TRI:
+ 186              		.loc 1 14 9 view .LVU48
+  14:oscillator_p.cpp ****         case WAVE_TRI:
+ 187              		.loc 1 14 24 view .LVU49
+  14:oscillator_p.cpp ****         case WAVE_TRI:
+ 188              		.loc 1 14 34 is_stmt 0 view .LVU50
+ 189 00d2 90ED058A 		vldr.32	s16, [r0, #20]
+ 190 00d6 B0EE480A 		vmov.f32	s0, s16
+ 191 00da FFF7FEFF 		bl	sinf
+ 192              	.LVL12:
+  14:oscillator_p.cpp ****         case WAVE_TRI:
+ 193              		.loc 1 14 34 view .LVU51
+ 194 00de 94ED067A 		vldr.32	s14, [r4, #24]
+ 195              	.LVL13:
+  14:oscillator_p.cpp ****         case WAVE_TRI:
+ 196              		.loc 1 14 44 is_stmt 1 view .LVU52
+ 197              	.L12:
+  49:oscillator_p.cpp ****     if(phase_ > TWOPI_F)
+ 198              		.loc 1 49 5 view .LVU53
+  49:oscillator_p.cpp ****     if(phase_ > TWOPI_F)
+ 199              		.loc 1 49 12 is_stmt 0 view .LVU54
+ 200 00e2 78EE077A 		vadd.f32	s15, s16, s14
+  50:oscillator_p.cpp ****     {
+ 201              		.loc 1 50 5 view .LVU55
+ 202 00e6 DFEDB66A 		vldr.32	s13, .L79+16
+ 203 00ea F4EEE67A 		vcmpe.f32	s15, s13
+  49:oscillator_p.cpp ****     if(phase_ > TWOPI_F)
+ 204              		.loc 1 49 12 view .LVU56
+ 205 00ee C4ED057A 		vstr.32	s15, [r4, #20]
+  50:oscillator_p.cpp ****     {
+ 206              		.loc 1 50 5 is_stmt 1 view .LVU57
+ 207 00f2 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 208 00f6 40F3F480 		ble	.L68
+  52:oscillator_p.cpp ****         eoc_ = true;
+ 209              		.loc 1 52 9 view .LVU58
+  52:oscillator_p.cpp ****         eoc_ = true;
+ 210              		.loc 1 52 16 is_stmt 0 view .LVU59
+ 211 00fa 77EEE67A 		vsub.f32	s15, s15, s13
+  53:oscillator_p.cpp ****     }
+ 212              		.loc 1 53 14 view .LVU60
+ 213 00fe 0123     		movs	r3, #1
+ 214 0100 84F82530 		strb	r3, [r4, #37]
+  52:oscillator_p.cpp ****         eoc_ = true;
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 7
+
+
+ 215              		.loc 1 52 16 view .LVU61
+ 216 0104 C4ED057A 		vstr.32	s15, [r4, #20]
+  53:oscillator_p.cpp ****     }
+ 217              		.loc 1 53 9 is_stmt 1 view .LVU62
+ 218              	.L39:
+  59:oscillator_p.cpp **** 
+ 219              		.loc 1 59 5 view .LVU63
+  59:oscillator_p.cpp **** 
+ 220              		.loc 1 59 20 is_stmt 0 view .LVU64
+ 221 0108 37EEC77A 		vsub.f32	s14, s15, s14
+  59:oscillator_p.cpp **** 
+ 222              		.loc 1 59 40 view .LVU65
+ 223 010c DFEDA96A 		vldr.32	s13, .L79+4
+ 224 0110 B4EEE67A 		vcmpe.f32	s14, s13
+ 225 0114 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 226 0118 40F1E180 		bpl	.L69
+  59:oscillator_p.cpp **** 
+ 227              		.loc 1 59 40 discriminator 1 view .LVU66
+ 228 011c F4EEE67A 		vcmpe.f32	s15, s13
+ 229 0120 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 230 0124 ACBF     		ite	ge
+ 231 0126 0123     		movge	r3, #1
+ 232 0128 0023     		movlt	r3, #0
+ 233              	.L40:
+  61:oscillator_p.cpp **** }
+ 234              		.loc 1 61 18 discriminator 6 view .LVU67
+ 235 012a D4ED017A 		vldr.32	s15, [r4, #4]
+  59:oscillator_p.cpp **** 
+ 236              		.loc 1 59 10 discriminator 6 view .LVU68
+ 237 012e 84F82430 		strb	r3, [r4, #36]
+  61:oscillator_p.cpp **** }
+ 238              		.loc 1 61 5 is_stmt 1 discriminator 6 view .LVU69
+  62:oscillator_p.cpp **** 
+ 239              		.loc 1 62 1 is_stmt 0 discriminator 6 view .LVU70
+ 240 0132 20EE270A 		vmul.f32	s0, s0, s15
+ 241              	.LVL14:
+  62:oscillator_p.cpp **** 
+ 242              		.loc 1 62 1 discriminator 6 view .LVU71
+ 243 0136 BDEC028B 		vldm	sp!, {d8}
+ 244              		.cfi_remember_state
+ 245              		.cfi_restore 80
+ 246              		.cfi_restore 81
+ 247              		.cfi_def_cfa_offset 8
+ 248 013a 10BD     		pop	{r4, pc}
+ 249              	.LVL15:
+ 250              	.L10:
+ 251              		.cfi_restore_state
+  15:oscillator_p.cpp ****             t   = -1.0f + (2.0f * phase_ * TWO_PI_RECIP);
+ 252              		.loc 1 15 9 is_stmt 1 view .LVU72
+  16:oscillator_p.cpp ****             out = 2.0f * (fabsf(t) - 0.5f);
+ 253              		.loc 1 16 13 view .LVU73
+  16:oscillator_p.cpp ****             out = 2.0f * (fabsf(t) - 0.5f);
+ 254              		.loc 1 16 35 is_stmt 0 view .LVU74
+ 255 013c 90ED058A 		vldr.32	s16, [r0, #20]
+  16:oscillator_p.cpp ****             out = 2.0f * (fabsf(t) - 0.5f);
+ 256              		.loc 1 16 17 view .LVU75
+ 257 0140 BFEE000A 		vmov.f32	s0, #-1.0e+0
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 8
+
+
+ 258 0144 DFED9A6A 		vldr.32	s13, .L79
+  17:oscillator_p.cpp ****             break;
+ 259              		.loc 1 17 36 view .LVU76
+ 260 0148 F6EE007A 		vmov.f32	s15, #5.0e-1
+  16:oscillator_p.cpp ****             out = 2.0f * (fabsf(t) - 0.5f);
+ 261              		.loc 1 16 33 view .LVU77
+ 262 014c 38EE086A 		vadd.f32	s12, s16, s16
+ 263 0150 90ED067A 		vldr.32	s14, [r0, #24]
+  16:oscillator_p.cpp ****             out = 2.0f * (fabsf(t) - 0.5f);
+ 264              		.loc 1 16 17 view .LVU78
+ 265 0154 A6EE260A 		vfma.f32	s0, s12, s13
+ 266              	.LVL16:
+  17:oscillator_p.cpp ****             break;
+ 267              		.loc 1 17 13 is_stmt 1 view .LVU79
+  17:oscillator_p.cpp ****             break;
+ 268              		.loc 1 17 32 is_stmt 0 view .LVU80
+ 269 0158 B0EEC00A 		vabs.f32	s0, s0
+ 270              	.LVL17:
+  17:oscillator_p.cpp ****             break;
+ 271              		.loc 1 17 36 view .LVU81
+ 272 015c 30EE670A 		vsub.f32	s0, s0, s15
+  17:oscillator_p.cpp ****             break;
+ 273              		.loc 1 17 17 view .LVU82
+ 274 0160 30EE000A 		vadd.f32	s0, s0, s0
+ 275              	.LVL18:
+  18:oscillator_p.cpp ****         case WAVE_SAW:
+ 276              		.loc 1 18 13 is_stmt 1 view .LVU83
+ 277 0164 BDE7     		b	.L12
+ 278              	.LVL19:
+ 279              	.L9:
+  19:oscillator_p.cpp ****             out = -1.0f * (((phase_ * TWO_PI_RECIP * 2.0f)) - 1.0f);
+ 280              		.loc 1 19 9 view .LVU84
+  20:oscillator_p.cpp ****             break;
+ 281              		.loc 1 20 13 view .LVU85
+  20:oscillator_p.cpp ****             break;
+ 282              		.loc 1 20 30 is_stmt 0 view .LVU86
+ 283 0166 90ED058A 		vldr.32	s16, [r0, #20]
+  20:oscillator_p.cpp ****             break;
+ 284              		.loc 1 20 61 view .LVU87
+ 285 016a F0EE006A 		vmov.f32	s13, #2.0e+0
+  20:oscillator_p.cpp ****             break;
+ 286              		.loc 1 20 37 view .LVU88
+ 287 016e DFED907A 		vldr.32	s15, .L79
+  20:oscillator_p.cpp ****             break;
+ 288              		.loc 1 20 61 view .LVU89
+ 289 0172 BFEE000A 		vmov.f32	s0, #-1.0e+0
+ 290 0176 90ED067A 		vldr.32	s14, [r0, #24]
+  20:oscillator_p.cpp ****             break;
+ 291              		.loc 1 20 37 view .LVU90
+ 292 017a 68EE277A 		vmul.f32	s15, s16, s15
+  20:oscillator_p.cpp ****             break;
+ 293              		.loc 1 20 61 view .LVU91
+ 294 017e A7EEA60A 		vfma.f32	s0, s15, s13
+  20:oscillator_p.cpp ****             break;
+ 295              		.loc 1 20 17 view .LVU92
+ 296 0182 B1EE400A 		vneg.f32	s0, s0
+ 297              	.LVL20:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 9
+
+
+  21:oscillator_p.cpp ****         case WAVE_RAMP: out = ((phase_ * TWO_PI_RECIP * 2.0f)) - 1.0f; break;
+ 298              		.loc 1 21 13 is_stmt 1 view .LVU93
+ 299 0186 ACE7     		b	.L12
+ 300              	.LVL21:
+ 301              	.L8:
+  22:oscillator_p.cpp ****         case WAVE_SQUARE: out = phase_ < PI_F ? (1.0f) : -1.0f; break;
+ 302              		.loc 1 22 9 view .LVU94
+  22:oscillator_p.cpp ****         case WAVE_SQUARE: out = phase_ < PI_F ? (1.0f) : -1.0f; break;
+ 303              		.loc 1 22 25 view .LVU95
+  22:oscillator_p.cpp ****         case WAVE_SQUARE: out = phase_ < PI_F ? (1.0f) : -1.0f; break;
+ 304              		.loc 1 22 33 is_stmt 0 view .LVU96
+ 305 0188 90ED058A 		vldr.32	s16, [r0, #20]
+  22:oscillator_p.cpp ****         case WAVE_SQUARE: out = phase_ < PI_F ? (1.0f) : -1.0f; break;
+ 306              		.loc 1 22 29 view .LVU97
+ 307 018c F0EE006A 		vmov.f32	s13, #2.0e+0
+  22:oscillator_p.cpp ****         case WAVE_SQUARE: out = phase_ < PI_F ? (1.0f) : -1.0f; break;
+ 308              		.loc 1 22 40 view .LVU98
+ 309 0190 DFED877A 		vldr.32	s15, .L79
+  22:oscillator_p.cpp ****         case WAVE_SQUARE: out = phase_ < PI_F ? (1.0f) : -1.0f; break;
+ 310              		.loc 1 22 29 view .LVU99
+ 311 0194 BFEE000A 		vmov.f32	s0, #-1.0e+0
+ 312 0198 90ED067A 		vldr.32	s14, [r0, #24]
+  22:oscillator_p.cpp ****         case WAVE_SQUARE: out = phase_ < PI_F ? (1.0f) : -1.0f; break;
+ 313              		.loc 1 22 40 view .LVU100
+ 314 019c 68EE277A 		vmul.f32	s15, s16, s15
+  22:oscillator_p.cpp ****         case WAVE_SQUARE: out = phase_ < PI_F ? (1.0f) : -1.0f; break;
+ 315              		.loc 1 22 29 view .LVU101
+ 316 01a0 A7EEA60A 		vfma.f32	s0, s15, s13
+ 317              	.LVL22:
+  22:oscillator_p.cpp ****         case WAVE_SQUARE: out = phase_ < PI_F ? (1.0f) : -1.0f; break;
+ 318              		.loc 1 22 72 is_stmt 1 view .LVU102
+ 319 01a4 9DE7     		b	.L12
+ 320              	.LVL23:
+ 321              	.L7:
+  23:oscillator_p.cpp ****         case WAVE_POLYBLEP_TRI:
+ 322              		.loc 1 23 9 view .LVU103
+  23:oscillator_p.cpp ****         case WAVE_POLYBLEP_TRI:
+ 323              		.loc 1 23 27 view .LVU104
+  23:oscillator_p.cpp ****         case WAVE_POLYBLEP_TRI:
+ 324              		.loc 1 23 33 is_stmt 0 view .LVU105
+ 325 01a6 90ED058A 		vldr.32	s16, [r0, #20]
+  23:oscillator_p.cpp ****         case WAVE_POLYBLEP_TRI:
+ 326              		.loc 1 23 47 view .LVU106
+ 327 01aa DFED827A 		vldr.32	s15, .L79+4
+ 328 01ae 90ED067A 		vldr.32	s14, [r0, #24]
+ 329 01b2 B4EEE78A 		vcmpe.f32	s16, s15
+ 330 01b6 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 331 01ba 4CBF     		ite	mi
+ 332 01bc B7EE000A 		vmovmi.f32	s0, #1.0e+0
+ 333 01c0 BFEE000A 		vmovpl.f32	s0, #-1.0e+0
+ 334 01c4 8DE7     		b	.L12
+ 335              	.L6:
+  24:oscillator_p.cpp ****             t   = phase_ * TWO_PI_RECIP;
+ 336              		.loc 1 24 9 is_stmt 1 view .LVU107
+  25:oscillator_p.cpp ****             out = phase_ < PI_F ? 1.0f : -1.0f;
+ 337              		.loc 1 25 13 view .LVU108
+  25:oscillator_p.cpp ****             out = phase_ < PI_F ? 1.0f : -1.0f;
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 10
+
+
+ 338              		.loc 1 25 19 is_stmt 0 view .LVU109
+ 339 01c6 D0ED057A 		vldr.32	s15, [r0, #20]
+  26:oscillator_p.cpp ****             out += Polyblep(phase_inc_, t);
+ 340              		.loc 1 26 33 view .LVU110
+ 341 01ca B7EE007A 		vmov.f32	s14, #1.0e+0
+  25:oscillator_p.cpp ****             out = phase_ < PI_F ? 1.0f : -1.0f;
+ 342              		.loc 1 25 17 view .LVU111
+ 343 01ce DFED786A 		vldr.32	s13, .L79
+  26:oscillator_p.cpp ****             out += Polyblep(phase_inc_, t);
+ 344              		.loc 1 26 33 view .LVU112
+ 345 01d2 FFEE008A 		vmov.f32	s17, #-1.0e+0
+ 346 01d6 9FED776A 		vldr.32	s12, .L79+4
+ 347              	.LBB25:
+ 348              	.LBB26:
+  71:oscillator_p.cpp ****     if(t < dt)
+ 349              		.loc 1 71 11 view .LVU113
+ 350 01da 90ED068A 		vldr.32	s16, [r0, #24]
+ 351              	.LBE26:
+ 352              	.LBE25:
+  26:oscillator_p.cpp ****             out += Polyblep(phase_inc_, t);
+ 353              		.loc 1 26 33 view .LVU114
+ 354 01de F4EEC67A 		vcmpe.f32	s15, s12
+ 355              	.LBB32:
+ 356              	.LBB27:
+  71:oscillator_p.cpp ****     if(t < dt)
+ 357              		.loc 1 71 11 view .LVU115
+ 358 01e2 28EE268A 		vmul.f32	s16, s16, s13
+ 359              	.LBE27:
+ 360              	.LBE32:
+  25:oscillator_p.cpp ****             out = phase_ < PI_F ? 1.0f : -1.0f;
+ 361              		.loc 1 25 17 view .LVU116
+ 362 01e6 67EEA67A 		vmul.f32	s15, s15, s13
+ 363              	.LVL24:
+  26:oscillator_p.cpp ****             out += Polyblep(phase_inc_, t);
+ 364              		.loc 1 26 13 is_stmt 1 view .LVU117
+  26:oscillator_p.cpp ****             out += Polyblep(phase_inc_, t);
+ 365              		.loc 1 26 33 is_stmt 0 view .LVU118
+ 366 01ea F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 367              	.LBB33:
+ 368              	.LBB28:
+  72:oscillator_p.cpp ****     {
+ 369              		.loc 1 72 5 view .LVU119
+ 370 01ee F4EEC87A 		vcmpe.f32	s15, s16
+ 371              	.LBE28:
+ 372              	.LBE33:
+  26:oscillator_p.cpp ****             out += Polyblep(phase_inc_, t);
+ 373              		.loc 1 26 33 view .LVU120
+ 374 01f2 48BF     		it	mi
+ 375 01f4 F0EE478A 		vmovmi.f32	s17, s14
+ 376              	.LVL25:
+  27:oscillator_p.cpp ****             out -= Polyblep(phase_inc_, fmodf(t + 0.5f, 1.0f));
+ 377              		.loc 1 27 13 is_stmt 1 view .LVU121
+ 378              	.LBB34:
+ 379              	.LBI25:
+  69:oscillator_p.cpp **** {
+ 380              		.loc 1 69 14 view .LVU122
+ 381              	.LBB29:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 11
+
+
+  71:oscillator_p.cpp ****     if(t < dt)
+ 382              		.loc 1 71 5 view .LVU123
+  72:oscillator_p.cpp ****     {
+ 383              		.loc 1 72 5 view .LVU124
+ 384 01f8 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 385 01fc 00F1BA80 		bmi	.L75
+  77:oscillator_p.cpp ****     {
+ 386              		.loc 1 77 10 view .LVU125
+  77:oscillator_p.cpp ****     {
+ 387              		.loc 1 77 22 is_stmt 0 view .LVU126
+ 388 0200 77EE486A 		vsub.f32	s13, s14, s16
+  77:oscillator_p.cpp ****     {
+ 389              		.loc 1 77 10 view .LVU127
+ 390 0204 F4EEE67A 		vcmpe.f32	s15, s13
+ 391 0208 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 392 020c 6DDC     		bgt	.L76
+ 393              		.loc 1 84 16 view .LVU128
+ 394 020e 9FED6A7A 		vldr.32	s14, .L79+8
+ 395              	.LVL26:
+ 396              	.L18:
+ 397              		.loc 1 84 16 view .LVU129
+ 398              	.LBE29:
+ 399              	.LBE34:
+  28:oscillator_p.cpp ****             // Leaky Integrator:
+ 400              		.loc 1 28 28 view .LVU130
+ 401 0212 B6EE000A 		vmov.f32	s0, #5.0e-1
+ 402 0216 F7EE000A 		vmov.f32	s1, #1.0e+0
+  27:oscillator_p.cpp ****             out -= Polyblep(phase_inc_, fmodf(t + 0.5f, 1.0f));
+ 403              		.loc 1 27 17 view .LVU131
+ 404 021a 78EE878A 		vadd.f32	s17, s17, s14
+ 405              	.LVL27:
+  28:oscillator_p.cpp ****             // Leaky Integrator:
+ 406              		.loc 1 28 13 is_stmt 1 view .LVU132
+  28:oscillator_p.cpp ****             // Leaky Integrator:
+ 407              		.loc 1 28 28 is_stmt 0 view .LVU133
+ 408 021e 37EE800A 		vadd.f32	s0, s15, s0
+ 409 0222 FFF7FEFF 		bl	fmodf
+ 410              	.LVL28:
+ 411              	.LBB35:
+ 412              	.LBI35:
+  69:oscillator_p.cpp **** {
+ 413              		.loc 1 69 14 is_stmt 1 view .LVU134
+ 414              	.LBB36:
+  71:oscillator_p.cpp ****     if(t < dt)
+ 415              		.loc 1 71 5 view .LVU135
+  72:oscillator_p.cpp ****     {
+ 416              		.loc 1 72 5 view .LVU136
+ 417 0226 B4EEC80A 		vcmpe.f32	s0, s16
+ 418 022a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 419 022e 76D4     		bmi	.L77
+  77:oscillator_p.cpp ****     {
+ 420              		.loc 1 77 10 view .LVU137
+  77:oscillator_p.cpp ****     {
+ 421              		.loc 1 77 22 is_stmt 0 view .LVU138
+ 422 0230 B7EE007A 		vmov.f32	s14, #1.0e+0
+ 423 0234 77EE487A 		vsub.f32	s15, s14, s16
+  77:oscillator_p.cpp ****     {
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 12
+
+
+ 424              		.loc 1 77 10 view .LVU139
+ 425 0238 B4EEE70A 		vcmpe.f32	s0, s15
+ 426 023c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 427 0240 0DDD     		ble	.L22
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 428              		.loc 1 79 9 is_stmt 1 view .LVU140
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 429              		.loc 1 79 16 is_stmt 0 view .LVU141
+ 430 0242 30EE470A 		vsub.f32	s0, s0, s14
+ 431              	.LVL29:
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 432              		.loc 1 79 11 view .LVU142
+ 433 0246 C0EE087A 		vdiv.f32	s15, s0, s16
+ 434              	.LVL30:
+  80:oscillator_p.cpp ****     }
+ 435              		.loc 1 80 9 is_stmt 1 view .LVU143
+  80:oscillator_p.cpp ****     }
+ 436              		.loc 1 80 22 is_stmt 0 view .LVU144
+ 437 024a F0EE676A 		vmov.f32	s13, s15
+ 438 024e E7EEA76A 		vfma.f32	s13, s15, s15
+  80:oscillator_p.cpp ****     }
+ 439              		.loc 1 80 26 view .LVU145
+ 440 0252 77EEA67A 		vadd.f32	s15, s15, s13
+ 441              	.LVL31:
+  80:oscillator_p.cpp ****     }
+ 442              		.loc 1 80 32 view .LVU146
+ 443 0256 77EE877A 		vadd.f32	s15, s15, s14
+ 444 025a 78EEE78A 		vsub.f32	s17, s17, s15
+ 445              	.LVL32:
+ 446              	.L22:
+  80:oscillator_p.cpp ****     }
+ 447              		.loc 1 80 32 view .LVU147
+ 448              	.LBE36:
+ 449              	.LBE35:
+  31:oscillator_p.cpp ****             last_out_ = out;
+ 450              		.loc 1 31 13 is_stmt 1 view .LVU148
+  31:oscillator_p.cpp ****             last_out_ = out;
+ 451              		.loc 1 31 50 is_stmt 0 view .LVU149
+ 452 025e B7EE000A 		vmov.f32	s0, #1.0e+0
+  31:oscillator_p.cpp ****             last_out_ = out;
+ 453              		.loc 1 31 25 view .LVU150
+ 454 0262 94ED067A 		vldr.32	s14, [r4, #24]
+  31:oscillator_p.cpp ****             last_out_ = out;
+ 455              		.loc 1 31 64 view .LVU151
+ 456 0266 D4ED077A 		vldr.32	s15, [r4, #28]
+ 457 026a 94ED058A 		vldr.32	s16, [r4, #20]
+  31:oscillator_p.cpp ****             last_out_ = out;
+ 458              		.loc 1 31 50 view .LVU152
+ 459 026e 30EE470A 		vsub.f32	s0, s0, s14
+  31:oscillator_p.cpp ****             last_out_ = out;
+ 460              		.loc 1 31 64 view .LVU153
+ 461 0272 20EE270A 		vmul.f32	s0, s0, s15
+  31:oscillator_p.cpp ****             last_out_ = out;
+ 462              		.loc 1 31 23 view .LVU154
+ 463 0276 A7EE280A 		vfma.f32	s0, s14, s17
+ 464              	.LVL33:
+  32:oscillator_p.cpp ****             break;
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 13
+
+
+ 465              		.loc 1 32 13 is_stmt 1 view .LVU155
+  32:oscillator_p.cpp ****             break;
+ 466              		.loc 1 32 23 is_stmt 0 view .LVU156
+ 467 027a 84ED070A 		vstr.32	s0, [r4, #28]
+  33:oscillator_p.cpp ****         case WAVE_POLYBLEP_SAW:
+ 468              		.loc 1 33 13 is_stmt 1 view .LVU157
+ 469 027e 30E7     		b	.L12
+ 470              	.LVL34:
+ 471              	.L5:
+  34:oscillator_p.cpp ****             t   = phase_ * TWO_PI_RECIP;
+ 472              		.loc 1 34 9 view .LVU158
+  35:oscillator_p.cpp ****             out = (2.0f * t) - 1.0f;
+ 473              		.loc 1 35 13 view .LVU159
+  35:oscillator_p.cpp ****             out = (2.0f * t) - 1.0f;
+ 474              		.loc 1 35 17 is_stmt 0 view .LVU160
+ 475 0280 DFED4B7A 		vldr.32	s15, .L79
+  36:oscillator_p.cpp ****             out -= Polyblep(phase_inc_, t);
+ 476              		.loc 1 36 17 view .LVU161
+ 477 0284 B0EE006A 		vmov.f32	s12, #2.0e+0
+  35:oscillator_p.cpp ****             out = (2.0f * t) - 1.0f;
+ 478              		.loc 1 35 19 view .LVU162
+ 479 0288 90ED058A 		vldr.32	s16, [r0, #20]
+  36:oscillator_p.cpp ****             out -= Polyblep(phase_inc_, t);
+ 480              		.loc 1 36 17 view .LVU163
+ 481 028c BFEE000A 		vmov.f32	s0, #-1.0e+0
+  37:oscillator_p.cpp ****             out *= -1.0f;
+ 482              		.loc 1 37 28 view .LVU164
+ 483 0290 90ED067A 		vldr.32	s14, [r0, #24]
+  35:oscillator_p.cpp ****             out = (2.0f * t) - 1.0f;
+ 484              		.loc 1 35 17 view .LVU165
+ 485 0294 68EE276A 		vmul.f32	s13, s16, s15
+ 486              	.LVL35:
+  36:oscillator_p.cpp ****             out -= Polyblep(phase_inc_, t);
+ 487              		.loc 1 36 13 is_stmt 1 view .LVU166
+ 488              	.LBB38:
+ 489              	.LBB39:
+  71:oscillator_p.cpp ****     if(t < dt)
+ 490              		.loc 1 71 11 is_stmt 0 view .LVU167
+ 491 0298 67EE277A 		vmul.f32	s15, s14, s15
+ 492              	.LBE39:
+ 493              	.LBE38:
+  36:oscillator_p.cpp ****             out -= Polyblep(phase_inc_, t);
+ 494              		.loc 1 36 17 view .LVU168
+ 495 029c A6EE860A 		vfma.f32	s0, s13, s12
+ 496              	.LVL36:
+  37:oscillator_p.cpp ****             out *= -1.0f;
+ 497              		.loc 1 37 13 is_stmt 1 view .LVU169
+ 498              	.LBB42:
+ 499              	.LBI38:
+  69:oscillator_p.cpp **** {
+ 500              		.loc 1 69 14 view .LVU170
+ 501              	.LBB40:
+  71:oscillator_p.cpp ****     if(t < dt)
+ 502              		.loc 1 71 5 view .LVU171
+  72:oscillator_p.cpp ****     {
+ 503              		.loc 1 72 5 view .LVU172
+ 504 02a0 F4EEE76A 		vcmpe.f32	s13, s15
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 14
+
+
+ 505 02a4 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 506 02a8 48D4     		bmi	.L78
+  77:oscillator_p.cpp ****     {
+ 507              		.loc 1 77 10 view .LVU173
+  77:oscillator_p.cpp ****     {
+ 508              		.loc 1 77 22 is_stmt 0 view .LVU174
+ 509 02aa F7EE005A 		vmov.f32	s11, #1.0e+0
+ 510 02ae 35EEE76A 		vsub.f32	s12, s11, s15
+  77:oscillator_p.cpp ****     {
+ 511              		.loc 1 77 10 view .LVU175
+ 512 02b2 F4EEC66A 		vcmpe.f32	s13, s12
+ 513 02b6 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 514 02ba 0DDD     		ble	.L26
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 515              		.loc 1 79 9 is_stmt 1 view .LVU176
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 516              		.loc 1 79 16 is_stmt 0 view .LVU177
+ 517 02bc 76EEE56A 		vsub.f32	s13, s13, s11
+ 518              	.LVL37:
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 519              		.loc 1 79 11 view .LVU178
+ 520 02c0 86EEA76A 		vdiv.f32	s12, s13, s15
+ 521              	.LVL38:
+  80:oscillator_p.cpp ****     }
+ 522              		.loc 1 80 9 is_stmt 1 view .LVU179
+  80:oscillator_p.cpp ****     }
+ 523              		.loc 1 80 22 is_stmt 0 view .LVU180
+ 524 02c4 F0EE467A 		vmov.f32	s15, s12
+ 525              	.LVL39:
+  80:oscillator_p.cpp ****     }
+ 526              		.loc 1 80 22 view .LVU181
+ 527 02c8 E6EE067A 		vfma.f32	s15, s12, s12
+  80:oscillator_p.cpp ****     }
+ 528              		.loc 1 80 26 view .LVU182
+ 529 02cc 36EE276A 		vadd.f32	s12, s12, s15
+ 530              	.LVL40:
+  80:oscillator_p.cpp ****     }
+ 531              		.loc 1 80 32 view .LVU183
+ 532 02d0 36EE256A 		vadd.f32	s12, s12, s11
+ 533 02d4 30EE460A 		vsub.f32	s0, s0, s12
+ 534              	.LVL41:
+ 535              	.L26:
+  80:oscillator_p.cpp ****     }
+ 536              		.loc 1 80 32 view .LVU184
+ 537              	.LBE40:
+ 538              	.LBE42:
+  38:oscillator_p.cpp ****             break;
+ 539              		.loc 1 38 13 is_stmt 1 view .LVU185
+  38:oscillator_p.cpp ****             break;
+ 540              		.loc 1 38 17 is_stmt 0 view .LVU186
+ 541 02d8 B1EE400A 		vneg.f32	s0, s0
+ 542              	.LVL42:
+  39:oscillator_p.cpp ****         case WAVE_POLYBLEP_SQUARE:
+ 543              		.loc 1 39 13 is_stmt 1 view .LVU187
+ 544 02dc 01E7     		b	.L12
+ 545              	.LVL43:
+ 546              	.L69:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 15
+
+
+  59:oscillator_p.cpp **** 
+ 547              		.loc 1 59 40 is_stmt 0 view .LVU188
+ 548 02de 0023     		movs	r3, #0
+ 549 02e0 23E7     		b	.L40
+ 550              	.L68:
+  57:oscillator_p.cpp ****     }
+ 551              		.loc 1 57 9 is_stmt 1 view .LVU189
+  57:oscillator_p.cpp ****     }
+ 552              		.loc 1 57 14 is_stmt 0 view .LVU190
+ 553 02e2 0023     		movs	r3, #0
+ 554 02e4 84F82530 		strb	r3, [r4, #37]
+ 555 02e8 0EE7     		b	.L39
+ 556              	.LVL44:
+ 557              	.L76:
+ 558              	.LBB43:
+ 559              	.LBB30:
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 560              		.loc 1 79 9 is_stmt 1 view .LVU191
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 561              		.loc 1 79 16 is_stmt 0 view .LVU192
+ 562 02ea 37EEC76A 		vsub.f32	s12, s15, s14
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 563              		.loc 1 79 11 view .LVU193
+ 564 02ee C6EE086A 		vdiv.f32	s13, s12, s16
+ 565              	.LVL45:
+  80:oscillator_p.cpp ****     }
+ 566              		.loc 1 80 9 is_stmt 1 view .LVU194
+  80:oscillator_p.cpp ****     }
+ 567              		.loc 1 80 22 is_stmt 0 view .LVU195
+ 568 02f2 B0EE666A 		vmov.f32	s12, s13
+ 569 02f6 A6EEA66A 		vfma.f32	s12, s13, s13
+  80:oscillator_p.cpp ****     }
+ 570              		.loc 1 80 26 view .LVU196
+ 571 02fa 76EE866A 		vadd.f32	s13, s13, s12
+ 572              	.LVL46:
+  80:oscillator_p.cpp ****     }
+ 573              		.loc 1 80 32 view .LVU197
+ 574 02fe 36EE877A 		vadd.f32	s14, s13, s14
+ 575              	.LVL47:
+  80:oscillator_p.cpp ****     }
+ 576              		.loc 1 80 32 view .LVU198
+ 577 0302 86E7     		b	.L18
+ 578              	.LVL48:
+ 579              	.L73:
+  80:oscillator_p.cpp ****     }
+ 580              		.loc 1 80 32 view .LVU199
+ 581              	.LBE30:
+ 582              	.LBE43:
+ 583              	.LBB44:
+ 584              	.LBB17:
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 585              		.loc 1 79 9 is_stmt 1 view .LVU200
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 586              		.loc 1 79 16 is_stmt 0 view .LVU201
+ 587 0304 77EEC06A 		vsub.f32	s13, s15, s0
+  79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
+ 588              		.loc 1 79 11 view .LVU202
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 16
+
+
+ 589 0308 86EE887A 		vdiv.f32	s14, s13, s16
+ 590              	.LVL49:
+  80:oscillator_p.cpp ****     }
+ 591              		.loc 1 80 9 is_stmt 1 view .LVU203
+  80:oscillator_p.cpp ****     }
+ 592              		.loc 1 80 22 is_stmt 0 view .LVU204
+ 593 030c F0EE476A 		vmov.f32	s13, s14
+ 594 0310 E7EE076A 		vfma.f32	s13, s14, s14
+  80:oscillator_p.cpp ****     }
+ 595              		.loc 1 80 26 view .LVU205
+ 596 0314 37EE267A 		vadd.f32	s14, s14, s13
+ 597              	.LVL50:
+  80:oscillator_p.cpp ****     }
+ 598              		.loc 1 80 32 view .LVU206
+ 599 0318 37EE000A 		vadd.f32	s0, s14, s0
+ 600              	.LVL51:
+  80:oscillator_p.cpp ****     }
+ 601              		.loc 1 80 32 view .LVU207
+ 602 031c A9E6     		b	.L31
+ 603              	.LVL52:
+ 604              	.L77:
+  80:oscillator_p.cpp ****     }
+ 605              		.loc 1 80 32 view .LVU208
+ 606              	.LBE17:
+ 607              	.LBE44:
+ 608              	.LBB45:
+ 609              	.LBB37:
+  74:oscillator_p.cpp ****         return t + t - t * t - 1.0f;
+ 610              		.loc 1 74 9 is_stmt 1 view .LVU209
+  74:oscillator_p.cpp ****         return t + t - t * t - 1.0f;
+ 611              		.loc 1 74 11 is_stmt 0 view .LVU210
+ 612 031e 80EE087A 		vdiv.f32	s14, s0, s16
+ 613              	.LVL53:
+  75:oscillator_p.cpp ****     }
+ 614              		.loc 1 75 9 is_stmt 1 view .LVU211
+  75:oscillator_p.cpp ****     }
+ 615              		.loc 1 75 22 is_stmt 0 view .LVU212
+ 616 0322 B0EE006A 		vmov.f32	s12, #2.0e+0
+  75:oscillator_p.cpp ****     }
+ 617              		.loc 1 75 32 view .LVU213
+ 618 0326 F7EE006A 		vmov.f32	s13, #1.0e+0
+  75:oscillator_p.cpp ****     }
+ 619              		.loc 1 75 22 view .LVU214
+ 620 032a 67EE477A 		vnmul.f32	s15, s14, s14
+ 621 032e E7EE067A 		vfma.f32	s15, s14, s12
+  75:oscillator_p.cpp ****     }
+ 622              		.loc 1 75 32 view .LVU215
+ 623 0332 77EEE67A 		vsub.f32	s15, s15, s13
+ 624 0336 78EEE78A 		vsub.f32	s17, s17, s15
+ 625              	.LVL54:
+  75:oscillator_p.cpp ****     }
+ 626              		.loc 1 75 32 view .LVU216
+ 627 033a 90E7     		b	.L22
+ 628              	.LVL55:
+ 629              	.L78:
+  75:oscillator_p.cpp ****     }
+ 630              		.loc 1 75 32 view .LVU217
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 17
+
+
+ 631              	.LBE37:
+ 632              	.LBE45:
+ 633              	.LBB46:
+ 634              	.LBB41:
+  74:oscillator_p.cpp ****         return t + t - t * t - 1.0f;
+ 635              		.loc 1 74 9 is_stmt 1 view .LVU218
+  74:oscillator_p.cpp ****         return t + t - t * t - 1.0f;
+ 636              		.loc 1 74 11 is_stmt 0 view .LVU219
+ 637 033c C6EEA75A 		vdiv.f32	s11, s13, s15
+ 638              	.LVL56:
+  75:oscillator_p.cpp ****     }
+ 639              		.loc 1 75 9 is_stmt 1 view .LVU220
+  75:oscillator_p.cpp ****     }
+ 640              		.loc 1 75 32 is_stmt 0 view .LVU221
+ 641 0340 F7EE006A 		vmov.f32	s13, #1.0e+0
+ 642              	.LVL57:
+  75:oscillator_p.cpp ****     }
+ 643              		.loc 1 75 22 view .LVU222
+ 644 0344 65EEE57A 		vnmul.f32	s15, s11, s11
+ 645              	.LVL58:
+  75:oscillator_p.cpp ****     }
+ 646              		.loc 1 75 22 view .LVU223
+ 647 0348 E5EE867A 		vfma.f32	s15, s11, s12
+  75:oscillator_p.cpp ****     }
+ 648              		.loc 1 75 32 view .LVU224
+ 649 034c 77EEE67A 		vsub.f32	s15, s15, s13
+ 650 0350 30EE670A 		vsub.f32	s0, s0, s15
+ 651              	.LVL59:
+  75:oscillator_p.cpp ****     }
+ 652              		.loc 1 75 32 view .LVU225
+ 653 0354 C0E7     		b	.L26
+ 654              	.LVL60:
+ 655              	.L74:
+  75:oscillator_p.cpp ****     }
+ 656              		.loc 1 75 32 view .LVU226
+ 657              	.LBE41:
+ 658              	.LBE46:
+ 659              	.LBB47:
+ 660              	.LBB24:
+  74:oscillator_p.cpp ****         return t + t - t * t - 1.0f;
+ 661              		.loc 1 74 9 is_stmt 1 view .LVU227
+  74:oscillator_p.cpp ****         return t + t - t * t - 1.0f;
+ 662              		.loc 1 74 11 is_stmt 0 view .LVU228
+ 663 0356 80EE087A 		vdiv.f32	s14, s0, s16
+ 664              	.LVL61:
+  75:oscillator_p.cpp ****     }
+ 665              		.loc 1 75 9 is_stmt 1 view .LVU229
+  75:oscillator_p.cpp ****     }
+ 666              		.loc 1 75 22 is_stmt 0 view .LVU230
+ 667 035a B0EE006A 		vmov.f32	s12, #2.0e+0
+  75:oscillator_p.cpp ****     }
+ 668              		.loc 1 75 32 view .LVU231
+ 669 035e F7EE006A 		vmov.f32	s13, #1.0e+0
+  75:oscillator_p.cpp ****     }
+ 670              		.loc 1 75 22 view .LVU232
+ 671 0362 67EE477A 		vnmul.f32	s15, s14, s14
+ 672 0366 E7EE067A 		vfma.f32	s15, s14, s12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 18
+
+
+  75:oscillator_p.cpp ****     }
+ 673              		.loc 1 75 32 view .LVU233
+ 674 036a 77EEE67A 		vsub.f32	s15, s15, s13
+ 675 036e 78EEE78A 		vsub.f32	s17, s17, s15
+ 676              	.LVL62:
+  75:oscillator_p.cpp ****     }
+ 677              		.loc 1 75 32 view .LVU234
+ 678 0372 A5E6     		b	.L35
+ 679              	.LVL63:
+ 680              	.L75:
+  75:oscillator_p.cpp ****     }
+ 681              		.loc 1 75 32 view .LVU235
+ 682              	.LBE24:
+ 683              	.LBE47:
+ 684              	.LBB48:
+ 685              	.LBB31:
+  74:oscillator_p.cpp ****         return t + t - t * t - 1.0f;
+ 686              		.loc 1 74 9 is_stmt 1 view .LVU236
+  74:oscillator_p.cpp ****         return t + t - t * t - 1.0f;
+ 687              		.loc 1 74 11 is_stmt 0 view .LVU237
+ 688 0374 87EE886A 		vdiv.f32	s12, s15, s16
+ 689              	.LVL64:
+  75:oscillator_p.cpp ****     }
+ 690              		.loc 1 75 9 is_stmt 1 view .LVU238
+  75:oscillator_p.cpp ****     }
+ 691              		.loc 1 75 22 is_stmt 0 view .LVU239
+ 692 0378 F0EE005A 		vmov.f32	s11, #2.0e+0
+ 693 037c 66EE466A 		vnmul.f32	s13, s12, s12
+ 694 0380 E6EE256A 		vfma.f32	s13, s12, s11
+  75:oscillator_p.cpp ****     }
+ 695              		.loc 1 75 32 view .LVU240
+ 696 0384 36EEC77A 		vsub.f32	s14, s13, s14
+ 697 0388 43E7     		b	.L18
+ 698              	.LVL65:
+ 699              	.L72:
+  75:oscillator_p.cpp ****     }
+ 700              		.loc 1 75 32 view .LVU241
+ 701              	.LBE31:
+ 702              	.LBE48:
+ 703              	.LBB49:
+ 704              	.LBB18:
+  74:oscillator_p.cpp ****         return t + t - t * t - 1.0f;
+ 705              		.loc 1 74 9 is_stmt 1 view .LVU242
+  74:oscillator_p.cpp ****         return t + t - t * t - 1.0f;
+ 706              		.loc 1 74 11 is_stmt 0 view .LVU243
+ 707 038a C7EE886A 		vdiv.f32	s13, s15, s16
+ 708              	.LVL66:
+  75:oscillator_p.cpp ****     }
+ 709              		.loc 1 75 9 is_stmt 1 view .LVU244
+  75:oscillator_p.cpp ****     }
+ 710              		.loc 1 75 22 is_stmt 0 view .LVU245
+ 711 038e B0EE006A 		vmov.f32	s12, #2.0e+0
+ 712 0392 26EEE67A 		vnmul.f32	s14, s13, s13
+ 713 0396 A6EE867A 		vfma.f32	s14, s13, s12
+  75:oscillator_p.cpp ****     }
+ 714              		.loc 1 75 32 view .LVU246
+ 715 039a 37EE400A 		vsub.f32	s0, s14, s0
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 19
+
+
+ 716 039e 68E6     		b	.L31
+ 717              	.LVL67:
+ 718              	.L2:
+  75:oscillator_p.cpp ****     }
+ 719              		.loc 1 75 32 view .LVU247
+ 720 03a0 90ED058A 		vldr.32	s16, [r0, #20]
+ 721 03a4 90ED067A 		vldr.32	s14, [r0, #24]
+ 722              	.LBE18:
+ 723              	.LBE49:
+  47:oscillator_p.cpp ****     }
+ 724              		.loc 1 47 22 view .LVU248
+ 725 03a8 9FED030A 		vldr.32	s0, .L79+8
+ 726 03ac 99E6     		b	.L12
+ 727              	.L80:
+ 728 03ae 00BF     		.align	2
+ 729              	.L79:
+ 730 03b0 83F9223E 		.word	1042479491
+ 731 03b4 DB0F4940 		.word	1078530011
+ 732 03b8 00000000 		.word	0
+ 733 03bc F4FD343F 		.word	1060437492
+ 734 03c0 DB0FC940 		.word	1086918619
+ 735              		.cfi_endproc
+ 736              	.LFE2770:
+ 738              		.section	.text._ZN7daisysp12Oscillator_p12CalcPhaseIncEf,"ax",%progbits
+ 739              		.align	1
+ 740              		.p2align 2,,3
+ 741              		.global	_ZN7daisysp12Oscillator_p12CalcPhaseIncEf
+ 742              		.syntax unified
+ 743              		.thumb
+ 744              		.thumb_func
+ 745              		.fpu fpv5-d16
+ 747              	_ZN7daisysp12Oscillator_p12CalcPhaseIncEf:
+ 748              	.LVL68:
+ 749              	.LFB2771:
+  65:oscillator_p.cpp ****     return (TWOPI_F * f) * sr_recip_;
+ 750              		.loc 1 65 1 is_stmt 1 view -0
+ 751              		.cfi_startproc
+ 752              		@ args = 0, pretend = 0, frame = 0
+ 753              		@ frame_needed = 0, uses_anonymous_args = 0
+ 754              		@ link register save eliminated.
+  66:oscillator_p.cpp **** }
+ 755              		.loc 1 66 5 view .LVU250
+  66:oscillator_p.cpp **** }
+ 756              		.loc 1 66 21 is_stmt 0 view .LVU251
+ 757 0000 DFED047A 		vldr.32	s15, .L82
+ 758 0004 20EE270A 		vmul.f32	s0, s0, s15
+ 759              	.LVL69:
+  66:oscillator_p.cpp **** }
+ 760              		.loc 1 66 28 view .LVU252
+ 761 0008 D0ED047A 		vldr.32	s15, [r0, #16]
+  67:oscillator_p.cpp **** 
+ 762              		.loc 1 67 1 view .LVU253
+ 763 000c 20EE270A 		vmul.f32	s0, s0, s15
+ 764 0010 7047     		bx	lr
+ 765              	.L83:
+ 766 0012 00BF     		.align	2
+ 767              	.L82:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 20
+
+
+ 768 0014 DB0FC940 		.word	1086918619
+ 769              		.cfi_endproc
+ 770              	.LFE2771:
+ 772              		.text
+ 773              	.Letext0:
+ 774              		.file 2 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+ 775              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
+ 776              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
+ 777              		.file 5 "../libdaisy/Drivers/CMSIS/Include/core_cm7.h"
+ 778              		.file 6 "../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
+ 779              		.file 7 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
+ 780              		.file 8 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/c
+ 781              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/b
+ 782              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 783              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 784              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 785              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 786              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 787              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 788              		.file 16 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 789              		.file 17 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 790              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 791              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 792              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 793              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 794              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 795              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 796              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 797              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 798              		.file 26 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 799              		.file 27 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
+ 800              		.file 28 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
+ 801              		.file 29 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
+ 802              		.file 30 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
+ 803              		.file 31 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ 804              		.file 32 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 805              		.file 33 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
+ 806              		.file 34 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
+ 807              		.file 35 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
+ 808              		.file 36 "<built-in>"
+ 809              		.file 37 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
+ 810              		.file 38 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/locale.h"
+ 811              		.file 39 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/ctype.h"
+ 812              		.file 40 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
+ 813              		.file 41 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
+ 814              		.file 42 "../DaisySP/Source/Utility/dsp.h"
+ 815              		.file 43 "oscillator_p.h"
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s 			page 21
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 oscillator_p.cpp
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s:17     .text._ZN7daisysp12Oscillator_p7ProcessEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s:26     .text._ZN7daisysp12Oscillator_p7ProcessEv:0000000000000000 _ZN7daisysp12Oscillator_p7ProcessEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s:51     .text._ZN7daisysp12Oscillator_p7ProcessEv:0000000000000014 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s:59     .text._ZN7daisysp12Oscillator_p7ProcessEv:0000000000000024 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s:730    .text._ZN7daisysp12Oscillator_p7ProcessEv:00000000000003b0 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s:739    .text._ZN7daisysp12Oscillator_p12CalcPhaseIncEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s:747    .text._ZN7daisysp12Oscillator_p12CalcPhaseIncEf:0000000000000000 _ZN7daisysp12Oscillator_p12CalcPhaseIncEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccveMtEb.s:768    .text._ZN7daisysp12Oscillator_p12CalcPhaseIncEf:0000000000000014 $d
+
+UNDEFINED SYMBOLS
+fmodf
+sinf

@@ -33,6 +33,7 @@ void TempoLED::init(dsy_gpio_pin ledpin, float samplerate)  //led pin number
     blink.SetWaveform(blink.WAVE_SQUARE);
     blink.SetAmp(1.0f);
     blink.SetFreq(2.0f);
+    //div_int = 1;
 }
 
 void TempoLED::setTempo(float tempo)
@@ -45,9 +46,29 @@ void TempoLED::resetPhase()
     blink.Reset();
 }
 
+/*
+void TempoLED::resetPhaseCounter()
+{
+    phaseCounter_ = 0;
+*/
+
 void TempoLED::update()
 {
     float ledvalue{ (blink.Process() + 1.0f) / 2.0f };
+    led.Set(ledvalue);
+    led.Update();
+}
+
+//dummy - set to phase of base tempo
+void TempoLED::update(TempoDivs div, float phase)
+{
+    float delayPhase{};
+
+    //update multi or div value
+    float div_int = GetDivInt(div);
+    delayPhase = phase * div_int;
+
+    float ledvalue{sinf(delayPhase) < 0.0f ? 0.0f : 1.0f};
     led.Set(ledvalue);
     led.Update();
 }
@@ -61,6 +82,63 @@ bool TempoLED::isEOC()
 {
     return blink.IsEOC();
 }
+
+//get div as an integer
+float TempoLED::GetDivInt(TempoDivs div)
+{
+    float retVal{};
+
+    switch (div)
+    {
+        case DIV6:
+            retVal = 6 * 6;
+        break;
+
+        case DIV5:
+            retVal = 5 * 6;
+        break;
+        case DIV4:
+            retVal = 4 * 6;
+        break;
+        case DIV3:
+            retVal = 3 * 6;
+        break;
+        case DIV2:
+            retVal = 2 * 6;
+        break;
+        
+        case UNITY:
+            retVal = 6;
+        break;
+
+        case MULT2:
+            retVal = 6/2;
+        break;
+
+        case MULT3:
+            retVal = 6/3;
+        break;
+        
+        case MULT4:
+            retVal = 6/4;
+        break;
+        
+        case MULT5:
+            retVal = 6/5;
+        break;   
+        
+        case MULT6:
+            retVal = 1;
+        break;       
+
+        default:
+        retVal = 6;    
+        break;  
+    }
+
+return retVal;
+}
+
 
 //ButtonLED Functions:
 

@@ -175,7 +175,7 @@ build/Veno-Echo.o: Veno-Echo.cpp \
  ../DaisySP/Source/Utility/samplehold.h \
  ../DaisySP/Source/Utility/smooth_random.h delayline_multitap.h \
  delayline_reverse.h envFollow.h scale.h constants.h taptempo.h LEDs.h \
- DelayMulti.h
+ oscillator_p.h DelayMulti.h
 
 ../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 
@@ -628,5 +628,7 @@ constants.h:
 taptempo.h:
 
 LEDs.h:
+
+oscillator_p.h:
 
 DelayMulti.h:

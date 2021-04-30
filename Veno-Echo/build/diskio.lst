@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 1
   27:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c **** 
   28:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c **** /* Private function prototypes -----------------------------------------------*/
   29:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c **** /* Private functions ---------------------------------------------------------*/
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s 			page 2
 
 
   30:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 1
   46:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c **** /**
   47:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c ****   * @brief  Initializes a Drive
   48:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c ****   * @param  pdrv: Physical drive number (0..)
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s 			page 3
 
 
   49:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c ****   * @retval DSTATUS: Operation status
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 1
   60:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c ****   }
  105              		.loc 1 60 12 view .LVU23
  106 001a 1368     		ldr	r3, [r2]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s 			page 4
 
 
  107 001c 1847     		bx	r3
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 1
  142              		.loc 1 79 1 is_stmt 0 view .LVU30
  143 0000 30B4     		push	{r4, r5}
  144              		.cfi_def_cfa_offset 8
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s 			page 5
 
 
  145              		.cfi_offset 4, -8
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 1
   94:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c **** #if _USE_WRITE == 1
   95:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c **** DRESULT disk_write (
   96:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c **** 	BYTE pdrv,		/* Physical drive nmuber to identify the drive */
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s 			page 6
 
 
   97:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c **** 	const BYTE *buff,	/* Data to be written */
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 1
  230              		.align	1
  231              		.p2align 2,,3
  232              		.global	disk_ioctl
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s 			page 7
 
 
  233              		.syntax unified
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 1
  266              		.cfi_restore 4
  267              		.cfi_def_cfa_offset 0
  125:../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.c ****   return res;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s 			page 8
 
 
  268              		.loc 1 125 9 view .LVU61
@@ -478,34 +478,34 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 1
  313              		.file 11 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
  314              		.file 12 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
  315              		.file 13 "../libdaisy/Middlewares/Third_Party/FatFs/src/integer.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 9
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s 			page 9
 
 
  316              		.file 14 "../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h"
  317              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
  318              		.file 16 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s 			page 10
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 diskio.c
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:17     .text.disk_status:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:26     .text.disk_status:0000000000000000 disk_status
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:54     .text.disk_status:0000000000000010 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:59     .text.disk_initialize:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:67     .text.disk_initialize:0000000000000000 disk_initialize
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:119    .text.disk_initialize:0000000000000024 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:124    .text.disk_read:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:132    .text.disk_read:0000000000000000 disk_read
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:172    .text.disk_read:0000000000000018 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:177    .text.disk_write:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:185    .text.disk_write:0000000000000000 disk_write
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:225    .text.disk_write:0000000000000018 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:230    .text.disk_ioctl:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:238    .text.disk_ioctl:0000000000000000 disk_ioctl
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:275    .text.disk_ioctl:0000000000000018 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:280    .text.get_fattime:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccShx4eU.s:288    .text.get_fattime:0000000000000000 get_fattime
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:17     .text.disk_status:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:26     .text.disk_status:0000000000000000 disk_status
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:54     .text.disk_status:0000000000000010 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:59     .text.disk_initialize:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:67     .text.disk_initialize:0000000000000000 disk_initialize
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:119    .text.disk_initialize:0000000000000024 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:124    .text.disk_read:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:132    .text.disk_read:0000000000000000 disk_read
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:172    .text.disk_read:0000000000000018 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:177    .text.disk_write:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:185    .text.disk_write:0000000000000000 disk_write
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:225    .text.disk_write:0000000000000018 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:230    .text.disk_ioctl:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:238    .text.disk_ioctl:0000000000000000 disk_ioctl
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:275    .text.disk_ioctl:0000000000000018 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:280    .text.get_fattime:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccQt6qVM.s:288    .text.get_fattime:0000000000000000 get_fattime
 
 UNDEFINED SYMBOLS
 disk

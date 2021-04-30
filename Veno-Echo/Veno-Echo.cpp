@@ -103,8 +103,8 @@ ButtonLED LPF_sw,HPF_sw,Rev_L_sw,Rev_R_sw, Tap_Button;
 TempoLED tempoLED_BASE;
 
 
-float delayTimeL_CV;
-float delayTimeR_CV;
+float delayTimeL_CV{};
+float delayTimeR_CV{};
 
 float feedbackL{};
 float feedbackL_CV{};
@@ -138,9 +138,6 @@ bool mute{};
 bool ClockInFlag{false};
 
 bool PostFilters{false};
-
-bool delayL_flag{true};
-bool delayR_flag{true};
 
 std::atomic<bool> save_flag{};
 
@@ -184,8 +181,6 @@ Switch ClockIn;
 
 //Tap tempo
 Taptempo BaseTempo; 
-
-
 
 Settings AltControls;
 
@@ -291,58 +286,31 @@ if(!save_flag)  //don't check ADCs if saving!
             break;
 
             case 1:
-                Update_DelayTimeL_CV();
-            break;
-
-            case 2:
                 Update_DelayTimeL();
             break;
 
-            case 3:
-                Update_DelayTimeR_CV();
-            break;
-
-            case 4:
+            case 2:
                 Update_DelayTimeR();
             break;
 
-            case 5:
-                Update_feedbackL_CV();
-            break;
-
-            case 6:
+            case 3:
                 Update_feedbackL();
             break;
 
-            case 7:
-                Update_feedbackR_CV();
-            break;
-
-            case 8:
+            case 4:
                 Update_feedbackR();
             break;
 
-            case 9:
-                Update_drywet_CV();
-            break;
-
-            case 10:
+            case 5:
                 Update_drywet();
             break;
 
-            case 11:
-                Update_width_CV();
-            break;
-
-            case 12:
+            case 6:
                 Update_width();
             break;
 
-            case 13:
-                Update_crossfeedback();
-            break;
-
-            case 14:
+            case 7:
+                //Update_crossfeedback();
                 Update_filterXfade();
             break;
         }
@@ -352,6 +320,7 @@ if(!save_flag)  //don't check ADCs if saving!
     {   
         UpdateClock(); 
         Update_Mod();
+
         //get xfade positions from envelopes:
         float FwdRevLXFadepos = FwdRevLEnv.Process(Rev_L_sw.getState());
         float FwdRevRXFadepos = FwdRevREnv.Process(Rev_R_sw.getState());
@@ -396,6 +365,7 @@ if(!save_flag)  //don't check ADCs if saving!
         //Get combined output from all delay heads
         float delaySignal_L{delayL.GetOutput()};   
         float delaySignal_R{delayR.GetOutput()};
+
         //Update Base Tempo LED
         Update_BaseTempoLED();
 
@@ -591,8 +561,8 @@ void InitDelays(float samplerate)
     delayL.init(hw.GetPin(8),samplerate);
     delayR.init(hw.GetPin(9),samplerate);
 
-    delayL.SetDelayTime(500.0f);
-    delayR.SetDelayTime(500.0f);
+    //delayL.SetDelayTime(500.0f);
+    //delayR.SetDelayTime(500.0f);
 
     //Init rev delays
     delMemsL_REV.Init();
@@ -616,8 +586,8 @@ int main(void)
     
     //Buttons or switches with status LEDs
 
-    LPF_sw.init(hw.GetPin(29),hw.GetPin(6),ButtonLED::Toggle,hw.AudioSampleRate() / 12.f);    
-    HPF_sw.init(hw.GetPin(30),hw.GetPin(7),ButtonLED::Toggle,hw.AudioSampleRate()/ 12.f);
+    LPF_sw.init(hw.GetPin(12),hw.GetPin(6),ButtonLED::Toggle,hw.AudioSampleRate() / 12.f);    
+    HPF_sw.init(hw.GetPin(13),hw.GetPin(7),ButtonLED::Toggle,hw.AudioSampleRate()/ 12.f);
     Rev_L_sw.init(hw.GetPin(10),hw.GetPin(2),ButtonLED::Momentary,hw.AudioSampleRate() / 12.f);
     Rev_R_sw.init(hw.GetPin(11),hw.GetPin(3),ButtonLED::Momentary,hw.AudioSampleRate() / 12.f);
     Tap_Button.init(hw.GetPin(24),hw.GetPin(4),ButtonLED::Toggle_inverted,hw.AudioSampleRate() / 12.f);
@@ -718,11 +688,6 @@ int main(void)
     lfo.SetFreq(1.0f);
     lfo.SetAmp(1.0f);
 
-
-    //timers: used to limit time between updates to delay time parameters
-    //dsy_tim_init(); //start timer
-    //dsy_tim_start();
-
     BaseTempo.init(80,6000,1.25f);  //max 6 second tap
 
     //setup tempo indicators
@@ -738,26 +703,22 @@ int main(void)
     AltControls = defaultAltControls;
 
     //initialize DAC
-    //dsy_dac_init(&hw.dac_handle, DSY_DAC_CHN_BOTH);
-    //dsy_dac_write(DSY_DAC_CHN1, 0);
-    //dsy_dac_write(DSY_DAC_CHN2, 0);
 
     //ADC
-    AdcChannelConfig adcConfig[8];
+    AdcChannelConfig adc[8];
 
-    adcConfig[0].InitSingle(hw.GetPin(15));
-    adcConfig[1].InitSingle(hw.GetPin(16));
-    adcConfig[2].InitSingle(hw.GetPin(17));
-    adcConfig[3].InitSingle(hw.GetPin(18));
-    adcConfig[4].InitSingle(hw.GetPin(19));
-    adcConfig[5].InitSingle(hw.GetPin(20));
-    //adc[6].InitSingle(hw.GetPin(21));
-    adcConfig[6].InitSingle(hw.GetPin(22));
-    adcConfig[7].InitMux(hw.GetPin(25),8,hw.GetPin(14),hw.GetPin(13),hw.GetPin(12));
+    adc[0].InitSingle(hw.GetPin(15));
+    adc[1].InitSingle(hw.GetPin(16));
+    adc[2].InitSingle(hw.GetPin(17));
+    adc[3].InitSingle(hw.GetPin(18));
+    adc[4].InitSingle(hw.GetPin(19));
+    adc[5].InitSingle(hw.GetPin(20));
+    adc[6].InitSingle(hw.GetPin(21));
+    adc[7].InitSingle(hw.GetPin(22));
 
-
-    hw.adc.Init(adcConfig, 8,daisy::AdcHandle::OVS_128);
+    hw.adc.Init(adc, 8);
     hw.adc.Start();
+
 
     hw.SetAudioBlockSize(1);     //set blocksize.
     // start audio callback
@@ -799,7 +760,7 @@ void Update_DelayTimeL()
     static float delayTimeL_Last{};
 
     //update pot values
-    float delayTimeL_Pot{hw.adc.GetMuxFloat(7,2)};
+    float delayTimeL_Pot{hw.adc.GetFloat(0)};
 
     //counter used to limit how quickly delay time is changed, 
     //and to ensure L and R delay times don't change at the same time.
@@ -829,69 +790,57 @@ void Update_DelayTimeL()
 
         float delayTimeL{};
 
-    if(delayTimeL_pickup)
-    {
-        delayTimeL = PotCVCombo(delayTimeL_Pot,delayTimeL_CV);  //combine pot value and CV
-        delayTimeL_Last = delayTimeL_Pot; //update last value
-    }
-
-    else
-    {
-        delayTimeL = PotCVCombo(delayTimeL_Last,delayTimeL_CV); //combine last pot value and CV
-    }
-
-    if (!syncMode)
-    {
-        if (counterL == 0)
+        if(delayTimeL_pickup)
         {
-            delayL.SetDelayTime_pot(1.0f - delayTimeL,true);
+            delayTimeL = PotCVCombo(delayTimeL_Pot,0.5f);  //combine pot value and CV
+            delayTimeL_Last = delayTimeL_Pot; //update last value
         }
-    }
-    else    //syncmode
-    {
 
-        if (counterL == 0)
+        else
         {
-            //float div_L_Input{DelayTimeL};
-            if(delayL.SetDelayTime(BaseTempo.getTapLength() * 48.0f * SetTempoDiv(delayTimeL,&div_L)))
+            delayTimeL = PotCVCombo(delayTimeL_Last,0.5f); //combine last pot value and CV
+        }
+
+        if(counterL == 0)
+        {
+            if(delayL.SetDelayTime(1.0f - delayTimeL,BaseTempo.getTapLength(),syncMode))
             {
-                delayL_flag = true;
+            };
+        }
+
+    }   //not shift mode
+
+    else    //shift mode
+    {
+        static float Rev_DelayTime_new{};
+
+        if (shift != lastShift) //recent shift change
+        {
+            lastShift = shift;
+            Rev_DelayTime_pickup = false;   //set not picked up
+            Rev_DelayTime_new = delayTimeL_Pot; //update new value
+        }
+
+        else    //not a recent shift change
+        {
+            if(!Rev_DelayTime_pickup) //not picked up
+            {
+                if(abs(delayTimeL_Pot - Rev_DelayTime_new) > pickupTolerance)
+                {
+                    Rev_DelayTime_pickup = true;   //set picked up
+                }
             }
         }
-    }
-}   //not shift mode
 
-else    //shift mode
-{
-    static float Rev_DelayTime_new{};
-
-    if (shift != lastShift) //recent shift change
-    {
-        lastShift = shift;
-        Rev_DelayTime_pickup = false;   //set not picked up
-        Rev_DelayTime_new = delayTimeL_Pot; //update new value
-    }
-
-    else    //not a recent shift change
-    {
-        if(!Rev_DelayTime_pickup) //not picked up
+        if(Rev_DelayTime_pickup)
         {
-            if(abs(delayTimeL_Pot - Rev_DelayTime_new) > pickupTolerance)
-            {
-                Rev_DelayTime_pickup = true;   //set picked up
-            }
+            float Rev_DelayTime{scale(delayTimeL_Pot,maxRevDelay,minRevDelay,EXPONENTIAL)};
+            delaysL_REV.SetDelayTime(Rev_DelayTime);
+            delaysR_REV.SetDelayTime(Rev_DelayTime); 
+            //save setting:
+            AltControls.RevLength = Rev_DelayTime;
         }
     }
-
-    if(Rev_DelayTime_pickup)
-    {
-        float Rev_DelayTime{scale(delayTimeL_Pot,maxRevDelay,minRevDelay,EXPONENTIAL)};
-        delaysL_REV.SetDelayTime(Rev_DelayTime);
-        delaysR_REV.SetDelayTime(Rev_DelayTime); 
-        //save setting:
-        AltControls.RevLength = Rev_DelayTime;
-    }
-}
     
 }
 
@@ -909,7 +858,7 @@ void Update_DelayTimeR()
     static float delayTimeR_Last{};
 
     //update pot values
-    float delayTimeR_Pot{hw.adc.GetMuxFloat(7,6)};
+    float delayTimeR_Pot{hw.adc.GetFloat(1)};
 
     //counter used to limit how quickly delay time is changed, 
     //and to ensure L and R delay times don't change at the same time.
@@ -941,33 +890,21 @@ void Update_DelayTimeR()
 
         if(delayTimeR_pickup)
         {
-            delayTimeR = PotCVCombo(delayTimeR_Pot,delayTimeR_CV);
+            delayTimeR = PotCVCombo(delayTimeR_Pot,0.5f);
             delayTimeR_Last = delayTimeR_Pot;
         }
 
         else
         {
-            delayTimeR = PotCVCombo(delayTimeR_Last,delayTimeR_CV);
+            delayTimeR = PotCVCombo(delayTimeR_Last,0.5f);
         }
 
-        if (!syncMode)
+        if(counterR == 0)
         {
-            if (counterR == 0)
+            if(delayR.SetDelayTime(1.0f - delayTimeR,BaseTempo.getTapLength(),syncMode))
             {
-                delayR.SetDelayTime_pot(1.0f - delayTimeR,true);
-            }
+            };
 
-        }
-        else    //syncmode
-        {
-            if (counterR == 0)
-            {
-                //float div_R_Input{1.0f - delayTimeR}; //invert pot range
-                if(delayR.SetDelayTime(BaseTempo.getTapLength() * 48.0f * SetTempoDiv(delayTimeR,&div_R)))
-                {
-                    delayR_flag = true;
-                }
-            }
         }
     }   //not shift mode
 
@@ -1019,7 +956,7 @@ void Update_feedbackL()
 
     //get pot values:
     //float feedbackL_Pot{hw.adc.GetFloat(2)};
-    float feedbackL_Pot{hw.adc.GetMuxFloat(7,1)};
+    float feedbackL_Pot{1.0f - hw.adc.GetFloat(2)};
 
     if (!shift) //default controls
     {   
@@ -1046,13 +983,13 @@ void Update_feedbackL()
 
         if(feedbackL_pickup)
         {
-            feedbackL_combo = PotCVCombo(feedbackL_Pot,feedbackL_CV);
+            feedbackL_combo = PotCVCombo(feedbackL_Pot,0.5f);
             feedbackL_Last = feedbackL_Pot; //update last value
         }
 
         else
         {
-            feedbackL_combo = PotCVCombo(feedbackL_Last,feedbackL_CV);
+            feedbackL_combo = PotCVCombo(feedbackL_Last,0.5f);
         }
   
         float feedbackL_Target{scale(feedbackL_combo,0.0,maxFB,LINEAR)};  
@@ -1107,7 +1044,7 @@ void Update_feedbackR()
     static float feedbackR_Last{};
 
     //get pot values:
-    float feedbackR_Pot{hw.adc.GetMuxFloat(7,4)};
+    float feedbackR_Pot{1.0f - hw.adc.GetFloat(3)};
 
     if (!shift) //default controls
     {   
@@ -1135,13 +1072,13 @@ void Update_feedbackR()
         
         if(feedbackR_pickup)
         {
-            feedbackR_combo = PotCVCombo(feedbackR_Pot,feedbackR_CV);
+            feedbackR_combo = PotCVCombo(feedbackR_Pot,0.5f);
             feedbackR_Last = feedbackR_Pot;  //update last value
         }
 
         else
         {
-            feedbackR_combo = PotCVCombo(feedbackR_Last,feedbackR_CV);
+            feedbackR_combo = PotCVCombo(feedbackR_Last,0.5f);
         }
 
         float feedbackR_Target{scale(feedbackR_combo,0.0,maxFB,LINEAR)};
@@ -1199,7 +1136,7 @@ void Update_drywet()
 
     //get pot values:
     //float drywet_Pot{hw.adc.GetFloat(4)};
-    float drywet_Pot{hw.adc.GetMuxFloat(7,5)}; //read current pot position
+    float drywet_Pot{1.0f - hw.adc.GetFloat(4)}; //read current pot position
 
     if (!shift) //default controls
     {   
@@ -1231,13 +1168,13 @@ void Update_drywet()
 
         if (drywet_pickup)
         {
-            drywetcombo = PotCVCombo(drywet_Pot,drywet_CV);    //combine pot and CV
+            drywetcombo = PotCVCombo(drywet_Pot,0.5f);    //combine pot and CV
             drywet_Last = drywet_Pot; //update last value
         }
 
         else
         {
-            drywetcombo = PotCVCombo(drywet_Last,drywet_CV);    //combine last pot value and CV
+            drywetcombo = PotCVCombo(drywet_Last,0.5f);    //combine last pot value and CV
         }
 
         float drywetTarget{};
@@ -1252,7 +1189,7 @@ void Update_drywet()
         }
         else
         {
-            drywetTarget = scale(drywetcombo,0.0,1.0,EXPONENTIAL); 
+            drywetTarget = scale(drywetcombo,0.0,1.0,LINEAR); 
         }
 
         //fonepole(drywet,drywetTarget,0.032f); 
@@ -1311,7 +1248,7 @@ void Update_width()
     static float width_Last{};
 
     //get pot values:
-    float width_Pot{hw.adc.GetMuxFloat(7,7)};
+    float width_Pot{hw.adc.GetFloat(5)};
 
     if (!shift) //default controls
     {   
@@ -1340,13 +1277,13 @@ void Update_width()
 
         if(width_pickup)
         {
-            widthTarget = scale(PotCVCombo(width_Pot,width_CV),0.5f,0.0f,LINEAR);
+            widthTarget = scale(PotCVCombo(width_Pot,0.5f),0.0f,0.5f,LINEAR);
             width_Last = width_Pot; //update last value
         }
 
         else
         {        
-            widthTarget = scale(PotCVCombo(width_Last,width_CV),0.5f,0.0f,LINEAR);
+            widthTarget = scale(PotCVCombo(width_Last,0.5f),0.0f,0.5f,LINEAR);
         }
             
             fonepole(width,widthTarget,0.032f);
@@ -1392,7 +1329,7 @@ void Update_crossfeedback()
     static float crossfeedback_Last{};
 
     //get pot values:
-    float crossfeedback_Pot{hw.adc.GetMuxFloat(7,0)};
+    float crossfeedback_Pot{hw.adc.GetFloat(6)};
 
     if (!shift) //default controls
     {   
@@ -1470,7 +1407,7 @@ void Update_filterXfade()
     static float filterXfade_last{};
 
     //get pot values:
-    float filterXfade_Pot{hw.adc.GetMuxFloat(7,3)};
+    float filterXfade_Pot{hw.adc.GetFloat(6)};
 
     if (!shift) //default controls
     {   
@@ -1554,7 +1491,7 @@ void Update_filterXfade()
 void GetModCV()
 {
     //get modulation CV input
-    modulation_CV_Raw = scale(hw.adc.GetFloat(6),-1.0f * maxModAmp,maxModAmp,LINEAR);
+    modulation_CV_Raw = scale(hw.adc.GetFloat(7),-1.0f * maxModAmp,maxModAmp,LINEAR);
     //LPF CV input and ModDepth control
 }
 
@@ -1586,22 +1523,6 @@ void UpdateClock()
             if(BaseTempo.tap()) //if valid tap resistered
             {
                 tempoLED_BASE.setTempo(BaseTempo.getTapFreq()); //set new base freq
-                
-                //shouldn't need to do this
-                //any clock tempo change or ratio change will trigger 
-                //a phase reset of both sides
-                if(syncMode)
-                {
-                    if(div_L <= UNITY)
-                    {
-                        delayL.tempoled.resetPhase();
-                    }
-
-                    if(div_R <= UNITY)
-                    {
-                        delayR.tempoled.resetPhase();
-                    }
-                }
                 
             }
         }
@@ -1677,11 +1598,6 @@ void Update_Buttons()
         }
         tempoLED_BASE.resetPhase();
         
-        if(syncMode)
-        {
-            delayL.tempoled.resetPhase();
-            delayR.tempoled.resetPhase();
-        }
 
         shiftTime = System::GetNow();   //reset shift timer
         buttonstate += 1;
@@ -1710,12 +1626,6 @@ void Update_Buttons()
 
     if (buttonstate == 3) //all buttons held
     {
-        /*
-            if(!save_flag)
-            {
-                save_flag = true; 
-            }
-        */
 
             if( ((System::GetNow() - resetTime) > resetWait) )
             {
@@ -1732,151 +1642,28 @@ void Update_Buttons()
 
     syncMode = Sync.Pressed() ? true : false;
 
-    if (Sync.RisingEdge())  //if switched to sync, reset phase of tempo LEDs
-    {
-        //tempoLED_BASE.resetPhase();
-        //delayL.tempoled.resetPhase();
-        //delayR.tempoled.resetPhase();
-        delayL_flag = true;
-        delayR_flag = true;
-    }
-
+    //update syncMode
+    delayL.SetSync(syncMode);
+    delayR.SetSync(syncMode);
 }
 
 void Update_BaseTempoLED()
 {
     tempoLED_BASE.update();
 
-    if(tempoLED_BASE.isEOC()) //if base tempo EOC 
+    static int phaseCounter{};
+
+    if(tempoLED_BASE.isEOC())
     {
-        if(delayL_flag) //if left delay time change flag set
-        {
-            //reset both sides
-            delayL.tempoled.resetPhase();
-            delayR.tempoled.resetPhase();
-            delayL_flag = false;
-        }
-
-        if(delayR_flag) //if right delay time change flag set
-        {
-            //rest both sides
-            delayL.tempoled.resetPhase();
-            delayR.tempoled.resetPhase();
-            delayR_flag = false;
-        }
-
+        phaseCounter = (phaseCounter + 1) % 6;
     }
+
+    float dividedPhase{(tempoLED_BASE.GetPhase() / 6) + ( (TWOPI_F / 6) * phaseCounter ) };
+    //update base phase for both delay lines
+    delayL.SetBasePhase( dividedPhase );
+    delayR.SetBasePhase( dividedPhase );
 }
 
-//input a float (range 0 to 1) and address of TempoDivs to update
-float SetTempoDiv(float input, TempoDivs *div)
-{
-
-    float retVal{};
-
-    if (input < 0.0909f)
-    {
-        retVal = (1.0f / 6.0f);
-        *div = DIV6;
-    }
-
-    else if (input < 0.1818f)
-    {
-       retVal = (1.0f / 5.0f);
-       *div = DIV5;
-    }
-
-    else if (input < 0.2727f)
-    {
-        retVal = (1.0f / 4.0f);
-        *div = DIV4;
-    }
-
-    else if (input < 0.3636f)
-    {
-        retVal = (1.0f / 3.0f);
-        *div = DIV3;
-    }
-
-    else if (input < 0.4545f)
-    {
-        retVal = (1.0f / 2.0f);
-        *div = DIV2;
-    }
-
-    else if (input <  0.5455f)
-    {
-        retVal = (1.0f);
-        *div = UNITY;
-    }
-
-    else if (input < 0.6364f)
-    {
-        retVal = 2.0f;
-        *div = MULT2;
-    }
-
-    else if (input < 0.7273f)
-    {
-        retVal = 3.0f;
-        *div = MULT3;
-    }
-
-    else if (input < 0.8182f)
-    {
-        retVal = 4.0f;
-        *div = MULT4;
-    }
-    
-    else if (input < 0.9091f)
-    {
-        retVal = 5.0f;
-        *div = MULT5;
-    }
-
-    else if (input <= 1.0f)
-    {
-       retVal = 6.0f; 
-       *div = MULT6;
-    }
-    else
-    {
-        retVal = 1.0f; 
-       *div = UNITY;
-    }
-    
-return retVal;
-
-}
-
-float GetTapRatio(TapRatios ratio)
-{
-    float retVal{};
-    switch(ratio)
-    {
-        case QUARTER:
-        retVal = 1.0f;
-        break;
-
-        case DOTTED_EIGHT:
-        retVal = 3.0f/2.0f;
-        break;
-
-        case EIGHT:
-        retVal = 2.0f;
-        break;
-
-        case TWELVE:
-        retVal = 3.0f;
-        break;
-
-        default:
-        retVal = 1.0f;
-        break;
-    }
-
-return retVal;
-}
 
 void ApplySettings(const Settings &setting)
 {
@@ -2144,4 +1931,31 @@ pickupState checkPickupState_alt(float value, float lastValue, pickupState lastS
     return retval;
 }
 
+float GetTapRatio(TapRatios ratio)
+{
+float retVal{};
+    switch(ratio)
+    {
+        case QUARTER:
+        retVal = 1.0f;
+        break;
 
+        case DOTTED_EIGHT:
+        retVal = 3.0f/2.0f;
+        break;
+
+        case EIGHT:
+        retVal = 2.0f;
+        break;
+
+        case TWELVE:
+        retVal = 3.0f;
+        break;
+
+        default:
+        retVal = 1.0f;
+        break;
+    }
+
+return retVal;
+}

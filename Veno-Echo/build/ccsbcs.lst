@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
   27:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #if _CODE_PAGE == 437
   28:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
   29:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 2
 
 
   30:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP437(0x80-0xFF) to Unicode conversion table */
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
   84:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** #define _TBLDEF 1
   85:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
   86:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP775(0x80-0xFF) to Unicode conversion table */
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 3
 
 
   87:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x0106, 0x00FC, 0x00E9, 0x0101, 0x00E4, 0x0123, 0x00E5, 0x0107, 0x0142, 0x0113, 0x0156, 0x0157, 0x
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  141:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** static
  142:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP857(0x80-0xFF) to Unicode conversion table */
  143:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C7, 0x00FC, 0x00E9, 0x00E2, 0x00E4, 0x00E0, 0x00E5, 0x00E7, 0x00EA, 0x00EB, 0x00E8, 0x00EF, 0x
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 4
 
 
  144:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C9, 0x00E6, 0x00C6, 0x00F4, 0x00F6, 0x00F2, 0x00FB, 0x00F9, 0x0130, 0x00D6, 0x00DC, 0x00F8, 0x
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  198:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** const WCHAR Tbl[] = {	/*  CP863(0x80-0xFF) to Unicode conversion table */
  199:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C7, 0x00FC, 0x00E9, 0x00E2, 0x00C2, 0x00E0, 0x00B6, 0x00E7, 0x00EA, 0x00EB, 0x00E8, 0x00EF, 0x
  200:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00C9, 0x00C8, 0x00CA, 0x00F4, 0x00CB, 0x00CF, 0x00FB, 0x00F9, 0x00A4, 0x00D4, 0x00DC, 0x00A2, 0x
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 5
 
 
  201:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00A6, 0x00B4, 0x00F3, 0x00FA, 0x00A8, 0x00BB, 0x00B3, 0x00AF, 0x00CE, 0x3210, 0x00AC, 0x00BD, 0x
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  255:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x00B7, 0x00B7, 0x00B7, 0x00B7, 0x00B7, 0x00B7, 0x0386, 0x00B7, 0x00B7, 0x00AC, 0x00A6, 0x2018, 0x
  256:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x038A, 0x03AA, 0x038C, 0x00B7, 0x00B7, 0x038E, 0x03AB, 0x00A9, 0x038F, 0x00B2, 0x00B3, 0x03AC, 0x
  257:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x03CA, 0x0390, 0x03CC, 0x03CD, 0x0391, 0x0392, 0x0393, 0x0394, 0x0395, 0x0396, 0x0397, 0x00BD, 0x
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 6
 
 
  258:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	0x2591, 0x2592, 0x2593, 0x2502, 0x2524, 0x039A, 0x039B, 0x039C, 0x039D, 0x2563, 0x2551, 0x2557, 0x
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  289:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
  290:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		} else {		/* Unicode to OEM code */
  291:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			for (c = 0; c < 0x80; c++) {
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 7
 
 
   52              		.loc 1 291 4 discriminator 2 view .LVU7
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
   94 0034 8038     		subs	r0, r0, #128
   95              	.LVL9:
  288:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 8
 
 
   96              		.loc 1 288 6 discriminator 1 view .LVU21
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  307:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	/* Compressed upper conversion table */
  308:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	static const WCHAR cvt1[] = {	/* U+0000 - U+0FFF */
  140              		.loc 1 308 2 view .LVU28
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 9
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 9
 
 
  309:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		/* Basic Latin */
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  361:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 	WCHAR bc, nc, cmd;
  143              		.loc 1 361 2 view .LVU31
  362:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 10
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 10
 
 
  363:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  366:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		if (!bc || chr < bc) break;
  174              		.loc 1 366 3 view .LVU39
  367:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 		nc = *p++; cmd = nc >> 8; nc &= 0xFF;	/* Get processing command and block size */
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 11
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 11
 
 
  175              		.loc 1 367 3 view .LVU40
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  217              	.L31:
  371:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 1:	chr -= (chr - bc) & 1; break;	/* Case pairs */
  218              		.loc 1 371 12 view .LVU54
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 12
 
 
  371:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 1:	chr -= (chr - bc) & 1; break;	/* Case pairs */
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  258 0062 F4E7     		b	.L20
  259              	.L30:
  372:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 2: chr -= 16; break;				/* Shift -16 */
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 13
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 13
 
 
  260              		.loc 1 372 12 is_stmt 1 view .LVU69
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  298              		.loc 1 375 12 is_stmt 1 view .LVU85
  375:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 5:	chr -= 26; break;				/* Shift -26 */
  299              		.loc 1 375 16 is_stmt 0 view .LVU86
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 14
 
 
  300 007c 3038     		subs	r0, r0, #48
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  378:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 8:	chr -= 0x1C60; break;			/* Shift -0x1C60 */
  338              		.loc 1 378 23 is_stmt 1 view .LVU103
  378:../libdaisy/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c **** 			case 8:	chr -= 0x1C60; break;			/* Shift -0x1C60 */
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 15
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 15
 
 
  339              		.loc 1 378 4 is_stmt 0 view .LVU104
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  396 0052 AE00     		.short	174
  397 0054 AC00     		.short	172
  398 0056 BD00     		.short	189
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 16
 
 
  399 0058 BC00     		.short	188
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  453 00c4 D400     		.short	212
  454 00c6 D200     		.short	210
  455 00c8 F500     		.short	245
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 17
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 17
 
 
  456 00ca D500     		.short	213
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  512 002e 8201     		.short	386
  513 0030 8201     		.short	386
  514 0032 8401     		.short	388
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 18
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 18
 
 
  515 0034 8401     		.short	388
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  569 00a0 BB01     		.short	443
  570 00a2 BC01     		.short	444
  571 00a4 BC01     		.short	444
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 19
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 19
 
 
  572 00a6 BE01     		.short	446
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  626 0112 9001     		.short	400
  627 0114 5C02     		.short	604
  628 0116 5D02     		.short	605
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 20
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 20
 
 
  629 0118 5E02     		.short	606
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  683 0184 0300     		.short	3
  684 0186 FD03     		.short	1021
  685 0188 FE03     		.short	1022
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 21
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 21
 
 
  686 018a FF03     		.short	1023
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  740              		.set	.LANCHOR2,. + 0
  743              	cvt2.18447:
  744 0000 7D1D     		.short	7549
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 22
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 22
 
 
  745 0002 0100     		.short	1
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  799 006e BC1F     		.short	8124
  800 0070 CC1F     		.short	8140
  801 0072 0100     		.short	1
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 23
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 23
 
 
  802 0074 C31F     		.short	8131
@@ -1372,25 +1372,25 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 1
  850              		.file 12 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
  851              		.file 13 "../libdaisy/Middlewares/Third_Party/FatFs/src/option/../integer.h"
  852              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s 			page 24
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ccsbcs.c
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:17     .text.ff_convert:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:26     .text.ff_convert:0000000000000000 ff_convert
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:119    .text.ff_convert:0000000000000044 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:124    .text.ff_wtoupper:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:132    .text.ff_wtoupper:0000000000000000 ff_wtoupper
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:207    .text.ff_wtoupper:000000000000003e $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:344    .text.ff_wtoupper:0000000000000094 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:350    .rodata.Tbl:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:354    .rodata.Tbl:0000000000000000 Tbl
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:484    .rodata.cvt1.18446:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:488    .rodata.cvt1.18446:0000000000000000 cvt1.18446
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:739    .rodata.cvt2.18447:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:743    .rodata.cvt2.18447:0000000000000000 cvt2.18447
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:216    .text.ff_wtoupper:0000000000000047 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc8WRp0Z.s:216    .text.ff_wtoupper:0000000000000048 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:17     .text.ff_convert:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:26     .text.ff_convert:0000000000000000 ff_convert
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:119    .text.ff_convert:0000000000000044 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:124    .text.ff_wtoupper:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:132    .text.ff_wtoupper:0000000000000000 ff_wtoupper
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:207    .text.ff_wtoupper:000000000000003e $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:344    .text.ff_wtoupper:0000000000000094 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:350    .rodata.Tbl:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:354    .rodata.Tbl:0000000000000000 Tbl
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:484    .rodata.cvt1.18446:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:488    .rodata.cvt1.18446:0000000000000000 cvt1.18446
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:739    .rodata.cvt2.18447:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:743    .rodata.cvt2.18447:0000000000000000 cvt2.18447
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:216    .text.ff_wtoupper:0000000000000047 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccwQndaS.s:216    .text.ff_wtoupper:0000000000000048 $t
 
 NO UNDEFINED SYMBOLS
