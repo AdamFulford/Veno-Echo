@@ -33,6 +33,7 @@ class Taptempo
     private:
         uint32_t mintap_,maxtap_;
         uint32_t currentTime_,lastTime_,lastTapLength_,tapLength_;
+        uint32_t clockLength_, lastClockLength_, clockThresh_;
         bool tapflag_;
         float tap_tolerance_,tempo_,tapRatio_;
 
@@ -49,7 +50,9 @@ class Taptempo
         lastTime_ = 0;
         currentTime_ = 0;
         tapRatio_ = 1.0f;
-
+        clockLength_ = 0;
+        lastClockLength_ = 0;
+        clockThresh_ = 10; //ms change
     }
     ~Taptempo() {}
 
@@ -58,6 +61,9 @@ class Taptempo
 
     bool tap(); 
     //call when a tap is triggered
+
+    bool clock();
+    //call when a clock trigger is receieved
 
     float getTapLength();   
     //outputs tap length in ms

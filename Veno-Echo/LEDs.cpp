@@ -112,11 +112,11 @@ float TempoLED::GetDivInt(TempoDivs div)
         break;
 
         case MULT2:
-            retVal = 6/2;
+            retVal = 3.0f;
         break;
 
         case MULT3:
-            retVal = 6/3;
+            retVal = 2.0f;
         break;
         
         case MULT4:
@@ -128,11 +128,11 @@ float TempoLED::GetDivInt(TempoDivs div)
         break;   
         
         case MULT6:
-            retVal = 1;
+            retVal = 1.0f;
         break;       
 
         default:
-        retVal = 6;    
+        retVal = 6.0f;    
         break;  
     }
 

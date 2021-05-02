@@ -1517,13 +1517,12 @@ void UpdateClock()
     if (ClockIn.RisingEdge())    
     {   
         divCounter = (divCounter + 1) % PPQN;
-        tempoLED_BASE.resetPhase();
+        //tempoLED_BASE.resetPhase();
         if(divCounter == 0)
         {
             if(BaseTempo.tap()) //if valid tap resistered
             {
                 tempoLED_BASE.setTempo(BaseTempo.getTapFreq()); //set new base freq
-                
             }
         }
     }
