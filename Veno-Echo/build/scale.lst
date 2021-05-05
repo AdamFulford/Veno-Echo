@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccge9URi.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -29,7 +29,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 1
   27              	.LVL0:
   28              	.LFB544:
   29              		.file 1 "scale.cpp"
-   1:scale.cpp     **** // Copyright 2020 Adam Fulford
+   1:scale.cpp     **** // Copyright 2021 Adam Fulford
    2:scale.cpp     **** // 
    3:scale.cpp     **** // Permission is hereby granted, free of charge, to any person obtaining a copy
    4:scale.cpp     **** // of this software and associated documentation files (the "Software"), to deal
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 1
   30              		.loc 1 26 1 view -0
   31              		.cfi_startproc
   32              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccge9URi.s 			page 2
 
 
   33              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 1
   78 003c 30D8     		bhi	.L10
   79 003e DFE804F0 		tbb	[pc, r4]
   80              	.L5:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccge9URi.s 			page 3
 
 
   81 0042 0F       		.byte	(.L8-.L5)/2
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 1
  113              		.loc 1 53 1 view .LVU24
  114 005e 10BD     		pop	{r4, pc}
  115              	.LVL10:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccge9URi.s 			page 4
 
 
  116              	.L8:
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 1
   39:scale.cpp     **** 
  158              		.loc 1 39 9 is_stmt 1 view .LVU39
  159              		.loc 1 53 1 is_stmt 0 view .LVU40
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccge9URi.s 			page 5
 
 
  160 0082 BDEC048B 		vldm	sp!, {d8-d9}
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 1
  205              	.L14:
  206 00a6 00BF     		.align	2
  207              	.L13:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccge9URi.s 			page 6
 
 
  208 00a8 95BFD633 		.word	869711765
@@ -325,16 +325,16 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 1
  230              		.file 17 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
  231              		.file 18 "scale.h"
  232              		.file 19 "<built-in>"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccge9URi.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 scale.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s:17     .text._Z5scalefff9CurveType:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s:26     .text._Z5scalefff9CurveType:0000000000000000 _Z5scalefff9CurveType
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s:81     .text._Z5scalefff9CurveType:0000000000000042 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s:85     .text._Z5scalefff9CurveType:0000000000000046 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccIZcaBq.s:208    .text._Z5scalefff9CurveType:00000000000000a8 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccge9URi.s:17     .text._Z5scalefff9CurveType:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccge9URi.s:26     .text._Z5scalefff9CurveType:0000000000000000 _Z5scalefff9CurveType
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccge9URi.s:81     .text._Z5scalefff9CurveType:0000000000000042 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccge9URi.s:85     .text._Z5scalefff9CurveType:0000000000000046 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccge9URi.s:208    .text._Z5scalefff9CurveType:00000000000000a8 $d
 
 UNDEFINED SYMBOLS
 logf

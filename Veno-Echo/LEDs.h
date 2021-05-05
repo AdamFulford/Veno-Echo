@@ -25,6 +25,8 @@
 
 #include "daisysp.h"
 #include "daisy_seed.h"
+#include "oscillator_p.h"
+#include "constants.h"
 
 using namespace daisysp;
 using namespace daisy;
@@ -33,7 +35,12 @@ class TempoLED
 {
 
 Led led;
-Oscillator blink;
+Oscillator_p blink;
+TempoDivs div_last_;
+//int phaseCounter_;
+//int div_int;
+//float phase_last_;
+float GetDivInt(TempoDivs div);
 
 public:
 
@@ -46,11 +53,22 @@ void setTempo(float tempo);
 
 void resetPhase();
 
+void resetPhaseCounter();
+
+//update using oscillator
 void update();
+
+//update using external sync
+void update(TempoDivs div, float phase);
 
 void LED_set(float brightness);
 
 bool isEOC();
+
+//high if just had a div change
+//bool divChange();
+
+float GetPhase() { return blink.GetPhase(); }
 
 };
 

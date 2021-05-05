@@ -174,7 +174,7 @@ build/DelayMulti.o: DelayMulti.cpp \
  ../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h \
  ../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h \
  ../libdaisy/src/util/sd_diskio.h ../libdaisy/src/util/WavWriter.h \
- delayline_multitap.h constants.h LEDs.h scale.h
+ delayline_multitap.h constants.h LEDs.h oscillator_p.h scale.h
 
 ../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 
@@ -617,5 +617,7 @@ delayline_multitap.h:
 constants.h:
 
 LEDs.h:
+
+oscillator_p.h:
 
 scale.h:

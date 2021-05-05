@@ -72,7 +72,7 @@ constexpr float NegFBOffset{0.4f};//0.4
 
 constexpr int PPQN{1};
 
-constexpr uint32_t shiftWait{250};
+constexpr uint32_t shiftWait{50};
 constexpr uint32_t saveWait{2000};
 constexpr uint32_t resetWait{3000};
 
@@ -81,6 +81,8 @@ constexpr float altControlThresh{0.005f};
 constexpr float AudioLimit{2.0f};
 
 constexpr uint32_t ClockInWait{1000}; //in ms
+
+constexpr float pickupTolerance{0.005f};
 
 enum TempoDivs
 {
@@ -107,6 +109,13 @@ enum TapRatios
     TWELVE,
 
     MAXRATIOS,
+};
+
+enum pickupState
+{
+    BELOW,
+    ABOVE,
+    PICKEDUP,
 };
 
 #endif

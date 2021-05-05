@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -27,9 +27,9 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 1
   24              		.fpu fpv5-d16
   26              	_ZN8TempoLED4initE12dsy_gpio_pinf:
   27              	.LVL0:
-  28              	.LFB3890:
+  28              	.LFB3908:
   29              		.file 1 "LEDs.cpp"
-   1:LEDs.cpp      **** // Copyright 2020 Adam Fulford
+   1:LEDs.cpp      **** // Copyright 2021 Adam Fulford
    2:LEDs.cpp      **** // 
    3:LEDs.cpp      **** // Permission is hereby granted, free of charge, to any person obtaining a copy
    4:LEDs.cpp      **** // of this software and associated documentation files (the "Software"), to deal
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 1
   27:LEDs.cpp      **** void TempoLED::init(dsy_gpio_pin ledpin, float samplerate)  //led pin number
   28:LEDs.cpp      **** {
   30              		.loc 1 28 1 view -0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 2
 
 
   31              		.cfi_startproc
@@ -94,61 +94,61 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 1
   55              		.loc 1 29 13 view .LVU6
   56 0016 0022     		movs	r2, #0
   57 0018 0199     		ldr	r1, [sp, #4]
-  58              	.LBB34:
-  59              	.LBB35:
-  60              		.file 2 "../DaisySP/Source/Synthesis/oscillator.h"
-   1:../DaisySP/Source/Synthesis/oscillator.h **** #pragma once
-   2:../DaisySP/Source/Synthesis/oscillator.h **** #ifndef DSY_OSCILLATOR_H
-   3:../DaisySP/Source/Synthesis/oscillator.h **** #define DSY_OSCILLATOR_H
-   4:../DaisySP/Source/Synthesis/oscillator.h **** #include <stdint.h>
-   5:../DaisySP/Source/Synthesis/oscillator.h **** #include "Utility/dsp.h"
-   6:../DaisySP/Source/Synthesis/oscillator.h **** #ifdef __cplusplus
-   7:../DaisySP/Source/Synthesis/oscillator.h **** 
-   8:../DaisySP/Source/Synthesis/oscillator.h **** namespace daisysp
-   9:../DaisySP/Source/Synthesis/oscillator.h **** {
-  10:../DaisySP/Source/Synthesis/oscillator.h **** /** Synthesis of several waveforms, including polyBLEP bandlimited waveforms.
-  11:../DaisySP/Source/Synthesis/oscillator.h **** */
-  12:../DaisySP/Source/Synthesis/oscillator.h **** class Oscillator
-  13:../DaisySP/Source/Synthesis/oscillator.h **** {
-  14:../DaisySP/Source/Synthesis/oscillator.h ****   public:
-  15:../DaisySP/Source/Synthesis/oscillator.h ****     Oscillator() {}
-  16:../DaisySP/Source/Synthesis/oscillator.h ****     ~Oscillator() {}
-  17:../DaisySP/Source/Synthesis/oscillator.h ****     /** Choices for output waveforms, POLYBLEP are appropriately labeled. Others are naive forms.
-  18:../DaisySP/Source/Synthesis/oscillator.h ****     */
-  19:../DaisySP/Source/Synthesis/oscillator.h ****     enum
-  20:../DaisySP/Source/Synthesis/oscillator.h ****     {
-  21:../DaisySP/Source/Synthesis/oscillator.h ****         WAVE_SIN,
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 3
+  58              	.LBB36:
+  59              	.LBB37:
+  60              		.file 2 "oscillator_p.h"
+   1:oscillator_p.h **** #pragma once
+   2:oscillator_p.h **** #ifndef DSY_OSCILLATOR_P_H
+   3:oscillator_p.h **** #define DSY_OSCILLATOR_P_H
+   4:oscillator_p.h **** #include <stdint.h>
+   5:oscillator_p.h **** #include "Utility/dsp.h"
+   6:oscillator_p.h **** #ifdef __cplusplus
+   7:oscillator_p.h **** 
+   8:oscillator_p.h **** namespace daisysp
+   9:oscillator_p.h **** {
+  10:oscillator_p.h **** /** Synthesis of several waveforms, including polyBLEP bandlimited waveforms.
+  11:oscillator_p.h **** */
+  12:oscillator_p.h **** class Oscillator_p
+  13:oscillator_p.h **** {
+  14:oscillator_p.h ****   public:
+  15:oscillator_p.h ****     Oscillator_p() {}
+  16:oscillator_p.h ****     ~Oscillator_p() {}
+  17:oscillator_p.h ****     /** Choices for output waveforms, POLYBLEP are appropriately labeled. Others are naive forms.
+  18:oscillator_p.h ****     */
+  19:oscillator_p.h ****     enum
+  20:oscillator_p.h ****     {
+  21:oscillator_p.h ****         WAVE_SIN,
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 3
 
 
-  22:../DaisySP/Source/Synthesis/oscillator.h ****         WAVE_TRI,
-  23:../DaisySP/Source/Synthesis/oscillator.h ****         WAVE_SAW,
-  24:../DaisySP/Source/Synthesis/oscillator.h ****         WAVE_RAMP,
-  25:../DaisySP/Source/Synthesis/oscillator.h ****         WAVE_SQUARE,
-  26:../DaisySP/Source/Synthesis/oscillator.h ****         WAVE_POLYBLEP_TRI,
-  27:../DaisySP/Source/Synthesis/oscillator.h ****         WAVE_POLYBLEP_SAW,
-  28:../DaisySP/Source/Synthesis/oscillator.h ****         WAVE_POLYBLEP_SQUARE,
-  29:../DaisySP/Source/Synthesis/oscillator.h ****         WAVE_LAST,
-  30:../DaisySP/Source/Synthesis/oscillator.h ****     };
-  31:../DaisySP/Source/Synthesis/oscillator.h **** 
-  32:../DaisySP/Source/Synthesis/oscillator.h **** 
-  33:../DaisySP/Source/Synthesis/oscillator.h ****     /** Initializes the Oscillator
-  34:../DaisySP/Source/Synthesis/oscillator.h **** 
-  35:../DaisySP/Source/Synthesis/oscillator.h ****         \param sample_rate - sample rate of the audio engine being run, and the frequency that the 
-  36:../DaisySP/Source/Synthesis/oscillator.h **** 
-  37:../DaisySP/Source/Synthesis/oscillator.h ****         Defaults:
-  38:../DaisySP/Source/Synthesis/oscillator.h ****         - freq_ = 100 Hz
-  39:../DaisySP/Source/Synthesis/oscillator.h ****         - amp_ = 0.5
-  40:../DaisySP/Source/Synthesis/oscillator.h ****         - waveform_ = sine wave.
-  41:../DaisySP/Source/Synthesis/oscillator.h ****     */
-  42:../DaisySP/Source/Synthesis/oscillator.h ****     void Init(float sample_rate)
-  43:../DaisySP/Source/Synthesis/oscillator.h ****     {
-  44:../DaisySP/Source/Synthesis/oscillator.h ****         sr_        = sample_rate;
-  45:../DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
+  22:oscillator_p.h ****         WAVE_TRI,
+  23:oscillator_p.h ****         WAVE_SAW,
+  24:oscillator_p.h ****         WAVE_RAMP,
+  25:oscillator_p.h ****         WAVE_SQUARE,
+  26:oscillator_p.h ****         WAVE_POLYBLEP_TRI,
+  27:oscillator_p.h ****         WAVE_POLYBLEP_SAW,
+  28:oscillator_p.h ****         WAVE_POLYBLEP_SQUARE,
+  29:oscillator_p.h ****         WAVE_LAST,
+  30:oscillator_p.h ****     };
+  31:oscillator_p.h **** 
+  32:oscillator_p.h **** 
+  33:oscillator_p.h ****     /** Initializes the Oscillator
+  34:oscillator_p.h **** 
+  35:oscillator_p.h ****         \param sample_rate - sample rate of the audio engine being run, and the frequency that the 
+  36:oscillator_p.h **** 
+  37:oscillator_p.h ****         Defaults:
+  38:oscillator_p.h ****         - freq_ = 100 Hz
+  39:oscillator_p.h ****         - amp_ = 0.5
+  40:oscillator_p.h ****         - waveform_ = sine wave.
+  41:oscillator_p.h ****     */
+  42:oscillator_p.h ****     void Init(float sample_rate)
+  43:oscillator_p.h ****     {
+  44:oscillator_p.h ****         sr_        = sample_rate;
+  45:oscillator_p.h ****         sr_recip_  = 1.0f / sample_rate;
   61              		.loc 2 45 27 view .LVU7
   62 001a F7EE008A 		vmov.f32	s17, #1.0e+0
-  63              	.LBE35:
-  64              	.LBE34:
+  63              	.LBE37:
+  64              	.LBE36:
   29:LEDs.cpp      ****     led.Set(0.0f);
   65              		.loc 1 29 13 view .LVU8
   66 001e FFF7FEFF 		bl	_ZN5daisy3Led4InitE12dsy_gpio_pinbf
@@ -167,218 +167,219 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 1
   78              	.LVL3:
   32:LEDs.cpp      ****     blink.Init(samplerate);
   79              		.loc 1 32 5 is_stmt 1 view .LVU13
-  80              	.LBB41:
-  81              	.LBB36:
+  80              	.LBB43:
+  81              	.LBB38:
   82              		.loc 2 45 27 is_stmt 0 view .LVU14
   83 0032 C8EE887A 		vdiv.f32	s15, s17, s16
-  46:../DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
-  47:../DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
+  46:oscillator_p.h ****         freq_      = 100.0f;
+  47:oscillator_p.h ****         amp_       = 0.5f;
   84              		.loc 2 47 20 view .LVU15
   85 0036 4FF07C53 		mov	r3, #1056964608
-  46:../DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
+  46:oscillator_p.h ****         freq_      = 100.0f;
   86              		.loc 2 46 20 view .LVU16
   87 003a 9FED150A 		vldr.32	s0, .L4+4
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 4
 
 
-  88              	.LBE36:
-  89              	.LBE41:
+  88              	.LBE38:
+  89              	.LBE43:
   90              		.loc 1 32 15 view .LVU17
   91 003e 04F11C00 		add	r0, r4, #28
   92              	.LVL4:
-  93              	.LBB42:
-  94              	.LBI34:
-  42:../DaisySP/Source/Synthesis/oscillator.h ****     {
+  93              	.LBB44:
+  94              	.LBI36:
+  42:oscillator_p.h ****     {
   95              		.loc 2 42 10 is_stmt 1 view .LVU18
-  96              	.LBB37:
-  44:../DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
+  96              	.LBB39:
+  44:oscillator_p.h ****         sr_recip_  = 1.0f / sample_rate;
   97              		.loc 2 44 9 view .LVU19
-  44:../DaisySP/Source/Synthesis/oscillator.h ****         sr_recip_  = 1.0f / sample_rate;
+  44:oscillator_p.h ****         sr_recip_  = 1.0f / sample_rate;
   98              		.loc 2 44 20 is_stmt 0 view .LVU20
   99 0042 84ED0A8A 		vstr.32	s16, [r4, #40]
-  45:../DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
+  45:oscillator_p.h ****         freq_      = 100.0f;
  100              		.loc 2 45 9 is_stmt 1 view .LVU21
  101              		.loc 2 47 20 is_stmt 0 view .LVU22
  102 0046 2362     		str	r3, [r4, #32]	@ float
-  48:../DaisySP/Source/Synthesis/oscillator.h ****         phase_     = 0.0f;
+  48:oscillator_p.h ****         phase_     = 0.0f;
  103              		.loc 2 48 20 view .LVU23
  104 0048 84ED0C9A 		vstr.32	s18, [r4, #48]
-  46:../DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
+  46:oscillator_p.h ****         amp_       = 0.5f;
  105              		.loc 2 46 20 view .LVU24
  106 004c 84ED090A 		vstr.32	s0, [r4, #36]
-  49:../DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(freq_);
+  49:oscillator_p.h ****         phase_inc_ = CalcPhaseInc(freq_);
  107              		.loc 2 49 34 view .LVU25
  108 0050 0090     		str	r0, [sp]
-  45:../DaisySP/Source/Synthesis/oscillator.h ****         freq_      = 100.0f;
+  45:oscillator_p.h ****         freq_      = 100.0f;
  109              		.loc 2 45 20 view .LVU26
  110 0052 C4ED0B7A 		vstr.32	s15, [r4, #44]
-  46:../DaisySP/Source/Synthesis/oscillator.h ****         amp_       = 0.5f;
+  46:oscillator_p.h ****         amp_       = 0.5f;
  111              		.loc 2 46 9 is_stmt 1 view .LVU27
-  47:../DaisySP/Source/Synthesis/oscillator.h ****         phase_     = 0.0f;
+  47:oscillator_p.h ****         phase_     = 0.0f;
  112              		.loc 2 47 9 view .LVU28
-  48:../DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(freq_);
+  48:oscillator_p.h ****         phase_inc_ = CalcPhaseInc(freq_);
  113              		.loc 2 48 9 view .LVU29
  114              		.loc 2 49 9 view .LVU30
  115              		.loc 2 49 34 is_stmt 0 view .LVU31
- 116 0056 FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
+ 116 0056 FFF7FEFF 		bl	_ZN7daisysp12Oscillator_p12CalcPhaseIncEf
  117              	.LVL5:
  118              		.loc 2 49 34 view .LVU32
- 119              	.LBE37:
- 120              	.LBE42:
- 121              	.LBB43:
- 122              	.LBB44:
-  50:../DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
-  51:../DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
-  52:../DaisySP/Source/Synthesis/oscillator.h ****         eor_       = true;
-  53:../DaisySP/Source/Synthesis/oscillator.h ****     }
-  54:../DaisySP/Source/Synthesis/oscillator.h **** 
-  55:../DaisySP/Source/Synthesis/oscillator.h **** 
-  56:../DaisySP/Source/Synthesis/oscillator.h ****     /** Changes the frequency of the Oscillator, and recalculates phase increment.
-  57:../DaisySP/Source/Synthesis/oscillator.h ****     */
-  58:../DaisySP/Source/Synthesis/oscillator.h ****     inline void SetFreq(const float f)
-  59:../DaisySP/Source/Synthesis/oscillator.h ****     {
-  60:../DaisySP/Source/Synthesis/oscillator.h ****         freq_      = f;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 5
+ 119              	.LBE39:
+ 120              	.LBE44:
+ 121              	.LBB45:
+ 122              	.LBB46:
+  50:oscillator_p.h ****         waveform_  = WAVE_SIN;
+  51:oscillator_p.h ****         eoc_       = true;
+  52:oscillator_p.h ****         eor_       = true;
+  53:oscillator_p.h ****     }
+  54:oscillator_p.h **** 
+  55:oscillator_p.h **** 
+  56:oscillator_p.h ****     /** Changes the frequency of the Oscillator, and recalculates phase increment.
+  57:oscillator_p.h ****     */
+  58:oscillator_p.h ****     inline void SetFreq(const float f)
+  59:oscillator_p.h ****     {
+  60:oscillator_p.h ****         freq_      = f;
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 5
 
 
  123              		.loc 2 60 20 view .LVU33
  124 005a F0EE007A 		vmov.f32	s15, #2.0e+0
- 125              	.LBE44:
- 126              	.LBE43:
- 127              	.LBB48:
- 128              	.LBB38:
-  52:../DaisySP/Source/Synthesis/oscillator.h ****     }
+ 125              	.LBE46:
+ 126              	.LBE45:
+ 127              	.LBB50:
+ 128              	.LBB40:
+  52:oscillator_p.h ****     }
  129              		.loc 2 52 20 view .LVU34
  130 005e 40F20112 		movw	r2, #257
- 131              	.LBE38:
- 132              	.LBE48:
- 133              	.LBB49:
- 134              	.LBB50:
-  61:../DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
-  62:../DaisySP/Source/Synthesis/oscillator.h ****     }
-  63:../DaisySP/Source/Synthesis/oscillator.h **** 
-  64:../DaisySP/Source/Synthesis/oscillator.h **** 
-  65:../DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the amplitude of the waveform.
-  66:../DaisySP/Source/Synthesis/oscillator.h ****     */
-  67:../DaisySP/Source/Synthesis/oscillator.h ****     inline void SetAmp(const float a) { amp_ = a; }
-  68:../DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
-  69:../DaisySP/Source/Synthesis/oscillator.h ****     */
-  70:../DaisySP/Source/Synthesis/oscillator.h ****     inline void SetWaveform(const uint8_t wf)
-  71:../DaisySP/Source/Synthesis/oscillator.h ****     {
-  72:../DaisySP/Source/Synthesis/oscillator.h ****         waveform_ = wf < WAVE_LAST ? wf : WAVE_SIN;
+ 131              	.LBE40:
+ 132              	.LBE50:
+ 133              	.LBB51:
+ 134              	.LBB52:
+  61:oscillator_p.h ****         phase_inc_ = CalcPhaseInc(f);
+  62:oscillator_p.h ****     }
+  63:oscillator_p.h **** 
+  64:oscillator_p.h **** 
+  65:oscillator_p.h ****     /** Sets the amplitude of the waveform.
+  66:oscillator_p.h ****     */
+  67:oscillator_p.h ****     inline void SetAmp(const float a) { amp_ = a; }
+  68:oscillator_p.h ****     /** Sets the waveform to be synthesized by the Process() function.
+  69:oscillator_p.h ****     */
+  70:oscillator_p.h ****     inline void SetWaveform(const uint8_t wf)
+  71:oscillator_p.h ****     {
+  72:oscillator_p.h ****         waveform_ = wf < WAVE_LAST ? wf : WAVE_SIN;
  135              		.loc 2 72 19 view .LVU35
  136 0062 0423     		movs	r3, #4
- 137              	.LBE50:
- 138              	.LBE49:
- 139              	.LBB52:
- 140              	.LBB45:
-  61:../DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
+ 137              	.LBE52:
+ 138              	.LBE51:
+ 139              	.LBB54:
+ 140              	.LBB47:
+  61:oscillator_p.h ****         phase_inc_ = CalcPhaseInc(f);
  141              		.loc 2 61 34 view .LVU36
  142 0064 0098     		ldr	r0, [sp]
- 143              	.LBE45:
- 144              	.LBE52:
- 145              	.LBB53:
- 146              	.LBB39:
-  49:../DaisySP/Source/Synthesis/oscillator.h ****         waveform_  = WAVE_SIN;
+ 143              	.LBE47:
+ 144              	.LBE54:
+ 145              	.LBB55:
+ 146              	.LBB41:
+  49:oscillator_p.h ****         waveform_  = WAVE_SIN;
  147              		.loc 2 49 20 view .LVU37
  148 0066 84ED0D0A 		vstr.32	s0, [r4, #52]
-  50:../DaisySP/Source/Synthesis/oscillator.h ****         eoc_       = true;
+  50:oscillator_p.h ****         eoc_       = true;
  149              		.loc 2 50 9 is_stmt 1 view .LVU38
-  51:../DaisySP/Source/Synthesis/oscillator.h ****         eor_       = true;
+  51:oscillator_p.h ****         eor_       = true;
  150              		.loc 2 51 9 view .LVU39
-  52:../DaisySP/Source/Synthesis/oscillator.h ****     }
+  52:oscillator_p.h ****     }
  151              		.loc 2 52 9 view .LVU40
- 152              	.LBE39:
- 153              	.LBE53:
- 154              	.LBB54:
- 155              	.LBB46:
-  61:../DaisySP/Source/Synthesis/oscillator.h ****     }
+ 152              	.LBE41:
+ 153              	.LBE55:
+ 154              	.LBB56:
+ 155              	.LBB48:
+  61:oscillator_p.h ****     }
  156              		.loc 2 61 34 is_stmt 0 view .LVU41
  157 006a B0EE670A 		vmov.f32	s0, s15
- 158              	.LBE46:
- 159              	.LBE54:
- 160              	.LBB55:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 6
+ 158              	.LBE48:
+ 159              	.LBE56:
+ 160              	.LBB57:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 6
 
 
- 161              	.LBB56:
-  67:../DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
+ 161              	.LBB58:
+  67:oscillator_p.h ****     /** Sets the waveform to be synthesized by the Process() function.
  162              		.loc 2 67 46 view .LVU42
  163 006e C4ED088A 		vstr.32	s17, [r4, #32]
- 164              	.LBE56:
- 165              	.LBE55:
- 166              	.LBB58:
- 167              	.LBB40:
-  52:../DaisySP/Source/Synthesis/oscillator.h ****     }
+ 164              	.LBE58:
+ 165              	.LBE57:
+ 166              	.LBB60:
+ 167              	.LBB42:
+  52:oscillator_p.h ****     }
  168              		.loc 2 52 20 view .LVU43
  169 0072 A4F84020 		strh	r2, [r4, #64]	@ movhi
  170              	.LVL6:
-  52:../DaisySP/Source/Synthesis/oscillator.h ****     }
+  52:oscillator_p.h ****     }
  171              		.loc 2 52 20 view .LVU44
- 172              	.LBE40:
- 173              	.LBE58:
+ 172              	.LBE42:
+ 173              	.LBE60:
   33:LEDs.cpp      ****     blink.SetWaveform(blink.WAVE_SQUARE);
  174              		.loc 1 33 5 is_stmt 1 view .LVU45
- 175              	.LBB59:
- 176              	.LBI49:
-  70:../DaisySP/Source/Synthesis/oscillator.h ****     {
+ 175              	.LBB61:
+ 176              	.LBI51:
+  70:oscillator_p.h ****     {
  177              		.loc 2 70 17 view .LVU46
- 178              	.LBB51:
+ 178              	.LBB53:
  179              		.loc 2 72 9 view .LVU47
  180              		.loc 2 72 19 is_stmt 0 view .LVU48
  181 0076 2377     		strb	r3, [r4, #28]
  182              	.LVL7:
  183              		.loc 2 72 19 view .LVU49
- 184              	.LBE51:
- 185              	.LBE59:
+ 184              	.LBE53:
+ 185              	.LBE61:
   34:LEDs.cpp      ****     blink.SetAmp(1.0f);
  186              		.loc 1 34 5 is_stmt 1 view .LVU50
- 187              	.LBB60:
- 188              	.LBI55:
-  67:../DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
+ 187              	.LBB62:
+ 188              	.LBI57:
+  67:oscillator_p.h ****     /** Sets the waveform to be synthesized by the Process() function.
  189              		.loc 2 67 17 view .LVU51
- 190              	.LBB57:
-  67:../DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
+ 190              	.LBB59:
+  67:oscillator_p.h ****     /** Sets the waveform to be synthesized by the Process() function.
  191              		.loc 2 67 41 view .LVU52
-  67:../DaisySP/Source/Synthesis/oscillator.h ****     /** Sets the waveform to be synthesized by the Process() function.
+  67:oscillator_p.h ****     /** Sets the waveform to be synthesized by the Process() function.
  192              		.loc 2 67 41 is_stmt 0 view .LVU53
- 193              	.LBE57:
- 194              	.LBE60:
+ 193              	.LBE59:
+ 194              	.LBE62:
   35:LEDs.cpp      ****     blink.SetFreq(2.0f);
  195              		.loc 1 35 5 is_stmt 1 view .LVU54
- 196              	.LBB61:
- 197              	.LBI43:
-  58:../DaisySP/Source/Synthesis/oscillator.h ****     {
+ 196              	.LBB63:
+ 197              	.LBI45:
+  58:oscillator_p.h ****     {
  198              		.loc 2 58 17 view .LVU55
- 199              	.LBB47:
-  60:../DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
+ 199              	.LBB49:
+  60:oscillator_p.h ****         phase_inc_ = CalcPhaseInc(f);
  200              		.loc 2 60 9 view .LVU56
-  60:../DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
+  60:oscillator_p.h ****         phase_inc_ = CalcPhaseInc(f);
  201              		.loc 2 60 20 is_stmt 0 view .LVU57
  202 0078 C4ED097A 		vstr.32	s15, [r4, #36]
-  61:../DaisySP/Source/Synthesis/oscillator.h ****     }
+  61:oscillator_p.h ****     }
  203              		.loc 2 61 9 is_stmt 1 view .LVU58
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 7
 
 
-  61:../DaisySP/Source/Synthesis/oscillator.h ****     }
+  61:oscillator_p.h ****     }
  204              		.loc 2 61 34 is_stmt 0 view .LVU59
- 205 007c FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
+ 205 007c FFF7FEFF 		bl	_ZN7daisysp12Oscillator_p12CalcPhaseIncEf
  206              	.LVL8:
-  61:../DaisySP/Source/Synthesis/oscillator.h ****     }
+  61:oscillator_p.h ****     }
  207              		.loc 2 61 20 view .LVU60
  208 0080 84ED0D0A 		vstr.32	s0, [r4, #52]
  209              	.LVL9:
-  61:../DaisySP/Source/Synthesis/oscillator.h ****     }
+  61:oscillator_p.h ****     }
  210              		.loc 2 61 20 view .LVU61
- 211              	.LBE47:
- 212              	.LBE61:
-  36:LEDs.cpp      **** }
- 213              		.loc 1 36 1 view .LVU62
+ 211              	.LBE49:
+ 212              	.LBE63:
+  36:LEDs.cpp      ****     //div_int = 1;
+  37:LEDs.cpp      **** }
+ 213              		.loc 1 37 1 view .LVU62
  214 0084 02B0     		add	sp, sp, #8
  215              		.cfi_def_cfa_offset 24
  216              	.LVL10:
- 217              		.loc 1 36 1 view .LVU63
+ 217              		.loc 1 37 1 view .LVU63
  218              		@ sp needed
  219 0086 BDEC048B 		vldm	sp!, {d8-d9}
  220              		.cfi_restore 82
@@ -387,17 +388,17 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 1
  223              		.cfi_restore 81
  224              		.cfi_def_cfa_offset 8
  225              	.LVL11:
- 226              		.loc 1 36 1 view .LVU64
+ 226              		.loc 1 37 1 view .LVU64
  227 008a 10BD     		pop	{r4, pc}
  228              	.LVL12:
  229              	.L5:
- 230              		.loc 1 36 1 view .LVU65
+ 230              		.loc 1 37 1 view .LVU65
  231              		.align	2
  232              	.L4:
  233 008c 00000000 		.word	0
  234 0090 0000C842 		.word	1120403456
  235              		.cfi_endproc
- 236              	.LFE3890:
+ 236              	.LFE3908:
  238              		.section	.text._ZN8TempoLED8setTempoEf,"ax",%progbits
  239              		.align	1
  240              		.p2align 2,,3
@@ -408,63 +409,63 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 1
  245              		.fpu fpv5-d16
  247              	_ZN8TempoLED8setTempoEf:
  248              	.LVL13:
- 249              	.LFB3891:
-  37:LEDs.cpp      **** 
-  38:LEDs.cpp      **** void TempoLED::setTempo(float tempo)
-  39:LEDs.cpp      **** {
- 250              		.loc 1 39 1 is_stmt 1 view -0
+ 249              	.LFB3909:
+  38:LEDs.cpp      **** 
+  39:LEDs.cpp      **** void TempoLED::setTempo(float tempo)
+  40:LEDs.cpp      **** {
+ 250              		.loc 1 40 1 is_stmt 1 view -0
  251              		.cfi_startproc
  252              		@ args = 0, pretend = 0, frame = 0
  253              		@ frame_needed = 0, uses_anonymous_args = 0
+  41:LEDs.cpp      ****     blink.SetFreq(tempo);
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 8
+
+
+ 254              		.loc 1 41 5 view .LVU67
   40:LEDs.cpp      ****     blink.SetFreq(tempo);
- 254              		.loc 1 40 5 view .LVU67
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 8
-
-
-  39:LEDs.cpp      ****     blink.SetFreq(tempo);
- 255              		.loc 1 39 1 is_stmt 0 view .LVU68
+ 255              		.loc 1 40 1 is_stmt 0 view .LVU68
  256 0000 10B5     		push	{r4, lr}
  257              		.cfi_def_cfa_offset 8
  258              		.cfi_offset 4, -8
  259              		.cfi_offset 14, -4
-  39:LEDs.cpp      ****     blink.SetFreq(tempo);
- 260              		.loc 1 39 1 view .LVU69
+  40:LEDs.cpp      ****     blink.SetFreq(tempo);
+ 260              		.loc 1 40 1 view .LVU69
  261 0002 0446     		mov	r4, r0
  262              	.LVL14:
- 263              	.LBB62:
- 264              	.LBI62:
-  58:../DaisySP/Source/Synthesis/oscillator.h ****     {
+ 263              	.LBB64:
+ 264              	.LBI64:
+  58:oscillator_p.h ****     {
  265              		.loc 2 58 17 is_stmt 1 view .LVU70
- 266              	.LBB63:
-  60:../DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
+ 266              	.LBB65:
+  60:oscillator_p.h ****         phase_inc_ = CalcPhaseInc(f);
  267              		.loc 2 60 9 view .LVU71
-  60:../DaisySP/Source/Synthesis/oscillator.h ****         phase_inc_ = CalcPhaseInc(f);
+  60:oscillator_p.h ****         phase_inc_ = CalcPhaseInc(f);
  268              		.loc 2 60 20 is_stmt 0 view .LVU72
  269 0004 80ED090A 		vstr.32	s0, [r0, #36]
-  61:../DaisySP/Source/Synthesis/oscillator.h ****     }
+  61:oscillator_p.h ****     }
  270              		.loc 2 61 9 is_stmt 1 view .LVU73
-  61:../DaisySP/Source/Synthesis/oscillator.h ****     }
+  61:oscillator_p.h ****     }
  271              		.loc 2 61 34 is_stmt 0 view .LVU74
  272 0008 1C30     		adds	r0, r0, #28
  273              	.LVL15:
-  61:../DaisySP/Source/Synthesis/oscillator.h ****     }
+  61:oscillator_p.h ****     }
  274              		.loc 2 61 34 view .LVU75
- 275 000a FFF7FEFF 		bl	_ZN7daisysp10Oscillator12CalcPhaseIncEf
+ 275 000a FFF7FEFF 		bl	_ZN7daisysp12Oscillator_p12CalcPhaseIncEf
  276              	.LVL16:
-  61:../DaisySP/Source/Synthesis/oscillator.h ****     }
+  61:oscillator_p.h ****     }
  277              		.loc 2 61 20 view .LVU76
  278 000e 84ED0D0A 		vstr.32	s0, [r4, #52]
  279              	.LVL17:
-  61:../DaisySP/Source/Synthesis/oscillator.h ****     }
+  61:oscillator_p.h ****     }
  280              		.loc 2 61 20 view .LVU77
- 281              	.LBE63:
- 282              	.LBE62:
-  41:LEDs.cpp      **** }
- 283              		.loc 1 41 1 view .LVU78
+ 281              	.LBE65:
+ 282              	.LBE64:
+  42:LEDs.cpp      **** }
+ 283              		.loc 1 42 1 view .LVU78
  284 0012 10BD     		pop	{r4, pc}
- 285              		.loc 1 41 1 view .LVU79
+ 285              		.loc 1 42 1 view .LVU79
  286              		.cfi_endproc
- 287              	.LFE3891:
+ 287              	.LFE3909:
  289              		.section	.text._ZN8TempoLED10resetPhaseEv,"ax",%progbits
  290              		.align	1
  291              		.p2align 2,,3
@@ -475,72 +476,75 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 1
  296              		.fpu fpv5-d16
  298              	_ZN8TempoLED10resetPhaseEv:
  299              	.LVL18:
- 300              	.LFB3892:
-  42:LEDs.cpp      **** 
-  43:LEDs.cpp      **** void TempoLED::resetPhase()
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 9
+ 300              	.LFB3910:
+  43:LEDs.cpp      **** 
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 9
 
 
-  44:LEDs.cpp      **** {
- 301              		.loc 1 44 1 is_stmt 1 view -0
+  44:LEDs.cpp      **** void TempoLED::resetPhase()
+  45:LEDs.cpp      **** {
+ 301              		.loc 1 45 1 is_stmt 1 view -0
  302              		.cfi_startproc
  303              		@ args = 0, pretend = 0, frame = 0
  304              		@ frame_needed = 0, uses_anonymous_args = 0
  305              		@ link register save eliminated.
-  45:LEDs.cpp      ****     blink.Reset();
- 306              		.loc 1 45 5 view .LVU81
- 307              	.LBB64:
- 308              	.LBI64:
-  73:../DaisySP/Source/Synthesis/oscillator.h ****     }
-  74:../DaisySP/Source/Synthesis/oscillator.h **** 
-  75:../DaisySP/Source/Synthesis/oscillator.h ****     /** Returns true if cycle is at end of rise. Set during call to Process.
-  76:../DaisySP/Source/Synthesis/oscillator.h ****     */
-  77:../DaisySP/Source/Synthesis/oscillator.h ****     inline bool IsEOR() { return eor_; }
-  78:../DaisySP/Source/Synthesis/oscillator.h **** 
-  79:../DaisySP/Source/Synthesis/oscillator.h ****     /** Returns true if cycle is at end of cycle. Set during call to Process.
-  80:../DaisySP/Source/Synthesis/oscillator.h ****     */
-  81:../DaisySP/Source/Synthesis/oscillator.h ****     inline bool IsEOC() { return eoc_; }
-  82:../DaisySP/Source/Synthesis/oscillator.h **** 
-  83:../DaisySP/Source/Synthesis/oscillator.h ****     /** Returns true if cycle rising.
-  84:../DaisySP/Source/Synthesis/oscillator.h ****     */
-  85:../DaisySP/Source/Synthesis/oscillator.h ****     inline bool IsRising() { return phase_ < PI_F; }
-  86:../DaisySP/Source/Synthesis/oscillator.h **** 
-  87:../DaisySP/Source/Synthesis/oscillator.h ****     /** Returns true if cycle falling.
-  88:../DaisySP/Source/Synthesis/oscillator.h ****     */
-  89:../DaisySP/Source/Synthesis/oscillator.h ****     inline bool IsFalling() { return phase_ >= PI_F; }
-  90:../DaisySP/Source/Synthesis/oscillator.h **** 
-  91:../DaisySP/Source/Synthesis/oscillator.h ****     /** Processes the waveform to be generated, returning one sample. This should be called once pe
-  92:../DaisySP/Source/Synthesis/oscillator.h ****     */
-  93:../DaisySP/Source/Synthesis/oscillator.h ****     float Process();
-  94:../DaisySP/Source/Synthesis/oscillator.h **** 
-  95:../DaisySP/Source/Synthesis/oscillator.h **** 
-  96:../DaisySP/Source/Synthesis/oscillator.h ****     /** Adds a value 0.0-1.0 (mapped to 0.0-TWO_PI) to the current phase. Useful for PM and "FM" sy
-  97:../DaisySP/Source/Synthesis/oscillator.h ****     */
-  98:../DaisySP/Source/Synthesis/oscillator.h ****     void PhaseAdd(float _phase) { phase_ += (_phase * TWOPI_F); }
-  99:../DaisySP/Source/Synthesis/oscillator.h ****     /** Resets the phase to the input argument. If no argumeNt is present, it will reset phase to 0
- 100:../DaisySP/Source/Synthesis/oscillator.h ****     */
- 101:../DaisySP/Source/Synthesis/oscillator.h ****     void Reset(float _phase = 0.0f) { phase_ = _phase; }
- 309              		.loc 2 101 10 view .LVU82
- 310              	.LBB65:
- 311              		.loc 2 101 39 view .LVU83
- 312              		.loc 2 101 46 is_stmt 0 view .LVU84
+  46:LEDs.cpp      ****     blink.Reset();
+ 306              		.loc 1 46 5 view .LVU81
+ 307              	.LBB66:
+ 308              	.LBI66:
+  73:oscillator_p.h ****     }
+  74:oscillator_p.h **** 
+  75:oscillator_p.h ****     /** Returns true if cycle is at end of rise. Set during call to Process.
+  76:oscillator_p.h ****     */
+  77:oscillator_p.h ****     inline bool IsEOR() { return eor_; }
+  78:oscillator_p.h **** 
+  79:oscillator_p.h ****     /** Returns true if cycle is at end of cycle. Set during call to Process.
+  80:oscillator_p.h ****     */
+  81:oscillator_p.h ****     inline bool IsEOC() { return eoc_; }
+  82:oscillator_p.h **** 
+  83:oscillator_p.h ****     /** Returns true if cycle rising.
+  84:oscillator_p.h ****     */
+  85:oscillator_p.h ****     inline bool IsRising() { return phase_ < PI_F; }
+  86:oscillator_p.h **** 
+  87:oscillator_p.h ****     /** Returns true if cycle falling.
+  88:oscillator_p.h ****     */
+  89:oscillator_p.h ****     inline bool IsFalling() { return phase_ >= PI_F; }
+  90:oscillator_p.h **** 
+  91:oscillator_p.h ****     //Returns phase angle
+  92:oscillator_p.h ****     inline float GetPhase() { return phase_; }
+  93:oscillator_p.h **** 
+  94:oscillator_p.h ****     /** Processes the waveform to be generated, returning one sample. This should be called once pe
+  95:oscillator_p.h ****     */
+  96:oscillator_p.h ****     float Process();
+  97:oscillator_p.h **** 
+  98:oscillator_p.h **** 
+  99:oscillator_p.h ****     /** Adds a value 0.0-1.0 (mapped to 0.0-TWO_PI) to the current phase. Useful for PM and "FM" sy
+ 100:oscillator_p.h ****     */
+ 101:oscillator_p.h ****     void PhaseAdd(float _phase) { phase_ += (_phase * TWOPI_F); }
+ 102:oscillator_p.h ****     /** Resets the phase to the input argument. If no argumeNt is present, it will reset phase to 0
+ 103:oscillator_p.h ****     */
+ 104:oscillator_p.h ****     void Reset(float _phase = 0.0f) { phase_ = _phase; }
+ 309              		.loc 2 104 10 view .LVU82
+ 310              	.LBB67:
+ 311              		.loc 2 104 39 view .LVU83
+ 312              		.loc 2 104 46 is_stmt 0 view .LVU84
  313 0000 0023     		movs	r3, #0
  314 0002 0363     		str	r3, [r0, #48]	@ float
  315              	.LVL19:
- 316              		.loc 2 101 46 view .LVU85
- 317              	.LBE65:
- 318              	.LBE64:
-  46:LEDs.cpp      **** }
- 319              		.loc 1 46 1 view .LVU86
+ 316              		.loc 2 104 46 view .LVU85
+ 317              	.LBE67:
+ 318              	.LBE66:
+  47:LEDs.cpp      **** }
+ 319              		.loc 1 47 1 view .LVU86
  320 0004 7047     		bx	lr
  321              		.cfi_endproc
- 322              	.LFE3892:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 10
+
+
+ 322              	.LFE3910:
  324 0006 00BF     		.section	.text._ZN8TempoLED6updateEv,"ax",%progbits
  325              		.align	1
  326              		.p2align 2,,3
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 10
-
-
  327              		.global	_ZN8TempoLED6updateEv
  328              		.syntax unified
  329              		.thumb
@@ -548,421 +552,680 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 1
  331              		.fpu fpv5-d16
  333              	_ZN8TempoLED6updateEv:
  334              	.LVL20:
- 335              	.LFB3893:
-  47:LEDs.cpp      **** 
-  48:LEDs.cpp      **** void TempoLED::update()
-  49:LEDs.cpp      **** {
- 336              		.loc 1 49 1 is_stmt 1 view -0
+ 335              	.LFB3911:
+  48:LEDs.cpp      **** 
+  49:LEDs.cpp      **** /*
+  50:LEDs.cpp      **** void TempoLED::resetPhaseCounter()
+  51:LEDs.cpp      **** {
+  52:LEDs.cpp      ****     phaseCounter_ = 0;
+  53:LEDs.cpp      **** */
+  54:LEDs.cpp      **** 
+  55:LEDs.cpp      **** void TempoLED::update()
+  56:LEDs.cpp      **** {
+ 336              		.loc 1 56 1 is_stmt 1 view -0
  337              		.cfi_startproc
  338              		@ args = 0, pretend = 0, frame = 0
  339              		@ frame_needed = 0, uses_anonymous_args = 0
-  50:LEDs.cpp      ****     float ledvalue{ (blink.Process() + 1.0f) / 2.0f };
- 340              		.loc 1 50 5 view .LVU88
-  49:LEDs.cpp      ****     float ledvalue{ (blink.Process() + 1.0f) / 2.0f };
- 341              		.loc 1 49 1 is_stmt 0 view .LVU89
+  57:LEDs.cpp      ****     float ledvalue{ (blink.Process() + 1.0f) / 2.0f };
+ 340              		.loc 1 57 5 view .LVU88
+  56:LEDs.cpp      ****     float ledvalue{ (blink.Process() + 1.0f) / 2.0f };
+ 341              		.loc 1 56 1 is_stmt 0 view .LVU89
  342 0000 10B5     		push	{r4, lr}
  343              		.cfi_def_cfa_offset 8
  344              		.cfi_offset 4, -8
  345              		.cfi_offset 14, -4
-  49:LEDs.cpp      ****     float ledvalue{ (blink.Process() + 1.0f) / 2.0f };
- 346              		.loc 1 49 1 view .LVU90
+  56:LEDs.cpp      ****     float ledvalue{ (blink.Process() + 1.0f) / 2.0f };
+ 346              		.loc 1 56 1 view .LVU90
  347 0002 0446     		mov	r4, r0
- 348              		.loc 1 50 35 view .LVU91
+ 348              		.loc 1 57 35 view .LVU91
  349 0004 1C30     		adds	r0, r0, #28
  350              	.LVL21:
- 351              		.loc 1 50 35 view .LVU92
- 352 0006 FFF7FEFF 		bl	_ZN7daisysp10Oscillator7ProcessEv
+ 351              		.loc 1 57 35 view .LVU92
+ 352 0006 FFF7FEFF 		bl	_ZN7daisysp12Oscillator_p7ProcessEv
  353              	.LVL22:
-  51:LEDs.cpp      ****     led.Set(ledvalue);
- 354              		.loc 1 51 5 is_stmt 1 view .LVU93
-  50:LEDs.cpp      ****     float ledvalue{ (blink.Process() + 1.0f) / 2.0f };
- 355              		.loc 1 50 38 is_stmt 0 view .LVU94
+  58:LEDs.cpp      ****     led.Set(ledvalue);
+ 354              		.loc 1 58 5 is_stmt 1 view .LVU93
+  57:LEDs.cpp      ****     float ledvalue{ (blink.Process() + 1.0f) / 2.0f };
+ 355              		.loc 1 57 38 is_stmt 0 view .LVU94
  356 000a B7EE007A 		vmov.f32	s14, #1.0e+0
-  50:LEDs.cpp      ****     float ledvalue{ (blink.Process() + 1.0f) / 2.0f };
- 357              		.loc 1 50 53 view .LVU95
+  57:LEDs.cpp      ****     float ledvalue{ (blink.Process() + 1.0f) / 2.0f };
+ 357              		.loc 1 57 53 view .LVU95
  358 000e F6EE007A 		vmov.f32	s15, #5.0e-1
- 359              		.loc 1 51 12 view .LVU96
+ 359              		.loc 1 58 12 view .LVU96
  360 0012 2046     		mov	r0, r4
-  50:LEDs.cpp      ****     float ledvalue{ (blink.Process() + 1.0f) / 2.0f };
- 361              		.loc 1 50 38 view .LVU97
+  57:LEDs.cpp      ****     float ledvalue{ (blink.Process() + 1.0f) / 2.0f };
+ 361              		.loc 1 57 38 view .LVU97
  362 0014 30EE070A 		vadd.f32	s0, s0, s14
  363              	.LVL23:
- 364              		.loc 1 51 12 view .LVU98
+ 364              		.loc 1 58 12 view .LVU98
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 11
+
+
  365 0018 20EE270A 		vmul.f32	s0, s0, s15
  366              	.LVL24:
- 367              		.loc 1 51 12 view .LVU99
+ 367              		.loc 1 58 12 view .LVU99
  368 001c FFF7FEFF 		bl	_ZN5daisy3Led3SetEf
  369              	.LVL25:
-  52:LEDs.cpp      ****     led.Update();
- 370              		.loc 1 52 5 is_stmt 1 view .LVU100
- 371              		.loc 1 52 15 is_stmt 0 view .LVU101
+  59:LEDs.cpp      ****     led.Update();
+ 370              		.loc 1 59 5 is_stmt 1 view .LVU100
+ 371              		.loc 1 59 15 is_stmt 0 view .LVU101
  372 0020 2046     		mov	r0, r4
-  53:LEDs.cpp      **** }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 11
-
-
- 373              		.loc 1 53 1 view .LVU102
+  60:LEDs.cpp      **** }
+ 373              		.loc 1 60 1 view .LVU102
  374 0022 BDE81040 		pop	{r4, lr}
  375              		.cfi_restore 14
  376              		.cfi_restore 4
  377              		.cfi_def_cfa_offset 0
  378              	.LVL26:
-  52:LEDs.cpp      ****     led.Update();
- 379              		.loc 1 52 15 view .LVU103
+  59:LEDs.cpp      ****     led.Update();
+ 379              		.loc 1 59 15 view .LVU103
  380 0026 FFF7FEBF 		b	_ZN5daisy3Led6UpdateEv
  381              	.LVL27:
-  52:LEDs.cpp      ****     led.Update();
- 382              		.loc 1 52 15 view .LVU104
+  59:LEDs.cpp      ****     led.Update();
+ 382              		.loc 1 59 15 view .LVU104
  383              		.cfi_endproc
- 384              	.LFE3893:
- 386 002a 00BF     		.section	.text._ZN8TempoLED7LED_setEf,"ax",%progbits
+ 384              	.LFE3911:
+ 386 002a 00BF     		.section	.text._ZN8TempoLED6updateE9TempoDivsf,"ax",%progbits
  387              		.align	1
  388              		.p2align 2,,3
- 389              		.global	_ZN8TempoLED7LED_setEf
+ 389              		.global	_ZN8TempoLED6updateE9TempoDivsf
  390              		.syntax unified
  391              		.thumb
  392              		.thumb_func
  393              		.fpu fpv5-d16
- 395              	_ZN8TempoLED7LED_setEf:
+ 395              	_ZN8TempoLED6updateE9TempoDivsf:
  396              	.LVL28:
- 397              	.LFB3894:
-  54:LEDs.cpp      **** 
-  55:LEDs.cpp      **** void TempoLED::LED_set(float brightness)
-  56:LEDs.cpp      **** {
- 398              		.loc 1 56 1 is_stmt 1 view -0
+ 397              	.LFB3912:
+  61:LEDs.cpp      **** 
+  62:LEDs.cpp      **** //dummy - set to phase of base tempo
+  63:LEDs.cpp      **** void TempoLED::update(TempoDivs div, float phase)
+  64:LEDs.cpp      **** {
+ 398              		.loc 1 64 1 is_stmt 1 view -0
  399              		.cfi_startproc
- 400              		@ args = 0, pretend = 0, frame = 0
+ 400              		@ args = 0, pretend = 0, frame = 8
  401              		@ frame_needed = 0, uses_anonymous_args = 0
- 402              		@ link register save eliminated.
-  57:LEDs.cpp      ****     led.Set(brightness);
- 403              		.loc 1 57 5 view .LVU106
- 404              		.loc 1 57 12 is_stmt 0 view .LVU107
- 405 0000 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 406              	.LVL29:
- 407              		.loc 1 57 12 view .LVU108
- 408              		.cfi_endproc
- 409              	.LFE3894:
- 411              		.section	.text._ZN8TempoLED5isEOCEv,"ax",%progbits
- 412              		.align	1
- 413              		.p2align 2,,3
- 414              		.global	_ZN8TempoLED5isEOCEv
- 415              		.syntax unified
- 416              		.thumb
- 417              		.thumb_func
- 418              		.fpu fpv5-d16
- 420              	_ZN8TempoLED5isEOCEv:
- 421              	.LVL30:
- 422              	.LFB3895:
-  58:LEDs.cpp      **** }
-  59:LEDs.cpp      **** 
-  60:LEDs.cpp      **** bool TempoLED::isEOC()
-  61:LEDs.cpp      **** {
- 423              		.loc 1 61 1 is_stmt 1 view -0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 12
-
-
- 424              		.cfi_startproc
- 425              		@ args = 0, pretend = 0, frame = 0
- 426              		@ frame_needed = 0, uses_anonymous_args = 0
- 427              		@ link register save eliminated.
-  62:LEDs.cpp      ****     return blink.IsEOC();
- 428              		.loc 1 62 5 view .LVU110
-  81:../DaisySP/Source/Synthesis/oscillator.h **** 
- 429              		.loc 2 81 27 view .LVU111
-  63:LEDs.cpp      **** }
- 430              		.loc 1 63 1 is_stmt 0 view .LVU112
- 431 0000 90F84100 		ldrb	r0, [r0, #65]	@ zero_extendqisi2
- 432              	.LVL31:
- 433              		.loc 1 63 1 view .LVU113
- 434 0004 7047     		bx	lr
- 435              		.cfi_endproc
- 436              	.LFE3895:
- 438 0006 00BF     		.section	.text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf,"ax",%progbits
- 439              		.align	1
- 440              		.p2align 2,,3
- 441              		.global	_ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf
- 442              		.syntax unified
- 443              		.thumb
- 444              		.thumb_func
- 445              		.fpu fpv5-d16
- 447              	_ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:
- 448              	.LVL32:
- 449              	.LFB3896:
-  64:LEDs.cpp      **** 
-  65:LEDs.cpp      **** //ButtonLED Functions:
+  65:LEDs.cpp      ****     float delayPhase{};
+ 402              		.loc 1 65 5 view .LVU106
   66:LEDs.cpp      **** 
-  67:LEDs.cpp      **** void ButtonLED::init(dsy_gpio_pin LED_pin, dsy_gpio_pin switch_pin, SwitchType switchtype, float Sa
-  68:LEDs.cpp      **** {
- 450              		.loc 1 68 1 is_stmt 1 view -0
- 451              		.cfi_startproc
- 452              		@ args = 0, pretend = 0, frame = 8
- 453              		@ frame_needed = 0, uses_anonymous_args = 0
-  69:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
- 454              		.loc 1 69 5 view .LVU115
-  68:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
- 455              		.loc 1 68 1 is_stmt 0 view .LVU116
- 456 0000 70B5     		push	{r4, r5, r6, lr}
- 457              		.cfi_def_cfa_offset 16
- 458              		.cfi_offset 4, -16
- 459              		.cfi_offset 5, -12
- 460              		.cfi_offset 6, -8
- 461              		.cfi_offset 14, -4
- 462 0002 82B0     		sub	sp, sp, #8
- 463              		.cfi_def_cfa_offset 24
-  70:LEDs.cpp      ****     led.Init(LED_pin,false,150.0f);  //150hz PWM)
- 464              		.loc 1 70 13 view .LVU117
- 465 0004 00F11406 		add	r6, r0, #20
-  68:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
- 466              		.loc 1 68 1 view .LVU118
- 467 0008 0446     		mov	r4, r0
-  69:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
- 468              		.loc 1 69 12 view .LVU119
- 469 000a 0430     		adds	r0, r0, #4
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 13
-
-
- 470              	.LVL33:
-  68:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
- 471              		.loc 1 68 1 view .LVU120
- 472 000c ADF80020 		strh	r2, [sp]	@ movhi
- 473 0010 1D46     		mov	r5, r3
- 474 0012 ADF80410 		strh	r1, [sp, #4]	@ movhi
-  69:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
- 475              		.loc 1 69 12 view .LVU121
- 476 0016 0099     		ldr	r1, [sp]
- 477 0018 FFF7FEFF 		bl	_ZN5daisy6Switch4InitE12dsy_gpio_pinf
- 478              	.LVL34:
- 479              		.loc 1 70 5 is_stmt 1 view .LVU122
- 480              		.loc 1 70 13 is_stmt 0 view .LVU123
- 481 001c 3046     		mov	r0, r6
- 482 001e 9FED090A 		vldr.32	s0, .L15
- 483 0022 0022     		movs	r2, #0
- 484 0024 0199     		ldr	r1, [sp, #4]
- 485 0026 FFF7FEFF 		bl	_ZN5daisy3Led4InitE12dsy_gpio_pinbf
- 486              	.LVL35:
-  71:LEDs.cpp      ****     switchtype_ = switchtype;
- 487              		.loc 1 71 5 is_stmt 1 view .LVU124
-  72:LEDs.cpp      ****     isON = false; 
- 488              		.loc 1 72 10 is_stmt 0 view .LVU125
- 489 002a 0023     		movs	r3, #0
-  73:LEDs.cpp      ****     led.Set(0.0f);
- 490              		.loc 1 73 12 view .LVU126
- 491 002c 3046     		mov	r0, r6
- 492 002e 9FED060A 		vldr.32	s0, .L15+4
-  71:LEDs.cpp      ****     switchtype_ = switchtype;
- 493              		.loc 1 71 17 view .LVU127
- 494 0032 84F83050 		strb	r5, [r4, #48]
-  72:LEDs.cpp      ****     isON = false; 
- 495              		.loc 1 72 5 is_stmt 1 view .LVU128
-  72:LEDs.cpp      ****     isON = false; 
- 496              		.loc 1 72 10 is_stmt 0 view .LVU129
- 497 0036 2370     		strb	r3, [r4]
- 498              		.loc 1 73 5 is_stmt 1 view .LVU130
+  67:LEDs.cpp      ****     //update multi or div value
+  68:LEDs.cpp      ****     float div_int = GetDivInt(div);
+ 403              		.loc 1 68 5 view .LVU107
+ 404              	.LBB68:
+ 405              	.LBI68:
+  69:LEDs.cpp      ****     delayPhase = phase * div_int;
+  70:LEDs.cpp      **** 
+  71:LEDs.cpp      ****     float ledvalue{sinf(delayPhase) < 0.0f ? 0.0f : 1.0f};
+  72:LEDs.cpp      ****     led.Set(ledvalue);
+  73:LEDs.cpp      ****     led.Update();
   74:LEDs.cpp      **** }
- 499              		.loc 1 74 1 is_stmt 0 view .LVU131
- 500 0038 02B0     		add	sp, sp, #8
- 501              		.cfi_def_cfa_offset 16
- 502              		@ sp needed
- 503 003a BDE87040 		pop	{r4, r5, r6, lr}
- 504              		.cfi_restore 14
- 505              		.cfi_restore 6
- 506              		.cfi_restore 5
- 507              		.cfi_restore 4
- 508              		.cfi_def_cfa_offset 0
- 509              	.LVL36:
-  73:LEDs.cpp      ****     led.Set(0.0f);
- 510              		.loc 1 73 12 view .LVU132
- 511 003e FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 512              	.LVL37:
- 513              	.L16:
-  73:LEDs.cpp      ****     led.Set(0.0f);
- 514              		.loc 1 73 12 view .LVU133
- 515 0042 00BF     		.align	2
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 12
 
 
- 516              	.L15:
- 517 0044 00001643 		.word	1125515264
- 518 0048 00000000 		.word	0
- 519              		.cfi_endproc
- 520              	.LFE3896:
- 522              		.section	.text._ZN9ButtonLED6toggleEv,"ax",%progbits
- 523              		.align	1
- 524              		.p2align 2,,3
- 525              		.global	_ZN9ButtonLED6toggleEv
- 526              		.syntax unified
- 527              		.thumb
- 528              		.thumb_func
- 529              		.fpu fpv5-d16
- 531              	_ZN9ButtonLED6toggleEv:
- 532              	.LVL38:
- 533              	.LFB3898:
   75:LEDs.cpp      **** 
-  76:LEDs.cpp      **** void ButtonLED::update() //check switch and update LED
+  76:LEDs.cpp      **** void TempoLED::LED_set(float brightness)
   77:LEDs.cpp      **** {
-  78:LEDs.cpp      **** led.Update();
-  79:LEDs.cpp      **** sw.Debounce();
-  80:LEDs.cpp      **** switch (switchtype_)
-  81:LEDs.cpp      **** {
-  82:LEDs.cpp      ****     case Momentary:
-  83:LEDs.cpp      ****         if(sw.RisingEdge())
-  84:LEDs.cpp      ****         {
-  85:LEDs.cpp      ****             toggle();
-  86:LEDs.cpp      ****         }
-  87:LEDs.cpp      ****     break;
-  88:LEDs.cpp      **** 
-  89:LEDs.cpp      ****     case Toggle:
-  90:LEDs.cpp      ****         if(!sw.Pressed())
-  91:LEDs.cpp      ****         {
-  92:LEDs.cpp      ****             turnON();
-  93:LEDs.cpp      ****         } 
-  94:LEDs.cpp      ****         else
-  95:LEDs.cpp      ****         {
-  96:LEDs.cpp      ****             turnOFF();
-  97:LEDs.cpp      ****         }
-  98:LEDs.cpp      ****     break;
-  99:LEDs.cpp      ****     case Toggle_inverted:
- 100:LEDs.cpp      ****         if(sw.Pressed())
- 101:LEDs.cpp      ****         {
- 102:LEDs.cpp      ****             turnON();
- 103:LEDs.cpp      ****         } 
- 104:LEDs.cpp      ****         else
- 105:LEDs.cpp      ****         {
- 106:LEDs.cpp      ****             turnOFF();
- 107:LEDs.cpp      ****         }
- 108:LEDs.cpp      ****     break;
- 109:LEDs.cpp      ****     default:
- 110:LEDs.cpp      ****     break;
- 111:LEDs.cpp      **** }
- 112:LEDs.cpp      **** 
- 113:LEDs.cpp      **** }
- 114:LEDs.cpp      **** 
- 115:LEDs.cpp      **** void ButtonLED::toggle()
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 15
+  78:LEDs.cpp      ****     led.Set(brightness);
+  79:LEDs.cpp      **** }
+  80:LEDs.cpp      **** 
+  81:LEDs.cpp      **** bool TempoLED::isEOC()
+  82:LEDs.cpp      **** {
+  83:LEDs.cpp      ****     return blink.IsEOC();
+  84:LEDs.cpp      **** }
+  85:LEDs.cpp      **** 
+  86:LEDs.cpp      **** //get div as an integer
+  87:LEDs.cpp      **** float TempoLED::GetDivInt(TempoDivs div)
+ 406              		.loc 1 87 7 view .LVU108
+ 407              	.LBB69:
+  88:LEDs.cpp      **** {
+  89:LEDs.cpp      ****     float retVal{};
+ 408              		.loc 1 89 5 view .LVU109
+  90:LEDs.cpp      **** 
+  91:LEDs.cpp      ****     switch (div)
+ 409              		.loc 1 91 5 view .LVU110
+ 410 0000 0A29     		cmp	r1, #10
+ 411              	.LBE69:
+ 412              	.LBE68:
+  64:LEDs.cpp      ****     float delayPhase{};
+ 413              		.loc 1 64 1 is_stmt 0 view .LVU111
+ 414 0002 00B5     		push	{lr}
+ 415              		.cfi_def_cfa_offset 4
+ 416              		.cfi_offset 14, -4
+ 417 0004 83B0     		sub	sp, sp, #12
+ 418              		.cfi_def_cfa_offset 16
+ 419 0006 1FD8     		bhi	.L14
+ 420 0008 114B     		ldr	r3, .L17
+ 421 000a 03EB8101 		add	r1, r3, r1, lsl #2
+ 422              	.LVL29:
+  64:LEDs.cpp      ****     float delayPhase{};
+ 423              		.loc 1 64 1 view .LVU112
+ 424 000e D1ED007A 		vldr.32	s15, [r1]
+ 425              	.L12:
+ 426              	.LVL30:
+ 427              	.LBB71:
+ 428              	.LBB70:
+  92:LEDs.cpp      ****     {
+  93:LEDs.cpp      ****         case DIV6:
+  94:LEDs.cpp      ****             retVal = 6 * 6;
+  95:LEDs.cpp      ****         break;
+  96:LEDs.cpp      **** 
+  97:LEDs.cpp      ****         case DIV5:
+  98:LEDs.cpp      ****             retVal = 5 * 6;
+  99:LEDs.cpp      ****         break;
+ 100:LEDs.cpp      ****         case DIV4:
+ 101:LEDs.cpp      ****             retVal = 4 * 6;
+ 102:LEDs.cpp      ****         break;
+ 103:LEDs.cpp      ****         case DIV3:
+ 104:LEDs.cpp      ****             retVal = 3 * 6;
+ 105:LEDs.cpp      ****         break;
+ 106:LEDs.cpp      ****         case DIV2:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 13
 
 
- 116:LEDs.cpp      **** {
- 534              		.loc 1 116 1 is_stmt 1 view -0
- 535              		.cfi_startproc
- 536              		@ args = 0, pretend = 0, frame = 0
- 537              		@ frame_needed = 0, uses_anonymous_args = 0
- 538              		@ link register save eliminated.
- 117:LEDs.cpp      ****     isON = !isON;
- 539              		.loc 1 117 5 view .LVU135
- 540              		.loc 1 117 12 is_stmt 0 view .LVU136
- 541 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
- 118:LEDs.cpp      ****     if(isON)
- 119:LEDs.cpp      ****     {
- 120:LEDs.cpp      ****         led.Set(1.0f);
- 542              		.loc 1 120 16 view .LVU137
- 543 0002 1430     		adds	r0, r0, #20
- 544              	.LVL39:
- 117:LEDs.cpp      ****     isON = !isON;
- 545              		.loc 1 117 12 view .LVU138
- 546 0004 83F00103 		eor	r3, r3, #1
- 117:LEDs.cpp      ****     isON = !isON;
- 547              		.loc 1 117 10 view .LVU139
- 548 0008 00F8143C 		strb	r3, [r0, #-20]
- 118:LEDs.cpp      ****     if(isON)
- 549              		.loc 1 118 5 is_stmt 1 view .LVU140
- 550 000c 1BB1     		cbz	r3, .L18
- 551              		.loc 1 120 9 view .LVU141
- 552              		.loc 1 120 16 is_stmt 0 view .LVU142
- 553 000e B7EE000A 		vmov.f32	s0, #1.0e+0
- 554 0012 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 555              	.LVL40:
- 556              	.L18:
- 121:LEDs.cpp      ****     }
- 122:LEDs.cpp      ****     else
- 123:LEDs.cpp      ****     {
- 124:LEDs.cpp      ****         led.Set(0.0f);
- 557              		.loc 1 124 9 is_stmt 1 view .LVU143
- 558              		.loc 1 124 16 is_stmt 0 view .LVU144
- 559 0016 9FED020A 		vldr.32	s0, .L19
- 560 001a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 561              	.LVL41:
- 562              	.L20:
- 563 001e 00BF     		.align	2
- 564              	.L19:
- 565 0020 00000000 		.word	0
- 566              		.cfi_endproc
- 567              	.LFE3898:
- 569              		.section	.text._ZN9ButtonLED6updateEv,"ax",%progbits
- 570              		.align	1
- 571              		.p2align 2,,3
- 572              		.global	_ZN9ButtonLED6updateEv
- 573              		.syntax unified
- 574              		.thumb
- 575              		.thumb_func
- 576              		.fpu fpv5-d16
- 578              	_ZN9ButtonLED6updateEv:
- 579              	.LVL42:
- 580              	.LFB3897:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 16
-
-
-  77:LEDs.cpp      **** led.Update();
- 581              		.loc 1 77 1 is_stmt 1 view -0
- 582              		.cfi_startproc
- 583              		@ args = 0, pretend = 0, frame = 0
- 584              		@ frame_needed = 0, uses_anonymous_args = 0
-  78:LEDs.cpp      **** sw.Debounce();
- 585              		.loc 1 78 1 view .LVU146
-  77:LEDs.cpp      **** led.Update();
- 586              		.loc 1 77 1 is_stmt 0 view .LVU147
- 587 0000 38B5     		push	{r3, r4, r5, lr}
- 588              		.cfi_def_cfa_offset 16
- 589              		.cfi_offset 3, -16
- 590              		.cfi_offset 4, -12
- 591              		.cfi_offset 5, -8
- 592              		.cfi_offset 14, -4
-  78:LEDs.cpp      **** sw.Debounce();
- 593              		.loc 1 78 11 view .LVU148
- 594 0002 00F11405 		add	r5, r0, #20
-  77:LEDs.cpp      **** led.Update();
- 595              		.loc 1 77 1 view .LVU149
- 596 0006 0446     		mov	r4, r0
-  78:LEDs.cpp      **** sw.Debounce();
- 597              		.loc 1 78 11 view .LVU150
- 598 0008 2846     		mov	r0, r5
- 599              	.LVL43:
-  78:LEDs.cpp      **** sw.Debounce();
- 600              		.loc 1 78 11 view .LVU151
- 601 000a FFF7FEFF 		bl	_ZN5daisy3Led6UpdateEv
- 602              	.LVL44:
-  79:LEDs.cpp      **** switch (switchtype_)
- 603              		.loc 1 79 1 is_stmt 1 view .LVU152
-  79:LEDs.cpp      **** switch (switchtype_)
- 604              		.loc 1 79 12 is_stmt 0 view .LVU153
- 605 000e 201D     		adds	r0, r4, #4
- 606 0010 FFF7FEFF 		bl	_ZN5daisy6Switch8DebounceEv
- 607              	.LVL45:
-  80:LEDs.cpp      **** {
- 608              		.loc 1 80 1 is_stmt 1 view .LVU154
-  80:LEDs.cpp      **** {
- 609              		.loc 1 80 9 is_stmt 0 view .LVU155
- 610 0014 94F83030 		ldrb	r3, [r4, #48]	@ zero_extendqisi2
-  80:LEDs.cpp      **** {
- 611              		.loc 1 80 1 view .LVU156
- 612 0018 012B     		cmp	r3, #1
- 613 001a 17D0     		beq	.L22
- 614 001c 022B     		cmp	r3, #2
- 615 001e 09D0     		beq	.L23
- 616 0020 03B1     		cbz	r3, .L28
- 617              	.L21:
+ 107:LEDs.cpp      ****             retVal = 2 * 6;
+ 108:LEDs.cpp      ****         break;
+ 109:LEDs.cpp      ****         
+ 110:LEDs.cpp      ****         case UNITY:
+ 111:LEDs.cpp      ****             retVal = 6;
+ 112:LEDs.cpp      ****         break;
  113:LEDs.cpp      **** 
- 618              		.loc 1 113 1 view .LVU157
- 619 0022 38BD     		pop	{r3, r4, r5, pc}
- 620              	.LVL46:
- 621              	.L28:
-  82:LEDs.cpp      ****         if(sw.RisingEdge())
- 622              		.loc 1 82 5 is_stmt 1 view .LVU158
-  83:LEDs.cpp      ****         {
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 17
+ 114:LEDs.cpp      ****         case MULT2:
+ 115:LEDs.cpp      ****             retVal = 3.0f;
+ 116:LEDs.cpp      ****         break;
+ 117:LEDs.cpp      **** 
+ 118:LEDs.cpp      ****         case MULT3:
+ 119:LEDs.cpp      ****             retVal = 2.0f;
+ 120:LEDs.cpp      ****         break;
+ 121:LEDs.cpp      ****         
+ 122:LEDs.cpp      ****         case MULT4:
+ 123:LEDs.cpp      ****             retVal = 6/4;
+ 124:LEDs.cpp      ****         break;
+ 125:LEDs.cpp      ****         
+ 126:LEDs.cpp      ****         case MULT5:
+ 127:LEDs.cpp      ****             retVal = 6/5;
+ 128:LEDs.cpp      ****         break;   
+ 129:LEDs.cpp      ****         
+ 130:LEDs.cpp      ****         case MULT6:
+ 131:LEDs.cpp      ****             retVal = 1.0f;
+ 132:LEDs.cpp      ****         break;       
+ 133:LEDs.cpp      **** 
+ 134:LEDs.cpp      ****         default:
+ 135:LEDs.cpp      ****         retVal = 6.0f;    
+ 136:LEDs.cpp      ****         break;  
+ 137:LEDs.cpp      ****     }
+ 138:LEDs.cpp      **** 
+ 139:LEDs.cpp      **** return retVal;
+ 429              		.loc 1 139 1 is_stmt 1 view .LVU113
+ 430              		.loc 1 139 1 is_stmt 0 view .LVU114
+ 431              	.LBE70:
+ 432              	.LBE71:
+  69:LEDs.cpp      **** 
+ 433              		.loc 1 69 5 is_stmt 1 view .LVU115
+  71:LEDs.cpp      ****     led.Set(ledvalue);
+ 434              		.loc 1 71 5 view .LVU116
+  71:LEDs.cpp      ****     led.Set(ledvalue);
+ 435              		.loc 1 71 24 is_stmt 0 view .LVU117
+ 436 0012 20EE270A 		vmul.f32	s0, s0, s15
+ 437              	.LVL31:
+  71:LEDs.cpp      ****     led.Set(ledvalue);
+ 438              		.loc 1 71 24 view .LVU118
+ 439 0016 0190     		str	r0, [sp, #4]
+ 440 0018 FFF7FEFF 		bl	sinf
+ 441              	.LVL32:
+  71:LEDs.cpp      ****     led.Set(ledvalue);
+ 442              		.loc 1 71 44 view .LVU119
+ 443 001c 9FED0D7A 		vldr.32	s14, .L17+4
+ 444 0020 F7EE007A 		vmov.f32	s15, #1.0e+0
+  72:LEDs.cpp      ****     led.Update();
+ 445              		.loc 1 72 12 view .LVU120
+ 446 0024 0198     		ldr	r0, [sp, #4]
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 14
 
 
- 623              		.loc 1 83 9 view .LVU159
- 624              		.file 3 "../libdaisy/src/hid/switch.h"
+  71:LEDs.cpp      ****     led.Set(ledvalue);
+ 447              		.loc 1 71 44 view .LVU121
+ 448 0026 B4EEC70A 		vcmpe.f32	s0, s14
+ 449 002a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 450              	.LVL33:
+  72:LEDs.cpp      ****     led.Update();
+ 451              		.loc 1 72 5 is_stmt 1 view .LVU122
+  72:LEDs.cpp      ****     led.Update();
+ 452              		.loc 1 72 12 is_stmt 0 view .LVU123
+ 453 002e 54BF     		ite	pl
+ 454 0030 B0EE670A 		vmovpl.f32	s0, s15
+ 455 0034 B0EE470A 		vmovmi.f32	s0, s14
+ 456              	.LVL34:
+  72:LEDs.cpp      ****     led.Update();
+ 457              		.loc 1 72 12 view .LVU124
+ 458 0038 FFF7FEFF 		bl	_ZN5daisy3Led3SetEf
+ 459              	.LVL35:
+  73:LEDs.cpp      **** }
+ 460              		.loc 1 73 5 is_stmt 1 view .LVU125
+  73:LEDs.cpp      **** }
+ 461              		.loc 1 73 15 is_stmt 0 view .LVU126
+ 462 003c 0198     		ldr	r0, [sp, #4]
+  74:LEDs.cpp      **** 
+ 463              		.loc 1 74 1 view .LVU127
+ 464 003e 03B0     		add	sp, sp, #12
+ 465              		.cfi_remember_state
+ 466              		.cfi_def_cfa_offset 4
+ 467              		@ sp needed
+ 468 0040 5DF804EB 		ldr	lr, [sp], #4
+ 469              		.cfi_restore 14
+ 470              		.cfi_def_cfa_offset 0
+ 471              	.LVL36:
+  73:LEDs.cpp      **** }
+ 472              		.loc 1 73 15 view .LVU128
+ 473 0044 FFF7FEBF 		b	_ZN5daisy3Led6UpdateEv
+ 474              	.LVL37:
+ 475              	.L14:
+ 476              		.cfi_restore_state
+  64:LEDs.cpp      ****     float delayPhase{};
+ 477              		.loc 1 64 1 view .LVU129
+ 478 0048 F1EE087A 		vmov.f32	s15, #6.0e+0
+ 479 004c E1E7     		b	.L12
+ 480              	.L18:
+ 481 004e 00BF     		.align	2
+ 482              	.L17:
+ 483 0050 00000000 		.word	.LANCHOR0
+ 484 0054 00000000 		.word	0
+ 485              		.cfi_endproc
+ 486              	.LFE3912:
+ 488              		.section	.text._ZN8TempoLED7LED_setEf,"ax",%progbits
+ 489              		.align	1
+ 490              		.p2align 2,,3
+ 491              		.global	_ZN8TempoLED7LED_setEf
+ 492              		.syntax unified
+ 493              		.thumb
+ 494              		.thumb_func
+ 495              		.fpu fpv5-d16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 15
+
+
+ 497              	_ZN8TempoLED7LED_setEf:
+ 498              	.LVL38:
+ 499              	.LFB3913:
+  77:LEDs.cpp      ****     led.Set(brightness);
+ 500              		.loc 1 77 1 is_stmt 1 view -0
+ 501              		.cfi_startproc
+ 502              		@ args = 0, pretend = 0, frame = 0
+ 503              		@ frame_needed = 0, uses_anonymous_args = 0
+ 504              		@ link register save eliminated.
+  78:LEDs.cpp      **** }
+ 505              		.loc 1 78 5 view .LVU131
+  78:LEDs.cpp      **** }
+ 506              		.loc 1 78 12 is_stmt 0 view .LVU132
+ 507 0000 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 508              	.LVL39:
+  78:LEDs.cpp      **** }
+ 509              		.loc 1 78 12 view .LVU133
+ 510              		.cfi_endproc
+ 511              	.LFE3913:
+ 513              		.section	.text._ZN8TempoLED5isEOCEv,"ax",%progbits
+ 514              		.align	1
+ 515              		.p2align 2,,3
+ 516              		.global	_ZN8TempoLED5isEOCEv
+ 517              		.syntax unified
+ 518              		.thumb
+ 519              		.thumb_func
+ 520              		.fpu fpv5-d16
+ 522              	_ZN8TempoLED5isEOCEv:
+ 523              	.LVL40:
+ 524              	.LFB3914:
+  82:LEDs.cpp      ****     return blink.IsEOC();
+ 525              		.loc 1 82 1 is_stmt 1 view -0
+ 526              		.cfi_startproc
+ 527              		@ args = 0, pretend = 0, frame = 0
+ 528              		@ frame_needed = 0, uses_anonymous_args = 0
+ 529              		@ link register save eliminated.
+  83:LEDs.cpp      **** }
+ 530              		.loc 1 83 5 view .LVU135
+  81:oscillator_p.h **** 
+ 531              		.loc 2 81 27 view .LVU136
+  84:LEDs.cpp      **** 
+ 532              		.loc 1 84 1 is_stmt 0 view .LVU137
+ 533 0000 90F84100 		ldrb	r0, [r0, #65]	@ zero_extendqisi2
+ 534              	.LVL41:
+  84:LEDs.cpp      **** 
+ 535              		.loc 1 84 1 view .LVU138
+ 536 0004 7047     		bx	lr
+ 537              		.cfi_endproc
+ 538              	.LFE3914:
+ 540 0006 00BF     		.section	.text._ZN8TempoLED9GetDivIntE9TempoDivs,"ax",%progbits
+ 541              		.align	1
+ 542              		.p2align 2,,3
+ 543              		.global	_ZN8TempoLED9GetDivIntE9TempoDivs
+ 544              		.syntax unified
+ 545              		.thumb
+ 546              		.thumb_func
+ 547              		.fpu fpv5-d16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 16
+
+
+ 549              	_ZN8TempoLED9GetDivIntE9TempoDivs:
+ 550              	.LVL42:
+ 551              	.LFB3915:
+  88:LEDs.cpp      ****     float retVal{};
+ 552              		.loc 1 88 1 is_stmt 1 view -0
+ 553              		.cfi_startproc
+ 554              		@ args = 0, pretend = 0, frame = 0
+ 555              		@ frame_needed = 0, uses_anonymous_args = 0
+ 556              		@ link register save eliminated.
+  89:LEDs.cpp      **** 
+ 557              		.loc 1 89 5 view .LVU140
+  91:LEDs.cpp      ****     {
+ 558              		.loc 1 91 5 view .LVU141
+ 559 0000 0A29     		cmp	r1, #10
+ 560 0002 05D8     		bhi	.L23
+ 561 0004 044B     		ldr	r3, .L24
+ 562 0006 03EB8101 		add	r1, r3, r1, lsl #2
+ 563              	.LVL43:
+  91:LEDs.cpp      ****     {
+ 564              		.loc 1 91 5 is_stmt 0 view .LVU142
+ 565 000a 91ED000A 		vldr.32	s0, [r1]
+ 566 000e 7047     		bx	lr
+ 567              	.LVL44:
+ 568              	.L23:
+  88:LEDs.cpp      ****     float retVal{};
+ 569              		.loc 1 88 1 view .LVU143
+ 570 0010 B1EE080A 		vmov.f32	s0, #6.0e+0
+ 571              	.LVL45:
+ 572              		.loc 1 139 1 is_stmt 1 view .LVU144
+ 140:LEDs.cpp      **** }
+ 573              		.loc 1 140 1 is_stmt 0 view .LVU145
+ 574 0014 7047     		bx	lr
+ 575              	.L25:
+ 576 0016 00BF     		.align	2
+ 577              	.L24:
+ 578 0018 00000000 		.word	.LANCHOR0
+ 579              		.cfi_endproc
+ 580              	.LFE3915:
+ 582              		.section	.text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf,"ax",%progbits
+ 583              		.align	1
+ 584              		.p2align 2,,3
+ 585              		.global	_ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf
+ 586              		.syntax unified
+ 587              		.thumb
+ 588              		.thumb_func
+ 589              		.fpu fpv5-d16
+ 591              	_ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:
+ 592              	.LVL46:
+ 593              	.LFB3916:
+ 141:LEDs.cpp      **** 
+ 142:LEDs.cpp      **** 
+ 143:LEDs.cpp      **** //ButtonLED Functions:
+ 144:LEDs.cpp      **** 
+ 145:LEDs.cpp      **** void ButtonLED::init(dsy_gpio_pin LED_pin, dsy_gpio_pin switch_pin, SwitchType switchtype, float Sa
+ 146:LEDs.cpp      **** {
+ 594              		.loc 1 146 1 is_stmt 1 view -0
+ 595              		.cfi_startproc
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 17
+
+
+ 596              		@ args = 0, pretend = 0, frame = 8
+ 597              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
+ 598              		.loc 1 147 5 view .LVU147
+ 146:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
+ 599              		.loc 1 146 1 is_stmt 0 view .LVU148
+ 600 0000 70B5     		push	{r4, r5, r6, lr}
+ 601              		.cfi_def_cfa_offset 16
+ 602              		.cfi_offset 4, -16
+ 603              		.cfi_offset 5, -12
+ 604              		.cfi_offset 6, -8
+ 605              		.cfi_offset 14, -4
+ 606 0002 82B0     		sub	sp, sp, #8
+ 607              		.cfi_def_cfa_offset 24
+ 148:LEDs.cpp      ****     led.Init(LED_pin,false,150.0f);  //150hz PWM)
+ 608              		.loc 1 148 13 view .LVU149
+ 609 0004 00F11406 		add	r6, r0, #20
+ 146:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
+ 610              		.loc 1 146 1 view .LVU150
+ 611 0008 0446     		mov	r4, r0
+ 147:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
+ 612              		.loc 1 147 12 view .LVU151
+ 613 000a 0430     		adds	r0, r0, #4
+ 614              	.LVL47:
+ 146:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
+ 615              		.loc 1 146 1 view .LVU152
+ 616 000c ADF80020 		strh	r2, [sp]	@ movhi
+ 617 0010 1D46     		mov	r5, r3
+ 618 0012 ADF80410 		strh	r1, [sp, #4]	@ movhi
+ 147:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
+ 619              		.loc 1 147 12 view .LVU153
+ 620 0016 0099     		ldr	r1, [sp]
+ 621 0018 FFF7FEFF 		bl	_ZN5daisy6Switch4InitE12dsy_gpio_pinf
+ 622              	.LVL48:
+ 623              		.loc 1 148 5 is_stmt 1 view .LVU154
+ 624              		.loc 1 148 13 is_stmt 0 view .LVU155
+ 625 001c 3046     		mov	r0, r6
+ 626 001e 9FED090A 		vldr.32	s0, .L28
+ 627 0022 0022     		movs	r2, #0
+ 628 0024 0199     		ldr	r1, [sp, #4]
+ 629 0026 FFF7FEFF 		bl	_ZN5daisy3Led4InitE12dsy_gpio_pinbf
+ 630              	.LVL49:
+ 149:LEDs.cpp      ****     switchtype_ = switchtype;
+ 631              		.loc 1 149 5 is_stmt 1 view .LVU156
+ 150:LEDs.cpp      ****     isON = false; 
+ 632              		.loc 1 150 10 is_stmt 0 view .LVU157
+ 633 002a 0023     		movs	r3, #0
+ 151:LEDs.cpp      ****     led.Set(0.0f);
+ 634              		.loc 1 151 12 view .LVU158
+ 635 002c 3046     		mov	r0, r6
+ 636 002e 9FED060A 		vldr.32	s0, .L28+4
+ 149:LEDs.cpp      ****     switchtype_ = switchtype;
+ 637              		.loc 1 149 17 view .LVU159
+ 638 0032 84F83050 		strb	r5, [r4, #48]
+ 150:LEDs.cpp      ****     isON = false; 
+ 639              		.loc 1 150 5 is_stmt 1 view .LVU160
+ 150:LEDs.cpp      ****     isON = false; 
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 18
+
+
+ 640              		.loc 1 150 10 is_stmt 0 view .LVU161
+ 641 0036 2370     		strb	r3, [r4]
+ 642              		.loc 1 151 5 is_stmt 1 view .LVU162
+ 152:LEDs.cpp      **** }
+ 643              		.loc 1 152 1 is_stmt 0 view .LVU163
+ 644 0038 02B0     		add	sp, sp, #8
+ 645              		.cfi_def_cfa_offset 16
+ 646              		@ sp needed
+ 647 003a BDE87040 		pop	{r4, r5, r6, lr}
+ 648              		.cfi_restore 14
+ 649              		.cfi_restore 6
+ 650              		.cfi_restore 5
+ 651              		.cfi_restore 4
+ 652              		.cfi_def_cfa_offset 0
+ 653              	.LVL50:
+ 151:LEDs.cpp      ****     led.Set(0.0f);
+ 654              		.loc 1 151 12 view .LVU164
+ 655 003e FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 656              	.LVL51:
+ 657              	.L29:
+ 151:LEDs.cpp      ****     led.Set(0.0f);
+ 658              		.loc 1 151 12 view .LVU165
+ 659 0042 00BF     		.align	2
+ 660              	.L28:
+ 661 0044 00001643 		.word	1125515264
+ 662 0048 00000000 		.word	0
+ 663              		.cfi_endproc
+ 664              	.LFE3916:
+ 666              		.section	.text._ZN9ButtonLED6toggleEv,"ax",%progbits
+ 667              		.align	1
+ 668              		.p2align 2,,3
+ 669              		.global	_ZN9ButtonLED6toggleEv
+ 670              		.syntax unified
+ 671              		.thumb
+ 672              		.thumb_func
+ 673              		.fpu fpv5-d16
+ 675              	_ZN9ButtonLED6toggleEv:
+ 676              	.LVL52:
+ 677              	.LFB3918:
+ 153:LEDs.cpp      **** 
+ 154:LEDs.cpp      **** void ButtonLED::update() //check switch and update LED
+ 155:LEDs.cpp      **** {
+ 156:LEDs.cpp      **** led.Update();
+ 157:LEDs.cpp      **** sw.Debounce();
+ 158:LEDs.cpp      **** switch (switchtype_)
+ 159:LEDs.cpp      **** {
+ 160:LEDs.cpp      ****     case Momentary:
+ 161:LEDs.cpp      ****         if(sw.RisingEdge())
+ 162:LEDs.cpp      ****         {
+ 163:LEDs.cpp      ****             toggle();
+ 164:LEDs.cpp      ****         }
+ 165:LEDs.cpp      ****     break;
+ 166:LEDs.cpp      **** 
+ 167:LEDs.cpp      ****     case Toggle:
+ 168:LEDs.cpp      ****         if(!sw.Pressed())
+ 169:LEDs.cpp      ****         {
+ 170:LEDs.cpp      ****             turnON();
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 19
+
+
+ 171:LEDs.cpp      ****         } 
+ 172:LEDs.cpp      ****         else
+ 173:LEDs.cpp      ****         {
+ 174:LEDs.cpp      ****             turnOFF();
+ 175:LEDs.cpp      ****         }
+ 176:LEDs.cpp      ****     break;
+ 177:LEDs.cpp      ****     case Toggle_inverted:
+ 178:LEDs.cpp      ****         if(sw.Pressed())
+ 179:LEDs.cpp      ****         {
+ 180:LEDs.cpp      ****             turnON();
+ 181:LEDs.cpp      ****         } 
+ 182:LEDs.cpp      ****         else
+ 183:LEDs.cpp      ****         {
+ 184:LEDs.cpp      ****             turnOFF();
+ 185:LEDs.cpp      ****         }
+ 186:LEDs.cpp      ****     break;
+ 187:LEDs.cpp      ****     default:
+ 188:LEDs.cpp      ****     break;
+ 189:LEDs.cpp      **** }
+ 190:LEDs.cpp      **** 
+ 191:LEDs.cpp      **** }
+ 192:LEDs.cpp      **** 
+ 193:LEDs.cpp      **** void ButtonLED::toggle()
+ 194:LEDs.cpp      **** {
+ 678              		.loc 1 194 1 is_stmt 1 view -0
+ 679              		.cfi_startproc
+ 680              		@ args = 0, pretend = 0, frame = 0
+ 681              		@ frame_needed = 0, uses_anonymous_args = 0
+ 682              		@ link register save eliminated.
+ 195:LEDs.cpp      ****     isON = !isON;
+ 683              		.loc 1 195 5 view .LVU167
+ 684              		.loc 1 195 12 is_stmt 0 view .LVU168
+ 685 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 196:LEDs.cpp      ****     if(isON)
+ 197:LEDs.cpp      ****     {
+ 198:LEDs.cpp      ****         led.Set(1.0f);
+ 686              		.loc 1 198 16 view .LVU169
+ 687 0002 1430     		adds	r0, r0, #20
+ 688              	.LVL53:
+ 195:LEDs.cpp      ****     isON = !isON;
+ 689              		.loc 1 195 12 view .LVU170
+ 690 0004 83F00103 		eor	r3, r3, #1
+ 195:LEDs.cpp      ****     isON = !isON;
+ 691              		.loc 1 195 10 view .LVU171
+ 692 0008 00F8143C 		strb	r3, [r0, #-20]
+ 196:LEDs.cpp      ****     if(isON)
+ 693              		.loc 1 196 5 is_stmt 1 view .LVU172
+ 694 000c 1BB1     		cbz	r3, .L31
+ 695              		.loc 1 198 9 view .LVU173
+ 696              		.loc 1 198 16 is_stmt 0 view .LVU174
+ 697 000e B7EE000A 		vmov.f32	s0, #1.0e+0
+ 698 0012 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 699              	.LVL54:
+ 700              	.L31:
+ 199:LEDs.cpp      ****     }
+ 200:LEDs.cpp      ****     else
+ 201:LEDs.cpp      ****     {
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 20
+
+
+ 202:LEDs.cpp      ****         led.Set(0.0f);
+ 701              		.loc 1 202 9 is_stmt 1 view .LVU175
+ 702              		.loc 1 202 16 is_stmt 0 view .LVU176
+ 703 0016 9FED020A 		vldr.32	s0, .L32
+ 704 001a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 705              	.LVL55:
+ 706              	.L33:
+ 707 001e 00BF     		.align	2
+ 708              	.L32:
+ 709 0020 00000000 		.word	0
+ 710              		.cfi_endproc
+ 711              	.LFE3918:
+ 713              		.section	.text._ZN9ButtonLED6updateEv,"ax",%progbits
+ 714              		.align	1
+ 715              		.p2align 2,,3
+ 716              		.global	_ZN9ButtonLED6updateEv
+ 717              		.syntax unified
+ 718              		.thumb
+ 719              		.thumb_func
+ 720              		.fpu fpv5-d16
+ 722              	_ZN9ButtonLED6updateEv:
+ 723              	.LVL56:
+ 724              	.LFB3917:
+ 155:LEDs.cpp      **** led.Update();
+ 725              		.loc 1 155 1 is_stmt 1 view -0
+ 726              		.cfi_startproc
+ 727              		@ args = 0, pretend = 0, frame = 0
+ 728              		@ frame_needed = 0, uses_anonymous_args = 0
+ 156:LEDs.cpp      **** sw.Debounce();
+ 729              		.loc 1 156 1 view .LVU178
+ 155:LEDs.cpp      **** led.Update();
+ 730              		.loc 1 155 1 is_stmt 0 view .LVU179
+ 731 0000 38B5     		push	{r3, r4, r5, lr}
+ 732              		.cfi_def_cfa_offset 16
+ 733              		.cfi_offset 3, -16
+ 734              		.cfi_offset 4, -12
+ 735              		.cfi_offset 5, -8
+ 736              		.cfi_offset 14, -4
+ 156:LEDs.cpp      **** sw.Debounce();
+ 737              		.loc 1 156 11 view .LVU180
+ 738 0002 00F11405 		add	r5, r0, #20
+ 155:LEDs.cpp      **** led.Update();
+ 739              		.loc 1 155 1 view .LVU181
+ 740 0006 0446     		mov	r4, r0
+ 156:LEDs.cpp      **** sw.Debounce();
+ 741              		.loc 1 156 11 view .LVU182
+ 742 0008 2846     		mov	r0, r5
+ 743              	.LVL57:
+ 156:LEDs.cpp      **** sw.Debounce();
+ 744              		.loc 1 156 11 view .LVU183
+ 745 000a FFF7FEFF 		bl	_ZN5daisy3Led6UpdateEv
+ 746              	.LVL58:
+ 157:LEDs.cpp      **** switch (switchtype_)
+ 747              		.loc 1 157 1 is_stmt 1 view .LVU184
+ 157:LEDs.cpp      **** switch (switchtype_)
+ 748              		.loc 1 157 12 is_stmt 0 view .LVU185
+ 749 000e 201D     		adds	r0, r4, #4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 21
+
+
+ 750 0010 FFF7FEFF 		bl	_ZN5daisy6Switch8DebounceEv
+ 751              	.LVL59:
+ 158:LEDs.cpp      **** {
+ 752              		.loc 1 158 1 is_stmt 1 view .LVU186
+ 158:LEDs.cpp      **** {
+ 753              		.loc 1 158 9 is_stmt 0 view .LVU187
+ 754 0014 94F83030 		ldrb	r3, [r4, #48]	@ zero_extendqisi2
+ 158:LEDs.cpp      **** {
+ 755              		.loc 1 158 1 view .LVU188
+ 756 0018 012B     		cmp	r3, #1
+ 757 001a 17D0     		beq	.L35
+ 758 001c 022B     		cmp	r3, #2
+ 759 001e 09D0     		beq	.L36
+ 760 0020 03B1     		cbz	r3, .L41
+ 761              	.L34:
+ 191:LEDs.cpp      **** 
+ 762              		.loc 1 191 1 view .LVU189
+ 763 0022 38BD     		pop	{r3, r4, r5, pc}
+ 764              	.LVL60:
+ 765              	.L41:
+ 160:LEDs.cpp      ****         if(sw.RisingEdge())
+ 766              		.loc 1 160 5 is_stmt 1 view .LVU190
+ 161:LEDs.cpp      ****         {
+ 767              		.loc 1 161 9 view .LVU191
+ 768              		.file 3 "../libdaisy/src/hid/switch.h"
    1:../libdaisy/src/hid/switch.h **** #pragma once
    2:../libdaisy/src/hid/switch.h **** #ifndef DSY_SWITCH_H
    3:../libdaisy/src/hid/switch.h **** #define DSY_SWITCH_H
@@ -995,6 +1258,9 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 1
   30:../libdaisy/src/hid/switch.h ****     };
   31:../libdaisy/src/hid/switch.h **** 
   32:../libdaisy/src/hid/switch.h ****     /** Specifies whether to use built-in Pull Up/Down resistors to hold button at a given state wh
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 22
+
+
   33:../libdaisy/src/hid/switch.h ****     enum Pull
   34:../libdaisy/src/hid/switch.h ****     {
   35:../libdaisy/src/hid/switch.h ****         PULL_UP,   /**< & */
@@ -1018,9 +1284,6 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 1
   53:../libdaisy/src/hid/switch.h **** 
   54:../libdaisy/src/hid/switch.h ****     /**
   55:../libdaisy/src/hid/switch.h ****        Simplified Init.
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 18
-
-
   56:../libdaisy/src/hid/switch.h ****        \param pin port/pin object to tell the switch which hardware pin to use.
   57:../libdaisy/src/hid/switch.h ****        \param update_rate the rate at which the Debounce() function will be called. (used for timin
   58:../libdaisy/src/hid/switch.h ****     */
@@ -1035,565 +1298,593 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 1
   67:../libdaisy/src/hid/switch.h **** 
   68:../libdaisy/src/hid/switch.h ****     /** \return true if a button was just pressed. */
   69:../libdaisy/src/hid/switch.h ****     inline bool RisingEdge() const { return state_ == 0x7f; }
- 625              		.loc 3 69 38 view .LVU160
-  83:LEDs.cpp      ****         {
- 626              		.loc 1 83 9 is_stmt 0 view .LVU161
- 627 0024 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
- 628 0026 7F2B     		cmp	r3, #127
- 629 0028 FBD1     		bne	.L21
-  85:LEDs.cpp      ****         }
- 630              		.loc 1 85 13 is_stmt 1 view .LVU162
-  85:LEDs.cpp      ****         }
- 631              		.loc 1 85 19 is_stmt 0 view .LVU163
- 632 002a 2046     		mov	r0, r4
- 113:LEDs.cpp      **** 
- 633              		.loc 1 113 1 view .LVU164
- 634 002c BDE83840 		pop	{r3, r4, r5, lr}
- 635              		.cfi_remember_state
- 636              		.cfi_restore 14
- 637              		.cfi_restore 5
- 638              		.cfi_restore 4
- 639              		.cfi_restore 3
- 640              		.cfi_def_cfa_offset 0
- 641              	.LVL47:
-  85:LEDs.cpp      ****         }
- 642              		.loc 1 85 19 view .LVU165
- 643 0030 FFF7FEBF 		b	_ZN9ButtonLED6toggleEv
- 644              	.LVL48:
- 645              	.L23:
- 646              		.cfi_restore_state
-  99:LEDs.cpp      ****         if(sw.Pressed())
- 647              		.loc 1 99 5 is_stmt 1 view .LVU166
- 100:LEDs.cpp      ****         {
- 648              		.loc 1 100 9 view .LVU167
+ 769              		.loc 3 69 38 view .LVU192
+ 161:LEDs.cpp      ****         {
+ 770              		.loc 1 161 9 is_stmt 0 view .LVU193
+ 771 0024 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
+ 772 0026 7F2B     		cmp	r3, #127
+ 773 0028 FBD1     		bne	.L34
+ 163:LEDs.cpp      ****         }
+ 774              		.loc 1 163 13 is_stmt 1 view .LVU194
+ 163:LEDs.cpp      ****         }
+ 775              		.loc 1 163 19 is_stmt 0 view .LVU195
+ 776 002a 2046     		mov	r0, r4
+ 191:LEDs.cpp      **** 
+ 777              		.loc 1 191 1 view .LVU196
+ 778 002c BDE83840 		pop	{r3, r4, r5, lr}
+ 779              		.cfi_remember_state
+ 780              		.cfi_restore 14
+ 781              		.cfi_restore 5
+ 782              		.cfi_restore 4
+ 783              		.cfi_restore 3
+ 784              		.cfi_def_cfa_offset 0
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 23
+
+
+ 785              	.LVL61:
+ 163:LEDs.cpp      ****         }
+ 786              		.loc 1 163 19 view .LVU197
+ 787 0030 FFF7FEBF 		b	_ZN9ButtonLED6toggleEv
+ 788              	.LVL62:
+ 789              	.L36:
+ 790              		.cfi_restore_state
+ 177:LEDs.cpp      ****         if(sw.Pressed())
+ 791              		.loc 1 177 5 is_stmt 1 view .LVU198
+ 178:LEDs.cpp      ****         {
+ 792              		.loc 1 178 9 view .LVU199
   70:../libdaisy/src/hid/switch.h **** 
   71:../libdaisy/src/hid/switch.h ****     /** \return true if the button was just released */
   72:../libdaisy/src/hid/switch.h ****     inline bool FallingEdge() const { return state_ == 0x80; }
   73:../libdaisy/src/hid/switch.h **** 
   74:../libdaisy/src/hid/switch.h ****     /** \return true if the button is held down (or if the toggle is on) */
   75:../libdaisy/src/hid/switch.h ****     inline bool Pressed() const { return state_ == 0xff; }
- 649              		.loc 3 75 35 view .LVU168
- 100:LEDs.cpp      ****         {
- 650              		.loc 1 100 9 is_stmt 0 view .LVU169
- 651 0034 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
- 652 0036 FF2B     		cmp	r3, #255
- 653 0038 13D0     		beq	.L29
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 19
+ 793              		.loc 3 75 35 view .LVU200
+ 178:LEDs.cpp      ****         {
+ 794              		.loc 1 178 9 is_stmt 0 view .LVU201
+ 795 0034 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
+ 796 0036 FF2B     		cmp	r3, #255
+ 797 0038 13D0     		beq	.L42
+ 798              	.LVL63:
+ 799              	.L39:
+ 184:LEDs.cpp      ****         }
+ 800              		.loc 1 184 13 is_stmt 1 view .LVU202
+ 801              	.LBB72:
+ 802              	.LBI72:
+ 203:LEDs.cpp      ****     } 
+ 204:LEDs.cpp      **** }
+ 205:LEDs.cpp      **** 
+ 206:LEDs.cpp      **** void ButtonLED::turnON()
+ 207:LEDs.cpp      **** {
+ 208:LEDs.cpp      ****     isON = true;
+ 209:LEDs.cpp      ****     led.Set(1.0f);
+ 210:LEDs.cpp      **** }
+ 211:LEDs.cpp      **** 
+ 212:LEDs.cpp      **** void ButtonLED::turnOFF()
+ 803              		.loc 1 212 6 view .LVU203
+ 804              	.LBB73:
+ 213:LEDs.cpp      **** {
+ 214:LEDs.cpp      ****     isON = false;
+ 805              		.loc 1 214 5 view .LVU204
+ 806              		.loc 1 214 10 is_stmt 0 view .LVU205
+ 807 003a 0023     		movs	r3, #0
+ 215:LEDs.cpp      ****     led.Set(0.0f);
+ 808              		.loc 1 215 12 view .LVU206
+ 809 003c 2846     		mov	r0, r5
+ 810 003e 9FED0D0A 		vldr.32	s0, .L43
+ 214:LEDs.cpp      ****     led.Set(0.0f);
+ 811              		.loc 1 214 10 view .LVU207
+ 812 0042 2370     		strb	r3, [r4]
+ 813              		.loc 1 215 5 is_stmt 1 view .LVU208
+ 814              	.LBE73:
+ 815              	.LBE72:
+ 191:LEDs.cpp      **** 
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 24
 
 
- 654              	.LVL49:
- 655              	.L26:
- 106:LEDs.cpp      ****         }
- 656              		.loc 1 106 13 is_stmt 1 view .LVU170
- 657              	.LBB66:
- 658              	.LBI66:
- 125:LEDs.cpp      ****     } 
- 126:LEDs.cpp      **** }
- 127:LEDs.cpp      **** 
- 128:LEDs.cpp      **** void ButtonLED::turnON()
- 129:LEDs.cpp      **** {
- 130:LEDs.cpp      ****     isON = true;
- 131:LEDs.cpp      ****     led.Set(1.0f);
- 132:LEDs.cpp      **** }
- 133:LEDs.cpp      **** 
- 134:LEDs.cpp      **** void ButtonLED::turnOFF()
- 659              		.loc 1 134 6 view .LVU171
- 660              	.LBB67:
- 135:LEDs.cpp      **** {
- 136:LEDs.cpp      ****     isON = false;
- 661              		.loc 1 136 5 view .LVU172
- 662              		.loc 1 136 10 is_stmt 0 view .LVU173
- 663 003a 0023     		movs	r3, #0
- 137:LEDs.cpp      ****     led.Set(0.0f);
- 664              		.loc 1 137 12 view .LVU174
- 665 003c 2846     		mov	r0, r5
- 666 003e 9FED0D0A 		vldr.32	s0, .L30
- 136:LEDs.cpp      ****     led.Set(0.0f);
- 667              		.loc 1 136 10 view .LVU175
- 668 0042 2370     		strb	r3, [r4]
- 669              		.loc 1 137 5 is_stmt 1 view .LVU176
- 670              	.LBE67:
- 671              	.LBE66:
- 113:LEDs.cpp      **** 
- 672              		.loc 1 113 1 is_stmt 0 view .LVU177
- 673 0044 BDE83840 		pop	{r3, r4, r5, lr}
- 674              		.cfi_remember_state
- 675              		.cfi_restore 14
- 676              		.cfi_restore 5
- 677              		.cfi_restore 4
- 678              		.cfi_restore 3
- 679              		.cfi_def_cfa_offset 0
- 680              	.LVL50:
- 681              	.LBB69:
- 682              	.LBB68:
- 683              		.loc 1 137 12 view .LVU178
- 684 0048 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 685              	.LVL51:
- 686              	.L22:
- 687              		.cfi_restore_state
- 688              		.loc 1 137 12 view .LVU179
- 689              	.LBE68:
- 690              	.LBE69:
-  89:LEDs.cpp      ****         if(!sw.Pressed())
- 691              		.loc 1 89 5 is_stmt 1 view .LVU180
-  90:LEDs.cpp      ****         {
- 692              		.loc 1 90 9 view .LVU181
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 20
+ 816              		.loc 1 191 1 is_stmt 0 view .LVU209
+ 817 0044 BDE83840 		pop	{r3, r4, r5, lr}
+ 818              		.cfi_remember_state
+ 819              		.cfi_restore 14
+ 820              		.cfi_restore 5
+ 821              		.cfi_restore 4
+ 822              		.cfi_restore 3
+ 823              		.cfi_def_cfa_offset 0
+ 824              	.LVL64:
+ 825              	.LBB75:
+ 826              	.LBB74:
+ 827              		.loc 1 215 12 view .LVU210
+ 828 0048 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 829              	.LVL65:
+ 830              	.L35:
+ 831              		.cfi_restore_state
+ 832              		.loc 1 215 12 view .LVU211
+ 833              	.LBE74:
+ 834              	.LBE75:
+ 167:LEDs.cpp      ****         if(!sw.Pressed())
+ 835              		.loc 1 167 5 is_stmt 1 view .LVU212
+ 168:LEDs.cpp      ****         {
+ 836              		.loc 1 168 9 view .LVU213
+ 837              		.loc 3 75 35 view .LVU214
+ 168:LEDs.cpp      ****         {
+ 838              		.loc 1 168 9 is_stmt 0 view .LVU215
+ 839 004c 627A     		ldrb	r2, [r4, #9]	@ zero_extendqisi2
+ 840 004e FF2A     		cmp	r2, #255
+ 841 0050 F3D0     		beq	.L39
+ 170:LEDs.cpp      ****         } 
+ 842              		.loc 1 170 13 is_stmt 1 view .LVU216
+ 843              	.LVL66:
+ 844              	.LBB76:
+ 845              	.LBI76:
+ 206:LEDs.cpp      **** {
+ 846              		.loc 1 206 6 view .LVU217
+ 847              	.LBB77:
+ 208:LEDs.cpp      ****     led.Set(1.0f);
+ 848              		.loc 1 208 5 view .LVU218
+ 209:LEDs.cpp      **** }
+ 849              		.loc 1 209 12 is_stmt 0 view .LVU219
+ 850 0052 2846     		mov	r0, r5
+ 208:LEDs.cpp      ****     led.Set(1.0f);
+ 851              		.loc 1 208 10 view .LVU220
+ 852 0054 2370     		strb	r3, [r4]
+ 209:LEDs.cpp      **** }
+ 853              		.loc 1 209 5 is_stmt 1 view .LVU221
+ 209:LEDs.cpp      **** }
+ 854              		.loc 1 209 12 is_stmt 0 view .LVU222
+ 855 0056 B7EE000A 		vmov.f32	s0, #1.0e+0
+ 856              	.LBE77:
+ 857              	.LBE76:
+ 191:LEDs.cpp      **** 
+ 858              		.loc 1 191 1 view .LVU223
+ 859 005a BDE83840 		pop	{r3, r4, r5, lr}
+ 860              		.cfi_remember_state
+ 861              		.cfi_restore 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 25
 
 
- 693              		.loc 3 75 35 view .LVU182
-  90:LEDs.cpp      ****         {
- 694              		.loc 1 90 9 is_stmt 0 view .LVU183
- 695 004c 627A     		ldrb	r2, [r4, #9]	@ zero_extendqisi2
- 696 004e FF2A     		cmp	r2, #255
- 697 0050 F3D0     		beq	.L26
-  92:LEDs.cpp      ****         } 
- 698              		.loc 1 92 13 is_stmt 1 view .LVU184
- 699              	.LVL52:
- 700              	.LBB70:
- 701              	.LBI70:
- 128:LEDs.cpp      **** {
- 702              		.loc 1 128 6 view .LVU185
- 703              	.LBB71:
- 130:LEDs.cpp      ****     led.Set(1.0f);
- 704              		.loc 1 130 5 view .LVU186
- 131:LEDs.cpp      **** }
- 705              		.loc 1 131 12 is_stmt 0 view .LVU187
- 706 0052 2846     		mov	r0, r5
- 130:LEDs.cpp      ****     led.Set(1.0f);
- 707              		.loc 1 130 10 view .LVU188
- 708 0054 2370     		strb	r3, [r4]
- 131:LEDs.cpp      **** }
- 709              		.loc 1 131 5 is_stmt 1 view .LVU189
- 131:LEDs.cpp      **** }
- 710              		.loc 1 131 12 is_stmt 0 view .LVU190
- 711 0056 B7EE000A 		vmov.f32	s0, #1.0e+0
- 712              	.LBE71:
- 713              	.LBE70:
- 113:LEDs.cpp      **** 
- 714              		.loc 1 113 1 view .LVU191
- 715 005a BDE83840 		pop	{r3, r4, r5, lr}
- 716              		.cfi_remember_state
- 717              		.cfi_restore 14
- 718              		.cfi_restore 5
- 719              		.cfi_restore 4
- 720              		.cfi_restore 3
- 721              		.cfi_def_cfa_offset 0
- 722              	.LVL53:
- 723              	.LBB73:
- 724              	.LBB72:
- 131:LEDs.cpp      **** }
- 725              		.loc 1 131 12 view .LVU192
- 726 005e FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 727              	.LVL54:
- 728              	.L29:
- 729              		.cfi_restore_state
- 131:LEDs.cpp      **** }
- 730              		.loc 1 131 12 view .LVU193
- 731              	.LBE72:
- 732              	.LBE73:
- 102:LEDs.cpp      ****         } 
- 733              		.loc 1 102 13 is_stmt 1 view .LVU194
- 734              	.LBB74:
- 735              	.LBI74:
- 128:LEDs.cpp      **** {
- 736              		.loc 1 128 6 view .LVU195
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 21
+ 862              		.cfi_restore 5
+ 863              		.cfi_restore 4
+ 864              		.cfi_restore 3
+ 865              		.cfi_def_cfa_offset 0
+ 866              	.LVL67:
+ 867              	.LBB79:
+ 868              	.LBB78:
+ 209:LEDs.cpp      **** }
+ 869              		.loc 1 209 12 view .LVU224
+ 870 005e FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 871              	.LVL68:
+ 872              	.L42:
+ 873              		.cfi_restore_state
+ 209:LEDs.cpp      **** }
+ 874              		.loc 1 209 12 view .LVU225
+ 875              	.LBE78:
+ 876              	.LBE79:
+ 180:LEDs.cpp      ****         } 
+ 877              		.loc 1 180 13 is_stmt 1 view .LVU226
+ 878              	.LBB80:
+ 879              	.LBI80:
+ 206:LEDs.cpp      **** {
+ 880              		.loc 1 206 6 view .LVU227
+ 881              	.LBB81:
+ 208:LEDs.cpp      ****     led.Set(1.0f);
+ 882              		.loc 1 208 5 view .LVU228
+ 208:LEDs.cpp      ****     led.Set(1.0f);
+ 883              		.loc 1 208 10 is_stmt 0 view .LVU229
+ 884 0062 0123     		movs	r3, #1
+ 209:LEDs.cpp      **** }
+ 885              		.loc 1 209 12 view .LVU230
+ 886 0064 2846     		mov	r0, r5
+ 887 0066 B7EE000A 		vmov.f32	s0, #1.0e+0
+ 208:LEDs.cpp      ****     led.Set(1.0f);
+ 888              		.loc 1 208 10 view .LVU231
+ 889 006a 2370     		strb	r3, [r4]
+ 209:LEDs.cpp      **** }
+ 890              		.loc 1 209 5 is_stmt 1 view .LVU232
+ 891              	.LBE81:
+ 892              	.LBE80:
+ 191:LEDs.cpp      **** 
+ 893              		.loc 1 191 1 is_stmt 0 view .LVU233
+ 894 006c BDE83840 		pop	{r3, r4, r5, lr}
+ 895              		.cfi_restore 14
+ 896              		.cfi_restore 5
+ 897              		.cfi_restore 4
+ 898              		.cfi_restore 3
+ 899              		.cfi_def_cfa_offset 0
+ 900              	.LVL69:
+ 901              	.LBB83:
+ 902              	.LBB82:
+ 209:LEDs.cpp      **** }
+ 903              		.loc 1 209 12 view .LVU234
+ 904 0070 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 905              	.LVL70:
+ 906              	.L44:
+ 209:LEDs.cpp      **** }
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 26
 
 
- 737              	.LBB75:
- 130:LEDs.cpp      ****     led.Set(1.0f);
- 738              		.loc 1 130 5 view .LVU196
- 130:LEDs.cpp      ****     led.Set(1.0f);
- 739              		.loc 1 130 10 is_stmt 0 view .LVU197
- 740 0062 0123     		movs	r3, #1
- 131:LEDs.cpp      **** }
- 741              		.loc 1 131 12 view .LVU198
- 742 0064 2846     		mov	r0, r5
- 743 0066 B7EE000A 		vmov.f32	s0, #1.0e+0
- 130:LEDs.cpp      ****     led.Set(1.0f);
- 744              		.loc 1 130 10 view .LVU199
- 745 006a 2370     		strb	r3, [r4]
- 131:LEDs.cpp      **** }
- 746              		.loc 1 131 5 is_stmt 1 view .LVU200
- 747              	.LBE75:
- 748              	.LBE74:
- 113:LEDs.cpp      **** 
- 749              		.loc 1 113 1 is_stmt 0 view .LVU201
- 750 006c BDE83840 		pop	{r3, r4, r5, lr}
- 751              		.cfi_restore 14
- 752              		.cfi_restore 5
- 753              		.cfi_restore 4
- 754              		.cfi_restore 3
- 755              		.cfi_def_cfa_offset 0
- 756              	.LVL55:
- 757              	.LBB77:
- 758              	.LBB76:
- 131:LEDs.cpp      **** }
- 759              		.loc 1 131 12 view .LVU202
- 760 0070 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 761              	.LVL56:
- 762              	.L31:
- 131:LEDs.cpp      **** }
- 763              		.loc 1 131 12 view .LVU203
- 764              		.align	2
- 765              	.L30:
- 766 0074 00000000 		.word	0
- 767              	.LBE76:
- 768              	.LBE77:
- 769              		.cfi_endproc
- 770              	.LFE3897:
- 772              		.section	.text._ZN9ButtonLED6turnONEv,"ax",%progbits
- 773              		.align	1
- 774              		.p2align 2,,3
- 775              		.global	_ZN9ButtonLED6turnONEv
- 776              		.syntax unified
- 777              		.thumb
- 778              		.thumb_func
- 779              		.fpu fpv5-d16
- 781              	_ZN9ButtonLED6turnONEv:
- 782              	.LVL57:
- 783              	.LFB3899:
- 129:LEDs.cpp      ****     isON = true;
- 784              		.loc 1 129 1 is_stmt 1 view -0
- 785              		.cfi_startproc
- 786              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 22
+ 907              		.loc 1 209 12 view .LVU235
+ 908              		.align	2
+ 909              	.L43:
+ 910 0074 00000000 		.word	0
+ 911              	.LBE82:
+ 912              	.LBE83:
+ 913              		.cfi_endproc
+ 914              	.LFE3917:
+ 916              		.section	.text._ZN9ButtonLED6turnONEv,"ax",%progbits
+ 917              		.align	1
+ 918              		.p2align 2,,3
+ 919              		.global	_ZN9ButtonLED6turnONEv
+ 920              		.syntax unified
+ 921              		.thumb
+ 922              		.thumb_func
+ 923              		.fpu fpv5-d16
+ 925              	_ZN9ButtonLED6turnONEv:
+ 926              	.LVL71:
+ 927              	.LFB3919:
+ 207:LEDs.cpp      ****     isON = true;
+ 928              		.loc 1 207 1 is_stmt 1 view -0
+ 929              		.cfi_startproc
+ 930              		@ args = 0, pretend = 0, frame = 0
+ 931              		@ frame_needed = 0, uses_anonymous_args = 0
+ 932              		@ link register save eliminated.
+ 208:LEDs.cpp      ****     led.Set(1.0f);
+ 933              		.loc 1 208 5 view .LVU237
+ 208:LEDs.cpp      ****     led.Set(1.0f);
+ 934              		.loc 1 208 10 is_stmt 0 view .LVU238
+ 935 0000 0123     		movs	r3, #1
+ 209:LEDs.cpp      **** }
+ 936              		.loc 1 209 12 view .LVU239
+ 937 0002 B7EE000A 		vmov.f32	s0, #1.0e+0
+ 208:LEDs.cpp      ****     led.Set(1.0f);
+ 938              		.loc 1 208 10 view .LVU240
+ 939 0006 00F8143B 		strb	r3, [r0], #20
+ 940              	.LVL72:
+ 209:LEDs.cpp      **** }
+ 941              		.loc 1 209 5 is_stmt 1 view .LVU241
+ 209:LEDs.cpp      **** }
+ 942              		.loc 1 209 12 is_stmt 0 view .LVU242
+ 943 000a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 944              	.LVL73:
+ 209:LEDs.cpp      **** }
+ 945              		.loc 1 209 12 view .LVU243
+ 946              		.cfi_endproc
+ 947              	.LFE3919:
+ 949 000e 00BF     		.section	.text._ZN9ButtonLED7turnOFFEv,"ax",%progbits
+ 950              		.align	1
+ 951              		.p2align 2,,3
+ 952              		.global	_ZN9ButtonLED7turnOFFEv
+ 953              		.syntax unified
+ 954              		.thumb
+ 955              		.thumb_func
+ 956              		.fpu fpv5-d16
+ 958              	_ZN9ButtonLED7turnOFFEv:
+ 959              	.LVL74:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 27
 
 
- 787              		@ frame_needed = 0, uses_anonymous_args = 0
- 788              		@ link register save eliminated.
- 130:LEDs.cpp      ****     led.Set(1.0f);
- 789              		.loc 1 130 5 view .LVU205
- 130:LEDs.cpp      ****     led.Set(1.0f);
- 790              		.loc 1 130 10 is_stmt 0 view .LVU206
- 791 0000 0123     		movs	r3, #1
- 131:LEDs.cpp      **** }
- 792              		.loc 1 131 12 view .LVU207
- 793 0002 B7EE000A 		vmov.f32	s0, #1.0e+0
- 130:LEDs.cpp      ****     led.Set(1.0f);
- 794              		.loc 1 130 10 view .LVU208
- 795 0006 00F8143B 		strb	r3, [r0], #20
- 796              	.LVL58:
- 131:LEDs.cpp      **** }
- 797              		.loc 1 131 5 is_stmt 1 view .LVU209
- 131:LEDs.cpp      **** }
- 798              		.loc 1 131 12 is_stmt 0 view .LVU210
- 799 000a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 800              	.LVL59:
- 131:LEDs.cpp      **** }
- 801              		.loc 1 131 12 view .LVU211
- 802              		.cfi_endproc
- 803              	.LFE3899:
- 805 000e 00BF     		.section	.text._ZN9ButtonLED7turnOFFEv,"ax",%progbits
- 806              		.align	1
- 807              		.p2align 2,,3
- 808              		.global	_ZN9ButtonLED7turnOFFEv
- 809              		.syntax unified
- 810              		.thumb
- 811              		.thumb_func
- 812              		.fpu fpv5-d16
- 814              	_ZN9ButtonLED7turnOFFEv:
- 815              	.LVL60:
- 816              	.LFB3900:
- 135:LEDs.cpp      ****     isON = false;
- 817              		.loc 1 135 1 is_stmt 1 view -0
- 818              		.cfi_startproc
- 819              		@ args = 0, pretend = 0, frame = 0
- 820              		@ frame_needed = 0, uses_anonymous_args = 0
- 821              		@ link register save eliminated.
- 136:LEDs.cpp      ****     led.Set(0.0f);
- 822              		.loc 1 136 5 view .LVU213
- 136:LEDs.cpp      ****     led.Set(0.0f);
- 823              		.loc 1 136 10 is_stmt 0 view .LVU214
- 824 0000 0023     		movs	r3, #0
- 825              		.loc 1 137 12 view .LVU215
- 826 0002 9FED030A 		vldr.32	s0, .L34
- 136:LEDs.cpp      ****     led.Set(0.0f);
- 827              		.loc 1 136 10 view .LVU216
- 828 0006 00F8143B 		strb	r3, [r0], #20
- 829              	.LVL61:
- 830              		.loc 1 137 5 is_stmt 1 view .LVU217
- 831              		.loc 1 137 12 is_stmt 0 view .LVU218
- 832 000a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 833              	.LVL62:
- 834              	.L35:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 23
+ 960              	.LFB3920:
+ 213:LEDs.cpp      ****     isON = false;
+ 961              		.loc 1 213 1 is_stmt 1 view -0
+ 962              		.cfi_startproc
+ 963              		@ args = 0, pretend = 0, frame = 0
+ 964              		@ frame_needed = 0, uses_anonymous_args = 0
+ 965              		@ link register save eliminated.
+ 214:LEDs.cpp      ****     led.Set(0.0f);
+ 966              		.loc 1 214 5 view .LVU245
+ 214:LEDs.cpp      ****     led.Set(0.0f);
+ 967              		.loc 1 214 10 is_stmt 0 view .LVU246
+ 968 0000 0023     		movs	r3, #0
+ 969              		.loc 1 215 12 view .LVU247
+ 970 0002 9FED030A 		vldr.32	s0, .L47
+ 214:LEDs.cpp      ****     led.Set(0.0f);
+ 971              		.loc 1 214 10 view .LVU248
+ 972 0006 00F8143B 		strb	r3, [r0], #20
+ 973              	.LVL75:
+ 974              		.loc 1 215 5 is_stmt 1 view .LVU249
+ 975              		.loc 1 215 12 is_stmt 0 view .LVU250
+ 976 000a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 977              	.LVL76:
+ 978              	.L48:
+ 979              		.loc 1 215 12 view .LVU251
+ 980 000e 00BF     		.align	2
+ 981              	.L47:
+ 982 0010 00000000 		.word	0
+ 983              		.cfi_endproc
+ 984              	.LFE3920:
+ 986              		.section	.text._ZN9ButtonLED8getStateEv,"ax",%progbits
+ 987              		.align	1
+ 988              		.p2align 2,,3
+ 989              		.global	_ZN9ButtonLED8getStateEv
+ 990              		.syntax unified
+ 991              		.thumb
+ 992              		.thumb_func
+ 993              		.fpu fpv5-d16
+ 995              	_ZN9ButtonLED8getStateEv:
+ 996              	.LVL77:
+ 997              	.LFB3921:
+ 216:LEDs.cpp      **** }
+ 217:LEDs.cpp      **** 
+ 218:LEDs.cpp      **** bool ButtonLED::getState() //getter function, so nothing else can change isON
+ 219:LEDs.cpp      **** {
+ 998              		.loc 1 219 1 is_stmt 1 view -0
+ 999              		.cfi_startproc
+ 1000              		@ args = 0, pretend = 0, frame = 0
+ 1001              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1002              		@ link register save eliminated.
+ 220:LEDs.cpp      ****     return isON;
+ 1003              		.loc 1 220 5 view .LVU253
+ 221:LEDs.cpp      **** }
+ 1004              		.loc 1 221 1 is_stmt 0 view .LVU254
+ 1005 0000 0078     		ldrb	r0, [r0]	@ zero_extendqisi2
+ 1006              	.LVL78:
+ 1007              		.loc 1 221 1 view .LVU255
+ 1008 0002 7047     		bx	lr
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 28
 
 
- 835              		.loc 1 137 12 view .LVU219
- 836 000e 00BF     		.align	2
- 837              	.L34:
- 838 0010 00000000 		.word	0
- 839              		.cfi_endproc
- 840              	.LFE3900:
- 842              		.section	.text._ZN9ButtonLED8getStateEv,"ax",%progbits
- 843              		.align	1
- 844              		.p2align 2,,3
- 845              		.global	_ZN9ButtonLED8getStateEv
- 846              		.syntax unified
- 847              		.thumb
- 848              		.thumb_func
- 849              		.fpu fpv5-d16
- 851              	_ZN9ButtonLED8getStateEv:
- 852              	.LVL63:
- 853              	.LFB3901:
- 138:LEDs.cpp      **** }
- 139:LEDs.cpp      **** 
- 140:LEDs.cpp      **** bool ButtonLED::getState() //getter function, so nothing else can change isON
- 141:LEDs.cpp      **** {
- 854              		.loc 1 141 1 is_stmt 1 view -0
- 855              		.cfi_startproc
- 856              		@ args = 0, pretend = 0, frame = 0
- 857              		@ frame_needed = 0, uses_anonymous_args = 0
- 858              		@ link register save eliminated.
- 142:LEDs.cpp      ****     return isON;
- 859              		.loc 1 142 5 view .LVU221
- 143:LEDs.cpp      **** }
- 860              		.loc 1 143 1 is_stmt 0 view .LVU222
- 861 0000 0078     		ldrb	r0, [r0]	@ zero_extendqisi2
- 862              	.LVL64:
- 863              		.loc 1 143 1 view .LVU223
- 864 0002 7047     		bx	lr
- 865              		.cfi_endproc
- 866              	.LFE3901:
- 868              		.section	.text._ZN9ButtonLED10RisingEdgeEv,"ax",%progbits
- 869              		.align	1
- 870              		.p2align 2,,3
- 871              		.global	_ZN9ButtonLED10RisingEdgeEv
- 872              		.syntax unified
- 873              		.thumb
- 874              		.thumb_func
- 875              		.fpu fpv5-d16
- 877              	_ZN9ButtonLED10RisingEdgeEv:
- 878              	.LVL65:
- 879              	.LFB3902:
- 144:LEDs.cpp      **** 
- 145:LEDs.cpp      **** bool ButtonLED::RisingEdge()    //access switch rising and falling edges
- 146:LEDs.cpp      **** {
- 880              		.loc 1 146 1 is_stmt 1 view -0
- 881              		.cfi_startproc
- 882              		@ args = 0, pretend = 0, frame = 0
- 883              		@ frame_needed = 0, uses_anonymous_args = 0
- 884              		@ link register save eliminated.
- 147:LEDs.cpp      ****     return sw.RisingEdge();
- 885              		.loc 1 147 5 view .LVU225
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 24
-
-
- 886              	.LBB78:
- 887              	.LBI78:
+ 1009              		.cfi_endproc
+ 1010              	.LFE3921:
+ 1012              		.section	.text._ZN9ButtonLED10RisingEdgeEv,"ax",%progbits
+ 1013              		.align	1
+ 1014              		.p2align 2,,3
+ 1015              		.global	_ZN9ButtonLED10RisingEdgeEv
+ 1016              		.syntax unified
+ 1017              		.thumb
+ 1018              		.thumb_func
+ 1019              		.fpu fpv5-d16
+ 1021              	_ZN9ButtonLED10RisingEdgeEv:
+ 1022              	.LVL79:
+ 1023              	.LFB3922:
+ 222:LEDs.cpp      **** 
+ 223:LEDs.cpp      **** bool ButtonLED::RisingEdge()    //access switch rising and falling edges
+ 224:LEDs.cpp      **** {
+ 1024              		.loc 1 224 1 is_stmt 1 view -0
+ 1025              		.cfi_startproc
+ 1026              		@ args = 0, pretend = 0, frame = 0
+ 1027              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1028              		@ link register save eliminated.
+ 225:LEDs.cpp      ****     return sw.RisingEdge();
+ 1029              		.loc 1 225 5 view .LVU257
+ 1030              	.LBB84:
+ 1031              	.LBI84:
   69:../libdaisy/src/hid/switch.h **** 
- 888              		.loc 3 69 17 view .LVU226
- 889              	.LBB79:
+ 1032              		.loc 3 69 17 view .LVU258
+ 1033              	.LBB85:
   69:../libdaisy/src/hid/switch.h **** 
- 890              		.loc 3 69 38 view .LVU227
+ 1034              		.loc 3 69 38 view .LVU259
   69:../libdaisy/src/hid/switch.h **** 
- 891              		.loc 3 69 55 is_stmt 0 view .LVU228
- 892 0000 407A     		ldrb	r0, [r0, #9]	@ zero_extendqisi2
- 893              	.LVL66:
+ 1035              		.loc 3 69 55 is_stmt 0 view .LVU260
+ 1036 0000 407A     		ldrb	r0, [r0, #9]	@ zero_extendqisi2
+ 1037              	.LVL80:
   69:../libdaisy/src/hid/switch.h **** 
- 894              		.loc 3 69 55 view .LVU229
- 895              	.LBE79:
- 896              	.LBE78:
- 148:LEDs.cpp      **** }
- 897              		.loc 1 148 1 view .LVU230
- 898 0002 A0F17F00 		sub	r0, #127
- 899 0006 B0FA80F0 		clz	r0, r0
- 900 000a 4009     		lsrs	r0, r0, #5
- 901 000c 7047     		bx	lr
- 902              		.cfi_endproc
- 903              	.LFE3902:
- 905              		.section	.text._ZN9ButtonLED11FallingEdgeEv,"ax",%progbits
- 906              		.align	1
- 907              		.p2align 2,,3
- 908              		.global	_ZN9ButtonLED11FallingEdgeEv
- 909              		.syntax unified
- 910              		.thumb
- 911              		.thumb_func
- 912              		.fpu fpv5-d16
- 914              	_ZN9ButtonLED11FallingEdgeEv:
- 915              	.LVL67:
- 916              	.LFB3903:
- 149:LEDs.cpp      **** 
- 150:LEDs.cpp      **** bool ButtonLED::FallingEdge()
- 151:LEDs.cpp      **** {
- 917              		.loc 1 151 1 is_stmt 1 view -0
- 918              		.cfi_startproc
- 919              		@ args = 0, pretend = 0, frame = 0
- 920              		@ frame_needed = 0, uses_anonymous_args = 0
- 921              		@ link register save eliminated.
- 152:LEDs.cpp      ****     return sw.FallingEdge();
- 922              		.loc 1 152 5 view .LVU232
- 923              	.LBB80:
- 924              	.LBI80:
-  72:../libdaisy/src/hid/switch.h **** 
- 925              		.loc 3 72 17 view .LVU233
- 926              	.LBB81:
-  72:../libdaisy/src/hid/switch.h **** 
- 927              		.loc 3 72 39 view .LVU234
-  72:../libdaisy/src/hid/switch.h **** 
- 928              		.loc 3 72 56 is_stmt 0 view .LVU235
- 929 0000 407A     		ldrb	r0, [r0, #9]	@ zero_extendqisi2
- 930              	.LVL68:
-  72:../libdaisy/src/hid/switch.h **** 
- 931              		.loc 3 72 56 view .LVU236
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 25
+ 1038              		.loc 3 69 55 view .LVU261
+ 1039              	.LBE85:
+ 1040              	.LBE84:
+ 226:LEDs.cpp      **** }
+ 1041              		.loc 1 226 1 view .LVU262
+ 1042 0002 A0F17F00 		sub	r0, #127
+ 1043 0006 B0FA80F0 		clz	r0, r0
+ 1044 000a 4009     		lsrs	r0, r0, #5
+ 1045 000c 7047     		bx	lr
+ 1046              		.cfi_endproc
+ 1047              	.LFE3922:
+ 1049              		.section	.text._ZN9ButtonLED11FallingEdgeEv,"ax",%progbits
+ 1050              		.align	1
+ 1051              		.p2align 2,,3
+ 1052              		.global	_ZN9ButtonLED11FallingEdgeEv
+ 1053              		.syntax unified
+ 1054              		.thumb
+ 1055              		.thumb_func
+ 1056              		.fpu fpv5-d16
+ 1058              	_ZN9ButtonLED11FallingEdgeEv:
+ 1059              	.LVL81:
+ 1060              	.LFB3923:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 29
 
 
- 932              	.LBE81:
- 933              	.LBE80:
- 153:LEDs.cpp      **** }
- 934              		.loc 1 153 1 view .LVU237
- 935 0002 A0F18000 		sub	r0, #128
- 936 0006 B0FA80F0 		clz	r0, r0
- 937 000a 4009     		lsrs	r0, r0, #5
- 938 000c 7047     		bx	lr
- 939              		.cfi_endproc
- 940              	.LFE3903:
- 942              		.section	.text._ZN9ButtonLED7LED_setEf,"ax",%progbits
- 943              		.align	1
- 944              		.p2align 2,,3
- 945              		.global	_ZN9ButtonLED7LED_setEf
- 946              		.syntax unified
- 947              		.thumb
- 948              		.thumb_func
- 949              		.fpu fpv5-d16
- 951              	_ZN9ButtonLED7LED_setEf:
- 952              	.LVL69:
- 953              	.LFB3904:
- 154:LEDs.cpp      **** 
- 155:LEDs.cpp      **** void ButtonLED::LED_set(float brightness)
- 156:LEDs.cpp      **** {
- 954              		.loc 1 156 1 is_stmt 1 view -0
- 955              		.cfi_startproc
- 956              		@ args = 0, pretend = 0, frame = 0
- 957              		@ frame_needed = 0, uses_anonymous_args = 0
- 958              		@ link register save eliminated.
- 157:LEDs.cpp      ****     led.Set(brightness);
- 959              		.loc 1 157 5 view .LVU239
- 960              		.loc 1 157 12 is_stmt 0 view .LVU240
- 961 0000 1430     		adds	r0, r0, #20
- 962              	.LVL70:
- 963              		.loc 1 157 12 view .LVU241
- 964 0002 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 965              	.LVL71:
- 966              		.loc 1 157 12 view .LVU242
- 967              		.cfi_endproc
- 968              	.LFE3904:
- 970 0006 00BF     		.text
- 971              	.Letext0:
- 972              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
- 973              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
- 974              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
- 975              		.file 7 "../libdaisy/Drivers/CMSIS/Include/core_cm7.h"
- 976              		.file 8 "../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
- 977              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
- 978              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 979              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 980              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 981              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 982              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 983              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 984              		.file 16 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 985              		.file 17 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 986              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 26
+ 227:LEDs.cpp      **** 
+ 228:LEDs.cpp      **** bool ButtonLED::FallingEdge()
+ 229:LEDs.cpp      **** {
+ 1061              		.loc 1 229 1 is_stmt 1 view -0
+ 1062              		.cfi_startproc
+ 1063              		@ args = 0, pretend = 0, frame = 0
+ 1064              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1065              		@ link register save eliminated.
+ 230:LEDs.cpp      ****     return sw.FallingEdge();
+ 1066              		.loc 1 230 5 view .LVU264
+ 1067              	.LBB86:
+ 1068              	.LBI86:
+  72:../libdaisy/src/hid/switch.h **** 
+ 1069              		.loc 3 72 17 view .LVU265
+ 1070              	.LBB87:
+  72:../libdaisy/src/hid/switch.h **** 
+ 1071              		.loc 3 72 39 view .LVU266
+  72:../libdaisy/src/hid/switch.h **** 
+ 1072              		.loc 3 72 56 is_stmt 0 view .LVU267
+ 1073 0000 407A     		ldrb	r0, [r0, #9]	@ zero_extendqisi2
+ 1074              	.LVL82:
+  72:../libdaisy/src/hid/switch.h **** 
+ 1075              		.loc 3 72 56 view .LVU268
+ 1076              	.LBE87:
+ 1077              	.LBE86:
+ 231:LEDs.cpp      **** }
+ 1078              		.loc 1 231 1 view .LVU269
+ 1079 0002 A0F18000 		sub	r0, #128
+ 1080 0006 B0FA80F0 		clz	r0, r0
+ 1081 000a 4009     		lsrs	r0, r0, #5
+ 1082 000c 7047     		bx	lr
+ 1083              		.cfi_endproc
+ 1084              	.LFE3923:
+ 1086              		.section	.text._ZN9ButtonLED7LED_setEf,"ax",%progbits
+ 1087              		.align	1
+ 1088              		.p2align 2,,3
+ 1089              		.global	_ZN9ButtonLED7LED_setEf
+ 1090              		.syntax unified
+ 1091              		.thumb
+ 1092              		.thumb_func
+ 1093              		.fpu fpv5-d16
+ 1095              	_ZN9ButtonLED7LED_setEf:
+ 1096              	.LVL83:
+ 1097              	.LFB3924:
+ 232:LEDs.cpp      **** 
+ 233:LEDs.cpp      **** void ButtonLED::LED_set(float brightness)
+ 234:LEDs.cpp      **** {
+ 1098              		.loc 1 234 1 is_stmt 1 view -0
+ 1099              		.cfi_startproc
+ 1100              		@ args = 0, pretend = 0, frame = 0
+ 1101              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1102              		@ link register save eliminated.
+ 235:LEDs.cpp      ****     led.Set(brightness);
+ 1103              		.loc 1 235 5 view .LVU271
+ 1104              		.loc 1 235 12 is_stmt 0 view .LVU272
+ 1105 0000 1430     		adds	r0, r0, #20
+ 1106              	.LVL84:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 30
 
 
- 987              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 988              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 989              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 990              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 991              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 992              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 993              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 994              		.file 26 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 995              		.file 27 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 996              		.file 28 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 997              		.file 29 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 998              		.file 30 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 999              		.file 31 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1000              		.file 32 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
- 1001              		.file 33 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
- 1002              		.file 34 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
- 1003              		.file 35 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
- 1004              		.file 36 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
- 1005              		.file 37 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1006              		.file 38 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
- 1007              		.file 39 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
- 1008              		.file 40 "../DaisySP/Source/Control/adenv.h"
- 1009              		.file 41 "../DaisySP/Source/Utility/dsp.h"
- 1010              		.file 42 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
- 1011              		.file 43 "<built-in>"
- 1012              		.file 44 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
- 1013              		.file 45 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/locale.h"
- 1014              		.file 46 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/ctype.h"
- 1015              		.file 47 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
- 1016              		.file 48 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
- 1017              		.file 49 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1018              		.file 50 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
- 1019              		.file 51 "../libdaisy/src/daisy_core.h"
- 1020              		.file 52 "../libdaisy/src/per/tim.h"
- 1021              		.file 53 "../libdaisy/src/util/wav_format.h"
- 1022              		.file 54 "../libdaisy/src/hid/led.h"
- 1023              		.file 55 "../libdaisy/src/per/gpio.h"
- 1024              		.file 56 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/unistd
- 1025              		.file 57 "../libdaisy/src/util/oled_fonts.h"
- 1026              		.file 58 "../libdaisy/Middlewares/Third_Party/FatFs/src/integer.h"
- 1027              		.file 59 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h"
- 1028              		.file 60 "../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h"
- 1029              		.file 61 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
- 1030              		.file 62 "../libdaisy/src/util/sd_diskio.h"
- 1031              		.file 63 "../libdaisy/src/sys/fatfs.h"
- 1032              		.file 64 "LEDs.h"
- 1033              		.file 65 "../libdaisy/src/dev/sr_595.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s 			page 27
+ 1107              		.loc 1 235 12 view .LVU273
+ 1108 0002 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 1109              	.LVL85:
+ 1110              		.loc 1 235 12 view .LVU274
+ 1111              		.cfi_endproc
+ 1112              	.LFE3924:
+ 1114 0006 00BF     		.section	.rodata.CSWTCH.28,"a"
+ 1115              		.align	2
+ 1116              		.set	.LANCHOR0,. + 0
+ 1119              	CSWTCH.28:
+ 1120 0000 00001042 		.word	1108344832
+ 1121 0004 0000F041 		.word	1106247680
+ 1122 0008 0000C041 		.word	1103101952
+ 1123 000c 00009041 		.word	1099956224
+ 1124 0010 00004041 		.word	1094713344
+ 1125 0014 0000C040 		.word	1086324736
+ 1126 0018 00004040 		.word	1077936128
+ 1127 001c 00000040 		.word	1073741824
+ 1128 0020 0000803F 		.word	1065353216
+ 1129 0024 0000803F 		.word	1065353216
+ 1130 0028 0000803F 		.word	1065353216
+ 1131              		.text
+ 1132              	.Letext0:
+ 1133              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+ 1134              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
+ 1135              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
+ 1136              		.file 7 "../libdaisy/Drivers/CMSIS/Include/core_cm7.h"
+ 1137              		.file 8 "../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
+ 1138              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
+ 1139              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1140              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1141              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1142              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1143              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1144              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1145              		.file 16 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1146              		.file 17 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1147              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1148              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1149              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1150              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1151              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1152              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1153              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1154              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1155              		.file 26 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1156              		.file 27 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1157              		.file 28 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1158              		.file 29 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1159              		.file 30 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1160              		.file 31 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1161              		.file 32 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
+ 1162              		.file 33 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
+ 1163              		.file 34 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
+ 1164              		.file 35 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
+ 1165              		.file 36 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ 1166              		.file 37 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 31
+
+
+ 1167              		.file 38 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
+ 1168              		.file 39 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
+ 1169              		.file 40 "../DaisySP/Source/Control/adenv.h"
+ 1170              		.file 41 "../DaisySP/Source/Utility/dsp.h"
+ 1171              		.file 42 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
+ 1172              		.file 43 "<built-in>"
+ 1173              		.file 44 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
+ 1174              		.file 45 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/locale.h"
+ 1175              		.file 46 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/ctype.h"
+ 1176              		.file 47 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
+ 1177              		.file 48 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
+ 1178              		.file 49 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1179              		.file 50 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
+ 1180              		.file 51 "../libdaisy/src/daisy_core.h"
+ 1181              		.file 52 "../libdaisy/src/per/tim.h"
+ 1182              		.file 53 "../libdaisy/src/util/wav_format.h"
+ 1183              		.file 54 "../libdaisy/src/hid/led.h"
+ 1184              		.file 55 "../libdaisy/src/per/gpio.h"
+ 1185              		.file 56 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/unistd
+ 1186              		.file 57 "../libdaisy/src/util/oled_fonts.h"
+ 1187              		.file 58 "../libdaisy/Middlewares/Third_Party/FatFs/src/integer.h"
+ 1188              		.file 59 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h"
+ 1189              		.file 60 "../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h"
+ 1190              		.file 61 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
+ 1191              		.file 62 "../libdaisy/src/util/sd_diskio.h"
+ 1192              		.file 63 "../libdaisy/src/sys/fatfs.h"
+ 1193              		.file 64 "constants.h"
+ 1194              		.file 65 "LEDs.h"
+ 1195              		.file 66 "../libdaisy/src/dev/sr_595.h"
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 32
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 LEDs.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:17     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:26     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 _ZN8TempoLED4initE12dsy_gpio_pinf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:233    .text._ZN8TempoLED4initE12dsy_gpio_pinf:000000000000008c $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:239    .text._ZN8TempoLED8setTempoEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:247    .text._ZN8TempoLED8setTempoEf:0000000000000000 _ZN8TempoLED8setTempoEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:290    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:298    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 _ZN8TempoLED10resetPhaseEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:325    .text._ZN8TempoLED6updateEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:333    .text._ZN8TempoLED6updateEv:0000000000000000 _ZN8TempoLED6updateEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:387    .text._ZN8TempoLED7LED_setEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:395    .text._ZN8TempoLED7LED_setEf:0000000000000000 _ZN8TempoLED7LED_setEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:412    .text._ZN8TempoLED5isEOCEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:420    .text._ZN8TempoLED5isEOCEv:0000000000000000 _ZN8TempoLED5isEOCEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:439    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:447    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 _ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:517    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000044 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:523    .text._ZN9ButtonLED6toggleEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:531    .text._ZN9ButtonLED6toggleEv:0000000000000000 _ZN9ButtonLED6toggleEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:565    .text._ZN9ButtonLED6toggleEv:0000000000000020 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:570    .text._ZN9ButtonLED6updateEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:578    .text._ZN9ButtonLED6updateEv:0000000000000000 _ZN9ButtonLED6updateEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:766    .text._ZN9ButtonLED6updateEv:0000000000000074 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:773    .text._ZN9ButtonLED6turnONEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:781    .text._ZN9ButtonLED6turnONEv:0000000000000000 _ZN9ButtonLED6turnONEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:806    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:814    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 _ZN9ButtonLED7turnOFFEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:838    .text._ZN9ButtonLED7turnOFFEv:0000000000000010 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:843    .text._ZN9ButtonLED8getStateEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:851    .text._ZN9ButtonLED8getStateEv:0000000000000000 _ZN9ButtonLED8getStateEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:869    .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:877    .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 _ZN9ButtonLED10RisingEdgeEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:906    .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:914    .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 _ZN9ButtonLED11FallingEdgeEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:943    .text._ZN9ButtonLED7LED_setEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccL1Y5Xs.s:951    .text._ZN9ButtonLED7LED_setEf:0000000000000000 _ZN9ButtonLED7LED_setEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:17     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:26     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 _ZN8TempoLED4initE12dsy_gpio_pinf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:233    .text._ZN8TempoLED4initE12dsy_gpio_pinf:000000000000008c $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:239    .text._ZN8TempoLED8setTempoEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:247    .text._ZN8TempoLED8setTempoEf:0000000000000000 _ZN8TempoLED8setTempoEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:290    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:298    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 _ZN8TempoLED10resetPhaseEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:325    .text._ZN8TempoLED6updateEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:333    .text._ZN8TempoLED6updateEv:0000000000000000 _ZN8TempoLED6updateEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:387    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:395    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 _ZN8TempoLED6updateE9TempoDivsf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:483    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000050 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:489    .text._ZN8TempoLED7LED_setEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:497    .text._ZN8TempoLED7LED_setEf:0000000000000000 _ZN8TempoLED7LED_setEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:514    .text._ZN8TempoLED5isEOCEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:522    .text._ZN8TempoLED5isEOCEv:0000000000000000 _ZN8TempoLED5isEOCEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:541    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:549    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 _ZN8TempoLED9GetDivIntE9TempoDivs
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:578    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000018 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:583    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:591    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 _ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:661    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000044 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:667    .text._ZN9ButtonLED6toggleEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:675    .text._ZN9ButtonLED6toggleEv:0000000000000000 _ZN9ButtonLED6toggleEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:709    .text._ZN9ButtonLED6toggleEv:0000000000000020 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:714    .text._ZN9ButtonLED6updateEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:722    .text._ZN9ButtonLED6updateEv:0000000000000000 _ZN9ButtonLED6updateEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:910    .text._ZN9ButtonLED6updateEv:0000000000000074 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:917    .text._ZN9ButtonLED6turnONEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:925    .text._ZN9ButtonLED6turnONEv:0000000000000000 _ZN9ButtonLED6turnONEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:950    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:958    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 _ZN9ButtonLED7turnOFFEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:982    .text._ZN9ButtonLED7turnOFFEv:0000000000000010 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:987    .text._ZN9ButtonLED8getStateEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:995    .text._ZN9ButtonLED8getStateEv:0000000000000000 _ZN9ButtonLED8getStateEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1013   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1021   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 _ZN9ButtonLED10RisingEdgeEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1050   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1058   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 _ZN9ButtonLED11FallingEdgeEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1087   .text._ZN9ButtonLED7LED_setEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1095   .text._ZN9ButtonLED7LED_setEf:0000000000000000 _ZN9ButtonLED7LED_setEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1115   .rodata.CSWTCH.28:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1119   .rodata.CSWTCH.28:0000000000000000 CSWTCH.28
 
 UNDEFINED SYMBOLS
 _ZN5daisy3Led4InitE12dsy_gpio_pinbf
 _ZN5daisy3Led3SetEf
 _ZN5daisy3Led6UpdateEv
-_ZN7daisysp10Oscillator12CalcPhaseIncEf
-_ZN7daisysp10Oscillator7ProcessEv
+_ZN7daisysp12Oscillator_p12CalcPhaseIncEf
+_ZN7daisysp12Oscillator_p7ProcessEv
+sinf
 _ZN5daisy6Switch4InitE12dsy_gpio_pinf
 _ZN5daisy6Switch8DebounceEv

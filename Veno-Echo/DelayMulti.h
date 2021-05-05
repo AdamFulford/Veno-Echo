@@ -54,12 +54,8 @@ DelayMulti() {}
 //initialises delay class
 void init(dsy_gpio_pin ledpin, float samplerate);
 
-//Updates delay time in samples
-bool SetDelayTime(float delaytime);
-
-//converts potentiometer float input (0.0 - 1.0) to samples and then updates delaytime
-void SetDelayTime_pot(float delaytime_pot, bool invert = false);
-
+//Updates delay time from pot value and base tempo (set ratio)
+bool SetDelayTime(float delaytime_pot, float baseTempo, bool syncMode);
 
 //Updates xfades, updates delayline with delayTime[] + modulation and 
 //returns combined output from delay heads, and updates LEDs. 
@@ -69,9 +65,14 @@ const float& GetOutput();
 //Writes to delayline
 void Write(const float& in);
 
-void SetModulation(const float& mod);
+//this must be called once per sample
+void SetModulation(const float& mod){mod_ = mod;}
+void SetSync(const bool& syncMode){syncMode_ = syncMode;}
+void SetBasePhase(const float& basePhase){basePhase_ = basePhase;}
 
 private:
+
+float GetDiv(float potValue);
 
 CrossFade Xfade_[totalNumHeads]; //crossfades - one for each head
 Adsr XfadeEnv_[totalNumHeads];  //envelopes to drive crossfades 
@@ -97,6 +98,10 @@ float samplerate_;
 uint32_t timethresh_;
 float output_;
 bool TimeChange_;
+TempoDivs div_;
+bool syncMode_;
+float basePhase_;
+
 };
 
 

@@ -90,6 +90,36 @@
         }
 
     }
+
+    bool Taptempo::clock()
+    {
+        currentTime_ = System::GetNow();    //get current time
+        clockLength_ = currentTime_ - lastTime_;  //calculate length between taps
+        lastTime_ = currentTime_;   //always update lastTime_
+        
+        //if clock length changed more than threshold
+        if( abs( static_cast<int> (clockLength_ - lastClockLength_)) > clockThresh_)
+        {
+            //if within tempo limits
+            if(mintap_ <= clockLength_ && clockLength_ <= maxtap_) 
+            {
+                //set tempo_
+                tempo_ = static_cast<float>(clockLength_);
+                lastClockLength_ = clockLength_;
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        else
+        {
+            return false;
+        }
+    }
     
     //outputs tap length in ms
     float Taptempo::getTapLength()
