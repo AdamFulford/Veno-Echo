@@ -94,6 +94,21 @@ private:
         delay_[head] = static_cast<size_t>(int_delay) < max_size ? int_delay
                                                         : max_size - 1;  
     }
+    
+    
+    //sets the delay time as a base integer and modulation float value
+    inline void SetDelay(const size_t &delay, const float &mod, size_t head)   //passing by reference
+    {
+        if (head >= num_heads_)
+            return; //return without setting delay time as not valid head index
+
+        int32_t int_mod = static_cast<int32_t>(mod);
+        frac_[head] = mod - static_cast<float>(int_mod);
+        delay_[head] = ( delay + static_cast<size_t>(int_mod) ) < max_size ? int_delay
+                                                        : max_size - 1;  
+    }
+
+
 
     /** writes the sample of type T to the delay line, and advances the write ptr
     */

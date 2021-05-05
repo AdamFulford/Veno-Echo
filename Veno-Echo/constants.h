@@ -31,6 +31,9 @@
 constexpr float maxDelay{48000 * 5.0f};
 constexpr float minDelay{48000 * 0.08f};
 
+//constexpr uint32_t maxDelay{48000 * 5}; //5 seconds
+//constexpr uint32_t minDelay{3840}; //80ms * samplerate
+
 constexpr float maxRevDelay{48000 * 5.0f};
 constexpr float minRevDelay{25000.0f};
 

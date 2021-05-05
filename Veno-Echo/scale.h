@@ -23,6 +23,8 @@
 #ifndef SCALE_H
 #define SCALE_H
 #include <math.h>
+#include "daisysp.h"
+#include "daisy_seed.h"
 
 enum CurveType
     {
