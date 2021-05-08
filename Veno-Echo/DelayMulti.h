@@ -67,8 +67,9 @@ void Write(const float& in);
 
 //this must be called once per sample
 void SetModulation(const float& mod){mod_ = mod;}
-void SetSync(const bool& syncMode){syncMode_ = syncMode;}
+//void SetSync(const bool& syncMode){syncMode_ = syncMode;}
 void SetBasePhase(const float& basePhase){basePhase_ = basePhase;}
+void updateTempoLED(bool syncMode);
 
 private:
 
@@ -99,7 +100,7 @@ uint32_t timethresh_;
 float output_;
 bool TimeChange_;
 TempoDivs div_;
-bool syncMode_;
+//bool syncMode_;
 float basePhase_;
 
 };

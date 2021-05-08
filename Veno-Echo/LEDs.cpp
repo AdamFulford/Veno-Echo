@@ -145,7 +145,7 @@ return retVal;
 void ButtonLED::init(dsy_gpio_pin LED_pin, dsy_gpio_pin switch_pin, SwitchType switchtype, float Samplerate)
 {
     sw.Init(switch_pin, Samplerate);
-    led.Init(LED_pin,false,150.0f);  //150hz PWM)
+    led.Init(LED_pin,false,Samplerate);  //150hz PWM)
     switchtype_ = switchtype;
     isON = false; 
     led.Set(0.0f);

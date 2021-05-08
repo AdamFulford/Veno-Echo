@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
   27:LEDs.cpp      **** void TempoLED::init(dsy_gpio_pin ledpin, float samplerate)  //led pin number
   28:LEDs.cpp      **** {
   30              		.loc 1 28 1 view -0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 2
 
 
   31              		.cfi_startproc
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
   19:oscillator_p.h ****     enum
   20:oscillator_p.h ****     {
   21:oscillator_p.h ****         WAVE_SIN,
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 3
 
 
   22:oscillator_p.h ****         WAVE_TRI,
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
   46:oscillator_p.h ****         freq_      = 100.0f;
   86              		.loc 2 46 20 view .LVU16
   87 003a 9FED150A 		vldr.32	s0, .L4+4
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 4
 
 
   88              	.LBE38:
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
   58:oscillator_p.h ****     inline void SetFreq(const float f)
   59:oscillator_p.h ****     {
   60:oscillator_p.h ****         freq_      = f;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 5
 
 
  123              		.loc 2 60 20 view .LVU33
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  158              	.LBE48:
  159              	.LBE56:
  160              	.LBB57:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 6
 
 
  161              	.LBB58:
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  202 0078 C4ED097A 		vstr.32	s15, [r4, #36]
   61:oscillator_p.h ****     }
  203              		.loc 2 61 9 is_stmt 1 view .LVU58
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 7
 
 
   61:oscillator_p.h ****     }
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  252              		@ args = 0, pretend = 0, frame = 0
  253              		@ frame_needed = 0, uses_anonymous_args = 0
   41:LEDs.cpp      ****     blink.SetFreq(tempo);
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 8
 
 
  254              		.loc 1 41 5 view .LVU67
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  299              	.LVL18:
  300              	.LFB3910:
   43:LEDs.cpp      **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 9
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 9
 
 
   44:LEDs.cpp      **** void TempoLED::resetPhase()
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  319              		.loc 1 47 1 view .LVU86
  320 0004 7047     		bx	lr
  321              		.cfi_endproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 10
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 10
 
 
  322              	.LFE3910:
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  362 0014 30EE070A 		vadd.f32	s0, s0, s14
  363              	.LVL23:
  364              		.loc 1 58 12 view .LVU98
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 11
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 11
 
 
  365 0018 20EE270A 		vmul.f32	s0, s0, s15
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
   72:LEDs.cpp      ****     led.Set(ledvalue);
   73:LEDs.cpp      ****     led.Update();
   74:LEDs.cpp      **** }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 12
 
 
   75:LEDs.cpp      **** 
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  104:LEDs.cpp      ****             retVal = 3 * 6;
  105:LEDs.cpp      ****         break;
  106:LEDs.cpp      ****         case DIV2:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 13
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 13
 
 
  107:LEDs.cpp      ****             retVal = 2 * 6;
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
   72:LEDs.cpp      ****     led.Update();
  445              		.loc 1 72 12 view .LVU120
  446 0024 0198     		ldr	r0, [sp, #4]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 14
 
 
   71:LEDs.cpp      ****     led.Set(ledvalue);
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  493              		.thumb
  494              		.thumb_func
  495              		.fpu fpv5-d16
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 15
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 15
 
 
  497              	_ZN8TempoLED7LED_setEf:
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  545              		.thumb
  546              		.thumb_func
  547              		.fpu fpv5-d16
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 16
 
 
  549              	_ZN8TempoLED9GetDivIntE9TempoDivs:
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  146:LEDs.cpp      **** {
  594              		.loc 1 146 1 is_stmt 1 view -0
  595              		.cfi_startproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 17
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 17
 
 
  596              		@ args = 0, pretend = 0, frame = 8
@@ -973,99 +973,114 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  603              		.cfi_offset 5, -12
  604              		.cfi_offset 6, -8
  605              		.cfi_offset 14, -4
- 606 0002 82B0     		sub	sp, sp, #8
+ 606 0002 2DED028B 		vpush.64	{d8}
  607              		.cfi_def_cfa_offset 24
- 148:LEDs.cpp      ****     led.Init(LED_pin,false,150.0f);  //150hz PWM)
- 608              		.loc 1 148 13 view .LVU149
- 609 0004 00F11406 		add	r6, r0, #20
+ 608              		.cfi_offset 80, -24
+ 609              		.cfi_offset 81, -20
+ 610 0006 82B0     		sub	sp, sp, #8
+ 611              		.cfi_def_cfa_offset 32
  146:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
- 610              		.loc 1 146 1 view .LVU150
- 611 0008 0446     		mov	r4, r0
- 147:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
- 612              		.loc 1 147 12 view .LVU151
- 613 000a 0430     		adds	r0, r0, #4
- 614              	.LVL47:
+ 612              		.loc 1 146 1 view .LVU149
+ 613 0008 B0EE408A 		vmov.f32	s16, s0
+ 148:LEDs.cpp      ****     led.Init(LED_pin,false,Samplerate);  //150hz PWM)
+ 614              		.loc 1 148 13 view .LVU150
+ 615 000c 00F11406 		add	r6, r0, #20
  146:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
- 615              		.loc 1 146 1 view .LVU152
- 616 000c ADF80020 		strh	r2, [sp]	@ movhi
- 617 0010 1D46     		mov	r5, r3
- 618 0012 ADF80410 		strh	r1, [sp, #4]	@ movhi
+ 616              		.loc 1 146 1 view .LVU151
+ 617 0010 0446     		mov	r4, r0
+ 618 0012 ADF80020 		strh	r2, [sp]	@ movhi
  147:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
- 619              		.loc 1 147 12 view .LVU153
- 620 0016 0099     		ldr	r1, [sp]
- 621 0018 FFF7FEFF 		bl	_ZN5daisy6Switch4InitE12dsy_gpio_pinf
- 622              	.LVL48:
- 623              		.loc 1 148 5 is_stmt 1 view .LVU154
- 624              		.loc 1 148 13 is_stmt 0 view .LVU155
- 625 001c 3046     		mov	r0, r6
- 626 001e 9FED090A 		vldr.32	s0, .L28
- 627 0022 0022     		movs	r2, #0
- 628 0024 0199     		ldr	r1, [sp, #4]
- 629 0026 FFF7FEFF 		bl	_ZN5daisy3Led4InitE12dsy_gpio_pinbf
- 630              	.LVL49:
+ 619              		.loc 1 147 12 view .LVU152
+ 620 0016 0430     		adds	r0, r0, #4
+ 621              	.LVL47:
+ 146:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
+ 622              		.loc 1 146 1 view .LVU153
+ 623 0018 ADF80410 		strh	r1, [sp, #4]	@ movhi
+ 624 001c 1D46     		mov	r5, r3
+ 147:LEDs.cpp      ****     sw.Init(switch_pin, Samplerate);
+ 625              		.loc 1 147 12 view .LVU154
+ 626 001e 0099     		ldr	r1, [sp]
+ 627 0020 FFF7FEFF 		bl	_ZN5daisy6Switch4InitE12dsy_gpio_pinf
+ 628              	.LVL48:
+ 629              		.loc 1 148 5 is_stmt 1 view .LVU155
+ 630              		.loc 1 148 13 is_stmt 0 view .LVU156
+ 631 0024 B0EE480A 		vmov.f32	s0, s16
+ 632 0028 3046     		mov	r0, r6
+ 633 002a 0022     		movs	r2, #0
+ 634 002c 0199     		ldr	r1, [sp, #4]
+ 635 002e FFF7FEFF 		bl	_ZN5daisy3Led4InitE12dsy_gpio_pinbf
+ 636              	.LVL49:
  149:LEDs.cpp      ****     switchtype_ = switchtype;
- 631              		.loc 1 149 5 is_stmt 1 view .LVU156
+ 637              		.loc 1 149 5 is_stmt 1 view .LVU157
  150:LEDs.cpp      ****     isON = false; 
- 632              		.loc 1 150 10 is_stmt 0 view .LVU157
- 633 002a 0023     		movs	r3, #0
+ 638              		.loc 1 150 10 is_stmt 0 view .LVU158
+ 639 0032 0023     		movs	r3, #0
  151:LEDs.cpp      ****     led.Set(0.0f);
- 634              		.loc 1 151 12 view .LVU158
- 635 002c 3046     		mov	r0, r6
- 636 002e 9FED060A 		vldr.32	s0, .L28+4
+ 640              		.loc 1 151 12 view .LVU159
+ 641 0034 3046     		mov	r0, r6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 18
+
+
+ 642 0036 9FED060A 		vldr.32	s0, .L28
  149:LEDs.cpp      ****     switchtype_ = switchtype;
- 637              		.loc 1 149 17 view .LVU159
- 638 0032 84F83050 		strb	r5, [r4, #48]
+ 643              		.loc 1 149 17 view .LVU160
+ 644 003a 84F83050 		strb	r5, [r4, #48]
  150:LEDs.cpp      ****     isON = false; 
- 639              		.loc 1 150 5 is_stmt 1 view .LVU160
+ 645              		.loc 1 150 5 is_stmt 1 view .LVU161
  150:LEDs.cpp      ****     isON = false; 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 18
-
-
- 640              		.loc 1 150 10 is_stmt 0 view .LVU161
- 641 0036 2370     		strb	r3, [r4]
- 642              		.loc 1 151 5 is_stmt 1 view .LVU162
+ 646              		.loc 1 150 10 is_stmt 0 view .LVU162
+ 647 003e 2370     		strb	r3, [r4]
+ 648              		.loc 1 151 5 is_stmt 1 view .LVU163
  152:LEDs.cpp      **** }
- 643              		.loc 1 152 1 is_stmt 0 view .LVU163
- 644 0038 02B0     		add	sp, sp, #8
- 645              		.cfi_def_cfa_offset 16
- 646              		@ sp needed
- 647 003a BDE87040 		pop	{r4, r5, r6, lr}
- 648              		.cfi_restore 14
- 649              		.cfi_restore 6
- 650              		.cfi_restore 5
- 651              		.cfi_restore 4
- 652              		.cfi_def_cfa_offset 0
- 653              	.LVL50:
+ 649              		.loc 1 152 1 is_stmt 0 view .LVU164
+ 650 0040 02B0     		add	sp, sp, #8
+ 651              		.cfi_def_cfa_offset 24
+ 652              		@ sp needed
+ 653 0042 BDEC028B 		vldm	sp!, {d8}
+ 654              		.cfi_restore 80
+ 655              		.cfi_restore 81
+ 656              		.cfi_def_cfa_offset 16
+ 657              	.LVL50:
+ 658              		.loc 1 152 1 view .LVU165
+ 659 0046 BDE87040 		pop	{r4, r5, r6, lr}
+ 660              		.cfi_restore 14
+ 661              		.cfi_restore 6
+ 662              		.cfi_restore 5
+ 663              		.cfi_restore 4
+ 664              		.cfi_def_cfa_offset 0
+ 665              	.LVL51:
  151:LEDs.cpp      ****     led.Set(0.0f);
- 654              		.loc 1 151 12 view .LVU164
- 655 003e FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 656              	.LVL51:
- 657              	.L29:
+ 666              		.loc 1 151 12 view .LVU166
+ 667 004a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 668              	.LVL52:
+ 669              	.L29:
  151:LEDs.cpp      ****     led.Set(0.0f);
- 658              		.loc 1 151 12 view .LVU165
- 659 0042 00BF     		.align	2
- 660              	.L28:
- 661 0044 00001643 		.word	1125515264
- 662 0048 00000000 		.word	0
- 663              		.cfi_endproc
- 664              	.LFE3916:
- 666              		.section	.text._ZN9ButtonLED6toggleEv,"ax",%progbits
- 667              		.align	1
- 668              		.p2align 2,,3
- 669              		.global	_ZN9ButtonLED6toggleEv
- 670              		.syntax unified
- 671              		.thumb
- 672              		.thumb_func
- 673              		.fpu fpv5-d16
- 675              	_ZN9ButtonLED6toggleEv:
- 676              	.LVL52:
- 677              	.LFB3918:
+ 670              		.loc 1 151 12 view .LVU167
+ 671 004e 00BF     		.align	2
+ 672              	.L28:
+ 673 0050 00000000 		.word	0
+ 674              		.cfi_endproc
+ 675              	.LFE3916:
+ 677              		.section	.text._ZN9ButtonLED6toggleEv,"ax",%progbits
+ 678              		.align	1
+ 679              		.p2align 2,,3
+ 680              		.global	_ZN9ButtonLED6toggleEv
+ 681              		.syntax unified
+ 682              		.thumb
+ 683              		.thumb_func
+ 684              		.fpu fpv5-d16
+ 686              	_ZN9ButtonLED6toggleEv:
+ 687              	.LVL53:
+ 688              	.LFB3918:
  153:LEDs.cpp      **** 
  154:LEDs.cpp      **** void ButtonLED::update() //check switch and update LED
  155:LEDs.cpp      **** {
  156:LEDs.cpp      **** led.Update();
  157:LEDs.cpp      **** sw.Debounce();
  158:LEDs.cpp      **** switch (switchtype_)
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 19
+
+
  159:LEDs.cpp      **** {
  160:LEDs.cpp      ****     case Momentary:
  161:LEDs.cpp      ****         if(sw.RisingEdge())
@@ -1078,9 +1093,6 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  168:LEDs.cpp      ****         if(!sw.Pressed())
  169:LEDs.cpp      ****         {
  170:LEDs.cpp      ****             turnON();
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 19
-
-
  171:LEDs.cpp      ****         } 
  172:LEDs.cpp      ****         else
  173:LEDs.cpp      ****         {
@@ -1105,127 +1117,127 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  192:LEDs.cpp      **** 
  193:LEDs.cpp      **** void ButtonLED::toggle()
  194:LEDs.cpp      **** {
- 678              		.loc 1 194 1 is_stmt 1 view -0
- 679              		.cfi_startproc
- 680              		@ args = 0, pretend = 0, frame = 0
- 681              		@ frame_needed = 0, uses_anonymous_args = 0
- 682              		@ link register save eliminated.
+ 689              		.loc 1 194 1 is_stmt 1 view -0
+ 690              		.cfi_startproc
+ 691              		@ args = 0, pretend = 0, frame = 0
+ 692              		@ frame_needed = 0, uses_anonymous_args = 0
+ 693              		@ link register save eliminated.
  195:LEDs.cpp      ****     isON = !isON;
- 683              		.loc 1 195 5 view .LVU167
- 684              		.loc 1 195 12 is_stmt 0 view .LVU168
- 685 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 694              		.loc 1 195 5 view .LVU169
+ 695              		.loc 1 195 12 is_stmt 0 view .LVU170
+ 696 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
  196:LEDs.cpp      ****     if(isON)
  197:LEDs.cpp      ****     {
  198:LEDs.cpp      ****         led.Set(1.0f);
- 686              		.loc 1 198 16 view .LVU169
- 687 0002 1430     		adds	r0, r0, #20
- 688              	.LVL53:
- 195:LEDs.cpp      ****     isON = !isON;
- 689              		.loc 1 195 12 view .LVU170
- 690 0004 83F00103 		eor	r3, r3, #1
- 195:LEDs.cpp      ****     isON = !isON;
- 691              		.loc 1 195 10 view .LVU171
- 692 0008 00F8143C 		strb	r3, [r0, #-20]
- 196:LEDs.cpp      ****     if(isON)
- 693              		.loc 1 196 5 is_stmt 1 view .LVU172
- 694 000c 1BB1     		cbz	r3, .L31
- 695              		.loc 1 198 9 view .LVU173
- 696              		.loc 1 198 16 is_stmt 0 view .LVU174
- 697 000e B7EE000A 		vmov.f32	s0, #1.0e+0
- 698 0012 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 697              		.loc 1 198 16 view .LVU171
+ 698 0002 1430     		adds	r0, r0, #20
  699              	.LVL54:
- 700              	.L31:
+ 195:LEDs.cpp      ****     isON = !isON;
+ 700              		.loc 1 195 12 view .LVU172
+ 701 0004 83F00103 		eor	r3, r3, #1
+ 195:LEDs.cpp      ****     isON = !isON;
+ 702              		.loc 1 195 10 view .LVU173
+ 703 0008 00F8143C 		strb	r3, [r0, #-20]
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 20
+
+
+ 196:LEDs.cpp      ****     if(isON)
+ 704              		.loc 1 196 5 is_stmt 1 view .LVU174
+ 705 000c 1BB1     		cbz	r3, .L31
+ 706              		.loc 1 198 9 view .LVU175
+ 707              		.loc 1 198 16 is_stmt 0 view .LVU176
+ 708 000e B7EE000A 		vmov.f32	s0, #1.0e+0
+ 709 0012 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 710              	.LVL55:
+ 711              	.L31:
  199:LEDs.cpp      ****     }
  200:LEDs.cpp      ****     else
  201:LEDs.cpp      ****     {
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 20
-
-
  202:LEDs.cpp      ****         led.Set(0.0f);
- 701              		.loc 1 202 9 is_stmt 1 view .LVU175
- 702              		.loc 1 202 16 is_stmt 0 view .LVU176
- 703 0016 9FED020A 		vldr.32	s0, .L32
- 704 001a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 705              	.LVL55:
- 706              	.L33:
- 707 001e 00BF     		.align	2
- 708              	.L32:
- 709 0020 00000000 		.word	0
- 710              		.cfi_endproc
- 711              	.LFE3918:
- 713              		.section	.text._ZN9ButtonLED6updateEv,"ax",%progbits
- 714              		.align	1
- 715              		.p2align 2,,3
- 716              		.global	_ZN9ButtonLED6updateEv
- 717              		.syntax unified
- 718              		.thumb
- 719              		.thumb_func
- 720              		.fpu fpv5-d16
- 722              	_ZN9ButtonLED6updateEv:
- 723              	.LVL56:
- 724              	.LFB3917:
+ 712              		.loc 1 202 9 is_stmt 1 view .LVU177
+ 713              		.loc 1 202 16 is_stmt 0 view .LVU178
+ 714 0016 9FED020A 		vldr.32	s0, .L32
+ 715 001a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 716              	.LVL56:
+ 717              	.L33:
+ 718 001e 00BF     		.align	2
+ 719              	.L32:
+ 720 0020 00000000 		.word	0
+ 721              		.cfi_endproc
+ 722              	.LFE3918:
+ 724              		.section	.text._ZN9ButtonLED6updateEv,"ax",%progbits
+ 725              		.align	1
+ 726              		.p2align 2,,3
+ 727              		.global	_ZN9ButtonLED6updateEv
+ 728              		.syntax unified
+ 729              		.thumb
+ 730              		.thumb_func
+ 731              		.fpu fpv5-d16
+ 733              	_ZN9ButtonLED6updateEv:
+ 734              	.LVL57:
+ 735              	.LFB3917:
  155:LEDs.cpp      **** led.Update();
- 725              		.loc 1 155 1 is_stmt 1 view -0
- 726              		.cfi_startproc
- 727              		@ args = 0, pretend = 0, frame = 0
- 728              		@ frame_needed = 0, uses_anonymous_args = 0
+ 736              		.loc 1 155 1 is_stmt 1 view -0
+ 737              		.cfi_startproc
+ 738              		@ args = 0, pretend = 0, frame = 0
+ 739              		@ frame_needed = 0, uses_anonymous_args = 0
  156:LEDs.cpp      **** sw.Debounce();
- 729              		.loc 1 156 1 view .LVU178
+ 740              		.loc 1 156 1 view .LVU180
  155:LEDs.cpp      **** led.Update();
- 730              		.loc 1 155 1 is_stmt 0 view .LVU179
- 731 0000 38B5     		push	{r3, r4, r5, lr}
- 732              		.cfi_def_cfa_offset 16
- 733              		.cfi_offset 3, -16
- 734              		.cfi_offset 4, -12
- 735              		.cfi_offset 5, -8
- 736              		.cfi_offset 14, -4
+ 741              		.loc 1 155 1 is_stmt 0 view .LVU181
+ 742 0000 38B5     		push	{r3, r4, r5, lr}
+ 743              		.cfi_def_cfa_offset 16
+ 744              		.cfi_offset 3, -16
+ 745              		.cfi_offset 4, -12
+ 746              		.cfi_offset 5, -8
+ 747              		.cfi_offset 14, -4
  156:LEDs.cpp      **** sw.Debounce();
- 737              		.loc 1 156 11 view .LVU180
- 738 0002 00F11405 		add	r5, r0, #20
+ 748              		.loc 1 156 11 view .LVU182
+ 749 0002 00F11405 		add	r5, r0, #20
  155:LEDs.cpp      **** led.Update();
- 739              		.loc 1 155 1 view .LVU181
- 740 0006 0446     		mov	r4, r0
+ 750              		.loc 1 155 1 view .LVU183
+ 751 0006 0446     		mov	r4, r0
  156:LEDs.cpp      **** sw.Debounce();
- 741              		.loc 1 156 11 view .LVU182
- 742 0008 2846     		mov	r0, r5
- 743              	.LVL57:
- 156:LEDs.cpp      **** sw.Debounce();
- 744              		.loc 1 156 11 view .LVU183
- 745 000a FFF7FEFF 		bl	_ZN5daisy3Led6UpdateEv
- 746              	.LVL58:
- 157:LEDs.cpp      **** switch (switchtype_)
- 747              		.loc 1 157 1 is_stmt 1 view .LVU184
- 157:LEDs.cpp      **** switch (switchtype_)
- 748              		.loc 1 157 12 is_stmt 0 view .LVU185
- 749 000e 201D     		adds	r0, r4, #4
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 21
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 21
 
 
- 750 0010 FFF7FEFF 		bl	_ZN5daisy6Switch8DebounceEv
- 751              	.LVL59:
+ 752              		.loc 1 156 11 view .LVU184
+ 753 0008 2846     		mov	r0, r5
+ 754              	.LVL58:
+ 156:LEDs.cpp      **** sw.Debounce();
+ 755              		.loc 1 156 11 view .LVU185
+ 756 000a FFF7FEFF 		bl	_ZN5daisy3Led6UpdateEv
+ 757              	.LVL59:
+ 157:LEDs.cpp      **** switch (switchtype_)
+ 758              		.loc 1 157 1 is_stmt 1 view .LVU186
+ 157:LEDs.cpp      **** switch (switchtype_)
+ 759              		.loc 1 157 12 is_stmt 0 view .LVU187
+ 760 000e 201D     		adds	r0, r4, #4
+ 761 0010 FFF7FEFF 		bl	_ZN5daisy6Switch8DebounceEv
+ 762              	.LVL60:
  158:LEDs.cpp      **** {
- 752              		.loc 1 158 1 is_stmt 1 view .LVU186
+ 763              		.loc 1 158 1 is_stmt 1 view .LVU188
  158:LEDs.cpp      **** {
- 753              		.loc 1 158 9 is_stmt 0 view .LVU187
- 754 0014 94F83030 		ldrb	r3, [r4, #48]	@ zero_extendqisi2
+ 764              		.loc 1 158 9 is_stmt 0 view .LVU189
+ 765 0014 94F83030 		ldrb	r3, [r4, #48]	@ zero_extendqisi2
  158:LEDs.cpp      **** {
- 755              		.loc 1 158 1 view .LVU188
- 756 0018 012B     		cmp	r3, #1
- 757 001a 17D0     		beq	.L35
- 758 001c 022B     		cmp	r3, #2
- 759 001e 09D0     		beq	.L36
- 760 0020 03B1     		cbz	r3, .L41
- 761              	.L34:
+ 766              		.loc 1 158 1 view .LVU190
+ 767 0018 012B     		cmp	r3, #1
+ 768 001a 17D0     		beq	.L35
+ 769 001c 022B     		cmp	r3, #2
+ 770 001e 09D0     		beq	.L36
+ 771 0020 03B1     		cbz	r3, .L41
+ 772              	.L34:
  191:LEDs.cpp      **** 
- 762              		.loc 1 191 1 view .LVU189
- 763 0022 38BD     		pop	{r3, r4, r5, pc}
- 764              	.LVL60:
- 765              	.L41:
+ 773              		.loc 1 191 1 view .LVU191
+ 774 0022 38BD     		pop	{r3, r4, r5, pc}
+ 775              	.LVL61:
+ 776              	.L41:
  160:LEDs.cpp      ****         if(sw.RisingEdge())
- 766              		.loc 1 160 5 is_stmt 1 view .LVU190
+ 777              		.loc 1 160 5 is_stmt 1 view .LVU192
  161:LEDs.cpp      ****         {
- 767              		.loc 1 161 9 view .LVU191
- 768              		.file 3 "../libdaisy/src/hid/switch.h"
+ 778              		.loc 1 161 9 view .LVU193
+ 779              		.file 3 "../libdaisy/src/hid/switch.h"
    1:../libdaisy/src/hid/switch.h **** #pragma once
    2:../libdaisy/src/hid/switch.h **** #ifndef DSY_SWITCH_H
    3:../libdaisy/src/hid/switch.h **** #define DSY_SWITCH_H
@@ -1246,6 +1258,9 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
   18:../libdaisy/src/hid/switch.h ****   public:
   19:../libdaisy/src/hid/switch.h ****     /** Specifies the expected behavior of the switch */
   20:../libdaisy/src/hid/switch.h ****     enum Type
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 22
+
+
   21:../libdaisy/src/hid/switch.h ****     {
   22:../libdaisy/src/hid/switch.h ****         TYPE_TOGGLE,    /**< & */
   23:../libdaisy/src/hid/switch.h ****         TYPE_MOMENTARY, /**< & */
@@ -1258,9 +1273,6 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
   30:../libdaisy/src/hid/switch.h ****     };
   31:../libdaisy/src/hid/switch.h **** 
   32:../libdaisy/src/hid/switch.h ****     /** Specifies whether to use built-in Pull Up/Down resistors to hold button at a given state wh
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 22
-
-
   33:../libdaisy/src/hid/switch.h ****     enum Pull
   34:../libdaisy/src/hid/switch.h ****     {
   35:../libdaisy/src/hid/switch.h ****         PULL_UP,   /**< & */
@@ -1298,58 +1310,58 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
   67:../libdaisy/src/hid/switch.h **** 
   68:../libdaisy/src/hid/switch.h ****     /** \return true if a button was just pressed. */
   69:../libdaisy/src/hid/switch.h ****     inline bool RisingEdge() const { return state_ == 0x7f; }
- 769              		.loc 3 69 38 view .LVU192
+ 780              		.loc 3 69 38 view .LVU194
  161:LEDs.cpp      ****         {
- 770              		.loc 1 161 9 is_stmt 0 view .LVU193
- 771 0024 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
- 772 0026 7F2B     		cmp	r3, #127
- 773 0028 FBD1     		bne	.L34
+ 781              		.loc 1 161 9 is_stmt 0 view .LVU195
+ 782 0024 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
+ 783 0026 7F2B     		cmp	r3, #127
+ 784 0028 FBD1     		bne	.L34
  163:LEDs.cpp      ****         }
- 774              		.loc 1 163 13 is_stmt 1 view .LVU194
+ 785              		.loc 1 163 13 is_stmt 1 view .LVU196
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 23
+
+
  163:LEDs.cpp      ****         }
- 775              		.loc 1 163 19 is_stmt 0 view .LVU195
- 776 002a 2046     		mov	r0, r4
+ 786              		.loc 1 163 19 is_stmt 0 view .LVU197
+ 787 002a 2046     		mov	r0, r4
  191:LEDs.cpp      **** 
- 777              		.loc 1 191 1 view .LVU196
- 778 002c BDE83840 		pop	{r3, r4, r5, lr}
- 779              		.cfi_remember_state
- 780              		.cfi_restore 14
- 781              		.cfi_restore 5
- 782              		.cfi_restore 4
- 783              		.cfi_restore 3
- 784              		.cfi_def_cfa_offset 0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 23
-
-
- 785              	.LVL61:
+ 788              		.loc 1 191 1 view .LVU198
+ 789 002c BDE83840 		pop	{r3, r4, r5, lr}
+ 790              		.cfi_remember_state
+ 791              		.cfi_restore 14
+ 792              		.cfi_restore 5
+ 793              		.cfi_restore 4
+ 794              		.cfi_restore 3
+ 795              		.cfi_def_cfa_offset 0
+ 796              	.LVL62:
  163:LEDs.cpp      ****         }
- 786              		.loc 1 163 19 view .LVU197
- 787 0030 FFF7FEBF 		b	_ZN9ButtonLED6toggleEv
- 788              	.LVL62:
- 789              	.L36:
- 790              		.cfi_restore_state
+ 797              		.loc 1 163 19 view .LVU199
+ 798 0030 FFF7FEBF 		b	_ZN9ButtonLED6toggleEv
+ 799              	.LVL63:
+ 800              	.L36:
+ 801              		.cfi_restore_state
  177:LEDs.cpp      ****         if(sw.Pressed())
- 791              		.loc 1 177 5 is_stmt 1 view .LVU198
+ 802              		.loc 1 177 5 is_stmt 1 view .LVU200
  178:LEDs.cpp      ****         {
- 792              		.loc 1 178 9 view .LVU199
+ 803              		.loc 1 178 9 view .LVU201
   70:../libdaisy/src/hid/switch.h **** 
   71:../libdaisy/src/hid/switch.h ****     /** \return true if the button was just released */
   72:../libdaisy/src/hid/switch.h ****     inline bool FallingEdge() const { return state_ == 0x80; }
   73:../libdaisy/src/hid/switch.h **** 
   74:../libdaisy/src/hid/switch.h ****     /** \return true if the button is held down (or if the toggle is on) */
   75:../libdaisy/src/hid/switch.h ****     inline bool Pressed() const { return state_ == 0xff; }
- 793              		.loc 3 75 35 view .LVU200
+ 804              		.loc 3 75 35 view .LVU202
  178:LEDs.cpp      ****         {
- 794              		.loc 1 178 9 is_stmt 0 view .LVU201
- 795 0034 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
- 796 0036 FF2B     		cmp	r3, #255
- 797 0038 13D0     		beq	.L42
- 798              	.LVL63:
- 799              	.L39:
+ 805              		.loc 1 178 9 is_stmt 0 view .LVU203
+ 806 0034 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
+ 807 0036 FF2B     		cmp	r3, #255
+ 808 0038 13D0     		beq	.L42
+ 809              	.LVL64:
+ 810              	.L39:
  184:LEDs.cpp      ****         }
- 800              		.loc 1 184 13 is_stmt 1 view .LVU202
- 801              	.LBB72:
- 802              	.LBI72:
+ 811              		.loc 1 184 13 is_stmt 1 view .LVU204
+ 812              	.LBB72:
+ 813              	.LBI72:
  203:LEDs.cpp      ****     } 
  204:LEDs.cpp      **** }
  205:LEDs.cpp      **** 
@@ -1360,524 +1372,524 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 1
  210:LEDs.cpp      **** }
  211:LEDs.cpp      **** 
  212:LEDs.cpp      **** void ButtonLED::turnOFF()
- 803              		.loc 1 212 6 view .LVU203
- 804              	.LBB73:
+ 814              		.loc 1 212 6 view .LVU205
+ 815              	.LBB73:
  213:LEDs.cpp      **** {
  214:LEDs.cpp      ****     isON = false;
- 805              		.loc 1 214 5 view .LVU204
- 806              		.loc 1 214 10 is_stmt 0 view .LVU205
- 807 003a 0023     		movs	r3, #0
+ 816              		.loc 1 214 5 view .LVU206
+ 817              		.loc 1 214 10 is_stmt 0 view .LVU207
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 24
+
+
+ 818 003a 0023     		movs	r3, #0
  215:LEDs.cpp      ****     led.Set(0.0f);
- 808              		.loc 1 215 12 view .LVU206
- 809 003c 2846     		mov	r0, r5
- 810 003e 9FED0D0A 		vldr.32	s0, .L43
+ 819              		.loc 1 215 12 view .LVU208
+ 820 003c 2846     		mov	r0, r5
+ 821 003e 9FED0D0A 		vldr.32	s0, .L43
  214:LEDs.cpp      ****     led.Set(0.0f);
- 811              		.loc 1 214 10 view .LVU207
- 812 0042 2370     		strb	r3, [r4]
- 813              		.loc 1 215 5 is_stmt 1 view .LVU208
- 814              	.LBE73:
- 815              	.LBE72:
+ 822              		.loc 1 214 10 view .LVU209
+ 823 0042 2370     		strb	r3, [r4]
+ 824              		.loc 1 215 5 is_stmt 1 view .LVU210
+ 825              	.LBE73:
+ 826              	.LBE72:
  191:LEDs.cpp      **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 24
-
-
- 816              		.loc 1 191 1 is_stmt 0 view .LVU209
- 817 0044 BDE83840 		pop	{r3, r4, r5, lr}
- 818              		.cfi_remember_state
- 819              		.cfi_restore 14
- 820              		.cfi_restore 5
- 821              		.cfi_restore 4
- 822              		.cfi_restore 3
- 823              		.cfi_def_cfa_offset 0
- 824              	.LVL64:
- 825              	.LBB75:
- 826              	.LBB74:
- 827              		.loc 1 215 12 view .LVU210
- 828 0048 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 829              	.LVL65:
- 830              	.L35:
- 831              		.cfi_restore_state
- 832              		.loc 1 215 12 view .LVU211
- 833              	.LBE74:
- 834              	.LBE75:
+ 827              		.loc 1 191 1 is_stmt 0 view .LVU211
+ 828 0044 BDE83840 		pop	{r3, r4, r5, lr}
+ 829              		.cfi_remember_state
+ 830              		.cfi_restore 14
+ 831              		.cfi_restore 5
+ 832              		.cfi_restore 4
+ 833              		.cfi_restore 3
+ 834              		.cfi_def_cfa_offset 0
+ 835              	.LVL65:
+ 836              	.LBB75:
+ 837              	.LBB74:
+ 838              		.loc 1 215 12 view .LVU212
+ 839 0048 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 840              	.LVL66:
+ 841              	.L35:
+ 842              		.cfi_restore_state
+ 843              		.loc 1 215 12 view .LVU213
+ 844              	.LBE74:
+ 845              	.LBE75:
  167:LEDs.cpp      ****         if(!sw.Pressed())
- 835              		.loc 1 167 5 is_stmt 1 view .LVU212
+ 846              		.loc 1 167 5 is_stmt 1 view .LVU214
  168:LEDs.cpp      ****         {
- 836              		.loc 1 168 9 view .LVU213
- 837              		.loc 3 75 35 view .LVU214
+ 847              		.loc 1 168 9 view .LVU215
+ 848              		.loc 3 75 35 view .LVU216
  168:LEDs.cpp      ****         {
- 838              		.loc 1 168 9 is_stmt 0 view .LVU215
- 839 004c 627A     		ldrb	r2, [r4, #9]	@ zero_extendqisi2
- 840 004e FF2A     		cmp	r2, #255
- 841 0050 F3D0     		beq	.L39
+ 849              		.loc 1 168 9 is_stmt 0 view .LVU217
+ 850 004c 627A     		ldrb	r2, [r4, #9]	@ zero_extendqisi2
+ 851 004e FF2A     		cmp	r2, #255
+ 852 0050 F3D0     		beq	.L39
  170:LEDs.cpp      ****         } 
- 842              		.loc 1 170 13 is_stmt 1 view .LVU216
- 843              	.LVL66:
- 844              	.LBB76:
- 845              	.LBI76:
+ 853              		.loc 1 170 13 is_stmt 1 view .LVU218
+ 854              	.LVL67:
+ 855              	.LBB76:
+ 856              	.LBI76:
  206:LEDs.cpp      **** {
- 846              		.loc 1 206 6 view .LVU217
- 847              	.LBB77:
+ 857              		.loc 1 206 6 view .LVU219
+ 858              	.LBB77:
  208:LEDs.cpp      ****     led.Set(1.0f);
- 848              		.loc 1 208 5 view .LVU218
+ 859              		.loc 1 208 5 view .LVU220
  209:LEDs.cpp      **** }
- 849              		.loc 1 209 12 is_stmt 0 view .LVU219
- 850 0052 2846     		mov	r0, r5
+ 860              		.loc 1 209 12 is_stmt 0 view .LVU221
+ 861 0052 2846     		mov	r0, r5
  208:LEDs.cpp      ****     led.Set(1.0f);
- 851              		.loc 1 208 10 view .LVU220
- 852 0054 2370     		strb	r3, [r4]
+ 862              		.loc 1 208 10 view .LVU222
+ 863 0054 2370     		strb	r3, [r4]
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 25
+
+
  209:LEDs.cpp      **** }
- 853              		.loc 1 209 5 is_stmt 1 view .LVU221
+ 864              		.loc 1 209 5 is_stmt 1 view .LVU223
  209:LEDs.cpp      **** }
- 854              		.loc 1 209 12 is_stmt 0 view .LVU222
- 855 0056 B7EE000A 		vmov.f32	s0, #1.0e+0
- 856              	.LBE77:
- 857              	.LBE76:
+ 865              		.loc 1 209 12 is_stmt 0 view .LVU224
+ 866 0056 B7EE000A 		vmov.f32	s0, #1.0e+0
+ 867              	.LBE77:
+ 868              	.LBE76:
  191:LEDs.cpp      **** 
- 858              		.loc 1 191 1 view .LVU223
- 859 005a BDE83840 		pop	{r3, r4, r5, lr}
- 860              		.cfi_remember_state
- 861              		.cfi_restore 14
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 25
-
-
- 862              		.cfi_restore 5
- 863              		.cfi_restore 4
- 864              		.cfi_restore 3
- 865              		.cfi_def_cfa_offset 0
- 866              	.LVL67:
- 867              	.LBB79:
- 868              	.LBB78:
+ 869              		.loc 1 191 1 view .LVU225
+ 870 005a BDE83840 		pop	{r3, r4, r5, lr}
+ 871              		.cfi_remember_state
+ 872              		.cfi_restore 14
+ 873              		.cfi_restore 5
+ 874              		.cfi_restore 4
+ 875              		.cfi_restore 3
+ 876              		.cfi_def_cfa_offset 0
+ 877              	.LVL68:
+ 878              	.LBB79:
+ 879              	.LBB78:
  209:LEDs.cpp      **** }
- 869              		.loc 1 209 12 view .LVU224
- 870 005e FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 871              	.LVL68:
- 872              	.L42:
- 873              		.cfi_restore_state
+ 880              		.loc 1 209 12 view .LVU226
+ 881 005e FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 882              	.LVL69:
+ 883              	.L42:
+ 884              		.cfi_restore_state
  209:LEDs.cpp      **** }
- 874              		.loc 1 209 12 view .LVU225
- 875              	.LBE78:
- 876              	.LBE79:
+ 885              		.loc 1 209 12 view .LVU227
+ 886              	.LBE78:
+ 887              	.LBE79:
  180:LEDs.cpp      ****         } 
- 877              		.loc 1 180 13 is_stmt 1 view .LVU226
- 878              	.LBB80:
- 879              	.LBI80:
+ 888              		.loc 1 180 13 is_stmt 1 view .LVU228
+ 889              	.LBB80:
+ 890              	.LBI80:
  206:LEDs.cpp      **** {
- 880              		.loc 1 206 6 view .LVU227
- 881              	.LBB81:
+ 891              		.loc 1 206 6 view .LVU229
+ 892              	.LBB81:
  208:LEDs.cpp      ****     led.Set(1.0f);
- 882              		.loc 1 208 5 view .LVU228
+ 893              		.loc 1 208 5 view .LVU230
  208:LEDs.cpp      ****     led.Set(1.0f);
- 883              		.loc 1 208 10 is_stmt 0 view .LVU229
- 884 0062 0123     		movs	r3, #1
+ 894              		.loc 1 208 10 is_stmt 0 view .LVU231
+ 895 0062 0123     		movs	r3, #1
  209:LEDs.cpp      **** }
- 885              		.loc 1 209 12 view .LVU230
- 886 0064 2846     		mov	r0, r5
- 887 0066 B7EE000A 		vmov.f32	s0, #1.0e+0
+ 896              		.loc 1 209 12 view .LVU232
+ 897 0064 2846     		mov	r0, r5
+ 898 0066 B7EE000A 		vmov.f32	s0, #1.0e+0
  208:LEDs.cpp      ****     led.Set(1.0f);
- 888              		.loc 1 208 10 view .LVU231
- 889 006a 2370     		strb	r3, [r4]
+ 899              		.loc 1 208 10 view .LVU233
+ 900 006a 2370     		strb	r3, [r4]
  209:LEDs.cpp      **** }
- 890              		.loc 1 209 5 is_stmt 1 view .LVU232
- 891              	.LBE81:
- 892              	.LBE80:
+ 901              		.loc 1 209 5 is_stmt 1 view .LVU234
+ 902              	.LBE81:
+ 903              	.LBE80:
  191:LEDs.cpp      **** 
- 893              		.loc 1 191 1 is_stmt 0 view .LVU233
- 894 006c BDE83840 		pop	{r3, r4, r5, lr}
- 895              		.cfi_restore 14
- 896              		.cfi_restore 5
- 897              		.cfi_restore 4
- 898              		.cfi_restore 3
- 899              		.cfi_def_cfa_offset 0
- 900              	.LVL69:
- 901              	.LBB83:
- 902              	.LBB82:
- 209:LEDs.cpp      **** }
- 903              		.loc 1 209 12 view .LVU234
- 904 0070 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 905              	.LVL70:
- 906              	.L44:
- 209:LEDs.cpp      **** }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 26
+ 904              		.loc 1 191 1 is_stmt 0 view .LVU235
+ 905 006c BDE83840 		pop	{r3, r4, r5, lr}
+ 906              		.cfi_restore 14
+ 907              		.cfi_restore 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 26
 
 
- 907              		.loc 1 209 12 view .LVU235
- 908              		.align	2
- 909              	.L43:
- 910 0074 00000000 		.word	0
- 911              	.LBE82:
- 912              	.LBE83:
- 913              		.cfi_endproc
- 914              	.LFE3917:
- 916              		.section	.text._ZN9ButtonLED6turnONEv,"ax",%progbits
- 917              		.align	1
- 918              		.p2align 2,,3
- 919              		.global	_ZN9ButtonLED6turnONEv
- 920              		.syntax unified
- 921              		.thumb
- 922              		.thumb_func
- 923              		.fpu fpv5-d16
- 925              	_ZN9ButtonLED6turnONEv:
- 926              	.LVL71:
- 927              	.LFB3919:
+ 908              		.cfi_restore 4
+ 909              		.cfi_restore 3
+ 910              		.cfi_def_cfa_offset 0
+ 911              	.LVL70:
+ 912              	.LBB83:
+ 913              	.LBB82:
+ 209:LEDs.cpp      **** }
+ 914              		.loc 1 209 12 view .LVU236
+ 915 0070 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 916              	.LVL71:
+ 917              	.L44:
+ 209:LEDs.cpp      **** }
+ 918              		.loc 1 209 12 view .LVU237
+ 919              		.align	2
+ 920              	.L43:
+ 921 0074 00000000 		.word	0
+ 922              	.LBE82:
+ 923              	.LBE83:
+ 924              		.cfi_endproc
+ 925              	.LFE3917:
+ 927              		.section	.text._ZN9ButtonLED6turnONEv,"ax",%progbits
+ 928              		.align	1
+ 929              		.p2align 2,,3
+ 930              		.global	_ZN9ButtonLED6turnONEv
+ 931              		.syntax unified
+ 932              		.thumb
+ 933              		.thumb_func
+ 934              		.fpu fpv5-d16
+ 936              	_ZN9ButtonLED6turnONEv:
+ 937              	.LVL72:
+ 938              	.LFB3919:
  207:LEDs.cpp      ****     isON = true;
- 928              		.loc 1 207 1 is_stmt 1 view -0
- 929              		.cfi_startproc
- 930              		@ args = 0, pretend = 0, frame = 0
- 931              		@ frame_needed = 0, uses_anonymous_args = 0
- 932              		@ link register save eliminated.
+ 939              		.loc 1 207 1 is_stmt 1 view -0
+ 940              		.cfi_startproc
+ 941              		@ args = 0, pretend = 0, frame = 0
+ 942              		@ frame_needed = 0, uses_anonymous_args = 0
+ 943              		@ link register save eliminated.
  208:LEDs.cpp      ****     led.Set(1.0f);
- 933              		.loc 1 208 5 view .LVU237
+ 944              		.loc 1 208 5 view .LVU239
  208:LEDs.cpp      ****     led.Set(1.0f);
- 934              		.loc 1 208 10 is_stmt 0 view .LVU238
- 935 0000 0123     		movs	r3, #1
+ 945              		.loc 1 208 10 is_stmt 0 view .LVU240
+ 946 0000 0123     		movs	r3, #1
  209:LEDs.cpp      **** }
- 936              		.loc 1 209 12 view .LVU239
- 937 0002 B7EE000A 		vmov.f32	s0, #1.0e+0
+ 947              		.loc 1 209 12 view .LVU241
+ 948 0002 B7EE000A 		vmov.f32	s0, #1.0e+0
  208:LEDs.cpp      ****     led.Set(1.0f);
- 938              		.loc 1 208 10 view .LVU240
- 939 0006 00F8143B 		strb	r3, [r0], #20
- 940              	.LVL72:
+ 949              		.loc 1 208 10 view .LVU242
+ 950 0006 00F8143B 		strb	r3, [r0], #20
+ 951              	.LVL73:
  209:LEDs.cpp      **** }
- 941              		.loc 1 209 5 is_stmt 1 view .LVU241
+ 952              		.loc 1 209 5 is_stmt 1 view .LVU243
  209:LEDs.cpp      **** }
- 942              		.loc 1 209 12 is_stmt 0 view .LVU242
- 943 000a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 944              	.LVL73:
+ 953              		.loc 1 209 12 is_stmt 0 view .LVU244
+ 954 000a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 955              	.LVL74:
  209:LEDs.cpp      **** }
- 945              		.loc 1 209 12 view .LVU243
- 946              		.cfi_endproc
- 947              	.LFE3919:
- 949 000e 00BF     		.section	.text._ZN9ButtonLED7turnOFFEv,"ax",%progbits
- 950              		.align	1
- 951              		.p2align 2,,3
- 952              		.global	_ZN9ButtonLED7turnOFFEv
- 953              		.syntax unified
- 954              		.thumb
- 955              		.thumb_func
- 956              		.fpu fpv5-d16
- 958              	_ZN9ButtonLED7turnOFFEv:
- 959              	.LVL74:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 27
+ 956              		.loc 1 209 12 view .LVU245
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 27
 
 
- 960              	.LFB3920:
+ 957              		.cfi_endproc
+ 958              	.LFE3919:
+ 960 000e 00BF     		.section	.text._ZN9ButtonLED7turnOFFEv,"ax",%progbits
+ 961              		.align	1
+ 962              		.p2align 2,,3
+ 963              		.global	_ZN9ButtonLED7turnOFFEv
+ 964              		.syntax unified
+ 965              		.thumb
+ 966              		.thumb_func
+ 967              		.fpu fpv5-d16
+ 969              	_ZN9ButtonLED7turnOFFEv:
+ 970              	.LVL75:
+ 971              	.LFB3920:
  213:LEDs.cpp      ****     isON = false;
- 961              		.loc 1 213 1 is_stmt 1 view -0
- 962              		.cfi_startproc
- 963              		@ args = 0, pretend = 0, frame = 0
- 964              		@ frame_needed = 0, uses_anonymous_args = 0
- 965              		@ link register save eliminated.
+ 972              		.loc 1 213 1 is_stmt 1 view -0
+ 973              		.cfi_startproc
+ 974              		@ args = 0, pretend = 0, frame = 0
+ 975              		@ frame_needed = 0, uses_anonymous_args = 0
+ 976              		@ link register save eliminated.
  214:LEDs.cpp      ****     led.Set(0.0f);
- 966              		.loc 1 214 5 view .LVU245
+ 977              		.loc 1 214 5 view .LVU247
  214:LEDs.cpp      ****     led.Set(0.0f);
- 967              		.loc 1 214 10 is_stmt 0 view .LVU246
- 968 0000 0023     		movs	r3, #0
- 969              		.loc 1 215 12 view .LVU247
- 970 0002 9FED030A 		vldr.32	s0, .L47
+ 978              		.loc 1 214 10 is_stmt 0 view .LVU248
+ 979 0000 0023     		movs	r3, #0
+ 980              		.loc 1 215 12 view .LVU249
+ 981 0002 9FED030A 		vldr.32	s0, .L47
  214:LEDs.cpp      ****     led.Set(0.0f);
- 971              		.loc 1 214 10 view .LVU248
- 972 0006 00F8143B 		strb	r3, [r0], #20
- 973              	.LVL75:
- 974              		.loc 1 215 5 is_stmt 1 view .LVU249
- 975              		.loc 1 215 12 is_stmt 0 view .LVU250
- 976 000a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 977              	.LVL76:
- 978              	.L48:
- 979              		.loc 1 215 12 view .LVU251
- 980 000e 00BF     		.align	2
- 981              	.L47:
- 982 0010 00000000 		.word	0
- 983              		.cfi_endproc
- 984              	.LFE3920:
- 986              		.section	.text._ZN9ButtonLED8getStateEv,"ax",%progbits
- 987              		.align	1
- 988              		.p2align 2,,3
- 989              		.global	_ZN9ButtonLED8getStateEv
- 990              		.syntax unified
- 991              		.thumb
- 992              		.thumb_func
- 993              		.fpu fpv5-d16
- 995              	_ZN9ButtonLED8getStateEv:
- 996              	.LVL77:
- 997              	.LFB3921:
+ 982              		.loc 1 214 10 view .LVU250
+ 983 0006 00F8143B 		strb	r3, [r0], #20
+ 984              	.LVL76:
+ 985              		.loc 1 215 5 is_stmt 1 view .LVU251
+ 986              		.loc 1 215 12 is_stmt 0 view .LVU252
+ 987 000a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 988              	.LVL77:
+ 989              	.L48:
+ 990              		.loc 1 215 12 view .LVU253
+ 991 000e 00BF     		.align	2
+ 992              	.L47:
+ 993 0010 00000000 		.word	0
+ 994              		.cfi_endproc
+ 995              	.LFE3920:
+ 997              		.section	.text._ZN9ButtonLED8getStateEv,"ax",%progbits
+ 998              		.align	1
+ 999              		.p2align 2,,3
+ 1000              		.global	_ZN9ButtonLED8getStateEv
+ 1001              		.syntax unified
+ 1002              		.thumb
+ 1003              		.thumb_func
+ 1004              		.fpu fpv5-d16
+ 1006              	_ZN9ButtonLED8getStateEv:
+ 1007              	.LVL78:
+ 1008              	.LFB3921:
  216:LEDs.cpp      **** }
  217:LEDs.cpp      **** 
  218:LEDs.cpp      **** bool ButtonLED::getState() //getter function, so nothing else can change isON
  219:LEDs.cpp      **** {
- 998              		.loc 1 219 1 is_stmt 1 view -0
- 999              		.cfi_startproc
- 1000              		@ args = 0, pretend = 0, frame = 0
- 1001              		@ frame_needed = 0, uses_anonymous_args = 0
- 1002              		@ link register save eliminated.
+ 1009              		.loc 1 219 1 is_stmt 1 view -0
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 28
+
+
+ 1010              		.cfi_startproc
+ 1011              		@ args = 0, pretend = 0, frame = 0
+ 1012              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1013              		@ link register save eliminated.
  220:LEDs.cpp      ****     return isON;
- 1003              		.loc 1 220 5 view .LVU253
+ 1014              		.loc 1 220 5 view .LVU255
  221:LEDs.cpp      **** }
- 1004              		.loc 1 221 1 is_stmt 0 view .LVU254
- 1005 0000 0078     		ldrb	r0, [r0]	@ zero_extendqisi2
- 1006              	.LVL78:
- 1007              		.loc 1 221 1 view .LVU255
- 1008 0002 7047     		bx	lr
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 28
-
-
- 1009              		.cfi_endproc
- 1010              	.LFE3921:
- 1012              		.section	.text._ZN9ButtonLED10RisingEdgeEv,"ax",%progbits
- 1013              		.align	1
- 1014              		.p2align 2,,3
- 1015              		.global	_ZN9ButtonLED10RisingEdgeEv
- 1016              		.syntax unified
- 1017              		.thumb
- 1018              		.thumb_func
- 1019              		.fpu fpv5-d16
- 1021              	_ZN9ButtonLED10RisingEdgeEv:
- 1022              	.LVL79:
- 1023              	.LFB3922:
+ 1015              		.loc 1 221 1 is_stmt 0 view .LVU256
+ 1016 0000 0078     		ldrb	r0, [r0]	@ zero_extendqisi2
+ 1017              	.LVL79:
+ 1018              		.loc 1 221 1 view .LVU257
+ 1019 0002 7047     		bx	lr
+ 1020              		.cfi_endproc
+ 1021              	.LFE3921:
+ 1023              		.section	.text._ZN9ButtonLED10RisingEdgeEv,"ax",%progbits
+ 1024              		.align	1
+ 1025              		.p2align 2,,3
+ 1026              		.global	_ZN9ButtonLED10RisingEdgeEv
+ 1027              		.syntax unified
+ 1028              		.thumb
+ 1029              		.thumb_func
+ 1030              		.fpu fpv5-d16
+ 1032              	_ZN9ButtonLED10RisingEdgeEv:
+ 1033              	.LVL80:
+ 1034              	.LFB3922:
  222:LEDs.cpp      **** 
  223:LEDs.cpp      **** bool ButtonLED::RisingEdge()    //access switch rising and falling edges
  224:LEDs.cpp      **** {
- 1024              		.loc 1 224 1 is_stmt 1 view -0
- 1025              		.cfi_startproc
- 1026              		@ args = 0, pretend = 0, frame = 0
- 1027              		@ frame_needed = 0, uses_anonymous_args = 0
- 1028              		@ link register save eliminated.
+ 1035              		.loc 1 224 1 is_stmt 1 view -0
+ 1036              		.cfi_startproc
+ 1037              		@ args = 0, pretend = 0, frame = 0
+ 1038              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1039              		@ link register save eliminated.
  225:LEDs.cpp      ****     return sw.RisingEdge();
- 1029              		.loc 1 225 5 view .LVU257
- 1030              	.LBB84:
- 1031              	.LBI84:
+ 1040              		.loc 1 225 5 view .LVU259
+ 1041              	.LBB84:
+ 1042              	.LBI84:
   69:../libdaisy/src/hid/switch.h **** 
- 1032              		.loc 3 69 17 view .LVU258
- 1033              	.LBB85:
+ 1043              		.loc 3 69 17 view .LVU260
+ 1044              	.LBB85:
   69:../libdaisy/src/hid/switch.h **** 
- 1034              		.loc 3 69 38 view .LVU259
+ 1045              		.loc 3 69 38 view .LVU261
   69:../libdaisy/src/hid/switch.h **** 
- 1035              		.loc 3 69 55 is_stmt 0 view .LVU260
- 1036 0000 407A     		ldrb	r0, [r0, #9]	@ zero_extendqisi2
- 1037              	.LVL80:
+ 1046              		.loc 3 69 55 is_stmt 0 view .LVU262
+ 1047 0000 407A     		ldrb	r0, [r0, #9]	@ zero_extendqisi2
+ 1048              	.LVL81:
   69:../libdaisy/src/hid/switch.h **** 
- 1038              		.loc 3 69 55 view .LVU261
- 1039              	.LBE85:
- 1040              	.LBE84:
+ 1049              		.loc 3 69 55 view .LVU263
+ 1050              	.LBE85:
+ 1051              	.LBE84:
  226:LEDs.cpp      **** }
- 1041              		.loc 1 226 1 view .LVU262
- 1042 0002 A0F17F00 		sub	r0, #127
- 1043 0006 B0FA80F0 		clz	r0, r0
- 1044 000a 4009     		lsrs	r0, r0, #5
- 1045 000c 7047     		bx	lr
- 1046              		.cfi_endproc
- 1047              	.LFE3922:
- 1049              		.section	.text._ZN9ButtonLED11FallingEdgeEv,"ax",%progbits
- 1050              		.align	1
- 1051              		.p2align 2,,3
- 1052              		.global	_ZN9ButtonLED11FallingEdgeEv
- 1053              		.syntax unified
- 1054              		.thumb
- 1055              		.thumb_func
- 1056              		.fpu fpv5-d16
- 1058              	_ZN9ButtonLED11FallingEdgeEv:
- 1059              	.LVL81:
- 1060              	.LFB3923:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 29
+ 1052              		.loc 1 226 1 view .LVU264
+ 1053 0002 A0F17F00 		sub	r0, #127
+ 1054 0006 B0FA80F0 		clz	r0, r0
+ 1055 000a 4009     		lsrs	r0, r0, #5
+ 1056 000c 7047     		bx	lr
+ 1057              		.cfi_endproc
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 29
 
 
+ 1058              	.LFE3922:
+ 1060              		.section	.text._ZN9ButtonLED11FallingEdgeEv,"ax",%progbits
+ 1061              		.align	1
+ 1062              		.p2align 2,,3
+ 1063              		.global	_ZN9ButtonLED11FallingEdgeEv
+ 1064              		.syntax unified
+ 1065              		.thumb
+ 1066              		.thumb_func
+ 1067              		.fpu fpv5-d16
+ 1069              	_ZN9ButtonLED11FallingEdgeEv:
+ 1070              	.LVL82:
+ 1071              	.LFB3923:
  227:LEDs.cpp      **** 
  228:LEDs.cpp      **** bool ButtonLED::FallingEdge()
  229:LEDs.cpp      **** {
- 1061              		.loc 1 229 1 is_stmt 1 view -0
- 1062              		.cfi_startproc
- 1063              		@ args = 0, pretend = 0, frame = 0
- 1064              		@ frame_needed = 0, uses_anonymous_args = 0
- 1065              		@ link register save eliminated.
+ 1072              		.loc 1 229 1 is_stmt 1 view -0
+ 1073              		.cfi_startproc
+ 1074              		@ args = 0, pretend = 0, frame = 0
+ 1075              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1076              		@ link register save eliminated.
  230:LEDs.cpp      ****     return sw.FallingEdge();
- 1066              		.loc 1 230 5 view .LVU264
- 1067              	.LBB86:
- 1068              	.LBI86:
+ 1077              		.loc 1 230 5 view .LVU266
+ 1078              	.LBB86:
+ 1079              	.LBI86:
   72:../libdaisy/src/hid/switch.h **** 
- 1069              		.loc 3 72 17 view .LVU265
- 1070              	.LBB87:
+ 1080              		.loc 3 72 17 view .LVU267
+ 1081              	.LBB87:
   72:../libdaisy/src/hid/switch.h **** 
- 1071              		.loc 3 72 39 view .LVU266
+ 1082              		.loc 3 72 39 view .LVU268
   72:../libdaisy/src/hid/switch.h **** 
- 1072              		.loc 3 72 56 is_stmt 0 view .LVU267
- 1073 0000 407A     		ldrb	r0, [r0, #9]	@ zero_extendqisi2
- 1074              	.LVL82:
+ 1083              		.loc 3 72 56 is_stmt 0 view .LVU269
+ 1084 0000 407A     		ldrb	r0, [r0, #9]	@ zero_extendqisi2
+ 1085              	.LVL83:
   72:../libdaisy/src/hid/switch.h **** 
- 1075              		.loc 3 72 56 view .LVU268
- 1076              	.LBE87:
- 1077              	.LBE86:
+ 1086              		.loc 3 72 56 view .LVU270
+ 1087              	.LBE87:
+ 1088              	.LBE86:
  231:LEDs.cpp      **** }
- 1078              		.loc 1 231 1 view .LVU269
- 1079 0002 A0F18000 		sub	r0, #128
- 1080 0006 B0FA80F0 		clz	r0, r0
- 1081 000a 4009     		lsrs	r0, r0, #5
- 1082 000c 7047     		bx	lr
- 1083              		.cfi_endproc
- 1084              	.LFE3923:
- 1086              		.section	.text._ZN9ButtonLED7LED_setEf,"ax",%progbits
- 1087              		.align	1
- 1088              		.p2align 2,,3
- 1089              		.global	_ZN9ButtonLED7LED_setEf
- 1090              		.syntax unified
- 1091              		.thumb
- 1092              		.thumb_func
- 1093              		.fpu fpv5-d16
- 1095              	_ZN9ButtonLED7LED_setEf:
- 1096              	.LVL83:
- 1097              	.LFB3924:
+ 1089              		.loc 1 231 1 view .LVU271
+ 1090 0002 A0F18000 		sub	r0, #128
+ 1091 0006 B0FA80F0 		clz	r0, r0
+ 1092 000a 4009     		lsrs	r0, r0, #5
+ 1093 000c 7047     		bx	lr
+ 1094              		.cfi_endproc
+ 1095              	.LFE3923:
+ 1097              		.section	.text._ZN9ButtonLED7LED_setEf,"ax",%progbits
+ 1098              		.align	1
+ 1099              		.p2align 2,,3
+ 1100              		.global	_ZN9ButtonLED7LED_setEf
+ 1101              		.syntax unified
+ 1102              		.thumb
+ 1103              		.thumb_func
+ 1104              		.fpu fpv5-d16
+ 1106              	_ZN9ButtonLED7LED_setEf:
+ 1107              	.LVL84:
+ 1108              	.LFB3924:
  232:LEDs.cpp      **** 
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 30
+
+
  233:LEDs.cpp      **** void ButtonLED::LED_set(float brightness)
  234:LEDs.cpp      **** {
- 1098              		.loc 1 234 1 is_stmt 1 view -0
- 1099              		.cfi_startproc
- 1100              		@ args = 0, pretend = 0, frame = 0
- 1101              		@ frame_needed = 0, uses_anonymous_args = 0
- 1102              		@ link register save eliminated.
+ 1109              		.loc 1 234 1 is_stmt 1 view -0
+ 1110              		.cfi_startproc
+ 1111              		@ args = 0, pretend = 0, frame = 0
+ 1112              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1113              		@ link register save eliminated.
  235:LEDs.cpp      ****     led.Set(brightness);
- 1103              		.loc 1 235 5 view .LVU271
- 1104              		.loc 1 235 12 is_stmt 0 view .LVU272
- 1105 0000 1430     		adds	r0, r0, #20
- 1106              	.LVL84:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 30
+ 1114              		.loc 1 235 5 view .LVU273
+ 1115              		.loc 1 235 12 is_stmt 0 view .LVU274
+ 1116 0000 1430     		adds	r0, r0, #20
+ 1117              	.LVL85:
+ 1118              		.loc 1 235 12 view .LVU275
+ 1119 0002 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
+ 1120              	.LVL86:
+ 1121              		.loc 1 235 12 view .LVU276
+ 1122              		.cfi_endproc
+ 1123              	.LFE3924:
+ 1125 0006 00BF     		.section	.rodata.CSWTCH.28,"a"
+ 1126              		.align	2
+ 1127              		.set	.LANCHOR0,. + 0
+ 1130              	CSWTCH.28:
+ 1131 0000 00001042 		.word	1108344832
+ 1132 0004 0000F041 		.word	1106247680
+ 1133 0008 0000C041 		.word	1103101952
+ 1134 000c 00009041 		.word	1099956224
+ 1135 0010 00004041 		.word	1094713344
+ 1136 0014 0000C040 		.word	1086324736
+ 1137 0018 00004040 		.word	1077936128
+ 1138 001c 00000040 		.word	1073741824
+ 1139 0020 0000803F 		.word	1065353216
+ 1140 0024 0000803F 		.word	1065353216
+ 1141 0028 0000803F 		.word	1065353216
+ 1142              		.text
+ 1143              	.Letext0:
+ 1144              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+ 1145              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
+ 1146              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
+ 1147              		.file 7 "../libdaisy/Drivers/CMSIS/Include/core_cm7.h"
+ 1148              		.file 8 "../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
+ 1149              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
+ 1150              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1151              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1152              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1153              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1154              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1155              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1156              		.file 16 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1157              		.file 17 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1158              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1159              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1160              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1161              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1162              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1163              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1164              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1165              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 31
 
 
- 1107              		.loc 1 235 12 view .LVU273
- 1108 0002 FFF7FEBF 		b	_ZN5daisy3Led3SetEf
- 1109              	.LVL85:
- 1110              		.loc 1 235 12 view .LVU274
- 1111              		.cfi_endproc
- 1112              	.LFE3924:
- 1114 0006 00BF     		.section	.rodata.CSWTCH.28,"a"
- 1115              		.align	2
- 1116              		.set	.LANCHOR0,. + 0
- 1119              	CSWTCH.28:
- 1120 0000 00001042 		.word	1108344832
- 1121 0004 0000F041 		.word	1106247680
- 1122 0008 0000C041 		.word	1103101952
- 1123 000c 00009041 		.word	1099956224
- 1124 0010 00004041 		.word	1094713344
- 1125 0014 0000C040 		.word	1086324736
- 1126 0018 00004040 		.word	1077936128
- 1127 001c 00000040 		.word	1073741824
- 1128 0020 0000803F 		.word	1065353216
- 1129 0024 0000803F 		.word	1065353216
- 1130 0028 0000803F 		.word	1065353216
- 1131              		.text
- 1132              	.Letext0:
- 1133              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
- 1134              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
- 1135              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
- 1136              		.file 7 "../libdaisy/Drivers/CMSIS/Include/core_cm7.h"
- 1137              		.file 8 "../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
- 1138              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
- 1139              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1140              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1141              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1142              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1143              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1144              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1145              		.file 16 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1146              		.file 17 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1147              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1148              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1149              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1150              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1151              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1152              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1153              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1154              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1155              		.file 26 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1156              		.file 27 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1157              		.file 28 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1158              		.file 29 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1159              		.file 30 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1160              		.file 31 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1161              		.file 32 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
- 1162              		.file 33 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
- 1163              		.file 34 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
- 1164              		.file 35 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
- 1165              		.file 36 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
- 1166              		.file 37 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 31
-
-
- 1167              		.file 38 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
- 1168              		.file 39 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
- 1169              		.file 40 "../DaisySP/Source/Control/adenv.h"
- 1170              		.file 41 "../DaisySP/Source/Utility/dsp.h"
- 1171              		.file 42 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
- 1172              		.file 43 "<built-in>"
- 1173              		.file 44 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
- 1174              		.file 45 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/locale.h"
- 1175              		.file 46 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/ctype.h"
- 1176              		.file 47 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
- 1177              		.file 48 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
- 1178              		.file 49 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1179              		.file 50 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
- 1180              		.file 51 "../libdaisy/src/daisy_core.h"
- 1181              		.file 52 "../libdaisy/src/per/tim.h"
- 1182              		.file 53 "../libdaisy/src/util/wav_format.h"
- 1183              		.file 54 "../libdaisy/src/hid/led.h"
- 1184              		.file 55 "../libdaisy/src/per/gpio.h"
- 1185              		.file 56 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/unistd
- 1186              		.file 57 "../libdaisy/src/util/oled_fonts.h"
- 1187              		.file 58 "../libdaisy/Middlewares/Third_Party/FatFs/src/integer.h"
- 1188              		.file 59 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h"
- 1189              		.file 60 "../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h"
- 1190              		.file 61 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
- 1191              		.file 62 "../libdaisy/src/util/sd_diskio.h"
- 1192              		.file 63 "../libdaisy/src/sys/fatfs.h"
- 1193              		.file 64 "constants.h"
- 1194              		.file 65 "LEDs.h"
- 1195              		.file 66 "../libdaisy/src/dev/sr_595.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s 			page 32
+ 1166              		.file 26 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1167              		.file 27 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1168              		.file 28 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1169              		.file 29 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1170              		.file 30 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1171              		.file 31 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1172              		.file 32 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
+ 1173              		.file 33 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
+ 1174              		.file 34 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
+ 1175              		.file 35 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
+ 1176              		.file 36 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ 1177              		.file 37 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1178              		.file 38 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
+ 1179              		.file 39 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
+ 1180              		.file 40 "../DaisySP/Source/Control/adenv.h"
+ 1181              		.file 41 "../DaisySP/Source/Utility/dsp.h"
+ 1182              		.file 42 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
+ 1183              		.file 43 "<built-in>"
+ 1184              		.file 44 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
+ 1185              		.file 45 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/locale.h"
+ 1186              		.file 46 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/ctype.h"
+ 1187              		.file 47 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
+ 1188              		.file 48 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
+ 1189              		.file 49 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1190              		.file 50 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
+ 1191              		.file 51 "../libdaisy/src/daisy_core.h"
+ 1192              		.file 52 "../libdaisy/src/per/tim.h"
+ 1193              		.file 53 "../libdaisy/src/util/wav_format.h"
+ 1194              		.file 54 "../libdaisy/src/hid/led.h"
+ 1195              		.file 55 "../libdaisy/src/per/gpio.h"
+ 1196              		.file 56 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/unistd
+ 1197              		.file 57 "../libdaisy/src/util/oled_fonts.h"
+ 1198              		.file 58 "../libdaisy/Middlewares/Third_Party/FatFs/src/integer.h"
+ 1199              		.file 59 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h"
+ 1200              		.file 60 "../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h"
+ 1201              		.file 61 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
+ 1202              		.file 62 "../libdaisy/src/util/sd_diskio.h"
+ 1203              		.file 63 "../libdaisy/src/sys/fatfs.h"
+ 1204              		.file 64 "constants.h"
+ 1205              		.file 65 "LEDs.h"
+ 1206              		.file 66 "../libdaisy/src/dev/sr_595.h"
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s 			page 32
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 LEDs.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:17     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:26     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 _ZN8TempoLED4initE12dsy_gpio_pinf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:233    .text._ZN8TempoLED4initE12dsy_gpio_pinf:000000000000008c $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:239    .text._ZN8TempoLED8setTempoEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:247    .text._ZN8TempoLED8setTempoEf:0000000000000000 _ZN8TempoLED8setTempoEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:290    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:298    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 _ZN8TempoLED10resetPhaseEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:325    .text._ZN8TempoLED6updateEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:333    .text._ZN8TempoLED6updateEv:0000000000000000 _ZN8TempoLED6updateEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:387    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:395    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 _ZN8TempoLED6updateE9TempoDivsf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:483    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000050 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:489    .text._ZN8TempoLED7LED_setEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:497    .text._ZN8TempoLED7LED_setEf:0000000000000000 _ZN8TempoLED7LED_setEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:514    .text._ZN8TempoLED5isEOCEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:522    .text._ZN8TempoLED5isEOCEv:0000000000000000 _ZN8TempoLED5isEOCEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:541    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:549    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 _ZN8TempoLED9GetDivIntE9TempoDivs
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:578    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000018 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:583    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:591    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 _ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:661    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000044 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:667    .text._ZN9ButtonLED6toggleEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:675    .text._ZN9ButtonLED6toggleEv:0000000000000000 _ZN9ButtonLED6toggleEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:709    .text._ZN9ButtonLED6toggleEv:0000000000000020 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:714    .text._ZN9ButtonLED6updateEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:722    .text._ZN9ButtonLED6updateEv:0000000000000000 _ZN9ButtonLED6updateEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:910    .text._ZN9ButtonLED6updateEv:0000000000000074 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:917    .text._ZN9ButtonLED6turnONEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:925    .text._ZN9ButtonLED6turnONEv:0000000000000000 _ZN9ButtonLED6turnONEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:950    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:958    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 _ZN9ButtonLED7turnOFFEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:982    .text._ZN9ButtonLED7turnOFFEv:0000000000000010 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:987    .text._ZN9ButtonLED8getStateEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:995    .text._ZN9ButtonLED8getStateEv:0000000000000000 _ZN9ButtonLED8getStateEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1013   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1021   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 _ZN9ButtonLED10RisingEdgeEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1050   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1058   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 _ZN9ButtonLED11FallingEdgeEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1087   .text._ZN9ButtonLED7LED_setEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1095   .text._ZN9ButtonLED7LED_setEf:0000000000000000 _ZN9ButtonLED7LED_setEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1115   .rodata.CSWTCH.28:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccP3YqzN.s:1119   .rodata.CSWTCH.28:0000000000000000 CSWTCH.28
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:17     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:26     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 _ZN8TempoLED4initE12dsy_gpio_pinf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:233    .text._ZN8TempoLED4initE12dsy_gpio_pinf:000000000000008c $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:239    .text._ZN8TempoLED8setTempoEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:247    .text._ZN8TempoLED8setTempoEf:0000000000000000 _ZN8TempoLED8setTempoEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:290    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:298    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 _ZN8TempoLED10resetPhaseEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:325    .text._ZN8TempoLED6updateEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:333    .text._ZN8TempoLED6updateEv:0000000000000000 _ZN8TempoLED6updateEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:387    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:395    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 _ZN8TempoLED6updateE9TempoDivsf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:483    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000050 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:489    .text._ZN8TempoLED7LED_setEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:497    .text._ZN8TempoLED7LED_setEf:0000000000000000 _ZN8TempoLED7LED_setEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:514    .text._ZN8TempoLED5isEOCEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:522    .text._ZN8TempoLED5isEOCEv:0000000000000000 _ZN8TempoLED5isEOCEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:541    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:549    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 _ZN8TempoLED9GetDivIntE9TempoDivs
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:578    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000018 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:583    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:591    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 _ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:673    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000050 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:678    .text._ZN9ButtonLED6toggleEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:686    .text._ZN9ButtonLED6toggleEv:0000000000000000 _ZN9ButtonLED6toggleEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:720    .text._ZN9ButtonLED6toggleEv:0000000000000020 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:725    .text._ZN9ButtonLED6updateEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:733    .text._ZN9ButtonLED6updateEv:0000000000000000 _ZN9ButtonLED6updateEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:921    .text._ZN9ButtonLED6updateEv:0000000000000074 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:928    .text._ZN9ButtonLED6turnONEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:936    .text._ZN9ButtonLED6turnONEv:0000000000000000 _ZN9ButtonLED6turnONEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:961    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:969    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 _ZN9ButtonLED7turnOFFEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:993    .text._ZN9ButtonLED7turnOFFEv:0000000000000010 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:998    .text._ZN9ButtonLED8getStateEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:1006   .text._ZN9ButtonLED8getStateEv:0000000000000000 _ZN9ButtonLED8getStateEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:1024   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:1032   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 _ZN9ButtonLED10RisingEdgeEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:1061   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:1069   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 _ZN9ButtonLED11FallingEdgeEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:1098   .text._ZN9ButtonLED7LED_setEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:1106   .text._ZN9ButtonLED7LED_setEf:0000000000000000 _ZN9ButtonLED7LED_setEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:1126   .rodata.CSWTCH.28:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc3Os3nk.s:1130   .rodata.CSWTCH.28:0000000000000000 CSWTCH.28
 
 UNDEFINED SYMBOLS
 _ZN5daisy3Led4InitE12dsy_gpio_pinbf

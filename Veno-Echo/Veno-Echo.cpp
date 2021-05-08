@@ -220,6 +220,7 @@ void Update_filterXfade();
 
 void Update_Buttons();
 void Update_BaseTempoLED();
+void Update_DelayTempoLEDs();
 void Update_Mod();
 void GetModCV();
 float SetTempoDiv(float input, TempoDivs *div);
@@ -263,7 +264,7 @@ static int Counter{};
 
 */
 
-Counter = (Counter + 1) % 15;
+Counter = (Counter + 1) % updateDiv;
 
 if(!save_flag)  //don't check ADCs if saving!
 {
@@ -283,6 +284,7 @@ if(!save_flag)  //don't check ADCs if saving!
             case 0:
                 Update_Buttons();
                 GetModCV();
+                Update_DelayTempoLEDs();
             break;
 
             case 1:
@@ -613,18 +615,18 @@ int main(void)
     
     //Buttons or switches with status LEDs
 
-    LPF_sw.init(hw.GetPin(29),hw.GetPin(6),ButtonLED::Toggle,hw.AudioSampleRate() / 12.f);    
-    HPF_sw.init(hw.GetPin(30),hw.GetPin(7),ButtonLED::Toggle,hw.AudioSampleRate()/ 12.f);
-    Rev_L_sw.init(hw.GetPin(10),hw.GetPin(2),ButtonLED::Momentary,hw.AudioSampleRate() / 12.f);
-    Rev_R_sw.init(hw.GetPin(11),hw.GetPin(3),ButtonLED::Momentary,hw.AudioSampleRate() / 12.f);
-    Tap_Button.init(hw.GetPin(24),hw.GetPin(4),ButtonLED::Toggle_inverted,hw.AudioSampleRate() / 12.f);
+    LPF_sw.init(hw.GetPin(29),hw.GetPin(6),ButtonLED::Toggle,hw.AudioSampleRate() / static_cast<float> (updateDiv));    
+    HPF_sw.init(hw.GetPin(30),hw.GetPin(7),ButtonLED::Toggle,hw.AudioSampleRate()/ static_cast<float> (updateDiv));
+    Rev_L_sw.init(hw.GetPin(10),hw.GetPin(2),ButtonLED::Momentary,hw.AudioSampleRate() / static_cast<float> (updateDiv));
+    Rev_R_sw.init(hw.GetPin(11),hw.GetPin(3),ButtonLED::Momentary,hw.AudioSampleRate() / static_cast<float> (updateDiv));
+    Tap_Button.init(hw.GetPin(24),hw.GetPin(4),ButtonLED::Toggle_inverted,hw.AudioSampleRate() / static_cast<float> (updateDiv));
 
     //Gates
-    ReverseGateL.Init(hw.GetPin(0), hw.AudioSampleRate() / 48.f,Switch::TYPE_MOMENTARY,Switch::POLARITY_INVERTED,Switch::PULL_NONE);
-    ReverseGateR.Init(hw.GetPin(1), hw.AudioSampleRate() / 48.f,Switch::TYPE_MOMENTARY,Switch::POLARITY_INVERTED,Switch::PULL_NONE);
+    ReverseGateL.Init(hw.GetPin(0), hw.AudioSampleRate() / static_cast<float> (updateDiv),Switch::TYPE_MOMENTARY,Switch::POLARITY_INVERTED,Switch::PULL_NONE);
+    ReverseGateR.Init(hw.GetPin(1), hw.AudioSampleRate() / static_cast<float> (updateDiv),Switch::TYPE_MOMENTARY,Switch::POLARITY_INVERTED,Switch::PULL_NONE);
 
     //TapButton.Init(hw.GetPin(4), hw.AudioSampleRate() / 48.f);
-    Sync.Init(hw.GetPin(23), hw.AudioSampleRate() / 48.f);
+    Sync.Init(hw.GetPin(23), hw.AudioSampleRate() / static_cast<float> (updateDiv));
     ClockIn.Init(hw.GetPin(5), hw.AudioSampleRate());
     
     FwdRevLEnv.Init(hw.AudioSampleRate());
@@ -1671,8 +1673,14 @@ void Update_Buttons()
     syncMode = Sync.Pressed() ? true : false;
 
     //update syncMode
-    delayL.SetSync(syncMode);
-    delayR.SetSync(syncMode);
+    //delayL.SetSync(syncMode);
+    //delayR.SetSync(syncMode);
+}
+
+void Update_DelayTempoLEDs()
+{    
+    delayL.updateTempoLED(syncMode);
+    delayR.updateTempoLED(syncMode);
 }
 
 void Update_BaseTempoLED()

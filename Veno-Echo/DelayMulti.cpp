@@ -27,7 +27,7 @@ void DelayMulti::init(dsy_gpio_pin ledpin,float samplerate)
 {
     samplerate_ = samplerate;
     del -> Init(totalNumHeads);
-    tempoled.init(ledpin,samplerate_);
+    tempoled.init(ledpin,samplerate_/static_cast<float> (updateDiv));
     //dsy_tim_init(); //start timer
     //dsy_tim_start();
 
@@ -147,15 +147,6 @@ else    //change in delaytime smaller than threshold (I.e. stopped moving)
 //Call at audio samplerate
 const float& DelayMulti::GetOutput()
 {
-    if(syncMode_)
-    {
-        tempoled.update(div_,basePhase_);
-    }
-    else
-    {
-        tempoled.update();
-    }
-
     //float output{};    
     output_ = 0.0f;
     float zero{};
@@ -174,6 +165,18 @@ const float& DelayMulti::GetOutput()
     }
 
     return output_;
+}
+
+void DelayMulti::updateTempoLED(bool syncMode)
+{
+    if(syncMode)
+    {
+        tempoled.update(div_,basePhase_);
+    }
+    else
+    {
+        tempoled.update();
+    }
 }
 
 //Writes to delayline

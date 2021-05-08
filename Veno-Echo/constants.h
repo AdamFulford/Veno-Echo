@@ -84,6 +84,8 @@ constexpr uint32_t ClockInWait{1000}; //in ms
 
 constexpr float pickupTolerance{0.005f};
 
+constexpr int updateDiv{15}; //division of samplerate LEDs/switches/pots are is updated
+
 enum TempoDivs
 {
     DIV6,
