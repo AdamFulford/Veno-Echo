@@ -27,6 +27,7 @@
 #include "daisy_seed.h"
 
 using namespace daisy;
+using namespace daisysp;
 
 class Taptempo
 {
@@ -36,7 +37,7 @@ class Taptempo
         uint32_t clockLength_, lastClockLength_, clockThresh_;
         bool tapflag_;
         float tap_tolerance_;
-        double tempo_, tapRatio_;
+        float tempo_, tapRatio_;
 
     public:
 
@@ -44,20 +45,20 @@ class Taptempo
     {
         tapflag_ = false;
         tap_tolerance_ = 1.25f;
-        maxtap_ = 2000;
-        mintap_ = 80;
+        maxtap_ = 2000000;
+        mintap_ = 80000;
         lastTapLength_ = 0;
-        tempo_ = 500.0f;
+        tempo_ = 500000.0f;
         lastTime_ = 0;
         currentTime_ = 0;
         tapRatio_ = 1.0f;
         clockLength_ = 0;
         lastClockLength_ = 0;
-        clockThresh_ = 10; //ms change
+        clockThresh_ = 10000; //Us change
     }
     ~Taptempo() {}
 
-    void init(int mintap, int maxtap, float tap_tolerance); 
+    void init(uint32_t mintap, uint32_t maxtap, float tap_tolerance); 
     //set mintap (ms), maxtap (ms), tap tolerance
 
     bool tap(); 
@@ -66,7 +67,7 @@ class Taptempo
     bool clock();
     //call when a clock trigger is receieved
 
-    double getTapLength();   
+    float getTapLength();   
     //outputs tap length in ms
     float getTapFreq(); 
     //outputs tap frequency in Hz

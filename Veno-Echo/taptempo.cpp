@@ -23,14 +23,14 @@
 #include "taptempo.h"
 
     //set mintap (ms), maxtap (ms), tap tolerance
-    void Taptempo::init(int mintap, int maxtap, float tap_tolerance)
+    void Taptempo::init(uint32_t mintap, uint32_t maxtap, float tap_tolerance)
     {
         mintap_ = mintap;
         maxtap_ = maxtap;
         tap_tolerance_ = tap_tolerance;
         tapLength_ = 0;
         lastTapLength_ = 0;
-        tempo_ = 500.0f; //in ms. Default 120BPM
+        tempo_ = 500000.0f; //in Us. Default 120BPM
         lastTime_ = 0;
         currentTime_ = 0;
         tapflag_ = false;
@@ -43,7 +43,7 @@
     //call when tap is triggered. currentTime in ms. Returns high if tempo updated
     bool Taptempo::tap()
     {
-        currentTime_ = System::GetNow();    //get current time
+        currentTime_ = System::GetUs();    //get current time
         tapLength_ = currentTime_ - lastTime_;  //calculate length between taps
         lastTime_ = currentTime_;   //always update lastTime_
         
@@ -66,7 +66,7 @@
                 }
                 else
                 {
-                    tempo_ = static_cast<double>(tapLength_) / tapRatio_;
+                    tempo_ = static_cast<float>(tapLength_) / tapRatio_;
                     lastTapLength_ = tapLength_;
                     return true;
                 }
@@ -93,7 +93,7 @@
 
     bool Taptempo::clock()
     {
-        currentTime_ = System::GetNow();    //get current time
+        currentTime_ = System::GetUs();    //get current time
         clockLength_ = currentTime_ - lastTime_;  //calculate length between taps
         lastTime_ = currentTime_;   //always update lastTime_
         
@@ -121,16 +121,26 @@
         }
     }
     
-    //outputs tap length in ms MAKE THIS AN INTEGER
-    double Taptempo::getTapLength()
+    //outputs tap length in Us
+    float Taptempo::getTapLength()
     {
-        return tempo_;    //in ms
+        static float tempo_Out{};
+        static float tempo_last{};
+        fonepole(tempo_Out,tempo_,0.011f); //32Hz cutoff
+
+        //if more than .5% of last value
+        if( abs( tempo_Out - tempo_last)> (0.005 * tempo_last)) 
+        {
+            tempo_last = tempo_Out; //update tempo_last
+        }
+
+        return tempo_last;    //in Us
     }  
     
     //outputs tap frequency in Hz
     float Taptempo::getTapFreq()
     {
-        return 1.0f / (tempo_ / 1000.0f); //in Hz
+        return 1.0f / (tempo_/ 1000000.0f); //in Hz
     }
 
     void Taptempo::setTapRatio(float tapRatio)

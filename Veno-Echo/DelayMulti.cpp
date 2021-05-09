@@ -67,12 +67,11 @@ void DelayMulti::init(dsy_gpio_pin ledpin,float samplerate)
 bool DelayMulti::SetDelayTime(float delaytime_pot, bool syncMode)
 {
 
-double delaytime{};
+float delaytime{};
 
 if(syncMode)
 {
-    //double precision
-    delaytime = GetDiv(delaytime_pot) * baseTempo_ * 48.0;
+    delaytime = GetDiv(delaytime_pot) * baseTempo_ * 0.048f;
 }
 
 else
@@ -186,78 +185,89 @@ void DelayMulti::Write(const float& in)
     del->Write(in);
 }
 
-double DelayMulti::GetDiv(float potValue)
+float DelayMulti::GetDelayTime()
+{
+    float retVal;
+    if(active_head_set_)
+        retVal = delayTarget_[0];
+    else
+        retVal = delayTarget_[1];
+
+    return retVal;
+}
+
+float DelayMulti::GetDiv(float potValue)
 {
     float retVal{};
 
     if (potValue < 0.0909f)
     {
-        retVal = (1.0 / 6.0);
+        retVal = (1.0f / 6.0f);
         div_ = DIV6;
     }
 
     else if (potValue < 0.1818f)
     {
-       retVal = (1.0 / 5.0);
+       retVal = (1.0f / 5.0f);
        div_ = DIV5;
     }
 
     else if (potValue < 0.2727f)
     {
-        retVal = (1.0 / 4.0);
+        retVal = (1.0f / 4.0f);
         div_ = DIV4;
     }
 
     else if (potValue < 0.3636f)
     {
-        retVal = (1.0 / 3.0);
+        retVal = (1.0f / 3.0f);
         div_ = DIV3;
     }
 
     else if (potValue < 0.4545f)
     {
-        retVal = (1.0 / 2.0);
+        retVal = (1.0f / 2.0f);
         div_ = DIV2;
     }
 
     else if (potValue <  0.5455f)
     {
-        retVal = 1.0;
+        retVal = 1.0f;
         div_ = UNITY;
     }
 
     else if (potValue < 0.6364f)
     {
-        retVal = 2.0;
+        retVal = 2.0f;
         div_ = MULT2;
     }
 
     else if (potValue < 0.7273f)
     {
-        retVal = 3.0;
+        retVal = 3.0f;
         div_ = MULT3;
     }
 
     else if (potValue < 0.8182f)
     {
-        retVal = 4.0;
+        retVal = 4.0f;
         div_ = MULT4;
     }
     
     else if (potValue < 0.9091f)
     {
-        retVal = 5.0;
+        retVal = 5.0f;
         div_ = MULT5;
     }
 
     else if (potValue <= 1.0f)
     {
-       retVal = 6.0; 
+       retVal = 6.0f; 
        div_ = MULT6;
     }
     else
     {
-        retVal = 1.0; 
+        retVal = 1.0f; 
        div_ = UNITY;
     }
 

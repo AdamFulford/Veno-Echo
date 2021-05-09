@@ -141,6 +141,9 @@ bool PostFilters{false};
 
 std::atomic<bool> save_flag{};
 
+float DELAYL_DEBUG{};
+float DELAYR_DEBUG{};
+
 static Adsr FwdRevLEnv;
 static Adsr FwdRevREnv;
 
@@ -719,7 +722,7 @@ int main(void)
     lfo.SetFreq(1.0f);
     lfo.SetAmp(1.0f);
 
-    BaseTempo.init(80,6000,1.25f);  //max 6 second tap
+    BaseTempo.init(20000,6000000,1.25f);  //max 6 second tap
 
     //setup tempo indicators
     //tempoLED_BASE.init(hw.GetPin(14),hw.AudioSampleRate());
@@ -761,7 +764,7 @@ int main(void)
 
      for(;;)
      {
-
+     //   
 /*
         if(save_flag)
         {
@@ -1683,6 +1686,8 @@ void Update_DelayBaseTempo()
 {
     delayL.SetBaseTempo(BaseTempo.getTapLength());
     delayR.SetBaseTempo(BaseTempo.getTapLength());
+    DELAYL_DEBUG = delayL.GetDelayTime();
+    DELAYR_DEBUG = delayR.GetDelayTime();
 }
 
 void Update_DelayTempoLEDs()
