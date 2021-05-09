@@ -64,14 +64,15 @@ void DelayMulti::init(dsy_gpio_pin ledpin,float samplerate)
 }
 
 //Updates delay time in samples. Returns high if tempo was updated
-bool DelayMulti::SetDelayTime(float delaytime_pot, float baseTempo, bool syncMode)
+bool DelayMulti::SetDelayTime(float delaytime_pot, bool syncMode)
 {
 
-float delaytime{};
+double delaytime{};
 
 if(syncMode)
 {
-    delaytime = GetDiv(delaytime_pot) * baseTempo * 48.0f;
+    //double precision
+    delaytime = GetDiv(delaytime_pot) * baseTempo_ * 48.0;
 }
 
 else
@@ -80,7 +81,7 @@ else
 }
     
 //If change in delaytime exceeds 0.5% of last value
-if( abs(delaytime - delayLast_)> (0.005f * delayLast_)) 
+if( abs( delaytime - delayLast_)> (0.005 * delayLast_)) 
 {
     timer_ = System::GetNow(); //reset timer
     waiting_flag_ = true;
@@ -100,7 +101,7 @@ else    //change in delaytime smaller than threshold (I.e. stopped moving)
         for (size_t j=0; j < numHeads; j++)
         {
             //set delaytime for set 2
-            delayTarget_[numHeads + j] = delaytime;
+            delayTarget_[numHeads + j] = static_cast<float> (delaytime);
         }
     }
     else
@@ -108,7 +109,7 @@ else    //change in delaytime smaller than threshold (I.e. stopped moving)
         for (size_t j=0; j < numHeads; j++) //set 2 active
         {
             //set delay time for set 1
-            delayTarget_[j] = delaytime;
+            delayTarget_[j] = static_cast<float> (delaytime);
         }
     }
 
@@ -185,78 +186,78 @@ void DelayMulti::Write(const float& in)
     del->Write(in);
 }
 
-float DelayMulti::GetDiv(float potValue)
+double DelayMulti::GetDiv(float potValue)
 {
     float retVal{};
 
     if (potValue < 0.0909f)
     {
-        retVal = (1.0f / 6.0f);
+        retVal = (1.0 / 6.0);
         div_ = DIV6;
     }
 
     else if (potValue < 0.1818f)
     {
-       retVal = (1.0f / 5.0f);
+       retVal = (1.0 / 5.0);
        div_ = DIV5;
     }
 
     else if (potValue < 0.2727f)
     {
-        retVal = (1.0f / 4.0f);
+        retVal = (1.0 / 4.0);
         div_ = DIV4;
     }
 
     else if (potValue < 0.3636f)
     {
-        retVal = (1.0f / 3.0f);
+        retVal = (1.0 / 3.0);
         div_ = DIV3;
     }
 
     else if (potValue < 0.4545f)
     {
-        retVal = (1.0f / 2.0f);
+        retVal = (1.0 / 2.0);
         div_ = DIV2;
     }
 
     else if (potValue <  0.5455f)
     {
-        retVal = (1.0f);
+        retVal = 1.0;
         div_ = UNITY;
     }
 
     else if (potValue < 0.6364f)
     {
-        retVal = 2.0f;
+        retVal = 2.0;
         div_ = MULT2;
     }
 
     else if (potValue < 0.7273f)
     {
-        retVal = 3.0f;
+        retVal = 3.0;
         div_ = MULT3;
     }
 
     else if (potValue < 0.8182f)
     {
-        retVal = 4.0f;
+        retVal = 4.0;
         div_ = MULT4;
     }
     
     else if (potValue < 0.9091f)
     {
-        retVal = 5.0f;
+        retVal = 5.0;
         div_ = MULT5;
     }
 
     else if (potValue <= 1.0f)
     {
-       retVal = 6.0f; 
+       retVal = 6.0; 
        div_ = MULT6;
     }
     else
     {
-        retVal = 1.0f; 
+        retVal = 1.0; 
        div_ = UNITY;
     }
 

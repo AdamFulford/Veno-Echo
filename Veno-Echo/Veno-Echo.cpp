@@ -219,13 +219,14 @@ void Update_crossfeedback();
 void Update_filterXfade();
 
 void Update_Buttons();
+void Update_DelayBaseTempo();
 void Update_BaseTempoLED();
 void Update_DelayTempoLEDs();
 void Update_Mod();
 void GetModCV();
 float SetTempoDiv(float input, TempoDivs *div);
 void UpdateClock();
-float GetTapRatio(TapRatios ratio);
+double GetTapRatio(TapRatios ratio);
 void ApplySettings(const Settings &setting);
 void TurnOnAllLEDs();
 void ResetAllLEDs();
@@ -284,6 +285,7 @@ if(!save_flag)  //don't check ADCs if saving!
             case 0:
                 Update_Buttons();
                 GetModCV();
+                Update_DelayBaseTempo();
                 Update_DelayTempoLEDs();
             break;
 
@@ -834,7 +836,7 @@ void Update_DelayTimeL()
 
         if(counterL == 0)
         {
-            if(delayL.SetDelayTime(delayTimeL,BaseTempo.getTapLength(),syncMode))
+            if(delayL.SetDelayTime(delayTimeL,syncMode))
             {
             };
         }
@@ -932,7 +934,7 @@ void Update_DelayTimeR()
 
         if(counterR == 0)
         {
-            if(delayR.SetDelayTime(delayTimeR,BaseTempo.getTapLength(),syncMode))
+            if(delayR.SetDelayTime(delayTimeR,syncMode))
             {
             };
 
@@ -1677,6 +1679,12 @@ void Update_Buttons()
     //delayR.SetSync(syncMode);
 }
 
+void Update_DelayBaseTempo()
+{
+    delayL.SetBaseTempo(BaseTempo.getTapLength());
+    delayR.SetBaseTempo(BaseTempo.getTapLength());
+}
+
 void Update_DelayTempoLEDs()
 {    
     delayL.updateTempoLED(syncMode);
@@ -1967,29 +1975,29 @@ pickupState checkPickupState_alt(float value, float lastValue, pickupState lastS
     return retval;
 }
 
-float GetTapRatio(TapRatios ratio)
+double GetTapRatio(TapRatios ratio)
 {
-float retVal{};
+double retVal{};
     switch(ratio)
     {
         case QUARTER:
-        retVal = 1.0f;
+        retVal = 1.0;
         break;
 
         case DOTTED_EIGHT:
-        retVal = 3.0f/2.0f;
+        retVal = 3.0/2.0;
         break;
 
         case EIGHT:
-        retVal = 2.0f;
+        retVal = 2.0;
         break;
 
         case TWELVE:
-        retVal = 3.0f;
+        retVal = 3.0;
         break;
 
         default:
-        retVal = 1.0f;
+        retVal = 1.0;
         break;
     }
 

@@ -23,6 +23,7 @@
 #ifndef SCALE_H
 #define SCALE_H
 #include <math.h>
+#include "daisysp.h"
 
 enum CurveType
     {
@@ -34,5 +35,7 @@ enum CurveType
     };
 
 float scale(float input, float outputMin, float outputMax, CurveType curve);
+float map(float input, float output, CurveType curve);
+uint32_t scale(float input, uint32_t outputMin, uint32_t outputMax);
 
 #endif

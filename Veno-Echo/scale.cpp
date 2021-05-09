@@ -22,6 +22,7 @@
 
 #include "scale.h"
 
+//maps and scales float (0.0 to 1.0) to float (outputMin to outputMax)
 float scale(float input, float outputMin, float outputMax, CurveType curve)
 {
     float val{};
@@ -51,3 +52,45 @@ float scale(float input, float outputMin, float outputMax, CurveType curve)
     }
     return val;
 }
+
+/*
+//maps float (0.0 to 1.0) to different response curves
+float map(float input, float output, CurveType curve)
+{
+    float val{};
+    float lmin{logf(0.0000001f)};
+    float lmax{logf(1.0f)};
+
+    switch(curve)
+    {
+        case LINEAR:
+            val = input;
+        break;
+
+        case EXPONENTIAL:
+            val = (input * input);
+        break;
+
+        case LOGARITHMIC:
+            val = expf((input * (lmax - lmin)) + lmin);
+        break;
+        
+        case CUBE:
+            val = (input * input * input);
+        break;
+        
+        default: 
+        break;
+    }
+    return val;
+}
+
+//scales float  (0.0 to 1.0) to uint32_t (outputMin to outputMax)
+uint32_t scale(float input, uint32_t outputMin, uint32_t outputMax)
+{   
+    float val{};
+    val = ( input * static_cast<float>(outputMax - outputMin) ) + ( static_cast<float>(outputMin) );
+    return static_cast<uint32_t>( rint(val) );
+}
+
+*/

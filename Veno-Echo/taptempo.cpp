@@ -66,7 +66,7 @@
                 }
                 else
                 {
-                    tempo_ = static_cast<float>(tapLength_) / tapRatio_;
+                    tempo_ = static_cast<double>(tapLength_) / tapRatio_;
                     lastTapLength_ = tapLength_;
                     return true;
                 }
@@ -121,8 +121,8 @@
         }
     }
     
-    //outputs tap length in ms
-    float Taptempo::getTapLength()
+    //outputs tap length in ms MAKE THIS AN INTEGER
+    double Taptempo::getTapLength()
     {
         return tempo_;    //in ms
     }  

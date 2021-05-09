@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -27,7 +27,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
   24              		.fpu fpv5-d16
   26              	_ZN10DelayMulti4initE12dsy_gpio_pinf:
   27              	.LVL0:
-  28              	.LFB3965:
+  28              	.LFB3966:
   29              		.file 1 "DelayMulti.cpp"
    1:DelayMulti.cpp **** // Copyright 2021 Adam Fulford
    2:DelayMulti.cpp **** // 
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
   27:DelayMulti.cpp **** {
   30              		.loc 1 27 1 view -0
   31              		.cfi_startproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 2
 
 
   32              		@ args = 0, pretend = 0, frame = 8
@@ -67,33 +67,34 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
   34              		.loc 1 28 5 view .LVU1
   27:DelayMulti.cpp ****     samplerate_ = samplerate;
   35              		.loc 1 27 1 is_stmt 0 view .LVU2
-  36 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
-  37              		.cfi_def_cfa_offset 28
-  38              		.cfi_offset 4, -28
-  39              		.cfi_offset 5, -24
-  40              		.cfi_offset 6, -20
-  41              		.cfi_offset 7, -16
-  42              		.cfi_offset 8, -12
-  43              		.cfi_offset 9, -8
-  44              		.cfi_offset 14, -4
-  45 0004 83B0     		sub	sp, sp, #12
-  46              		.cfi_def_cfa_offset 40
-  47 0006 394C     		ldr	r4, .L8
+  36 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+  37              		.cfi_def_cfa_offset 32
+  38              		.cfi_offset 4, -32
+  39              		.cfi_offset 5, -28
+  40              		.cfi_offset 6, -24
+  41              		.cfi_offset 7, -20
+  42              		.cfi_offset 8, -16
+  43              		.cfi_offset 9, -12
+  44              		.cfi_offset 10, -8
+  45              		.cfi_offset 14, -4
+  46 0004 82B0     		sub	sp, sp, #8
+  47              		.cfi_def_cfa_offset 40
+  48 0006 3B4C     		ldr	r4, .L8
   27:DelayMulti.cpp ****     samplerate_ = samplerate;
-  48              		.loc 1 27 1 view .LVU3
-  49 0008 0546     		mov	r5, r0
-  50 000a ADF80410 		strh	r1, [sp, #4]	@ movhi
+  49              		.loc 1 27 1 view .LVU3
+  50 0008 0546     		mov	r5, r0
+  51 000a ADF80410 		strh	r1, [sp, #4]	@ movhi
   29:DelayMulti.cpp ****     del -> Init(totalNumHeads);
-  51              		.loc 1 29 5 view .LVU4
-  52 000e 0168     		ldr	r1, [r0]
+  52              		.loc 1 29 5 view .LVU4
+  53 000e 0168     		ldr	r1, [r0]
   28:DelayMulti.cpp ****     samplerate_ = samplerate;
-  53              		.loc 1 28 17 view .LVU5
-  54 0010 80ED440A 		vstr.32	s0, [r0, #272]
-  55              		.loc 1 29 5 is_stmt 1 view .LVU6
-  56              	.LVL1:
-  57              	.LBB103:
-  58              	.LBI103:
-  59              		.file 2 "delayline_multitap.h"
+  54              		.loc 1 28 17 view .LVU5
+  55 0010 80ED430A 		vstr.32	s0, [r0, #268]
+  56              		.loc 1 29 5 is_stmt 1 view .LVU6
+  57              	.LVL1:
+  58              	.LBB103:
+  59              	.LBI103:
+  60              		.file 2 "delayline_multitap.h"
    1:delayline_multitap.h **** // Copyright 2021 Adam Fulford
    2:delayline_multitap.h **** // 
    3:delayline_multitap.h **** // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -117,10 +118,10 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
   21:delayline_multitap.h **** // See http://creativecommons.org/licenses/MIT/ for more information.
   22:delayline_multitap.h **** 
   23:delayline_multitap.h **** #pragma once
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 3
+
+
   24:delayline_multitap.h **** #ifndef DSY_DELAY_MULTITAP_H
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 3
-
-
   25:delayline_multitap.h **** #define DSY_DELAY_MULTITAP_H
   26:delayline_multitap.h **** #include <stdlib.h>
   27:delayline_multitap.h **** #include <stdint.h>
@@ -153,99 +154,102 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
   54:delayline_multitap.h ****     /** initializes the delay line by clearing the values within, and setting delay head times to 0
   55:delayline_multitap.h ****     */
   56:delayline_multitap.h ****     void Init( size_t num_heads) 
-  60              		.loc 2 56 10 view .LVU7
-  61              	.LBB104:
-  62              	.LBB105:
+  61              		.loc 2 56 10 view .LVU7
+  62              	.LBB104:
+  63              	.LBB105:
   57:delayline_multitap.h ****     {
   58:delayline_multitap.h ****         for(size_t i = 0; i < max_size; i++)
-  63              		.loc 2 58 29 view .LVU8
-  64 0014 01F18403 		add	r3, r1, #132
-  65 0018 0C44     		add	r4, r4, r1
-  66              	.LVL2:
-  67              	.L2:
+  64              		.loc 2 58 29 view .LVU8
+  65 0014 01F18403 		add	r3, r1, #132
+  66 0018 0C44     		add	r4, r4, r1
+  67              	.LVL2:
+  68              	.L2:
   59:delayline_multitap.h ****         {
   60:delayline_multitap.h ****             line_[i] = T(0);
-  68              		.loc 2 60 13 is_stmt 0 view .LVU9
-  69 001a 0022     		movs	r2, #0
-  70 001c 43F8042B 		str	r2, [r3], #4	@ float
+  69              		.loc 2 60 13 is_stmt 0 view .LVU9
+  70 001a 0022     		movs	r2, #0
+  71 001c 43F8042B 		str	r2, [r3], #4	@ float
   58:delayline_multitap.h ****         {
-  71              		.loc 2 58 9 is_stmt 1 view .LVU10
+  72              		.loc 2 58 9 is_stmt 1 view .LVU10
   58:delayline_multitap.h ****         {
-  72              		.loc 2 58 29 view .LVU11
-  73 0020 A342     		cmp	r3, r4
-  74 0022 FAD1     		bne	.L2
-  75              	.LBE105:
+  73              		.loc 2 58 29 view .LVU11
+  74 0020 A342     		cmp	r3, r4
+  75 0022 FAD1     		bne	.L2
+  76              	.LBE105:
   61:delayline_multitap.h ****         }
   62:delayline_multitap.h **** 
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 4
+
+
   63:delayline_multitap.h ****         write_ptr_ = 0;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 4
-
-
-  76              		.loc 2 63 9 is_stmt 0 view .LVU12
-  77 0024 0020     		movs	r0, #0
-  78              	.LVL3:
+  77              		.loc 2 63 9 is_stmt 0 view .LVU12
+  78 0024 0020     		movs	r0, #0
+  79              	.LVL3:
   64:delayline_multitap.h ****         num_heads_ = num_heads;
-  79              		.loc 2 64 9 view .LVU13
-  80 0026 314E     		ldr	r6, .L8
-  81 0028 0227     		movs	r7, #2
-  82 002a 0A46     		mov	r2, r1
-  83              	.LBB106:
+  80              		.loc 2 64 9 view .LVU13
+  81 0026 334E     		ldr	r6, .L8
+  82 0028 0227     		movs	r7, #2
+  83 002a 0A46     		mov	r2, r1
+  84              	.LBB106:
   65:delayline_multitap.h **** 
   66:delayline_multitap.h ****         for (size_t i{ 0 }; i < num_heads_; ++i)
-  84              		.loc 2 66 21 view .LVU14
-  85 002c 0346     		mov	r3, r0
-  86              	.LBE106:
+  85              		.loc 2 66 21 view .LVU14
+  86 002c 0346     		mov	r3, r0
+  87              	.LBE106:
   63:delayline_multitap.h ****         num_heads_ = num_heads;
-  87              		.loc 2 63 9 view .LVU15
-  88 002e 0860     		str	r0, [r1]
+  88              		.loc 2 63 9 view .LVU15
+  89 002e 0860     		str	r0, [r1]
   64:delayline_multitap.h ****         num_heads_ = num_heads;
-  89              		.loc 2 64 9 view .LVU16
-  90 0030 8F51     		str	r7, [r1, r6]
-  91              	.LVL4:
-  92              	.LBB107:
-  93              		.loc 2 66 31 is_stmt 1 view .LVU17
-  94              	.L3:
+  90              		.loc 2 64 9 view .LVU16
+  91 0030 8F51     		str	r7, [r1, r6]
+  92              	.LVL4:
+  93              	.LBB107:
+  94              		.loc 2 66 31 is_stmt 1 view .LVU17
+  95              	.L3:
   67:delayline_multitap.h ****         {
   68:delayline_multitap.h ****             delay_[i] = 0;  //set all delay heads to 0 (no delay)
-  95              		.loc 2 68 13 is_stmt 0 view .LVU18
-  96 0032 0026     		movs	r6, #0
+  96              		.loc 2 68 13 is_stmt 0 view .LVU18
+  97 0032 0026     		movs	r6, #0
   66:delayline_multitap.h ****         {
-  97              		.loc 2 66 9 view .LVU19
-  98 0034 0133     		adds	r3, r3, #1
-  99              	.LVL5:
+  98              		.loc 2 66 9 view .LVU19
+  99 0034 0133     		adds	r3, r3, #1
+ 100              	.LVL5:
   69:delayline_multitap.h ****             frac_[i] = 0;
- 100              		.loc 2 69 13 view .LVU20
- 101 0036 0027     		movs	r7, #0
+ 101              		.loc 2 69 13 view .LVU20
+ 102 0036 0027     		movs	r7, #0
   68:delayline_multitap.h ****             frac_[i] = 0;
- 102              		.loc 2 68 13 view .LVU21
- 103 0038 42F8046F 		str	r6, [r2, #4]!
+ 103              		.loc 2 68 13 view .LVU21
+ 104 0038 42F8046F 		str	r6, [r2, #4]!
   66:delayline_multitap.h ****         {
- 104              		.loc 2 66 31 view .LVU22
- 105 003c 2168     		ldr	r1, [r4]
- 106              		.loc 2 69 13 view .LVU23
- 107 003e 1764     		str	r7, [r2, #64]	@ float
+ 105              		.loc 2 66 31 view .LVU22
+ 106 003c 2168     		ldr	r1, [r4]
+ 107              		.loc 2 69 13 view .LVU23
+ 108 003e 1764     		str	r7, [r2, #64]	@ float
   66:delayline_multitap.h ****         {
- 108              		.loc 2 66 9 is_stmt 1 view .LVU24
- 109              	.LVL6:
+ 109              		.loc 2 66 9 is_stmt 1 view .LVU24
+ 110              	.LVL6:
   66:delayline_multitap.h ****         {
- 110              		.loc 2 66 31 view .LVU25
- 111 0040 9942     		cmp	r1, r3
- 112 0042 F6D8     		bhi	.L3
- 113              	.LVL7:
+ 111              		.loc 2 66 31 view .LVU25
+ 112 0040 9942     		cmp	r1, r3
+ 113 0042 F6D8     		bhi	.L3
+ 114              	.LVL7:
   66:delayline_multitap.h ****         {
- 114              		.loc 2 66 31 is_stmt 0 view .LVU26
- 115              	.LBE107:
- 116              	.LBE104:
- 117              	.LBE103:
+ 115              		.loc 2 66 31 is_stmt 0 view .LVU26
+ 116              	.LBE107:
+ 117              	.LBE104:
+ 118              	.LBE103:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 5
+
+
   30:DelayMulti.cpp ****     tempoled.init(ledpin,samplerate_/static_cast<float> (updateDiv));
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 5
-
-
- 118              		.loc 1 30 5 is_stmt 1 view .LVU27
- 119              		.loc 1 30 18 is_stmt 0 view .LVU28
- 120 0044 F2EE0E7A 		vmov.f32	s15, #1.5e+1
- 121 0048 95ED440A 		vldr.32	s0, [r5, #272]
- 122              	.LVL8:
+ 119              		.loc 1 30 5 is_stmt 1 view .LVU27
+ 120              		.loc 1 30 18 is_stmt 0 view .LVU28
+ 121 0044 F2EE0E7A 		vmov.f32	s15, #1.5e+1
+ 122 0048 95ED430A 		vldr.32	s0, [r5, #268]
+ 123              	.LVL8:
+ 124              		.loc 1 30 18 view .LVU29
+ 125 004c 0199     		ldr	r1, [sp, #4]
+ 126 004e 281D     		adds	r0, r5, #4
   31:DelayMulti.cpp ****     //dsy_tim_init(); //start timer
   32:DelayMulti.cpp ****     //dsy_tim_start();
   33:DelayMulti.cpp **** 
@@ -253,21 +257,19 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
   35:DelayMulti.cpp ****     XfadeGate_[1] = false;
   36:DelayMulti.cpp **** 
   37:DelayMulti.cpp ****     Gain_[0] = 1.0f;
- 123              		.loc 1 37 14 view .LVU29
- 124 004c 4FF07E54 		mov	r4, #1065353216
+ 127              		.loc 1 37 14 view .LVU30
+ 128 0050 4FF07E54 		mov	r4, #1065353216
   34:DelayMulti.cpp ****     XfadeGate_[1] = false;
- 125              		.loc 1 34 19 view .LVU30
- 126 0050 4FF00108 		mov	r8, #1
+ 129              		.loc 1 34 19 view .LVU31
+ 130 0054 4FF00109 		mov	r9, #1
   30:DelayMulti.cpp ****     tempoled.init(ledpin,samplerate_/static_cast<float> (updateDiv));
- 127              		.loc 1 30 18 view .LVU31
- 128 0054 0199     		ldr	r1, [sp, #4]
- 129 0056 281D     		adds	r0, r5, #4
- 130 0058 80EE270A 		vdiv.f32	s0, s0, s15
- 131              	.LBB108:
- 132              	.LBB109:
- 133              	.LBB110:
- 134              	.LBB111:
- 135              		.file 3 "../DaisySP/Source/Dynamics/crossfade.h"
+ 131              		.loc 1 30 18 view .LVU32
+ 132 0058 80EE270A 		vdiv.f32	s0, s0, s15
+ 133              	.LBB108:
+ 134              	.LBB109:
+ 135              	.LBB110:
+ 136              	.LBB111:
+ 137              		.file 3 "../DaisySP/Source/Dynamics/crossfade.h"
    1:../DaisySP/Source/Dynamics/crossfade.h **** #pragma once
    2:../DaisySP/Source/Dynamics/crossfade.h **** #ifndef DSY_CROSSFADE_H
    3:../DaisySP/Source/Dynamics/crossfade.h **** #define DSY_CROSSFADE_H
@@ -296,11 +298,11 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
   26:../DaisySP/Source/Dynamics/crossfade.h **** 
   27:../DaisySP/Source/Dynamics/crossfade.h ****     Original author: Paul Batchelor
   28:../DaisySP/Source/Dynamics/crossfade.h **** 
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 6
+
+
   29:../DaisySP/Source/Dynamics/crossfade.h ****     Ported from Soundpipe by Andrew Ikenberry
   30:../DaisySP/Source/Dynamics/crossfade.h **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 6
-
-
   31:../DaisySP/Source/Dynamics/crossfade.h ****     added curve option for constant power, etc.
   32:../DaisySP/Source/Dynamics/crossfade.h **** */
   33:../DaisySP/Source/Dynamics/crossfade.h **** class CrossFade
@@ -316,130 +318,49 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
   43:../DaisySP/Source/Dynamics/crossfade.h ****     inline void Init(int curve)
   44:../DaisySP/Source/Dynamics/crossfade.h ****     {
   45:../DaisySP/Source/Dynamics/crossfade.h ****         pos_   = 0.5f;
- 136              		.loc 3 45 16 view .LVU32
- 137 005c 4FF07C59 		mov	r9, #1056964608
- 138              	.LBE111:
- 139              	.LBE110:
- 140              	.LBE109:
- 141              	.LBE108:
+ 138              		.loc 3 45 16 view .LVU33
+ 139 005c 4FF07C5A 		mov	r10, #1056964608
+ 140              	.LBE111:
+ 141              	.LBE110:
+ 142              	.LBE109:
+ 143              	.LBE108:
   30:DelayMulti.cpp ****     //dsy_tim_init(); //start timer
- 142              		.loc 1 30 18 view .LVU33
- 143 0060 FFF7FEFF 		bl	_ZN8TempoLED4initE12dsy_gpio_pinf
- 144              	.LVL9:
+ 144              		.loc 1 30 18 view .LVU34
+ 145 0060 FFF7FEFF 		bl	_ZN8TempoLED4initE12dsy_gpio_pinf
+ 146              	.LVL9:
   34:DelayMulti.cpp ****     XfadeGate_[1] = false;
- 145              		.loc 1 34 5 is_stmt 1 view .LVU34
+ 147              		.loc 1 34 5 is_stmt 1 view .LVU35
   35:DelayMulti.cpp **** 
- 146              		.loc 1 35 5 view .LVU35
- 147              		.loc 1 37 14 is_stmt 0 view .LVU36
- 148 0064 C5F8D840 		str	r4, [r5, #216]	@ float
+ 148              		.loc 1 35 5 view .LVU36
   38:DelayMulti.cpp ****     Gain_[1] = 1.0f;
- 149              		.loc 1 38 14 view .LVU37
- 150 0068 C5F8DC40 		str	r4, [r5, #220]	@ float
   39:DelayMulti.cpp **** 
   40:DelayMulti.cpp ****     delayLast_ = 1;
- 151              		.loc 1 40 16 view .LVU38
- 152 006c C5F8F840 		str	r4, [r5, #248]	@ float
+ 149              		.loc 1 40 16 is_stmt 0 view .LVU37
+ 150 0064 0022     		movs	r2, #0
+ 151 0066 244B     		ldr	r3, .L8+4
   34:DelayMulti.cpp ****     XfadeGate_[1] = false;
- 153              		.loc 1 34 19 view .LVU39
- 154 0070 A5F8CC80 		strh	r8, [r5, #204]	@ movhi
+ 152              		.loc 1 34 19 view .LVU38
+ 153 0068 A5F8CC90 		strh	r9, [r5, #204]	@ movhi
   37:DelayMulti.cpp ****     Gain_[1] = 1.0f;
- 155              		.loc 1 37 5 is_stmt 1 view .LVU40
-  38:DelayMulti.cpp **** 
- 156              		.loc 1 38 5 view .LVU41
- 157              		.loc 1 40 5 view .LVU42
-  41:DelayMulti.cpp ****     timer_ = System::GetNow();
- 158              		.loc 1 41 5 view .LVU43
- 159              		.loc 1 41 28 is_stmt 0 view .LVU44
- 160 0074 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
- 161              	.LVL10:
- 162              	.LBB162:
-  42:DelayMulti.cpp ****     active_head_set_ = true;    //set 1 active
-  43:DelayMulti.cpp ****     waiting_flag_ = false;
-  44:DelayMulti.cpp ****     mod_ = 0.0f;
-  45:DelayMulti.cpp ****     //timethresh_ = 5;    //length of wait before triggering xfade
-  46:DelayMulti.cpp ****     output_ = 0.0f;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 7
-
-
-  47:DelayMulti.cpp ****     TimeChange_ = false;
-  48:DelayMulti.cpp ****     for(size_t i{0}; i < totalNumHeads; i++)
-  49:DelayMulti.cpp ****     {
-  50:DelayMulti.cpp ****         Xfade_[i].Init();
-  51:DelayMulti.cpp ****         Xfade_[i].SetCurve(CROSSFADE_CPOW);
-  52:DelayMulti.cpp ****         
-  53:DelayMulti.cpp ****         XfadeEnv_[i].Init(samplerate_);
- 163              		.loc 1 53 26 view .LVU45
- 164 0078 95ED440A 		vldr.32	s0, [r5, #272]
- 165              	.LBE162:
-  41:DelayMulti.cpp ****     timer_ = System::GetNow();
- 166              		.loc 1 41 12 view .LVU46
- 167 007c C5F80001 		str	r0, [r5, #256]
-  42:DelayMulti.cpp ****     active_head_set_ = true;    //set 1 active
- 168              		.loc 1 42 5 is_stmt 1 view .LVU47
-  43:DelayMulti.cpp ****     mod_ = 0.0f;
- 169              		.loc 1 43 5 view .LVU48
- 170              	.LBB163:
- 171              		.loc 1 53 26 is_stmt 0 view .LVU49
- 172 0080 05F15C00 		add	r0, r5, #92
- 173              	.LBE163:
-  43:DelayMulti.cpp ****     mod_ = 0.0f;
- 174              		.loc 1 43 19 view .LVU50
- 175 0084 85F80C61 		strb	r6, [r5, #268]
-  44:DelayMulti.cpp ****     //timethresh_ = 5;    //length of wait before triggering xfade
- 176              		.loc 1 44 5 is_stmt 1 view .LVU51
-  44:DelayMulti.cpp ****     //timethresh_ = 5;    //length of wait before triggering xfade
- 177              		.loc 1 44 10 is_stmt 0 view .LVU52
- 178 0088 C5F8FC70 		str	r7, [r5, #252]	@ float
-  46:DelayMulti.cpp ****     TimeChange_ = false;
- 179              		.loc 1 46 5 is_stmt 1 view .LVU53
-  46:DelayMulti.cpp ****     TimeChange_ = false;
- 180              		.loc 1 46 13 is_stmt 0 view .LVU54
- 181 008c C5F81871 		str	r7, [r5, #280]	@ float
-  47:DelayMulti.cpp ****     for(size_t i{0}; i < totalNumHeads; i++)
- 182              		.loc 1 47 5 is_stmt 1 view .LVU55
-  47:DelayMulti.cpp ****     for(size_t i{0}; i < totalNumHeads; i++)
- 183              		.loc 1 47 17 is_stmt 0 view .LVU56
- 184 0090 85F81C61 		strb	r6, [r5, #284]
-  48:DelayMulti.cpp ****     {
- 185              		.loc 1 48 5 is_stmt 1 view .LVU57
- 186              	.LVL11:
- 187              	.LBB164:
-  48:DelayMulti.cpp ****     {
- 188              		.loc 1 48 24 view .LVU58
-  50:DelayMulti.cpp ****         Xfade_[i].SetCurve(CROSSFADE_CPOW);
- 189              		.loc 1 50 9 view .LVU59
- 190              	.LBB120:
- 191              	.LBI109:
-  46:../DaisySP/Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
-  47:../DaisySP/Source/Dynamics/crossfade.h ****     }
-  48:../DaisySP/Source/Dynamics/crossfade.h **** 
-  49:../DaisySP/Source/Dynamics/crossfade.h ****     /** Initialize with default linear curve 
-  50:../DaisySP/Source/Dynamics/crossfade.h ****     */
-  51:../DaisySP/Source/Dynamics/crossfade.h ****     inline void Init() { Init(CROSSFADE_LIN); }
- 192              		.loc 3 51 17 view .LVU60
- 193              	.LBE120:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 8
-
-
- 194              	.LBE164:
- 195              		.loc 3 51 26 view .LVU61
- 196              	.LBB165:
- 197              	.LBB121:
- 198              	.LBB116:
- 199              	.LBI110:
-  43:../DaisySP/Source/Dynamics/crossfade.h ****     {
- 200              		.loc 3 43 17 view .LVU62
- 201              	.LBB112:
-  45:../DaisySP/Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
- 202              		.loc 3 45 9 view .LVU63
- 203              	.LBE112:
- 204              	.LBE116:
- 205              	.LBE121:
- 206              	.LBB122:
- 207              	.LBB123:
- 208              		.file 4 "../DaisySP/Source/Control/adsr.h"
+ 154              		.loc 1 37 5 is_stmt 1 view .LVU39
+  37:DelayMulti.cpp ****     Gain_[1] = 1.0f;
+ 155              		.loc 1 37 14 is_stmt 0 view .LVU40
+ 156 006c C5F8D840 		str	r4, [r5, #216]	@ float
+  38:DelayMulti.cpp ****     Gain_[1] = 1.0f;
+ 157              		.loc 1 38 5 is_stmt 1 view .LVU41
+  38:DelayMulti.cpp ****     Gain_[1] = 1.0f;
+ 158              		.loc 1 38 14 is_stmt 0 view .LVU42
+ 159 0070 C5F8DC40 		str	r4, [r5, #220]	@ float
+ 160              		.loc 1 40 5 is_stmt 1 view .LVU43
+ 161              	.LBB159:
+ 162              	.LBB118:
+ 163              	.LBB119:
+ 164              		.file 4 "../DaisySP/Source/Control/adsr.h"
    1:../DaisySP/Source/Control/adsr.h **** #pragma once
    2:../DaisySP/Source/Control/adsr.h **** #ifndef DSY_ADSR_H
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 7
+
+
    3:../DaisySP/Source/Control/adsr.h **** #define DSY_ADSR_H
    4:../DaisySP/Source/Control/adsr.h **** 
    5:../DaisySP/Source/Control/adsr.h **** #include <stdint.h>
@@ -478,9 +399,6 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
   38:../DaisySP/Source/Control/adsr.h ****     Adsr() {}
   39:../DaisySP/Source/Control/adsr.h ****     ~Adsr() {}
   40:../DaisySP/Source/Control/adsr.h ****     /** Initializes the Adsr module.
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 9
-
-
   41:../DaisySP/Source/Control/adsr.h ****         \param sample_rate - The sample rate of the audio engine being run. 
   42:../DaisySP/Source/Control/adsr.h ****     */
   43:../DaisySP/Source/Control/adsr.h ****     void Init(float sample_rate);
@@ -495,22 +413,77 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
   52:../DaisySP/Source/Control/adsr.h ****         Set time per segment in seconds
   53:../DaisySP/Source/Control/adsr.h ****     */
   54:../DaisySP/Source/Control/adsr.h ****     inline void SetTime(int seg, float time) { seg_time_[seg] = time; }
- 209              		.loc 4 54 63 is_stmt 0 view .LVU64
- 210 0094 164F     		ldr	r7, .L8+4
- 211              	.LBE123:
- 212              	.LBE122:
- 213              	.LBB127:
- 214              	.LBB128:
- 215 0096 174E     		ldr	r6, .L8+8
- 216              	.LBE128:
- 217              	.LBE127:
- 218              	.LBE165:
+ 165              		.loc 4 54 63 is_stmt 0 view .LVU44
+ 166 0074 DFF88880 		ldr	r8, .L8+12
+ 167              	.LBE119:
+ 168              	.LBE118:
+ 169              	.LBE159:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 8
+
+
+ 170              		.loc 1 40 16 view .LVU45
+ 171 0078 C5E94A23 		strd	r2, [r5, #296]
+  41:DelayMulti.cpp ****     timer_ = System::GetNow();
+ 172              		.loc 1 41 5 is_stmt 1 view .LVU46
+ 173              		.loc 1 41 28 is_stmt 0 view .LVU47
+ 174 007c FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
+ 175              	.LVL10:
+ 176              	.LBB160:
+  42:DelayMulti.cpp ****     active_head_set_ = true;    //set 1 active
+  43:DelayMulti.cpp ****     waiting_flag_ = false;
+  44:DelayMulti.cpp ****     mod_ = 0.0f;
+  45:DelayMulti.cpp ****     //timethresh_ = 5;    //length of wait before triggering xfade
+  46:DelayMulti.cpp ****     output_ = 0.0f;
+  47:DelayMulti.cpp ****     TimeChange_ = false;
+  48:DelayMulti.cpp ****     for(size_t i{0}; i < totalNumHeads; i++)
+  49:DelayMulti.cpp ****     {
+  50:DelayMulti.cpp ****         Xfade_[i].Init();
+  51:DelayMulti.cpp ****         Xfade_[i].SetCurve(CROSSFADE_CPOW);
+  52:DelayMulti.cpp ****         
+  53:DelayMulti.cpp ****         XfadeEnv_[i].Init(samplerate_);
+ 177              		.loc 1 53 26 view .LVU48
+ 178 0080 95ED430A 		vldr.32	s0, [r5, #268]
+ 179              	.LBE160:
+  41:DelayMulti.cpp ****     timer_ = System::GetNow();
+ 180              		.loc 1 41 12 view .LVU49
+ 181 0084 C5F8FC00 		str	r0, [r5, #252]
+  42:DelayMulti.cpp ****     active_head_set_ = true;    //set 1 active
+ 182              		.loc 1 42 5 is_stmt 1 view .LVU50
+  43:DelayMulti.cpp ****     mod_ = 0.0f;
+ 183              		.loc 1 43 5 view .LVU51
+ 184              	.LBB161:
+ 185              		.loc 1 53 26 is_stmt 0 view .LVU52
+ 186 0088 05F15C00 		add	r0, r5, #92
+ 187              	.LBE161:
+  43:DelayMulti.cpp ****     mod_ = 0.0f;
+ 188              		.loc 1 43 19 view .LVU53
+ 189 008c 85F80861 		strb	r6, [r5, #264]
+  44:DelayMulti.cpp ****     //timethresh_ = 5;    //length of wait before triggering xfade
+ 190              		.loc 1 44 5 is_stmt 1 view .LVU54
+  47:DelayMulti.cpp ****     for(size_t i{0}; i < totalNumHeads; i++)
+ 191              		.loc 1 47 17 is_stmt 0 view .LVU55
+ 192 0090 85F81861 		strb	r6, [r5, #280]
   42:DelayMulti.cpp ****     waiting_flag_ = false;
- 219              		.loc 1 42 22 view .LVU65
- 220 0098 85F80481 		strb	r8, [r5, #260]
- 221              	.LBB166:
- 222              	.LBB132:
- 223              	.LBB133:
+ 193              		.loc 1 42 22 view .LVU56
+ 194 0094 85F80091 		strb	r9, [r5, #256]
+ 195              	.LBB162:
+ 196              	.LBB123:
+ 197              	.LBB124:
+ 198              		.loc 4 54 63 view .LVU57
+ 199 0098 184E     		ldr	r6, .L8+8
+ 200              	.LBE124:
+ 201              	.LBE123:
+ 202              	.LBB128:
+ 203              	.LBB129:
+  46:../DaisySP/Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
+  47:../DaisySP/Source/Dynamics/crossfade.h ****     }
+  48:../DaisySP/Source/Dynamics/crossfade.h **** 
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 9
+
+
+  49:../DaisySP/Source/Dynamics/crossfade.h ****     /** Initialize with default linear curve 
+  50:../DaisySP/Source/Dynamics/crossfade.h ****     */
+  51:../DaisySP/Source/Dynamics/crossfade.h ****     inline void Init() { Init(CROSSFADE_LIN); }
   52:../DaisySP/Source/Dynamics/crossfade.h ****     /** processes CrossFade and returns single sample
   53:../DaisySP/Source/Dynamics/crossfade.h ****     */
   54:../DaisySP/Source/Dynamics/crossfade.h ****     float Process(float &in1, float &in2);
@@ -524,470 +497,505 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
   62:../DaisySP/Source/Dynamics/crossfade.h ****     Expected input: See [Curve Options](##curve-options)
   63:../DaisySP/Source/Dynamics/crossfade.h ****     */
   64:../DaisySP/Source/Dynamics/crossfade.h ****     inline void SetCurve(uint8_t curve) { curve_ = curve; }
- 224              		.loc 3 64 50 view .LVU66
- 225 009c 85F85080 		strb	r8, [r5, #80]
- 226              	.LBE133:
- 227              	.LBE132:
- 228              	.LBB137:
- 229              	.LBB117:
- 230              	.LBB113:
+ 204              		.loc 3 64 50 view .LVU58
+ 205 009a 85F85090 		strb	r9, [r5, #80]
+ 206              	.LBE129:
+ 207              	.LBE128:
+ 208              	.LBE162:
+  44:DelayMulti.cpp ****     //timethresh_ = 5;    //length of wait before triggering xfade
+ 209              		.loc 1 44 10 view .LVU59
+ 210 009e C5F8F870 		str	r7, [r5, #248]	@ float
+  46:DelayMulti.cpp ****     TimeChange_ = false;
+ 211              		.loc 1 46 5 is_stmt 1 view .LVU60
+  46:DelayMulti.cpp ****     TimeChange_ = false;
+ 212              		.loc 1 46 13 is_stmt 0 view .LVU61
+ 213 00a2 C5F81471 		str	r7, [r5, #276]	@ float
+  47:DelayMulti.cpp ****     for(size_t i{0}; i < totalNumHeads; i++)
+ 214              		.loc 1 47 5 is_stmt 1 view .LVU62
+  48:DelayMulti.cpp ****     {
+ 215              		.loc 1 48 5 view .LVU63
+ 216              	.LVL11:
+ 217              	.LBB163:
+  48:DelayMulti.cpp ****     {
+ 218              		.loc 1 48 24 view .LVU64
+  50:DelayMulti.cpp ****         Xfade_[i].SetCurve(CROSSFADE_CPOW);
+ 219              		.loc 1 50 9 view .LVU65
+ 220              	.LBB133:
+ 221              	.LBI109:
+  51:../DaisySP/Source/Dynamics/crossfade.h ****     /** processes CrossFade and returns single sample
+ 222              		.loc 3 51 17 view .LVU66
+ 223              	.LBE133:
+ 224              	.LBE163:
+  51:../DaisySP/Source/Dynamics/crossfade.h ****     /** processes CrossFade and returns single sample
+ 225              		.loc 3 51 26 view .LVU67
+ 226              	.LBB164:
+ 227              	.LBB134:
+ 228              	.LBB115:
+ 229              	.LBI110:
+  43:../DaisySP/Source/Dynamics/crossfade.h ****     {
+ 230              		.loc 3 43 17 view .LVU68
+ 231              	.LBB112:
   45:../DaisySP/Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
- 231              		.loc 3 45 16 view .LVU67
- 232 00a0 C5F84C90 		str	r9, [r5, #76]	@ float
-  46:../DaisySP/Source/Dynamics/crossfade.h ****     }
- 233              		.loc 3 46 9 is_stmt 1 view .LVU68
- 234              	.LVL12:
-  46:../DaisySP/Source/Dynamics/crossfade.h ****     }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 10
+ 232              		.loc 3 45 9 view .LVU69
+  45:../DaisySP/Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 10
 
 
- 235              		.loc 3 46 9 is_stmt 0 view .LVU69
- 236              	.LBE113:
- 237              	.LBE117:
- 238              	.LBE137:
+ 233              		.loc 3 45 16 is_stmt 0 view .LVU70
+ 234 00a6 C5F84CA0 		str	r10, [r5, #76]	@ float
+  46:../DaisySP/Source/Dynamics/crossfade.h ****     }
+ 235              		.loc 3 46 9 is_stmt 1 view .LVU71
+ 236              	.LVL12:
+  46:../DaisySP/Source/Dynamics/crossfade.h ****     }
+ 237              		.loc 3 46 9 is_stmt 0 view .LVU72
+ 238              	.LBE112:
+ 239              	.LBE115:
+ 240              	.LBE134:
   51:DelayMulti.cpp ****         
- 239              		.loc 1 51 9 is_stmt 1 view .LVU70
- 240              	.LBB138:
- 241              	.LBI132:
- 242              		.loc 3 64 17 view .LVU71
- 243              	.LBB134:
- 244              		.loc 3 64 43 view .LVU72
- 245              		.loc 3 64 43 is_stmt 0 view .LVU73
- 246              	.LBE134:
- 247              	.LBE138:
- 248              		.loc 1 53 9 is_stmt 1 view .LVU74
- 249              		.loc 1 53 26 is_stmt 0 view .LVU75
- 250 00a4 FFF7FEFF 		bl	_ZN7daisysp4Adsr4InitEf
- 251              	.LVL13:
+ 241              		.loc 1 51 9 is_stmt 1 view .LVU73
+ 242              	.LBB135:
+ 243              	.LBI128:
+ 244              		.loc 3 64 17 view .LVU74
+ 245              	.LBB130:
+ 246              		.loc 3 64 43 view .LVU75
+ 247              		.loc 3 64 43 is_stmt 0 view .LVU76
+ 248              	.LBE130:
+ 249              	.LBE135:
+ 250              		.loc 1 53 9 is_stmt 1 view .LVU77
+ 251              		.loc 1 53 26 is_stmt 0 view .LVU78
+ 252 00aa FFF7FEFF 		bl	_ZN7daisysp4Adsr4InitEf
+ 253              	.LVL13:
   54:DelayMulti.cpp ****         //Head envelope attack and decay times:
   55:DelayMulti.cpp ****         XfadeEnv_[i].SetTime(ADENV_SEG_ATTACK, XFadeTime);
- 252              		.loc 1 55 9 is_stmt 1 view .LVU76
- 253              	.LBB139:
- 254              	.LBI122:
- 255              		.loc 4 54 17 view .LVU77
- 256              	.LBB124:
- 257              		.loc 4 54 48 view .LVU78
- 258              	.LBE124:
- 259              	.LBE139:
+ 254              		.loc 1 55 9 is_stmt 1 view .LVU79
+ 255              	.LBB136:
+ 256              	.LBI118:
+ 257              		.loc 4 54 17 view .LVU80
+ 258              	.LBB120:
+ 259              		.loc 4 54 48 view .LVU81
+ 260              	.LBE120:
+ 261              	.LBE136:
   53:DelayMulti.cpp ****         //Head envelope attack and decay times:
- 260              		.loc 1 53 26 is_stmt 0 view .LVU79
- 261 00a8 05F19400 		add	r0, r5, #148
- 262 00ac 95ED440A 		vldr.32	s0, [r5, #272]
- 263              	.LBB140:
- 264              	.LBB141:
+ 262              		.loc 1 53 26 is_stmt 0 view .LVU82
+ 263 00ae 05F19400 		add	r0, r5, #148
+ 264 00b2 95ED430A 		vldr.32	s0, [r5, #268]
+ 265              	.LBB137:
+ 266              	.LBB138:
   55:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
   56:../DaisySP/Source/Control/adsr.h ****         \param sus_level - sets sustain level
   57:../DaisySP/Source/Control/adsr.h ****     */
   58:../DaisySP/Source/Control/adsr.h ****     inline void SetSustainLevel(float sus_level) { sus_ = sus_level; }
- 265              		.loc 4 58 57 view .LVU80
- 266 00b0 EC65     		str	r4, [r5, #92]	@ float
- 267              	.LBE141:
- 268              	.LBE140:
+ 267              		.loc 4 58 57 view .LVU83
+ 268 00b6 EC65     		str	r4, [r5, #92]	@ float
+ 269              	.LBE138:
+ 270              	.LBE137:
   56:DelayMulti.cpp ****         XfadeEnv_[i].SetTime(ADENV_SEG_DECAY, 0.00001f);
   57:DelayMulti.cpp ****         XfadeEnv_[i].SetTime(ADSR_SEG_RELEASE, XFadeTime);
   58:DelayMulti.cpp ****         XfadeEnv_[i].SetSustainLevel(1.0);
   59:DelayMulti.cpp **** 
   60:DelayMulti.cpp ****         delayTime_[i] = 1.0f;
- 269              		.loc 1 60 23 view .LVU81
- 270 00b2 C5F8E040 		str	r4, [r5, #224]	@ float
+ 271              		.loc 1 60 23 view .LVU84
+ 272 00b8 C5F8E040 		str	r4, [r5, #224]	@ float
   61:DelayMulti.cpp ****         delayTarget_[i] = 1.0f;
- 271              		.loc 1 61 25 view .LVU82
- 272 00b6 C5F8E840 		str	r4, [r5, #232]	@ float
- 273              	.LBB144:
- 274              	.LBB118:
- 275              	.LBB114:
+ 273              		.loc 1 61 25 view .LVU85
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 11
+
+
+ 274 00bc C5F8E840 		str	r4, [r5, #232]	@ float
+ 275              	.LBB141:
+ 276              	.LBB116:
+ 277              	.LBB113:
   45:../DaisySP/Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
- 276              		.loc 3 45 16 view .LVU83
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 11
-
-
- 277 00ba C5F85490 		str	r9, [r5, #84]	@ float
- 278              	.LBE114:
- 279              	.LBE118:
- 280              	.LBE144:
- 281              	.LBB145:
- 282              	.LBB135:
- 283              		.loc 3 64 50 view .LVU84
- 284 00be 85F85880 		strb	r8, [r5, #88]
- 285              	.LBE135:
- 286              	.LBE145:
- 287              	.LBB146:
- 288              	.LBB125:
+ 278              		.loc 3 45 16 view .LVU86
+ 279 00c0 C5F854A0 		str	r10, [r5, #84]	@ float
+ 280              	.LBE113:
+ 281              	.LBE116:
+ 282              	.LBE141:
+ 283              	.LBB142:
+ 284              	.LBB131:
+ 285              		.loc 3 64 50 view .LVU87
+ 286 00c4 85F85890 		strb	r9, [r5, #88]
+ 287              	.LBE131:
+ 288              	.LBE142:
+ 289              	.LBB143:
+ 290              	.LBB121:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 289              		.loc 4 54 63 view .LVU85
- 290 00c2 6F66     		str	r7, [r5, #100]	@ float
- 291              	.LVL14:
+ 291              		.loc 4 54 63 view .LVU88
+ 292 00c8 C5F86480 		str	r8, [r5, #100]	@ float
+ 293              	.LVL14:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 292              		.loc 4 54 63 view .LVU86
- 293              	.LBE125:
- 294              	.LBE146:
+ 294              		.loc 4 54 63 view .LVU89
+ 295              	.LBE121:
+ 296              	.LBE143:
   56:DelayMulti.cpp ****         XfadeEnv_[i].SetTime(ADSR_SEG_RELEASE, XFadeTime);
- 295              		.loc 1 56 9 is_stmt 1 view .LVU87
- 296              	.LBB147:
- 297              	.LBI127:
+ 297              		.loc 1 56 9 is_stmt 1 view .LVU90
+ 298              	.LBB144:
+ 299              	.LBI123:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 298              		.loc 4 54 17 view .LVU88
- 299              	.LBB129:
+ 300              		.loc 4 54 17 view .LVU91
+ 301              	.LBB125:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 300              		.loc 4 54 48 view .LVU89
- 301              	.LBE129:
- 302              	.LBE147:
- 303              	.LBB148:
- 304              	.LBB149:
+ 302              		.loc 4 54 48 view .LVU92
+ 303              	.LBE125:
+ 304              	.LBE144:
+ 305              	.LBB145:
+ 306              	.LBB146:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 305              		.loc 4 54 63 is_stmt 0 view .LVU90
- 306 00c4 2F67     		str	r7, [r5, #112]	@ float
- 307              	.LBE149:
- 308              	.LBE148:
- 309              	.LBB152:
- 310              	.LBB130:
- 311 00c6 AE66     		str	r6, [r5, #104]	@ float
- 312              	.LVL15:
+ 307              		.loc 4 54 63 is_stmt 0 view .LVU93
+ 308 00cc C5F87080 		str	r8, [r5, #112]	@ float
+ 309              	.LBE146:
+ 310              	.LBE145:
+ 311              	.LBB149:
+ 312              	.LBB126:
+ 313 00d0 AE66     		str	r6, [r5, #104]	@ float
+ 314              	.LVL15:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 313              		.loc 4 54 63 view .LVU91
- 314              	.LBE130:
- 315              	.LBE152:
+ 315              		.loc 4 54 63 view .LVU94
+ 316              	.LBE126:
+ 317              	.LBE149:
   57:DelayMulti.cpp ****         XfadeEnv_[i].SetSustainLevel(1.0);
- 316              		.loc 1 57 9 is_stmt 1 view .LVU92
- 317              	.LBB153:
- 318              	.LBI148:
+ 318              		.loc 1 57 9 is_stmt 1 view .LVU95
+ 319              	.LBB150:
+ 320              	.LBI145:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 319              		.loc 4 54 17 view .LVU93
- 320              	.LBB150:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 321              		.loc 4 54 48 view .LVU94
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 322              		.loc 4 54 48 is_stmt 0 view .LVU95
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 12
 
 
- 323              	.LBE150:
- 324              	.LBE153:
+ 321              		.loc 4 54 17 view .LVU96
+ 322              	.LBB147:
+  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+ 323              		.loc 4 54 48 view .LVU97
+  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+ 324              		.loc 4 54 48 is_stmt 0 view .LVU98
+ 325              	.LBE147:
+ 326              	.LBE150:
   58:DelayMulti.cpp **** 
- 325              		.loc 1 58 9 is_stmt 1 view .LVU96
- 326              	.LBB154:
- 327              	.LBI140:
- 328              		.loc 4 58 17 view .LVU97
- 329              	.LBB142:
- 330              		.loc 4 58 52 view .LVU98
- 331              		.loc 4 58 52 is_stmt 0 view .LVU99
- 332              	.LBE142:
- 333              	.LBE154:
+ 327              		.loc 1 58 9 is_stmt 1 view .LVU99
+ 328              	.LBB151:
+ 329              	.LBI137:
+ 330              		.loc 4 58 17 view .LVU100
+ 331              	.LBB139:
+ 332              		.loc 4 58 52 view .LVU101
+ 333              		.loc 4 58 52 is_stmt 0 view .LVU102
+ 334              	.LBE139:
+ 335              	.LBE151:
   60:DelayMulti.cpp ****         delayTarget_[i] = 1.0f;
- 334              		.loc 1 60 9 is_stmt 1 view .LVU100
- 335              		.loc 1 61 9 view .LVU101
+ 336              		.loc 1 60 9 is_stmt 1 view .LVU103
+ 337              		.loc 1 61 9 view .LVU104
   48:DelayMulti.cpp ****     {
- 336              		.loc 1 48 5 view .LVU102
+ 338              		.loc 1 48 5 view .LVU105
   48:DelayMulti.cpp ****     {
- 337              		.loc 1 48 24 view .LVU103
+ 339              		.loc 1 48 24 view .LVU106
   50:DelayMulti.cpp ****         Xfade_[i].SetCurve(CROSSFADE_CPOW);
- 338              		.loc 1 50 9 view .LVU104
- 339              	.LBB155:
+ 340              		.loc 1 50 9 view .LVU107
+ 341              	.LBB152:
   51:../DaisySP/Source/Dynamics/crossfade.h ****     /** processes CrossFade and returns single sample
- 340              		.loc 3 51 17 view .LVU105
- 341              	.LBE155:
- 342              	.LBE166:
+ 342              		.loc 3 51 17 view .LVU108
+ 343              	.LBE152:
+ 344              	.LBE164:
   51:../DaisySP/Source/Dynamics/crossfade.h ****     /** processes CrossFade and returns single sample
- 343              		.loc 3 51 26 view .LVU106
- 344              	.LBB167:
- 345              	.LBB156:
- 346              	.LBB119:
+ 345              		.loc 3 51 26 view .LVU109
+ 346              	.LBB165:
+ 347              	.LBB153:
+ 348              	.LBB117:
   43:../DaisySP/Source/Dynamics/crossfade.h ****     {
- 347              		.loc 3 43 17 view .LVU107
- 348              	.LBB115:
+ 349              		.loc 3 43 17 view .LVU110
+ 350              	.LBB114:
   45:../DaisySP/Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
- 349              		.loc 3 45 9 view .LVU108
+ 351              		.loc 3 45 9 view .LVU111
   46:../DaisySP/Source/Dynamics/crossfade.h ****     }
- 350              		.loc 3 46 9 view .LVU109
+ 352              		.loc 3 46 9 view .LVU112
   46:../DaisySP/Source/Dynamics/crossfade.h ****     }
- 351              		.loc 3 46 9 is_stmt 0 view .LVU110
- 352              	.LBE115:
- 353              	.LBE119:
- 354              	.LBE156:
+ 353              		.loc 3 46 9 is_stmt 0 view .LVU113
+ 354              	.LBE114:
+ 355              	.LBE117:
+ 356              	.LBE153:
   51:DelayMulti.cpp ****         
- 355              		.loc 1 51 9 is_stmt 1 view .LVU111
- 356              	.LBB157:
- 357              		.loc 3 64 17 view .LVU112
- 358              	.LBB136:
- 359              		.loc 3 64 43 view .LVU113
- 360              		.loc 3 64 43 is_stmt 0 view .LVU114
- 361              	.LBE136:
- 362              	.LBE157:
-  53:DelayMulti.cpp ****         //Head envelope attack and decay times:
- 363              		.loc 1 53 9 is_stmt 1 view .LVU115
-  53:DelayMulti.cpp ****         //Head envelope attack and decay times:
- 364              		.loc 1 53 26 is_stmt 0 view .LVU116
- 365 00c8 FFF7FEFF 		bl	_ZN7daisysp4Adsr4InitEf
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 13
+ 357              		.loc 1 51 9 is_stmt 1 view .LVU114
+ 358              	.LBB154:
+ 359              		.loc 3 64 17 view .LVU115
+ 360              	.LBB132:
+ 361              		.loc 3 64 43 view .LVU116
+ 362              		.loc 3 64 43 is_stmt 0 view .LVU117
+ 363              	.LBE132:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 13
 
 
- 366              	.LVL16:
+ 364              	.LBE154:
+  53:DelayMulti.cpp ****         //Head envelope attack and decay times:
+ 365              		.loc 1 53 9 is_stmt 1 view .LVU118
+  53:DelayMulti.cpp ****         //Head envelope attack and decay times:
+ 366              		.loc 1 53 26 is_stmt 0 view .LVU119
+ 367 00d2 FFF7FEFF 		bl	_ZN7daisysp4Adsr4InitEf
+ 368              	.LVL16:
   55:DelayMulti.cpp ****         XfadeEnv_[i].SetTime(ADENV_SEG_DECAY, 0.00001f);
- 367              		.loc 1 55 9 is_stmt 1 view .LVU117
- 368              	.LBB158:
+ 369              		.loc 1 55 9 is_stmt 1 view .LVU120
+ 370              	.LBB155:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 369              		.loc 4 54 17 view .LVU118
- 370              	.LBB126:
+ 371              		.loc 4 54 17 view .LVU121
+ 372              	.LBB122:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 371              		.loc 4 54 48 view .LVU119
+ 373              		.loc 4 54 48 view .LVU122
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 372              		.loc 4 54 63 is_stmt 0 view .LVU120
- 373 00cc C5F89C70 		str	r7, [r5, #156]	@ float
- 374              	.LVL17:
+ 374              		.loc 4 54 63 is_stmt 0 view .LVU123
+ 375 00d6 C5F89C80 		str	r8, [r5, #156]	@ float
+ 376              	.LVL17:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 375              		.loc 4 54 63 view .LVU121
- 376              	.LBE126:
- 377              	.LBE158:
+ 377              		.loc 4 54 63 view .LVU124
+ 378              	.LBE122:
+ 379              	.LBE155:
   56:DelayMulti.cpp ****         XfadeEnv_[i].SetTime(ADSR_SEG_RELEASE, XFadeTime);
- 378              		.loc 1 56 9 is_stmt 1 view .LVU122
- 379              	.LBB159:
+ 380              		.loc 1 56 9 is_stmt 1 view .LVU125
+ 381              	.LBB156:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 380              		.loc 4 54 17 view .LVU123
- 381              	.LBB131:
+ 382              		.loc 4 54 17 view .LVU126
+ 383              	.LBB127:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 382              		.loc 4 54 48 view .LVU124
+ 384              		.loc 4 54 48 view .LVU127
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 383              		.loc 4 54 63 is_stmt 0 view .LVU125
- 384 00d0 C5F8A060 		str	r6, [r5, #160]	@ float
- 385              	.LVL18:
+ 385              		.loc 4 54 63 is_stmt 0 view .LVU128
+ 386 00da C5F8A060 		str	r6, [r5, #160]	@ float
+ 387              	.LVL18:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 386              		.loc 4 54 63 view .LVU126
- 387              	.LBE131:
- 388              	.LBE159:
+ 388              		.loc 4 54 63 view .LVU129
+ 389              	.LBE127:
+ 390              	.LBE156:
   57:DelayMulti.cpp ****         XfadeEnv_[i].SetSustainLevel(1.0);
- 389              		.loc 1 57 9 is_stmt 1 view .LVU127
- 390              	.LBB160:
+ 391              		.loc 1 57 9 is_stmt 1 view .LVU130
+ 392              	.LBB157:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 391              		.loc 4 54 17 view .LVU128
- 392              	.LBB151:
+ 393              		.loc 4 54 17 view .LVU131
+ 394              	.LBB148:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 393              		.loc 4 54 48 view .LVU129
+ 395              		.loc 4 54 48 view .LVU132
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 394              		.loc 4 54 63 is_stmt 0 view .LVU130
- 395 00d4 C5F8A870 		str	r7, [r5, #168]	@ float
- 396              	.LVL19:
+ 396              		.loc 4 54 63 is_stmt 0 view .LVU133
+ 397 00de C5F8A880 		str	r8, [r5, #168]	@ float
+ 398              	.LVL19:
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
- 397              		.loc 4 54 63 view .LVU131
- 398              	.LBE151:
- 399              	.LBE160:
+ 399              		.loc 4 54 63 view .LVU134
+ 400              	.LBE148:
+ 401              	.LBE157:
   58:DelayMulti.cpp **** 
- 400              		.loc 1 58 9 is_stmt 1 view .LVU132
- 401              	.LBB161:
- 402              		.loc 4 58 17 view .LVU133
- 403              	.LBB143:
- 404              		.loc 4 58 52 view .LVU134
- 405              		.loc 4 58 57 is_stmt 0 view .LVU135
- 406 00d8 C5F89440 		str	r4, [r5, #148]	@ float
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 14
+ 402              		.loc 1 58 9 is_stmt 1 view .LVU135
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 14
 
 
- 407              	.LVL20:
- 408              		.loc 4 58 57 view .LVU136
- 409              	.LBE143:
- 410              	.LBE161:
+ 403              	.LBB158:
+ 404              		.loc 4 58 17 view .LVU136
+ 405              	.LBB140:
+ 406              		.loc 4 58 52 view .LVU137
+ 407              		.loc 4 58 57 is_stmt 0 view .LVU138
+ 408 00e2 C5F89440 		str	r4, [r5, #148]	@ float
+ 409              	.LVL20:
+ 410              		.loc 4 58 57 view .LVU139
+ 411              	.LBE140:
+ 412              	.LBE158:
   60:DelayMulti.cpp ****         delayTarget_[i] = 1.0f;
- 411              		.loc 1 60 9 is_stmt 1 view .LVU137
+ 413              		.loc 1 60 9 is_stmt 1 view .LVU140
   60:DelayMulti.cpp ****         delayTarget_[i] = 1.0f;
- 412              		.loc 1 60 23 is_stmt 0 view .LVU138
- 413 00dc C5F8E440 		str	r4, [r5, #228]	@ float
- 414              		.loc 1 61 9 is_stmt 1 view .LVU139
- 415              		.loc 1 61 25 is_stmt 0 view .LVU140
- 416 00e0 C5F8EC40 		str	r4, [r5, #236]	@ float
+ 414              		.loc 1 60 23 is_stmt 0 view .LVU141
+ 415 00e6 C5F8E440 		str	r4, [r5, #228]	@ float
+ 416              		.loc 1 61 9 is_stmt 1 view .LVU142
+ 417              		.loc 1 61 25 is_stmt 0 view .LVU143
+ 418 00ea C5F8EC40 		str	r4, [r5, #236]	@ float
   48:DelayMulti.cpp ****     {
- 417              		.loc 1 48 5 is_stmt 1 view .LVU141
- 418              	.LVL21:
+ 419              		.loc 1 48 5 is_stmt 1 view .LVU144
+ 420              	.LVL21:
   48:DelayMulti.cpp ****     {
- 419              		.loc 1 48 24 view .LVU142
- 420              	.LBE167:
+ 421              		.loc 1 48 24 view .LVU145
+ 422              	.LBE165:
   62:DelayMulti.cpp ****     }
   63:DelayMulti.cpp **** 
   64:DelayMulti.cpp **** }
- 421              		.loc 1 64 1 is_stmt 0 view .LVU143
- 422 00e4 03B0     		add	sp, sp, #12
- 423              		.cfi_def_cfa_offset 28
- 424              		@ sp needed
- 425 00e6 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
- 426              	.LVL22:
- 427              	.L9:
- 428              		.loc 1 64 1 view .LVU144
- 429 00ea 00BF     		.align	2
- 430              	.L8:
- 431 00ec 84786900 		.word	6912132
- 432 00f0 0AD7233C 		.word	1008981770
- 433 00f4 ACC52737 		.word	925353388
- 434              		.cfi_endproc
- 435              	.LFE3965:
- 437              		.section	.text._ZN10DelayMulti9GetOutputEv,"ax",%progbits
- 438              		.align	1
- 439              		.p2align 2,,3
- 440              		.global	_ZN10DelayMulti9GetOutputEv
- 441              		.syntax unified
- 442              		.thumb
- 443              		.thumb_func
- 444              		.fpu fpv5-d16
- 446              	_ZN10DelayMulti9GetOutputEv:
- 447              	.LVL23:
- 448              	.LFB3967:
+ 423              		.loc 1 64 1 is_stmt 0 view .LVU146
+ 424 00ee 02B0     		add	sp, sp, #8
+ 425              		.cfi_def_cfa_offset 32
+ 426              		@ sp needed
+ 427 00f0 BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 428              	.LVL22:
+ 429              	.L9:
+ 430              		.loc 1 64 1 view .LVU147
+ 431              		.align	2
+ 432              	.L8:
+ 433 00f4 84786900 		.word	6912132
+ 434 00f8 0000F03F 		.word	1072693248
+ 435 00fc ACC52737 		.word	925353388
+ 436 0100 0AD7233C 		.word	1008981770
+ 437              		.cfi_endproc
+ 438              	.LFE3966:
+ 440              		.section	.text._ZN10DelayMulti9GetOutputEv,"ax",%progbits
+ 441              		.align	1
+ 442              		.p2align 2,,3
+ 443              		.global	_ZN10DelayMulti9GetOutputEv
+ 444              		.syntax unified
+ 445              		.thumb
+ 446              		.thumb_func
+ 447              		.fpu fpv5-d16
+ 449              	_ZN10DelayMulti9GetOutputEv:
+ 450              	.LVL23:
+ 451              	.LFB3968:
   65:DelayMulti.cpp **** 
   66:DelayMulti.cpp **** //Updates delay time in samples. Returns high if tempo was updated
-  67:DelayMulti.cpp **** bool DelayMulti::SetDelayTime(float delaytime_pot, float baseTempo, bool syncMode)
+  67:DelayMulti.cpp **** bool DelayMulti::SetDelayTime(float delaytime_pot, bool syncMode)
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 15
+
+
   68:DelayMulti.cpp **** {
   69:DelayMulti.cpp **** 
-  70:DelayMulti.cpp **** float delaytime{};
+  70:DelayMulti.cpp **** double delaytime{};
   71:DelayMulti.cpp **** 
   72:DelayMulti.cpp **** if(syncMode)
   73:DelayMulti.cpp **** {
-  74:DelayMulti.cpp ****     delaytime = GetDiv(delaytime_pot) * baseTempo * 48.0f;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 15
+  74:DelayMulti.cpp ****     //double precision
+  75:DelayMulti.cpp ****     delaytime = GetDiv(delaytime_pot) * baseTempo_ * 48.0;
+  76:DelayMulti.cpp **** }
+  77:DelayMulti.cpp **** 
+  78:DelayMulti.cpp **** else
+  79:DelayMulti.cpp **** {
+  80:DelayMulti.cpp ****     delaytime = scale(delaytime_pot,minDelay,maxDelay,LOGARITHMIC);
+  81:DelayMulti.cpp **** }
+  82:DelayMulti.cpp ****     
+  83:DelayMulti.cpp **** //If change in delaytime exceeds 0.5% of last value
+  84:DelayMulti.cpp **** if( abs( delaytime - delayLast_)> (0.005 * delayLast_)) 
+  85:DelayMulti.cpp **** {
+  86:DelayMulti.cpp ****     timer_ = System::GetNow(); //reset timer
+  87:DelayMulti.cpp ****     waiting_flag_ = true;
+  88:DelayMulti.cpp ****     TimeChange_ = true;
+  89:DelayMulti.cpp ****     delayLast_ = delaytime;
+  90:DelayMulti.cpp ****     return false;
+  91:DelayMulti.cpp **** }
+  92:DelayMulti.cpp **** 
+  93:DelayMulti.cpp **** else    //change in delaytime smaller than threshold (I.e. stopped moving)
+  94:DelayMulti.cpp **** {
+  95:DelayMulti.cpp ****     if(TimeChange_)
+  96:DelayMulti.cpp ****     {
+  97:DelayMulti.cpp **** 
+  98:DelayMulti.cpp ****      //set delaytime of next head set
+  99:DelayMulti.cpp ****     if(active_head_set_)    //if set 1 active
+ 100:DelayMulti.cpp ****     {
+ 101:DelayMulti.cpp ****         for (size_t j=0; j < numHeads; j++)
+ 102:DelayMulti.cpp ****         {
+ 103:DelayMulti.cpp ****             //set delaytime for set 2
+ 104:DelayMulti.cpp ****             delayTarget_[numHeads + j] = static_cast<float> (delaytime);
+ 105:DelayMulti.cpp ****         }
+ 106:DelayMulti.cpp ****     }
+ 107:DelayMulti.cpp ****     else
+ 108:DelayMulti.cpp ****     {
+ 109:DelayMulti.cpp ****         for (size_t j=0; j < numHeads; j++) //set 2 active
+ 110:DelayMulti.cpp ****         {
+ 111:DelayMulti.cpp ****             //set delay time for set 1
+ 112:DelayMulti.cpp ****             delayTarget_[j] = static_cast<float> (delaytime);
+ 113:DelayMulti.cpp ****         }
+ 114:DelayMulti.cpp ****     }
+ 115:DelayMulti.cpp **** 
+ 116:DelayMulti.cpp ****     TimeChange_ = false;    //reset timechange flag so it only happens once
+ 117:DelayMulti.cpp **** 
+ 118:DelayMulti.cpp ****     }
+ 119:DelayMulti.cpp ****     //if timer has exceeded threshold and waiting flag is on:
+ 120:DelayMulti.cpp ****     if ((System::GetNow() - timer_) > timethresh && waiting_flag_ == true)  
+ 121:DelayMulti.cpp ****     {
+ 122:DelayMulti.cpp ****         //flip all gates
+ 123:DelayMulti.cpp ****             for (size_t j=0; j < totalNumHeads; j++)
+ 124:DelayMulti.cpp ****             {
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 16
 
 
-  75:DelayMulti.cpp **** }
-  76:DelayMulti.cpp **** 
-  77:DelayMulti.cpp **** else
-  78:DelayMulti.cpp **** {
-  79:DelayMulti.cpp ****     delaytime = scale(delaytime_pot,minDelay,maxDelay,LOGARITHMIC);
-  80:DelayMulti.cpp **** }
-  81:DelayMulti.cpp ****     
-  82:DelayMulti.cpp **** //If change in delaytime exceeds 0.5% of last value
-  83:DelayMulti.cpp **** if( abs(delaytime - delayLast_)> (0.005f * delayLast_)) 
-  84:DelayMulti.cpp **** {
-  85:DelayMulti.cpp ****     timer_ = System::GetNow(); //reset timer
-  86:DelayMulti.cpp ****     waiting_flag_ = true;
-  87:DelayMulti.cpp ****     TimeChange_ = true;
-  88:DelayMulti.cpp ****     delayLast_ = delaytime;
-  89:DelayMulti.cpp ****     return false;
-  90:DelayMulti.cpp **** }
-  91:DelayMulti.cpp **** 
-  92:DelayMulti.cpp **** else    //change in delaytime smaller than threshold (I.e. stopped moving)
-  93:DelayMulti.cpp **** {
-  94:DelayMulti.cpp ****     if(TimeChange_)
-  95:DelayMulti.cpp ****     {
-  96:DelayMulti.cpp **** 
-  97:DelayMulti.cpp ****      //set delaytime of next head set
-  98:DelayMulti.cpp ****     if(active_head_set_)    //if set 1 active
-  99:DelayMulti.cpp ****     {
- 100:DelayMulti.cpp ****         for (size_t j=0; j < numHeads; j++)
- 101:DelayMulti.cpp ****         {
- 102:DelayMulti.cpp ****             //set delaytime for set 2
- 103:DelayMulti.cpp ****             delayTarget_[numHeads + j] = delaytime;
- 104:DelayMulti.cpp ****         }
- 105:DelayMulti.cpp ****     }
- 106:DelayMulti.cpp ****     else
- 107:DelayMulti.cpp ****     {
- 108:DelayMulti.cpp ****         for (size_t j=0; j < numHeads; j++) //set 2 active
- 109:DelayMulti.cpp ****         {
- 110:DelayMulti.cpp ****             //set delay time for set 1
- 111:DelayMulti.cpp ****             delayTarget_[j] = delaytime;
- 112:DelayMulti.cpp ****         }
- 113:DelayMulti.cpp ****     }
- 114:DelayMulti.cpp **** 
- 115:DelayMulti.cpp ****     TimeChange_ = false;    //reset timechange flag so it only happens once
- 116:DelayMulti.cpp **** 
- 117:DelayMulti.cpp ****     }
- 118:DelayMulti.cpp ****     //if timer has exceeded threshold and waiting flag is on:
- 119:DelayMulti.cpp ****     if ((System::GetNow() - timer_) > timethresh && waiting_flag_ == true)  
- 120:DelayMulti.cpp ****     {
- 121:DelayMulti.cpp ****         //flip all gates
- 122:DelayMulti.cpp ****             for (size_t j=0; j < totalNumHeads; j++)
- 123:DelayMulti.cpp ****             {
- 124:DelayMulti.cpp ****                 XfadeGate_[j] = !XfadeGate_[j];
- 125:DelayMulti.cpp ****             }
- 126:DelayMulti.cpp **** 
- 127:DelayMulti.cpp ****         //flip active head
- 128:DelayMulti.cpp ****         active_head_set_ = !active_head_set_;
- 129:DelayMulti.cpp **** 
- 130:DelayMulti.cpp ****         timer_ = System::GetNow(); //reset timer
- 131:DelayMulti.cpp ****         waiting_flag_ = false;  //reset wait flag
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 16
-
-
- 132:DelayMulti.cpp **** 
- 133:DelayMulti.cpp ****         //update freq of tempo LED oscillator
- 134:DelayMulti.cpp ****         tempoled.setTempo(1.0f / (delaytime / samplerate_ ));
- 135:DelayMulti.cpp ****         return true;
- 136:DelayMulti.cpp ****     }
- 137:DelayMulti.cpp ****     else //still waiting for (System::GetNow() - timer_) to exceed timethresh
- 138:DelayMulti.cpp ****     {
- 139:DelayMulti.cpp ****         return false;
- 140:DelayMulti.cpp ****     }  
- 141:DelayMulti.cpp **** }
- 142:DelayMulti.cpp **** 
- 143:DelayMulti.cpp **** }
- 144:DelayMulti.cpp **** 
- 145:DelayMulti.cpp **** //Updates xfades, updates delayline with delayTime[] + modulation and 
- 146:DelayMulti.cpp **** //returns combined output from delay heads, and updates LEDs. 
- 147:DelayMulti.cpp **** //Call at audio samplerate
- 148:DelayMulti.cpp **** const float& DelayMulti::GetOutput()
- 149:DelayMulti.cpp **** {
- 449              		.loc 1 149 1 is_stmt 1 view -0
- 450              		.cfi_startproc
- 451              		@ args = 0, pretend = 0, frame = 8
- 452              		@ frame_needed = 0, uses_anonymous_args = 0
+ 125:DelayMulti.cpp ****                 XfadeGate_[j] = !XfadeGate_[j];
+ 126:DelayMulti.cpp ****             }
+ 127:DelayMulti.cpp **** 
+ 128:DelayMulti.cpp ****         //flip active head
+ 129:DelayMulti.cpp ****         active_head_set_ = !active_head_set_;
+ 130:DelayMulti.cpp **** 
+ 131:DelayMulti.cpp ****         timer_ = System::GetNow(); //reset timer
+ 132:DelayMulti.cpp ****         waiting_flag_ = false;  //reset wait flag
+ 133:DelayMulti.cpp **** 
+ 134:DelayMulti.cpp ****         //update freq of tempo LED oscillator
+ 135:DelayMulti.cpp ****         tempoled.setTempo(1.0f / (delaytime / samplerate_ ));
+ 136:DelayMulti.cpp ****         return true;
+ 137:DelayMulti.cpp ****     }
+ 138:DelayMulti.cpp ****     else //still waiting for (System::GetNow() - timer_) to exceed timethresh
+ 139:DelayMulti.cpp ****     {
+ 140:DelayMulti.cpp ****         return false;
+ 141:DelayMulti.cpp ****     }  
+ 142:DelayMulti.cpp **** }
+ 143:DelayMulti.cpp **** 
+ 144:DelayMulti.cpp **** }
+ 145:DelayMulti.cpp **** 
+ 146:DelayMulti.cpp **** //Updates xfades, updates delayline with delayTime[] + modulation and 
+ 147:DelayMulti.cpp **** //returns combined output from delay heads, and updates LEDs. 
+ 148:DelayMulti.cpp **** //Call at audio samplerate
+ 149:DelayMulti.cpp **** const float& DelayMulti::GetOutput()
+ 150:DelayMulti.cpp **** {
+ 452              		.loc 1 150 1 is_stmt 1 view -0
+ 453              		.cfi_startproc
+ 454              		@ args = 0, pretend = 0, frame = 8
+ 455              		@ frame_needed = 0, uses_anonymous_args = 0
+ 151:DelayMulti.cpp ****     //float output{};    
+ 152:DelayMulti.cpp ****     output_ = 0.0f;
+ 456              		.loc 1 152 5 view .LVU149
  150:DelayMulti.cpp ****     //float output{};    
- 151:DelayMulti.cpp ****     output_ = 0.0f;
- 453              		.loc 1 151 5 view .LVU146
- 149:DelayMulti.cpp ****     //float output{};    
- 454              		.loc 1 149 1 is_stmt 0 view .LVU147
- 455 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
- 456              		.cfi_def_cfa_offset 36
- 457              		.cfi_offset 4, -36
- 458              		.cfi_offset 5, -32
- 459              		.cfi_offset 6, -28
- 460              		.cfi_offset 7, -24
- 461              		.cfi_offset 8, -20
- 462              		.cfi_offset 9, -16
- 463              		.cfi_offset 10, -12
- 464              		.cfi_offset 11, -8
- 465              		.cfi_offset 14, -4
- 466              		.loc 1 151 13 view .LVU148
- 467 0004 0023     		movs	r3, #0
- 468              	.LBB193:
- 152:DelayMulti.cpp ****     float zero{};
- 153:DelayMulti.cpp ****     //for (size_t i=0; i < numDelayHeads;i++)
- 154:DelayMulti.cpp ****     for (size_t i=0; i < totalNumHeads; i++)
- 469              		.loc 1 154 17 view .LVU149
- 470 0006 0027     		movs	r7, #0
- 471              	.LBE193:
- 149:DelayMulti.cpp ****     //float output{};    
- 472              		.loc 1 149 1 view .LVU150
- 473 0008 0446     		mov	r4, r0
- 474 000a 00F1D005 		add	r5, r0, #208
- 475 000e 00F1CC09 		add	r9, r0, #204
- 476 0012 00F15C08 		add	r8, r0, #92
- 477 0016 00F14C06 		add	r6, r0, #76
- 478 001a 2DED028B 		vpush.64	{d8}
- 479              		.cfi_def_cfa_offset 44
- 480              		.cfi_offset 80, -44
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 17
+ 457              		.loc 1 150 1 is_stmt 0 view .LVU150
+ 458 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 459              		.cfi_def_cfa_offset 36
+ 460              		.cfi_offset 4, -36
+ 461              		.cfi_offset 5, -32
+ 462              		.cfi_offset 6, -28
+ 463              		.cfi_offset 7, -24
+ 464              		.cfi_offset 8, -20
+ 465              		.cfi_offset 9, -16
+ 466              		.cfi_offset 10, -12
+ 467              		.cfi_offset 11, -8
+ 468              		.cfi_offset 14, -4
+ 469              		.loc 1 152 13 view .LVU151
+ 470 0004 0023     		movs	r3, #0
+ 471              	.LBB191:
+ 153:DelayMulti.cpp ****     float zero{};
+ 154:DelayMulti.cpp ****     //for (size_t i=0; i < numDelayHeads;i++)
+ 155:DelayMulti.cpp ****     for (size_t i=0; i < totalNumHeads; i++)
+ 472              		.loc 1 155 17 view .LVU152
+ 473 0006 0027     		movs	r7, #0
+ 474              	.LBE191:
+ 150:DelayMulti.cpp ****     //float output{};    
+ 475              		.loc 1 150 1 view .LVU153
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 17
 
 
- 481              		.cfi_offset 81, -40
- 482 001e 83B0     		sub	sp, sp, #12
- 483              		.cfi_def_cfa_offset 56
- 151:DelayMulti.cpp ****     float zero{};
- 484              		.loc 1 151 13 view .LVU151
- 485 0020 C0F81831 		str	r3, [r0, #280]	@ float
+ 476 0008 0446     		mov	r4, r0
+ 477 000a 00F1D005 		add	r5, r0, #208
+ 478 000e 00F1CC09 		add	r9, r0, #204
+ 479 0012 00F15C08 		add	r8, r0, #92
+ 480 0016 00F14C06 		add	r6, r0, #76
+ 481 001a 2DED028B 		vpush.64	{d8}
+ 482              		.cfi_def_cfa_offset 44
+ 483              		.cfi_offset 80, -44
+ 484              		.cfi_offset 81, -40
+ 485 001e 83B0     		sub	sp, sp, #12
+ 486              		.cfi_def_cfa_offset 56
  152:DelayMulti.cpp ****     float zero{};
- 486              		.loc 1 152 5 is_stmt 1 view .LVU152
- 487              		.loc 1 154 5 view .LVU153
- 488              	.LVL24:
- 489              	.LBB219:
- 490              		.loc 1 154 24 view .LVU154
- 491              	.LBE219:
- 152:DelayMulti.cpp ****     float zero{};
- 492              		.loc 1 152 11 is_stmt 0 view .LVU155
- 493 0024 0193     		str	r3, [sp, #4]	@ float
- 494              	.LVL25:
- 495              	.L12:
- 496              	.LBB220:
- 155:DelayMulti.cpp ****     {   
- 156:DelayMulti.cpp ****         delayTime_[i] = delayTarget_[i] + mod_;
- 497              		.loc 1 156 9 is_stmt 1 discriminator 2 view .LVU156
- 157:DelayMulti.cpp ****         del-> SetDelay( delayTime_[i],i); //set delaytime
- 498              		.loc 1 157 9 is_stmt 0 discriminator 2 view .LVU157
- 499 0026 2368     		ldr	r3, [r4]
- 500              	.LBB194:
- 501              	.LBB195:
+ 487              		.loc 1 152 13 view .LVU154
+ 488 0020 C0F81431 		str	r3, [r0, #276]	@ float
+ 153:DelayMulti.cpp ****     float zero{};
+ 489              		.loc 1 153 5 is_stmt 1 view .LVU155
+ 490              		.loc 1 155 5 view .LVU156
+ 491              	.LVL24:
+ 492              	.LBB217:
+ 493              		.loc 1 155 24 view .LVU157
+ 494              	.LBE217:
+ 153:DelayMulti.cpp ****     float zero{};
+ 495              		.loc 1 153 11 is_stmt 0 view .LVU158
+ 496 0024 0193     		str	r3, [sp, #4]	@ float
+ 497              	.LVL25:
+ 498              	.L12:
+ 499              	.LBB218:
+ 156:DelayMulti.cpp ****     {   
+ 157:DelayMulti.cpp ****         delayTime_[i] = delayTarget_[i] + mod_;
+ 500              		.loc 1 157 9 is_stmt 1 discriminator 2 view .LVU159
+ 158:DelayMulti.cpp ****         del-> SetDelay( delayTime_[i],i); //set delaytime
+ 501              		.loc 1 158 9 is_stmt 0 discriminator 2 view .LVU160
+ 502 0026 2368     		ldr	r3, [r4]
+ 503              	.LBB192:
+ 504              	.LBB193:
   70:delayline_multitap.h ****         }
   71:delayline_multitap.h **** 
   72:delayline_multitap.h ****     }
@@ -1008,907 +1016,897 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
   87:delayline_multitap.h ****     inline void SetDelay(const float &delay, size_t head)   //passing by reference
   88:delayline_multitap.h ****     {
   89:delayline_multitap.h ****         if (head >= num_heads_)
- 502              		.loc 2 89 21 discriminator 2 view .LVU158
- 503 0028 DFF8DCE0 		ldr	lr, .L16+8
- 504              	.LBE195:
- 505              	.LBE194:
- 156:DelayMulti.cpp ****         del-> SetDelay( delayTime_[i],i); //set delaytime
- 506              		.loc 1 156 41 discriminator 2 view .LVU159
- 507 002c 94ED3F7A 		vldr.32	s14, [r4, #252]
- 508 0030 03EB8701 		add	r1, r3, r7, lsl #2
- 509 0034 D5ED067A 		vldr.32	s15, [r5, #24]
- 510              	.LBB200:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 18
+ 505              		.loc 2 89 21 discriminator 2 view .LVU161
+ 506 0028 DFF8DCE0 		ldr	lr, .L16+8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 18
 
 
- 511              	.LBB196:
- 512              		.loc 2 89 9 discriminator 2 view .LVU160
- 513 0038 53F80EE0 		ldr	lr, [r3, lr]
- 514              	.LBE196:
- 515              	.LBE200:
- 156:DelayMulti.cpp ****         del-> SetDelay( delayTime_[i],i); //set delaytime
- 516              		.loc 1 156 41 discriminator 2 view .LVU161
- 517 003c 77EE877A 		vadd.f32	s15, s15, s14
- 518              	.LBB201:
- 519              	.LBB197:
+ 507              	.LBE193:
+ 508              	.LBE192:
+ 157:DelayMulti.cpp ****         del-> SetDelay( delayTime_[i],i); //set delaytime
+ 509              		.loc 1 157 41 discriminator 2 view .LVU162
+ 510 002c 94ED3E7A 		vldr.32	s14, [r4, #248]
+ 511 0030 03EB8701 		add	r1, r3, r7, lsl #2
+ 512 0034 D5ED067A 		vldr.32	s15, [r5, #24]
+ 513              	.LBB198:
+ 514              	.LBB194:
+ 515              		.loc 2 89 9 discriminator 2 view .LVU163
+ 516 0038 53F80EE0 		ldr	lr, [r3, lr]
+ 517              	.LBE194:
+ 518              	.LBE198:
+ 157:DelayMulti.cpp ****         del-> SetDelay( delayTime_[i],i); //set delaytime
+ 519              		.loc 1 157 41 discriminator 2 view .LVU164
+ 520 003c 77EE877A 		vadd.f32	s15, s15, s14
+ 521              	.LBB199:
+ 522              	.LBB195:
   90:delayline_multitap.h ****             return; //return without setting delay time as not valid head index
   91:delayline_multitap.h **** 
   92:delayline_multitap.h ****         int32_t int_delay = static_cast<int32_t>(delay);
   93:delayline_multitap.h ****         frac_[head] = delay - static_cast<float>(int_delay);
   94:delayline_multitap.h ****         delay_[head] = static_cast<size_t>(int_delay) < max_size ? int_delay
- 520              		.loc 2 94 9 discriminator 2 view .LVU162
- 521 0040 2F4A     		ldr	r2, .L16
+ 523              		.loc 2 94 9 discriminator 2 view .LVU165
+ 524 0040 2F4A     		ldr	r2, .L16
   89:delayline_multitap.h ****             return; //return without setting delay time as not valid head index
- 522              		.loc 2 89 9 discriminator 2 view .LVU163
- 523 0042 BE45     		cmp	lr, r7
- 524              	.LBE197:
- 525              	.LBE201:
- 526              	.LBB202:
- 527              	.LBB203:
- 528              	.LBB204:
+ 525              		.loc 2 89 9 discriminator 2 view .LVU166
+ 526 0042 BE45     		cmp	lr, r7
+ 527              	.LBE195:
+ 528              	.LBE199:
+ 529              	.LBB200:
+ 530              	.LBB201:
+ 531              	.LBB202:
   95:delayline_multitap.h ****                                                         : max_size - 1;  
   96:delayline_multitap.h ****     }
   97:delayline_multitap.h **** 
-  98:delayline_multitap.h ****     /** writes the sample of type T to the delay line, and advances the write ptr
-  99:delayline_multitap.h ****     */
- 100:delayline_multitap.h ****     inline void Write(const T& sample)
- 101:delayline_multitap.h ****     {
- 102:delayline_multitap.h ****         line_[write_ptr_] = sample;
- 103:delayline_multitap.h ****         write_ptr_        = (write_ptr_ - 1 + max_size) % max_size;
- 104:delayline_multitap.h ****     }
+  98:delayline_multitap.h ****      /*   
+  99:delayline_multitap.h ****     //Sets the delay time in samples for a given head. Int for base time, float for modulation
+ 100:delayline_multitap.h ****     
+ 101:delayline_multitap.h ****     inline void SetDelay(const size_t &delay, const float &mod,size_t head)   //passing by referenc
+ 102:delayline_multitap.h ****     {
+ 103:delayline_multitap.h ****         if (head >= num_heads_)
+ 104:delayline_multitap.h ****             return; //return without setting delay time as not valid head index
  105:delayline_multitap.h **** 
- 106:delayline_multitap.h ****     /** returns the next sample of type T in the delay line, interpolated if necessary.
- 107:delayline_multitap.h ****     */
- 108:delayline_multitap.h ****    //final const means this function can't change any variables.
- 109:delayline_multitap.h ****     inline const T Read(size_t head) const 
- 110:delayline_multitap.h ****     {
- 111:delayline_multitap.h ****         if(head >= num_heads_)
- 112:delayline_multitap.h ****         {
- 113:delayline_multitap.h ****             return 0.0f; //not a valid head index
- 114:delayline_multitap.h ****         }
- 115:delayline_multitap.h ****         else
- 116:delayline_multitap.h ****         {
- 117:delayline_multitap.h ****             T  a = line_[(write_ptr_ + delay_[head]) % max_size];
- 529              		.loc 2 117 54 discriminator 2 view .LVU164
- 530 0044 DFF8C4B0 		ldr	fp, .L16+12
- 531 0048 DFF8C4C0 		ldr	ip, .L16+16
- 532              	.LBE204:
- 533              	.LBE203:
- 534              	.LBE202:
- 156:DelayMulti.cpp ****         del-> SetDelay( delayTime_[i],i); //set delaytime
- 535              		.loc 1 156 23 discriminator 2 view .LVU165
- 536 004c C5ED047A 		vstr.32	s15, [r5, #16]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 19
+ 106:delayline_multitap.h ****         int32_t int_mod = static_cast<int32_t>(mod);
+ 107:delayline_multitap.h ****         int32_t int_delay = delay + int_mod;
+ 108:delayline_multitap.h ****         frac_[head] = mod - static_cast<float>(int_mod);
+ 109:delayline_multitap.h ****         delay_[head] = static_cast<size_t>(int_delay)  < max_size ? int_delay
+ 110:delayline_multitap.h ****                                                         : max_size - 1;  
+ 111:delayline_multitap.h ****     }
+ 112:delayline_multitap.h **** 
+ 113:delayline_multitap.h ****     */
+ 114:delayline_multitap.h **** 
+ 115:delayline_multitap.h **** 
+ 116:delayline_multitap.h ****     /** writes the sample of type T to the delay line, and advances the write ptr
+ 117:delayline_multitap.h ****     */
+ 118:delayline_multitap.h ****     inline void Write(const T& sample)
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 19
 
 
- 537              		.loc 1 157 9 is_stmt 1 discriminator 2 view .LVU166
- 538              	.LVL26:
- 539              	.LBB210:
- 540              	.LBI194:
+ 119:delayline_multitap.h ****     {
+ 120:delayline_multitap.h ****         line_[write_ptr_] = sample;
+ 121:delayline_multitap.h ****         write_ptr_        = (write_ptr_ - 1 + max_size) % max_size;
+ 122:delayline_multitap.h ****     }
+ 123:delayline_multitap.h **** 
+ 124:delayline_multitap.h ****     /** returns the next sample of type T in the delay line, interpolated if necessary.
+ 125:delayline_multitap.h ****     */
+ 126:delayline_multitap.h ****    //final const means this function can't change any variables.
+ 127:delayline_multitap.h ****     inline const T Read(size_t head) const 
+ 128:delayline_multitap.h ****     {
+ 129:delayline_multitap.h ****         if(head >= num_heads_)
+ 130:delayline_multitap.h ****         {
+ 131:delayline_multitap.h ****             return 0.0f; //not a valid head index
+ 132:delayline_multitap.h ****         }
+ 133:delayline_multitap.h ****         else
+ 134:delayline_multitap.h ****         {
+ 135:delayline_multitap.h ****             T  a = line_[(write_ptr_ + delay_[head]) % max_size];
+ 532              		.loc 2 135 54 discriminator 2 view .LVU167
+ 533 0044 DFF8C4B0 		ldr	fp, .L16+12
+ 534 0048 DFF8C4C0 		ldr	ip, .L16+16
+ 535              	.LBE202:
+ 536              	.LBE201:
+ 537              	.LBE200:
+ 157:DelayMulti.cpp ****         del-> SetDelay( delayTime_[i],i); //set delaytime
+ 538              		.loc 1 157 23 discriminator 2 view .LVU168
+ 539 004c C5ED047A 		vstr.32	s15, [r5, #16]
+ 540              		.loc 1 158 9 is_stmt 1 discriminator 2 view .LVU169
+ 541              	.LVL26:
+ 542              	.LBB208:
+ 543              	.LBI192:
   87:delayline_multitap.h ****     {
- 541              		.loc 2 87 17 discriminator 2 view .LVU167
- 542              	.LBB198:
+ 544              		.loc 2 87 17 discriminator 2 view .LVU170
+ 545              	.LBB196:
   89:delayline_multitap.h ****             return; //return without setting delay time as not valid head index
- 543              		.loc 2 89 9 is_stmt 0 discriminator 2 view .LVU168
- 544 0050 52D9     		bls	.L13
+ 546              		.loc 2 89 9 is_stmt 0 discriminator 2 view .LVU171
+ 547 0050 52D9     		bls	.L13
   92:delayline_multitap.h ****         frac_[head] = delay - static_cast<float>(int_delay);
- 545              		.loc 2 92 17 view .LVU169
- 546 0052 BDEEE77A 		vcvt.s32.f32	s14, s15
- 547              	.LVL27:
+ 548              		.loc 2 92 17 view .LVU172
+ 549 0052 BDEEE77A 		vcvt.s32.f32	s14, s15
+ 550              	.LVL27:
   94:delayline_multitap.h ****                                                         : max_size - 1;  
- 548              		.loc 2 94 9 view .LVU170
- 549 0056 17EE100A 		vmov	r0, s14	@ int
+ 551              		.loc 2 94 9 view .LVU173
+ 552 0056 17EE100A 		vmov	r0, s14	@ int
   93:delayline_multitap.h ****         delay_[head] = static_cast<size_t>(int_delay) < max_size ? int_delay
- 550              		.loc 2 93 29 view .LVU171
- 551 005a B8EEC77A 		vcvt.f32.s32	s14, s14
- 552              	.LVL28:
+ 553              		.loc 2 93 29 view .LVU174
+ 554 005a B8EEC77A 		vcvt.f32.s32	s14, s14
+ 555              	.LVL28:
   94:delayline_multitap.h ****                                                         : max_size - 1;  
- 553              		.loc 2 94 9 view .LVU172
- 554 005e 8242     		cmp	r2, r0
+ 556              		.loc 2 94 9 view .LVU175
+ 557 005e 8242     		cmp	r2, r0
   93:delayline_multitap.h ****         delay_[head] = static_cast<size_t>(int_delay) < max_size ? int_delay
- 555              		.loc 2 93 29 view .LVU173
- 556 0060 77EEC77A 		vsub.f32	s15, s15, s14
+ 558              		.loc 2 93 29 view .LVU176
+ 559 0060 77EEC77A 		vsub.f32	s15, s15, s14
   94:delayline_multitap.h ****                                                         : max_size - 1;  
- 557              		.loc 2 94 9 view .LVU174
- 558 0064 28BF     		it	cs
- 559 0066 0246     		movcs	r2, r0
- 560 0068 4A60     		str	r2, [r1, #4]
- 561              	.LBE198:
- 562              	.LBE210:
- 563              	.LBB211:
- 564              	.LBB207:
- 565              	.LBB205:
- 566              		.loc 2 117 38 view .LVU175
- 567 006a 1868     		ldr	r0, [r3]
- 568              	.LVL29:
- 569              		.loc 2 117 38 view .LVU176
- 570              	.LBE205:
- 571              	.LBE207:
- 572              	.LBE211:
- 573              	.LBB212:
- 574              	.LBB199:
-  93:delayline_multitap.h ****         delay_[head] = static_cast<size_t>(int_delay) < max_size ? int_delay
- 575              		.loc 2 93 9 view .LVU177
- 576 006c C1ED117A 		vstr.32	s15, [r1, #68]
- 577              	.LVL30:
-  93:delayline_multitap.h ****         delay_[head] = static_cast<size_t>(int_delay) < max_size ? int_delay
- 578              		.loc 2 93 9 view .LVU178
- 579              	.LBE199:
- 580              	.LBE212:
- 158:DelayMulti.cpp ****         delayOutput_[i] = del->Read(i); //read head
- 581              		.loc 1 158 9 is_stmt 1 view .LVU179
- 582              	.LBB213:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 20
+ 560              		.loc 2 94 9 view .LVU177
+ 561 0064 28BF     		it	cs
+ 562 0066 0246     		movcs	r2, r0
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 20
 
 
- 583              	.LBI202:
- 109:delayline_multitap.h ****     {
- 584              		.loc 2 109 20 view .LVU180
- 585              	.LBB208:
- 586              	.LBI203:
- 109:delayline_multitap.h ****     {
- 587              		.loc 2 109 20 view .LVU181
+ 563 0068 4A60     		str	r2, [r1, #4]
+ 564              	.LBE196:
+ 565              	.LBE208:
+ 566              	.LBB209:
+ 567              	.LBB205:
+ 568              	.LBB203:
+ 569              		.loc 2 135 38 view .LVU178
+ 570 006a 1868     		ldr	r0, [r3]
+ 571              	.LVL29:
+ 572              		.loc 2 135 38 view .LVU179
+ 573              	.LBE203:
+ 574              	.LBE205:
+ 575              	.LBE209:
+ 576              	.LBB210:
+ 577              	.LBB197:
+  93:delayline_multitap.h ****         delay_[head] = static_cast<size_t>(int_delay) < max_size ? int_delay
+ 578              		.loc 2 93 9 view .LVU180
+ 579 006c C1ED117A 		vstr.32	s15, [r1, #68]
+ 580              	.LVL30:
+  93:delayline_multitap.h ****         delay_[head] = static_cast<size_t>(int_delay) < max_size ? int_delay
+ 581              		.loc 2 93 9 view .LVU181
+ 582              	.LBE197:
+ 583              	.LBE210:
+ 159:DelayMulti.cpp ****         delayOutput_[i] = del->Read(i); //read head
+ 584              		.loc 1 159 9 is_stmt 1 view .LVU182
+ 585              	.LBB211:
+ 586              	.LBI200:
+ 127:delayline_multitap.h ****     {
+ 587              		.loc 2 127 20 view .LVU183
  588              	.LBB206:
- 589              		.loc 2 117 38 is_stmt 0 view .LVU182
- 590 0070 0244     		add	r2, r2, r0
- 118:delayline_multitap.h ****             T b = line_[(write_ptr_ + delay_[head] + 1) % max_size];
- 591              		.loc 2 118 52 view .LVU183
- 592 0072 02F1010E 		add	lr, r2, #1
- 117:delayline_multitap.h ****             T b = line_[(write_ptr_ + delay_[head] + 1) % max_size];
- 593              		.loc 2 117 54 view .LVU184
- 594 0076 510A     		lsrs	r1, r2, #9
- 595              		.loc 2 118 57 view .LVU185
- 596 0078 4FEA5E2A 		lsr	r10, lr, #9
- 117:delayline_multitap.h ****             T b = line_[(write_ptr_ + delay_[head] + 1) % max_size];
- 597              		.loc 2 117 54 view .LVU186
- 598 007c ABFB0101 		umull	r0, r1, fp, r1
- 599              		.loc 2 118 57 view .LVU187
- 600 0080 ABFB0AA0 		umull	r10, r0, fp, r10
- 117:delayline_multitap.h ****             T b = line_[(write_ptr_ + delay_[head] + 1) % max_size];
- 601              		.loc 2 117 54 view .LVU188
- 602 0084 0CFB1122 		mls	r2, ip, r1, r2
- 603              		.loc 2 118 57 view .LVU189
- 604 0088 0CFB10E1 		mls	r1, ip, r0, lr
- 117:delayline_multitap.h ****             T b = line_[(write_ptr_ + delay_[head] + 1) % max_size];
- 605              		.loc 2 117 16 view .LVU190
- 606 008c 03EB8202 		add	r2, r3, r2, lsl #2
- 607              		.loc 2 118 15 view .LVU191
- 608 0090 03EB8103 		add	r3, r3, r1, lsl #2
- 609              	.LVL31:
- 117:delayline_multitap.h ****             T b = line_[(write_ptr_ + delay_[head] + 1) % max_size];
- 610              		.loc 2 117 16 view .LVU192
- 611 0094 92ED217A 		vldr.32	s14, [r2, #132]
- 612              	.LVL32:
- 119:delayline_multitap.h ****             return a + (b-a) * frac_[head];
- 613              		.loc 2 119 26 view .LVU193
- 614 0098 D3ED216A 		vldr.32	s13, [r3, #132]
- 615 009c 76EEC76A 		vsub.f32	s13, s13, s14
- 616              		.loc 2 119 42 view .LVU194
- 617 00a0 A6EEA77A 		vfma.f32	s14, s13, s15
- 618              	.LVL33:
- 619              		.loc 2 119 42 view .LVU195
- 620 00a4 F0EE477A 		vmov.f32	s15, s14
- 621              	.LVL34:
- 622              	.L11:
- 623              		.loc 2 119 42 view .LVU196
- 624              	.LBE206:
- 625              	.LBE208:
- 626              	.LBE213:
+ 589              	.LBI201:
+ 127:delayline_multitap.h ****     {
+ 590              		.loc 2 127 20 view .LVU184
+ 591              	.LBB204:
+ 592              		.loc 2 135 38 is_stmt 0 view .LVU185
+ 593 0070 0244     		add	r2, r2, r0
+ 136:delayline_multitap.h ****             T b = line_[(write_ptr_ + delay_[head] + 1) % max_size];
+ 594              		.loc 2 136 52 view .LVU186
+ 595 0072 02F1010E 		add	lr, r2, #1
+ 135:delayline_multitap.h ****             T b = line_[(write_ptr_ + delay_[head] + 1) % max_size];
+ 596              		.loc 2 135 54 view .LVU187
+ 597 0076 510A     		lsrs	r1, r2, #9
+ 598              		.loc 2 136 57 view .LVU188
+ 599 0078 4FEA5E2A 		lsr	r10, lr, #9
+ 135:delayline_multitap.h ****             T b = line_[(write_ptr_ + delay_[head] + 1) % max_size];
+ 600              		.loc 2 135 54 view .LVU189
+ 601 007c ABFB0101 		umull	r0, r1, fp, r1
+ 602              		.loc 2 136 57 view .LVU190
+ 603 0080 ABFB0AA0 		umull	r10, r0, fp, r10
+ 135:delayline_multitap.h ****             T b = line_[(write_ptr_ + delay_[head] + 1) % max_size];
+ 604              		.loc 2 135 54 view .LVU191
+ 605 0084 0CFB1122 		mls	r2, ip, r1, r2
+ 606              		.loc 2 136 57 view .LVU192
+ 607 0088 0CFB10E1 		mls	r1, ip, r0, lr
+ 135:delayline_multitap.h ****             T b = line_[(write_ptr_ + delay_[head] + 1) % max_size];
+ 608              		.loc 2 135 16 view .LVU193
+ 609 008c 03EB8202 		add	r2, r3, r2, lsl #2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 21
+
+
+ 610              		.loc 2 136 15 view .LVU194
+ 611 0090 03EB8103 		add	r3, r3, r1, lsl #2
+ 612              	.LVL31:
+ 135:delayline_multitap.h ****             T b = line_[(write_ptr_ + delay_[head] + 1) % max_size];
+ 613              		.loc 2 135 16 view .LVU195
+ 614 0094 92ED217A 		vldr.32	s14, [r2, #132]
+ 615              	.LVL32:
+ 137:delayline_multitap.h ****             return a + (b-a) * frac_[head];
+ 616              		.loc 2 137 26 view .LVU196
+ 617 0098 D3ED216A 		vldr.32	s13, [r3, #132]
+ 618 009c 76EEC76A 		vsub.f32	s13, s13, s14
+ 619              		.loc 2 137 42 view .LVU197
+ 620 00a0 A6EEA77A 		vfma.f32	s14, s13, s15
+ 621              	.LVL33:
+ 622              		.loc 2 137 42 view .LVU198
+ 623 00a4 F0EE477A 		vmov.f32	s15, s14
+ 624              	.LVL34:
+ 625              	.L11:
+ 626              		.loc 2 137 42 view .LVU199
+ 627              	.LBE204:
+ 628              	.LBE206:
+ 629              	.LBE211:
+ 160:DelayMulti.cpp ****         //update xfade
+ 161:DelayMulti.cpp ****         XfadePos_[i] = XfadeEnv_[i].Process(XfadeGate_[i]);
+ 630              		.loc 1 161 22 view .LVU200
+ 631 00a8 AA46     		mov	r10, r5
+ 632              		.loc 1 161 44 view .LVU201
+ 633 00aa 19F8011B 		ldrb	r1, [r9], #1	@ zero_extendqisi2
+ 634 00ae 4046     		mov	r0, r8
  159:DelayMulti.cpp ****         //update xfade
- 160:DelayMulti.cpp ****         XfadePos_[i] = XfadeEnv_[i].Process(XfadeGate_[i]);
- 627              		.loc 1 160 22 view .LVU197
- 628 00a8 AA46     		mov	r10, r5
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 21
-
-
- 629              		.loc 1 160 44 view .LVU198
- 630 00aa 19F8011B 		ldrb	r1, [r9], #1	@ zero_extendqisi2
- 631 00ae 4046     		mov	r0, r8
- 158:DelayMulti.cpp ****         //update xfade
- 632              		.loc 1 158 25 view .LVU199
- 633 00b0 C5ED087A 		vstr.32	s15, [r5, #32]
- 634              		.loc 1 160 9 is_stmt 1 view .LVU200
- 635              		.loc 1 160 44 is_stmt 0 view .LVU201
- 636 00b4 FFF7FEFF 		bl	_ZN7daisysp4Adsr7ProcessEb
- 637              	.LVL35:
+ 635              		.loc 1 159 25 view .LVU202
+ 636 00b0 C5ED087A 		vstr.32	s15, [r5, #32]
+ 637              		.loc 1 161 9 is_stmt 1 view .LVU203
+ 638              		.loc 1 161 44 is_stmt 0 view .LVU204
+ 639 00b4 FFF7FEFF 		bl	_ZN7daisysp4Adsr7ProcessEb
+ 640              	.LVL35:
+ 162:DelayMulti.cpp ****         Xfade_[i].SetPos(XfadePos_[i]);
+ 163:DelayMulti.cpp **** 
+ 164:DelayMulti.cpp ****         //sum all head outputs * gains
+ 165:DelayMulti.cpp ****         output_ +=  Gain_[i] * Xfade_[i].Process(zero,delayOutput_[i]);
+ 641              		.loc 1 165 49 view .LVU205
+ 642 00b8 05F12002 		add	r2, r5, #32
  161:DelayMulti.cpp ****         Xfade_[i].SetPos(XfadePos_[i]);
- 162:DelayMulti.cpp **** 
- 163:DelayMulti.cpp ****         //sum all head outputs * gains
- 164:DelayMulti.cpp ****         output_ +=  Gain_[i] * Xfade_[i].Process(zero,delayOutput_[i]);
- 638              		.loc 1 164 49 view .LVU202
- 639 00b8 05F12002 		add	r2, r5, #32
- 160:DelayMulti.cpp ****         Xfade_[i].SetPos(XfadePos_[i]);
- 640              		.loc 1 160 22 view .LVU203
- 641 00bc AAEC010A 		vstmia.32	r10!, {s0}
- 161:DelayMulti.cpp ****         Xfade_[i].SetPos(XfadePos_[i]);
- 642              		.loc 1 161 9 is_stmt 1 view .LVU204
- 643              	.LVL36:
- 644              	.LBB214:
- 645              	.LBI214:
+ 643              		.loc 1 161 22 view .LVU206
+ 644 00bc AAEC010A 		vstmia.32	r10!, {s0}
+ 162:DelayMulti.cpp ****         Xfade_[i].SetPos(XfadePos_[i]);
+ 645              		.loc 1 162 9 is_stmt 1 view .LVU207
+ 646              	.LVL36:
+ 647              	.LBB212:
+ 648              	.LBI212:
   60:../DaisySP/Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
- 646              		.loc 3 60 17 view .LVU205
- 647              	.LBB215:
+ 649              		.loc 3 60 17 view .LVU208
+ 650              	.LBB213:
   60:../DaisySP/Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
- 648              		.loc 3 60 37 view .LVU206
- 649              	.LBE215:
- 650              	.LBE214:
- 651              		.loc 1 164 49 is_stmt 0 view .LVU207
- 652 00c0 3046     		mov	r0, r6
- 653              	.LBB217:
- 654              	.LBB216:
-  60:../DaisySP/Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
- 655              		.loc 3 60 42 view .LVU208
- 656 00c2 86ED000A 		vstr.32	s0, [r6]
- 657              	.LVL37:
-  60:../DaisySP/Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
- 658              		.loc 3 60 42 view .LVU209
- 659              	.LBE216:
- 660              	.LBE217:
- 661              		.loc 1 164 9 is_stmt 1 view .LVU210
- 662              		.loc 1 164 49 is_stmt 0 view .LVU211
- 663 00c6 01A9     		add	r1, sp, #4
- 664              		.loc 1 164 28 view .LVU212
- 665 00c8 9AED018A 		vldr.32	s16, [r10, #4]
- 666              		.loc 1 164 49 view .LVU213
- 667 00cc FFF7FEFF 		bl	_ZN7daisysp9CrossFade7ProcessERfS1_
- 668              	.LVL38:
- 669              		.loc 1 164 17 view .LVU214
- 670 00d0 D4ED467A 		vldr.32	s15, [r4, #280]
- 671 00d4 08F13808 		add	r8, r8, #56
- 672 00d8 5546     		mov	r5, r10
- 673 00da 0836     		adds	r6, r6, #8
- 674              	.LVL39:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 22
+ 651              		.loc 3 60 37 view .LVU209
+ 652              	.LBE213:
+ 653              	.LBE212:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 22
 
 
- 675              		.loc 1 164 17 view .LVU215
- 676 00dc E8EE007A 		vfma.f32	s15, s16, s0
- 677 00e0 C4ED467A 		vstr.32	s15, [r4, #280]
- 154:DelayMulti.cpp ****     {   
- 678              		.loc 1 154 5 is_stmt 1 view .LVU216
- 679              	.LVL40:
- 154:DelayMulti.cpp ****     {   
- 680              		.loc 1 154 24 view .LVU217
- 681 00e4 37B1     		cbz	r7, .L14
- 682              	.LBE220:
- 165:DelayMulti.cpp ****     }
- 166:DelayMulti.cpp **** 
- 167:DelayMulti.cpp ****     return output_;
- 683              		.loc 1 167 5 view .LVU218
- 168:DelayMulti.cpp **** }
- 684              		.loc 1 168 1 is_stmt 0 view .LVU219
- 685 00e6 04F58C70 		add	r0, r4, #280
- 686 00ea 03B0     		add	sp, sp, #12
- 687              		.cfi_remember_state
- 688              		.cfi_def_cfa_offset 44
- 689              		@ sp needed
- 690 00ec BDEC028B 		vldm	sp!, {d8}
- 691              		.cfi_restore 80
- 692              		.cfi_restore 81
- 693              		.cfi_def_cfa_offset 36
- 694 00f0 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
- 695              	.LVL41:
- 696              	.L14:
- 697              		.cfi_restore_state
- 698              	.LBB221:
- 699              		.loc 1 168 1 view .LVU220
- 700 00f4 0127     		movs	r7, #1
- 701              	.LVL42:
- 702              		.loc 1 168 1 view .LVU221
- 703 00f6 96E7     		b	.L12
- 704              	.LVL43:
- 705              	.L13:
- 706              	.LBB218:
- 707              	.LBB209:
- 113:delayline_multitap.h ****         }
- 708              		.loc 2 113 20 view .LVU222
- 709 00f8 DFED027A 		vldr.32	s15, .L16+4
- 710 00fc D4E7     		b	.L11
- 711              	.L17:
- 712 00fe 00BF     		.align	2
- 713              	.L16:
- 714 0100 FF5D1A00 		.word	1727999
- 715 0104 00000000 		.word	0
- 716 0108 84786900 		.word	6912132
- 717 010c 076B1300 		.word	1272583
- 718 0110 005E1A00 		.word	1728000
- 719              	.LBE209:
- 720              	.LBE218:
- 721              	.LBE221:
- 722              		.cfi_endproc
- 723              	.LFE3967:
- 725              		.section	.text._ZN10DelayMulti14updateTempoLEDEb,"ax",%progbits
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 23
+ 654              		.loc 1 165 49 is_stmt 0 view .LVU210
+ 655 00c0 3046     		mov	r0, r6
+ 656              	.LBB215:
+ 657              	.LBB214:
+  60:../DaisySP/Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
+ 658              		.loc 3 60 42 view .LVU211
+ 659 00c2 86ED000A 		vstr.32	s0, [r6]
+ 660              	.LVL37:
+  60:../DaisySP/Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
+ 661              		.loc 3 60 42 view .LVU212
+ 662              	.LBE214:
+ 663              	.LBE215:
+ 664              		.loc 1 165 9 is_stmt 1 view .LVU213
+ 665              		.loc 1 165 49 is_stmt 0 view .LVU214
+ 666 00c6 01A9     		add	r1, sp, #4
+ 667              		.loc 1 165 28 view .LVU215
+ 668 00c8 9AED018A 		vldr.32	s16, [r10, #4]
+ 669              		.loc 1 165 49 view .LVU216
+ 670 00cc FFF7FEFF 		bl	_ZN7daisysp9CrossFade7ProcessERfS1_
+ 671              	.LVL38:
+ 672              		.loc 1 165 17 view .LVU217
+ 673 00d0 D4ED457A 		vldr.32	s15, [r4, #276]
+ 674 00d4 08F13808 		add	r8, r8, #56
+ 675 00d8 5546     		mov	r5, r10
+ 676 00da 0836     		adds	r6, r6, #8
+ 677              	.LVL39:
+ 678              		.loc 1 165 17 view .LVU218
+ 679 00dc E8EE007A 		vfma.f32	s15, s16, s0
+ 680 00e0 C4ED457A 		vstr.32	s15, [r4, #276]
+ 155:DelayMulti.cpp ****     {   
+ 681              		.loc 1 155 5 is_stmt 1 view .LVU219
+ 682              	.LVL40:
+ 155:DelayMulti.cpp ****     {   
+ 683              		.loc 1 155 24 view .LVU220
+ 684 00e4 37B1     		cbz	r7, .L14
+ 685              	.LBE218:
+ 166:DelayMulti.cpp ****     }
+ 167:DelayMulti.cpp **** 
+ 168:DelayMulti.cpp ****     return output_;
+ 686              		.loc 1 168 5 view .LVU221
+ 169:DelayMulti.cpp **** }
+ 687              		.loc 1 169 1 is_stmt 0 view .LVU222
+ 688 00e6 04F58A70 		add	r0, r4, #276
+ 689 00ea 03B0     		add	sp, sp, #12
+ 690              		.cfi_remember_state
+ 691              		.cfi_def_cfa_offset 44
+ 692              		@ sp needed
+ 693 00ec BDEC028B 		vldm	sp!, {d8}
+ 694              		.cfi_restore 80
+ 695              		.cfi_restore 81
+ 696              		.cfi_def_cfa_offset 36
+ 697 00f0 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 698              	.LVL41:
+ 699              	.L14:
+ 700              		.cfi_restore_state
+ 701              	.LBB219:
+ 702              		.loc 1 169 1 view .LVU223
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 23
 
 
- 726              		.align	1
- 727              		.p2align 2,,3
- 728              		.global	_ZN10DelayMulti14updateTempoLEDEb
- 729              		.syntax unified
- 730              		.thumb
- 731              		.thumb_func
- 732              		.fpu fpv5-d16
- 734              	_ZN10DelayMulti14updateTempoLEDEb:
- 735              	.LVL44:
- 736              	.LFB3968:
- 169:DelayMulti.cpp **** 
- 170:DelayMulti.cpp **** void DelayMulti::updateTempoLED(bool syncMode)
- 171:DelayMulti.cpp **** {
- 737              		.loc 1 171 1 is_stmt 1 view -0
- 738              		.cfi_startproc
- 739              		@ args = 0, pretend = 0, frame = 0
- 740              		@ frame_needed = 0, uses_anonymous_args = 0
- 741              		@ link register save eliminated.
+ 703 00f4 0127     		movs	r7, #1
+ 704              	.LVL42:
+ 705              		.loc 1 169 1 view .LVU224
+ 706 00f6 96E7     		b	.L12
+ 707              	.LVL43:
+ 708              	.L13:
+ 709              	.LBB216:
+ 710              	.LBB207:
+ 131:delayline_multitap.h ****         }
+ 711              		.loc 2 131 20 view .LVU225
+ 712 00f8 DFED027A 		vldr.32	s15, .L16+4
+ 713 00fc D4E7     		b	.L11
+ 714              	.L17:
+ 715 00fe 00BF     		.align	2
+ 716              	.L16:
+ 717 0100 FF5D1A00 		.word	1727999
+ 718 0104 00000000 		.word	0
+ 719 0108 84786900 		.word	6912132
+ 720 010c 076B1300 		.word	1272583
+ 721 0110 005E1A00 		.word	1728000
+ 722              	.LBE207:
+ 723              	.LBE216:
+ 724              	.LBE219:
+ 725              		.cfi_endproc
+ 726              	.LFE3968:
+ 728              		.section	.text._ZN10DelayMulti14updateTempoLEDEb,"ax",%progbits
+ 729              		.align	1
+ 730              		.p2align 2,,3
+ 731              		.global	_ZN10DelayMulti14updateTempoLEDEb
+ 732              		.syntax unified
+ 733              		.thumb
+ 734              		.thumb_func
+ 735              		.fpu fpv5-d16
+ 737              	_ZN10DelayMulti14updateTempoLEDEb:
+ 738              	.LVL44:
+ 739              	.LFB3969:
+ 170:DelayMulti.cpp **** 
+ 171:DelayMulti.cpp **** void DelayMulti::updateTempoLED(bool syncMode)
+ 172:DelayMulti.cpp **** {
+ 740              		.loc 1 172 1 is_stmt 1 view -0
+ 741              		.cfi_startproc
+ 742              		@ args = 0, pretend = 0, frame = 0
+ 743              		@ frame_needed = 0, uses_anonymous_args = 0
+ 744              		@ link register save eliminated.
+ 173:DelayMulti.cpp ****     if(syncMode)
+ 745              		.loc 1 173 5 view .LVU227
  172:DelayMulti.cpp ****     if(syncMode)
- 742              		.loc 1 172 5 view .LVU224
- 171:DelayMulti.cpp ****     if(syncMode)
- 743              		.loc 1 171 1 is_stmt 0 view .LVU225
- 744 0000 0346     		mov	r3, r0
- 745              		.loc 1 172 5 view .LVU226
- 746 0002 31B1     		cbz	r1, .L19
- 173:DelayMulti.cpp ****     {
- 174:DelayMulti.cpp ****         tempoled.update(div_,basePhase_);
- 747              		.loc 1 174 9 is_stmt 1 view .LVU227
- 748              		.loc 1 174 24 is_stmt 0 view .LVU228
- 749 0004 90ED480A 		vldr.32	s0, [r0, #288]
- 750 0008 0430     		adds	r0, r0, #4
- 751              	.LVL45:
- 752              		.loc 1 174 24 view .LVU229
- 753 000a 93F81D11 		ldrb	r1, [r3, #285]	@ zero_extendqisi2
- 754              	.LVL46:
- 755              		.loc 1 174 24 view .LVU230
- 756 000e FFF7FEBF 		b	_ZN8TempoLED6updateE9TempoDivsf
- 757              	.LVL47:
- 758              	.L19:
- 175:DelayMulti.cpp ****     }
- 176:DelayMulti.cpp ****     else
- 177:DelayMulti.cpp ****     {
- 178:DelayMulti.cpp ****         tempoled.update();
- 759              		.loc 1 178 9 is_stmt 1 view .LVU231
- 760              		.loc 1 178 24 is_stmt 0 view .LVU232
- 761 0012 0430     		adds	r0, r0, #4
- 762              	.LVL48:
- 763              		.loc 1 178 24 view .LVU233
- 764 0014 FFF7FEBF 		b	_ZN8TempoLED6updateEv
- 765              	.LVL49:
- 766              		.loc 1 178 24 view .LVU234
- 767              		.cfi_endproc
- 768              	.LFE3968:
- 770              		.section	.text._ZN10DelayMulti5WriteERKf,"ax",%progbits
- 771              		.align	1
- 772              		.p2align 2,,3
- 773              		.global	_ZN10DelayMulti5WriteERKf
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 24
+ 746              		.loc 1 172 1 is_stmt 0 view .LVU228
+ 747 0000 0346     		mov	r3, r0
+ 748              		.loc 1 173 5 view .LVU229
+ 749 0002 31B1     		cbz	r1, .L19
+ 174:DelayMulti.cpp ****     {
+ 175:DelayMulti.cpp ****         tempoled.update(div_,basePhase_);
+ 750              		.loc 1 175 9 is_stmt 1 view .LVU230
+ 751              		.loc 1 175 24 is_stmt 0 view .LVU231
+ 752 0004 90ED470A 		vldr.32	s0, [r0, #284]
+ 753 0008 0430     		adds	r0, r0, #4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 24
 
 
- 774              		.syntax unified
- 775              		.thumb
- 776              		.thumb_func
- 777              		.fpu fpv5-d16
- 779              	_ZN10DelayMulti5WriteERKf:
- 780              	.LVL50:
- 781              	.LFB3969:
- 179:DelayMulti.cpp ****     }
- 180:DelayMulti.cpp **** }
- 181:DelayMulti.cpp **** 
- 182:DelayMulti.cpp **** //Writes to delayline
- 183:DelayMulti.cpp **** void DelayMulti::Write(const float& in)
- 184:DelayMulti.cpp **** {
- 782              		.loc 1 184 1 is_stmt 1 view -0
- 783              		.cfi_startproc
- 784              		@ args = 0, pretend = 0, frame = 0
- 785              		@ frame_needed = 0, uses_anonymous_args = 0
- 786              		@ link register save eliminated.
+ 754              	.LVL45:
+ 755              		.loc 1 175 24 view .LVU232
+ 756 000a 93F81911 		ldrb	r1, [r3, #281]	@ zero_extendqisi2
+ 757              	.LVL46:
+ 758              		.loc 1 175 24 view .LVU233
+ 759 000e FFF7FEBF 		b	_ZN8TempoLED6updateE9TempoDivsf
+ 760              	.LVL47:
+ 761              	.L19:
+ 176:DelayMulti.cpp ****     }
+ 177:DelayMulti.cpp ****     else
+ 178:DelayMulti.cpp ****     {
+ 179:DelayMulti.cpp ****         tempoled.update();
+ 762              		.loc 1 179 9 is_stmt 1 view .LVU234
+ 763              		.loc 1 179 24 is_stmt 0 view .LVU235
+ 764 0012 0430     		adds	r0, r0, #4
+ 765              	.LVL48:
+ 766              		.loc 1 179 24 view .LVU236
+ 767 0014 FFF7FEBF 		b	_ZN8TempoLED6updateEv
+ 768              	.LVL49:
+ 769              		.loc 1 179 24 view .LVU237
+ 770              		.cfi_endproc
+ 771              	.LFE3969:
+ 773              		.section	.text._ZN10DelayMulti5WriteERKf,"ax",%progbits
+ 774              		.align	1
+ 775              		.p2align 2,,3
+ 776              		.global	_ZN10DelayMulti5WriteERKf
+ 777              		.syntax unified
+ 778              		.thumb
+ 779              		.thumb_func
+ 780              		.fpu fpv5-d16
+ 782              	_ZN10DelayMulti5WriteERKf:
+ 783              	.LVL50:
+ 784              	.LFB3970:
+ 180:DelayMulti.cpp ****     }
+ 181:DelayMulti.cpp **** }
+ 182:DelayMulti.cpp **** 
+ 183:DelayMulti.cpp **** //Writes to delayline
+ 184:DelayMulti.cpp **** void DelayMulti::Write(const float& in)
+ 185:DelayMulti.cpp **** {
+ 785              		.loc 1 185 1 is_stmt 1 view -0
+ 786              		.cfi_startproc
+ 787              		@ args = 0, pretend = 0, frame = 0
+ 788              		@ frame_needed = 0, uses_anonymous_args = 0
+ 789              		@ link register save eliminated.
+ 186:DelayMulti.cpp ****     del->Write(in);
+ 790              		.loc 1 186 5 is_stmt 0 view .LVU239
+ 791 0000 0068     		ldr	r0, [r0]
+ 792              	.LVL51:
+ 793              	.LBB220:
+ 794              	.LBB221:
+ 121:delayline_multitap.h ****     }
+ 795              		.loc 2 121 45 view .LVU240
+ 796 0002 094A     		ldr	r2, .L22
+ 797              	.LBE221:
+ 798              	.LBE220:
+ 799              		.loc 1 186 5 is_stmt 1 view .LVU241
  185:DelayMulti.cpp ****     del->Write(in);
- 787              		.loc 1 185 5 is_stmt 0 view .LVU236
- 788 0000 0068     		ldr	r0, [r0]
- 789              	.LVL51:
- 790              	.LBB222:
- 791              	.LBB223:
- 103:delayline_multitap.h ****     }
- 792              		.loc 2 103 45 view .LVU237
- 793 0002 094A     		ldr	r2, .L22
- 794              	.LBE223:
- 795              	.LBE222:
- 796              		.loc 1 185 5 is_stmt 1 view .LVU238
- 184:DelayMulti.cpp ****     del->Write(in);
- 797              		.loc 1 184 1 is_stmt 0 view .LVU239
- 798 0004 70B4     		push	{r4, r5, r6}
- 799              		.cfi_def_cfa_offset 12
- 800              		.cfi_offset 4, -12
- 801              		.cfi_offset 5, -8
- 802              		.cfi_offset 6, -4
- 803              		.loc 1 185 15 view .LVU240
- 804 0006 0E68     		ldr	r6, [r1]	@ float
- 805              	.LVL52:
- 806              	.LBB226:
- 807              	.LBI222:
- 100:delayline_multitap.h ****     {
- 808              		.loc 2 100 17 is_stmt 1 view .LVU241
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 25
+
+
+ 800              		.loc 1 185 1 is_stmt 0 view .LVU242
+ 801 0004 70B4     		push	{r4, r5, r6}
+ 802              		.cfi_def_cfa_offset 12
+ 803              		.cfi_offset 4, -12
+ 804              		.cfi_offset 5, -8
+ 805              		.cfi_offset 6, -4
+ 806              		.loc 1 186 15 view .LVU243
+ 807 0006 0E68     		ldr	r6, [r1]	@ float
+ 808              	.LVL52:
  809              	.LBB224:
- 102:delayline_multitap.h ****         write_ptr_        = (write_ptr_ - 1 + max_size) % max_size;
- 810              		.loc 2 102 15 is_stmt 0 view .LVU242
- 811 0008 0168     		ldr	r1, [r0]
- 812              	.LVL53:
- 103:delayline_multitap.h ****     }
- 813              		.loc 2 103 57 view .LVU243
- 814 000a 084D     		ldr	r5, .L22+4
- 103:delayline_multitap.h ****     }
- 815              		.loc 2 103 45 view .LVU244
- 816 000c 0A44     		add	r2, r2, r1
- 102:delayline_multitap.h ****         write_ptr_        = (write_ptr_ - 1 + max_size) % max_size;
- 817              		.loc 2 102 9 view .LVU245
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 25
+ 810              	.LBI220:
+ 118:delayline_multitap.h ****     {
+ 811              		.loc 2 118 17 is_stmt 1 view .LVU244
+ 812              	.LBB222:
+ 120:delayline_multitap.h ****         write_ptr_        = (write_ptr_ - 1 + max_size) % max_size;
+ 813              		.loc 2 120 15 is_stmt 0 view .LVU245
+ 814 0008 0168     		ldr	r1, [r0]
+ 815              	.LVL53:
+ 121:delayline_multitap.h ****     }
+ 816              		.loc 2 121 57 view .LVU246
+ 817 000a 084D     		ldr	r5, .L22+4
+ 121:delayline_multitap.h ****     }
+ 818              		.loc 2 121 45 view .LVU247
+ 819 000c 0A44     		add	r2, r2, r1
+ 120:delayline_multitap.h ****         write_ptr_        = (write_ptr_ - 1 + max_size) % max_size;
+ 820              		.loc 2 120 9 view .LVU248
+ 821 000e 00EB8101 		add	r1, r0, r1, lsl #2
+ 121:delayline_multitap.h ****     }
+ 822              		.loc 2 121 57 view .LVU249
+ 823 0012 074C     		ldr	r4, .L22+8
+ 824 0014 530A     		lsrs	r3, r2, #9
+ 120:delayline_multitap.h ****         write_ptr_        = (write_ptr_ - 1 + max_size) % max_size;
+ 825              		.loc 2 120 9 view .LVU250
+ 826 0016 C1F88460 		str	r6, [r1, #132]	@ float
+ 121:delayline_multitap.h ****     }
+ 827              		.loc 2 121 57 view .LVU251
+ 828 001a A5FB0313 		umull	r1, r3, r5, r3
+ 829 001e 04FB1323 		mls	r3, r4, r3, r2
+ 830              	.LBE222:
+ 831              	.LBE224:
+ 187:DelayMulti.cpp **** }
+ 832              		.loc 1 187 1 view .LVU252
+ 833 0022 70BC     		pop	{r4, r5, r6}
+ 834              		.cfi_restore 6
+ 835              		.cfi_restore 5
+ 836              		.cfi_restore 4
+ 837              		.cfi_def_cfa_offset 0
+ 838              	.LBB225:
+ 839              	.LBB223:
+ 121:delayline_multitap.h ****     }
+ 840              		.loc 2 121 9 view .LVU253
+ 841 0024 0360     		str	r3, [r0]
+ 842              	.LVL54:
+ 121:delayline_multitap.h ****     }
+ 843              		.loc 2 121 9 view .LVU254
+ 844              	.LBE223:
+ 845              	.LBE225:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 26
 
 
- 818 000e 00EB8101 		add	r1, r0, r1, lsl #2
- 103:delayline_multitap.h ****     }
- 819              		.loc 2 103 57 view .LVU246
- 820 0012 074C     		ldr	r4, .L22+8
- 821 0014 530A     		lsrs	r3, r2, #9
- 102:delayline_multitap.h ****         write_ptr_        = (write_ptr_ - 1 + max_size) % max_size;
- 822              		.loc 2 102 9 view .LVU247
- 823 0016 C1F88460 		str	r6, [r1, #132]	@ float
- 103:delayline_multitap.h ****     }
- 824              		.loc 2 103 57 view .LVU248
- 825 001a A5FB0313 		umull	r1, r3, r5, r3
- 826 001e 04FB1323 		mls	r3, r4, r3, r2
- 827              	.LBE224:
- 828              	.LBE226:
- 186:DelayMulti.cpp **** }
- 829              		.loc 1 186 1 view .LVU249
- 830 0022 70BC     		pop	{r4, r5, r6}
- 831              		.cfi_restore 6
- 832              		.cfi_restore 5
- 833              		.cfi_restore 4
- 834              		.cfi_def_cfa_offset 0
- 835              	.LBB227:
- 836              	.LBB225:
- 103:delayline_multitap.h ****     }
- 837              		.loc 2 103 9 view .LVU250
- 838 0024 0360     		str	r3, [r0]
- 839              	.LVL54:
- 103:delayline_multitap.h ****     }
- 840              		.loc 2 103 9 view .LVU251
- 841              	.LBE225:
- 842              	.LBE227:
- 843              		.loc 1 186 1 view .LVU252
- 844 0026 7047     		bx	lr
- 845              	.L23:
- 846              		.align	2
- 847              	.L22:
- 848 0028 FF5D1A00 		.word	1727999
- 849 002c 076B1300 		.word	1272583
- 850 0030 005E1A00 		.word	1728000
- 851              		.cfi_endproc
- 852              	.LFE3969:
- 854              		.section	.text._ZN10DelayMulti6GetDivEf,"ax",%progbits
- 855              		.align	1
- 856              		.p2align 2,,3
- 857              		.global	_ZN10DelayMulti6GetDivEf
- 858              		.syntax unified
- 859              		.thumb
- 860              		.thumb_func
- 861              		.fpu fpv5-d16
- 863              	_ZN10DelayMulti6GetDivEf:
- 864              	.LVL55:
- 865              	.LFB3970:
- 187:DelayMulti.cpp **** 
- 188:DelayMulti.cpp **** float DelayMulti::GetDiv(float potValue)
- 189:DelayMulti.cpp **** {
- 866              		.loc 1 189 1 is_stmt 1 view -0
- 867              		.cfi_startproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 26
+ 846              		.loc 1 187 1 view .LVU255
+ 847 0026 7047     		bx	lr
+ 848              	.L23:
+ 849              		.align	2
+ 850              	.L22:
+ 851 0028 FF5D1A00 		.word	1727999
+ 852 002c 076B1300 		.word	1272583
+ 853 0030 005E1A00 		.word	1728000
+ 854              		.cfi_endproc
+ 855              	.LFE3970:
+ 857              		.section	.text._ZN10DelayMulti6GetDivEf,"ax",%progbits
+ 858              		.align	1
+ 859              		.p2align 2,,3
+ 860              		.global	_ZN10DelayMulti6GetDivEf
+ 861              		.syntax unified
+ 862              		.thumb
+ 863              		.thumb_func
+ 864              		.fpu fpv5-d16
+ 866              	_ZN10DelayMulti6GetDivEf:
+ 867              	.LVL55:
+ 868              	.LFB3971:
+ 188:DelayMulti.cpp **** 
+ 189:DelayMulti.cpp **** double DelayMulti::GetDiv(float potValue)
+ 190:DelayMulti.cpp **** {
+ 869              		.loc 1 190 1 is_stmt 1 view -0
+ 870              		.cfi_startproc
+ 871              		@ args = 0, pretend = 0, frame = 0
+ 872              		@ frame_needed = 0, uses_anonymous_args = 0
+ 873              		@ link register save eliminated.
+ 191:DelayMulti.cpp ****     float retVal{};
+ 874              		.loc 1 191 5 view .LVU257
+ 192:DelayMulti.cpp **** 
+ 193:DelayMulti.cpp ****     if (potValue < 0.0909f)
+ 875              		.loc 1 193 5 view .LVU258
+ 876 0000 DFED4D7A 		vldr.32	s15, .L70+24
+ 877 0004 B4EEE70A 		vcmpe.f32	s0, s15
+ 878 0008 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 879 000c 05D5     		bpl	.L58
+ 194:DelayMulti.cpp ****     {
+ 195:DelayMulti.cpp ****         retVal = (1.0 / 6.0);
+ 880              		.loc 1 195 9 view .LVU259
+ 881              	.LVL56:
+ 196:DelayMulti.cpp ****         div_ = DIV6;
+ 882              		.loc 1 196 9 view .LVU260
+ 883              		.loc 1 196 14 is_stmt 0 view .LVU261
+ 884 000e 0023     		movs	r3, #0
+ 885 0010 9FED430B 		vldr.64	d0, .L70
+ 886              	.LVL57:
+ 887              		.loc 1 196 14 view .LVU262
+ 888 0014 80F81931 		strb	r3, [r0, #281]
+ 889 0018 7047     		bx	lr
+ 890              	.LVL58:
+ 891              	.L58:
+ 197:DelayMulti.cpp ****     }
+ 198:DelayMulti.cpp **** 
+ 199:DelayMulti.cpp ****     else if (potValue < 0.1818f)
+ 892              		.loc 1 199 10 is_stmt 1 view .LVU263
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 27
 
 
- 868              		@ args = 0, pretend = 0, frame = 0
- 869              		@ frame_needed = 0, uses_anonymous_args = 0
- 870              		@ link register save eliminated.
- 190:DelayMulti.cpp ****     float retVal{};
- 871              		.loc 1 190 5 view .LVU254
- 191:DelayMulti.cpp **** 
- 192:DelayMulti.cpp ****     if (potValue < 0.0909f)
- 872              		.loc 1 192 5 view .LVU255
- 873 0000 DFED477A 		vldr.32	s15, .L70
- 874 0004 B4EEE70A 		vcmpe.f32	s0, s15
- 875 0008 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 876 000c 05D5     		bpl	.L58
- 193:DelayMulti.cpp ****     {
- 194:DelayMulti.cpp ****         retVal = (1.0f / 6.0f);
- 877              		.loc 1 194 9 view .LVU256
- 878              	.LVL56:
- 195:DelayMulti.cpp ****         div_ = DIV6;
- 879              		.loc 1 195 9 view .LVU257
- 880              		.loc 1 195 14 is_stmt 0 view .LVU258
- 881 000e 0023     		movs	r3, #0
- 194:DelayMulti.cpp ****         div_ = DIV6;
- 882              		.loc 1 194 16 view .LVU259
- 883 0010 9FED440A 		vldr.32	s0, .L70+4
- 884              	.LVL57:
- 885              		.loc 1 195 14 view .LVU260
- 886 0014 80F81D31 		strb	r3, [r0, #285]
- 887 0018 7047     		bx	lr
- 888              	.LVL58:
- 889              	.L58:
- 196:DelayMulti.cpp ****     }
- 197:DelayMulti.cpp **** 
- 198:DelayMulti.cpp ****     else if (potValue < 0.1818f)
- 890              		.loc 1 198 10 is_stmt 1 view .LVU261
- 891 001a DFED437A 		vldr.32	s15, .L70+8
- 892 001e B4EEE70A 		vcmpe.f32	s0, s15
- 893 0022 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 894 0026 05D5     		bpl	.L59
- 199:DelayMulti.cpp ****     {
- 200:DelayMulti.cpp ****        retVal = (1.0f / 5.0f);
- 895              		.loc 1 200 8 view .LVU262
- 896              	.LVL59:
- 201:DelayMulti.cpp ****        div_ = DIV5;
- 897              		.loc 1 201 8 view .LVU263
- 898              		.loc 1 201 13 is_stmt 0 view .LVU264
- 899 0028 0123     		movs	r3, #1
- 200:DelayMulti.cpp ****        div_ = DIV5;
- 900              		.loc 1 200 15 view .LVU265
- 901 002a 9FED400A 		vldr.32	s0, .L70+12
- 902              	.LVL60:
- 903              		.loc 1 201 13 view .LVU266
- 904 002e 80F81D31 		strb	r3, [r0, #285]
- 905 0032 7047     		bx	lr
- 906              	.LVL61:
- 907              	.L59:
- 202:DelayMulti.cpp ****     }
- 203:DelayMulti.cpp **** 
- 204:DelayMulti.cpp ****     else if (potValue < 0.2727f)
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 27
-
-
- 908              		.loc 1 204 10 is_stmt 1 view .LVU267
- 909 0034 DFED3E7A 		vldr.32	s15, .L70+16
- 910 0038 B4EEE70A 		vcmpe.f32	s0, s15
- 911 003c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 912 0040 0CD4     		bmi	.L68
- 205:DelayMulti.cpp ****     {
- 206:DelayMulti.cpp ****         retVal = (1.0f / 4.0f);
- 207:DelayMulti.cpp ****         div_ = DIV4;
- 208:DelayMulti.cpp ****     }
- 209:DelayMulti.cpp **** 
- 210:DelayMulti.cpp ****     else if (potValue < 0.3636f)
- 913              		.loc 1 210 10 view .LVU268
- 914 0042 DFED3C7A 		vldr.32	s15, .L70+20
- 915 0046 B4EEE70A 		vcmpe.f32	s0, s15
- 916 004a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 917 004e 0BD5     		bpl	.L61
- 211:DelayMulti.cpp ****     {
- 212:DelayMulti.cpp ****         retVal = (1.0f / 3.0f);
- 918              		.loc 1 212 9 view .LVU269
- 919              	.LVL62:
- 213:DelayMulti.cpp ****         div_ = DIV3;
- 920              		.loc 1 213 9 view .LVU270
- 921              		.loc 1 213 14 is_stmt 0 view .LVU271
- 922 0050 0323     		movs	r3, #3
- 212:DelayMulti.cpp ****         div_ = DIV3;
- 923              		.loc 1 212 16 view .LVU272
- 924 0052 9FED390A 		vldr.32	s0, .L70+24
+ 893 001a DFED487A 		vldr.32	s15, .L70+28
+ 894 001e B4EEE70A 		vcmpe.f32	s0, s15
+ 895 0022 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 896 0026 05D5     		bpl	.L59
+ 200:DelayMulti.cpp ****     {
+ 201:DelayMulti.cpp ****        retVal = (1.0 / 5.0);
+ 897              		.loc 1 201 8 view .LVU264
+ 898              	.LVL59:
+ 202:DelayMulti.cpp ****        div_ = DIV5;
+ 899              		.loc 1 202 8 view .LVU265
+ 900              		.loc 1 202 13 is_stmt 0 view .LVU266
+ 901 0028 0123     		movs	r3, #1
+ 902 002a 9FED3F0B 		vldr.64	d0, .L70+8
+ 903              	.LVL60:
+ 904              		.loc 1 202 13 view .LVU267
+ 905 002e 80F81931 		strb	r3, [r0, #281]
+ 906 0032 7047     		bx	lr
+ 907              	.LVL61:
+ 908              	.L59:
+ 203:DelayMulti.cpp ****     }
+ 204:DelayMulti.cpp **** 
+ 205:DelayMulti.cpp ****     else if (potValue < 0.2727f)
+ 909              		.loc 1 205 10 is_stmt 1 view .LVU268
+ 910 0034 DFED427A 		vldr.32	s15, .L70+32
+ 911 0038 B4EEE70A 		vcmpe.f32	s0, s15
+ 912 003c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 913 0040 0CD4     		bmi	.L68
+ 206:DelayMulti.cpp ****     {
+ 207:DelayMulti.cpp ****         retVal = (1.0 / 4.0);
+ 208:DelayMulti.cpp ****         div_ = DIV4;
+ 209:DelayMulti.cpp ****     }
+ 210:DelayMulti.cpp **** 
+ 211:DelayMulti.cpp ****     else if (potValue < 0.3636f)
+ 914              		.loc 1 211 10 view .LVU269
+ 915 0042 DFED407A 		vldr.32	s15, .L70+36
+ 916 0046 B4EEE70A 		vcmpe.f32	s0, s15
+ 917 004a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 918 004e 0BD5     		bpl	.L61
+ 212:DelayMulti.cpp ****     {
+ 213:DelayMulti.cpp ****         retVal = (1.0 / 3.0);
+ 919              		.loc 1 213 9 view .LVU270
+ 920              	.LVL62:
+ 214:DelayMulti.cpp ****         div_ = DIV3;
+ 921              		.loc 1 214 9 view .LVU271
+ 922              		.loc 1 214 14 is_stmt 0 view .LVU272
+ 923 0050 0323     		movs	r3, #3
+ 924 0052 9FED370B 		vldr.64	d0, .L70+16
  925              	.LVL63:
- 926              		.loc 1 213 14 view .LVU273
- 927 0056 80F81D31 		strb	r3, [r0, #285]
+ 926              		.loc 1 214 14 view .LVU273
+ 927 0056 80F81931 		strb	r3, [r0, #281]
  928 005a 7047     		bx	lr
  929              	.LVL64:
  930              	.L68:
- 206:DelayMulti.cpp ****         div_ = DIV4;
- 931              		.loc 1 206 9 is_stmt 1 view .LVU274
- 207:DelayMulti.cpp ****     }
- 932              		.loc 1 207 9 view .LVU275
- 207:DelayMulti.cpp ****     }
- 933              		.loc 1 207 14 is_stmt 0 view .LVU276
+ 207:DelayMulti.cpp ****         div_ = DIV4;
+ 931              		.loc 1 207 9 is_stmt 1 view .LVU274
+ 208:DelayMulti.cpp ****     }
+ 932              		.loc 1 208 9 view .LVU275
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 28
+
+
+ 208:DelayMulti.cpp ****     }
+ 933              		.loc 1 208 14 is_stmt 0 view .LVU276
  934 005c 0223     		movs	r3, #2
- 206:DelayMulti.cpp ****         div_ = DIV4;
- 935              		.loc 1 206 16 view .LVU277
- 936 005e B5EE000A 		vmov.f32	s0, #2.5e-1
- 937              	.LVL65:
- 207:DelayMulti.cpp ****     }
- 938              		.loc 1 207 14 view .LVU278
- 939 0062 80F81D31 		strb	r3, [r0, #285]
- 940 0066 7047     		bx	lr
- 941              	.LVL66:
- 942              	.L61:
- 214:DelayMulti.cpp ****     }
- 215:DelayMulti.cpp **** 
- 216:DelayMulti.cpp ****     else if (potValue < 0.4545f)
- 943              		.loc 1 216 10 is_stmt 1 view .LVU279
- 944 0068 DFED347A 		vldr.32	s15, .L70+28
- 945 006c B4EEE70A 		vcmpe.f32	s0, s15
- 946 0070 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 28
-
-
- 947 0074 0CD4     		bmi	.L69
- 217:DelayMulti.cpp ****     {
- 218:DelayMulti.cpp ****         retVal = (1.0f / 2.0f);
+ 935 005e B5EE000B 		vmov.f64	d0, #2.5e-1
+ 936              	.LVL65:
+ 208:DelayMulti.cpp ****     }
+ 937              		.loc 1 208 14 view .LVU277
+ 938 0062 80F81931 		strb	r3, [r0, #281]
+ 939 0066 7047     		bx	lr
+ 940              	.LVL66:
+ 941              	.L61:
+ 215:DelayMulti.cpp ****     }
+ 216:DelayMulti.cpp **** 
+ 217:DelayMulti.cpp ****     else if (potValue < 0.4545f)
+ 942              		.loc 1 217 10 is_stmt 1 view .LVU278
+ 943 0068 DFED377A 		vldr.32	s15, .L70+40
+ 944 006c B4EEE70A 		vcmpe.f32	s0, s15
+ 945 0070 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 946 0074 0CD4     		bmi	.L69
+ 218:DelayMulti.cpp ****     {
+ 219:DelayMulti.cpp ****         retVal = (1.0 / 2.0);
+ 220:DelayMulti.cpp ****         div_ = DIV2;
+ 221:DelayMulti.cpp ****     }
+ 222:DelayMulti.cpp **** 
+ 223:DelayMulti.cpp ****     else if (potValue <  0.5455f)
+ 947              		.loc 1 223 10 view .LVU279
+ 948 0076 DFED357A 		vldr.32	s15, .L70+44
+ 949 007a B4EEE70A 		vcmpe.f32	s0, s15
+ 950 007e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 951 0082 0BD5     		bpl	.L63
+ 952              	.L46:
+ 224:DelayMulti.cpp ****     {
+ 225:DelayMulti.cpp ****         retVal = 1.0;
+ 953              		.loc 1 225 9 view .LVU280
+ 954              	.LVL67:
+ 226:DelayMulti.cpp ****         div_ = UNITY;
+ 955              		.loc 1 226 9 view .LVU281
+ 956              		.loc 1 226 14 is_stmt 0 view .LVU282
+ 957 0084 0523     		movs	r3, #5
+ 958 0086 B7EE000B 		vmov.f64	d0, #1.0e+0
+ 959              	.LVL68:
+ 960              		.loc 1 226 14 view .LVU283
+ 961 008a 80F81931 		strb	r3, [r0, #281]
+ 962 008e 7047     		bx	lr
+ 963              	.LVL69:
+ 964              	.L69:
  219:DelayMulti.cpp ****         div_ = DIV2;
+ 965              		.loc 1 219 9 is_stmt 1 view .LVU284
  220:DelayMulti.cpp ****     }
- 221:DelayMulti.cpp **** 
- 222:DelayMulti.cpp ****     else if (potValue <  0.5455f)
- 948              		.loc 1 222 10 view .LVU280
- 949 0076 DFED327A 		vldr.32	s15, .L70+32
- 950 007a B4EEE70A 		vcmpe.f32	s0, s15
- 951 007e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 952 0082 0BD5     		bpl	.L63
- 953              	.L46:
- 223:DelayMulti.cpp ****     {
- 224:DelayMulti.cpp ****         retVal = (1.0f);
- 954              		.loc 1 224 9 view .LVU281
- 955              	.LVL67:
- 225:DelayMulti.cpp ****         div_ = UNITY;
- 956              		.loc 1 225 9 view .LVU282
- 957              		.loc 1 225 14 is_stmt 0 view .LVU283
- 958 0084 0523     		movs	r3, #5
- 224:DelayMulti.cpp ****         div_ = UNITY;
- 959              		.loc 1 224 16 view .LVU284
- 960 0086 B7EE000A 		vmov.f32	s0, #1.0e+0
- 961              	.LVL68:
- 962              		.loc 1 225 14 view .LVU285
- 963 008a 80F81D31 		strb	r3, [r0, #285]
- 964 008e 7047     		bx	lr
- 965              	.LVL69:
- 966              	.L69:
- 218:DelayMulti.cpp ****         div_ = DIV2;
- 967              		.loc 1 218 9 is_stmt 1 view .LVU286
- 219:DelayMulti.cpp ****     }
- 968              		.loc 1 219 9 view .LVU287
- 219:DelayMulti.cpp ****     }
- 969              		.loc 1 219 14 is_stmt 0 view .LVU288
- 970 0090 0423     		movs	r3, #4
- 218:DelayMulti.cpp ****         div_ = DIV2;
- 971              		.loc 1 218 16 view .LVU289
- 972 0092 B6EE000A 		vmov.f32	s0, #5.0e-1
- 973              	.LVL70:
- 219:DelayMulti.cpp ****     }
- 974              		.loc 1 219 14 view .LVU290
- 975 0096 80F81D31 		strb	r3, [r0, #285]
- 976 009a 7047     		bx	lr
- 977              	.LVL71:
- 978              	.L63:
- 226:DelayMulti.cpp ****     }
- 227:DelayMulti.cpp **** 
- 228:DelayMulti.cpp ****     else if (potValue < 0.6364f)
- 979              		.loc 1 228 10 is_stmt 1 view .LVU291
- 980 009c DFED297A 		vldr.32	s15, .L70+36
- 981 00a0 B4EEE70A 		vcmpe.f32	s0, s15
- 982 00a4 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 983 00a8 05D5     		bpl	.L64
- 229:DelayMulti.cpp ****     {
- 230:DelayMulti.cpp ****         retVal = 2.0f;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 29
+ 966              		.loc 1 220 9 view .LVU285
+ 220:DelayMulti.cpp ****     }
+ 967              		.loc 1 220 14 is_stmt 0 view .LVU286
+ 968 0090 0423     		movs	r3, #4
+ 969 0092 B6EE000B 		vmov.f64	d0, #5.0e-1
+ 970              	.LVL70:
+ 220:DelayMulti.cpp ****     }
+ 971              		.loc 1 220 14 view .LVU287
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 29
 
 
- 984              		.loc 1 230 9 view .LVU292
- 985              	.LVL72:
- 231:DelayMulti.cpp ****         div_ = MULT2;
- 986              		.loc 1 231 9 view .LVU293
- 987              		.loc 1 231 14 is_stmt 0 view .LVU294
- 988 00aa 0623     		movs	r3, #6
- 230:DelayMulti.cpp ****         div_ = MULT2;
- 989              		.loc 1 230 16 view .LVU295
- 990 00ac B0EE000A 		vmov.f32	s0, #2.0e+0
- 991              	.LVL73:
- 992              		.loc 1 231 14 view .LVU296
- 993 00b0 80F81D31 		strb	r3, [r0, #285]
- 994 00b4 7047     		bx	lr
- 995              	.LVL74:
- 996              	.L64:
- 232:DelayMulti.cpp ****     }
- 233:DelayMulti.cpp **** 
- 234:DelayMulti.cpp ****     else if (potValue < 0.7273f)
- 997              		.loc 1 234 10 is_stmt 1 view .LVU297
- 998 00b6 DFED247A 		vldr.32	s15, .L70+40
- 999 00ba B4EEE70A 		vcmpe.f32	s0, s15
- 1000 00be F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 1001 00c2 05D5     		bpl	.L65
- 235:DelayMulti.cpp ****     {
- 236:DelayMulti.cpp ****         retVal = 3.0f;
- 1002              		.loc 1 236 9 view .LVU298
- 1003              	.LVL75:
- 237:DelayMulti.cpp ****         div_ = MULT3;
- 1004              		.loc 1 237 9 view .LVU299
- 1005              		.loc 1 237 14 is_stmt 0 view .LVU300
- 1006 00c4 0723     		movs	r3, #7
- 236:DelayMulti.cpp ****         div_ = MULT3;
- 1007              		.loc 1 236 16 view .LVU301
- 1008 00c6 B0EE080A 		vmov.f32	s0, #3.0e+0
- 1009              	.LVL76:
- 1010              		.loc 1 237 14 view .LVU302
- 1011 00ca 80F81D31 		strb	r3, [r0, #285]
- 1012 00ce 7047     		bx	lr
- 1013              	.LVL77:
- 1014              	.L65:
- 238:DelayMulti.cpp ****     }
- 239:DelayMulti.cpp **** 
- 240:DelayMulti.cpp ****     else if (potValue < 0.8182f)
- 1015              		.loc 1 240 10 is_stmt 1 view .LVU303
- 1016 00d0 DFED1E7A 		vldr.32	s15, .L70+44
- 1017 00d4 B4EEE70A 		vcmpe.f32	s0, s15
- 1018 00d8 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 1019 00dc 05D5     		bpl	.L66
- 241:DelayMulti.cpp ****     {
- 242:DelayMulti.cpp ****         retVal = 4.0f;
- 1020              		.loc 1 242 9 view .LVU304
- 1021              	.LVL78:
- 243:DelayMulti.cpp ****         div_ = MULT4;
- 1022              		.loc 1 243 9 view .LVU305
- 1023              		.loc 1 243 14 is_stmt 0 view .LVU306
- 1024 00de 0823     		movs	r3, #8
- 242:DelayMulti.cpp ****         div_ = MULT4;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 30
+ 972 0096 80F81931 		strb	r3, [r0, #281]
+ 973 009a 7047     		bx	lr
+ 974              	.LVL71:
+ 975              	.L63:
+ 227:DelayMulti.cpp ****     }
+ 228:DelayMulti.cpp **** 
+ 229:DelayMulti.cpp ****     else if (potValue < 0.6364f)
+ 976              		.loc 1 229 10 is_stmt 1 view .LVU288
+ 977 009c DFED2C7A 		vldr.32	s15, .L70+48
+ 978 00a0 B4EEE70A 		vcmpe.f32	s0, s15
+ 979 00a4 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 980 00a8 05D5     		bpl	.L64
+ 230:DelayMulti.cpp ****     {
+ 231:DelayMulti.cpp ****         retVal = 2.0;
+ 981              		.loc 1 231 9 view .LVU289
+ 982              	.LVL72:
+ 232:DelayMulti.cpp ****         div_ = MULT2;
+ 983              		.loc 1 232 9 view .LVU290
+ 984              		.loc 1 232 14 is_stmt 0 view .LVU291
+ 985 00aa 0623     		movs	r3, #6
+ 986 00ac B0EE000B 		vmov.f64	d0, #2.0e+0
+ 987              	.LVL73:
+ 988              		.loc 1 232 14 view .LVU292
+ 989 00b0 80F81931 		strb	r3, [r0, #281]
+ 990 00b4 7047     		bx	lr
+ 991              	.LVL74:
+ 992              	.L64:
+ 233:DelayMulti.cpp ****     }
+ 234:DelayMulti.cpp **** 
+ 235:DelayMulti.cpp ****     else if (potValue < 0.7273f)
+ 993              		.loc 1 235 10 is_stmt 1 view .LVU293
+ 994 00b6 DFED277A 		vldr.32	s15, .L70+52
+ 995 00ba B4EEE70A 		vcmpe.f32	s0, s15
+ 996 00be F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 997 00c2 05D5     		bpl	.L65
+ 236:DelayMulti.cpp ****     {
+ 237:DelayMulti.cpp ****         retVal = 3.0;
+ 998              		.loc 1 237 9 view .LVU294
+ 999              	.LVL75:
+ 238:DelayMulti.cpp ****         div_ = MULT3;
+ 1000              		.loc 1 238 9 view .LVU295
+ 1001              		.loc 1 238 14 is_stmt 0 view .LVU296
+ 1002 00c4 0723     		movs	r3, #7
+ 1003 00c6 B0EE080B 		vmov.f64	d0, #3.0e+0
+ 1004              	.LVL76:
+ 1005              		.loc 1 238 14 view .LVU297
+ 1006 00ca 80F81931 		strb	r3, [r0, #281]
+ 1007 00ce 7047     		bx	lr
+ 1008              	.LVL77:
+ 1009              	.L65:
+ 239:DelayMulti.cpp ****     }
+ 240:DelayMulti.cpp **** 
+ 241:DelayMulti.cpp ****     else if (potValue < 0.8182f)
+ 1010              		.loc 1 241 10 is_stmt 1 view .LVU298
+ 1011 00d0 DFED217A 		vldr.32	s15, .L70+56
+ 1012 00d4 B4EEE70A 		vcmpe.f32	s0, s15
+ 1013 00d8 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 30
 
 
- 1025              		.loc 1 242 16 view .LVU307
- 1026 00e0 B1EE000A 		vmov.f32	s0, #4.0e+0
- 1027              	.LVL79:
- 1028              		.loc 1 243 14 view .LVU308
- 1029 00e4 80F81D31 		strb	r3, [r0, #285]
- 1030 00e8 7047     		bx	lr
- 1031              	.LVL80:
- 1032              	.L66:
- 1033              	.LBB230:
- 1034              	.LBI230:
- 188:DelayMulti.cpp **** {
- 1035              		.loc 1 188 7 is_stmt 1 view .LVU309
- 1036              	.LBB231:
- 244:DelayMulti.cpp ****     }
- 245:DelayMulti.cpp ****     
- 246:DelayMulti.cpp ****     else if (potValue < 0.9091f)
- 1037              		.loc 1 246 10 view .LVU310
- 1038 00ea DFED197A 		vldr.32	s15, .L70+48
- 1039 00ee B4EEE70A 		vcmpe.f32	s0, s15
- 1040 00f2 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 1041 00f6 05D5     		bpl	.L67
- 247:DelayMulti.cpp ****     {
- 248:DelayMulti.cpp ****         retVal = 5.0f;
- 1042              		.loc 1 248 9 view .LVU311
- 1043              	.LVL81:
- 249:DelayMulti.cpp ****         div_ = MULT5;
- 1044              		.loc 1 249 9 view .LVU312
- 1045              		.loc 1 249 14 is_stmt 0 view .LVU313
- 1046 00f8 0923     		movs	r3, #9
- 248:DelayMulti.cpp ****         div_ = MULT5;
- 1047              		.loc 1 248 16 view .LVU314
- 1048 00fa B1EE040A 		vmov.f32	s0, #5.0e+0
- 1049              	.LVL82:
- 1050              		.loc 1 249 14 view .LVU315
- 1051 00fe 80F81D31 		strb	r3, [r0, #285]
- 1052 0102 7047     		bx	lr
- 1053              	.LVL83:
- 1054              	.L67:
- 250:DelayMulti.cpp ****     }
- 251:DelayMulti.cpp **** 
- 252:DelayMulti.cpp ****     else if (potValue <= 1.0f)
- 1055              		.loc 1 252 10 is_stmt 1 view .LVU316
- 1056 0104 F7EE007A 		vmov.f32	s15, #1.0e+0
- 1057 0108 B4EEE70A 		vcmpe.f32	s0, s15
- 1058 010c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 1059 0110 B8D8     		bhi	.L46
- 253:DelayMulti.cpp ****     {
- 254:DelayMulti.cpp ****        retVal = 6.0f; 
- 1060              		.loc 1 254 8 view .LVU317
- 1061              	.LVL84:
- 255:DelayMulti.cpp ****        div_ = MULT6;
- 1062              		.loc 1 255 8 view .LVU318
- 1063              		.loc 1 255 13 is_stmt 0 view .LVU319
- 1064 0112 0A23     		movs	r3, #10
- 254:DelayMulti.cpp ****        div_ = MULT6;
- 1065              		.loc 1 254 15 view .LVU320
- 1066 0114 B1EE080A 		vmov.f32	s0, #6.0e+0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 31
+ 1014 00dc 05D5     		bpl	.L66
+ 242:DelayMulti.cpp ****     {
+ 243:DelayMulti.cpp ****         retVal = 4.0;
+ 1015              		.loc 1 243 9 view .LVU299
+ 1016              	.LVL78:
+ 244:DelayMulti.cpp ****         div_ = MULT4;
+ 1017              		.loc 1 244 9 view .LVU300
+ 1018              		.loc 1 244 14 is_stmt 0 view .LVU301
+ 1019 00de 0823     		movs	r3, #8
+ 1020 00e0 B1EE000B 		vmov.f64	d0, #4.0e+0
+ 1021              	.LVL79:
+ 1022              		.loc 1 244 14 view .LVU302
+ 1023 00e4 80F81931 		strb	r3, [r0, #281]
+ 1024 00e8 7047     		bx	lr
+ 1025              	.LVL80:
+ 1026              	.L66:
+ 245:DelayMulti.cpp ****     }
+ 246:DelayMulti.cpp ****     
+ 247:DelayMulti.cpp ****     else if (potValue < 0.9091f)
+ 1027              		.loc 1 247 10 is_stmt 1 view .LVU303
+ 1028 00ea DFED1C7A 		vldr.32	s15, .L70+60
+ 1029 00ee B4EEE70A 		vcmpe.f32	s0, s15
+ 1030 00f2 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1031 00f6 05D5     		bpl	.L67
+ 248:DelayMulti.cpp ****     {
+ 249:DelayMulti.cpp ****         retVal = 5.0;
+ 1032              		.loc 1 249 9 view .LVU304
+ 1033              	.LVL81:
+ 250:DelayMulti.cpp ****         div_ = MULT5;
+ 1034              		.loc 1 250 9 view .LVU305
+ 1035              		.loc 1 250 14 is_stmt 0 view .LVU306
+ 1036 00f8 0923     		movs	r3, #9
+ 1037 00fa B1EE040B 		vmov.f64	d0, #5.0e+0
+ 1038              	.LVL82:
+ 1039              		.loc 1 250 14 view .LVU307
+ 1040 00fe 80F81931 		strb	r3, [r0, #281]
+ 1041 0102 7047     		bx	lr
+ 1042              	.LVL83:
+ 1043              	.L67:
+ 251:DelayMulti.cpp ****     }
+ 252:DelayMulti.cpp **** 
+ 253:DelayMulti.cpp ****     else if (potValue <= 1.0f)
+ 1044              		.loc 1 253 10 is_stmt 1 view .LVU308
+ 1045 0104 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 1046 0108 B4EEE70A 		vcmpe.f32	s0, s15
+ 1047 010c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1048 0110 B8D8     		bhi	.L46
+ 254:DelayMulti.cpp ****     {
+ 255:DelayMulti.cpp ****        retVal = 6.0; 
+ 1049              		.loc 1 255 8 view .LVU309
+ 1050              	.LVL84:
+ 256:DelayMulti.cpp ****        div_ = MULT6;
+ 1051              		.loc 1 256 8 view .LVU310
+ 1052              		.loc 1 256 13 is_stmt 0 view .LVU311
+ 1053 0112 0A23     		movs	r3, #10
+ 1054 0114 B1EE080B 		vmov.f64	d0, #6.0e+0
+ 1055              	.LVL85:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 31
 
 
- 1067              	.LVL85:
- 254:DelayMulti.cpp ****        div_ = MULT6;
- 1068              		.loc 1 254 15 view .LVU321
- 1069              	.LBE231:
- 1070              	.LBE230:
- 256:DelayMulti.cpp ****     }
- 257:DelayMulti.cpp ****     else
- 258:DelayMulti.cpp ****     {
- 259:DelayMulti.cpp ****         retVal = 1.0f; 
- 260:DelayMulti.cpp ****        div_ = UNITY;
- 261:DelayMulti.cpp ****     }
- 262:DelayMulti.cpp **** 
- 263:DelayMulti.cpp **** return retVal;
- 1071              		.loc 1 263 1 is_stmt 1 view .LVU322
- 1072              	.LBB233:
- 1073              	.LBB232:
- 255:DelayMulti.cpp ****     }
- 1074              		.loc 1 255 13 is_stmt 0 view .LVU323
- 1075 0118 80F81D31 		strb	r3, [r0, #285]
- 1076              	.LBE232:
- 1077              	.LBE233:
- 264:DelayMulti.cpp **** }
- 1078              		.loc 1 264 1 view .LVU324
- 1079 011c 7047     		bx	lr
- 1080              	.L71:
- 1081 011e 00BF     		.align	2
- 1082              	.L70:
- 1083 0120 C729BA3D 		.word	1035610567
- 1084 0124 ABAA2A3E 		.word	1042983595
- 1085 0128 C7293A3E 		.word	1043999175
- 1086 012c CDCC4C3E 		.word	1045220557
- 1087 0130 569F8B3E 		.word	1049337686
- 1088 0134 C729BA3E 		.word	1052387783
- 1089 0138 ABAAAA3E 		.word	1051372203
- 1090 013c 39B4E83E 		.word	1055437881
- 1091 0140 E3A50B3F 		.word	1057727971
- 1092 0144 1CEB223F 		.word	1059253020
- 1093 0148 55303A3F 		.word	1060778069
- 1094 014c 8E75513F 		.word	1062303118
- 1095 0150 C7BA683F 		.word	1063828167
- 1096              		.cfi_endproc
- 1097              	.LFE3970:
- 1099              		.section	.text._ZN10DelayMulti12SetDelayTimeEffb,"ax",%progbits
- 1100              		.align	1
- 1101              		.p2align 2,,3
- 1102              		.global	_ZN10DelayMulti12SetDelayTimeEffb
- 1103              		.syntax unified
- 1104              		.thumb
- 1105              		.thumb_func
- 1106              		.fpu fpv5-d16
- 1108              	_ZN10DelayMulti12SetDelayTimeEffb:
- 1109              	.LVL86:
- 1110              	.LFB3966:
+ 257:DelayMulti.cpp ****     }
+ 258:DelayMulti.cpp ****     else
+ 259:DelayMulti.cpp ****     {
+ 260:DelayMulti.cpp ****         retVal = 1.0; 
+ 261:DelayMulti.cpp ****        div_ = UNITY;
+ 262:DelayMulti.cpp ****     }
+ 263:DelayMulti.cpp **** 
+ 264:DelayMulti.cpp **** return retVal;
+ 1056              		.loc 1 264 1 is_stmt 1 view .LVU312
+ 256:DelayMulti.cpp ****        div_ = MULT6;
+ 1057              		.loc 1 256 13 is_stmt 0 view .LVU313
+ 1058 0118 80F81931 		strb	r3, [r0, #281]
+ 265:DelayMulti.cpp **** }
+ 1059              		.loc 1 265 1 view .LVU314
+ 1060 011c 7047     		bx	lr
+ 1061              	.L71:
+ 1062 011e 00BF     		.align	3
+ 1063              	.L70:
+ 1064 0120 00000060 		.word	1610612736
+ 1065 0124 5555C53F 		.word	1069897045
+ 1066 0128 000000A0 		.word	2684354560
+ 1067 012c 9999C93F 		.word	1070176665
+ 1068 0130 00000060 		.word	1610612736
+ 1069 0134 5555D53F 		.word	1070945621
+ 1070 0138 C729BA3D 		.word	1035610567
+ 1071 013c C7293A3E 		.word	1043999175
+ 1072 0140 569F8B3E 		.word	1049337686
+ 1073 0144 C729BA3E 		.word	1052387783
+ 1074 0148 39B4E83E 		.word	1055437881
+ 1075 014c E3A50B3F 		.word	1057727971
+ 1076 0150 1CEB223F 		.word	1059253020
+ 1077 0154 55303A3F 		.word	1060778069
+ 1078 0158 8E75513F 		.word	1062303118
+ 1079 015c C7BA683F 		.word	1063828167
+ 1080              		.cfi_endproc
+ 1081              	.LFE3971:
+ 1083              		.section	.text._ZN10DelayMulti12SetDelayTimeEfb,"ax",%progbits
+ 1084              		.align	1
+ 1085              		.p2align 2,,3
+ 1086              		.global	_ZN10DelayMulti12SetDelayTimeEfb
+ 1087              		.syntax unified
+ 1088              		.thumb
+ 1089              		.thumb_func
+ 1090              		.fpu fpv5-d16
+ 1092              	_ZN10DelayMulti12SetDelayTimeEfb:
+ 1093              	.LVL86:
+ 1094              	.LFB3967:
   68:DelayMulti.cpp **** 
- 1111              		.loc 1 68 1 is_stmt 1 view -0
- 1112              		.cfi_startproc
- 1113              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 32
-
-
- 1114              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1095              		.loc 1 68 1 is_stmt 1 view -0
+ 1096              		.cfi_startproc
+ 1097              		@ args = 0, pretend = 0, frame = 0
+ 1098              		@ frame_needed = 0, uses_anonymous_args = 0
   70:DelayMulti.cpp **** 
- 1115              		.loc 1 70 1 view .LVU326
+ 1099              		.loc 1 70 1 view .LVU316
   72:DelayMulti.cpp **** {
- 1116              		.loc 1 72 1 view .LVU327
+ 1100              		.loc 1 72 1 view .LVU317
   68:DelayMulti.cpp **** 
- 1117              		.loc 1 68 1 is_stmt 0 view .LVU328
- 1118 0000 38B5     		push	{r3, r4, r5, lr}
- 1119              		.cfi_def_cfa_offset 16
- 1120              		.cfi_offset 3, -16
- 1121              		.cfi_offset 4, -12
- 1122              		.cfi_offset 5, -8
- 1123              		.cfi_offset 14, -4
- 1124 0002 0446     		mov	r4, r0
- 1125 0004 2DED028B 		vpush.64	{d8}
- 1126              		.cfi_def_cfa_offset 24
- 1127              		.cfi_offset 80, -24
- 1128              		.cfi_offset 81, -20
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 32
+
+
+ 1101              		.loc 1 68 1 is_stmt 0 view .LVU318
+ 1102 0000 38B5     		push	{r3, r4, r5, lr}
+ 1103              		.cfi_def_cfa_offset 16
+ 1104              		.cfi_offset 3, -16
+ 1105              		.cfi_offset 4, -12
+ 1106              		.cfi_offset 5, -8
+ 1107              		.cfi_offset 14, -4
+ 1108 0002 0446     		mov	r4, r0
+ 1109 0004 2DED028B 		vpush.64	{d8}
+ 1110              		.cfi_def_cfa_offset 24
+ 1111              		.cfi_offset 80, -24
+ 1112              		.cfi_offset 81, -20
   72:DelayMulti.cpp **** {
- 1129              		.loc 1 72 1 view .LVU329
- 1130 0008 0029     		cmp	r1, #0
- 1131 000a 47D0     		beq	.L73
-  74:DelayMulti.cpp **** }
- 1132              		.loc 1 74 5 is_stmt 1 view .LVU330
-  74:DelayMulti.cpp **** }
- 1133              		.loc 1 74 23 is_stmt 0 view .LVU331
- 1134 000c FFF7FEFF 		bl	_ZN10DelayMulti6GetDivEf
- 1135              	.LVL87:
-  74:DelayMulti.cpp **** }
- 1136              		.loc 1 74 39 view .LVU332
- 1137 0010 60EE200A 		vmul.f32	s1, s0, s1
- 1138              	.LVL88:
-  74:DelayMulti.cpp **** }
- 1139              		.loc 1 74 15 view .LVU333
- 1140 0014 9FED3A8A 		vldr.32	s16, .L95
- 1141 0018 20EE888A 		vmul.f32	s16, s1, s16
- 1142              	.LVL89:
- 1143              	.L74:
-  83:DelayMulti.cpp **** {
- 1144              		.loc 1 83 1 is_stmt 1 view .LVU334
- 1145              	.LBB234:
-  83:DelayMulti.cpp **** {
- 1146              		.loc 1 83 21 is_stmt 0 view .LVU335
- 1147 001c D4ED3E7A 		vldr.32	s15, [r4, #248]
- 1148              	.LVL90:
- 1149              	.LBB235:
- 1150              	.LBI235:
- 1151              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/b
+ 1113              		.loc 1 72 1 view .LVU319
+ 1114 0008 0029     		cmp	r1, #0
+ 1115 000a 4DD0     		beq	.L73
+  75:DelayMulti.cpp **** }
+ 1116              		.loc 1 75 5 is_stmt 1 view .LVU320
+  75:DelayMulti.cpp **** }
+ 1117              		.loc 1 75 23 is_stmt 0 view .LVU321
+ 1118 000c FFF7FEFF 		bl	_ZN10DelayMulti6GetDivEf
+ 1119              	.LVL87:
+  75:DelayMulti.cpp **** }
+ 1120              		.loc 1 75 39 view .LVU322
+ 1121 0010 90ED487B 		vldr.64	d7, [r0, #288]
+  75:DelayMulti.cpp **** }
+ 1122              		.loc 1 75 15 view .LVU323
+ 1123 0014 9FED3E8B 		vldr.64	d8, .L95
+  75:DelayMulti.cpp **** }
+ 1124              		.loc 1 75 39 view .LVU324
+ 1125 0018 20EE070B 		vmul.f64	d0, d0, d7
+  75:DelayMulti.cpp **** }
+ 1126              		.loc 1 75 15 view .LVU325
+ 1127 001c 20EE088B 		vmul.f64	d8, d0, d8
+ 1128              	.LVL88:
+ 1129              	.L74:
+  84:DelayMulti.cpp **** {
+ 1130              		.loc 1 84 1 is_stmt 1 view .LVU326
+ 1131              	.LBB226:
+  84:DelayMulti.cpp **** {
+ 1132              		.loc 1 84 22 is_stmt 0 view .LVU327
+ 1133 0020 94ED4A7B 		vldr.64	d7, [r4, #296]
+ 1134              	.LVL89:
+ 1135              	.LBB227:
+ 1136              	.LBI227:
+ 1137              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/b
    1:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // -*- C++ -*- C library enhancements header.
    2:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
    3:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // Copyright (C) 2016-2019 Free Software Foundation, Inc.
@@ -1918,11 +1916,11 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
    7:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // terms of the GNU General Public License as published by the
    8:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // Free Software Foundation; either version 3, or (at your option)
    9:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // any later version.
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 33
-
-
   10:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
   11:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // This library is distributed in the hope that it will be useful,
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 33
+
+
   12:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
   13:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
   14:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // GNU General Public License for more details.
@@ -1978,478 +1976,487 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 1
   64:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // _GLIBCXX_RESOLVE_LIB_DEFECTS
   65:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // 2192. Validity and return type of std::abs(0u) is unclear
   66:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // 2294. <cstdlib> should declare abs(double)
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 34
-
-
   67:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // 2735. std::abs(short), std::abs(signed char) and others should return int
   68:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 34
+
+
   69:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
   70:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   inline _GLIBCXX_CONSTEXPR double
   71:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   abs(double __x)
+ 1138              		.loc 5 71 3 is_stmt 1 view .LVU328
+ 1139              	.LBB228:
   72:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   { return __builtin_fabs(__x); }
-  73:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
-  74:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   inline _GLIBCXX_CONSTEXPR float
-  75:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   abs(float __x)
- 1152              		.loc 5 75 3 is_stmt 1 view .LVU336
- 1153              	.LBB236:
-  76:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   { return __builtin_fabsf(__x); }
- 1154              		.loc 5 76 5 view .LVU337
- 1155              		.loc 5 76 5 is_stmt 0 view .LVU338
- 1156              	.LBE236:
- 1157              	.LBE235:
-  83:DelayMulti.cpp **** {
- 1158              		.loc 1 83 42 view .LVU339
- 1159 0020 DFED386A 		vldr.32	s13, .L95+4
-  83:DelayMulti.cpp **** {
- 1160              		.loc 1 83 8 view .LVU340
- 1161 0024 38EE677A 		vsub.f32	s14, s16, s15
-  83:DelayMulti.cpp **** {
- 1162              		.loc 1 83 42 view .LVU341
- 1163 0028 67EEA67A 		vmul.f32	s15, s15, s13
- 1164              	.LBB238:
- 1165              	.LBB237:
- 1166              		.loc 5 76 31 view .LVU342
- 1167 002c B0EEC77A 		vabs.f32	s14, s14
- 1168              	.LBE237:
- 1169              	.LBE238:
-  83:DelayMulti.cpp **** {
- 1170              		.loc 1 83 1 view .LVU343
- 1171 0030 F4EEC77A 		vcmpe.f32	s15, s14
- 1172 0034 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
- 1173 0038 4ED4     		bmi	.L91
-  83:DelayMulti.cpp **** {
- 1174              		.loc 1 83 1 view .LVU344
- 1175              	.LBE234:
-  94:DelayMulti.cpp ****     {
- 1176              		.loc 1 94 5 is_stmt 1 view .LVU345
- 1177              	.LBB255:
- 1178              	.LBB239:
- 1179 003a 94F81C31 		ldrb	r3, [r4, #284]	@ zero_extendqisi2
- 1180 003e BBBB     		cbnz	r3, .L92
- 1181              	.LBE239:
- 1182              	.LBE255:
- 119:DelayMulti.cpp ****     {
- 1183              		.loc 1 119 5 view .LVU346
- 1184              	.LBB256:
- 1185              	.LBB246:
- 119:DelayMulti.cpp ****     {
- 1186              		.loc 1 119 24 is_stmt 0 view .LVU347
- 1187 0040 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
- 1188              	.LVL91:
- 119:DelayMulti.cpp ****     {
- 1189              		.loc 1 119 27 view .LVU348
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 35
+ 1140              		.loc 5 72 5 view .LVU329
+ 1141              		.loc 5 72 5 is_stmt 0 view .LVU330
+ 1142              	.LBE228:
+ 1143              	.LBE227:
+  84:DelayMulti.cpp **** {
+ 1144              		.loc 1 84 42 view .LVU331
+ 1145 0024 9FED3C5B 		vldr.64	d5, .L95+8
+  84:DelayMulti.cpp **** {
+ 1146              		.loc 1 84 8 view .LVU332
+ 1147 0028 38EE476B 		vsub.f64	d6, d8, d7
+  84:DelayMulti.cpp **** {
+ 1148              		.loc 1 84 42 view .LVU333
+ 1149 002c 27EE057B 		vmul.f64	d7, d7, d5
+ 1150              	.LBB230:
+ 1151              	.LBB229:
+ 1152              		.loc 5 72 30 view .LVU334
+ 1153 0030 B0EEC66B 		vabs.f64	d6, d6
+ 1154              	.LBE229:
+ 1155              	.LBE230:
+  84:DelayMulti.cpp **** {
+ 1156              		.loc 1 84 1 view .LVU335
+ 1157 0034 B4EEC67B 		vcmpe.f64	d7, d6
+ 1158 0038 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1159 003c 54D4     		bmi	.L91
+  84:DelayMulti.cpp **** {
+ 1160              		.loc 1 84 1 view .LVU336
+ 1161              	.LBE226:
+  95:DelayMulti.cpp ****     {
+ 1162              		.loc 1 95 5 is_stmt 1 view .LVU337
+ 1163              	.LBB248:
+ 1164              	.LBB231:
+ 1165 003e 94F81831 		ldrb	r3, [r4, #280]	@ zero_extendqisi2
+ 1166 0042 DBBB     		cbnz	r3, .L92
+ 1167              	.LBE231:
+ 1168              	.LBE248:
+ 120:DelayMulti.cpp ****     {
+ 1169              		.loc 1 120 5 view .LVU338
+ 1170              	.LBB249:
+ 1171              	.LBB239:
+ 120:DelayMulti.cpp ****     {
+ 1172              		.loc 1 120 24 is_stmt 0 view .LVU339
+ 1173 0044 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
+ 1174              	.LVL90:
+ 120:DelayMulti.cpp ****     {
+ 1175              		.loc 1 120 27 view .LVU340
+ 1176 0048 D4F8FC30 		ldr	r3, [r4, #252]
+ 1177 004c C01A     		subs	r0, r0, r3
+ 120:DelayMulti.cpp ****     {
+ 1178              		.loc 1 120 50 view .LVU341
+ 1179 004e 1928     		cmp	r0, #25
+ 1180 0050 45D9     		bls	.L81
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 35
 
 
- 1190 0044 D4F80031 		ldr	r3, [r4, #256]
- 1191 0048 C01A     		subs	r0, r0, r3
- 119:DelayMulti.cpp ****     {
- 1192              		.loc 1 119 50 view .LVU349
- 1193 004a 1928     		cmp	r0, #25
- 1194 004c 3FD9     		bls	.L81
- 1195              	.L94:
- 119:DelayMulti.cpp ****     {
- 1196              		.loc 1 119 53 discriminator 1 view .LVU350
- 1197 004e 94F80C51 		ldrb	r5, [r4, #268]	@ zero_extendqisi2
- 119:DelayMulti.cpp ****     {
- 1198              		.loc 1 119 50 discriminator 1 view .LVU351
- 1199 0052 FDB1     		cbz	r5, .L77
- 1200              	.LVL92:
- 1201              	.LBB247:
- 1202              	.LBB248:
- 122:DelayMulti.cpp ****             {
- 1203              		.loc 1 122 32 is_stmt 1 view .LVU352
- 124:DelayMulti.cpp ****             }
- 1204              		.loc 1 124 17 view .LVU353
- 122:DelayMulti.cpp ****             {
- 1205              		.loc 1 122 13 view .LVU354
- 122:DelayMulti.cpp ****             {
- 1206              		.loc 1 122 32 view .LVU355
- 124:DelayMulti.cpp ****             }
- 1207              		.loc 1 124 17 view .LVU356
- 124:DelayMulti.cpp ****             }
- 1208              		.loc 1 124 46 is_stmt 0 view .LVU357
- 1209 0054 B4F8CC30 		ldrh	r3, [r4, #204]
- 1210              	.LBE248:
- 128:DelayMulti.cpp **** 
- 1211              		.loc 1 128 28 view .LVU358
- 1212 0058 94F80421 		ldrb	r2, [r4, #260]	@ zero_extendqisi2
- 1213              	.LBB249:
- 124:DelayMulti.cpp ****             }
- 1214              		.loc 1 124 46 view .LVU359
- 1215 005c 83F48073 		eor	r3, r3, #256
- 1216              	.LBE249:
- 128:DelayMulti.cpp **** 
- 1217              		.loc 1 128 28 view .LVU360
- 1218 0060 82F00102 		eor	r2, r2, #1
- 1219              	.LBB250:
- 124:DelayMulti.cpp ****             }
- 1220              		.loc 1 124 46 view .LVU361
- 1221 0064 83F00103 		eor	r3, r3, #1
- 1222              	.LBE250:
- 128:DelayMulti.cpp **** 
- 1223              		.loc 1 128 26 view .LVU362
- 1224 0068 84F80421 		strb	r2, [r4, #260]
- 1225              	.LBB251:
- 124:DelayMulti.cpp ****             }
- 1226              		.loc 1 124 31 view .LVU363
- 1227 006c A4F8CC30 		strh	r3, [r4, #204]	@ movhi
- 122:DelayMulti.cpp ****             {
- 1228              		.loc 1 122 13 is_stmt 1 view .LVU364
- 1229              	.LVL93:
- 122:DelayMulti.cpp ****             {
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 36
+ 1181              	.L94:
+ 120:DelayMulti.cpp ****     {
+ 1182              		.loc 1 120 53 discriminator 1 view .LVU342
+ 1183 0052 94F80851 		ldrb	r5, [r4, #264]	@ zero_extendqisi2
+ 120:DelayMulti.cpp ****     {
+ 1184              		.loc 1 120 50 discriminator 1 view .LVU343
+ 1185 0056 1DB3     		cbz	r5, .L77
+ 1186              	.LVL91:
+ 1187              	.LBB240:
+ 1188              	.LBB241:
+ 123:DelayMulti.cpp ****             {
+ 1189              		.loc 1 123 32 is_stmt 1 view .LVU344
+ 125:DelayMulti.cpp ****             }
+ 1190              		.loc 1 125 17 view .LVU345
+ 123:DelayMulti.cpp ****             {
+ 1191              		.loc 1 123 13 view .LVU346
+ 123:DelayMulti.cpp ****             {
+ 1192              		.loc 1 123 32 view .LVU347
+ 125:DelayMulti.cpp ****             }
+ 1193              		.loc 1 125 17 view .LVU348
+ 125:DelayMulti.cpp ****             }
+ 1194              		.loc 1 125 46 is_stmt 0 view .LVU349
+ 1195 0058 B4F8CC30 		ldrh	r3, [r4, #204]
+ 1196              	.LBE241:
+ 129:DelayMulti.cpp **** 
+ 1197              		.loc 1 129 28 view .LVU350
+ 1198 005c 94F80021 		ldrb	r2, [r4, #256]	@ zero_extendqisi2
+ 1199              	.LBB242:
+ 125:DelayMulti.cpp ****             }
+ 1200              		.loc 1 125 46 view .LVU351
+ 1201 0060 83F48073 		eor	r3, r3, #256
+ 1202              	.LBE242:
+ 129:DelayMulti.cpp **** 
+ 1203              		.loc 1 129 28 view .LVU352
+ 1204 0064 82F00102 		eor	r2, r2, #1
+ 1205              	.LBB243:
+ 125:DelayMulti.cpp ****             }
+ 1206              		.loc 1 125 46 view .LVU353
+ 1207 0068 83F00103 		eor	r3, r3, #1
+ 1208              	.LBE243:
+ 129:DelayMulti.cpp **** 
+ 1209              		.loc 1 129 26 view .LVU354
+ 1210 006c 84F80021 		strb	r2, [r4, #256]
+ 1211              	.LBB244:
+ 125:DelayMulti.cpp ****             }
+ 1212              		.loc 1 125 31 view .LVU355
+ 1213 0070 A4F8CC30 		strh	r3, [r4, #204]	@ movhi
+ 123:DelayMulti.cpp ****             {
+ 1214              		.loc 1 123 13 is_stmt 1 view .LVU356
+ 1215              	.LVL92:
+ 123:DelayMulti.cpp ****             {
+ 1216              		.loc 1 123 32 view .LVU357
+ 1217              	.LBE244:
+ 129:DelayMulti.cpp **** 
+ 1218              		.loc 1 129 9 view .LVU358
+ 131:DelayMulti.cpp ****         waiting_flag_ = false;  //reset wait flag
+ 1219              		.loc 1 131 9 view .LVU359
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 36
 
 
- 1230              		.loc 1 122 32 view .LVU365
- 1231              	.LBE251:
- 128:DelayMulti.cpp **** 
- 1232              		.loc 1 128 9 view .LVU366
- 130:DelayMulti.cpp ****         waiting_flag_ = false;  //reset wait flag
- 1233              		.loc 1 130 9 view .LVU367
- 130:DelayMulti.cpp ****         waiting_flag_ = false;  //reset wait flag
- 1234              		.loc 1 130 32 is_stmt 0 view .LVU368
- 1235 0070 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
- 1236              	.LVL94:
- 134:DelayMulti.cpp ****         return true;
- 1237              		.loc 1 134 45 view .LVU369
- 1238 0074 94ED447A 		vldr.32	s14, [r4, #272]
- 134:DelayMulti.cpp ****         return true;
- 1239              		.loc 1 134 26 view .LVU370
- 1240 0078 B7EE000A 		vmov.f32	s0, #1.0e+0
- 131:DelayMulti.cpp **** 
- 1241              		.loc 1 131 23 view .LVU371
- 1242 007c 0023     		movs	r3, #0
- 134:DelayMulti.cpp ****         return true;
- 1243              		.loc 1 134 45 view .LVU372
- 1244 007e C8EE077A 		vdiv.f32	s15, s16, s14
- 130:DelayMulti.cpp ****         waiting_flag_ = false;  //reset wait flag
- 1245              		.loc 1 130 16 view .LVU373
- 1246 0082 C4F80001 		str	r0, [r4, #256]
- 131:DelayMulti.cpp **** 
- 1247              		.loc 1 131 9 is_stmt 1 view .LVU374
- 131:DelayMulti.cpp **** 
- 1248              		.loc 1 131 23 is_stmt 0 view .LVU375
- 1249 0086 84F80C31 		strb	r3, [r4, #268]
- 134:DelayMulti.cpp ****         return true;
- 1250              		.loc 1 134 9 is_stmt 1 view .LVU376
- 134:DelayMulti.cpp ****         return true;
- 1251              		.loc 1 134 26 is_stmt 0 view .LVU377
- 1252 008a 201D     		adds	r0, r4, #4
- 1253 008c 80EE270A 		vdiv.f32	s0, s0, s15
- 1254 0090 FFF7FEFF 		bl	_ZN8TempoLED8setTempoEf
- 1255              	.LVL95:
- 135:DelayMulti.cpp ****     }
- 1256              		.loc 1 135 9 is_stmt 1 view .LVU378
- 1257              	.L77:
- 135:DelayMulti.cpp ****     }
- 1258              		.loc 1 135 9 is_stmt 0 view .LVU379
- 1259              	.LBE247:
- 1260              	.LBE246:
- 1261              	.LBE256:
- 143:DelayMulti.cpp **** 
- 1262              		.loc 1 143 1 view .LVU380
- 1263 0094 2846     		mov	r0, r5
- 1264 0096 BDEC028B 		vldm	sp!, {d8}
- 1265              		.cfi_remember_state
- 1266              		.cfi_restore 80
- 1267              		.cfi_restore 81
- 1268              		.cfi_def_cfa_offset 16
- 1269              	.LVL96:
- 143:DelayMulti.cpp **** 
- 1270              		.loc 1 143 1 view .LVU381
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 37
+ 131:DelayMulti.cpp ****         waiting_flag_ = false;  //reset wait flag
+ 1220              		.loc 1 131 32 is_stmt 0 view .LVU360
+ 1221 0074 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
+ 1222              	.LVL93:
+ 135:DelayMulti.cpp ****         return true;
+ 1223              		.loc 1 135 47 view .LVU361
+ 1224 0078 94ED437A 		vldr.32	s14, [r4, #268]
+ 135:DelayMulti.cpp ****         return true;
+ 1225              		.loc 1 135 32 view .LVU362
+ 1226 007c B7EE005B 		vmov.f64	d5, #1.0e+0
+ 132:DelayMulti.cpp **** 
+ 1227              		.loc 1 132 23 view .LVU363
+ 1228 0080 0023     		movs	r3, #0
+ 135:DelayMulti.cpp ****         return true;
+ 1229              		.loc 1 135 47 view .LVU364
+ 1230 0082 B7EEC77A 		vcvt.f64.f32	d7, s14
+ 131:DelayMulti.cpp ****         waiting_flag_ = false;  //reset wait flag
+ 1231              		.loc 1 131 16 view .LVU365
+ 1232 0086 C4F8FC00 		str	r0, [r4, #252]
+ 132:DelayMulti.cpp **** 
+ 1233              		.loc 1 132 9 is_stmt 1 view .LVU366
+ 132:DelayMulti.cpp **** 
+ 1234              		.loc 1 132 23 is_stmt 0 view .LVU367
+ 1235 008a 84F80831 		strb	r3, [r4, #264]
+ 135:DelayMulti.cpp ****         return true;
+ 1236              		.loc 1 135 9 is_stmt 1 view .LVU368
+ 135:DelayMulti.cpp ****         return true;
+ 1237              		.loc 1 135 26 is_stmt 0 view .LVU369
+ 1238 008e 201D     		adds	r0, r4, #4
+ 135:DelayMulti.cpp ****         return true;
+ 1239              		.loc 1 135 45 view .LVU370
+ 1240 0090 88EE076B 		vdiv.f64	d6, d8, d7
+ 135:DelayMulti.cpp ****         return true;
+ 1241              		.loc 1 135 32 view .LVU371
+ 1242 0094 85EE060B 		vdiv.f64	d0, d5, d6
+ 135:DelayMulti.cpp ****         return true;
+ 1243              		.loc 1 135 26 view .LVU372
+ 1244 0098 B7EEC00B 		vcvt.f32.f64	s0, d0
+ 1245 009c FFF7FEFF 		bl	_ZN8TempoLED8setTempoEf
+ 1246              	.LVL94:
+ 136:DelayMulti.cpp ****     }
+ 1247              		.loc 1 136 9 is_stmt 1 view .LVU373
+ 1248              	.L77:
+ 136:DelayMulti.cpp ****     }
+ 1249              		.loc 1 136 9 is_stmt 0 view .LVU374
+ 1250              	.LBE240:
+ 1251              	.LBE239:
+ 1252              	.LBE249:
+ 144:DelayMulti.cpp **** 
+ 1253              		.loc 1 144 1 view .LVU375
+ 1254 00a0 2846     		mov	r0, r5
+ 1255 00a2 BDEC028B 		vldm	sp!, {d8}
+ 1256              		.cfi_remember_state
+ 1257              		.cfi_restore 80
+ 1258              		.cfi_restore 81
+ 1259              		.cfi_def_cfa_offset 16
+ 1260              	.LVL95:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 37
 
 
- 1271 009a 38BD     		pop	{r3, r4, r5, pc}
- 1272              	.LVL97:
- 1273              	.L73:
- 1274              		.cfi_restore_state
-  79:DelayMulti.cpp **** }
- 1275              		.loc 1 79 5 is_stmt 1 view .LVU382
-  79:DelayMulti.cpp **** }
- 1276              		.loc 1 79 22 is_stmt 0 view .LVU383
- 1277 009c 0220     		movs	r0, #2
- 1278              	.LVL98:
-  79:DelayMulti.cpp **** }
- 1279              		.loc 1 79 22 view .LVU384
- 1280 009e 9FED1A1A 		vldr.32	s2, .L95+8
- 1281 00a2 DFED1A0A 		vldr.32	s1, .L95+12
- 1282              	.LVL99:
-  79:DelayMulti.cpp **** }
- 1283              		.loc 1 79 22 view .LVU385
- 1284 00a6 FFF7FEFF 		bl	_Z5scalefff9CurveType
- 1285              	.LVL100:
-  79:DelayMulti.cpp **** }
- 1286              		.loc 1 79 22 view .LVU386
- 1287 00aa B0EE408A 		vmov.f32	s16, s0
- 1288              	.LVL101:
-  79:DelayMulti.cpp **** }
- 1289              		.loc 1 79 22 view .LVU387
- 1290 00ae B5E7     		b	.L74
- 1291              	.LVL102:
- 1292              	.L92:
- 1293              	.LBB257:
- 1294              	.LBB252:
- 1295              	.LBB240:
-  98:DelayMulti.cpp ****     {
- 1296              		.loc 1 98 5 is_stmt 1 view .LVU388
- 1297              	.LBB241:
- 1298 00b0 94F80431 		ldrb	r3, [r4, #260]	@ zero_extendqisi2
- 1299 00b4 03BB     		cbnz	r3, .L93
- 1300              	.LVL103:
- 1301              	.LBB242:
- 108:DelayMulti.cpp ****         {
- 1302              		.loc 1 108 28 discriminator 3 view .LVU389
- 111:DelayMulti.cpp ****         }
- 1303              		.loc 1 111 13 discriminator 3 view .LVU390
- 111:DelayMulti.cpp ****         }
- 1304              		.loc 1 111 29 is_stmt 0 discriminator 3 view .LVU391
- 1305 00b6 84ED3A8A 		vstr.32	s16, [r4, #232]
- 108:DelayMulti.cpp ****         {
- 1306              		.loc 1 108 9 is_stmt 1 discriminator 3 view .LVU392
- 1307              	.LVL104:
- 108:DelayMulti.cpp ****         {
- 1308              		.loc 1 108 28 discriminator 3 view .LVU393
- 1309              	.L80:
- 108:DelayMulti.cpp ****         {
- 1310              		.loc 1 108 28 is_stmt 0 discriminator 3 view .LVU394
- 1311              	.LBE242:
- 1312              	.LBE241:
- 115:DelayMulti.cpp **** 
- 1313              		.loc 1 115 5 is_stmt 1 view .LVU395
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 38
+ 144:DelayMulti.cpp **** 
+ 1261              		.loc 1 144 1 view .LVU376
+ 1262 00a6 38BD     		pop	{r3, r4, r5, pc}
+ 1263              	.LVL96:
+ 1264              	.L73:
+ 1265              		.cfi_restore_state
+  80:DelayMulti.cpp **** }
+ 1266              		.loc 1 80 5 is_stmt 1 view .LVU377
+  80:DelayMulti.cpp **** }
+ 1267              		.loc 1 80 22 is_stmt 0 view .LVU378
+ 1268 00a8 0220     		movs	r0, #2
+ 1269              	.LVL97:
+  80:DelayMulti.cpp **** }
+ 1270              		.loc 1 80 22 view .LVU379
+ 1271 00aa 9FED1D1A 		vldr.32	s2, .L95+16
+ 1272 00ae DFED1D0A 		vldr.32	s1, .L95+20
+ 1273 00b2 FFF7FEFF 		bl	_Z5scalefff9CurveType
+ 1274              	.LVL98:
+  80:DelayMulti.cpp **** }
+ 1275              		.loc 1 80 15 view .LVU380
+ 1276 00b6 B7EEC08A 		vcvt.f64.f32	d8, s0
+ 1277              	.LVL99:
+  80:DelayMulti.cpp **** }
+ 1278              		.loc 1 80 15 view .LVU381
+ 1279 00ba B1E7     		b	.L74
+ 1280              	.L92:
+ 1281              	.LBB250:
+ 1282              	.LBB245:
+ 1283              	.LBB232:
+  99:DelayMulti.cpp ****     {
+ 1284              		.loc 1 99 5 is_stmt 1 view .LVU382
+ 1285              	.LBB233:
+ 1286 00bc 94F80031 		ldrb	r3, [r4, #256]	@ zero_extendqisi2
+ 1287              	.LBB234:
+ 104:DelayMulti.cpp ****         }
+ 1288              		.loc 1 104 42 is_stmt 0 view .LVU383
+ 1289 00c0 F7EEC87B 		vcvt.f32.f64	s15, d8
+ 1290              	.LBE234:
+  99:DelayMulti.cpp ****     {
+ 1291              		.loc 1 99 5 view .LVU384
+ 1292 00c4 03BB     		cbnz	r3, .L93
+ 1293              	.LVL100:
+ 1294              	.LBB235:
+ 109:DelayMulti.cpp ****         {
+ 1295              		.loc 1 109 28 is_stmt 1 discriminator 3 view .LVU385
+ 112:DelayMulti.cpp ****         }
+ 1296              		.loc 1 112 13 discriminator 3 view .LVU386
+ 112:DelayMulti.cpp ****         }
+ 1297              		.loc 1 112 31 is_stmt 0 discriminator 3 view .LVU387
+ 1298 00c6 C4ED3A7A 		vstr.32	s15, [r4, #232]
+ 109:DelayMulti.cpp ****         {
+ 1299              		.loc 1 109 9 is_stmt 1 discriminator 3 view .LVU388
+ 1300              	.LVL101:
+ 109:DelayMulti.cpp ****         {
+ 1301              		.loc 1 109 28 discriminator 3 view .LVU389
+ 1302              	.L80:
+ 109:DelayMulti.cpp ****         {
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 38
 
 
- 115:DelayMulti.cpp **** 
- 1314              		.loc 1 115 17 is_stmt 0 view .LVU396
- 1315 00ba 0023     		movs	r3, #0
- 1316 00bc 84F81C31 		strb	r3, [r4, #284]
- 1317              	.LBE240:
- 1318              	.LBE252:
- 1319              	.LBE257:
- 119:DelayMulti.cpp ****     {
- 1320              		.loc 1 119 5 is_stmt 1 view .LVU397
- 1321              	.LBB258:
- 1322              	.LBB253:
- 119:DelayMulti.cpp ****     {
- 1323              		.loc 1 119 24 is_stmt 0 view .LVU398
- 1324 00c0 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
- 1325              	.LVL105:
- 119:DelayMulti.cpp ****     {
- 1326              		.loc 1 119 27 view .LVU399
- 1327 00c4 D4F80031 		ldr	r3, [r4, #256]
- 1328 00c8 C01A     		subs	r0, r0, r3
- 119:DelayMulti.cpp ****     {
- 1329              		.loc 1 119 50 view .LVU400
- 1330 00ca 1928     		cmp	r0, #25
- 1331 00cc BFD8     		bhi	.L94
- 1332              	.L81:
- 139:DelayMulti.cpp ****     }  
- 1333              		.loc 1 139 16 view .LVU401
- 1334 00ce 0025     		movs	r5, #0
- 1335              	.LBE253:
- 1336              	.LBE258:
- 143:DelayMulti.cpp **** 
- 1337              		.loc 1 143 1 view .LVU402
- 1338 00d0 BDEC028B 		vldm	sp!, {d8}
- 1339              		.cfi_remember_state
- 1340              		.cfi_restore 80
- 1341              		.cfi_restore 81
- 1342              		.cfi_def_cfa_offset 16
- 1343              	.LVL106:
- 143:DelayMulti.cpp **** 
- 1344              		.loc 1 143 1 view .LVU403
- 1345 00d4 2846     		mov	r0, r5
- 1346 00d6 38BD     		pop	{r3, r4, r5, pc}
- 1347              	.LVL107:
- 1348              	.L91:
- 1349              		.cfi_restore_state
- 1350              	.LBB259:
-  85:DelayMulti.cpp ****     waiting_flag_ = true;
- 1351              		.loc 1 85 5 is_stmt 1 view .LVU404
-  85:DelayMulti.cpp ****     waiting_flag_ = true;
- 1352              		.loc 1 85 28 is_stmt 0 view .LVU405
- 1353 00d8 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
- 1354              	.LVL108:
-  89:DelayMulti.cpp **** }
- 1355              		.loc 1 89 12 view .LVU406
- 1356 00dc 0025     		movs	r5, #0
-  86:DelayMulti.cpp ****     TimeChange_ = true;
- 1357              		.loc 1 86 19 view .LVU407
- 1358 00de 0123     		movs	r3, #1
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 39
+ 1303              		.loc 1 109 28 is_stmt 0 discriminator 3 view .LVU390
+ 1304              	.LBE235:
+ 1305              	.LBE233:
+ 116:DelayMulti.cpp **** 
+ 1306              		.loc 1 116 5 is_stmt 1 view .LVU391
+ 116:DelayMulti.cpp **** 
+ 1307              		.loc 1 116 17 is_stmt 0 view .LVU392
+ 1308 00ca 0023     		movs	r3, #0
+ 1309 00cc 84F81831 		strb	r3, [r4, #280]
+ 1310              	.LBE232:
+ 1311              	.LBE245:
+ 1312              	.LBE250:
+ 120:DelayMulti.cpp ****     {
+ 1313              		.loc 1 120 5 is_stmt 1 view .LVU393
+ 1314              	.LBB251:
+ 1315              	.LBB246:
+ 120:DelayMulti.cpp ****     {
+ 1316              		.loc 1 120 24 is_stmt 0 view .LVU394
+ 1317 00d0 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
+ 1318              	.LVL102:
+ 120:DelayMulti.cpp ****     {
+ 1319              		.loc 1 120 27 view .LVU395
+ 1320 00d4 D4F8FC30 		ldr	r3, [r4, #252]
+ 1321 00d8 C01A     		subs	r0, r0, r3
+ 120:DelayMulti.cpp ****     {
+ 1322              		.loc 1 120 50 view .LVU396
+ 1323 00da 1928     		cmp	r0, #25
+ 1324 00dc B9D8     		bhi	.L94
+ 1325              	.L81:
+ 140:DelayMulti.cpp ****     }  
+ 1326              		.loc 1 140 16 view .LVU397
+ 1327 00de 0025     		movs	r5, #0
+ 1328              	.LBE246:
+ 1329              	.LBE251:
+ 144:DelayMulti.cpp **** 
+ 1330              		.loc 1 144 1 view .LVU398
+ 1331 00e0 BDEC028B 		vldm	sp!, {d8}
+ 1332              		.cfi_remember_state
+ 1333              		.cfi_restore 80
+ 1334              		.cfi_restore 81
+ 1335              		.cfi_def_cfa_offset 16
+ 1336              	.LVL103:
+ 144:DelayMulti.cpp **** 
+ 1337              		.loc 1 144 1 view .LVU399
+ 1338 00e4 2846     		mov	r0, r5
+ 1339 00e6 38BD     		pop	{r3, r4, r5, pc}
+ 1340              	.LVL104:
+ 1341              	.L91:
+ 1342              		.cfi_restore_state
+ 1343              	.LBB252:
+  86:DelayMulti.cpp ****     waiting_flag_ = true;
+ 1344              		.loc 1 86 5 is_stmt 1 view .LVU400
+  86:DelayMulti.cpp ****     waiting_flag_ = true;
+ 1345              		.loc 1 86 28 is_stmt 0 view .LVU401
+ 1346 00e8 FFF7FEFF 		bl	_ZN5daisy6System6GetNowEv
+ 1347              	.LVL105:
+  90:DelayMulti.cpp **** }
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 39
 
 
-  88:DelayMulti.cpp ****     return false;
- 1359              		.loc 1 88 16 view .LVU408
- 1360 00e0 84ED3E8A 		vstr.32	s16, [r4, #248]
-  85:DelayMulti.cpp ****     waiting_flag_ = true;
- 1361              		.loc 1 85 12 view .LVU409
- 1362 00e4 C4F80001 		str	r0, [r4, #256]
-  86:DelayMulti.cpp ****     TimeChange_ = true;
- 1363              		.loc 1 86 5 is_stmt 1 view .LVU410
- 1364              	.LBE259:
- 143:DelayMulti.cpp **** 
- 1365              		.loc 1 143 1 is_stmt 0 view .LVU411
- 1366 00e8 2846     		mov	r0, r5
- 1367              	.LBB260:
-  86:DelayMulti.cpp ****     TimeChange_ = true;
- 1368              		.loc 1 86 19 view .LVU412
- 1369 00ea 84F80C31 		strb	r3, [r4, #268]
-  87:DelayMulti.cpp ****     delayLast_ = delaytime;
- 1370              		.loc 1 87 5 is_stmt 1 view .LVU413
-  87:DelayMulti.cpp ****     delayLast_ = delaytime;
- 1371              		.loc 1 87 17 is_stmt 0 view .LVU414
- 1372 00ee 84F81C31 		strb	r3, [r4, #284]
-  88:DelayMulti.cpp ****     return false;
- 1373              		.loc 1 88 5 is_stmt 1 view .LVU415
-  89:DelayMulti.cpp **** }
- 1374              		.loc 1 89 5 view .LVU416
- 1375              	.LBE260:
- 143:DelayMulti.cpp **** 
- 1376              		.loc 1 143 1 is_stmt 0 view .LVU417
- 1377 00f2 BDEC028B 		vldm	sp!, {d8}
- 1378              		.cfi_remember_state
- 1379              		.cfi_restore 80
- 1380              		.cfi_restore 81
- 1381              		.cfi_def_cfa_offset 16
- 1382              	.LVL109:
- 143:DelayMulti.cpp **** 
- 1383              		.loc 1 143 1 view .LVU418
- 1384 00f6 38BD     		pop	{r3, r4, r5, pc}
- 1385              	.LVL110:
- 1386              	.L93:
- 1387              		.cfi_restore_state
- 1388              	.LBB261:
- 1389              	.LBB254:
- 1390              	.LBB245:
- 1391              	.LBB244:
- 1392              	.LBB243:
- 100:DelayMulti.cpp ****         {
- 1393              		.loc 1 100 28 is_stmt 1 view .LVU419
- 103:DelayMulti.cpp ****         }
- 1394              		.loc 1 103 13 view .LVU420
- 103:DelayMulti.cpp ****         }
- 1395              		.loc 1 103 40 is_stmt 0 view .LVU421
- 1396 00f8 84ED3B8A 		vstr.32	s16, [r4, #236]
- 100:DelayMulti.cpp ****         {
- 1397              		.loc 1 100 9 is_stmt 1 view .LVU422
- 1398              	.LVL111:
- 100:DelayMulti.cpp ****         {
- 1399              		.loc 1 100 28 view .LVU423
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 40
+ 1348              		.loc 1 90 12 view .LVU402
+ 1349 00ec 0025     		movs	r5, #0
+  87:DelayMulti.cpp ****     TimeChange_ = true;
+ 1350              		.loc 1 87 19 view .LVU403
+ 1351 00ee 0123     		movs	r3, #1
+  86:DelayMulti.cpp ****     waiting_flag_ = true;
+ 1352              		.loc 1 86 12 view .LVU404
+ 1353 00f0 C4F8FC00 		str	r0, [r4, #252]
+  87:DelayMulti.cpp ****     TimeChange_ = true;
+ 1354              		.loc 1 87 5 is_stmt 1 view .LVU405
+ 1355              	.LBE252:
+ 144:DelayMulti.cpp **** 
+ 1356              		.loc 1 144 1 is_stmt 0 view .LVU406
+ 1357 00f4 2846     		mov	r0, r5
+ 1358              	.LBB253:
+  87:DelayMulti.cpp ****     TimeChange_ = true;
+ 1359              		.loc 1 87 19 view .LVU407
+ 1360 00f6 84F80831 		strb	r3, [r4, #264]
+  88:DelayMulti.cpp ****     delayLast_ = delaytime;
+ 1361              		.loc 1 88 5 is_stmt 1 view .LVU408
+  88:DelayMulti.cpp ****     delayLast_ = delaytime;
+ 1362              		.loc 1 88 17 is_stmt 0 view .LVU409
+ 1363 00fa 84F81831 		strb	r3, [r4, #280]
+  89:DelayMulti.cpp ****     return false;
+ 1364              		.loc 1 89 5 is_stmt 1 view .LVU410
+  89:DelayMulti.cpp ****     return false;
+ 1365              		.loc 1 89 16 is_stmt 0 view .LVU411
+ 1366 00fe 84ED4A8B 		vstr.64	d8, [r4, #296]
+  90:DelayMulti.cpp **** }
+ 1367              		.loc 1 90 5 is_stmt 1 view .LVU412
+ 1368              	.LBE253:
+ 144:DelayMulti.cpp **** 
+ 1369              		.loc 1 144 1 is_stmt 0 view .LVU413
+ 1370 0102 BDEC028B 		vldm	sp!, {d8}
+ 1371              		.cfi_remember_state
+ 1372              		.cfi_restore 80
+ 1373              		.cfi_restore 81
+ 1374              		.cfi_def_cfa_offset 16
+ 1375              	.LVL106:
+ 144:DelayMulti.cpp **** 
+ 1376              		.loc 1 144 1 view .LVU414
+ 1377 0106 38BD     		pop	{r3, r4, r5, pc}
+ 1378              	.LVL107:
+ 1379              	.L93:
+ 1380              		.cfi_restore_state
+ 1381              	.LBB254:
+ 1382              	.LBB247:
+ 1383              	.LBB238:
+ 1384              	.LBB237:
+ 1385              	.LBB236:
+ 101:DelayMulti.cpp ****         {
+ 1386              		.loc 1 101 28 is_stmt 1 view .LVU415
+ 104:DelayMulti.cpp ****         }
+ 1387              		.loc 1 104 13 view .LVU416
+ 104:DelayMulti.cpp ****         }
+ 1388              		.loc 1 104 42 is_stmt 0 view .LVU417
+ 1389 0108 C4ED3B7A 		vstr.32	s15, [r4, #236]
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 40
 
 
- 1400 00fc DDE7     		b	.L80
- 1401              	.L96:
- 1402 00fe 00BF     		.align	2
- 1403              	.L95:
- 1404 0100 00004042 		.word	1111490560
- 1405 0104 0AD7A33B 		.word	1000593162
- 1406 0108 00606A48 		.word	1214930944
- 1407 010c 00007045 		.word	1164967936
- 1408              	.LBE243:
- 1409              	.LBE244:
- 1410              	.LBE245:
- 1411              	.LBE254:
- 1412              	.LBE261:
- 1413              		.cfi_endproc
- 1414              	.LFE3966:
- 1416              		.text
- 1417              	.Letext0:
- 1418              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
- 1419              		.file 7 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
- 1420              		.file 8 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
- 1421              		.file 9 "../libdaisy/Drivers/CMSIS/Include/core_cm7.h"
- 1422              		.file 10 "../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
- 1423              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
- 1424              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1425              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1426              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1427              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1428              		.file 16 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1429              		.file 17 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1430              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1431              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1432              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1433              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1434              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1435              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1436              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1437              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1438              		.file 26 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1439              		.file 27 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1440              		.file 28 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1441              		.file 29 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1442              		.file 30 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1443              		.file 31 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1444              		.file 32 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1445              		.file 33 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1446              		.file 34 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
- 1447              		.file 35 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
- 1448              		.file 36 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
- 1449              		.file 37 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
- 1450              		.file 38 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
- 1451              		.file 39 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1452              		.file 40 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
- 1453              		.file 41 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
- 1454              		.file 42 "../DaisySP/Source/Control/adenv.h"
- 1455              		.file 43 "../DaisySP/Source/Utility/dsp.h"
- 1456              		.file 44 "oscillator_p.h"
- 1457              		.file 45 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 41
+ 101:DelayMulti.cpp ****         {
+ 1390              		.loc 1 101 9 is_stmt 1 view .LVU418
+ 1391              	.LVL108:
+ 101:DelayMulti.cpp ****         {
+ 1392              		.loc 1 101 28 view .LVU419
+ 1393 010c DDE7     		b	.L80
+ 1394              	.L96:
+ 1395 010e 00BF     		.align	3
+ 1396              	.L95:
+ 1397 0110 00000000 		.word	0
+ 1398 0114 00004840 		.word	1078460416
+ 1399 0118 7B14AE47 		.word	1202590843
+ 1400 011c E17A743F 		.word	1064598241
+ 1401 0120 00606A48 		.word	1214930944
+ 1402 0124 00007045 		.word	1164967936
+ 1403              	.LBE236:
+ 1404              	.LBE237:
+ 1405              	.LBE238:
+ 1406              	.LBE247:
+ 1407              	.LBE254:
+ 1408              		.cfi_endproc
+ 1409              	.LFE3967:
+ 1411              		.text
+ 1412              	.Letext0:
+ 1413              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+ 1414              		.file 7 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
+ 1415              		.file 8 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
+ 1416              		.file 9 "../libdaisy/Drivers/CMSIS/Include/core_cm7.h"
+ 1417              		.file 10 "../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
+ 1418              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
+ 1419              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1420              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1421              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1422              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1423              		.file 16 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1424              		.file 17 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1425              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1426              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1427              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1428              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1429              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1430              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1431              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1432              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1433              		.file 26 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1434              		.file 27 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1435              		.file 28 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1436              		.file 29 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1437              		.file 30 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1438              		.file 31 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1439              		.file 32 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1440              		.file 33 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1441              		.file 34 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
+ 1442              		.file 35 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
+ 1443              		.file 36 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
+ 1444              		.file 37 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
+ 1445              		.file 38 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 41
 
 
- 1458              		.file 46 "<built-in>"
- 1459              		.file 47 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
- 1460              		.file 48 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/locale.h"
- 1461              		.file 49 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/ctype.h"
- 1462              		.file 50 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
- 1463              		.file 51 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
- 1464              		.file 52 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1465              		.file 53 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
- 1466              		.file 54 "../libdaisy/src/daisy_core.h"
- 1467              		.file 55 "../libdaisy/src/per/tim.h"
- 1468              		.file 56 "../libdaisy/src/sys/system.h"
- 1469              		.file 57 "../libdaisy/src/util/wav_format.h"
- 1470              		.file 58 "../libdaisy/src/hid/led.h"
- 1471              		.file 59 "../libdaisy/src/per/gpio.h"
- 1472              		.file 60 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/unistd
- 1473              		.file 61 "../libdaisy/src/util/oled_fonts.h"
- 1474              		.file 62 "../libdaisy/Middlewares/Third_Party/FatFs/src/integer.h"
- 1475              		.file 63 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h"
- 1476              		.file 64 "../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h"
- 1477              		.file 65 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
- 1478              		.file 66 "../libdaisy/src/util/sd_diskio.h"
- 1479              		.file 67 "../libdaisy/src/sys/fatfs.h"
- 1480              		.file 68 "constants.h"
- 1481              		.file 69 "LEDs.h"
- 1482              		.file 70 "scale.h"
- 1483              		.file 71 "DelayMulti.h"
- 1484              		.file 72 "../libdaisy/src/dev/sr_595.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s 			page 42
+ 1446              		.file 39 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1447              		.file 40 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
+ 1448              		.file 41 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
+ 1449              		.file 42 "../DaisySP/Source/Control/adenv.h"
+ 1450              		.file 43 "../DaisySP/Source/Utility/dsp.h"
+ 1451              		.file 44 "oscillator_p.h"
+ 1452              		.file 45 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
+ 1453              		.file 46 "<built-in>"
+ 1454              		.file 47 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
+ 1455              		.file 48 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/locale.h"
+ 1456              		.file 49 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/ctype.h"
+ 1457              		.file 50 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
+ 1458              		.file 51 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
+ 1459              		.file 52 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 1460              		.file 53 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
+ 1461              		.file 54 "../libdaisy/src/daisy_core.h"
+ 1462              		.file 55 "../libdaisy/src/per/tim.h"
+ 1463              		.file 56 "../libdaisy/src/sys/system.h"
+ 1464              		.file 57 "../libdaisy/src/util/wav_format.h"
+ 1465              		.file 58 "../libdaisy/src/hid/led.h"
+ 1466              		.file 59 "../libdaisy/src/per/gpio.h"
+ 1467              		.file 60 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/unistd
+ 1468              		.file 61 "../libdaisy/src/util/oled_fonts.h"
+ 1469              		.file 62 "../libdaisy/Middlewares/Third_Party/FatFs/src/integer.h"
+ 1470              		.file 63 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h"
+ 1471              		.file 64 "../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h"
+ 1472              		.file 65 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
+ 1473              		.file 66 "../libdaisy/src/util/sd_diskio.h"
+ 1474              		.file 67 "../libdaisy/src/sys/fatfs.h"
+ 1475              		.file 68 "constants.h"
+ 1476              		.file 69 "LEDs.h"
+ 1477              		.file 70 "scale.h"
+ 1478              		.file 71 "DelayMulti.h"
+ 1479              		.file 72 "../libdaisy/src/dev/sr_595.h"
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s 			page 42
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 DelayMulti.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:17     .text._ZN10DelayMulti4initE12dsy_gpio_pinf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:26     .text._ZN10DelayMulti4initE12dsy_gpio_pinf:0000000000000000 _ZN10DelayMulti4initE12dsy_gpio_pinf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:431    .text._ZN10DelayMulti4initE12dsy_gpio_pinf:00000000000000ec $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:438    .text._ZN10DelayMulti9GetOutputEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:446    .text._ZN10DelayMulti9GetOutputEv:0000000000000000 _ZN10DelayMulti9GetOutputEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:714    .text._ZN10DelayMulti9GetOutputEv:0000000000000100 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:726    .text._ZN10DelayMulti14updateTempoLEDEb:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:734    .text._ZN10DelayMulti14updateTempoLEDEb:0000000000000000 _ZN10DelayMulti14updateTempoLEDEb
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:771    .text._ZN10DelayMulti5WriteERKf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:779    .text._ZN10DelayMulti5WriteERKf:0000000000000000 _ZN10DelayMulti5WriteERKf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:848    .text._ZN10DelayMulti5WriteERKf:0000000000000028 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:855    .text._ZN10DelayMulti6GetDivEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:863    .text._ZN10DelayMulti6GetDivEf:0000000000000000 _ZN10DelayMulti6GetDivEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:1083   .text._ZN10DelayMulti6GetDivEf:0000000000000120 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:1100   .text._ZN10DelayMulti12SetDelayTimeEffb:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:1108   .text._ZN10DelayMulti12SetDelayTimeEffb:0000000000000000 _ZN10DelayMulti12SetDelayTimeEffb
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cckvAmcb.s:1404   .text._ZN10DelayMulti12SetDelayTimeEffb:0000000000000100 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:17     .text._ZN10DelayMulti4initE12dsy_gpio_pinf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:26     .text._ZN10DelayMulti4initE12dsy_gpio_pinf:0000000000000000 _ZN10DelayMulti4initE12dsy_gpio_pinf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:433    .text._ZN10DelayMulti4initE12dsy_gpio_pinf:00000000000000f4 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:441    .text._ZN10DelayMulti9GetOutputEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:449    .text._ZN10DelayMulti9GetOutputEv:0000000000000000 _ZN10DelayMulti9GetOutputEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:717    .text._ZN10DelayMulti9GetOutputEv:0000000000000100 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:729    .text._ZN10DelayMulti14updateTempoLEDEb:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:737    .text._ZN10DelayMulti14updateTempoLEDEb:0000000000000000 _ZN10DelayMulti14updateTempoLEDEb
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:774    .text._ZN10DelayMulti5WriteERKf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:782    .text._ZN10DelayMulti5WriteERKf:0000000000000000 _ZN10DelayMulti5WriteERKf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:851    .text._ZN10DelayMulti5WriteERKf:0000000000000028 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:858    .text._ZN10DelayMulti6GetDivEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:866    .text._ZN10DelayMulti6GetDivEf:0000000000000000 _ZN10DelayMulti6GetDivEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:1064   .text._ZN10DelayMulti6GetDivEf:0000000000000120 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:1084   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:1092   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000000 _ZN10DelayMulti12SetDelayTimeEfb
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccvLIGwf.s:1397   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000110 $d
 
 UNDEFINED SYMBOLS
 _ZN8TempoLED4initE12dsy_gpio_pinf

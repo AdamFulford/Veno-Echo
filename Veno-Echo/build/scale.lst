@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccstwFbn.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -27,7 +27,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 1
   24              		.fpu fpv5-d16
   26              	_Z5scalefff9CurveType:
   27              	.LVL0:
-  28              	.LFB544:
+  28              	.LFB3361:
   29              		.file 1 "scale.cpp"
    1:scale.cpp     **** // Copyright 2021 Adam Fulford
    2:scale.cpp     **** // 
@@ -53,32 +53,33 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 1
   22:scale.cpp     **** 
   23:scale.cpp     **** #include "scale.h"
   24:scale.cpp     **** 
-  25:scale.cpp     **** float scale(float input, float outputMin, float outputMax, CurveType curve)
-  26:scale.cpp     **** {
-  30              		.loc 1 26 1 view -0
+  25:scale.cpp     **** //maps and scales float (0.0 to 1.0) to float (outputMin to outputMax)
+  26:scale.cpp     **** float scale(float input, float outputMin, float outputMax, CurveType curve)
+  27:scale.cpp     **** {
+  30              		.loc 1 27 1 view -0
   31              		.cfi_startproc
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccstwFbn.s 			page 2
+
+
   32              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 2
-
-
   33              		@ frame_needed = 0, uses_anonymous_args = 0
-  27:scale.cpp     ****     float val{};
-  34              		.loc 1 27 5 view .LVU1
-  28:scale.cpp     ****     float lmin{logf(outputMin < 0.0000001f ? 0.0000001f : outputMin)};
-  35              		.loc 1 28 5 view .LVU2
-  36              		.loc 1 28 20 is_stmt 0 view .LVU3
+  28:scale.cpp     ****     float val{};
+  34              		.loc 1 28 5 view .LVU1
+  29:scale.cpp     ****     float lmin{logf(outputMin < 0.0000001f ? 0.0000001f : outputMin)};
+  35              		.loc 1 29 5 view .LVU2
+  36              		.loc 1 29 20 is_stmt 0 view .LVU3
   37 0000 DFED297A 		vldr.32	s15, .L13
   38 0004 F4EEE70A 		vcmpe.f32	s1, s15
-  26:scale.cpp     ****     float val{};
-  39              		.loc 1 26 1 view .LVU4
+  27:scale.cpp     ****     float val{};
+  39              		.loc 1 27 1 view .LVU4
   40 0008 10B5     		push	{r4, lr}
   41              		.cfi_def_cfa_offset 8
   42              		.cfi_offset 4, -8
   43              		.cfi_offset 14, -4
-  44              		.loc 1 28 20 view .LVU5
+  44              		.loc 1 29 20 view .LVU5
   45 000a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
-  26:scale.cpp     ****     float val{};
-  46              		.loc 1 26 1 view .LVU6
+  27:scale.cpp     ****     float val{};
+  46              		.loc 1 27 1 view .LVU6
   47 000e 0446     		mov	r4, r0
   48 0010 2DED048B 		vpush.64	{d8, d9}
   49              		.cfi_def_cfa_offset 24
@@ -86,87 +87,87 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 1
   51              		.cfi_offset 81, -20
   52              		.cfi_offset 82, -16
   53              		.cfi_offset 83, -12
-  26:scale.cpp     ****     float val{};
-  54              		.loc 1 26 1 view .LVU7
+  27:scale.cpp     ****     float val{};
+  54              		.loc 1 27 1 view .LVU7
   55 0014 F0EE418A 		vmov.f32	s17, s2
   56 0018 B0EE409A 		vmov.f32	s18, s0
-  57              		.loc 1 28 20 view .LVU8
+  57              		.loc 1 29 20 view .LVU8
   58 001c 54BF     		ite	pl
   59 001e B0EE600A 		vmovpl.f32	s0, s1
   60 0022 B0EE670A 		vmovmi.f32	s0, s15
   61              	.LVL1:
-  26:scale.cpp     ****     float val{};
-  62              		.loc 1 26 1 view .LVU9
+  27:scale.cpp     ****     float val{};
+  62              		.loc 1 27 1 view .LVU9
   63 0026 B0EE608A 		vmov.f32	s16, s1
-  64              		.loc 1 28 20 view .LVU10
+  64              		.loc 1 29 20 view .LVU10
   65 002a FFF7FEFF 		bl	logf
   66              	.LVL2:
-  67              		.loc 1 28 20 view .LVU11
+  67              		.loc 1 29 20 view .LVU11
   68 002e F0EE409A 		vmov.f32	s19, s0
-  29:scale.cpp     ****     float lmax{logf(outputMax)};
-  69              		.loc 1 29 20 view .LVU12
+  30:scale.cpp     ****     float lmax{logf(outputMax)};
+  69              		.loc 1 30 20 view .LVU12
   70 0032 B0EE680A 		vmov.f32	s0, s17
   71              	.LVL3:
-  72              		.loc 1 29 5 is_stmt 1 view .LVU13
-  73              		.loc 1 29 20 is_stmt 0 view .LVU14
+  72              		.loc 1 30 5 is_stmt 1 view .LVU13
+  73              		.loc 1 30 20 is_stmt 0 view .LVU14
   74 0036 FFF7FEFF 		bl	logf
   75              	.LVL4:
-  30:scale.cpp     **** 
-  31:scale.cpp     ****     switch(curve)
-  76              		.loc 1 31 5 is_stmt 1 view .LVU15
+  31:scale.cpp     **** 
+  32:scale.cpp     ****     switch(curve)
+  76              		.loc 1 32 5 is_stmt 1 view .LVU15
   77 003a 032C     		cmp	r4, #3
   78 003c 30D8     		bhi	.L10
   79 003e DFE804F0 		tbb	[pc, r4]
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccstwFbn.s 			page 3
+
+
   80              	.L5:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 3
-
-
   81 0042 0F       		.byte	(.L8-.L5)/2
   82 0043 18       		.byte	(.L7-.L5)/2
   83 0044 23       		.byte	(.L6-.L5)/2
   84 0045 02       		.byte	(.L4-.L5)/2
   85              		.p2align 1
   86              	.L4:
-  32:scale.cpp     ****     {
-  33:scale.cpp     ****         case LINEAR:
-  34:scale.cpp     ****             val = (input * (outputMax - outputMin)) + outputMin;
-  35:scale.cpp     ****         break;
-  36:scale.cpp     **** 
-  37:scale.cpp     ****         case EXPONENTIAL:
-  38:scale.cpp     ****             val = ((input * input ) * (outputMax - outputMin)) + outputMin;
-  39:scale.cpp     ****         break;
-  40:scale.cpp     **** 
-  41:scale.cpp     ****         case LOGARITHMIC:
-  42:scale.cpp     ****             val = expf((input * (lmax - lmin)) + lmin);
-  43:scale.cpp     ****         break;
-  44:scale.cpp     ****         
-  45:scale.cpp     ****         case CUBE:
-  87              		.loc 1 45 9 view .LVU16
-  46:scale.cpp     ****             val = ((input * (input * input)) * (outputMax - outputMin)) + outputMin;
-  88              		.loc 1 46 13 view .LVU17
-  89              		.loc 1 46 36 is_stmt 0 view .LVU18
+  33:scale.cpp     ****     {
+  34:scale.cpp     ****         case LINEAR:
+  35:scale.cpp     ****             val = (input * (outputMax - outputMin)) + outputMin;
+  36:scale.cpp     ****         break;
+  37:scale.cpp     **** 
+  38:scale.cpp     ****         case EXPONENTIAL:
+  39:scale.cpp     ****             val = ((input * input ) * (outputMax - outputMin)) + outputMin;
+  40:scale.cpp     ****         break;
+  41:scale.cpp     **** 
+  42:scale.cpp     ****         case LOGARITHMIC:
+  43:scale.cpp     ****             val = expf((input * (lmax - lmin)) + lmin);
+  44:scale.cpp     ****         break;
+  45:scale.cpp     ****         
+  46:scale.cpp     ****         case CUBE:
+  87              		.loc 1 46 9 view .LVU16
+  47:scale.cpp     ****             val = ((input * (input * input)) * (outputMax - outputMin)) + outputMin;
+  88              		.loc 1 47 13 view .LVU17
+  89              		.loc 1 47 36 is_stmt 0 view .LVU18
   90 0046 29EE090A 		vmul.f32	s0, s18, s18
   91              	.LVL5:
-  92              		.loc 1 46 59 view .LVU19
+  92              		.loc 1 47 59 view .LVU19
   93 004a 78EEC88A 		vsub.f32	s17, s17, s16
   94              	.LVL6:
-  95              		.loc 1 46 27 view .LVU20
+  95              		.loc 1 47 27 view .LVU20
   96 004e 20EE099A 		vmul.f32	s18, s0, s18
   97              	.LVL7:
-  98              		.loc 1 46 17 view .LVU21
+  98              		.loc 1 47 17 view .LVU21
   99 0052 B0EE480A 		vmov.f32	s0, s16
  100 0056 A9EE280A 		vfma.f32	s0, s18, s17
  101              	.LVL8:
-  47:scale.cpp     ****         break;
- 102              		.loc 1 47 9 is_stmt 1 view .LVU22
+  48:scale.cpp     ****         break;
+ 102              		.loc 1 48 9 is_stmt 1 view .LVU22
  103              	.L1:
-  48:scale.cpp     ****         
-  49:scale.cpp     ****         default: 
-  50:scale.cpp     ****         break;
-  51:scale.cpp     ****     }
-  52:scale.cpp     ****     return val;
-  53:scale.cpp     **** }
- 104              		.loc 1 53 1 is_stmt 0 view .LVU23
+  49:scale.cpp     ****         
+  50:scale.cpp     ****         default: 
+  51:scale.cpp     ****         break;
+  52:scale.cpp     ****     }
+  53:scale.cpp     ****     return val;
+  54:scale.cpp     **** }
+ 104              		.loc 1 54 1 is_stmt 0 view .LVU23
  105 005a BDEC048B 		vldm	sp!, {d8-d9}
  106              		.cfi_remember_state
  107              		.cfi_restore 82
@@ -175,33 +176,33 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 1
  110              		.cfi_restore 81
  111              		.cfi_def_cfa_offset 8
  112              	.LVL9:
- 113              		.loc 1 53 1 view .LVU24
+ 113              		.loc 1 54 1 view .LVU24
  114 005e 10BD     		pop	{r4, pc}
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccstwFbn.s 			page 4
+
+
  115              	.LVL10:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 4
-
-
  116              	.L8:
  117              		.cfi_restore_state
-  33:scale.cpp     ****             val = (input * (outputMax - outputMin)) + outputMin;
- 118              		.loc 1 33 9 is_stmt 1 view .LVU25
-  34:scale.cpp     ****         break;
- 119              		.loc 1 34 13 view .LVU26
-  34:scale.cpp     ****         break;
- 120              		.loc 1 34 39 is_stmt 0 view .LVU27
+  34:scale.cpp     ****             val = (input * (outputMax - outputMin)) + outputMin;
+ 118              		.loc 1 34 9 is_stmt 1 view .LVU25
+  35:scale.cpp     ****         break;
+ 119              		.loc 1 35 13 view .LVU26
+  35:scale.cpp     ****         break;
+ 120              		.loc 1 35 39 is_stmt 0 view .LVU27
  121 0060 78EEC88A 		vsub.f32	s17, s17, s16
  122              	.LVL11:
-  34:scale.cpp     ****         break;
- 123              		.loc 1 34 17 view .LVU28
+  35:scale.cpp     ****         break;
+ 123              		.loc 1 35 17 view .LVU28
  124 0064 B0EE480A 		vmov.f32	s0, s16
  125              	.LVL12:
-  34:scale.cpp     ****         break;
- 126              		.loc 1 34 17 view .LVU29
+  35:scale.cpp     ****         break;
+ 126              		.loc 1 35 17 view .LVU29
  127 0068 A8EE890A 		vfma.f32	s0, s17, s18
  128              	.LVL13:
-  35:scale.cpp     **** 
- 129              		.loc 1 35 9 is_stmt 1 view .LVU30
- 130              		.loc 1 53 1 is_stmt 0 view .LVU31
+  36:scale.cpp     **** 
+ 129              		.loc 1 36 9 is_stmt 1 view .LVU30
+ 130              		.loc 1 54 1 is_stmt 0 view .LVU31
  131 006c BDEC048B 		vldm	sp!, {d8-d9}
  132              		.cfi_remember_state
  133              		.cfi_restore 82
@@ -210,37 +211,37 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 1
  136              		.cfi_restore 81
  137              		.cfi_def_cfa_offset 8
  138              	.LVL14:
- 139              		.loc 1 53 1 view .LVU32
+ 139              		.loc 1 54 1 view .LVU32
  140 0070 10BD     		pop	{r4, pc}
  141              	.LVL15:
  142              	.L7:
  143              		.cfi_restore_state
-  37:scale.cpp     ****             val = ((input * input ) * (outputMax - outputMin)) + outputMin;
- 144              		.loc 1 37 9 is_stmt 1 view .LVU33
-  38:scale.cpp     ****         break;
- 145              		.loc 1 38 13 view .LVU34
-  38:scale.cpp     ****         break;
- 146              		.loc 1 38 27 is_stmt 0 view .LVU35
+  38:scale.cpp     ****             val = ((input * input ) * (outputMax - outputMin)) + outputMin;
+ 144              		.loc 1 38 9 is_stmt 1 view .LVU33
+  39:scale.cpp     ****         break;
+ 145              		.loc 1 39 13 view .LVU34
+  39:scale.cpp     ****         break;
+ 146              		.loc 1 39 27 is_stmt 0 view .LVU35
  147 0072 29EE099A 		vmul.f32	s18, s18, s18
  148              	.LVL16:
-  38:scale.cpp     ****         break;
- 149              		.loc 1 38 50 view .LVU36
+  39:scale.cpp     ****         break;
+ 149              		.loc 1 39 50 view .LVU36
  150 0076 78EEC88A 		vsub.f32	s17, s17, s16
  151              	.LVL17:
-  38:scale.cpp     ****         break;
- 152              		.loc 1 38 17 view .LVU37
+  39:scale.cpp     ****         break;
+ 152              		.loc 1 39 17 view .LVU37
  153 007a B0EE480A 		vmov.f32	s0, s16
  154              	.LVL18:
-  38:scale.cpp     ****         break;
- 155              		.loc 1 38 17 view .LVU38
+  39:scale.cpp     ****         break;
+ 155              		.loc 1 39 17 view .LVU38
  156 007e A9EE280A 		vfma.f32	s0, s18, s17
  157              	.LVL19:
-  39:scale.cpp     **** 
- 158              		.loc 1 39 9 is_stmt 1 view .LVU39
- 159              		.loc 1 53 1 is_stmt 0 view .LVU40
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 5
+  40:scale.cpp     **** 
+ 158              		.loc 1 40 9 is_stmt 1 view .LVU39
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccstwFbn.s 			page 5
 
 
+ 159              		.loc 1 54 1 is_stmt 0 view .LVU40
  160 0082 BDEC048B 		vldm	sp!, {d8-d9}
  161              		.cfi_remember_state
  162              		.cfi_restore 82
@@ -249,26 +250,26 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 1
  165              		.cfi_restore 81
  166              		.cfi_def_cfa_offset 8
  167              	.LVL20:
- 168              		.loc 1 53 1 view .LVU41
+ 168              		.loc 1 54 1 view .LVU41
  169 0086 10BD     		pop	{r4, pc}
  170              	.LVL21:
  171              	.L6:
  172              		.cfi_restore_state
-  41:scale.cpp     ****             val = expf((input * (lmax - lmin)) + lmin);
- 173              		.loc 1 41 9 is_stmt 1 view .LVU42
-  42:scale.cpp     ****         break;
- 174              		.loc 1 42 13 view .LVU43
-  42:scale.cpp     ****         break;
- 175              		.loc 1 42 39 is_stmt 0 view .LVU44
+  42:scale.cpp     ****             val = expf((input * (lmax - lmin)) + lmin);
+ 173              		.loc 1 42 9 is_stmt 1 view .LVU42
+  43:scale.cpp     ****         break;
+ 174              		.loc 1 43 13 view .LVU43
+  43:scale.cpp     ****         break;
+ 175              		.loc 1 43 39 is_stmt 0 view .LVU44
  176 0088 70EE697A 		vsub.f32	s15, s0, s19
-  42:scale.cpp     ****         break;
- 177              		.loc 1 42 23 view .LVU45
+  43:scale.cpp     ****         break;
+ 177              		.loc 1 43 23 view .LVU45
  178 008c B0EE690A 		vmov.f32	s0, s19
  179              	.LVL22:
-  42:scale.cpp     ****         break;
- 180              		.loc 1 42 23 view .LVU46
+  43:scale.cpp     ****         break;
+ 180              		.loc 1 43 23 view .LVU46
  181 0090 A7EE890A 		vfma.f32	s0, s15, s18
- 182              		.loc 1 53 1 view .LVU47
+ 182              		.loc 1 54 1 view .LVU47
  183 0094 BDEC048B 		vldm	sp!, {d8-d9}
  184              		.cfi_restore 82
  185              		.cfi_restore 83
@@ -276,65 +277,93 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 1
  187              		.cfi_restore 81
  188              		.cfi_def_cfa_offset 8
  189              	.LVL23:
- 190              		.loc 1 53 1 view .LVU48
+ 190              		.loc 1 54 1 view .LVU48
  191 0098 BDE81040 		pop	{r4, lr}
  192              		.cfi_restore 14
  193              		.cfi_restore 4
  194              		.cfi_def_cfa_offset 0
-  42:scale.cpp     ****         break;
- 195              		.loc 1 42 23 view .LVU49
+  43:scale.cpp     ****         break;
+ 195              		.loc 1 43 23 view .LVU49
  196 009c FFF7FEBF 		b	expf
  197              	.LVL24:
  198              	.L10:
-  29:scale.cpp     **** 
- 199              		.loc 1 29 20 view .LVU50
+  30:scale.cpp     **** 
+ 199              		.loc 1 30 20 view .LVU50
  200 00a0 9FED020A 		vldr.32	s0, .L13+4
  201              	.LVL25:
-  52:scale.cpp     **** }
- 202              		.loc 1 52 5 is_stmt 1 view .LVU51
-  52:scale.cpp     **** }
- 203              		.loc 1 52 12 is_stmt 0 view .LVU52
+  53:scale.cpp     **** }
+ 202              		.loc 1 53 5 is_stmt 1 view .LVU51
+  53:scale.cpp     **** }
+ 203              		.loc 1 53 12 is_stmt 0 view .LVU52
  204 00a4 D9E7     		b	.L1
  205              	.L14:
  206 00a6 00BF     		.align	2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccstwFbn.s 			page 6
+
+
  207              	.L13:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 6
-
-
  208 00a8 95BFD633 		.word	869711765
  209 00ac 00000000 		.word	0
  210              		.cfi_endproc
- 211              	.LFE544:
+ 211              	.LFE3361:
  213              		.text
  214              	.Letext0:
  215              		.file 2 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
  216              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
- 217              		.file 4 "../libdaisy/Drivers/CMSIS/Include/core_cm7.h"
- 218              		.file 5 "../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
- 219              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/c
- 220              		.file 7 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/b
- 221              		.file 8 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/a
- 222              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h"
- 223              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
- 224              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
- 225              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
- 226              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
- 227              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ 217              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
+ 218              		.file 5 "../libdaisy/Drivers/CMSIS/Include/core_cm7.h"
+ 219              		.file 6 "../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
+ 220              		.file 7 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
+ 221              		.file 8 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/c
+ 222              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/b
+ 223              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 224              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 225              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 226              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 227              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  228              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 229              		.file 16 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
- 230              		.file 17 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
- 231              		.file 18 "scale.h"
- 232              		.file 19 "<built-in>"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s 			page 7
+ 229              		.file 16 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 230              		.file 17 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 231              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 232              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 233              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 234              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 235              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 236              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 237              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 238              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 239              		.file 26 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 240              		.file 27 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 241              		.file 28 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
+ 242              		.file 29 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
+ 243              		.file 30 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
+ 244              		.file 31 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
+ 245              		.file 32 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ 246              		.file 33 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 247              		.file 34 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
+ 248              		.file 35 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
+ 249              		.file 36 "../DaisySP/Source/Control/adenv.h"
+ 250              		.file 37 "../DaisySP/Source/Utility/dsp.h"
+ 251              		.file 38 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
+ 252              		.file 39 "<built-in>"
+ 253              		.file 40 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
+ 254              		.file 41 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/locale.h"
+ 255              		.file 42 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/ctype.h"
+ 256              		.file 43 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
+ 257              		.file 44 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
+ 258              		.file 45 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 259              		.file 46 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
+ 260              		.file 47 "scale.h"
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccstwFbn.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 scale.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s:17     .text._Z5scalefff9CurveType:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s:26     .text._Z5scalefff9CurveType:0000000000000000 _Z5scalefff9CurveType
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s:81     .text._Z5scalefff9CurveType:0000000000000042 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s:85     .text._Z5scalefff9CurveType:0000000000000046 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccfYf0fp.s:208    .text._Z5scalefff9CurveType:00000000000000a8 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccstwFbn.s:17     .text._Z5scalefff9CurveType:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccstwFbn.s:26     .text._Z5scalefff9CurveType:0000000000000000 _Z5scalefff9CurveType
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccstwFbn.s:81     .text._Z5scalefff9CurveType:0000000000000042 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccstwFbn.s:85     .text._Z5scalefff9CurveType:0000000000000046 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccstwFbn.s:208    .text._Z5scalefff9CurveType:00000000000000a8 $d
 
 UNDEFINED SYMBOLS
 logf
