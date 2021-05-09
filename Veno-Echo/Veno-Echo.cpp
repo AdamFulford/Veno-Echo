@@ -141,9 +141,6 @@ bool PostFilters{false};
 
 std::atomic<bool> save_flag{};
 
-float DELAYL_DEBUG{};
-float DELAYR_DEBUG{};
-
 static Adsr FwdRevLEnv;
 static Adsr FwdRevREnv;
 
@@ -1676,18 +1673,12 @@ void Update_Buttons()
     } 
 
     syncMode = Sync.Pressed() ? true : false;
-
-    //update syncMode
-    //delayL.SetSync(syncMode);
-    //delayR.SetSync(syncMode);
 }
 
 void Update_DelayBaseTempo()
 {
     delayL.SetBaseTempo(BaseTempo.getTapLength());
     delayR.SetBaseTempo(BaseTempo.getTapLength());
-    DELAYL_DEBUG = delayL.GetDelayTime();
-    DELAYR_DEBUG = delayR.GetDelayTime();
 }
 
 void Update_DelayTempoLEDs()
