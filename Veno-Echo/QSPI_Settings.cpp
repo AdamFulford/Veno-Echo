@@ -65,10 +65,12 @@ int SaveSettings(const Settings &currentSetting)
 
     hw.qspi_handle.mode = DSY_QSPI_MODE_INDIRECT_POLLING;
 	dsy_qspi_init(&hw.qspi_handle);
-    dsy_qspi_erase(base, base + ((BUFF_SIZE + 1) * sizeof(membuff[0])));
-
-    int retvalue{};
-    retvalue = dsy_qspi_write(base, (BUFF_SIZE + 1) * sizeof(membuff[0]), (uint8_t*)writebuff);
+    //dsy_qspi_erase( base, base + ( BUFF_SIZE * sizeof(membuff[0]) ) );  //this appears to cause problems?
+    dsy_qspi_erase( base, base + sizeof(membuff) );  //this appears to cause problems?
+    
+    int retvalue{1};    //initialise as not 0
+    //retvalue = dsy_qspi_write(base, BUFF_SIZE * sizeof(membuff[0]), (uint8_t*)writebuff );
+    retvalue = dsy_qspi_write(base, sizeof(membuff), (uint8_t*)writebuff );
     dsy_qspi_deinit();
     return retvalue;
 }

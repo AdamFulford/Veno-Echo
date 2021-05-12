@@ -123,8 +123,8 @@ float width_CV{};
 
 float filterXfade{};
 
-TempoDivs div_L{};
-TempoDivs div_R{};
+//TempoDivs div_L{};
+//TempoDivs div_R{};
 
 float ModDepth{0.0f};   //100.0 is a lot!
 
@@ -136,10 +136,15 @@ bool shift{false};  //global variable for secondary shift functions
 bool mute{};
 
 bool ClockInFlag{false};
-
 bool PostFilters{false};
 
 std::atomic<bool> save_flag{};
+
+SaveState saveState{IDLE};
+
+float DELAYL_DEBUG;
+float DELAYR_DEBUG;
+float PHASE_DEBUG;
 
 static Adsr FwdRevLEnv;
 static Adsr FwdRevREnv;
@@ -267,8 +272,6 @@ static int Counter{};
 
 Counter = (Counter + 1) % updateDiv;
 
-if(!save_flag)  //don't check ADCs if saving!
-{
     /*
         //each call generate random dither length between 0 and 14
         uint16_t randomDither{uint16_t (rand() % 5)};
@@ -294,7 +297,10 @@ if(!save_flag)  //don't check ADCs if saving!
             break;
 
             case 2:
-                Update_DelayTimeL();
+                if(saveState != SAVING)
+                {
+                    Update_DelayTimeL();
+                }
             break;
 
             case 3:
@@ -302,7 +308,10 @@ if(!save_flag)  //don't check ADCs if saving!
             break;
 
             case 4:
-                Update_DelayTimeR();
+                if(saveState != SAVING) //don't check ADCs 
+                {
+                    Update_DelayTimeR();
+                }
             break;
 
             case 5:
@@ -310,7 +319,10 @@ if(!save_flag)  //don't check ADCs if saving!
             break;
 
             case 6:
-                Update_feedbackL();
+                if(saveState != SAVING) //don't check ADCs 
+                {
+                    Update_feedbackL();
+                }
             break;
 
             case 7:
@@ -318,7 +330,10 @@ if(!save_flag)  //don't check ADCs if saving!
             break;
 
             case 8:
-                Update_feedbackR();
+                if(saveState != SAVING) //don't check ADCs 
+                {
+                    Update_feedbackR();
+                }
             break;
 
             case 9:
@@ -326,7 +341,10 @@ if(!save_flag)  //don't check ADCs if saving!
             break;
 
             case 10:
-                Update_drywet();
+                if(saveState != SAVING) //don't check ADCs 
+                {
+                    Update_drywet();
+                }
             break;
 
             case 11:
@@ -334,18 +352,26 @@ if(!save_flag)  //don't check ADCs if saving!
             break;
 
             case 12:
-                Update_width();
+                if(saveState != SAVING) //don't check ADCs 
+                {
+                    Update_width();
+                }
             break;
 
             case 13:
-                Update_crossfeedback();
+                if(saveState != SAVING) //don't check ADCs 
+                {
+                    Update_crossfeedback();
+                }
             break;
 
             case 14:
-                Update_filterXfade();
+                if(saveState != SAVING) //don't check ADCs 
+                {
+                    Update_filterXfade();
+                }
             break;
         }
-}
 
     for(size_t i = 0; i < size; i += 2)
     {   
@@ -729,9 +755,12 @@ int main(void)
 
     //load settings from flash
 
-    //Settings SavedSettings{LoadSettings()};
-    ApplySettings(defaultAltControls);
-    AltControls = defaultAltControls;
+    Settings SavedSettings{LoadSettings()};
+    //ApplySettings(defaultAltControls);
+    //AltControls = defaultAltControls;
+
+    ApplySettings(SavedSettings);
+    AltControls = SavedSettings;
 
     //initialize DAC
 
@@ -760,21 +789,51 @@ int main(void)
     
 
      for(;;)
-     {
-     //   
-/*
-        if(save_flag)
-        {
+     {  
 
-            if (SaveSettings(AltControls) == DSY_MEMORY_OK)
+        static uint32_t saveTimer{};
+        //static bool SaveWaitFlag{};
+       
+        if(save_flag)   //if save_flag is set
+        {
+            save_flag = false;
+            saveState = WAITING;    //set flag - start waiting
+            saveTimer = System::GetNow();   //reset timer
+        }
+        
+        else    //save flag not set
+        {
+           if(saveState == WAITING)    //wait flag set (waiting)
+           {
+               if(System::GetNow() - saveTimer > 5000)  //5second wait to save
+                {
+                    saveState = SAVING; //stop reading ADCs temporarily
+                    
+                    Settings ToSave{AltControls};   //copy settings
+                    if (SaveSettings(ToSave) == DSY_MEMORY_OK)  //save settings
+                    {
+                    }
+                }
+
+                else{} //still waiting
+
+           }
+
+           if(saveState == SAVING)
+           {
+            if(System::GetNow() - saveTimer > 5500) //additional 0.5 second wait
             {
-                //reset flag
-                //System::Delay(1000);
-                save_flag = false;
+                    saveState = IDLE;   //reset saveState
             }
+            else{} //ADCs paused
+
+           }
+
+           else //IDLE - do nothing
+           {
+           }
         }
 
-*/
      }
 
 }
@@ -872,6 +931,7 @@ void Update_DelayTimeL()
             delaysR_REV.SetDelayTime(Rev_DelayTime); 
             //save setting:
             AltControls.RevLength = Rev_DelayTime;
+            save_flag = true;
         }
     }
     
@@ -971,6 +1031,7 @@ void Update_DelayTimeR()
             BaseTempo.setTapRatio(GetTapRatio(tapRatio));
             //save setting:
             AltControls.tapRatio = GetTapRatio(tapRatio);
+            save_flag = true;
         }
     }
     
@@ -1059,6 +1120,7 @@ void Update_feedbackL()
             HPF_L_post.SetFreq(HPCutoff);
             HPF_R_post.SetFreq(HPCutoff);
             AltControls.HP_Cutoff = HPCutoff;
+            save_flag = true;
         }
     }
 }
@@ -1149,6 +1211,7 @@ void Update_feedbackR()
             LPF_L_post.SetFreq(LPCutoff);
             LPF_R_post.SetFreq(LPCutoff);
             AltControls.LP_Cutoff = LPCutoff;
+            save_flag = true;
         }
     }
 }
@@ -1263,6 +1326,7 @@ void Update_drywet()
             HPF_L_post.SetRes(Res);
             HPF_R_post.SetRes(Res);
             AltControls.Resonance = Res;
+            save_flag = true;
         }
     }
 }
@@ -1349,6 +1413,7 @@ void Update_width()
         {
             ModDepth = scale(width_Pot,minModDepth,maxModDepth,LINEAR); 
             AltControls.ModDepth = ModDepth;
+            save_flag = true;
         }
     }
 }
@@ -1427,6 +1492,7 @@ void Update_crossfeedback()
             float modRate{scale(crossfeedback_Pot,minModRate,maxModRate,LINEAR)};
             lfo.SetFreq(modRate);
             AltControls.ModFreq = modRate;
+            save_flag = true;
         }
     }
 }
@@ -1517,6 +1583,7 @@ void Update_filterXfade()
               //do nothing
             }
             AltControls.FilterPrePost = filterXfade_Pot;
+            save_flag = true;
         }  
     }
 }
@@ -1669,6 +1736,7 @@ void Update_Buttons()
                 ApplySettings(defaultAltControls);
                 AltControls = defaultAltControls;
                 resetTime = System::GetNow();
+                save_flag = true;
             }
     } 
 
@@ -1685,6 +1753,8 @@ void Update_DelayTempoLEDs()
 {    
     delayL.updateTempoLED(syncMode);
     delayR.updateTempoLED(syncMode);
+    DELAYL_DEBUG = delayL.GetDelayTime();
+    DELAYR_DEBUG = delayR.GetDelayTime();
 }
 
 void Update_BaseTempoLED()
@@ -1702,6 +1772,7 @@ void Update_BaseTempoLED()
     //update base phase for both delay lines
     delayL.SetBasePhase( dividedPhase );
     delayR.SetBasePhase( dividedPhase );
+    PHASE_DEBUG = dividedPhase;
 }
 
 

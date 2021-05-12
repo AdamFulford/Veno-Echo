@@ -120,4 +120,11 @@ enum pickupState
     PICKEDUP,
 };
 
+enum SaveState
+{
+    IDLE,
+    WAITING,
+    SAVING,
+};
+
 #endif
