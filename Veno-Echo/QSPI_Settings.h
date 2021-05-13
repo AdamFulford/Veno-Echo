@@ -39,6 +39,9 @@ struct Settings
     float LP_Cutoff;
     float Resonance;
     float FilterPrePost;
+    float tapLength;
+    float L_Rev;
+    float R_Rev;
 };
 
 //extern Settings AltControls;

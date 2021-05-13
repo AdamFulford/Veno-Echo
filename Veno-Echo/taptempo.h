@@ -57,22 +57,30 @@ class Taptempo
         clockThresh_ = 10000; //Us change
     }
     ~Taptempo() {}
-
-    void init(uint32_t mintap, uint32_t maxtap, float tap_tolerance); 
+    
     //set mintap (ms), maxtap (ms), tap tolerance
+    void init(uint32_t mintap, uint32_t maxtap, float tap_tolerance); 
 
+   //call when a tap is triggered
     bool tap(); 
-    //call when a tap is triggered
-
+ 
+   //call when a clock trigger is receieved
     bool clock();
-    //call when a clock trigger is receieved
-
+ 
+    //outputs tap length in Us
     float getTapLength();   
-    //outputs tap length in ms
-    float getTapFreq(); 
+    
     //outputs tap frequency in Hz
+    float getTapFreq(); 
 
+    //outputs delay length (tempo) in Us;
+    float getDelayLength();
+
+    //set tapratio
     void setTapRatio(float tapRatio);
+
+    //set tapLength in Us
+    void setTapLength(float tapLength);
 
 };
 

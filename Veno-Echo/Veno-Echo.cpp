@@ -199,7 +199,10 @@ constexpr Settings defaultAltControls
     defaultHPCut,   //HP_Cutoff
     defaultLPCut,   //LP_Cutoff
     default_Res,     //Filter Resonance
-    0.0f
+    0.0f,    //filter prepost
+    500000.0f,     //base tempo (in us)
+    0.0f,       //L_Rev
+    0.0f    //R_Rev
 };
 
 void Update_DelayTimeL_CV();
@@ -745,7 +748,7 @@ int main(void)
     lfo.SetFreq(1.0f);
     lfo.SetAmp(1.0f);
 
-    BaseTempo.init(20000,6000000,1.25f);  //max 6 second tap
+    BaseTempo.init(mintap,maxtap,1.25f);  //max 6 second tap
 
     //setup tempo indicators
     //tempoLED_BASE.init(hw.GetPin(14),hw.AudioSampleRate());
@@ -805,7 +808,7 @@ int main(void)
         {
            if(saveState == WAITING)    //wait flag set (waiting)
            {
-               if(System::GetNow() - saveTimer > 5000)  //5second wait to save
+               if(System::GetNow() - saveTimer > 1000)  //1second wait to save
                 {
                     saveState = SAVING; //stop reading ADCs temporarily
                     
@@ -821,7 +824,7 @@ int main(void)
 
            if(saveState == SAVING)
            {
-            if(System::GetNow() - saveTimer > 5500) //additional 0.5 second wait
+            if(System::GetNow() - saveTimer > 1200) //additional 0.2 second wait
             {
                     saveState = IDLE;   //reset saveState
             }
@@ -1623,6 +1626,8 @@ void UpdateClock()
             if(BaseTempo.tap()) //if valid tap resistered
             {
                 tempoLED_BASE.setTempo(BaseTempo.getTapFreq()); //set new base freq
+                AltControls.tapLength = BaseTempo.getTapLength();
+                save_flag = true;
             }
         }
     }
@@ -1650,13 +1655,29 @@ void Update_Buttons()
     if (ReverseGateL.RisingEdge())
     {
         Rev_L_sw.toggle();
-        //resetTime = System::GetNow();
+        if(Rev_L_sw.getState())
+        {
+            AltControls.L_Rev = 1.0f;
+        }
+        else
+        {
+            AltControls.L_Rev = 0.0f;
+        }
+        save_flag = true;
     }
 
     if (ReverseGateR.RisingEdge())
     {
         Rev_R_sw.toggle();
-        //resetTime = System::GetNow();
+        if(Rev_R_sw.getState())
+        {
+            AltControls.R_Rev = 1.0f;
+        }
+        else
+        {
+            AltControls.R_Rev = 0.0f;
+        }
+        save_flag = true;
     }
 
     //buttons
@@ -1668,6 +1689,15 @@ void Update_Buttons()
         {
             resetTime = System::GetNow();
         }
+        if(Rev_L_sw.getState())
+        {
+            AltControls.L_Rev = 1.0f;
+        }
+        else
+        {
+            AltControls.L_Rev = 0.0f;
+        }
+        save_flag = true;
     }
 
     if (Rev_L_sw.FallingEdge())
@@ -1682,6 +1712,15 @@ void Update_Buttons()
         {
             resetTime = System::GetNow();
         }
+        if(Rev_R_sw.getState())
+        {
+            AltControls.R_Rev = 1.0f;
+        }
+        else
+        {
+            AltControls.R_Rev = 0.0f;
+        }
+        save_flag = true;
     }
 
     if (Rev_R_sw.FallingEdge())
@@ -1694,6 +1733,8 @@ void Update_Buttons()
         if(BaseTempo.tap()) //if tempo changed
         {
             tempoLED_BASE.setTempo(BaseTempo.getTapFreq());
+            AltControls.tapLength = BaseTempo.getTapLength();
+            save_flag = true;
         }
         tempoLED_BASE.resetPhase();
         
@@ -1745,8 +1786,8 @@ void Update_Buttons()
 
 void Update_DelayBaseTempo()
 {
-    delayL.SetBaseTempo(BaseTempo.getTapLength());
-    delayR.SetBaseTempo(BaseTempo.getTapLength());
+    delayL.SetBaseTempo(BaseTempo.getDelayLength());
+    delayR.SetBaseTempo(BaseTempo.getDelayLength());
 }
 
 void Update_DelayTempoLEDs()
@@ -1878,6 +1919,38 @@ void ApplySettings(const Settings &setting)
     else
     {
         PostFilters = false;    //default to pre filter
+    }
+
+    //if between min and max tap length
+    if( (setting.tapLength >= static_cast<float> (mintap)) 
+        && (setting.tapLength <= static_cast<float> (maxtap)) )
+    {
+        BaseTempo.setTapLength(setting.tapLength);
+        tempoLED_BASE.setTempo(BaseTempo.getTapFreq());
+    }
+
+    else
+    {
+        BaseTempo.setTapLength(defaultAltControls.tapLength);
+        tempoLED_BASE.setTempo(BaseTempo.getTapFreq());
+    }
+
+    if((setting.L_Rev > 0.49f)) //if more than half
+    {
+        Rev_L_sw.turnON();
+    }
+    else    //default OFF
+    {
+        Rev_L_sw.turnOFF();
+    }
+
+    if((setting.R_Rev > 0.49f)) //if more than half
+    {
+        Rev_R_sw.turnON();
+    }
+    else    //default OFF
+    {
+        Rev_R_sw.turnOFF();
     }
 
 }

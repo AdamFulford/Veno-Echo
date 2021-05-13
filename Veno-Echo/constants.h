@@ -34,6 +34,9 @@ constexpr float minDelay{48000 * 0.08f};
 constexpr float maxRevDelay{48000 * 5.0f};
 constexpr float minRevDelay{25000.0f};
 
+constexpr int mintap{20000};
+constexpr int maxtap{6000000};
+
 constexpr float maxModAmp{200.0f};
 
 constexpr float maxModRate{10.0f};

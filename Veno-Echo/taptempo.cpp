@@ -122,7 +122,7 @@
     }
     
     //outputs tap length in Us
-    float Taptempo::getTapLength()
+    float Taptempo::getDelayLength()
     {
         static float tempo_Out{};
         static float tempo_last{};
@@ -143,8 +143,19 @@
         return 1.0f / (tempo_/ 1000000.0f); //in Hz
     }
 
+    //outputs delay length in Us;
+    float Taptempo::getTapLength()
+    {
+        return static_cast<float>(lastTapLength_);
+    }
+
     void Taptempo::setTapRatio(float tapRatio)
     {
         tapRatio_ = tapRatio;
     }
     
+    void Taptempo::setTapLength(float tapLength)
+    {
+        lastTapLength_ = static_cast<uint32_t>(tapLength);
+        tempo_ = tapLength / tapRatio_; 
+    }
