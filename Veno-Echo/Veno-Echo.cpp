@@ -1152,7 +1152,6 @@ void Update_feedbackR()
         {
             lastShift = shift;
             feedbackR_pickup = false;   //set to not picked up
-            feedbackR_Last = feedbackR_Pot; //update last value
             feedbackR_new = feedbackR_Pot;  //update new value
         } 
         else    //not a recent shift change
