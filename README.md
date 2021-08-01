@@ -58,10 +58,12 @@ SPECIFICATIONS
 
 How to flash Firmware:
 
+If you are using Windows you may need to reset the Seed's USB driver before proceeding. Check out the instructions using Zadig here: https://github.com/electro-smith/DaisyWiki/wiki/Using-Zadig-to-Reset-USB-Driver-(Windows-Only)
+
 1) Download the latest firmware .bin file from Veno-Echo/Firmware
 2) Connect the Veno-Echo to your computer via the micro-USB port on the back
-3) Press both buttons on the back of the module (either side of the micro-USB port)
-4) Go to https://electro-smith.github.io/Programmer/ using Chrome
-5) Click Connect, select 'DFU in FS Mode - Paired' and Connect
-6) Under 'Or select a file from your computer' hit Browse, and point it at the downloaded .bin file
-7) Hit Program and wait until it completes.
+4) Press both buttons on the back of the module (either side of the micro-USB port)
+5) Go to https://electro-smith.github.io/Programmer/ using Chrome
+6) Click Connect, select 'DFU in FS Mode - Paired' and Connect
+7) Under 'Or select a file from your computer' hit Browse, and point it at the downloaded .bin file
+8) Hit Program and wait until it completes.
