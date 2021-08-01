@@ -145,6 +145,7 @@ SaveState saveState{IDLE};
 float DELAYL_DEBUG;
 float DELAYR_DEBUG;
 float PHASE_DEBUG;
+float CLOCK_DEBUG;
 
 static Adsr FwdRevLEnv;
 static Adsr FwdRevREnv;
@@ -1793,8 +1794,9 @@ void Update_DelayTempoLEDs()
 {    
     delayL.updateTempoLED(syncMode);
     delayR.updateTempoLED(syncMode);
-    DELAYL_DEBUG = delayL.GetDelayTime();
-    DELAYR_DEBUG = delayR.GetDelayTime();
+    //DELAYL_DEBUG = delayL.GetDelayTime();
+    //DELAYR_DEBUG = delayR.GetDelayTime();
+    //CLOCK_DEBUG = BaseTempo.getDelayLength();
 }
 
 void Update_BaseTempoLED()
