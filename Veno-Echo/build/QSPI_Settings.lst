@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
   34              		@ link register save eliminated.
   35              	.LBB55:
   36              	.LBI55:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 2
 
 
   37              		.file 2 "../libdaisy/src/sys/system.h"
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
   54:../libdaisy/src/sys/system.h ****     };
   55:../libdaisy/src/sys/system.h **** 
   56:../libdaisy/src/sys/system.h ****     System() {}
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 3
 
 
   57:../libdaisy/src/sys/system.h ****     ~System() {}
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
   49              		.file 4 "../libdaisy/src/per/adc.h"
    1:../libdaisy/src/per/adc.h **** #pragma once
    2:../libdaisy/src/per/adc.h **** #ifndef DSY_ADC_H
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 4
 
 
    3:../libdaisy/src/per/adc.h **** #define DSY_ADC_H /**< Macro */
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
   57:../libdaisy/src/per/adc.h ****     dsy_gpio pin_;                   /**< & */
   58:../libdaisy/src/per/adc.h ****     dsy_gpio mux_pin_[MUX_SEL_LAST]; /**< & */
   59:../libdaisy/src/per/adc.h ****     uint8_t  mux_channels_;          /**< & */
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 5
 
 
   60:../libdaisy/src/per/adc.h **** };
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
   23:../libdaisy/src/hid/audio.h ****         ERR,
   24:../libdaisy/src/hid/audio.h ****     };
   25:../libdaisy/src/hid/audio.h **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 6
 
 
   26:../libdaisy/src/hid/audio.h ****     /** Non-Interleaving Callback format. Both arrays arranged by float[chn][sample] */
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
   22:QSPI_Settings.cpp **** 
   23:QSPI_Settings.cpp **** #include "QSPI_Settings.h"
   24:QSPI_Settings.cpp **** #include <string.h>
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 7
 
 
   25:QSPI_Settings.cpp **** #include <math.h>
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
   56:QSPI_Settings.cpp ****     uint8_t writebuff[(4 * BUFF_SIZE) + 1];
   57:QSPI_Settings.cpp ****     writebuff[0] = 0; //ignore first value?
  100              		.loc 6 57 18 view .LVU17
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 8
 
 
  101 0008 0023     		movs	r3, #0
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
  139              	.LVL2:
   41:QSPI_Settings.cpp ****     inbuff[1] = currentSetting.tapRatio;
  140              		.loc 6 41 15 view .LVU35
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 9
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 9
 
 
  141 0034 0193     		str	r3, [sp, #4]	@ float
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
  174              		.loc 6 64 30 is_stmt 0 discriminator 2 view .LVU57
  175 0042 C3F30726 		ubfx	r6, r3, #8, #8
   65:QSPI_Settings.cpp ****         writebuff[(4*i) + 3] = bytes[2];
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 10
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 10
 
 
  176              		.loc 6 65 30 discriminator 2 view .LVU58
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
  212              		.loc 6 72 5 is_stmt 1 view .LVU76
  213              		.loc 6 72 19 is_stmt 0 view .LVU77
  214 006a 2068     		ldr	r0, [r4]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 11
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 11
 
 
  215 006c 00F1B401 		add	r1, r0, #180
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
   83:QSPI_Settings.cpp **** {
  261              		.loc 6 83 1 is_stmt 1 view -0
  262              		.cfi_startproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 12
 
 
  263              		@ args = 0, pretend = 0, frame = 96
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
  303 0024 2370     		strb	r3, [r4]
   93:QSPI_Settings.cpp ****     dsy_qspi_deinit();
  304              		.loc 6 93 5 is_stmt 1 view .LVU101
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 13
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 13
 
 
  305 0026 01AC     		add	r4, sp, #4
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
  346              		.loc 6 103 21 is_stmt 0 discriminator 2 view .LVU114
  347 0042 009B     		ldr	r3, [sp]	@ float
  348 0044 0436     		adds	r6, r6, #4
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 14
 
 
  349              	.LBE66:
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
  108:QSPI_Settings.cpp **** SettingsInFlash.ModDepth = readbuff[2];
  377              		.loc 6 108 1 is_stmt 1 view .LVU128
  110:QSPI_Settings.cpp **** SettingsInFlash.HP_Cutoff = readbuff[4];
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 15
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 15
 
 
  378              		.loc 6 110 27 is_stmt 0 view .LVU129
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
  412              		.loc 6 115 1 is_stmt 1 view .LVU149
  115:QSPI_Settings.cpp **** SettingsInFlash.L_Rev = readbuff[9];
  413              		.loc 6 115 23 is_stmt 0 view .LVU150
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 16
 
 
  414 0078 7A62     		str	r2, [r7, #36]	@ float
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
  464 0000 0348     		ldr	r0, .L20
  465 0002 0023     		movs	r3, #0
  466              	.LBE75:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 17
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 17
 
 
  467              	.LBE74:
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
  486              	.LBE78:
  487              	.LBB79:
  488              	.LBI79:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 18
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 18
 
 
   84:../libdaisy/src/per/adc.h ****     ~AdcHandle() {}
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
   47:../libdaisy/src/per/dac.h ****         POLLING,
   48:../libdaisy/src/per/dac.h ****         DMA,
   49:../libdaisy/src/per/dac.h ****     };
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 19
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 19
 
 
   50:../libdaisy/src/per/dac.h **** 
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
  512              		.loc 2 56 5 is_stmt 1 view .LVU171
   56:../libdaisy/src/sys/system.h ****     ~System() {}
  513              		.loc 2 56 5 is_stmt 0 view .LVU172
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 20
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 20
 
 
  514              	.LBE84:
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
  567              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  568              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  569              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 21
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 21
 
 
  570              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
@@ -1253,30 +1253,30 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 1
  619              		.file 70 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
  620              		.file 71 "QSPI_Settings.h"
  621              		.file 72 "../libdaisy/src/dev/sr_595.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s 			page 22
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 QSPI_Settings.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:17     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:26     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD2Ev
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:26     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD1Ev
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:67     .text._Z12SaveSettingsRK8Settings:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:75     .text._Z12SaveSettingsRK8Settings:0000000000000000 _Z12SaveSettingsRK8Settings
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:244    .text._Z12SaveSettingsRK8Settings:000000000000008c $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:250    .text._Z12LoadSettingsv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:258    .text._Z12LoadSettingsv:0000000000000000 _Z12LoadSettingsv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:429    .text._Z12LoadSettingsv:0000000000000080 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:435    .text.startup._GLOBAL__sub_I_base:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:442    .text.startup._GLOBAL__sub_I_base:0000000000000000 _GLOBAL__sub_I_base
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:523    .text.startup._GLOBAL__sub_I_base:0000000000000010 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:532    .init_array:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:547    .data.base:0000000000000000 base
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:536    .bss._ZL2hw:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:540    .bss._ZL2hw:0000000000000000 _ZL2hw
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:543    .data.base:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:554    .qspiflash_bss:0000000000000000 _ZL7membuff
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccBsv7Dn.s:550    .qspiflash_bss:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:17     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:26     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD2Ev
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:26     .text._ZN5daisy9DaisySeedD2Ev:0000000000000000 _ZN5daisy9DaisySeedD1Ev
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:67     .text._Z12SaveSettingsRK8Settings:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:75     .text._Z12SaveSettingsRK8Settings:0000000000000000 _Z12SaveSettingsRK8Settings
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:244    .text._Z12SaveSettingsRK8Settings:000000000000008c $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:250    .text._Z12LoadSettingsv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:258    .text._Z12LoadSettingsv:0000000000000000 _Z12LoadSettingsv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:429    .text._Z12LoadSettingsv:0000000000000080 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:435    .text.startup._GLOBAL__sub_I_base:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:442    .text.startup._GLOBAL__sub_I_base:0000000000000000 _GLOBAL__sub_I_base
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:523    .text.startup._GLOBAL__sub_I_base:0000000000000010 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:532    .init_array:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:547    .data.base:0000000000000000 base
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:536    .bss._ZL2hw:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:540    .bss._ZL2hw:0000000000000000 _ZL2hw
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:543    .data.base:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:554    .qspiflash_bss:0000000000000000 _ZL7membuff
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccxjv60s.s:550    .qspiflash_bss:0000000000000000 $d
                            .group:0000000000000000 _ZN5daisy9DaisySeedD5Ev
 
 UNDEFINED SYMBOLS

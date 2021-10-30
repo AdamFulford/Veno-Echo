@@ -518,8 +518,11 @@ else
         combinedL = HardLimit(combinedL,AudioLimit);
         combinedR = HardLimit(combinedR,AudioLimit);
 
-        delayL.Write( DcBlock_LFB.Process(combinedL ) );
-        delayR.Write( DcBlock_RFB.Process(combinedR ) );
+        //delayL.Write( DcBlock_LFB.Process(combinedL ) );
+        //delayR.Write( DcBlock_RFB.Process(combinedR ) );
+
+        delayL.Write(combinedL);
+        delayR.Write(combinedR);
 
         // floats for wet dry mix
         float mixL;
@@ -644,6 +647,7 @@ int main(void)
     // initialize hardware.
     hw.Configure();
     hw.Init();
+    //hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_96KHZ);
     
     //Buttons or switches with status LEDs
 
