@@ -68,7 +68,7 @@ void Write(const float& in);
 //this must be called once per sample
 void SetModulation(const float& mod){mod_ = mod;}
 //void SetSync(const bool& syncMode){syncMode_ = syncMode;}
-void SetBaseTempo(const float& tempo){baseTempo_ = tempo;}
+void SetBaseTempo(const uint32_t& tempo){baseTempo_ = tempo;}
 void SetBasePhase(const float& basePhase){basePhase_ = basePhase;}
 void updateTempoLED(bool syncMode);
 
@@ -76,7 +76,7 @@ float GetDelayTime();
 
 private:
 
-float GetDiv(float potValue);
+int GetDiv(float potValue);
 
 CrossFade Xfade_[totalNumHeads]; //crossfades - one for each head
 Adsr XfadeEnv_[totalNumHeads];  //envelopes to drive crossfades 
@@ -98,13 +98,13 @@ bool active_head_set_;  //true = set 1, false = set 2
 size_t next_head_set_;
 bool waiting_flag_;
 float samplerate_;
-uint32_t timethresh_;
+uint32_t timethresh_,baseTempo_;
 float output_;
 bool TimeChange_;
 TempoDivs div_;
 //bool syncMode_;
 float basePhase_;
-float baseTempo_, delayLast_;
+float delayLast_;
 
 };
 

@@ -71,7 +71,7 @@ float delaytime{};
 
 if(syncMode)
 {
-    delaytime = GetDiv(delaytime_pot) * baseTempo_ * 0.048f;
+    delaytime = static_cast<float> (GetDiv(delaytime_pot) * baseTempo_) * 0.048f;
 }
 
 else
@@ -79,8 +79,8 @@ else
     delaytime = scale(delaytime_pot,minDelay,maxDelay,LOGARITHMIC);
 }
     
-//If change in delaytime exceeds 0.5% of last value
-if( abs( delaytime - delayLast_)> (0.005 * delayLast_)) 
+//If change in delaytime exceeds 0.1% of last value
+if( abs( delaytime - delayLast_)> (0.001 * delayLast_)) 
 {
     timer_ = System::GetNow(); //reset timer
     waiting_flag_ = true;
@@ -196,78 +196,78 @@ float DelayMulti::GetDelayTime()
     return retVal;
 }
 
-float DelayMulti::GetDiv(float potValue)
+int DelayMulti::GetDiv(float potValue)
 {
-    float retVal{};
+    int retVal{};
 
     if (potValue < 0.0909f)
     {
-        retVal = (1.0f / 6.0f);
+        retVal = 4;
         div_ = DIV6;
     }
 
     else if (potValue < 0.1818f)
     {
-       retVal = (1.0f / 5.0f);
+       retVal = static_cast<int> (24.f/ 5.f);
        div_ = DIV5;
     }
 
     else if (potValue < 0.2727f)
     {
-        retVal = (1.0f / 4.0f);
+        retVal = 6;
         div_ = DIV4;
     }
 
     else if (potValue < 0.3636f)
     {
-        retVal = (1.0f / 3.0f);
+        retVal = 8;
         div_ = DIV3;
     }
 
     else if (potValue < 0.4545f)
     {
-        retVal = (1.0f / 2.0f);
+        retVal = 12;
         div_ = DIV2;
     }
 
     else if (potValue <  0.5455f)
     {
-        retVal = 1.0f;
+        retVal = 24;
         div_ = UNITY;
     }
 
     else if (potValue < 0.6364f)
     {
-        retVal = 2.0f;
+        retVal = 48;
         div_ = MULT2;
     }
 
     else if (potValue < 0.7273f)
     {
-        retVal = 3.0f;
+        retVal = 72;
         div_ = MULT3;
     }
 
     else if (potValue < 0.8182f)
     {
-        retVal = 4.0f;
+        retVal = 96;
         div_ = MULT4;
     }
     
     else if (potValue < 0.9091f)
     {
-        retVal = 5.0f;
+        retVal = 120;
         div_ = MULT5;
     }
 
     else if (potValue <= 1.0f)
     {
-       retVal = 6.0f; 
+       retVal = 144; 
        div_ = MULT6;
     }
     else
     {
-        retVal = 1.0f; 
+        retVal = 24; 
        div_ = UNITY;
     }
 

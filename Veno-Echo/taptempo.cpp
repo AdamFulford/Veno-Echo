@@ -30,7 +30,8 @@
         tap_tolerance_ = tap_tolerance;
         tapLength_ = 0;
         lastTapLength_ = 0;
-        tempo_ = 500000.0f; //in Us. Default 120BPM
+        tempo_ = 500000; //in Us. Default 120BPM
+        tempoFloat_ = 500000.0f;
         lastTime_ = 0;
         currentTime_ = 0;
         tapflag_ = false;
@@ -52,8 +53,9 @@
             if(tapflag_)
             {
                 tapflag_ = false;   //reset tapflag
-                tempo_ = static_cast<float>(tapLength_) / tapRatio_;
+                tempoFloat_ = static_cast<float>(tapLength_) / tapRatio_;
                 lastTapLength_ = tapLength_;
+                tempo_ = static_cast<uint32_t>(tempoFloat_ / 24.0f);
                 return true;
             }
 
@@ -66,7 +68,8 @@
                 }
                 else
                 {
-                    tempo_ = static_cast<float>(tapLength_) / tapRatio_;
+                    tempoFloat_ = static_cast<float>(tapLength_) / tapRatio_;
+                    tempo_ = static_cast<uint32_t>(tempoFloat_ / 24.0f);
                     lastTapLength_ = tapLength_;
                     return true;
                 }
@@ -93,27 +96,37 @@
 
     bool Taptempo::clock()
     {
-        currentTime_ = System::GetUs();    //get current time
-        clockLength_ = currentTime_ - lastTime_;  //calculate length between taps
-        lastTime_ = currentTime_;   //always update lastTime_
-        
-        //if clock length changed more than threshold
-        if( abs( static_cast<int> (clockLength_ - lastClockLength_)) > clockThresh_)
+        currentClockTime_ = System::GetUs();    //get current time
+        clockLength_ = currentClockTime_ - lastClockTime_;  //calculate length between taps
+        lastClockTime_ = currentClockTime_;   //always update lastTime_
+        uint32_t ClockTempo{clockLength_};
+        static uint32_t ClockTempoBuff[24];
+        static int index{};
+        //if within tempo limits
+        if(mintap_ <= ClockTempo && ClockTempo <= maxtap_) 
         {
-            //if within tempo limits
-            if(mintap_ <= clockLength_ && clockLength_ <= maxtap_) 
-            {
-                //set tempo_
-                tempo_ = static_cast<float>(clockLength_);
-                lastClockLength_ = clockLength_;
-                return true;
+            //update clockLength_ with rolling average
+            index = (index + 1) % 24;
+            ClockTempoBuff[index] = ClockTempo;
 
+            uint32_t ClockTempoSum{};
+            for(int i=0; i <24; i += 1)
+            {
+                ClockTempoSum += ClockTempoBuff[i];
+            }
+
+            ClockTempo = ClockTempoSum / 24;
+      
+            //set tempo_ every 24:
+            if(index == 0)
+            {
+                tempo_ = ClockTempo;
+                return true;
             }
             else
             {
                 return false;
             }
-
         }
         else
         {
@@ -122,25 +135,25 @@
     }
     
     //outputs tap length in Us
-    float Taptempo::getDelayLength()
+    uint32_t Taptempo::getDelayLength()
     {
-        static float tempo_Out{};
-        static float tempo_last{};
-        fonepole(tempo_Out,tempo_,0.011f); //32Hz cutoff
+         //static float tempo_Out{};
+        // static float tempo_last{};
+        //fonepole(tempo_Out,tempo_,0.011f); //32Hz cutoff
 
-        //if more than .5% of last value
-        if( abs( tempo_Out - tempo_last)> (0.005 * tempo_last)) 
-        {
-            tempo_last = tempo_Out; //update tempo_last
-        }
+         //if more than .5% of last value
+         //if( abs( tempo_Out - tempo_last)> (0.005 * tempo_last)) 
+         //{
+         //    tempo_last = tempo_Out; //update tempo_last
+         //}
 
-        return tempo_last;    //in Us
+        return tempo_;    //in Us
     }  
     
     //outputs tap frequency in Hz
     float Taptempo::getTapFreq()
     {
-        return 1.0f / (tempo_/ 1000000.0f); //in Hz
+        return 1.0f / (24 * tempo_/ 1000000.0f); //in Hz
     }
 
     //outputs delay length in Us;

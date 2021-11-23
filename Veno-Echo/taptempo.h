@@ -33,11 +33,12 @@ class Taptempo
 {
     private:
         uint32_t mintap_,maxtap_;
-        uint32_t currentTime_,lastTime_,lastTapLength_,tapLength_;
-        uint32_t clockLength_, lastClockLength_, clockThresh_;
+        uint32_t currentTime_,currentClockTime_,lastTime_,lastClockTime_,lastTapLength_,tapLength_;
+        uint32_t clockLength_, lastClockLength_, clockThresh_,tempo_;
         bool tapflag_;
-        float tap_tolerance_;
-        float tempo_, tapRatio_;
+        float tap_tolerance_,tempoFloat_;
+        float tapRatio_;
+        int PPQN_;
 
     public:
 
@@ -55,6 +56,7 @@ class Taptempo
         clockLength_ = 0;
         lastClockLength_ = 0;
         clockThresh_ = 10000; //Us change
+        PPQN_=24;
     }
     ~Taptempo() {}
     
@@ -74,7 +76,7 @@ class Taptempo
     float getTapFreq(); 
 
     //outputs delay length (tempo) in Us;
-    float getDelayLength();
+    uint32_t getDelayLength();
 
     //set tapratio
     void setTapRatio(float tapRatio);

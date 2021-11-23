@@ -183,7 +183,9 @@ Switch ReverseGateR;
 
 //Switch TapButton;
 Switch Sync;
-Switch ClockIn;
+dsy_gpio_pin ClockPin{hw.GetPin(5)};
+GateIn ClockIn;
+//Switch ClockIn;
 
 //Tap tempo
 Taptempo BaseTempo; 
@@ -292,7 +294,7 @@ Counter = (Counter + 1) % updateDiv;
             case 0:
                 Update_Buttons();
                 GetModCV();
-                Update_DelayBaseTempo();
+                //Update_DelayBaseTempo();
                 Update_DelayTempoLEDs();
             break;
 
@@ -381,6 +383,7 @@ Counter = (Counter + 1) % updateDiv;
     {   
         UpdateClock(); 
         Update_Mod();
+        Update_DelayBaseTempo();
 
         //get xfade positions from envelopes:
         float FwdRevLXFadepos = FwdRevLEnv.Process(Rev_L_sw.getState());
@@ -663,7 +666,9 @@ int main(void)
 
     //TapButton.Init(hw.GetPin(4), hw.AudioSampleRate() / 48.f);
     Sync.Init(hw.GetPin(23), hw.AudioSampleRate() / static_cast<float> (updateDiv));
-    ClockIn.Init(hw.GetPin(5), hw.AudioSampleRate());
+    ClockIn.Init(&ClockPin);
+
+    //ClockIn.Init(hw.GetPin(5), hw.AudioSampleRate());
     
     FwdRevLEnv.Init(hw.AudioSampleRate());
     FwdRevLEnv.SetTime(ADENV_SEG_ATTACK, FwdRevXFadeTime);
@@ -1615,27 +1620,26 @@ void Update_Mod()
     delayR.SetModulation(modulation_CV + internalmod);
 }
 
-void UpdateClock()
+void UpdateClock() //called every sample
 {
     static int divCounter{};
-    ClockIn.Debounce();
+    //ClockIn.Debounce();
 
     //if clock in pulse received
-    if (ClockIn.RisingEdge())    
+    if (ClockIn.Trig())    
     {   
-        divCounter = (divCounter + 1) % PPQN;
-        //tempoLED_BASE.resetPhase();
-        if(divCounter == 0)
+        //if clock in range
+        if(BaseTempo.clock())
         {
-            if(BaseTempo.tap()) //if valid tap resistered
-            {
-                tempoLED_BASE.setTempo(BaseTempo.getTapFreq()); //set new base freq
-                AltControls.tapLength = BaseTempo.getTapLength();
-                save_flag = true;
-            }
-        }
+            //update with new clock time
+            tempoLED_BASE.setTempo(BaseTempo.getTapFreq()); //set new base freq (Hz)
+            AltControls.tapLength = BaseTempo.getTapLength();
+            save_flag = true;
+        } 
+        //clock time outside of range
+        else
+        {}
     }
-    
 }
 
 void Update_Buttons()
@@ -1654,7 +1658,7 @@ void Update_Buttons()
     ReverseGateR.Debounce();
     //TapButton.Debounce();
     Sync.Debounce();
-    ClockIn.Debounce();
+    //ClockIn.Debounce();
     //gate inputs
     if (ReverseGateL.RisingEdge())
     {
@@ -1788,10 +1792,11 @@ void Update_Buttons()
     syncMode = Sync.Pressed() ? true : false;
 }
 
-void Update_DelayBaseTempo()
+void Update_DelayBaseTempo() // called every 15 samples
 {
-    delayL.SetBaseTempo(BaseTempo.getDelayLength());
-    delayR.SetBaseTempo(BaseTempo.getDelayLength());
+    uint32_t newTempo{BaseTempo.getDelayLength()};
+    delayL.SetBaseTempo(newTempo);
+    delayR.SetBaseTempo(newTempo);
 }
 
 void Update_DelayTempoLEDs()
