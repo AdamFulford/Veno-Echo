@@ -50,7 +50,7 @@ static Svf HPF_R_post;
 static Oscillator lfo;
 static EnvFollow LeftEnv, RightEnv;   //env follower class
 
-static DcBlock DcBlock_LFB, DcBlock_RFB; //DC blocks
+//static DcBlock DcBlock_LFB, DcBlock_RFB; //DC blocks
 
 // Declare a DelayLine of MAX_DELAY number of floats.
 DelayLineMultiTap<float, static_cast<size_t>(48000 * 36.0f)> DSY_SDRAM_BSS delMemsL;
@@ -518,8 +518,8 @@ else
         combinedL = HardLimit(combinedL,AudioLimit);
         combinedR = HardLimit(combinedR,AudioLimit);
 
-        delayL.Write( DcBlock_LFB.Process(combinedL ) );
-        delayR.Write( DcBlock_RFB.Process(combinedR ) );
+        delayL.Write( combinedL );
+        delayR.Write( combinedR );
 
         // floats for wet dry mix
         float mixL;
@@ -740,8 +740,8 @@ int main(void)
     HPF_R_post.SetFreq(defaultHPCut);
     HPF_R_post.SetDrive(defaultDrive);
 
-    DcBlock_LFB.Init(hw.AudioSampleRate());
-    DcBlock_RFB.Init(hw.AudioSampleRate());
+    //DcBlock_LFB.Init(hw.AudioSampleRate());
+    //DcBlock_RFB.Init(hw.AudioSampleRate());
 
     //LFO for modulation of fwd delay time
     lfo.Init(hw.AudioSampleRate());
