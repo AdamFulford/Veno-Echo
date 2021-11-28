@@ -183,7 +183,9 @@ Switch ReverseGateR;
 
 //Switch TapButton;
 Switch Sync;
-Switch ClockIn;
+dsy_gpio_pin ClockPin{hw.GetPin(5)};
+GateIn ClockIn;
+//Switch ClockIn;
 
 //Tap tempo
 Taptempo BaseTempo; 
@@ -659,7 +661,8 @@ int main(void)
 
     //TapButton.Init(hw.GetPin(4), hw.AudioSampleRate() / 48.f);
     Sync.Init(hw.GetPin(23), hw.AudioSampleRate() / static_cast<float> (updateDiv));
-    ClockIn.Init(hw.GetPin(5), hw.AudioSampleRate());
+     ClockIn.Init(&ClockPin);
+    //ClockIn.Init(hw.GetPin(5), hw.AudioSampleRate());
     
     FwdRevLEnv.Init(hw.AudioSampleRate());
     FwdRevLEnv.SetTime(ADENV_SEG_ATTACK, FwdRevXFadeTime);
@@ -1614,10 +1617,8 @@ void Update_Mod()
 void UpdateClock()
 {
     static int divCounter{};
-    ClockIn.Debounce();
-
     //if clock in pulse received
-    if (ClockIn.RisingEdge())    
+    if (ClockIn.Trig())     
     {   
         divCounter = (divCounter + 1) % PPQN;
         //tempoLED_BASE.resetPhase();
@@ -1650,7 +1651,7 @@ void Update_Buttons()
     ReverseGateR.Debounce();
     //TapButton.Debounce();
     Sync.Debounce();
-    ClockIn.Debounce();
+    //ClockIn.Debounce();
     //gate inputs
     if (ReverseGateL.RisingEdge())
     {
