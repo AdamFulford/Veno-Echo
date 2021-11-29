@@ -146,6 +146,7 @@ float DELAYL_DEBUG;
 float DELAYR_DEBUG;
 float PHASE_DEBUG;
 float CLOCK_DEBUG;
+bool DEBUG{};
 
 static Adsr FwdRevLEnv;
 static Adsr FwdRevREnv;
@@ -294,7 +295,7 @@ Counter = (Counter + 1) % updateDiv;
             case 0:
                 Update_Buttons();
                 GetModCV();
-                Update_DelayBaseTempo();
+                
                 Update_DelayTempoLEDs();
             break;
 
@@ -383,6 +384,7 @@ Counter = (Counter + 1) % updateDiv;
     {   
         UpdateClock(); 
         Update_Mod();
+        Update_DelayBaseTempo();
 
         //get xfade positions from envelopes:
         float FwdRevLXFadepos = FwdRevLEnv.Process(Rev_L_sw.getState());
@@ -1616,23 +1618,23 @@ void Update_Mod()
 
 void UpdateClock()
 {
-    static int divCounter{};
+    static uint32_t ClockCounter{};
+
+    ClockCounter += 1; //increment by one
     //if clock in pulse received
     if (ClockIn.Trig())     
     {   
-        divCounter = (divCounter + 1) % PPQN;
+        DEBUG = true;
         //tempoLED_BASE.resetPhase();
-        if(divCounter == 0)
-        {
-            if(BaseTempo.tap()) //if valid tap resistered
+            if(BaseTempo.clock(ClockCounter)) //if valid tap resistered
             {
                 tempoLED_BASE.setTempo(BaseTempo.getTapFreq()); //set new base freq
                 AltControls.tapLength = BaseTempo.getTapLength();
                 save_flag = true;
             }
-        }
-    }
-    
+            ClockCounter = 0; //reset counter
+            DEBUG = false;
+    } 
 }
 
 void Update_Buttons()

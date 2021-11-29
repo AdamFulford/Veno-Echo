@@ -91,29 +91,40 @@
 
     }
 
-    bool Taptempo::clock()
+bool Taptempo::clock(uint32_t count)
     {
-        currentTime_ = System::GetUs();    //get current time
-        clockLength_ = currentTime_ - lastTime_;  //calculate length between taps
-        lastTime_ = currentTime_;   //always update lastTime_
-        
-        //if clock length changed more than threshold
-        if( abs( static_cast<int> (clockLength_ - lastClockLength_)) > clockThresh_)
+        //currentClockTime_ = System::GetUs();    //get current time
+        //clockLength_ = currentClockTime_ - lastClockTime_;  //calculate length between taps
+        //lastClockTime_ = currentClockTime_;   //always update lastTime_
+        uint32_t ClockTempo{count};
+        const int buffsize{8};
+        static uint32_t ClockTempoBuff[buffsize];
+        static int index{};
+        //if within tempo limits
+        if(minclock_ <= ClockTempo && ClockTempo <= maxclock_) 
         {
-            //if within tempo limits
-            if(mintap_ <= clockLength_ && clockLength_ <= maxtap_) 
-            {
-                //set tempo_
-                tempo_ = static_cast<float>(clockLength_);
-                lastClockLength_ = clockLength_;
-                return true;
+            //update clockLength_ with rolling average
+            index = (index + 1) % buffsize;
+            ClockTempoBuff[index] = ClockTempo;
 
+            uint32_t ClockTempoSum{};
+            for(int i=0; i <buffsize; i += 1)
+            {
+                ClockTempoSum += ClockTempoBuff[i];
+            }
+
+            ClockTempo = ClockTempoSum / buffsize;
+      
+            //set tempo_ every 8:
+            if(index % 1 == 0)
+            {
+                tempo_ = static_cast<float> (ClockTempo);
+                return true;
             }
             else
             {
                 return false;
             }
-
         }
         else
         {
@@ -129,18 +140,18 @@
         fonepole(tempo_Out,tempo_,0.011f); //32Hz cutoff
 
         //if more than .5% of last value
-        if( abs( tempo_Out - tempo_last)> (0.005 * tempo_last)) 
-        {
-            tempo_last = tempo_Out; //update tempo_last
-        }
+        //if( abs( tempo_Out - tempo_last)> (0.005 * tempo_last)) 
+        //{
+        //    tempo_last = tempo_Out; //update tempo_last
+       // }
 
-        return tempo_last;    //in Us
+        return tempo_Out;    //in Us
     }  
     
     //outputs tap frequency in Hz
     float Taptempo::getTapFreq()
     {
-        return 1.0f / (tempo_/ 1000000.0f); //in Hz
+        return 1.0f / (tempo_ * 0.0000208333f); //in Hz
     }
 
     //outputs delay length in Us;

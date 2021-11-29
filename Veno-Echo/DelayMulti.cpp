@@ -71,7 +71,8 @@ float delaytime{};
 
 if(syncMode)
 {
-    delaytime = GetDiv(delaytime_pot) * baseTempo_ * 0.048f;
+    //delaytime = GetDiv(delaytime_pot) * baseTempo_ * 0.048f;
+    delaytime = GetDiv(delaytime_pot) * baseTempo_;
 }
 
 else

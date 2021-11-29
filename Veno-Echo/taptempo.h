@@ -32,9 +32,9 @@ using namespace daisysp;
 class Taptempo
 {
     private:
-        uint32_t mintap_,maxtap_;
+        uint32_t mintap_,maxtap_,minclock_,maxclock_;
         uint32_t currentTime_,lastTime_,lastTapLength_,tapLength_;
-        uint32_t clockLength_, lastClockLength_, clockThresh_;
+        uint32_t clockLength_, lastClockLength_, clockThresh_,currentClockTime_,lastClockTime_;
         bool tapflag_;
         float tap_tolerance_;
         float tempo_, tapRatio_;
@@ -47,6 +47,8 @@ class Taptempo
         tap_tolerance_ = 1.25f;
         maxtap_ = 2000000;
         mintap_ = 80000;
+        minclock_ = 3840;
+        maxclock_ = 96000;
         lastTapLength_ = 0;
         tempo_ = 500000.0f;
         lastTime_ = 0;
@@ -65,7 +67,7 @@ class Taptempo
     bool tap(); 
  
    //call when a clock trigger is receieved
-    bool clock();
+    bool clock(uint32_t count);
  
     //outputs tap length in Us
     float getTapLength();   
