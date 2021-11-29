@@ -35,6 +35,9 @@
         currentTime_ = 0;
         tapflag_ = false;
         tapRatio_ = 1.0;
+        PPQN_ = 24;
+        minclock_ = 3840/PPQN_;
+        maxclock_ = 96000/PPQN_;
 
         //dsy_tim_init(); //start timer
         //dsy_tim_start();
@@ -52,7 +55,7 @@
             if(tapflag_)
             {
                 tapflag_ = false;   //reset tapflag
-                tempo_ = static_cast<float>(tapLength_) / tapRatio_;
+                tempo_ = static_cast<float>(tapLength_) / tapRatio_ * 0.048f;
                 lastTapLength_ = tapLength_;
                 return true;
             }
@@ -66,7 +69,7 @@
                 }
                 else
                 {
-                    tempo_ = static_cast<float>(tapLength_) / tapRatio_;
+                    tempo_ = static_cast<float>(tapLength_) / tapRatio_ * 0.048f;
                     lastTapLength_ = tapLength_;
                     return true;
                 }
@@ -97,26 +100,26 @@ bool Taptempo::clock(uint32_t count)
         //clockLength_ = currentClockTime_ - lastClockTime_;  //calculate length between taps
         //lastClockTime_ = currentClockTime_;   //always update lastTime_
         uint32_t ClockTempo{count};
-        const int buffsize{8};
-        static uint32_t ClockTempoBuff[buffsize];
+        //int buffsize{PPQN_};
+        static uint32_t ClockTempoBuff[24];
         static int index{};
         //if within tempo limits
         if(minclock_ <= ClockTempo && ClockTempo <= maxclock_) 
         {
             //update clockLength_ with rolling average
-            index = (index + 1) % buffsize;
+            index = (index + 1) % PPQN_;
             ClockTempoBuff[index] = ClockTempo;
 
             uint32_t ClockTempoSum{};
-            for(int i=0; i <buffsize; i += 1)
+            for(int i=0; i <PPQN_; i += 1)
             {
                 ClockTempoSum += ClockTempoBuff[i];
             }
 
-            ClockTempo = ClockTempoSum / buffsize;
+            ClockTempo = ClockTempoSum;
       
-            //set tempo_ every 8:
-            if(index % 1 == 0)
+            //clock tempo update rate: every pulse if PPQN = 1, or every 12 pulses if PPQN = 24
+            if(index % ((PPQN_ == 24) ? 12: 1) == 0) 
             {
                 tempo_ = static_cast<float> (ClockTempo);
                 return true;
@@ -137,7 +140,7 @@ bool Taptempo::clock(uint32_t count)
     {
         static float tempo_Out{};
         static float tempo_last{};
-        fonepole(tempo_Out,tempo_,0.011f); //32Hz cutoff
+        fonepole(tempo_Out,tempo_,(PPQN_ == 24) ? 0.0011f: 0.011f);
 
         //if more than .5% of last value
         //if( abs( tempo_Out - tempo_last)> (0.005 * tempo_last)) 

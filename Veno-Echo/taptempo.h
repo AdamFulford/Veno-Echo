@@ -38,6 +38,7 @@ class Taptempo
         bool tapflag_;
         float tap_tolerance_;
         float tempo_, tapRatio_;
+        int PPQN_;
 
     public:
 
@@ -47,8 +48,6 @@ class Taptempo
         tap_tolerance_ = 1.25f;
         maxtap_ = 2000000;
         mintap_ = 80000;
-        minclock_ = 3840;
-        maxclock_ = 96000;
         lastTapLength_ = 0;
         tempo_ = 500000.0f;
         lastTime_ = 0;

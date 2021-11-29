@@ -80,8 +80,8 @@ else
     delaytime = scale(delaytime_pot,minDelay,maxDelay,LOGARITHMIC);
 }
     
-//If change in delaytime exceeds 0.5% of last value
-if( abs( delaytime - delayLast_)> (0.005 * delayLast_)) 
+//If change in delaytime exceeds 0.1% of last value
+if( abs( delaytime - delayLast_)> (0.001 * delayLast_)) 
 {
     timer_ = System::GetNow(); //reset timer
     waiting_flag_ = true;
