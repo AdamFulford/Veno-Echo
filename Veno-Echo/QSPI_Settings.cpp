@@ -46,7 +46,7 @@ int SaveSettings(const Settings &currentSetting)
     inbuff[5] = currentSetting.LP_Cutoff;
     inbuff[6] = currentSetting.Resonance;
     inbuff[7] = currentSetting.FilterPrePost;
-    inbuff[8] = currentSetting.tapLength;
+    inbuff[8] = currentSetting.tempo;
     inbuff[9] = currentSetting.L_Rev;
     inbuff[10] = currentSetting.R_Rev;
     
@@ -111,7 +111,7 @@ SettingsInFlash.HP_Cutoff = readbuff[4];
 SettingsInFlash.LP_Cutoff = readbuff[5];
 SettingsInFlash.Resonance = readbuff[6];
 SettingsInFlash.FilterPrePost = readbuff[7];
-SettingsInFlash.tapLength = readbuff[8];
+SettingsInFlash.tempo = readbuff[8];
 SettingsInFlash.L_Rev = readbuff[9];
 SettingsInFlash.R_Rev = readbuff[10];
 

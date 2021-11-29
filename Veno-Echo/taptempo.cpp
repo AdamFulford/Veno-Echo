@@ -22,8 +22,8 @@
 
 #include "taptempo.h"
 
-    //set mintap (ms), maxtap (ms), tap tolerance
-    void Taptempo::init(uint32_t mintap, uint32_t maxtap, float tap_tolerance)
+    //set mintap (samples), maxtap (samples), tap tolerance
+    void Taptempo::init(uint32_t mintap, uint32_t maxtap, float tap_tolerance, int PPQN)
     {
         mintap_ = mintap;
         maxtap_ = maxtap;
@@ -35,9 +35,9 @@
         currentTime_ = 0;
         tapflag_ = false;
         tapRatio_ = 1.0;
-        PPQN_ = 24;
-        minclock_ = 3840/PPQN_;
-        maxclock_ = 96000/PPQN_;
+        PPQN_ = PPQN;
+        minclock_ = 960/PPQN_;  //in samples
+        maxclock_ = 288000/PPQN_; //in samples
 
         //dsy_tim_init(); //start timer
         //dsy_tim_start();
@@ -168,8 +168,12 @@ bool Taptempo::clock(uint32_t count)
         tapRatio_ = tapRatio;
     }
     
-    void Taptempo::setTapLength(float tapLength)
+    void Taptempo::setTempo(float tempo)
     {
-        lastTapLength_ = static_cast<uint32_t>(tapLength);
-        tempo_ = tapLength / tapRatio_; 
+        tempo_ = tempo; 
+    }
+
+    float Taptempo::getTempo()
+    {
+        return tempo_;
     }

@@ -146,7 +146,6 @@ float DELAYL_DEBUG;
 float DELAYR_DEBUG;
 float PHASE_DEBUG;
 float CLOCK_DEBUG;
-bool DEBUG{};
 
 static Adsr FwdRevLEnv;
 static Adsr FwdRevREnv;
@@ -204,7 +203,7 @@ constexpr Settings defaultAltControls
     defaultLPCut,   //LP_Cutoff
     default_Res,     //Filter Resonance
     0.0f,    //filter prepost
-    500000.0f,     //base tempo (in us)
+    24000.0f,     //base tempo (in samples)
     0.0f,       //L_Rev
     0.0f    //R_Rev
 };
@@ -754,7 +753,7 @@ int main(void)
     lfo.SetFreq(1.0f);
     lfo.SetAmp(1.0f);
 
-    BaseTempo.init(mintap,maxtap,1.25f);  //max 6 second tap
+    BaseTempo.init(mintap,maxtap,1.25f,24);  //max 6 second tap
 
     //setup tempo indicators
     //tempoLED_BASE.init(hw.GetPin(14),hw.AudioSampleRate());
@@ -1624,16 +1623,16 @@ void UpdateClock()
     //if clock in pulse received
     if (ClockIn.Trig())     
     {   
-        DEBUG = true;
+        
         //tempoLED_BASE.resetPhase();
             if(BaseTempo.clock(ClockCounter)) //if valid tap resistered
             {
                 tempoLED_BASE.setTempo(BaseTempo.getTapFreq()); //set new base freq
-                AltControls.tapLength = BaseTempo.getTapLength();
+                AltControls.tempo = BaseTempo.getTempo();
                 save_flag = true;
             }
             ClockCounter = 0; //reset counter
-            DEBUG = false;
+
     } 
 }
 
@@ -1736,7 +1735,7 @@ void Update_Buttons()
         if(BaseTempo.tap()) //if tempo changed
         {
             tempoLED_BASE.setTempo(BaseTempo.getTapFreq());
-            AltControls.tapLength = BaseTempo.getTapLength();
+            AltControls.tempo = BaseTempo.getTempo();
             save_flag = true;
         }
         tempoLED_BASE.resetPhase();
@@ -1926,16 +1925,16 @@ void ApplySettings(const Settings &setting)
     }
 
     //if between min and max tap length
-    if( (setting.tapLength >= static_cast<float> (mintap)) 
-        && (setting.tapLength <= static_cast<float> (maxtap)) )
+    if( (setting.tempo >= static_cast<float> (minTempo)) 
+        && (setting.tempo <= static_cast<float> (maxTempo)) )
     {
-        BaseTempo.setTapLength(setting.tapLength);
+        BaseTempo.setTempo(setting.tempo);
         tempoLED_BASE.setTempo(BaseTempo.getTapFreq());
     }
 
     else
     {
-        BaseTempo.setTapLength(defaultAltControls.tapLength);
+        BaseTempo.setTempo(defaultAltControls.tempo);
         tempoLED_BASE.setTempo(BaseTempo.getTapFreq());
     }
 

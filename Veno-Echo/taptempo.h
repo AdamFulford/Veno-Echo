@@ -46,8 +46,8 @@ class Taptempo
     {
         tapflag_ = false;
         tap_tolerance_ = 1.25f;
-        maxtap_ = 2000000;
-        mintap_ = 80000;
+        maxtap_ = 6000000;
+        mintap_ = 20000;
         lastTapLength_ = 0;
         tempo_ = 500000.0f;
         lastTime_ = 0;
@@ -56,11 +56,12 @@ class Taptempo
         clockLength_ = 0;
         lastClockLength_ = 0;
         clockThresh_ = 10000; //Us change
+        PPQN_ = 24;
     }
     ~Taptempo() {}
     
     //set mintap (ms), maxtap (ms), tap tolerance
-    void init(uint32_t mintap, uint32_t maxtap, float tap_tolerance); 
+    void init(uint32_t mintap, uint32_t maxtap, float tap_tolerance, int PPQN); 
 
    //call when a tap is triggered
     bool tap(); 
@@ -81,7 +82,9 @@ class Taptempo
     void setTapRatio(float tapRatio);
 
     //set tapLength in Us
-    void setTapLength(float tapLength);
+    void setTempo(float tempo);
+
+    float getTempo();
 
 };
 

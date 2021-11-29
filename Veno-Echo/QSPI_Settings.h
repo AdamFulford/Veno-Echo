@@ -39,7 +39,7 @@ struct Settings
     float LP_Cutoff;
     float Resonance;
     float FilterPrePost;
-    float tapLength;
+    float tempo;
     float L_Rev;
     float R_Rev;
 };

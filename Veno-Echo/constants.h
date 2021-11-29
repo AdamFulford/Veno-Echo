@@ -34,8 +34,11 @@ constexpr float minDelay{48000 * 0.08f};
 constexpr float maxRevDelay{48000 * 5.0f};
 constexpr float minRevDelay{25000.0f};
 
-constexpr int mintap{20000};
-constexpr int maxtap{6000000};
+constexpr int mintap{20000};    //in us (0.02s)
+constexpr int maxtap{6000000};  //in us (6s)
+
+constexpr int minTempo{960}; //0.02s in samples
+constexpr int maxTempo{288000}; //6s in samples
 
 constexpr float maxModAmp{200.0f};
 

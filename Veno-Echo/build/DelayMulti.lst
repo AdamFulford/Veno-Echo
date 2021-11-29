@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
   27:DelayMulti.cpp **** {
   30              		.loc 1 27 1 view -0
   31              		.cfi_startproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 2
 
 
   32              		@ args = 0, pretend = 0, frame = 8
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
   22:delayline_multitap.h **** 
   23:delayline_multitap.h **** #pragma once
   24:delayline_multitap.h **** #ifndef DSY_DELAY_MULTITAP_H
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 3
 
 
   25:delayline_multitap.h **** #define DSY_DELAY_MULTITAP_H
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
   61:delayline_multitap.h ****         }
   62:delayline_multitap.h **** 
   63:delayline_multitap.h ****         write_ptr_ = 0;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 4
 
 
   76              		.loc 2 63 9 is_stmt 0 view .LVU12
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  116              	.LBE104:
  117              	.LBE103:
   30:DelayMulti.cpp ****     tempoled.init(ledpin,samplerate_/static_cast<float> (updateDiv));
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 5
 
 
  118              		.loc 1 30 5 is_stmt 1 view .LVU27
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
   28:../DaisySP/Source/Dynamics/crossfade.h **** 
   29:../DaisySP/Source/Dynamics/crossfade.h ****     Ported from Soundpipe by Andrew Ikenberry
   30:../DaisySP/Source/Dynamics/crossfade.h **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 6
 
 
   31:../DaisySP/Source/Dynamics/crossfade.h ****     added curve option for constant power, etc.
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
   44:DelayMulti.cpp ****     mod_ = 0.0f;
   45:DelayMulti.cpp ****     //timethresh_ = 5;    //length of wait before triggering xfade
   46:DelayMulti.cpp ****     output_ = 0.0f;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 7
 
 
   47:DelayMulti.cpp ****     TimeChange_ = false;
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
   51:../DaisySP/Source/Dynamics/crossfade.h ****     inline void Init() { Init(CROSSFADE_LIN); }
  192              		.loc 3 51 17 view .LVU60
  193              	.LBE120:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 8
 
 
  194              	.LBE164:
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
   38:../DaisySP/Source/Control/adsr.h ****     Adsr() {}
   39:../DaisySP/Source/Control/adsr.h ****     ~Adsr() {}
   40:../DaisySP/Source/Control/adsr.h ****     /** Initializes the Adsr module.
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 9
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 9
 
 
   41:../DaisySP/Source/Control/adsr.h ****         \param sample_rate - The sample rate of the audio engine being run. 
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  233              		.loc 3 46 9 is_stmt 1 view .LVU68
  234              	.LVL12:
   46:../DaisySP/Source/Dynamics/crossfade.h ****     }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 10
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 10
 
 
  235              		.loc 3 46 9 is_stmt 0 view .LVU69
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  275              	.LBB114:
   45:../DaisySP/Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
  276              		.loc 3 45 16 view .LVU83
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 11
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 11
 
 
  277 00ba C5F85490 		str	r9, [r5, #84]	@ float
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  321              		.loc 4 54 48 view .LVU94
   54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
  322              		.loc 4 54 48 is_stmt 0 view .LVU95
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 12
 
 
  323              	.LBE150:
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
   53:DelayMulti.cpp ****         //Head envelope attack and decay times:
  364              		.loc 1 53 26 is_stmt 0 view .LVU116
  365 00c8 FFF7FEFF 		bl	_ZN7daisysp4Adsr4InitEf
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 13
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 13
 
 
  366              	.LVL16:
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  404              		.loc 4 58 52 view .LVU134
  405              		.loc 4 58 57 is_stmt 0 view .LVU135
  406 00d8 C5F89440 		str	r4, [r5, #148]	@ float
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 14
 
 
  407              	.LVL20:
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
   72:DelayMulti.cpp **** if(syncMode)
   73:DelayMulti.cpp **** {
   74:DelayMulti.cpp ****     //delaytime = GetDiv(delaytime_pot) * baseTempo_ * 0.048f;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 15
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 15
 
 
   75:DelayMulti.cpp ****     delaytime = GetDiv(delaytime_pot) * baseTempo_;
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  129:DelayMulti.cpp ****         active_head_set_ = !active_head_set_;
  130:DelayMulti.cpp **** 
  131:DelayMulti.cpp ****         timer_ = System::GetNow(); //reset timer
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 16
 
 
  132:DelayMulti.cpp ****         waiting_flag_ = false;  //reset wait flag
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  477 0016 00F14C06 		add	r6, r0, #76
  478 001a 2DED028B 		vpush.64	{d8}
  479              		.cfi_def_cfa_offset 44
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 17
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 17
 
 
  480              		.cfi_offset 80, -44
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  507 002c 94ED3E7A 		vldr.32	s14, [r4, #248]
  508 0030 03EB8701 		add	r1, r3, r7, lsl #2
  509 0034 D5ED067A 		vldr.32	s15, [r5, #24]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 18
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 18
 
 
  510              	.LBB200:
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  123:delayline_multitap.h **** 
  124:delayline_multitap.h ****     /** returns the next sample of type T in the delay line, interpolated if necessary.
  125:delayline_multitap.h ****     */
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 19
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 19
 
 
  126:delayline_multitap.h ****    //final const means this function can't change any variables.
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  564              	.LBB207:
  565              	.LBB205:
  566              		.loc 2 135 38 view .LVU175
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 20
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 20
 
 
  567 006a 1868     		ldr	r0, [r3]
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  610              		.loc 2 135 16 view .LVU192
  611 0094 92ED217A 		vldr.32	s14, [r2, #132]
  612              	.LVL32:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 21
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 21
 
 
  137:delayline_multitap.h ****             return a + (b-a) * frac_[head];
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
   60:../DaisySP/Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
  655              		.loc 3 60 42 view .LVU208
  656 00c2 86ED000A 		vstr.32	s0, [r6]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 22
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 22
 
 
  657              	.LVL37:
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  704              	.LVL43:
  705              	.L13:
  706              	.LBB218:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 23
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 23
 
 
  707              	.LBB209:
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  755              		.loc 1 175 24 view .LVU230
  756 000e FFF7FEBF 		b	_ZN8TempoLED6updateE9TempoDivsf
  757              	.LVL47:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 24
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 24
 
 
  758              	.L19:
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  801              		.cfi_offset 5, -8
  802              		.cfi_offset 6, -4
  803              		.loc 1 186 15 view .LVU240
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 25
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 25
 
 
  804 0006 0E68     		ldr	r6, [r1]	@ float
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  847              	.L22:
  848 0028 FF5D1A00 		.word	1727999
  849 002c 076B1300 		.word	1272583
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 26
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 26
 
 
  850 0030 005E1A00 		.word	1728000
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  896              		.global	_ZN10DelayMulti6GetDivEf
  897              		.syntax unified
  898              		.thumb
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 27
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 27
 
 
  899              		.thumb_func
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  938 0028 0123     		movs	r3, #1
  212:DelayMulti.cpp ****        div_ = DIV5;
  939              		.loc 1 212 15 view .LVU275
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 28
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 28
 
 
  940 002a 9FED400A 		vldr.32	s0, .L73+12
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  219:DelayMulti.cpp ****     }
  977              		.loc 1 219 14 view .LVU288
  978 0062 80F81931 		strb	r3, [r0, #281]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 29
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 29
 
 
  979 0066 7047     		bx	lr
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  1015 009a 7047     		bx	lr
  1016              	.LVL75:
  1017              	.L66:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 30
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 30
 
 
  238:DelayMulti.cpp ****     }
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  1055 00d0 DFED1E7A 		vldr.32	s15, .L73+44
  1056 00d4 B4EEE70A 		vcmpe.f32	s0, s15
  1057 00d8 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 31
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 31
 
 
  1058 00dc 05D5     		bpl	.L69
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  1097 010c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  1098 0110 B8D8     		bhi	.L49
  265:DelayMulti.cpp ****     {
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 32
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 32
 
 
  266:DelayMulti.cpp ****        retVal = 6.0f; 
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  1140              		.p2align 2,,3
  1141              		.global	_ZN10DelayMulti12SetDelayTimeEfb
  1142              		.syntax unified
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 33
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 33
 
 
  1143              		.thumb
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
    1:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // -*- C++ -*- C library enhancements header.
    2:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
    3:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // Copyright (C) 2016-2019 Free Software Foundation, Inc.
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 34
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 34
 
 
    4:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** //
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
   58:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
   59:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #ifdef _GLIBCXX_USE_LONG_LONG
   60:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   inline long long
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 35
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 35
 
 
   61:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   abs(long long __x) { return __builtin_llabs (__x); }
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  1218              	.LBB239:
  1219 003e 94F81831 		ldrb	r3, [r4, #280]	@ zero_extendqisi2
  1220 0042 BBBB     		cbnz	r3, .L95
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 36
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 36
 
 
  1221              	.LBE239:
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  125:DelayMulti.cpp ****             }
  1260              		.loc 1 125 46 view .LVU372
  1261 0068 83F00103 		eor	r3, r3, #1
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 37
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 37
 
 
  1262              	.LBE250:
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  1298              		.loc 1 136 9 is_stmt 0 view .LVU390
  1299              	.LBE247:
  1300              	.LBE246:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 38
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 38
 
 
  1301              	.LBE256:
@@ -2278,7 +2278,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  109:DelayMulti.cpp ****         {
  1344              		.loc 1 109 9 is_stmt 1 discriminator 3 view .LVU402
  1345              	.LVL106:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 39
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 39
 
 
  109:DelayMulti.cpp ****         {
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
   86:DelayMulti.cpp ****     waiting_flag_ = true;
  1389              		.loc 1 86 5 is_stmt 1 view .LVU414
   86:DelayMulti.cpp ****     waiting_flag_ = true;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 40
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 40
 
 
  1390              		.loc 1 86 28 is_stmt 0 view .LVU415
@@ -2398,7 +2398,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  101:DelayMulti.cpp ****         {
  1431              		.loc 1 101 28 is_stmt 1 view .LVU429
  104:DelayMulti.cpp ****         }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 41
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 41
 
 
  1432              		.loc 1 104 13 view .LVU430
@@ -2458,7 +2458,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  1483              		.file 33 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  1484              		.file 34 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
  1485              		.file 35 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 42
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 42
 
 
  1486              		.file 36 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
@@ -2498,30 +2498,30 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 1
  1520              		.file 70 "scale.h"
  1521              		.file 71 "DelayMulti.h"
  1522              		.file 72 "../libdaisy/src/dev/sr_595.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s 			page 43
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s 			page 43
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 DelayMulti.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:17     .text._ZN10DelayMulti4initE12dsy_gpio_pinf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:26     .text._ZN10DelayMulti4initE12dsy_gpio_pinf:0000000000000000 _ZN10DelayMulti4initE12dsy_gpio_pinf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:431    .text._ZN10DelayMulti4initE12dsy_gpio_pinf:00000000000000ec $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:438    .text._ZN10DelayMulti9GetOutputEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:446    .text._ZN10DelayMulti9GetOutputEv:0000000000000000 _ZN10DelayMulti9GetOutputEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:714    .text._ZN10DelayMulti9GetOutputEv:0000000000000100 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:726    .text._ZN10DelayMulti14updateTempoLEDEb:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:734    .text._ZN10DelayMulti14updateTempoLEDEb:0000000000000000 _ZN10DelayMulti14updateTempoLEDEb
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:771    .text._ZN10DelayMulti5WriteERKf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:779    .text._ZN10DelayMulti5WriteERKf:0000000000000000 _ZN10DelayMulti5WriteERKf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:848    .text._ZN10DelayMulti5WriteERKf:0000000000000028 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:855    .text._ZN10DelayMulti12GetDelayTimeEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:863    .text._ZN10DelayMulti12GetDelayTimeEv:0000000000000000 _ZN10DelayMulti12GetDelayTimeEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:894    .text._ZN10DelayMulti6GetDivEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:902    .text._ZN10DelayMulti6GetDivEf:0000000000000000 _ZN10DelayMulti6GetDivEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:1122   .text._ZN10DelayMulti6GetDivEf:0000000000000120 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:1139   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:1147   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000000 _ZN10DelayMulti12SetDelayTimeEfb
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccHy6G75.s:1442   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000108 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:17     .text._ZN10DelayMulti4initE12dsy_gpio_pinf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:26     .text._ZN10DelayMulti4initE12dsy_gpio_pinf:0000000000000000 _ZN10DelayMulti4initE12dsy_gpio_pinf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:431    .text._ZN10DelayMulti4initE12dsy_gpio_pinf:00000000000000ec $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:438    .text._ZN10DelayMulti9GetOutputEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:446    .text._ZN10DelayMulti9GetOutputEv:0000000000000000 _ZN10DelayMulti9GetOutputEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:714    .text._ZN10DelayMulti9GetOutputEv:0000000000000100 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:726    .text._ZN10DelayMulti14updateTempoLEDEb:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:734    .text._ZN10DelayMulti14updateTempoLEDEb:0000000000000000 _ZN10DelayMulti14updateTempoLEDEb
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:771    .text._ZN10DelayMulti5WriteERKf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:779    .text._ZN10DelayMulti5WriteERKf:0000000000000000 _ZN10DelayMulti5WriteERKf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:848    .text._ZN10DelayMulti5WriteERKf:0000000000000028 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:855    .text._ZN10DelayMulti12GetDelayTimeEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:863    .text._ZN10DelayMulti12GetDelayTimeEv:0000000000000000 _ZN10DelayMulti12GetDelayTimeEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:894    .text._ZN10DelayMulti6GetDivEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:902    .text._ZN10DelayMulti6GetDivEf:0000000000000000 _ZN10DelayMulti6GetDivEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:1122   .text._ZN10DelayMulti6GetDivEf:0000000000000120 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:1139   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:1147   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000000 _ZN10DelayMulti12SetDelayTimeEfb
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccJI30nW.s:1442   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000108 $d
 
 UNDEFINED SYMBOLS
 _ZN8TempoLED4initE12dsy_gpio_pinf
