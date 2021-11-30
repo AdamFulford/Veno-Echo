@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
   27:taptempo.cpp  ****     {
   30              		.loc 1 27 5 view -0
   31              		.cfi_startproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 2
 
 
   32              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
   63 0020 0023     		movs	r3, #0
   64              	.LVL1:
   33:taptempo.cpp  ****         lastTime_ = 0;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 3
 
 
   65              		.loc 1 33 16 view .LVU15
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  105              		.syntax unified
  106              		.thumb
  107              		.thumb_func
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 4
 
 
  108              		.fpu fpv5-d16
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  148 001c 24D8     		bhi	.L8
   54:taptempo.cpp  ****         {
   55:taptempo.cpp  ****             if(tapflag_)
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 5
 
 
  149              		.loc 1 55 13 is_stmt 1 view .LVU46
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  180              		.loc 1 73 36 view .LVU62
  181 0054 A361     		str	r3, [r4, #24]
   72:taptempo.cpp  ****                     lastTapLength_ = tapLength_;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 6
 
 
  182              		.loc 1 72 73 view .LVU63
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  207 006c 84F83430 		strb	r3, [r4, #52]
   68:taptempo.cpp  ****                 }
  208              		.loc 1 68 21 is_stmt 1 view .LVU75
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 7
 
 
  209              		.loc 1 95 5 is_stmt 0 view .LVU76
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  251              		.thumb
  252              		.thumb_func
  253              		.fpu fpv5-d16
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 8
 
 
  255              	_ZN8Taptempo5clockEm:
@@ -445,14 +445,14 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  106:taptempo.cpp  ****         //if within tempo limits
  107:taptempo.cpp  ****         if(minclock_ <= ClockTempo && ClockTempo <= maxclock_) 
  266              		.loc 1 107 9 view .LVU96
- 267              	.LBB4:
+ 267              	.LBB6:
  268 0000 8368     		ldr	r3, [r0, #8]
  269 0002 8B42     		cmp	r3, r1
  270 0004 32D8     		bhi	.L29
  271              		.loc 1 107 36 is_stmt 0 discriminator 1 view .LVU97
  272 0006 C368     		ldr	r3, [r0, #12]
  273 0008 8B42     		cmp	r3, r1
- 274              	.LBE4:
+ 274              	.LBE6:
   98:taptempo.cpp  ****         //currentClockTime_ = System::GetUs();    //get current time
  275              		.loc 1 98 5 discriminator 1 view .LVU98
  276 000a 70B4     		push	{r4, r5, r6}
@@ -461,34 +461,34 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  279              		.cfi_offset 5, -8
  280              		.cfi_offset 6, -4
  281 000c 0446     		mov	r4, r0
- 282              	.LBB9:
+ 282              	.LBB11:
  283              		.loc 1 107 36 discriminator 1 view .LVU99
  284 000e 2AD3     		bcc	.L21
- 285              	.LBB5:
+ 285              	.LBB7:
  108:taptempo.cpp  ****         {
  109:taptempo.cpp  ****             //update clockLength_ with rolling average
- 110:taptempo.cpp  ****             index = (index + 1) % PPQN_;
+ 110:taptempo.cpp  ****             index = (index + 1) % (PPQN_);
  286              		.loc 1 110 13 is_stmt 1 view .LVU100
  287              		.loc 1 110 28 is_stmt 0 view .LVU101
  288 0010 1748     		ldr	r0, .L31
  289              	.LVL10:
- 290              		.loc 1 110 35 view .LVU102
+ 290              		.loc 1 110 36 view .LVU102
  291 0012 666C     		ldr	r6, [r4, #68]
  292              		.loc 1 110 28 view .LVU103
  293 0014 0568     		ldr	r5, [r0]
  111:taptempo.cpp  ****             ClockTempoBuff[index] = ClockTempo;
  294              		.loc 1 111 35 view .LVU104
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 9
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 9
 
 
  295 0016 174B     		ldr	r3, .L31+4
- 296              	.LBB6:
+ 296              	.LBB8:
  112:taptempo.cpp  **** 
  113:taptempo.cpp  ****             uint32_t ClockTempoSum{};
- 114:taptempo.cpp  ****             for(int i=0; i <PPQN_; i += 1)
+ 114:taptempo.cpp  ****             for(int i=0; i <(PPQN_); i += 1)
  297              		.loc 1 114 28 view .LVU105
  298 0018 002E     		cmp	r6, #0
- 299              	.LBE6:
+ 299              	.LBE8:
  110:taptempo.cpp  ****             ClockTempoBuff[index] = ClockTempo;
  300              		.loc 1 110 28 view .LVU106
  301 001a 05F10102 		add	r2, r5, #1
@@ -496,7 +496,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  302              		.loc 1 110 33 view .LVU107
  303 001e 92FBF6F5 		sdiv	r5, r2, r6
  304 0022 06FB1525 		mls	r5, r6, r5, r2
- 113:taptempo.cpp  ****             for(int i=0; i <PPQN_; i += 1)
+ 113:taptempo.cpp  ****             for(int i=0; i <(PPQN_); i += 1)
  305              		.loc 1 113 22 view .LVU108
  306 0026 4FF00002 		mov	r2, #0
  110:taptempo.cpp  ****             ClockTempoBuff[index] = ClockTempo;
@@ -507,11 +507,11 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  111:taptempo.cpp  **** 
  310              		.loc 1 111 35 is_stmt 0 view .LVU111
  311 002c 43F82510 		str	r1, [r3, r5, lsl #2]
- 113:taptempo.cpp  ****             for(int i=0; i <PPQN_; i += 1)
+ 113:taptempo.cpp  ****             for(int i=0; i <(PPQN_); i += 1)
  312              		.loc 1 113 13 is_stmt 1 view .LVU112
  313              	.LVL11:
  314              		.loc 1 114 13 view .LVU113
- 315              	.LBB7:
+ 315              	.LBB9:
  316              		.loc 1 114 28 view .LVU114
  317 0030 08DD     		ble	.L22
  318 0032 03EB8600 		add	r0, r3, r6, lsl #2
@@ -533,12 +533,12 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  114:taptempo.cpp  ****             {
  330              		.loc 1 114 28 discriminator 2 view .LVU120
  331 003e FAD1     		bne	.L23
- 332              	.LBE7:
+ 332              	.LBE9:
  117:taptempo.cpp  ****             }
  118:taptempo.cpp  **** 
  119:taptempo.cpp  ****             ClockTempo = ClockTempoSum;
  333              		.loc 1 119 13 view .LVU121
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 10
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 10
 
 
  334              	.LVL14:
@@ -564,8 +564,8 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  347 004a F8EE677A 		vcvt.f32.u32	s15, s15
  348 004e C4ED0F7A 		vstr.32	s15, [r4, #60]
  349              		.loc 1 125 17 is_stmt 1 view .LVU128
- 350              	.LBE5:
- 351              	.LBE9:
+ 350              	.LBE7:
+ 351              	.LBE11:
  126:taptempo.cpp  ****             }
  127:taptempo.cpp  ****             else
  128:taptempo.cpp  ****             {
@@ -590,15 +590,15 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  362              	.LVL17:
  363              	.L30:
  364              		.cfi_restore_state
- 365              	.LBB10:
- 366              	.LBB8:
+ 365              	.LBB12:
+ 366              	.LBB10:
  367              		.loc 1 136 5 view .LVU131
  368 0056 0848     		ldr	r0, .L31+8
  369 0058 0849     		ldr	r1, .L31+12
  122:taptempo.cpp  ****             {
  370              		.loc 1 122 13 discriminator 4 view .LVU132
  371 005a 094B     		ldr	r3, .L31+16
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 11
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 11
 
 
  372 005c 00FB0515 		mla	r5, r0, r5, r1
@@ -611,11 +611,11 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  378              	.L21:
  122:taptempo.cpp  ****             {
  379              		.loc 1 122 13 discriminator 4 view .LVU134
- 380              	.LBE8:
+ 380              	.LBE10:
  134:taptempo.cpp  ****         }
  381              		.loc 1 134 20 view .LVU135
  382 0066 0020     		movs	r0, #0
- 383              	.LBE10:
+ 383              	.LBE12:
  384              		.loc 1 136 5 view .LVU136
  385 0068 70BC     		pop	{r4, r5, r6}
  386              		.cfi_restore 6
@@ -627,14 +627,14 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  392 006a 7047     		bx	lr
  393              	.LVL21:
  394              	.L29:
- 395              	.LBB11:
+ 395              	.LBB13:
  134:taptempo.cpp  ****         }
  396              		.loc 1 134 20 view .LVU138
  397 006c 0020     		movs	r0, #0
  398              	.LVL22:
  134:taptempo.cpp  ****         }
  399              		.loc 1 134 20 view .LVU139
- 400              	.LBE11:
+ 400              	.LBE13:
  401              		.loc 1 136 5 view .LVU140
  402 006e 7047     		bx	lr
  403              	.L32:
@@ -658,11 +658,11 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  423              	_ZN8Taptempo14getDelayLengthEv:
  424              	.LVL23:
  425              	.LFB3887:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 12
 
 
  137:taptempo.cpp  ****     
- 138:taptempo.cpp  ****     //outputs tap length in Us
+ 138:taptempo.cpp  ****     //outputs tap length in Samples
  139:taptempo.cpp  ****     float Taptempo::getDelayLength()
  140:taptempo.cpp  ****     {
  426              		.loc 1 140 5 is_stmt 1 view -0
@@ -674,10 +674,10 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  431              		.loc 1 141 9 view .LVU142
  142:taptempo.cpp  ****         static float tempo_last{};
  432              		.loc 1 142 9 view .LVU143
- 143:taptempo.cpp  ****         fonepole(tempo_Out,tempo_,(PPQN_ == 24) ? 0.0011f: 0.011f);
+ 143:taptempo.cpp  ****         fonepole(tempo_Out,tempo_,(PPQN_ == 24) ? 0.5f: 0.011f);
  433              		.loc 1 143 9 view .LVU144
- 434              	.LBB12:
- 435              	.LBB13:
+ 434              	.LBB14:
+ 435              	.LBB15:
  436              		.file 2 "../DaisySP/Source/Utility/dsp.h"
    1:../DaisySP/Source/Utility/dsp.h **** /** Helpful defines, functions, and other utilities for use in/with daisysp modules.
    2:../DaisySP/Source/Utility/dsp.h **** */
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
   37:../DaisySP/Source/Utility/dsp.h **** #else
   38:../DaisySP/Source/Utility/dsp.h ****     r = (a > b) ? a : b;
   39:../DaisySP/Source/Utility/dsp.h **** #endif // __arm__
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 13
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 13
 
 
   40:../DaisySP/Source/Utility/dsp.h ****     return r;
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
   94:../DaisySP/Source/Utility/dsp.h ****     return expf(2.302585092994046f * f);
   95:../DaisySP/Source/Utility/dsp.h **** }
   96:../DaisySP/Source/Utility/dsp.h **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 14
 
 
   97:../DaisySP/Source/Utility/dsp.h **** /* Original code for fastlog2f by Dr. Paul Beckmann from the ARM community forum, adapted from the 
@@ -823,345 +823,476 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 1
  136:../DaisySP/Source/Utility/dsp.h **** {
  137:../DaisySP/Source/Utility/dsp.h ****     out += coeff * (in - out);
  437              		.loc 2 137 9 is_stmt 0 view .LVU145
- 438 0000 094B     		ldr	r3, .L36
- 439              	.LBE13:
- 440              	.LBE12:
+ 438 0000 124B     		ldr	r3, .L39
+ 439              	.LBE15:
+ 440              	.LBE14:
  441              		.loc 1 143 17 view .LVU146
- 442 0002 D0ED0F7A 		vldr.32	s15, [r0, #60]
- 443              	.LBB17:
- 444              	.LBB14:
- 445              		.loc 2 137 9 view .LVU147
- 446 0006 93ED000A 		vldr.32	s0, [r3]
- 447              	.LBE14:
- 448              	.LBE17:
- 449              		.loc 1 143 17 view .LVU148
- 450 000a 426C     		ldr	r2, [r0, #68]
- 451              	.LBB18:
- 452              	.LBB15:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 15
-
-
- 453              		.loc 2 137 24 view .LVU149
- 454 000c 77EEC07A 		vsub.f32	s15, s15, s0
- 455              	.LBE15:
- 456              	.LBE18:
- 457              		.loc 1 143 17 view .LVU150
- 458 0010 DFED066A 		vldr.32	s13, .L36+4
- 459 0014 182A     		cmp	r2, #24
- 460 0016 9FED067A 		vldr.32	s14, .L36+8
- 461 001a 07FE267A 		vseleq.f32	s14, s14, s13
- 462              	.LVL24:
- 463              	.LBB19:
- 464              	.LBI12:
- 135:../DaisySP/Source/Utility/dsp.h **** {
- 465              		.loc 2 135 13 is_stmt 1 view .LVU151
- 466              	.LBB16:
- 467              		.loc 2 137 5 view .LVU152
- 468              		.loc 2 137 9 is_stmt 0 view .LVU153
- 469 001e A7EE270A 		vfma.f32	s0, s14, s15
- 470 0022 83ED000A 		vstr.32	s0, [r3]
- 471              	.LVL25:
- 472              		.loc 2 137 9 view .LVU154
- 473              	.LBE16:
- 474              	.LBE19:
+ 442 0002 F6EE006A 		vmov.f32	s13, #5.0e-1
+ 443 0006 90ED0F7A 		vldr.32	s14, [r0, #60]
  144:taptempo.cpp  **** 
- 145:taptempo.cpp  ****         //if more than .5% of last value
- 146:taptempo.cpp  ****         //if( abs( tempo_Out - tempo_last)> (0.005 * tempo_last)) 
- 147:taptempo.cpp  ****         //{
- 148:taptempo.cpp  ****         //    tempo_last = tempo_Out; //update tempo_last
- 149:taptempo.cpp  ****        // }
- 150:taptempo.cpp  **** 
- 151:taptempo.cpp  ****         return tempo_Out;    //in Us
- 475              		.loc 1 151 9 is_stmt 1 view .LVU155
- 152:taptempo.cpp  ****     }  
- 476              		.loc 1 152 5 is_stmt 0 view .LVU156
- 477 0026 7047     		bx	lr
- 478              	.L37:
- 479              		.align	2
- 480              	.L36:
- 481 0028 00000000 		.word	.LANCHOR2
- 482 002c 5839343C 		.word	1010055512
- 483 0030 E02D903A 		.word	982527456
- 484              		.cfi_endproc
- 485              	.LFE3887:
- 487              		.section	.text._ZN8Taptempo10getTapFreqEv,"ax",%progbits
- 488              		.align	1
- 489              		.p2align 2,,3
- 490              		.global	_ZN8Taptempo10getTapFreqEv
- 491              		.syntax unified
- 492              		.thumb
- 493              		.thumb_func
- 494              		.fpu fpv5-d16
- 496              	_ZN8Taptempo10getTapFreqEv:
- 497              	.LVL26:
- 498              	.LFB3888:
- 153:taptempo.cpp  ****     
- 154:taptempo.cpp  ****     //outputs tap frequency in Hz
- 155:taptempo.cpp  ****     float Taptempo::getTapFreq()
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 16
+ 145:taptempo.cpp  ****         //tempo_Out = tempo_;
+ 146:taptempo.cpp  ****         //if bigger than 5 samples change
+ 147:taptempo.cpp  ****         if( abs( tempo_Out - tempo_last) > 5) 
+ 444              		.loc 1 147 9 view .LVU147
+ 445 000a B1EE046A 		vmov.f32	s12, #5.0e+0
+ 446              	.LBB20:
+ 447              	.LBB16:
+ 448              		.loc 2 137 9 view .LVU148
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 15
 
 
- 156:taptempo.cpp  ****     {
- 499              		.loc 1 156 5 is_stmt 1 view -0
- 500              		.cfi_startproc
- 501              		@ args = 0, pretend = 0, frame = 0
- 502              		@ frame_needed = 0, uses_anonymous_args = 0
- 503              		@ link register save eliminated.
- 157:taptempo.cpp  ****         return 1.0f / (tempo_ * 0.0000208333f); //in Hz
- 504              		.loc 1 157 9 view .LVU158
- 505              		.loc 1 157 31 is_stmt 0 view .LVU159
- 506 0000 9FED057A 		vldr.32	s14, .L39
- 507              		.loc 1 157 46 view .LVU160
- 508 0004 B7EE000A 		vmov.f32	s0, #1.0e+0
- 509              		.loc 1 157 31 view .LVU161
- 510 0008 D0ED0F7A 		vldr.32	s15, [r0, #60]
- 511 000c 67EE877A 		vmul.f32	s15, s15, s14
- 158:taptempo.cpp  ****     }
- 512              		.loc 1 158 5 view .LVU162
- 513 0010 80EE270A 		vdiv.f32	s0, s0, s15
- 514 0014 7047     		bx	lr
- 515              	.L40:
- 516 0016 00BF     		.align	2
- 517              	.L39:
- 518 0018 2CC3AE37 		.word	934200108
- 519              		.cfi_endproc
- 520              	.LFE3888:
- 522              		.section	.text._ZN8Taptempo12getTapLengthEv,"ax",%progbits
- 523              		.align	1
- 524              		.p2align 2,,3
- 525              		.global	_ZN8Taptempo12getTapLengthEv
- 526              		.syntax unified
- 527              		.thumb
- 528              		.thumb_func
- 529              		.fpu fpv5-d16
- 531              	_ZN8Taptempo12getTapLengthEv:
- 532              	.LVL27:
- 533              	.LFB3889:
- 159:taptempo.cpp  **** 
- 160:taptempo.cpp  ****     //outputs delay length in Us;
- 161:taptempo.cpp  ****     float Taptempo::getTapLength()
- 162:taptempo.cpp  ****     {
- 534              		.loc 1 162 5 is_stmt 1 view -0
- 535              		.cfi_startproc
- 536              		@ args = 0, pretend = 0, frame = 0
- 537              		@ frame_needed = 0, uses_anonymous_args = 0
- 538              		@ link register save eliminated.
- 163:taptempo.cpp  ****         return static_cast<float>(lastTapLength_);
- 539              		.loc 1 163 9 view .LVU164
- 540              		.loc 1 163 49 is_stmt 0 view .LVU165
- 541 0000 90ED060A 		vldr.32	s0, [r0, #24]	@ int
- 164:taptempo.cpp  ****     }
- 542              		.loc 1 164 5 view .LVU166
- 543 0004 B8EE400A 		vcvt.f32.u32	s0, s0
- 544 0008 7047     		bx	lr
- 545              		.cfi_endproc
- 546              	.LFE3889:
- 548 000a 00BF     		.section	.text._ZN8Taptempo11setTapRatioEf,"ax",%progbits
- 549              		.align	1
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 17
+ 449 000e D3ED007A 		vldr.32	s15, [r3]
+ 450              	.LBE16:
+ 451              	.LBE20:
+ 143:taptempo.cpp  **** 
+ 452              		.loc 1 143 17 view .LVU149
+ 453 0012 416C     		ldr	r1, [r0, #68]
+ 454              	.LBB21:
+ 455              	.LBB17:
+ 456              		.loc 2 137 24 view .LVU150
+ 457 0014 37EE677A 		vsub.f32	s14, s14, s15
+ 458              	.LBE17:
+ 459              	.LBE21:
+ 143:taptempo.cpp  **** 
+ 460              		.loc 1 143 17 view .LVU151
+ 461 0018 DFED0D5A 		vldr.32	s11, .L39+4
+ 462 001c 1829     		cmp	r1, #24
+ 463              		.loc 1 147 16 view .LVU152
+ 464 001e 0D4A     		ldr	r2, .L39+8
+ 143:taptempo.cpp  **** 
+ 465              		.loc 1 143 17 view .LVU153
+ 466 0020 46FEA56A 		vseleq.f32	s13, s13, s11
+ 467              	.LVL24:
+ 468              	.LBB22:
+ 469              	.LBI14:
+ 135:../DaisySP/Source/Utility/dsp.h **** {
+ 470              		.loc 2 135 13 is_stmt 1 view .LVU154
+ 471              	.LBB18:
+ 472              		.loc 2 137 5 view .LVU155
+ 473              		.loc 2 137 9 is_stmt 0 view .LVU156
+ 474 0024 E6EE877A 		vfma.f32	s15, s13, s14
+ 475              	.LBE18:
+ 476              	.LBE22:
+ 477              		.loc 1 147 16 view .LVU157
+ 478 0028 92ED000A 		vldr.32	s0, [r2]
+ 479 002c 37EEC07A 		vsub.f32	s14, s15, s0
+ 480              	.LBB23:
+ 481              	.LBB19:
+ 482              		.loc 2 137 9 view .LVU158
+ 483 0030 C3ED007A 		vstr.32	s15, [r3]
+ 484              	.LVL25:
+ 485              		.loc 2 137 9 view .LVU159
+ 486              	.LBE19:
+ 487              	.LBE23:
+ 488              		.loc 1 147 9 is_stmt 1 view .LVU160
+ 489              	.LBB24:
+ 490              	.LBI24:
+ 491              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/b
+   1:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // -*- C++ -*- C library enhancements header.
+   2:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+   3:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // Copyright (C) 2016-2019 Free Software Foundation, Inc.
+   4:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** //
+   5:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // This file is part of the GNU ISO C++ Library.  This library is free
+   6:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // software; you can redistribute it and/or modify it under the
+   7:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // terms of the GNU General Public License as published by the
+   8:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // Free Software Foundation; either version 3, or (at your option)
+   9:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // any later version.
+  10:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 16
 
 
- 550              		.p2align 2,,3
- 551              		.global	_ZN8Taptempo11setTapRatioEf
- 552              		.syntax unified
- 553              		.thumb
- 554              		.thumb_func
- 555              		.fpu fpv5-d16
- 557              	_ZN8Taptempo11setTapRatioEf:
- 558              	.LVL28:
- 559              	.LFB3890:
- 165:taptempo.cpp  **** 
- 166:taptempo.cpp  ****     void Taptempo::setTapRatio(float tapRatio)
+  11:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // This library is distributed in the hope that it will be useful,
+  12:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // GNU General Public License for more details.
+  15:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  16:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // Under Section 7 of GPL version 3, you are granted additional
+  17:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // permissions described in the GCC Runtime Library Exception, version
+  18:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // 3.1, as published by the Free Software Foundation.
+  19:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  20:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // You should have received a copy of the GNU General Public License and
+  21:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // a copy of the GCC Runtime Library Exception along with this program;
+  22:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  23:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // <http://www.gnu.org/licenses/>.
+  24:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  25:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** /** @file include/bits/std_abs.h
+  26:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****  *  This is an internal header file, included by other library headers.
+  27:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****  *  Do not attempt to use it directly. @headername{cmath, cstdlib}
+  28:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****  */
+  29:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  30:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #ifndef _GLIBCXX_BITS_STD_ABS_H
+  31:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #define _GLIBCXX_BITS_STD_ABS_H
+  32:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  33:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #pragma GCC system_header
+  34:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  35:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #include <bits/c++config.h>
+  36:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  37:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #define _GLIBCXX_INCLUDE_NEXT_C_HEADERS
+  38:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #include_next <stdlib.h>
+  39:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #ifdef __CORRECT_ISO_CPP_MATH_H_PROTO
+  40:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** # include_next <math.h>
+  41:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #endif
+  42:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #undef _GLIBCXX_INCLUDE_NEXT_C_HEADERS
+  43:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  44:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #undef abs
+  45:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  46:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** extern "C++"
+  47:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** {
+  48:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** namespace std _GLIBCXX_VISIBILITY(default)
+  49:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** {
+  50:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
+  51:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  52:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   using ::abs;
+  53:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  54:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #ifndef __CORRECT_ISO_CPP_STDLIB_H_PROTO
+  55:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   inline long
+  56:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   abs(long __i) { return __builtin_labs(__i); }
+  57:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #endif
+  58:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  59:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #ifdef _GLIBCXX_USE_LONG_LONG
+  60:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   inline long long
+  61:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   abs(long long __x) { return __builtin_llabs (__x); }
+  62:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #endif
+  63:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  64:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // _GLIBCXX_RESOLVE_LIB_DEFECTS
+  65:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // 2192. Validity and return type of std::abs(0u) is unclear
+  66:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // 2294. <cstdlib> should declare abs(double)
+  67:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // 2735. std::abs(short), std::abs(signed char) and others should return int
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 17
+
+
+  68:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  69:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
+  70:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   inline _GLIBCXX_CONSTEXPR double
+  71:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   abs(double __x)
+  72:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   { return __builtin_fabs(__x); }
+  73:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
+  74:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   inline _GLIBCXX_CONSTEXPR float
+  75:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   abs(float __x)
+ 492              		.loc 3 75 3 view .LVU161
+ 493              	.LBB25:
+  76:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   { return __builtin_fabsf(__x); }
+ 494              		.loc 3 76 5 view .LVU162
+ 495              		.loc 3 76 31 is_stmt 0 view .LVU163
+ 496 0034 B0EEC77A 		vabs.f32	s14, s14
+ 497              	.LBE25:
+ 498              	.LBE24:
+ 499              		.loc 1 147 9 view .LVU164
+ 500 0038 B4EEC67A 		vcmpe.f32	s14, s12
+ 501 003c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 502 0040 03DD     		ble	.L33
+ 148:taptempo.cpp  ****         {
+ 149:taptempo.cpp  ****             tempo_last = tempo_Out; //update tempo_last
+ 503              		.loc 1 149 13 is_stmt 1 view .LVU165
+ 150:taptempo.cpp  ****             return tempo_Out;
+ 504              		.loc 1 150 20 is_stmt 0 view .LVU166
+ 505 0042 B0EE670A 		vmov.f32	s0, s15
+ 149:taptempo.cpp  ****             return tempo_Out;
+ 506              		.loc 1 149 24 view .LVU167
+ 507 0046 C2ED007A 		vstr.32	s15, [r2]
+ 508              		.loc 1 150 13 is_stmt 1 view .LVU168
+ 509              	.L33:
+ 151:taptempo.cpp  ****         }
+ 152:taptempo.cpp  ****         else
+ 153:taptempo.cpp  ****         {
+ 154:taptempo.cpp  ****             return tempo_last;
+ 155:taptempo.cpp  ****         }
+ 156:taptempo.cpp  **** 
+ 157:taptempo.cpp  ****     }  
+ 510              		.loc 1 157 5 is_stmt 0 view .LVU169
+ 511 004a 7047     		bx	lr
+ 512              	.L40:
+ 513              		.align	2
+ 514              	.L39:
+ 515 004c 00000000 		.word	.LANCHOR2
+ 516 0050 5839343C 		.word	1010055512
+ 517 0054 00000000 		.word	.LANCHOR3
+ 518              		.cfi_endproc
+ 519              	.LFE3887:
+ 521              		.section	.text._ZN8Taptempo10getTapFreqEv,"ax",%progbits
+ 522              		.align	1
+ 523              		.p2align 2,,3
+ 524              		.global	_ZN8Taptempo10getTapFreqEv
+ 525              		.syntax unified
+ 526              		.thumb
+ 527              		.thumb_func
+ 528              		.fpu fpv5-d16
+ 530              	_ZN8Taptempo10getTapFreqEv:
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 18
+
+
+ 531              	.LVL26:
+ 532              	.LFB3888:
+ 158:taptempo.cpp  ****     
+ 159:taptempo.cpp  ****     //outputs tap frequency in Hz
+ 160:taptempo.cpp  ****     float Taptempo::getTapFreq()
+ 161:taptempo.cpp  ****     {
+ 533              		.loc 1 161 5 is_stmt 1 view -0
+ 534              		.cfi_startproc
+ 535              		@ args = 0, pretend = 0, frame = 0
+ 536              		@ frame_needed = 0, uses_anonymous_args = 0
+ 537              		@ link register save eliminated.
+ 162:taptempo.cpp  ****         return 1.0f / (tempo_ * 0.0000208333f); //in Hz
+ 538              		.loc 1 162 9 view .LVU171
+ 539              		.loc 1 162 31 is_stmt 0 view .LVU172
+ 540 0000 9FED057A 		vldr.32	s14, .L42
+ 541              		.loc 1 162 46 view .LVU173
+ 542 0004 B7EE000A 		vmov.f32	s0, #1.0e+0
+ 543              		.loc 1 162 31 view .LVU174
+ 544 0008 D0ED0F7A 		vldr.32	s15, [r0, #60]
+ 545 000c 67EE877A 		vmul.f32	s15, s15, s14
+ 163:taptempo.cpp  ****     }
+ 546              		.loc 1 163 5 view .LVU175
+ 547 0010 80EE270A 		vdiv.f32	s0, s0, s15
+ 548 0014 7047     		bx	lr
+ 549              	.L43:
+ 550 0016 00BF     		.align	2
+ 551              	.L42:
+ 552 0018 2CC3AE37 		.word	934200108
+ 553              		.cfi_endproc
+ 554              	.LFE3888:
+ 556              		.section	.text._ZN8Taptempo12getTapLengthEv,"ax",%progbits
+ 557              		.align	1
+ 558              		.p2align 2,,3
+ 559              		.global	_ZN8Taptempo12getTapLengthEv
+ 560              		.syntax unified
+ 561              		.thumb
+ 562              		.thumb_func
+ 563              		.fpu fpv5-d16
+ 565              	_ZN8Taptempo12getTapLengthEv:
+ 566              	.LVL27:
+ 567              	.LFB3889:
+ 164:taptempo.cpp  **** 
+ 165:taptempo.cpp  ****     //outputs delay length in Us;
+ 166:taptempo.cpp  ****     float Taptempo::getTapLength()
  167:taptempo.cpp  ****     {
- 560              		.loc 1 167 5 is_stmt 1 view -0
- 561              		.cfi_startproc
- 562              		@ args = 0, pretend = 0, frame = 0
- 563              		@ frame_needed = 0, uses_anonymous_args = 0
- 564              		@ link register save eliminated.
- 168:taptempo.cpp  ****         tapRatio_ = tapRatio;
- 565              		.loc 1 168 9 view .LVU168
- 566              		.loc 1 168 19 is_stmt 0 view .LVU169
- 567 0000 80ED100A 		vstr.32	s0, [r0, #64]
+ 568              		.loc 1 167 5 is_stmt 1 view -0
+ 569              		.cfi_startproc
+ 570              		@ args = 0, pretend = 0, frame = 0
+ 571              		@ frame_needed = 0, uses_anonymous_args = 0
+ 572              		@ link register save eliminated.
+ 168:taptempo.cpp  ****         return static_cast<float>(lastTapLength_);
+ 573              		.loc 1 168 9 view .LVU177
+ 574              		.loc 1 168 49 is_stmt 0 view .LVU178
+ 575 0000 90ED060A 		vldr.32	s0, [r0, #24]	@ int
  169:taptempo.cpp  ****     }
- 568              		.loc 1 169 5 view .LVU170
- 569 0004 7047     		bx	lr
- 570              		.cfi_endproc
- 571              	.LFE3890:
- 573 0006 00BF     		.section	.text._ZN8Taptempo8setTempoEf,"ax",%progbits
- 574              		.align	1
- 575              		.p2align 2,,3
- 576              		.global	_ZN8Taptempo8setTempoEf
- 577              		.syntax unified
- 578              		.thumb
- 579              		.thumb_func
- 580              		.fpu fpv5-d16
- 582              	_ZN8Taptempo8setTempoEf:
- 583              	.LVL29:
- 584              	.LFB3891:
- 170:taptempo.cpp  ****     
- 171:taptempo.cpp  ****     void Taptempo::setTempo(float tempo)
+ 576              		.loc 1 169 5 view .LVU179
+ 577 0004 B8EE400A 		vcvt.f32.u32	s0, s0
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 19
+
+
+ 578 0008 7047     		bx	lr
+ 579              		.cfi_endproc
+ 580              	.LFE3889:
+ 582 000a 00BF     		.section	.text._ZN8Taptempo11setTapRatioEf,"ax",%progbits
+ 583              		.align	1
+ 584              		.p2align 2,,3
+ 585              		.global	_ZN8Taptempo11setTapRatioEf
+ 586              		.syntax unified
+ 587              		.thumb
+ 588              		.thumb_func
+ 589              		.fpu fpv5-d16
+ 591              	_ZN8Taptempo11setTapRatioEf:
+ 592              	.LVL28:
+ 593              	.LFB3890:
+ 170:taptempo.cpp  **** 
+ 171:taptempo.cpp  ****     void Taptempo::setTapRatio(float tapRatio)
  172:taptempo.cpp  ****     {
- 585              		.loc 1 172 5 is_stmt 1 view -0
- 586              		.cfi_startproc
- 587              		@ args = 0, pretend = 0, frame = 0
- 588              		@ frame_needed = 0, uses_anonymous_args = 0
- 589              		@ link register save eliminated.
- 173:taptempo.cpp  ****         tempo_ = tempo; 
- 590              		.loc 1 173 9 view .LVU172
- 591              		.loc 1 173 16 is_stmt 0 view .LVU173
- 592 0000 80ED0F0A 		vstr.32	s0, [r0, #60]
+ 594              		.loc 1 172 5 is_stmt 1 view -0
+ 595              		.cfi_startproc
+ 596              		@ args = 0, pretend = 0, frame = 0
+ 597              		@ frame_needed = 0, uses_anonymous_args = 0
+ 598              		@ link register save eliminated.
+ 173:taptempo.cpp  ****         tapRatio_ = tapRatio;
+ 599              		.loc 1 173 9 view .LVU181
+ 600              		.loc 1 173 19 is_stmt 0 view .LVU182
+ 601 0000 80ED100A 		vstr.32	s0, [r0, #64]
  174:taptempo.cpp  ****     }
- 593              		.loc 1 174 5 view .LVU174
- 594 0004 7047     		bx	lr
- 595              		.cfi_endproc
- 596              	.LFE3891:
- 598 0006 00BF     		.section	.text._ZN8Taptempo8getTempoEv,"ax",%progbits
- 599              		.align	1
- 600              		.p2align 2,,3
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 18
-
-
- 601              		.global	_ZN8Taptempo8getTempoEv
- 602              		.syntax unified
- 603              		.thumb
- 604              		.thumb_func
- 605              		.fpu fpv5-d16
- 607              	_ZN8Taptempo8getTempoEv:
- 608              	.LVL30:
- 609              	.LFB3892:
- 175:taptempo.cpp  **** 
- 176:taptempo.cpp  ****     float Taptempo::getTempo()
+ 602              		.loc 1 174 5 view .LVU183
+ 603 0004 7047     		bx	lr
+ 604              		.cfi_endproc
+ 605              	.LFE3890:
+ 607 0006 00BF     		.section	.text._ZN8Taptempo8setTempoEf,"ax",%progbits
+ 608              		.align	1
+ 609              		.p2align 2,,3
+ 610              		.global	_ZN8Taptempo8setTempoEf
+ 611              		.syntax unified
+ 612              		.thumb
+ 613              		.thumb_func
+ 614              		.fpu fpv5-d16
+ 616              	_ZN8Taptempo8setTempoEf:
+ 617              	.LVL29:
+ 618              	.LFB3891:
+ 175:taptempo.cpp  ****     
+ 176:taptempo.cpp  ****     void Taptempo::setTempo(float tempo)
  177:taptempo.cpp  ****     {
- 610              		.loc 1 177 5 is_stmt 1 view -0
- 611              		.cfi_startproc
- 612              		@ args = 0, pretend = 0, frame = 0
- 613              		@ frame_needed = 0, uses_anonymous_args = 0
- 614              		@ link register save eliminated.
- 178:taptempo.cpp  ****         return tempo_;
- 615              		.loc 1 178 9 view .LVU176
+ 619              		.loc 1 177 5 is_stmt 1 view -0
+ 620              		.cfi_startproc
+ 621              		@ args = 0, pretend = 0, frame = 0
+ 622              		@ frame_needed = 0, uses_anonymous_args = 0
+ 623              		@ link register save eliminated.
+ 178:taptempo.cpp  ****         tempo_ = tempo; 
+ 624              		.loc 1 178 9 view .LVU185
+ 625              		.loc 1 178 16 is_stmt 0 view .LVU186
+ 626 0000 80ED0F0A 		vstr.32	s0, [r0, #60]
  179:taptempo.cpp  ****     }
- 616              		.loc 1 179 5 is_stmt 0 view .LVU177
- 617 0000 90ED0F0A 		vldr.32	s0, [r0, #60]
- 618 0004 7047     		bx	lr
- 619              		.cfi_endproc
- 620              	.LFE3892:
- 622 0006 00BF     		.section	.bss._ZZN8Taptempo14getDelayLengthEvE9tempo_Out,"aw",%nobits
- 623              		.align	2
- 624              		.set	.LANCHOR2,. + 0
- 627              	_ZZN8Taptempo14getDelayLengthEvE9tempo_Out:
- 628 0000 00000000 		.space	4
- 629              		.section	.bss._ZZN8Taptempo5clockEmE14ClockTempoBuff,"aw",%nobits
- 630              		.align	2
- 631              		.set	.LANCHOR1,. + 0
- 634              	_ZZN8Taptempo5clockEmE14ClockTempoBuff:
- 635 0000 00000000 		.space	96
- 635      00000000 
- 635      00000000 
- 635      00000000 
- 635      00000000 
- 636              		.section	.bss._ZZN8Taptempo5clockEmE5index,"aw",%nobits
- 637              		.align	2
- 638              		.set	.LANCHOR0,. + 0
- 641              	_ZZN8Taptempo5clockEmE5index:
- 642 0000 00000000 		.space	4
- 643              		.text
- 644              	.Letext0:
- 645              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
- 646              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
- 647              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
- 648              		.file 6 "../libdaisy/Drivers/CMSIS/Include/core_cm7.h"
- 649              		.file 7 "../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
- 650              		.file 8 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
- 651              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/c
- 652              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 653              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 654              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 655              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 656              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 19
+ 627              		.loc 1 179 5 view .LVU187
+ 628 0004 7047     		bx	lr
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 20
 
 
- 657              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 658              		.file 16 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 659              		.file 17 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 660              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 661              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 662              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 663              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 664              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 665              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 666              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 667              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 668              		.file 26 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 669              		.file 27 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 670              		.file 28 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 671              		.file 29 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 672              		.file 30 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 673              		.file 31 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
- 674              		.file 32 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
- 675              		.file 33 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
- 676              		.file 34 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
- 677              		.file 35 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
- 678              		.file 36 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 679              		.file 37 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
- 680              		.file 38 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
- 681              		.file 39 "../DaisySP/Source/Control/adenv.h"
- 682              		.file 40 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
- 683              		.file 41 "<built-in>"
- 684              		.file 42 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
- 685              		.file 43 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/locale.h"
- 686              		.file 44 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/ctype.h"
- 687              		.file 45 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
- 688              		.file 46 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
- 689              		.file 47 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 690              		.file 48 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
- 691              		.file 49 "../libdaisy/src/per/tim.h"
- 692              		.file 50 "../libdaisy/src/sys/system.h"
- 693              		.file 51 "../libdaisy/src/util/wav_format.h"
- 694              		.file 52 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/unistd
- 695              		.file 53 "../libdaisy/src/util/oled_fonts.h"
- 696              		.file 54 "../libdaisy/Middlewares/Third_Party/FatFs/src/integer.h"
- 697              		.file 55 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h"
- 698              		.file 56 "../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h"
- 699              		.file 57 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
- 700              		.file 58 "../libdaisy/src/util/sd_diskio.h"
- 701              		.file 59 "../libdaisy/src/sys/fatfs.h"
- 702              		.file 60 "taptempo.h"
- 703              		.file 61 "../libdaisy/src/dev/sr_595.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s 			page 20
+ 629              		.cfi_endproc
+ 630              	.LFE3891:
+ 632 0006 00BF     		.section	.text._ZN8Taptempo8getTempoEv,"ax",%progbits
+ 633              		.align	1
+ 634              		.p2align 2,,3
+ 635              		.global	_ZN8Taptempo8getTempoEv
+ 636              		.syntax unified
+ 637              		.thumb
+ 638              		.thumb_func
+ 639              		.fpu fpv5-d16
+ 641              	_ZN8Taptempo8getTempoEv:
+ 642              	.LVL30:
+ 643              	.LFB3892:
+ 180:taptempo.cpp  **** 
+ 181:taptempo.cpp  ****     float Taptempo::getTempo()
+ 182:taptempo.cpp  ****     {
+ 644              		.loc 1 182 5 is_stmt 1 view -0
+ 645              		.cfi_startproc
+ 646              		@ args = 0, pretend = 0, frame = 0
+ 647              		@ frame_needed = 0, uses_anonymous_args = 0
+ 648              		@ link register save eliminated.
+ 183:taptempo.cpp  ****         return tempo_;
+ 649              		.loc 1 183 9 view .LVU189
+ 184:taptempo.cpp  ****     }
+ 650              		.loc 1 184 5 is_stmt 0 view .LVU190
+ 651 0000 90ED0F0A 		vldr.32	s0, [r0, #60]
+ 652 0004 7047     		bx	lr
+ 653              		.cfi_endproc
+ 654              	.LFE3892:
+ 656 0006 00BF     		.section	.bss._ZZN8Taptempo14getDelayLengthEvE10tempo_last,"aw",%nobits
+ 657              		.align	2
+ 658              		.set	.LANCHOR3,. + 0
+ 661              	_ZZN8Taptempo14getDelayLengthEvE10tempo_last:
+ 662 0000 00000000 		.space	4
+ 663              		.section	.bss._ZZN8Taptempo14getDelayLengthEvE9tempo_Out,"aw",%nobits
+ 664              		.align	2
+ 665              		.set	.LANCHOR2,. + 0
+ 668              	_ZZN8Taptempo14getDelayLengthEvE9tempo_Out:
+ 669 0000 00000000 		.space	4
+ 670              		.section	.bss._ZZN8Taptempo5clockEmE14ClockTempoBuff,"aw",%nobits
+ 671              		.align	2
+ 672              		.set	.LANCHOR1,. + 0
+ 675              	_ZZN8Taptempo5clockEmE14ClockTempoBuff:
+ 676 0000 00000000 		.space	96
+ 676      00000000 
+ 676      00000000 
+ 676      00000000 
+ 676      00000000 
+ 677              		.section	.bss._ZZN8Taptempo5clockEmE5index,"aw",%nobits
+ 678              		.align	2
+ 679              		.set	.LANCHOR0,. + 0
+ 682              	_ZZN8Taptempo5clockEmE5index:
+ 683 0000 00000000 		.space	4
+ 684              		.text
+ 685              	.Letext0:
+ 686              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
+ 687              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 21
+
+
+ 688              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
+ 689              		.file 7 "../libdaisy/Drivers/CMSIS/Include/core_cm7.h"
+ 690              		.file 8 "../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
+ 691              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
+ 692              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 693              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 694              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 695              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 696              		.file 14 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 697              		.file 15 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 698              		.file 16 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 699              		.file 17 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 700              		.file 18 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 701              		.file 19 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 702              		.file 20 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 703              		.file 21 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 704              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 705              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 706              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 707              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 708              		.file 26 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 709              		.file 27 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 710              		.file 28 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 711              		.file 29 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 712              		.file 30 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 713              		.file 31 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/lock.h
+ 714              		.file 32 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_types
+ 715              		.file 33 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/reent.
+ 716              		.file 34 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
+ 717              		.file 35 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
+ 718              		.file 36 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 719              		.file 37 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
+ 720              		.file 38 "../libdaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
+ 721              		.file 39 "../DaisySP/Source/Control/adenv.h"
+ 722              		.file 40 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
+ 723              		.file 41 "<built-in>"
+ 724              		.file 42 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
+ 725              		.file 43 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/locale.h"
+ 726              		.file 44 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/ctype.h"
+ 727              		.file 45 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdio.h"
+ 728              		.file 46 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
+ 729              		.file 47 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
+ 730              		.file 48 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
+ 731              		.file 49 "../libdaisy/src/per/tim.h"
+ 732              		.file 50 "../libdaisy/src/sys/system.h"
+ 733              		.file 51 "../libdaisy/src/util/wav_format.h"
+ 734              		.file 52 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/unistd
+ 735              		.file 53 "../libdaisy/src/util/oled_fonts.h"
+ 736              		.file 54 "../libdaisy/Middlewares/Third_Party/FatFs/src/integer.h"
+ 737              		.file 55 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h"
+ 738              		.file 56 "../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h"
+ 739              		.file 57 "../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
+ 740              		.file 58 "../libdaisy/src/util/sd_diskio.h"
+ 741              		.file 59 "../libdaisy/src/sys/fatfs.h"
+ 742              		.file 60 "taptempo.h"
+ 743              		.file 61 "../libdaisy/src/dev/sr_595.h"
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 taptempo.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:17     .text._ZN8Taptempo4initEmmfi:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:26     .text._ZN8Taptempo4initEmmfi:0000000000000000 _ZN8Taptempo4initEmmfi
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:96     .text._ZN8Taptempo4initEmmfi:000000000000003c $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:102    .text._ZN8Taptempo3tapEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:110    .text._ZN8Taptempo3tapEv:0000000000000000 _ZN8Taptempo3tapEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:242    .text._ZN8Taptempo3tapEv:0000000000000094 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:247    .text._ZN8Taptempo5clockEm:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:255    .text._ZN8Taptempo5clockEm:0000000000000000 _ZN8Taptempo5clockEm
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:406    .text._ZN8Taptempo5clockEm:0000000000000070 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:415    .text._ZN8Taptempo14getDelayLengthEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:423    .text._ZN8Taptempo14getDelayLengthEv:0000000000000000 _ZN8Taptempo14getDelayLengthEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:481    .text._ZN8Taptempo14getDelayLengthEv:0000000000000028 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:488    .text._ZN8Taptempo10getTapFreqEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:496    .text._ZN8Taptempo10getTapFreqEv:0000000000000000 _ZN8Taptempo10getTapFreqEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:518    .text._ZN8Taptempo10getTapFreqEv:0000000000000018 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:523    .text._ZN8Taptempo12getTapLengthEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:531    .text._ZN8Taptempo12getTapLengthEv:0000000000000000 _ZN8Taptempo12getTapLengthEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:549    .text._ZN8Taptempo11setTapRatioEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:557    .text._ZN8Taptempo11setTapRatioEf:0000000000000000 _ZN8Taptempo11setTapRatioEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:574    .text._ZN8Taptempo8setTempoEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:582    .text._ZN8Taptempo8setTempoEf:0000000000000000 _ZN8Taptempo8setTempoEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:599    .text._ZN8Taptempo8getTempoEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:607    .text._ZN8Taptempo8getTempoEv:0000000000000000 _ZN8Taptempo8getTempoEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:623    .bss._ZZN8Taptempo14getDelayLengthEvE9tempo_Out:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:627    .bss._ZZN8Taptempo14getDelayLengthEvE9tempo_Out:0000000000000000 _ZZN8Taptempo14getDelayLengthEvE9tempo_Out
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:630    .bss._ZZN8Taptempo5clockEmE14ClockTempoBuff:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:634    .bss._ZZN8Taptempo5clockEmE14ClockTempoBuff:0000000000000000 _ZZN8Taptempo5clockEmE14ClockTempoBuff
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:637    .bss._ZZN8Taptempo5clockEmE5index:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc133VVS.s:641    .bss._ZZN8Taptempo5clockEmE5index:0000000000000000 _ZZN8Taptempo5clockEmE5index
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:17     .text._ZN8Taptempo4initEmmfi:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:26     .text._ZN8Taptempo4initEmmfi:0000000000000000 _ZN8Taptempo4initEmmfi
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:96     .text._ZN8Taptempo4initEmmfi:000000000000003c $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:102    .text._ZN8Taptempo3tapEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:110    .text._ZN8Taptempo3tapEv:0000000000000000 _ZN8Taptempo3tapEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:242    .text._ZN8Taptempo3tapEv:0000000000000094 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:247    .text._ZN8Taptempo5clockEm:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:255    .text._ZN8Taptempo5clockEm:0000000000000000 _ZN8Taptempo5clockEm
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:406    .text._ZN8Taptempo5clockEm:0000000000000070 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:415    .text._ZN8Taptempo14getDelayLengthEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:423    .text._ZN8Taptempo14getDelayLengthEv:0000000000000000 _ZN8Taptempo14getDelayLengthEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:515    .text._ZN8Taptempo14getDelayLengthEv:000000000000004c $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:522    .text._ZN8Taptempo10getTapFreqEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:530    .text._ZN8Taptempo10getTapFreqEv:0000000000000000 _ZN8Taptempo10getTapFreqEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:552    .text._ZN8Taptempo10getTapFreqEv:0000000000000018 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:557    .text._ZN8Taptempo12getTapLengthEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:565    .text._ZN8Taptempo12getTapLengthEv:0000000000000000 _ZN8Taptempo12getTapLengthEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:583    .text._ZN8Taptempo11setTapRatioEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:591    .text._ZN8Taptempo11setTapRatioEf:0000000000000000 _ZN8Taptempo11setTapRatioEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:608    .text._ZN8Taptempo8setTempoEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:616    .text._ZN8Taptempo8setTempoEf:0000000000000000 _ZN8Taptempo8setTempoEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:633    .text._ZN8Taptempo8getTempoEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:641    .text._ZN8Taptempo8getTempoEv:0000000000000000 _ZN8Taptempo8getTempoEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:657    .bss._ZZN8Taptempo14getDelayLengthEvE10tempo_last:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:661    .bss._ZZN8Taptempo14getDelayLengthEvE10tempo_last:0000000000000000 _ZZN8Taptempo14getDelayLengthEvE10tempo_last
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:664    .bss._ZZN8Taptempo14getDelayLengthEvE9tempo_Out:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:668    .bss._ZZN8Taptempo14getDelayLengthEvE9tempo_Out:0000000000000000 _ZZN8Taptempo14getDelayLengthEvE9tempo_Out
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:671    .bss._ZZN8Taptempo5clockEmE14ClockTempoBuff:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:675    .bss._ZZN8Taptempo5clockEmE14ClockTempoBuff:0000000000000000 _ZZN8Taptempo5clockEmE14ClockTempoBuff
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:678    .bss._ZZN8Taptempo5clockEmE5index:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc7L8Too.s:682    .bss._ZZN8Taptempo5clockEmE5index:0000000000000000 _ZZN8Taptempo5clockEmE5index
 
 UNDEFINED SYMBOLS
 _ZN5daisy6System5GetUsEv

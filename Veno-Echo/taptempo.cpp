@@ -107,11 +107,11 @@ bool Taptempo::clock(uint32_t count)
         if(minclock_ <= ClockTempo && ClockTempo <= maxclock_) 
         {
             //update clockLength_ with rolling average
-            index = (index + 1) % PPQN_;
+            index = (index + 1) % (PPQN_);
             ClockTempoBuff[index] = ClockTempo;
 
             uint32_t ClockTempoSum{};
-            for(int i=0; i <PPQN_; i += 1)
+            for(int i=0; i <(PPQN_); i += 1)
             {
                 ClockTempoSum += ClockTempoBuff[i];
             }
@@ -135,20 +135,25 @@ bool Taptempo::clock(uint32_t count)
         }
     }
     
-    //outputs tap length in Us
+    //outputs tap length in Samples
     float Taptempo::getDelayLength()
     {
         static float tempo_Out{};
         static float tempo_last{};
-        fonepole(tempo_Out,tempo_,(PPQN_ == 24) ? 0.0011f: 0.011f);
+        fonepole(tempo_Out,tempo_,(PPQN_ == 24) ? 0.5f: 0.011f);
 
-        //if more than .5% of last value
-        //if( abs( tempo_Out - tempo_last)> (0.005 * tempo_last)) 
-        //{
-        //    tempo_last = tempo_Out; //update tempo_last
-       // }
+        //tempo_Out = tempo_;
+        //if bigger than 5 samples change
+        if( abs( tempo_Out - tempo_last) > 5) 
+        {
+            tempo_last = tempo_Out; //update tempo_last
+            return tempo_Out;
+        }
+        else
+        {
+            return tempo_last;
+        }
 
-        return tempo_Out;    //in Us
     }  
     
     //outputs tap frequency in Hz
