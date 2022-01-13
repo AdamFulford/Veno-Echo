@@ -106,17 +106,26 @@ bool Taptempo::clock(uint32_t count)
         //if within tempo limits
         if(minclock_ <= ClockTempo && ClockTempo <= maxclock_) 
         {
+            int buffLength{(PPQN_ == 24) ? 24 : 2};
             //update clockLength_ with rolling average
-            index = (index + 1) % (PPQN_);
+            index = (index + 1) % (buffLength);
             ClockTempoBuff[index] = ClockTempo;
 
             uint32_t ClockTempoSum{};
-            for(int i=0; i <(PPQN_); i += 1)
+            for(int i=0; i <(buffLength); i += 1)
             {
                 ClockTempoSum += ClockTempoBuff[i];
             }
 
-            ClockTempo = ClockTempoSum;
+            if(PPQN_ ==24)
+            {
+                ClockTempo = ClockTempoSum;
+            }
+            else
+            {
+                ClockTempo = ClockTempoSum / 2;
+            }
+
       
             //clock tempo update rate: every pulse if PPQN = 1, or every 12 pulses if PPQN = 24
             if(index % ((PPQN_ == 24) ? 12: 1) == 0) 
@@ -181,4 +190,10 @@ bool Taptempo::clock(uint32_t count)
     float Taptempo::getTempo()
     {
         return tempo_;
+
+    }
+
+    void Taptempo::setPPQN(int PPQN)
+    {
+        PPQN_ = PPQN;
     }

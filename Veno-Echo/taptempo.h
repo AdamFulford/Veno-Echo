@@ -56,7 +56,7 @@ class Taptempo
         clockLength_ = 0;
         lastClockLength_ = 0;
         clockThresh_ = 10000; //Us change
-        PPQN_ = 24;
+        PPQN_ = 1;
     }
     ~Taptempo() {}
     
@@ -85,6 +85,8 @@ class Taptempo
     void setTempo(float tempo);
 
     float getTempo();
+
+    void setPPQN(int PPQN);
 
 };
 
