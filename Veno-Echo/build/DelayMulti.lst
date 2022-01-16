@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
   27:DelayMulti.cpp **** {
   30              		.loc 1 27 1 view -0
   31              		.cfi_startproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 2
 
 
   32              		@ args = 0, pretend = 0, frame = 8
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
   22:delayline_multitap.h **** 
   23:delayline_multitap.h **** #pragma once
   24:delayline_multitap.h **** #ifndef DSY_DELAY_MULTITAP_H
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 3
 
 
   25:delayline_multitap.h **** #define DSY_DELAY_MULTITAP_H
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
   61:delayline_multitap.h ****         }
   62:delayline_multitap.h **** 
   63:delayline_multitap.h ****         write_ptr_ = 0;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 4
 
 
   76              		.loc 2 63 9 is_stmt 0 view .LVU12
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  116              	.LBE104:
  117              	.LBE103:
   30:DelayMulti.cpp ****     tempoled.init(ledpin,samplerate_/static_cast<float> (updateDiv));
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 5
 
 
  118              		.loc 1 30 5 is_stmt 1 view .LVU27
@@ -267,55 +267,55 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  132              	.LBB109:
  133              	.LBB110:
  134              	.LBB111:
- 135              		.file 3 "../DaisySP/Source/Dynamics/crossfade.h"
-   1:../DaisySP/Source/Dynamics/crossfade.h **** #pragma once
-   2:../DaisySP/Source/Dynamics/crossfade.h **** #ifndef DSY_CROSSFADE_H
-   3:../DaisySP/Source/Dynamics/crossfade.h **** #define DSY_CROSSFADE_H
-   4:../DaisySP/Source/Dynamics/crossfade.h **** #include <stdint.h>
-   5:../DaisySP/Source/Dynamics/crossfade.h **** #ifdef __cplusplus
-   6:../DaisySP/Source/Dynamics/crossfade.h **** 
-   7:../DaisySP/Source/Dynamics/crossfade.h **** namespace daisysp
-   8:../DaisySP/Source/Dynamics/crossfade.h **** {
-   9:../DaisySP/Source/Dynamics/crossfade.h **** /** Curve applied to the CrossFade
-  10:../DaisySP/Source/Dynamics/crossfade.h **** - LIN = linear
-  11:../DaisySP/Source/Dynamics/crossfade.h **** - CPOW = constant power
-  12:../DaisySP/Source/Dynamics/crossfade.h **** - LOG = logarithmic
-  13:../DaisySP/Source/Dynamics/crossfade.h **** - EXP  exponential
-  14:../DaisySP/Source/Dynamics/crossfade.h **** - LAST = end of enum (used for array indexing)
-  15:../DaisySP/Source/Dynamics/crossfade.h **** */
-  16:../DaisySP/Source/Dynamics/crossfade.h **** enum
-  17:../DaisySP/Source/Dynamics/crossfade.h **** {
-  18:../DaisySP/Source/Dynamics/crossfade.h ****     CROSSFADE_LIN,
-  19:../DaisySP/Source/Dynamics/crossfade.h ****     CROSSFADE_CPOW,
-  20:../DaisySP/Source/Dynamics/crossfade.h ****     CROSSFADE_LOG,
-  21:../DaisySP/Source/Dynamics/crossfade.h ****     CROSSFADE_EXP,
-  22:../DaisySP/Source/Dynamics/crossfade.h ****     CROSSFADE_LAST,
-  23:../DaisySP/Source/Dynamics/crossfade.h **** };
-  24:../DaisySP/Source/Dynamics/crossfade.h **** 
-  25:../DaisySP/Source/Dynamics/crossfade.h **** /** Performs a CrossFade between two signals
-  26:../DaisySP/Source/Dynamics/crossfade.h **** 
-  27:../DaisySP/Source/Dynamics/crossfade.h ****     Original author: Paul Batchelor
-  28:../DaisySP/Source/Dynamics/crossfade.h **** 
-  29:../DaisySP/Source/Dynamics/crossfade.h ****     Ported from Soundpipe by Andrew Ikenberry
-  30:../DaisySP/Source/Dynamics/crossfade.h **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 6
+ 135              		.file 3 "../DaisySP//Source/Dynamics/crossfade.h"
+   1:../DaisySP//Source/Dynamics/crossfade.h **** #pragma once
+   2:../DaisySP//Source/Dynamics/crossfade.h **** #ifndef DSY_CROSSFADE_H
+   3:../DaisySP//Source/Dynamics/crossfade.h **** #define DSY_CROSSFADE_H
+   4:../DaisySP//Source/Dynamics/crossfade.h **** #include <stdint.h>
+   5:../DaisySP//Source/Dynamics/crossfade.h **** #ifdef __cplusplus
+   6:../DaisySP//Source/Dynamics/crossfade.h **** 
+   7:../DaisySP//Source/Dynamics/crossfade.h **** namespace daisysp
+   8:../DaisySP//Source/Dynamics/crossfade.h **** {
+   9:../DaisySP//Source/Dynamics/crossfade.h **** /** Curve applied to the CrossFade
+  10:../DaisySP//Source/Dynamics/crossfade.h **** - LIN = linear
+  11:../DaisySP//Source/Dynamics/crossfade.h **** - CPOW = constant power
+  12:../DaisySP//Source/Dynamics/crossfade.h **** - LOG = logarithmic
+  13:../DaisySP//Source/Dynamics/crossfade.h **** - EXP  exponential
+  14:../DaisySP//Source/Dynamics/crossfade.h **** - LAST = end of enum (used for array indexing)
+  15:../DaisySP//Source/Dynamics/crossfade.h **** */
+  16:../DaisySP//Source/Dynamics/crossfade.h **** enum
+  17:../DaisySP//Source/Dynamics/crossfade.h **** {
+  18:../DaisySP//Source/Dynamics/crossfade.h ****     CROSSFADE_LIN,
+  19:../DaisySP//Source/Dynamics/crossfade.h ****     CROSSFADE_CPOW,
+  20:../DaisySP//Source/Dynamics/crossfade.h ****     CROSSFADE_LOG,
+  21:../DaisySP//Source/Dynamics/crossfade.h ****     CROSSFADE_EXP,
+  22:../DaisySP//Source/Dynamics/crossfade.h ****     CROSSFADE_LAST,
+  23:../DaisySP//Source/Dynamics/crossfade.h **** };
+  24:../DaisySP//Source/Dynamics/crossfade.h **** 
+  25:../DaisySP//Source/Dynamics/crossfade.h **** /** Performs a CrossFade between two signals
+  26:../DaisySP//Source/Dynamics/crossfade.h **** 
+  27:../DaisySP//Source/Dynamics/crossfade.h ****     Original author: Paul Batchelor
+  28:../DaisySP//Source/Dynamics/crossfade.h **** 
+  29:../DaisySP//Source/Dynamics/crossfade.h ****     Ported from Soundpipe by Andrew Ikenberry
+  30:../DaisySP//Source/Dynamics/crossfade.h **** 
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 6
 
 
-  31:../DaisySP/Source/Dynamics/crossfade.h ****     added curve option for constant power, etc.
-  32:../DaisySP/Source/Dynamics/crossfade.h **** */
-  33:../DaisySP/Source/Dynamics/crossfade.h **** class CrossFade
-  34:../DaisySP/Source/Dynamics/crossfade.h **** {
-  35:../DaisySP/Source/Dynamics/crossfade.h ****   public:
-  36:../DaisySP/Source/Dynamics/crossfade.h ****     CrossFade() {}
-  37:../DaisySP/Source/Dynamics/crossfade.h ****     ~CrossFade() {}
-  38:../DaisySP/Source/Dynamics/crossfade.h ****     /** Initializes CrossFade module
-  39:../DaisySP/Source/Dynamics/crossfade.h ****         Defaults
-  40:../DaisySP/Source/Dynamics/crossfade.h ****         - current position = .5
-  41:../DaisySP/Source/Dynamics/crossfade.h ****         - curve = linear
-  42:../DaisySP/Source/Dynamics/crossfade.h ****     */
-  43:../DaisySP/Source/Dynamics/crossfade.h ****     inline void Init(int curve)
-  44:../DaisySP/Source/Dynamics/crossfade.h ****     {
-  45:../DaisySP/Source/Dynamics/crossfade.h ****         pos_   = 0.5f;
+  31:../DaisySP//Source/Dynamics/crossfade.h ****     added curve option for constant power, etc.
+  32:../DaisySP//Source/Dynamics/crossfade.h **** */
+  33:../DaisySP//Source/Dynamics/crossfade.h **** class CrossFade
+  34:../DaisySP//Source/Dynamics/crossfade.h **** {
+  35:../DaisySP//Source/Dynamics/crossfade.h ****   public:
+  36:../DaisySP//Source/Dynamics/crossfade.h ****     CrossFade() {}
+  37:../DaisySP//Source/Dynamics/crossfade.h ****     ~CrossFade() {}
+  38:../DaisySP//Source/Dynamics/crossfade.h ****     /** Initializes CrossFade module
+  39:../DaisySP//Source/Dynamics/crossfade.h ****         Defaults
+  40:../DaisySP//Source/Dynamics/crossfade.h ****         - current position = .5
+  41:../DaisySP//Source/Dynamics/crossfade.h ****         - curve = linear
+  42:../DaisySP//Source/Dynamics/crossfade.h ****     */
+  43:../DaisySP//Source/Dynamics/crossfade.h ****     inline void Init(int curve)
+  44:../DaisySP//Source/Dynamics/crossfade.h ****     {
+  45:../DaisySP//Source/Dynamics/crossfade.h ****         pos_   = 0.5f;
  136              		.loc 3 45 16 view .LVU32
  137 005c 4FF07C59 		mov	r9, #1056964608
  138              	.LBE111:
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
   44:DelayMulti.cpp ****     mod_ = 0.0f;
   45:DelayMulti.cpp ****     //timethresh_ = 5;    //length of wait before triggering xfade
   46:DelayMulti.cpp ****     output_ = 0.0f;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 7
 
 
   47:DelayMulti.cpp ****     TimeChange_ = false;
@@ -410,15 +410,15 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  189              		.loc 1 50 9 view .LVU59
  190              	.LBB120:
  191              	.LBI109:
-  46:../DaisySP/Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
-  47:../DaisySP/Source/Dynamics/crossfade.h ****     }
-  48:../DaisySP/Source/Dynamics/crossfade.h **** 
-  49:../DaisySP/Source/Dynamics/crossfade.h ****     /** Initialize with default linear curve 
-  50:../DaisySP/Source/Dynamics/crossfade.h ****     */
-  51:../DaisySP/Source/Dynamics/crossfade.h ****     inline void Init() { Init(CROSSFADE_LIN); }
+  46:../DaisySP//Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
+  47:../DaisySP//Source/Dynamics/crossfade.h ****     }
+  48:../DaisySP//Source/Dynamics/crossfade.h **** 
+  49:../DaisySP//Source/Dynamics/crossfade.h ****     /** Initialize with default linear curve 
+  50:../DaisySP//Source/Dynamics/crossfade.h ****     */
+  51:../DaisySP//Source/Dynamics/crossfade.h ****     inline void Init() { Init(CROSSFADE_LIN); }
  192              		.loc 3 51 17 view .LVU60
  193              	.LBE120:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 8
 
 
  194              	.LBE164:
@@ -427,74 +427,74 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  197              	.LBB121:
  198              	.LBB116:
  199              	.LBI110:
-  43:../DaisySP/Source/Dynamics/crossfade.h ****     {
+  43:../DaisySP//Source/Dynamics/crossfade.h ****     {
  200              		.loc 3 43 17 view .LVU62
  201              	.LBB112:
-  45:../DaisySP/Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
+  45:../DaisySP//Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
  202              		.loc 3 45 9 view .LVU63
  203              	.LBE112:
  204              	.LBE116:
  205              	.LBE121:
  206              	.LBB122:
  207              	.LBB123:
- 208              		.file 4 "../DaisySP/Source/Control/adsr.h"
-   1:../DaisySP/Source/Control/adsr.h **** #pragma once
-   2:../DaisySP/Source/Control/adsr.h **** #ifndef DSY_ADSR_H
-   3:../DaisySP/Source/Control/adsr.h **** #define DSY_ADSR_H
-   4:../DaisySP/Source/Control/adsr.h **** 
-   5:../DaisySP/Source/Control/adsr.h **** #include <stdint.h>
-   6:../DaisySP/Source/Control/adsr.h **** #ifdef __cplusplus
-   7:../DaisySP/Source/Control/adsr.h **** 
-   8:../DaisySP/Source/Control/adsr.h **** namespace daisysp
-   9:../DaisySP/Source/Control/adsr.h **** {
-  10:../DaisySP/Source/Control/adsr.h **** /** Distinct stages that the phase of the envelope can be located in.
-  11:../DaisySP/Source/Control/adsr.h **** - IDLE   = located at phase location 0, and not currently running
-  12:../DaisySP/Source/Control/adsr.h **** - ATTACK  = First segment of envelope where phase moves from 0 to 1
-  13:../DaisySP/Source/Control/adsr.h **** - DECAY   = Second segment of envelope where phase moves from 1 to SUSTAIN value
-  14:../DaisySP/Source/Control/adsr.h **** - SUSTAIN = Third segment of envelope, stays at SUSTAIN level until GATE is released
-  15:../DaisySP/Source/Control/adsr.h **** - RELEASE =     Fourth segment of envelop where phase moves from SUSTAIN to 0
-  16:../DaisySP/Source/Control/adsr.h **** - LAST    =  Last segment, aka release
-  17:../DaisySP/Source/Control/adsr.h **** */
-  18:../DaisySP/Source/Control/adsr.h **** enum
-  19:../DaisySP/Source/Control/adsr.h **** {
-  20:../DaisySP/Source/Control/adsr.h ****     ADSR_SEG_IDLE,
-  21:../DaisySP/Source/Control/adsr.h ****     ADSR_SEG_ATTACK,
-  22:../DaisySP/Source/Control/adsr.h ****     ADSR_SEG_DECAY,
-  23:../DaisySP/Source/Control/adsr.h ****     ADSR_SEG_SUSTAIN,
-  24:../DaisySP/Source/Control/adsr.h ****     ADSR_SEG_RELEASE,
-  25:../DaisySP/Source/Control/adsr.h ****     ADSR_SEG_LAST,
-  26:../DaisySP/Source/Control/adsr.h **** };
-  27:../DaisySP/Source/Control/adsr.h **** 
-  28:../DaisySP/Source/Control/adsr.h **** 
-  29:../DaisySP/Source/Control/adsr.h **** /** adsr envelope module
-  30:../DaisySP/Source/Control/adsr.h **** 
-  31:../DaisySP/Source/Control/adsr.h **** Original author(s) : Paul Batchelor
-  32:../DaisySP/Source/Control/adsr.h **** 
-  33:../DaisySP/Source/Control/adsr.h **** Ported from Soundpipe by Ben Sergentanis, May 2020
-  34:../DaisySP/Source/Control/adsr.h **** */
-  35:../DaisySP/Source/Control/adsr.h **** class Adsr
-  36:../DaisySP/Source/Control/adsr.h **** {
-  37:../DaisySP/Source/Control/adsr.h ****   public:
-  38:../DaisySP/Source/Control/adsr.h ****     Adsr() {}
-  39:../DaisySP/Source/Control/adsr.h ****     ~Adsr() {}
-  40:../DaisySP/Source/Control/adsr.h ****     /** Initializes the Adsr module.
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 9
+ 208              		.file 4 "../DaisySP//Source/Control/adsr.h"
+   1:../DaisySP//Source/Control/adsr.h **** #pragma once
+   2:../DaisySP//Source/Control/adsr.h **** #ifndef DSY_ADSR_H
+   3:../DaisySP//Source/Control/adsr.h **** #define DSY_ADSR_H
+   4:../DaisySP//Source/Control/adsr.h **** 
+   5:../DaisySP//Source/Control/adsr.h **** #include <stdint.h>
+   6:../DaisySP//Source/Control/adsr.h **** #ifdef __cplusplus
+   7:../DaisySP//Source/Control/adsr.h **** 
+   8:../DaisySP//Source/Control/adsr.h **** namespace daisysp
+   9:../DaisySP//Source/Control/adsr.h **** {
+  10:../DaisySP//Source/Control/adsr.h **** /** Distinct stages that the phase of the envelope can be located in.
+  11:../DaisySP//Source/Control/adsr.h **** - IDLE   = located at phase location 0, and not currently running
+  12:../DaisySP//Source/Control/adsr.h **** - ATTACK  = First segment of envelope where phase moves from 0 to 1
+  13:../DaisySP//Source/Control/adsr.h **** - DECAY   = Second segment of envelope where phase moves from 1 to SUSTAIN value
+  14:../DaisySP//Source/Control/adsr.h **** - SUSTAIN = Third segment of envelope, stays at SUSTAIN level until GATE is released
+  15:../DaisySP//Source/Control/adsr.h **** - RELEASE =     Fourth segment of envelop where phase moves from SUSTAIN to 0
+  16:../DaisySP//Source/Control/adsr.h **** - LAST    =  Last segment, aka release
+  17:../DaisySP//Source/Control/adsr.h **** */
+  18:../DaisySP//Source/Control/adsr.h **** enum
+  19:../DaisySP//Source/Control/adsr.h **** {
+  20:../DaisySP//Source/Control/adsr.h ****     ADSR_SEG_IDLE,
+  21:../DaisySP//Source/Control/adsr.h ****     ADSR_SEG_ATTACK,
+  22:../DaisySP//Source/Control/adsr.h ****     ADSR_SEG_DECAY,
+  23:../DaisySP//Source/Control/adsr.h ****     ADSR_SEG_SUSTAIN,
+  24:../DaisySP//Source/Control/adsr.h ****     ADSR_SEG_RELEASE,
+  25:../DaisySP//Source/Control/adsr.h ****     ADSR_SEG_LAST,
+  26:../DaisySP//Source/Control/adsr.h **** };
+  27:../DaisySP//Source/Control/adsr.h **** 
+  28:../DaisySP//Source/Control/adsr.h **** 
+  29:../DaisySP//Source/Control/adsr.h **** /** adsr envelope module
+  30:../DaisySP//Source/Control/adsr.h **** 
+  31:../DaisySP//Source/Control/adsr.h **** Original author(s) : Paul Batchelor
+  32:../DaisySP//Source/Control/adsr.h **** 
+  33:../DaisySP//Source/Control/adsr.h **** Ported from Soundpipe by Ben Sergentanis, May 2020
+  34:../DaisySP//Source/Control/adsr.h **** */
+  35:../DaisySP//Source/Control/adsr.h **** class Adsr
+  36:../DaisySP//Source/Control/adsr.h **** {
+  37:../DaisySP//Source/Control/adsr.h ****   public:
+  38:../DaisySP//Source/Control/adsr.h ****     Adsr() {}
+  39:../DaisySP//Source/Control/adsr.h ****     ~Adsr() {}
+  40:../DaisySP//Source/Control/adsr.h ****     /** Initializes the Adsr module.
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 9
 
 
-  41:../DaisySP/Source/Control/adsr.h ****         \param sample_rate - The sample rate of the audio engine being run. 
-  42:../DaisySP/Source/Control/adsr.h ****     */
-  43:../DaisySP/Source/Control/adsr.h ****     void Init(float sample_rate);
-  44:../DaisySP/Source/Control/adsr.h **** 
-  45:../DaisySP/Source/Control/adsr.h **** 
-  46:../DaisySP/Source/Control/adsr.h ****     /** Processes one sample through the filter and returns one sample.
-  47:../DaisySP/Source/Control/adsr.h ****         \param gate - trigger the envelope, hold it to sustain 
-  48:../DaisySP/Source/Control/adsr.h ****     */
-  49:../DaisySP/Source/Control/adsr.h ****     float Process(bool gate);
-  50:../DaisySP/Source/Control/adsr.h **** 
-  51:../DaisySP/Source/Control/adsr.h ****     /** Sets time
-  52:../DaisySP/Source/Control/adsr.h ****         Set time per segment in seconds
-  53:../DaisySP/Source/Control/adsr.h ****     */
-  54:../DaisySP/Source/Control/adsr.h ****     inline void SetTime(int seg, float time) { seg_time_[seg] = time; }
+  41:../DaisySP//Source/Control/adsr.h ****         \param sample_rate - The sample rate of the audio engine being run. 
+  42:../DaisySP//Source/Control/adsr.h ****     */
+  43:../DaisySP//Source/Control/adsr.h ****     void Init(float sample_rate);
+  44:../DaisySP//Source/Control/adsr.h **** 
+  45:../DaisySP//Source/Control/adsr.h **** 
+  46:../DaisySP//Source/Control/adsr.h ****     /** Processes one sample through the filter and returns one sample.
+  47:../DaisySP//Source/Control/adsr.h ****         \param gate - trigger the envelope, hold it to sustain 
+  48:../DaisySP//Source/Control/adsr.h ****     */
+  49:../DaisySP//Source/Control/adsr.h ****     float Process(bool gate);
+  50:../DaisySP//Source/Control/adsr.h **** 
+  51:../DaisySP//Source/Control/adsr.h ****     /** Sets time
+  52:../DaisySP//Source/Control/adsr.h ****         Set time per segment in seconds
+  53:../DaisySP//Source/Control/adsr.h ****     */
+  54:../DaisySP//Source/Control/adsr.h ****     inline void SetTime(int seg, float time) { seg_time_[seg] = time; }
  209              		.loc 4 54 63 is_stmt 0 view .LVU64
  210 0094 164F     		ldr	r7, .L8+4
  211              	.LBE123:
@@ -511,19 +511,19 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  221              	.LBB166:
  222              	.LBB132:
  223              	.LBB133:
-  52:../DaisySP/Source/Dynamics/crossfade.h ****     /** processes CrossFade and returns single sample
-  53:../DaisySP/Source/Dynamics/crossfade.h ****     */
-  54:../DaisySP/Source/Dynamics/crossfade.h ****     float Process(float &in1, float &in2);
-  55:../DaisySP/Source/Dynamics/crossfade.h **** 
-  56:../DaisySP/Source/Dynamics/crossfade.h **** 
-  57:../DaisySP/Source/Dynamics/crossfade.h ****     /** Sets position of CrossFade between two input signals
-  58:../DaisySP/Source/Dynamics/crossfade.h ****         Input range: 0 to 1
-  59:../DaisySP/Source/Dynamics/crossfade.h ****     */
-  60:../DaisySP/Source/Dynamics/crossfade.h ****     inline void SetPos(float pos) { pos_ = pos; }
-  61:../DaisySP/Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
-  62:../DaisySP/Source/Dynamics/crossfade.h ****     Expected input: See [Curve Options](##curve-options)
-  63:../DaisySP/Source/Dynamics/crossfade.h ****     */
-  64:../DaisySP/Source/Dynamics/crossfade.h ****     inline void SetCurve(uint8_t curve) { curve_ = curve; }
+  52:../DaisySP//Source/Dynamics/crossfade.h ****     /** processes CrossFade and returns single sample
+  53:../DaisySP//Source/Dynamics/crossfade.h ****     */
+  54:../DaisySP//Source/Dynamics/crossfade.h ****     float Process(float &in1, float &in2);
+  55:../DaisySP//Source/Dynamics/crossfade.h **** 
+  56:../DaisySP//Source/Dynamics/crossfade.h **** 
+  57:../DaisySP//Source/Dynamics/crossfade.h ****     /** Sets position of CrossFade between two input signals
+  58:../DaisySP//Source/Dynamics/crossfade.h ****         Input range: 0 to 1
+  59:../DaisySP//Source/Dynamics/crossfade.h ****     */
+  60:../DaisySP//Source/Dynamics/crossfade.h ****     inline void SetPos(float pos) { pos_ = pos; }
+  61:../DaisySP//Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
+  62:../DaisySP//Source/Dynamics/crossfade.h ****     Expected input: See [Curve Options](##curve-options)
+  63:../DaisySP//Source/Dynamics/crossfade.h ****     */
+  64:../DaisySP//Source/Dynamics/crossfade.h ****     inline void SetCurve(uint8_t curve) { curve_ = curve; }
  224              		.loc 3 64 50 view .LVU66
  225 009c 85F85080 		strb	r8, [r5, #80]
  226              	.LBE133:
@@ -531,14 +531,14 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  228              	.LBB137:
  229              	.LBB117:
  230              	.LBB113:
-  45:../DaisySP/Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
+  45:../DaisySP//Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
  231              		.loc 3 45 16 view .LVU67
  232 00a0 C5F84C90 		str	r9, [r5, #76]	@ float
-  46:../DaisySP/Source/Dynamics/crossfade.h ****     }
+  46:../DaisySP//Source/Dynamics/crossfade.h ****     }
  233              		.loc 3 46 9 is_stmt 1 view .LVU68
  234              	.LVL12:
-  46:../DaisySP/Source/Dynamics/crossfade.h ****     }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 10
+  46:../DaisySP//Source/Dynamics/crossfade.h ****     }
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 10
 
 
  235              		.loc 3 46 9 is_stmt 0 view .LVU69
@@ -575,10 +575,10 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  262 00ac 95ED430A 		vldr.32	s0, [r5, #268]
  263              	.LBB140:
  264              	.LBB141:
-  55:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
-  56:../DaisySP/Source/Control/adsr.h ****         \param sus_level - sets sustain level
-  57:../DaisySP/Source/Control/adsr.h ****     */
-  58:../DaisySP/Source/Control/adsr.h ****     inline void SetSustainLevel(float sus_level) { sus_ = sus_level; }
+  55:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
+  56:../DaisySP//Source/Control/adsr.h ****         \param sus_level - sets sustain level
+  57:../DaisySP//Source/Control/adsr.h ****     */
+  58:../DaisySP//Source/Control/adsr.h ****     inline void SetSustainLevel(float sus_level) { sus_ = sus_level; }
  265              		.loc 4 58 57 view .LVU80
  266 00b0 EC65     		str	r4, [r5, #92]	@ float
  267              	.LBE141:
@@ -596,9 +596,9 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  273              	.LBB144:
  274              	.LBB118:
  275              	.LBB114:
-  45:../DaisySP/Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
+  45:../DaisySP//Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
  276              		.loc 3 45 16 view .LVU83
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 11
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 11
 
 
  277 00ba C5F85490 		str	r9, [r5, #84]	@ float
@@ -613,11 +613,11 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  286              	.LBE145:
  287              	.LBB146:
  288              	.LBB125:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  289              		.loc 4 54 63 view .LVU85
  290 00c2 6F66     		str	r7, [r5, #100]	@ float
  291              	.LVL14:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  292              		.loc 4 54 63 view .LVU86
  293              	.LBE125:
  294              	.LBE146:
@@ -625,16 +625,16 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  295              		.loc 1 56 9 is_stmt 1 view .LVU87
  296              	.LBB147:
  297              	.LBI127:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  298              		.loc 4 54 17 view .LVU88
  299              	.LBB129:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  300              		.loc 4 54 48 view .LVU89
  301              	.LBE129:
  302              	.LBE147:
  303              	.LBB148:
  304              	.LBB149:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  305              		.loc 4 54 63 is_stmt 0 view .LVU90
  306 00c4 2F67     		str	r7, [r5, #112]	@ float
  307              	.LBE149:
@@ -643,7 +643,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  310              	.LBB130:
  311 00c6 AE66     		str	r6, [r5, #104]	@ float
  312              	.LVL15:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  313              		.loc 4 54 63 view .LVU91
  314              	.LBE130:
  315              	.LBE152:
@@ -651,14 +651,14 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  316              		.loc 1 57 9 is_stmt 1 view .LVU92
  317              	.LBB153:
  318              	.LBI148:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  319              		.loc 4 54 17 view .LVU93
  320              	.LBB150:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  321              		.loc 4 54 48 view .LVU94
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  322              		.loc 4 54 48 is_stmt 0 view .LVU95
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 12
 
 
  323              	.LBE150:
@@ -683,23 +683,23 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
   50:DelayMulti.cpp ****         Xfade_[i].SetCurve(CROSSFADE_CPOW);
  338              		.loc 1 50 9 view .LVU104
  339              	.LBB155:
-  51:../DaisySP/Source/Dynamics/crossfade.h ****     /** processes CrossFade and returns single sample
+  51:../DaisySP//Source/Dynamics/crossfade.h ****     /** processes CrossFade and returns single sample
  340              		.loc 3 51 17 view .LVU105
  341              	.LBE155:
  342              	.LBE166:
-  51:../DaisySP/Source/Dynamics/crossfade.h ****     /** processes CrossFade and returns single sample
+  51:../DaisySP//Source/Dynamics/crossfade.h ****     /** processes CrossFade and returns single sample
  343              		.loc 3 51 26 view .LVU106
  344              	.LBB167:
  345              	.LBB156:
  346              	.LBB119:
-  43:../DaisySP/Source/Dynamics/crossfade.h ****     {
+  43:../DaisySP//Source/Dynamics/crossfade.h ****     {
  347              		.loc 3 43 17 view .LVU107
  348              	.LBB115:
-  45:../DaisySP/Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
+  45:../DaisySP//Source/Dynamics/crossfade.h ****         curve_ = curve < CROSSFADE_LAST ? curve : CROSSFADE_LIN;
  349              		.loc 3 45 9 view .LVU108
-  46:../DaisySP/Source/Dynamics/crossfade.h ****     }
+  46:../DaisySP//Source/Dynamics/crossfade.h ****     }
  350              		.loc 3 46 9 view .LVU109
-  46:../DaisySP/Source/Dynamics/crossfade.h ****     }
+  46:../DaisySP//Source/Dynamics/crossfade.h ****     }
  351              		.loc 3 46 9 is_stmt 0 view .LVU110
  352              	.LBE115:
  353              	.LBE119:
@@ -718,55 +718,55 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
   53:DelayMulti.cpp ****         //Head envelope attack and decay times:
  364              		.loc 1 53 26 is_stmt 0 view .LVU116
  365 00c8 FFF7FEFF 		bl	_ZN7daisysp4Adsr4InitEf
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 13
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 13
 
 
  366              	.LVL16:
   55:DelayMulti.cpp ****         XfadeEnv_[i].SetTime(ADENV_SEG_DECAY, 0.00001f);
  367              		.loc 1 55 9 is_stmt 1 view .LVU117
  368              	.LBB158:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  369              		.loc 4 54 17 view .LVU118
  370              	.LBB126:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  371              		.loc 4 54 48 view .LVU119
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  372              		.loc 4 54 63 is_stmt 0 view .LVU120
  373 00cc C5F89C70 		str	r7, [r5, #156]	@ float
  374              	.LVL17:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  375              		.loc 4 54 63 view .LVU121
  376              	.LBE126:
  377              	.LBE158:
   56:DelayMulti.cpp ****         XfadeEnv_[i].SetTime(ADSR_SEG_RELEASE, XFadeTime);
  378              		.loc 1 56 9 is_stmt 1 view .LVU122
  379              	.LBB159:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  380              		.loc 4 54 17 view .LVU123
  381              	.LBB131:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  382              		.loc 4 54 48 view .LVU124
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  383              		.loc 4 54 63 is_stmt 0 view .LVU125
  384 00d0 C5F8A060 		str	r6, [r5, #160]	@ float
  385              	.LVL18:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  386              		.loc 4 54 63 view .LVU126
  387              	.LBE131:
  388              	.LBE159:
   57:DelayMulti.cpp ****         XfadeEnv_[i].SetSustainLevel(1.0);
  389              		.loc 1 57 9 is_stmt 1 view .LVU127
  390              	.LBB160:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  391              		.loc 4 54 17 view .LVU128
  392              	.LBB151:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  393              		.loc 4 54 48 view .LVU129
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  394              		.loc 4 54 63 is_stmt 0 view .LVU130
  395 00d4 C5F8A870 		str	r7, [r5, #168]	@ float
  396              	.LVL19:
-  54:../DaisySP/Source/Control/adsr.h ****     /** Sustain level
+  54:../DaisySP//Source/Control/adsr.h ****     /** Sustain level
  397              		.loc 4 54 63 view .LVU131
  398              	.LBE151:
  399              	.LBE160:
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  404              		.loc 4 58 52 view .LVU134
  405              		.loc 4 58 57 is_stmt 0 view .LVU135
  406 00d8 C5F89440 		str	r4, [r5, #148]	@ float
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 14
 
 
  407              	.LVL20:
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
   72:DelayMulti.cpp **** if(syncMode)
   73:DelayMulti.cpp **** {
   74:DelayMulti.cpp ****     delaytime = GetDiv(delaytime_pot) * baseTempo_ * 0.048f;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 15
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 15
 
 
   75:DelayMulti.cpp **** }
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  129:DelayMulti.cpp **** 
  130:DelayMulti.cpp ****         timer_ = System::GetNow(); //reset timer
  131:DelayMulti.cpp ****         waiting_flag_ = false;  //reset wait flag
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 16
 
 
  132:DelayMulti.cpp **** 
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  478 001a 2DED028B 		vpush.64	{d8}
  479              		.cfi_def_cfa_offset 44
  480              		.cfi_offset 80, -44
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 17
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 17
 
 
  481              		.cfi_offset 81, -40
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  508 0030 03EB8701 		add	r1, r3, r7, lsl #2
  509 0034 D5ED067A 		vldr.32	s15, [r5, #24]
  510              	.LBB200:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 18
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 18
 
 
  511              	.LBB196:
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  124:delayline_multitap.h ****     /** returns the next sample of type T in the delay line, interpolated if necessary.
  125:delayline_multitap.h ****     */
  126:delayline_multitap.h ****    //final const means this function can't change any variables.
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 19
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 19
 
 
  127:delayline_multitap.h ****     inline const T Read(size_t head) const 
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  565              	.LBB205:
  566              		.loc 2 135 38 view .LVU175
  567 006a 1868     		ldr	r0, [r3]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 20
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 20
 
 
  568              	.LVL29:
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  611 0094 92ED217A 		vldr.32	s14, [r2, #132]
  612              	.LVL32:
  137:delayline_multitap.h ****             return a + (b-a) * frac_[head];
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 21
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 21
 
 
  613              		.loc 2 137 26 view .LVU193
@@ -1243,10 +1243,10 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  643              	.LVL36:
  644              	.LBB214:
  645              	.LBI214:
-  60:../DaisySP/Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
+  60:../DaisySP//Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
  646              		.loc 3 60 17 view .LVU205
  647              	.LBB215:
-  60:../DaisySP/Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
+  60:../DaisySP//Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
  648              		.loc 3 60 37 view .LVU206
  649              	.LBE215:
  650              	.LBE214:
@@ -1254,14 +1254,14 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  652 00c0 3046     		mov	r0, r6
  653              	.LBB217:
  654              	.LBB216:
-  60:../DaisySP/Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
+  60:../DaisySP//Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
  655              		.loc 3 60 42 view .LVU208
  656 00c2 86ED000A 		vstr.32	s0, [r6]
  657              	.LVL37:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 22
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 22
 
 
-  60:../DaisySP/Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
+  60:../DaisySP//Source/Dynamics/crossfade.h ****     /** Sets current curve applied to CrossFade 
  658              		.loc 3 60 42 view .LVU209
  659              	.LBE216:
  660              	.LBE217:
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  705              	.L13:
  706              	.LBB218:
  707              	.LBB209:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 23
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 23
 
 
  131:delayline_multitap.h ****         }
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  756 000e FFF7FEBF 		b	_ZN8TempoLED6updateE9TempoDivsf
  757              	.LVL47:
  758              	.L19:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 24
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 24
 
 
  175:DelayMulti.cpp ****     }
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  802              		.cfi_offset 6, -4
  803              		.loc 1 185 15 view .LVU240
  804 0006 0E68     		ldr	r6, [r1]	@ float
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 25
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 25
 
 
  805              	.LVL52:
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  848 0028 FF5D1A00 		.word	1727999
  849 002c 076B1300 		.word	1272583
  850 0030 005E1A00 		.word	1728000
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 26
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 26
 
 
  851              		.cfi_endproc
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  897              		.syntax unified
  898              		.thumb
  899              		.thumb_func
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 27
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 27
 
 
  900              		.fpu fpv5-d16
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  211:DelayMulti.cpp ****        div_ = DIV5;
  939              		.loc 1 211 15 view .LVU275
  940 002a 9FED400A 		vldr.32	s0, .L73+12
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 28
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 28
 
 
  941              	.LVL64:
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  977              		.loc 1 218 14 view .LVU288
  978 0062 80F81931 		strb	r3, [r0, #281]
  979 0066 7047     		bx	lr
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 29
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 29
 
 
  980              	.LVL70:
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  1016              	.LVL75:
  1017              	.L66:
  237:DelayMulti.cpp ****     }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 30
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 30
 
 
  238:DelayMulti.cpp **** 
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  1056 00d4 B4EEE70A 		vcmpe.f32	s0, s15
  1057 00d8 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  1058 00dc 05D5     		bpl	.L69
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 31
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 31
 
 
  252:DelayMulti.cpp ****     {
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  1098 0110 B8D8     		bhi	.L49
  264:DelayMulti.cpp ****     {
  265:DelayMulti.cpp ****        retVal = 6.0f; 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 32
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 32
 
 
  1099              		.loc 1 265 8 view .LVU327
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  1141              		.global	_ZN10DelayMulti12SetDelayTimeEfb
  1142              		.syntax unified
  1143              		.thumb
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 33
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 33
 
 
  1144              		.thumb_func
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
   83:DelayMulti.cpp **** {
  1187              		.loc 1 83 22 is_stmt 0 view .LVU347
  1188 0020 94ED497A 		vldr.32	s14, [r4, #292]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 34
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 34
 
 
  1189              	.LVL93:
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
   51:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
   52:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   using ::abs;
   53:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 35
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 35
 
 
   54:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #ifndef __CORRECT_ISO_CPP_STDLIB_H_PROTO
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  1218 0044 4EDC     		bgt	.L94
   83:DelayMulti.cpp **** {
  1219              		.loc 1 83 1 view .LVU358
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 36
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 36
 
 
  1220              	.LBE234:
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  1259              		.loc 1 124 46 view .LVU373
  1260 0068 83F48073 		eor	r3, r3, #256
  1261              	.LBE249:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 37
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 37
 
 
  128:DelayMulti.cpp **** 
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  1298 0098 80EE270A 		vdiv.f32	s0, s0, s15
  1299 009c FFF7FEFF 		bl	_ZN8TempoLED8setTempoEf
  1300              	.LVL98:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 38
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 38
 
 
  135:DelayMulti.cpp ****     }
@@ -2278,7 +2278,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  108:DelayMulti.cpp ****         {
  1345              		.loc 1 108 28 discriminator 3 view .LVU402
  111:DelayMulti.cpp ****         }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 39
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 39
 
 
  1346              		.loc 1 111 13 discriminator 3 view .LVU403
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  1387              		.loc 1 143 1 view .LVU416
  1388 00e0 2846     		mov	r0, r5
  1389 00e2 38BD     		pop	{r3, r4, r5, pc}
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 40
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 40
 
 
  1390              	.LVL109:
@@ -2398,7 +2398,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  1429              	.L96:
  1430              		.cfi_restore_state
  1431              	.LBB261:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 41
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 41
 
 
  1432              	.LBB254:
@@ -2439,8 +2439,8 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  1462              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
  1463              		.file 7 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
  1464              		.file 8 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
- 1465              		.file 9 "../libDaisy/Drivers/CMSIS/Include/core_cm7.h"
- 1466              		.file 10 "../libDaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
+ 1465              		.file 9 "../libDaisy//Drivers/CMSIS/Include/core_cm7.h"
+ 1466              		.file 10 "../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
  1467              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
  1468              		.file 12 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  1469              		.file 13 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
@@ -2458,7 +2458,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  1481              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  1482              		.file 26 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  1483              		.file 27 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 42
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 42
 
 
  1484              		.file 28 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
@@ -2473,10 +2473,10 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  1493              		.file 37 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
  1494              		.file 38 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
  1495              		.file 39 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1496              		.file 40 "../libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
- 1497              		.file 41 "../libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
- 1498              		.file 42 "../DaisySP/Source/Control/adenv.h"
- 1499              		.file 43 "../DaisySP/Source/Utility/dsp.h"
+ 1496              		.file 40 "../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
+ 1497              		.file 41 "../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
+ 1498              		.file 42 "../DaisySP//Source/Control/adenv.h"
+ 1499              		.file 43 "../DaisySP//Source/Utility/dsp.h"
  1500              		.file 44 "oscillator_p.h"
  1501              		.file 45 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
  1502              		.file 46 "<built-in>"
@@ -2487,44 +2487,44 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 1
  1507              		.file 51 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
  1508              		.file 52 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  1509              		.file 53 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
- 1510              		.file 54 "../libDaisy/src/daisy_core.h"
- 1511              		.file 55 "../libDaisy/src/per/tim.h"
- 1512              		.file 56 "../libDaisy/src/sys/system.h"
- 1513              		.file 57 "../libDaisy/src/util/wav_format.h"
- 1514              		.file 58 "../libDaisy/src/hid/led.h"
- 1515              		.file 59 "../libDaisy/src/daisy_seed.h"
- 1516              		.file 60 "../libDaisy/src/per/gpio.h"
+ 1510              		.file 54 "../libDaisy//src/daisy_core.h"
+ 1511              		.file 55 "../libDaisy//src/per/tim.h"
+ 1512              		.file 56 "../libDaisy//src/sys/system.h"
+ 1513              		.file 57 "../libDaisy//src/util/wav_format.h"
+ 1514              		.file 58 "../libDaisy//src/hid/led.h"
+ 1515              		.file 59 "../libDaisy//src/daisy_seed.h"
+ 1516              		.file 60 "../libDaisy//src/per/gpio.h"
  1517              		.file 61 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/unistd
- 1518              		.file 62 "../libDaisy/src/util/oled_fonts.h"
+ 1518              		.file 62 "../libDaisy//src/util/oled_fonts.h"
  1519              		.file 63 "constants.h"
  1520              		.file 64 "LEDs.h"
  1521              		.file 65 "scale.h"
  1522              		.file 66 "DelayMulti.h"
- 1523              		.file 67 "../libDaisy/src/dev/sr_595.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s 			page 43
+ 1523              		.file 67 "../libDaisy//src/dev/sr_595.h"
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s 			page 43
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 DelayMulti.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:17     .text._ZN10DelayMulti4initE12dsy_gpio_pinf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:26     .text._ZN10DelayMulti4initE12dsy_gpio_pinf:0000000000000000 _ZN10DelayMulti4initE12dsy_gpio_pinf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:431    .text._ZN10DelayMulti4initE12dsy_gpio_pinf:00000000000000ec $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:438    .text._ZN10DelayMulti9GetOutputEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:446    .text._ZN10DelayMulti9GetOutputEv:0000000000000000 _ZN10DelayMulti9GetOutputEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:714    .text._ZN10DelayMulti9GetOutputEv:0000000000000100 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:726    .text._ZN10DelayMulti14updateTempoLEDEb:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:734    .text._ZN10DelayMulti14updateTempoLEDEb:0000000000000000 _ZN10DelayMulti14updateTempoLEDEb
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:771    .text._ZN10DelayMulti5WriteERKf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:779    .text._ZN10DelayMulti5WriteERKf:0000000000000000 _ZN10DelayMulti5WriteERKf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:848    .text._ZN10DelayMulti5WriteERKf:0000000000000028 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:855    .text._ZN10DelayMulti12GetDelayTimeEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:863    .text._ZN10DelayMulti12GetDelayTimeEv:0000000000000000 _ZN10DelayMulti12GetDelayTimeEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:894    .text._ZN10DelayMulti6GetDivEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:902    .text._ZN10DelayMulti6GetDivEf:0000000000000000 _ZN10DelayMulti6GetDivEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:1122   .text._ZN10DelayMulti6GetDivEf:0000000000000120 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:1139   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:1147   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000000 _ZN10DelayMulti12SetDelayTimeEfb
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccrSuIii.s:1447   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000110 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:17     .text._ZN10DelayMulti4initE12dsy_gpio_pinf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:26     .text._ZN10DelayMulti4initE12dsy_gpio_pinf:0000000000000000 _ZN10DelayMulti4initE12dsy_gpio_pinf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:431    .text._ZN10DelayMulti4initE12dsy_gpio_pinf:00000000000000ec $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:438    .text._ZN10DelayMulti9GetOutputEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:446    .text._ZN10DelayMulti9GetOutputEv:0000000000000000 _ZN10DelayMulti9GetOutputEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:714    .text._ZN10DelayMulti9GetOutputEv:0000000000000100 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:726    .text._ZN10DelayMulti14updateTempoLEDEb:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:734    .text._ZN10DelayMulti14updateTempoLEDEb:0000000000000000 _ZN10DelayMulti14updateTempoLEDEb
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:771    .text._ZN10DelayMulti5WriteERKf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:779    .text._ZN10DelayMulti5WriteERKf:0000000000000000 _ZN10DelayMulti5WriteERKf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:848    .text._ZN10DelayMulti5WriteERKf:0000000000000028 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:855    .text._ZN10DelayMulti12GetDelayTimeEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:863    .text._ZN10DelayMulti12GetDelayTimeEv:0000000000000000 _ZN10DelayMulti12GetDelayTimeEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:894    .text._ZN10DelayMulti6GetDivEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:902    .text._ZN10DelayMulti6GetDivEf:0000000000000000 _ZN10DelayMulti6GetDivEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:1122   .text._ZN10DelayMulti6GetDivEf:0000000000000120 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:1139   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:1147   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000000 _ZN10DelayMulti12SetDelayTimeEfb
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cc4mYxT0.s:1447   .text._ZN10DelayMulti12SetDelayTimeEfb:0000000000000110 $d
 
 UNDEFINED SYMBOLS
 _ZN8TempoLED4initE12dsy_gpio_pinf

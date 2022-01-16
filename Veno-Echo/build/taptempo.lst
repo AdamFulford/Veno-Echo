@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
   27:taptempo.cpp  ****     {
   30              		.loc 1 27 5 view -0
   31              		.cfi_startproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 2
 
 
   32              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
   32:taptempo.cpp  ****         tempo_ = 500000.0f; //in Us. Default 120BPM
   64              		.loc 1 32 24 view .LVU14
   65 001c C0E90433 		strd	r3, r3, [r0, #16]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 3
 
 
   33:taptempo.cpp  ****         lastTime_ = 0;
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  109 0008 E368     		ldr	r3, [r4, #12]
   48:taptempo.cpp  ****         lastTime_ = currentTime_;   //always update lastTime_
   49:taptempo.cpp  ****         
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 4
 
 
   50:taptempo.cpp  ****         if(mintap_ <= tapLength_ && tapLength_ <= maxtap_)  //if between limits
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  146 0038 67EEA67A 		vmul.f32	s15, s15, s13
  147              		.loc 1 62 17 view .LVU47
  148 003c B4EEE77A 		vcmpe.f32	s14, s15
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 5
 
 
  149 0040 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  168              		.loc 1 76 14 is_stmt 1 view .LVU57
  169 0058 9342     		cmp	r3, r2
  170 005a 01D8     		bhi	.L8
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 6
 
 
   84:taptempo.cpp  ****         }
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  208 0082 10BD     		pop	{r4, pc}
  209              		.loc 1 92 5 view .LVU78
  210              		.cfi_endproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 7
 
 
  211              	.LFE4346:
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  253 0014 002A     		cmp	r2, #0
  254 0016 B8BF     		it	lt
  255 0018 5242     		rsblt	r2, r2, #0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 8
 
 
  256              		.loc 1 101 9 view .LVU92
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  285              	.L20:
  120:taptempo.cpp  ****         }
  286              		.loc 1 120 20 view .LVU105
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 9
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 9
 
 
  287 0040 0020     		movs	r0, #0
@@ -515,155 +515,155 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  313              		.loc 1 129 9 view .LVU111
  314              	.LBB6:
  315              	.LBI6:
- 316              		.file 2 "../DaisySP/Source/Utility/dsp.h"
-   1:../DaisySP/Source/Utility/dsp.h **** /** Helpful defines, functions, and other utilities for use in/with daisysp modules.
-   2:../DaisySP/Source/Utility/dsp.h **** */
-   3:../DaisySP/Source/Utility/dsp.h **** #pragma once
-   4:../DaisySP/Source/Utility/dsp.h **** #ifndef DSY_CORE_DSP
-   5:../DaisySP/Source/Utility/dsp.h **** #define DSY_CORE_DSP
-   6:../DaisySP/Source/Utility/dsp.h **** #include <cassert>
-   7:../DaisySP/Source/Utility/dsp.h **** #include <cstdint>
-   8:../DaisySP/Source/Utility/dsp.h **** #include <random>
-   9:../DaisySP/Source/Utility/dsp.h **** #include <cmath>
-  10:../DaisySP/Source/Utility/dsp.h **** 
-  11:../DaisySP/Source/Utility/dsp.h **** /** PIs
-  12:../DaisySP/Source/Utility/dsp.h **** */
-  13:../DaisySP/Source/Utility/dsp.h **** #define PI_F 3.1415927410125732421875f
-  14:../DaisySP/Source/Utility/dsp.h **** #define TWOPI_F (2.0f * PI_F)
-  15:../DaisySP/Source/Utility/dsp.h **** #define HALFPI_F (PI_F * 0.5f)
-  16:../DaisySP/Source/Utility/dsp.h **** #define DSY_MIN(in, mn) (in < mn ? in : mn)
-  17:../DaisySP/Source/Utility/dsp.h **** #define DSY_MAX(in, mx) (in > mx ? in : mx)
-  18:../DaisySP/Source/Utility/dsp.h **** #define DSY_CLAMP(in, mn, mx) (DSY_MIN(DSY_MAX(in, mn), mx))
-  19:../DaisySP/Source/Utility/dsp.h **** #define DSY_COUNTOF(_arr) (sizeof(_arr) / sizeof(_arr[0]))
-  20:../DaisySP/Source/Utility/dsp.h **** 
-  21:../DaisySP/Source/Utility/dsp.h **** namespace daisysp
-  22:../DaisySP/Source/Utility/dsp.h **** {
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 10
+ 316              		.file 2 "../DaisySP//Source/Utility/dsp.h"
+   1:../DaisySP//Source/Utility/dsp.h **** /** Helpful defines, functions, and other utilities for use in/with daisysp modules.
+   2:../DaisySP//Source/Utility/dsp.h **** */
+   3:../DaisySP//Source/Utility/dsp.h **** #pragma once
+   4:../DaisySP//Source/Utility/dsp.h **** #ifndef DSY_CORE_DSP
+   5:../DaisySP//Source/Utility/dsp.h **** #define DSY_CORE_DSP
+   6:../DaisySP//Source/Utility/dsp.h **** #include <cassert>
+   7:../DaisySP//Source/Utility/dsp.h **** #include <cstdint>
+   8:../DaisySP//Source/Utility/dsp.h **** #include <random>
+   9:../DaisySP//Source/Utility/dsp.h **** #include <cmath>
+  10:../DaisySP//Source/Utility/dsp.h **** 
+  11:../DaisySP//Source/Utility/dsp.h **** /** PIs
+  12:../DaisySP//Source/Utility/dsp.h **** */
+  13:../DaisySP//Source/Utility/dsp.h **** #define PI_F 3.1415927410125732421875f
+  14:../DaisySP//Source/Utility/dsp.h **** #define TWOPI_F (2.0f * PI_F)
+  15:../DaisySP//Source/Utility/dsp.h **** #define HALFPI_F (PI_F * 0.5f)
+  16:../DaisySP//Source/Utility/dsp.h **** #define DSY_MIN(in, mn) (in < mn ? in : mn)
+  17:../DaisySP//Source/Utility/dsp.h **** #define DSY_MAX(in, mx) (in > mx ? in : mx)
+  18:../DaisySP//Source/Utility/dsp.h **** #define DSY_CLAMP(in, mn, mx) (DSY_MIN(DSY_MAX(in, mn), mx))
+  19:../DaisySP//Source/Utility/dsp.h **** #define DSY_COUNTOF(_arr) (sizeof(_arr) / sizeof(_arr[0]))
+  20:../DaisySP//Source/Utility/dsp.h **** 
+  21:../DaisySP//Source/Utility/dsp.h **** namespace daisysp
+  22:../DaisySP//Source/Utility/dsp.h **** {
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 10
 
 
-  23:../DaisySP/Source/Utility/dsp.h **** //Avoids division for random floats. e.g. rand() * kRandFrac
-  24:../DaisySP/Source/Utility/dsp.h **** static constexpr float kRandFrac = 1.f / (float)RAND_MAX;
-  25:../DaisySP/Source/Utility/dsp.h **** 
-  26:../DaisySP/Source/Utility/dsp.h **** //Convert from semitones to other units. e.g. 2 ^ (kOneTwelfth * x)
-  27:../DaisySP/Source/Utility/dsp.h **** static constexpr float kOneTwelfth = 1.f / 12.f;
-  28:../DaisySP/Source/Utility/dsp.h **** 
-  29:../DaisySP/Source/Utility/dsp.h **** /** efficient floating point min/max
-  30:../DaisySP/Source/Utility/dsp.h **** c/o stephen mccaul
-  31:../DaisySP/Source/Utility/dsp.h **** */
-  32:../DaisySP/Source/Utility/dsp.h **** inline float fmax(float a, float b)
-  33:../DaisySP/Source/Utility/dsp.h **** {
-  34:../DaisySP/Source/Utility/dsp.h ****     float r;
-  35:../DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
-  36:../DaisySP/Source/Utility/dsp.h ****     asm("vmaxnm.f32 %[d], %[n], %[m]" : [d] "=t"(r) : [n] "t"(a), [m] "t"(b) :);
-  37:../DaisySP/Source/Utility/dsp.h **** #else
-  38:../DaisySP/Source/Utility/dsp.h ****     r = (a > b) ? a : b;
-  39:../DaisySP/Source/Utility/dsp.h **** #endif // __arm__
-  40:../DaisySP/Source/Utility/dsp.h ****     return r;
-  41:../DaisySP/Source/Utility/dsp.h **** }
-  42:../DaisySP/Source/Utility/dsp.h **** 
-  43:../DaisySP/Source/Utility/dsp.h **** inline float fmin(float a, float b)
-  44:../DaisySP/Source/Utility/dsp.h **** {
-  45:../DaisySP/Source/Utility/dsp.h ****     float r;
-  46:../DaisySP/Source/Utility/dsp.h **** #ifdef __arm__
-  47:../DaisySP/Source/Utility/dsp.h ****     asm("vminnm.f32 %[d], %[n], %[m]" : [d] "=t"(r) : [n] "t"(a), [m] "t"(b) :);
-  48:../DaisySP/Source/Utility/dsp.h **** #else
-  49:../DaisySP/Source/Utility/dsp.h ****     r = (a < b) ? a : b;
-  50:../DaisySP/Source/Utility/dsp.h **** #endif // __arm__
-  51:../DaisySP/Source/Utility/dsp.h ****     return r;
-  52:../DaisySP/Source/Utility/dsp.h **** }
-  53:../DaisySP/Source/Utility/dsp.h **** 
-  54:../DaisySP/Source/Utility/dsp.h **** /** quick fp clamp
-  55:../DaisySP/Source/Utility/dsp.h **** */
-  56:../DaisySP/Source/Utility/dsp.h **** inline float fclamp(float in, float min, float max)
-  57:../DaisySP/Source/Utility/dsp.h **** {
-  58:../DaisySP/Source/Utility/dsp.h ****     return fmin(fmax(in, min), max);
-  59:../DaisySP/Source/Utility/dsp.h **** }
-  60:../DaisySP/Source/Utility/dsp.h **** 
-  61:../DaisySP/Source/Utility/dsp.h **** /** From Musicdsp.org "Fast power and root estimates for 32bit floats)
-  62:../DaisySP/Source/Utility/dsp.h **** Original code by Stefan Stenzel
-  63:../DaisySP/Source/Utility/dsp.h **** These are approximations
-  64:../DaisySP/Source/Utility/dsp.h **** */
-  65:../DaisySP/Source/Utility/dsp.h **** inline float fastpower(float f, int n)
-  66:../DaisySP/Source/Utility/dsp.h **** {
-  67:../DaisySP/Source/Utility/dsp.h ****     long *lp, l;
-  68:../DaisySP/Source/Utility/dsp.h ****     lp = (long *)(&f);
-  69:../DaisySP/Source/Utility/dsp.h ****     l  = *lp;
-  70:../DaisySP/Source/Utility/dsp.h ****     l -= 0x3F800000;
-  71:../DaisySP/Source/Utility/dsp.h ****     l <<= (n - 1);
-  72:../DaisySP/Source/Utility/dsp.h ****     l += 0x3F800000;
-  73:../DaisySP/Source/Utility/dsp.h ****     *lp = l;
-  74:../DaisySP/Source/Utility/dsp.h ****     return f;
-  75:../DaisySP/Source/Utility/dsp.h **** }
-  76:../DaisySP/Source/Utility/dsp.h **** 
-  77:../DaisySP/Source/Utility/dsp.h **** inline float fastroot(float f, int n)
-  78:../DaisySP/Source/Utility/dsp.h **** {
-  79:../DaisySP/Source/Utility/dsp.h ****     long *lp, l;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 11
+  23:../DaisySP//Source/Utility/dsp.h **** //Avoids division for random floats. e.g. rand() * kRandFrac
+  24:../DaisySP//Source/Utility/dsp.h **** static constexpr float kRandFrac = 1.f / (float)RAND_MAX;
+  25:../DaisySP//Source/Utility/dsp.h **** 
+  26:../DaisySP//Source/Utility/dsp.h **** //Convert from semitones to other units. e.g. 2 ^ (kOneTwelfth * x)
+  27:../DaisySP//Source/Utility/dsp.h **** static constexpr float kOneTwelfth = 1.f / 12.f;
+  28:../DaisySP//Source/Utility/dsp.h **** 
+  29:../DaisySP//Source/Utility/dsp.h **** /** efficient floating point min/max
+  30:../DaisySP//Source/Utility/dsp.h **** c/o stephen mccaul
+  31:../DaisySP//Source/Utility/dsp.h **** */
+  32:../DaisySP//Source/Utility/dsp.h **** inline float fmax(float a, float b)
+  33:../DaisySP//Source/Utility/dsp.h **** {
+  34:../DaisySP//Source/Utility/dsp.h ****     float r;
+  35:../DaisySP//Source/Utility/dsp.h **** #ifdef __arm__
+  36:../DaisySP//Source/Utility/dsp.h ****     asm("vmaxnm.f32 %[d], %[n], %[m]" : [d] "=t"(r) : [n] "t"(a), [m] "t"(b) :);
+  37:../DaisySP//Source/Utility/dsp.h **** #else
+  38:../DaisySP//Source/Utility/dsp.h ****     r = (a > b) ? a : b;
+  39:../DaisySP//Source/Utility/dsp.h **** #endif // __arm__
+  40:../DaisySP//Source/Utility/dsp.h ****     return r;
+  41:../DaisySP//Source/Utility/dsp.h **** }
+  42:../DaisySP//Source/Utility/dsp.h **** 
+  43:../DaisySP//Source/Utility/dsp.h **** inline float fmin(float a, float b)
+  44:../DaisySP//Source/Utility/dsp.h **** {
+  45:../DaisySP//Source/Utility/dsp.h ****     float r;
+  46:../DaisySP//Source/Utility/dsp.h **** #ifdef __arm__
+  47:../DaisySP//Source/Utility/dsp.h ****     asm("vminnm.f32 %[d], %[n], %[m]" : [d] "=t"(r) : [n] "t"(a), [m] "t"(b) :);
+  48:../DaisySP//Source/Utility/dsp.h **** #else
+  49:../DaisySP//Source/Utility/dsp.h ****     r = (a < b) ? a : b;
+  50:../DaisySP//Source/Utility/dsp.h **** #endif // __arm__
+  51:../DaisySP//Source/Utility/dsp.h ****     return r;
+  52:../DaisySP//Source/Utility/dsp.h **** }
+  53:../DaisySP//Source/Utility/dsp.h **** 
+  54:../DaisySP//Source/Utility/dsp.h **** /** quick fp clamp
+  55:../DaisySP//Source/Utility/dsp.h **** */
+  56:../DaisySP//Source/Utility/dsp.h **** inline float fclamp(float in, float min, float max)
+  57:../DaisySP//Source/Utility/dsp.h **** {
+  58:../DaisySP//Source/Utility/dsp.h ****     return fmin(fmax(in, min), max);
+  59:../DaisySP//Source/Utility/dsp.h **** }
+  60:../DaisySP//Source/Utility/dsp.h **** 
+  61:../DaisySP//Source/Utility/dsp.h **** /** From Musicdsp.org "Fast power and root estimates for 32bit floats)
+  62:../DaisySP//Source/Utility/dsp.h **** Original code by Stefan Stenzel
+  63:../DaisySP//Source/Utility/dsp.h **** These are approximations
+  64:../DaisySP//Source/Utility/dsp.h **** */
+  65:../DaisySP//Source/Utility/dsp.h **** inline float fastpower(float f, int n)
+  66:../DaisySP//Source/Utility/dsp.h **** {
+  67:../DaisySP//Source/Utility/dsp.h ****     long *lp, l;
+  68:../DaisySP//Source/Utility/dsp.h ****     lp = (long *)(&f);
+  69:../DaisySP//Source/Utility/dsp.h ****     l  = *lp;
+  70:../DaisySP//Source/Utility/dsp.h ****     l -= 0x3F800000;
+  71:../DaisySP//Source/Utility/dsp.h ****     l <<= (n - 1);
+  72:../DaisySP//Source/Utility/dsp.h ****     l += 0x3F800000;
+  73:../DaisySP//Source/Utility/dsp.h ****     *lp = l;
+  74:../DaisySP//Source/Utility/dsp.h ****     return f;
+  75:../DaisySP//Source/Utility/dsp.h **** }
+  76:../DaisySP//Source/Utility/dsp.h **** 
+  77:../DaisySP//Source/Utility/dsp.h **** inline float fastroot(float f, int n)
+  78:../DaisySP//Source/Utility/dsp.h **** {
+  79:../DaisySP//Source/Utility/dsp.h ****     long *lp, l;
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 11
 
 
-  80:../DaisySP/Source/Utility/dsp.h ****     lp = (long *)(&f);
-  81:../DaisySP/Source/Utility/dsp.h ****     l  = *lp;
-  82:../DaisySP/Source/Utility/dsp.h ****     l -= 0x3F800000;
-  83:../DaisySP/Source/Utility/dsp.h ****     l >>= (n = 1);
-  84:../DaisySP/Source/Utility/dsp.h ****     l += 0x3F800000;
-  85:../DaisySP/Source/Utility/dsp.h ****     *lp = l;
-  86:../DaisySP/Source/Utility/dsp.h ****     return f;
-  87:../DaisySP/Source/Utility/dsp.h **** }
-  88:../DaisySP/Source/Utility/dsp.h **** 
-  89:../DaisySP/Source/Utility/dsp.h **** /** From http://openaudio.blogspot.com/2017/02/faster-log10-and-pow.html
-  90:../DaisySP/Source/Utility/dsp.h **** No approximation, pow10f(x) gives a 90% speed increase over powf(10.f, x)
-  91:../DaisySP/Source/Utility/dsp.h **** */
-  92:../DaisySP/Source/Utility/dsp.h **** inline float pow10f(float f)
-  93:../DaisySP/Source/Utility/dsp.h **** {
-  94:../DaisySP/Source/Utility/dsp.h ****     return expf(2.302585092994046f * f);
-  95:../DaisySP/Source/Utility/dsp.h **** }
-  96:../DaisySP/Source/Utility/dsp.h **** 
-  97:../DaisySP/Source/Utility/dsp.h **** /* Original code for fastlog2f by Dr. Paul Beckmann from the ARM community forum, adapted from the 
-  98:../DaisySP/Source/Utility/dsp.h **** About 25% performance increase over std::log10f
-  99:../DaisySP/Source/Utility/dsp.h **** */
- 100:../DaisySP/Source/Utility/dsp.h **** inline float fastlog2f(float f)
- 101:../DaisySP/Source/Utility/dsp.h **** {
- 102:../DaisySP/Source/Utility/dsp.h ****     float frac;
- 103:../DaisySP/Source/Utility/dsp.h ****     int   exp;
- 104:../DaisySP/Source/Utility/dsp.h ****     frac = frexpf(fabsf(f), &exp);
- 105:../DaisySP/Source/Utility/dsp.h ****     f    = 1.23149591368684f;
- 106:../DaisySP/Source/Utility/dsp.h ****     f *= frac;
- 107:../DaisySP/Source/Utility/dsp.h ****     f += -4.11852516267426f;
- 108:../DaisySP/Source/Utility/dsp.h ****     f *= frac;
- 109:../DaisySP/Source/Utility/dsp.h ****     f += 6.02197014179219f;
- 110:../DaisySP/Source/Utility/dsp.h ****     f *= frac;
- 111:../DaisySP/Source/Utility/dsp.h ****     f += -3.13396450166353f;
- 112:../DaisySP/Source/Utility/dsp.h ****     f += exp;
- 113:../DaisySP/Source/Utility/dsp.h ****     return (f);
- 114:../DaisySP/Source/Utility/dsp.h **** }
- 115:../DaisySP/Source/Utility/dsp.h **** 
- 116:../DaisySP/Source/Utility/dsp.h **** inline float fastlog10f(float f)
- 117:../DaisySP/Source/Utility/dsp.h **** {
- 118:../DaisySP/Source/Utility/dsp.h ****     return fastlog2f(f) * 0.3010299956639812f;
- 119:../DaisySP/Source/Utility/dsp.h **** }
- 120:../DaisySP/Source/Utility/dsp.h **** 
- 121:../DaisySP/Source/Utility/dsp.h **** /** Midi to frequency helper
- 122:../DaisySP/Source/Utility/dsp.h **** */
- 123:../DaisySP/Source/Utility/dsp.h **** inline float mtof(float m)
- 124:../DaisySP/Source/Utility/dsp.h **** {
- 125:../DaisySP/Source/Utility/dsp.h ****     return powf(2, (m - 69.0f) / 12.0f) * 440.0f;
- 126:../DaisySP/Source/Utility/dsp.h **** }
- 127:../DaisySP/Source/Utility/dsp.h **** 
- 128:../DaisySP/Source/Utility/dsp.h **** 
- 129:../DaisySP/Source/Utility/dsp.h **** /** one pole lpf
- 130:../DaisySP/Source/Utility/dsp.h **** out is passed by reference, and must be retained between
- 131:../DaisySP/Source/Utility/dsp.h **** calls to properly filter the signal
- 132:../DaisySP/Source/Utility/dsp.h **** coeff can be calculated:
- 133:../DaisySP/Source/Utility/dsp.h **** coeff = 1.0 / (time * sample_rate) ; where time is in seconds
- 134:../DaisySP/Source/Utility/dsp.h **** */
- 135:../DaisySP/Source/Utility/dsp.h **** inline void fonepole(float &out, float in, float coeff)
+  80:../DaisySP//Source/Utility/dsp.h ****     lp = (long *)(&f);
+  81:../DaisySP//Source/Utility/dsp.h ****     l  = *lp;
+  82:../DaisySP//Source/Utility/dsp.h ****     l -= 0x3F800000;
+  83:../DaisySP//Source/Utility/dsp.h ****     l >>= (n = 1);
+  84:../DaisySP//Source/Utility/dsp.h ****     l += 0x3F800000;
+  85:../DaisySP//Source/Utility/dsp.h ****     *lp = l;
+  86:../DaisySP//Source/Utility/dsp.h ****     return f;
+  87:../DaisySP//Source/Utility/dsp.h **** }
+  88:../DaisySP//Source/Utility/dsp.h **** 
+  89:../DaisySP//Source/Utility/dsp.h **** /** From http://openaudio.blogspot.com/2017/02/faster-log10-and-pow.html
+  90:../DaisySP//Source/Utility/dsp.h **** No approximation, pow10f(x) gives a 90% speed increase over powf(10.f, x)
+  91:../DaisySP//Source/Utility/dsp.h **** */
+  92:../DaisySP//Source/Utility/dsp.h **** inline float pow10f(float f)
+  93:../DaisySP//Source/Utility/dsp.h **** {
+  94:../DaisySP//Source/Utility/dsp.h ****     return expf(2.302585092994046f * f);
+  95:../DaisySP//Source/Utility/dsp.h **** }
+  96:../DaisySP//Source/Utility/dsp.h **** 
+  97:../DaisySP//Source/Utility/dsp.h **** /* Original code for fastlog2f by Dr. Paul Beckmann from the ARM community forum, adapted from the 
+  98:../DaisySP//Source/Utility/dsp.h **** About 25% performance increase over std::log10f
+  99:../DaisySP//Source/Utility/dsp.h **** */
+ 100:../DaisySP//Source/Utility/dsp.h **** inline float fastlog2f(float f)
+ 101:../DaisySP//Source/Utility/dsp.h **** {
+ 102:../DaisySP//Source/Utility/dsp.h ****     float frac;
+ 103:../DaisySP//Source/Utility/dsp.h ****     int   exp;
+ 104:../DaisySP//Source/Utility/dsp.h ****     frac = frexpf(fabsf(f), &exp);
+ 105:../DaisySP//Source/Utility/dsp.h ****     f    = 1.23149591368684f;
+ 106:../DaisySP//Source/Utility/dsp.h ****     f *= frac;
+ 107:../DaisySP//Source/Utility/dsp.h ****     f += -4.11852516267426f;
+ 108:../DaisySP//Source/Utility/dsp.h ****     f *= frac;
+ 109:../DaisySP//Source/Utility/dsp.h ****     f += 6.02197014179219f;
+ 110:../DaisySP//Source/Utility/dsp.h ****     f *= frac;
+ 111:../DaisySP//Source/Utility/dsp.h ****     f += -3.13396450166353f;
+ 112:../DaisySP//Source/Utility/dsp.h ****     f += exp;
+ 113:../DaisySP//Source/Utility/dsp.h ****     return (f);
+ 114:../DaisySP//Source/Utility/dsp.h **** }
+ 115:../DaisySP//Source/Utility/dsp.h **** 
+ 116:../DaisySP//Source/Utility/dsp.h **** inline float fastlog10f(float f)
+ 117:../DaisySP//Source/Utility/dsp.h **** {
+ 118:../DaisySP//Source/Utility/dsp.h ****     return fastlog2f(f) * 0.3010299956639812f;
+ 119:../DaisySP//Source/Utility/dsp.h **** }
+ 120:../DaisySP//Source/Utility/dsp.h **** 
+ 121:../DaisySP//Source/Utility/dsp.h **** /** Midi to frequency helper
+ 122:../DaisySP//Source/Utility/dsp.h **** */
+ 123:../DaisySP//Source/Utility/dsp.h **** inline float mtof(float m)
+ 124:../DaisySP//Source/Utility/dsp.h **** {
+ 125:../DaisySP//Source/Utility/dsp.h ****     return powf(2, (m - 69.0f) / 12.0f) * 440.0f;
+ 126:../DaisySP//Source/Utility/dsp.h **** }
+ 127:../DaisySP//Source/Utility/dsp.h **** 
+ 128:../DaisySP//Source/Utility/dsp.h **** 
+ 129:../DaisySP//Source/Utility/dsp.h **** /** one pole lpf
+ 130:../DaisySP//Source/Utility/dsp.h **** out is passed by reference, and must be retained between
+ 131:../DaisySP//Source/Utility/dsp.h **** calls to properly filter the signal
+ 132:../DaisySP//Source/Utility/dsp.h **** coeff can be calculated:
+ 133:../DaisySP//Source/Utility/dsp.h **** coeff = 1.0 / (time * sample_rate) ; where time is in seconds
+ 134:../DaisySP//Source/Utility/dsp.h **** */
+ 135:../DaisySP//Source/Utility/dsp.h **** inline void fonepole(float &out, float in, float coeff)
  317              		.loc 2 135 13 view .LVU112
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 12
 
 
  318              	.LBB7:
- 136:../DaisySP/Source/Utility/dsp.h **** {
- 137:../DaisySP/Source/Utility/dsp.h ****     out += coeff * (in - out);
+ 136:../DaisySP//Source/Utility/dsp.h **** {
+ 137:../DaisySP//Source/Utility/dsp.h ****     out += coeff * (in - out);
  319              		.loc 2 137 5 view .LVU113
  320              		.loc 2 137 9 is_stmt 0 view .LVU114
  321 0000 154B     		ldr	r3, .L26+8
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
   10:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
   11:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // This library is distributed in the hope that it will be useful,
   12:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 13
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 13
 
 
   13:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
   67:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** // 2735. std::abs(short), std::abs(signed char) and others should return int
   68:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** 
   69:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 14
 
 
   70:/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/bits/std_abs.h ****   inline _GLIBCXX_CONSTEXPR double
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  399              		.p2align 2,,3
  400              		.global	_ZN8Taptempo10getTapFreqEv
  401              		.syntax unified
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 15
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 15
 
 
  402              		.thumb
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  149:taptempo.cpp  ****         return static_cast<float>(lastTapLength_);
  449              		.loc 1 149 9 view .LVU144
  450              		.loc 1 149 49 is_stmt 0 view .LVU145
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 16
 
 
  451 0000 90ED040A 		vldr.32	s0, [r0, #16]	@ int
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  159:taptempo.cpp  ****         lastTapLength_ = static_cast<uint32_t>(tapLength);
  500              		.loc 1 159 9 view .LVU152
  501              		.loc 1 159 26 is_stmt 0 view .LVU153
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 17
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 17
 
 
  502 0000 FCEEC07A 		vcvt.u32.f32	s15, s0
@@ -996,8 +996,8 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  535              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
  536              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
  537              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
- 538              		.file 7 "../libDaisy/Drivers/CMSIS/Include/core_cm7.h"
- 539              		.file 8 "../libDaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
+ 538              		.file 7 "../libDaisy//Drivers/CMSIS/Include/core_cm7.h"
+ 539              		.file 8 "../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
  540              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
  541              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  542              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  557              		.file 26 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  558              		.file 27 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  559              		.file 28 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 18
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 18
 
 
  560              		.file 29 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
@@ -1029,9 +1029,9 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  565              		.file 34 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
  566              		.file 35 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
  567              		.file 36 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 568              		.file 37 "../libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
- 569              		.file 38 "../libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
- 570              		.file 39 "../DaisySP/Source/Control/adenv.h"
+ 568              		.file 37 "../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
+ 569              		.file 38 "../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
+ 570              		.file 39 "../DaisySP//Source/Control/adenv.h"
  571              		.file 40 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
  572              		.file 41 "<built-in>"
  573              		.file 42 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
@@ -1041,43 +1041,43 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 1
  577              		.file 46 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
  578              		.file 47 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  579              		.file 48 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
- 580              		.file 49 "../libDaisy/src/daisy_core.h"
- 581              		.file 50 "../libDaisy/src/per/tim.h"
- 582              		.file 51 "../libDaisy/src/sys/system.h"
- 583              		.file 52 "../libDaisy/src/util/wav_format.h"
- 584              		.file 53 "../libDaisy/src/daisy_seed.h"
+ 580              		.file 49 "../libDaisy//src/daisy_core.h"
+ 581              		.file 50 "../libDaisy//src/per/tim.h"
+ 582              		.file 51 "../libDaisy//src/sys/system.h"
+ 583              		.file 52 "../libDaisy//src/util/wav_format.h"
+ 584              		.file 53 "../libDaisy//src/daisy_seed.h"
  585              		.file 54 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/unistd
- 586              		.file 55 "../libDaisy/src/util/oled_fonts.h"
+ 586              		.file 55 "../libDaisy//src/util/oled_fonts.h"
  587              		.file 56 "taptempo.h"
- 588              		.file 57 "../libDaisy/src/dev/sr_595.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s 			page 19
+ 588              		.file 57 "../libDaisy//src/dev/sr_595.h"
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 taptempo.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:17     .text._ZN8Taptempo4initEmmf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:26     .text._ZN8Taptempo4initEmmf:0000000000000000 _ZN8Taptempo4initEmmf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:77     .text._ZN8Taptempo4initEmmf:0000000000000028 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:82     .text._ZN8Taptempo3tapEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:90     .text._ZN8Taptempo3tapEv:0000000000000000 _ZN8Taptempo3tapEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:214    .text._ZN8Taptempo5clockEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:222    .text._ZN8Taptempo5clockEv:0000000000000000 _ZN8Taptempo5clockEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:295    .text._ZN8Taptempo14getDelayLengthEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:303    .text._ZN8Taptempo14getDelayLengthEv:0000000000000000 _ZN8Taptempo14getDelayLengthEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:389    .text._ZN8Taptempo14getDelayLengthEv:0000000000000050 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:398    .text._ZN8Taptempo10getTapFreqEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:406    .text._ZN8Taptempo10getTapFreqEv:0000000000000000 _ZN8Taptempo10getTapFreqEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:428    .text._ZN8Taptempo10getTapFreqEv:0000000000000018 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:433    .text._ZN8Taptempo12getTapLengthEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:441    .text._ZN8Taptempo12getTapLengthEv:0000000000000000 _ZN8Taptempo12getTapLengthEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:459    .text._ZN8Taptempo11setTapRatioEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:467    .text._ZN8Taptempo11setTapRatioEf:0000000000000000 _ZN8Taptempo11setTapRatioEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:484    .text._ZN8Taptempo12setTapLengthEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:492    .text._ZN8Taptempo12setTapLengthEf:0000000000000000 _ZN8Taptempo12setTapLengthEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:520    .bss._ZZN8Taptempo14getDelayLengthEvE10tempo_last:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:524    .bss._ZZN8Taptempo14getDelayLengthEvE10tempo_last:0000000000000000 _ZZN8Taptempo14getDelayLengthEvE10tempo_last
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:527    .bss._ZZN8Taptempo14getDelayLengthEvE9tempo_Out:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccu6r0ww.s:531    .bss._ZZN8Taptempo14getDelayLengthEvE9tempo_Out:0000000000000000 _ZZN8Taptempo14getDelayLengthEvE9tempo_Out
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:17     .text._ZN8Taptempo4initEmmf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:26     .text._ZN8Taptempo4initEmmf:0000000000000000 _ZN8Taptempo4initEmmf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:77     .text._ZN8Taptempo4initEmmf:0000000000000028 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:82     .text._ZN8Taptempo3tapEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:90     .text._ZN8Taptempo3tapEv:0000000000000000 _ZN8Taptempo3tapEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:214    .text._ZN8Taptempo5clockEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:222    .text._ZN8Taptempo5clockEv:0000000000000000 _ZN8Taptempo5clockEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:295    .text._ZN8Taptempo14getDelayLengthEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:303    .text._ZN8Taptempo14getDelayLengthEv:0000000000000000 _ZN8Taptempo14getDelayLengthEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:389    .text._ZN8Taptempo14getDelayLengthEv:0000000000000050 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:398    .text._ZN8Taptempo10getTapFreqEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:406    .text._ZN8Taptempo10getTapFreqEv:0000000000000000 _ZN8Taptempo10getTapFreqEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:428    .text._ZN8Taptempo10getTapFreqEv:0000000000000018 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:433    .text._ZN8Taptempo12getTapLengthEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:441    .text._ZN8Taptempo12getTapLengthEv:0000000000000000 _ZN8Taptempo12getTapLengthEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:459    .text._ZN8Taptempo11setTapRatioEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:467    .text._ZN8Taptempo11setTapRatioEf:0000000000000000 _ZN8Taptempo11setTapRatioEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:484    .text._ZN8Taptempo12setTapLengthEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:492    .text._ZN8Taptempo12setTapLengthEf:0000000000000000 _ZN8Taptempo12setTapLengthEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:520    .bss._ZZN8Taptempo14getDelayLengthEvE10tempo_last:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:524    .bss._ZZN8Taptempo14getDelayLengthEvE10tempo_last:0000000000000000 _ZZN8Taptempo14getDelayLengthEvE10tempo_last
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:527    .bss._ZZN8Taptempo14getDelayLengthEvE9tempo_Out:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccD3fFkB.s:531    .bss._ZZN8Taptempo14getDelayLengthEvE9tempo_Out:0000000000000000 _ZZN8Taptempo14getDelayLengthEvE9tempo_Out
 
 UNDEFINED SYMBOLS
 _ZN5daisy6System5GetUsEv

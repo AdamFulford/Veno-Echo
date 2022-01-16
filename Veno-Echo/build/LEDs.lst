@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
   27:LEDs.cpp      **** void TempoLED::init(dsy_gpio_pin ledpin, float samplerate)  //led pin number
   28:LEDs.cpp      **** {
   30              		.loc 1 28 1 view -0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 2
 
 
   31              		.cfi_startproc
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
   19:oscillator_p.h ****     enum
   20:oscillator_p.h ****     {
   21:oscillator_p.h ****         WAVE_SIN,
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 3
 
 
   22:oscillator_p.h ****         WAVE_TRI,
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
   46:oscillator_p.h ****         freq_      = 100.0f;
   86              		.loc 2 46 20 view .LVU16
   87 003a 9FED150A 		vldr.32	s0, .L4+4
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 4
 
 
   88              	.LBE38:
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
   58:oscillator_p.h ****     inline void SetFreq(const float f)
   59:oscillator_p.h ****     {
   60:oscillator_p.h ****         freq_      = f;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 5
 
 
  123              		.loc 2 60 20 view .LVU33
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  158              	.LBE48:
  159              	.LBE56:
  160              	.LBB57:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 6
 
 
  161              	.LBB58:
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  202 0078 C4ED097A 		vstr.32	s15, [r4, #36]
   61:oscillator_p.h ****     }
  203              		.loc 2 61 9 is_stmt 1 view .LVU58
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 7
 
 
   61:oscillator_p.h ****     }
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  252              		@ args = 0, pretend = 0, frame = 0
  253              		@ frame_needed = 0, uses_anonymous_args = 0
   41:LEDs.cpp      ****     blink.SetFreq(tempo);
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 8
 
 
  254              		.loc 1 41 5 view .LVU67
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  299              	.LVL18:
  300              	.LFB4371:
   43:LEDs.cpp      **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 9
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 9
 
 
   44:LEDs.cpp      **** void TempoLED::resetPhase()
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  319              		.loc 1 47 1 view .LVU86
  320 0004 7047     		bx	lr
  321              		.cfi_endproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 10
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 10
 
 
  322              	.LFE4371:
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  362 0014 30EE070A 		vadd.f32	s0, s0, s14
  363              	.LVL23:
  364              		.loc 1 58 12 view .LVU98
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 11
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 11
 
 
  365 0018 20EE270A 		vmul.f32	s0, s0, s15
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
   72:LEDs.cpp      ****     led.Set(ledvalue);
   73:LEDs.cpp      ****     led.Update();
   74:LEDs.cpp      **** }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 12
 
 
   75:LEDs.cpp      **** 
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  104:LEDs.cpp      ****             retVal = 3 * 6;
  105:LEDs.cpp      ****         break;
  106:LEDs.cpp      ****         case DIV2:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 13
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 13
 
 
  107:LEDs.cpp      ****             retVal = 2 * 6;
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
   72:LEDs.cpp      ****     led.Update();
  445              		.loc 1 72 12 view .LVU120
  446 0024 0198     		ldr	r0, [sp, #4]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 14
 
 
   71:LEDs.cpp      ****     led.Set(ledvalue);
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  493              		.thumb
  494              		.thumb_func
  495              		.fpu fpv5-d16
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 15
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 15
 
 
  497              	_ZN8TempoLED7LED_setEf:
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  545              		.thumb
  546              		.thumb_func
  547              		.fpu fpv5-d16
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 16
 
 
  549              	_ZN8TempoLED9GetDivIntE9TempoDivs:
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  146:LEDs.cpp      **** {
  594              		.loc 1 146 1 is_stmt 1 view -0
  595              		.cfi_startproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 17
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 17
 
 
  596              		@ args = 0, pretend = 0, frame = 8
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  151:LEDs.cpp      ****     led.Set(0.0f);
  640              		.loc 1 151 12 view .LVU159
  641 0034 3046     		mov	r0, r6
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 18
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 18
 
 
  642 0036 9FED060A 		vldr.32	s0, .L28
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  156:LEDs.cpp      **** led.Update();
  157:LEDs.cpp      **** sw.Debounce();
  158:LEDs.cpp      **** switch (switchtype_)
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 19
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 19
 
 
  159:LEDs.cpp      **** {
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  195:LEDs.cpp      ****     isON = !isON;
  702              		.loc 1 195 10 view .LVU173
  703 0008 00F8103C 		strb	r3, [r0, #-16]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 20
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 20
 
 
  196:LEDs.cpp      ****     if(isON)
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  750              		.loc 1 155 1 view .LVU183
  751 0006 0446     		mov	r4, r0
  156:LEDs.cpp      **** sw.Debounce();
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 21
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 21
 
 
  752              		.loc 1 156 11 view .LVU184
@@ -1237,80 +1237,80 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  777              		.loc 1 160 5 is_stmt 1 view .LVU192
  161:LEDs.cpp      ****         {
  778              		.loc 1 161 9 view .LVU193
- 779              		.file 3 "../libDaisy/src/hid/switch.h"
-   1:../libDaisy/src/hid/switch.h **** #pragma once
-   2:../libDaisy/src/hid/switch.h **** #ifndef DSY_SWITCH_H
-   3:../libDaisy/src/hid/switch.h **** #define DSY_SWITCH_H
-   4:../libDaisy/src/hid/switch.h **** #include "daisy_core.h"
-   5:../libDaisy/src/hid/switch.h **** #include "per/gpio.h"
-   6:../libDaisy/src/hid/switch.h **** #include "sys/system.h"
-   7:../libDaisy/src/hid/switch.h **** 
-   8:../libDaisy/src/hid/switch.h **** namespace daisy
-   9:../libDaisy/src/hid/switch.h **** {
-  10:../libDaisy/src/hid/switch.h **** /** 
-  11:../libDaisy/src/hid/switch.h ****     Generic Class for handling momentary/latching switches \n 
-  12:../libDaisy/src/hid/switch.h ****     Inspired/influenced by Mutable Instruments (pichenettes) Switch classes
-  13:../libDaisy/src/hid/switch.h ****     @author Stephen Hensley
-  14:../libDaisy/src/hid/switch.h ****     @date December 2019
-  15:../libDaisy/src/hid/switch.h ****     @ingroup controls
-  16:../libDaisy/src/hid/switch.h **** */
-  17:../libDaisy/src/hid/switch.h **** class Switch
-  18:../libDaisy/src/hid/switch.h **** {
-  19:../libDaisy/src/hid/switch.h ****   public:
-  20:../libDaisy/src/hid/switch.h ****     /** Specifies the expected behavior of the switch */
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 22
+ 779              		.file 3 "../libDaisy//src/hid/switch.h"
+   1:../libDaisy//src/hid/switch.h **** #pragma once
+   2:../libDaisy//src/hid/switch.h **** #ifndef DSY_SWITCH_H
+   3:../libDaisy//src/hid/switch.h **** #define DSY_SWITCH_H
+   4:../libDaisy//src/hid/switch.h **** #include "daisy_core.h"
+   5:../libDaisy//src/hid/switch.h **** #include "per/gpio.h"
+   6:../libDaisy//src/hid/switch.h **** #include "sys/system.h"
+   7:../libDaisy//src/hid/switch.h **** 
+   8:../libDaisy//src/hid/switch.h **** namespace daisy
+   9:../libDaisy//src/hid/switch.h **** {
+  10:../libDaisy//src/hid/switch.h **** /** 
+  11:../libDaisy//src/hid/switch.h ****     Generic Class for handling momentary/latching switches \n 
+  12:../libDaisy//src/hid/switch.h ****     Inspired/influenced by Mutable Instruments (pichenettes) Switch classes
+  13:../libDaisy//src/hid/switch.h ****     @author Stephen Hensley
+  14:../libDaisy//src/hid/switch.h ****     @date December 2019
+  15:../libDaisy//src/hid/switch.h ****     @ingroup controls
+  16:../libDaisy//src/hid/switch.h **** */
+  17:../libDaisy//src/hid/switch.h **** class Switch
+  18:../libDaisy//src/hid/switch.h **** {
+  19:../libDaisy//src/hid/switch.h ****   public:
+  20:../libDaisy//src/hid/switch.h ****     /** Specifies the expected behavior of the switch */
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 22
 
 
-  21:../libDaisy/src/hid/switch.h ****     enum Type
-  22:../libDaisy/src/hid/switch.h ****     {
-  23:../libDaisy/src/hid/switch.h ****         TYPE_TOGGLE,    /**< & */
-  24:../libDaisy/src/hid/switch.h ****         TYPE_MOMENTARY, /**< & */
-  25:../libDaisy/src/hid/switch.h ****     };
-  26:../libDaisy/src/hid/switch.h ****     /** Specifies whether the pressed is HIGH or LOW. */
-  27:../libDaisy/src/hid/switch.h ****     enum Polarity
-  28:../libDaisy/src/hid/switch.h ****     {
-  29:../libDaisy/src/hid/switch.h ****         POLARITY_NORMAL,   /**< & */
-  30:../libDaisy/src/hid/switch.h ****         POLARITY_INVERTED, /**< & */
-  31:../libDaisy/src/hid/switch.h ****     };
-  32:../libDaisy/src/hid/switch.h **** 
-  33:../libDaisy/src/hid/switch.h ****     /** Specifies whether to use built-in Pull Up/Down resistors to hold button at a given state wh
-  34:../libDaisy/src/hid/switch.h ****     enum Pull
-  35:../libDaisy/src/hid/switch.h ****     {
-  36:../libDaisy/src/hid/switch.h ****         PULL_UP,   /**< & */
-  37:../libDaisy/src/hid/switch.h ****         PULL_DOWN, /**< & */
-  38:../libDaisy/src/hid/switch.h ****         PULL_NONE, /**< & */
-  39:../libDaisy/src/hid/switch.h ****     };
-  40:../libDaisy/src/hid/switch.h **** 
-  41:../libDaisy/src/hid/switch.h ****     Switch() {}
-  42:../libDaisy/src/hid/switch.h ****     ~Switch() {}
-  43:../libDaisy/src/hid/switch.h **** 
-  44:../libDaisy/src/hid/switch.h ****     /** 
-  45:../libDaisy/src/hid/switch.h ****     Initializes the switch object with a given port/pin combo.
-  46:../libDaisy/src/hid/switch.h ****     \param pin port/pin object to tell the switch which hardware pin to use.
-  47:../libDaisy/src/hid/switch.h ****     \param update_rate Does nothing. Backwards compatibility until next breaking update.
-  48:../libDaisy/src/hid/switch.h ****     \param t switch type -- Default: TYPE_MOMENTARY
-  49:../libDaisy/src/hid/switch.h ****     \param pol switch polarity -- Default: POLARITY_INVERTED
-  50:../libDaisy/src/hid/switch.h ****     \param pu switch pull up/down -- Default: PULL_UP
-  51:../libDaisy/src/hid/switch.h ****     */
-  52:../libDaisy/src/hid/switch.h ****     void
-  53:../libDaisy/src/hid/switch.h ****     Init(dsy_gpio_pin pin, float update_rate, Type t, Polarity pol, Pull pu);
-  54:../libDaisy/src/hid/switch.h **** 
-  55:../libDaisy/src/hid/switch.h ****     /**
-  56:../libDaisy/src/hid/switch.h ****        Simplified Init.
-  57:../libDaisy/src/hid/switch.h ****        \param pin port/pin object to tell the switch which hardware pin to use.
-  58:../libDaisy/src/hid/switch.h ****        \param update_rate Left for backwards compatibility until next breaking change.
-  59:../libDaisy/src/hid/switch.h ****     */
-  60:../libDaisy/src/hid/switch.h ****     void Init(dsy_gpio_pin pin, float update_rate = 0.f);
-  61:../libDaisy/src/hid/switch.h **** 
-  62:../libDaisy/src/hid/switch.h ****     /** 
-  63:../libDaisy/src/hid/switch.h ****     Called at update_rate to debounce and handle timing for the switch.
-  64:../libDaisy/src/hid/switch.h ****     In order for events not to be missed, its important that the Edge/Pressed checks
-  65:../libDaisy/src/hid/switch.h ****     be made at the same rate as the debounce function is being called.
-  66:../libDaisy/src/hid/switch.h ****     */
-  67:../libDaisy/src/hid/switch.h ****     void Debounce();
-  68:../libDaisy/src/hid/switch.h **** 
-  69:../libDaisy/src/hid/switch.h ****     /** \return true if a button was just pressed. */
-  70:../libDaisy/src/hid/switch.h ****     inline bool RisingEdge() const { return state_ == 0x7f; }
+  21:../libDaisy//src/hid/switch.h ****     enum Type
+  22:../libDaisy//src/hid/switch.h ****     {
+  23:../libDaisy//src/hid/switch.h ****         TYPE_TOGGLE,    /**< & */
+  24:../libDaisy//src/hid/switch.h ****         TYPE_MOMENTARY, /**< & */
+  25:../libDaisy//src/hid/switch.h ****     };
+  26:../libDaisy//src/hid/switch.h ****     /** Specifies whether the pressed is HIGH or LOW. */
+  27:../libDaisy//src/hid/switch.h ****     enum Polarity
+  28:../libDaisy//src/hid/switch.h ****     {
+  29:../libDaisy//src/hid/switch.h ****         POLARITY_NORMAL,   /**< & */
+  30:../libDaisy//src/hid/switch.h ****         POLARITY_INVERTED, /**< & */
+  31:../libDaisy//src/hid/switch.h ****     };
+  32:../libDaisy//src/hid/switch.h **** 
+  33:../libDaisy//src/hid/switch.h ****     /** Specifies whether to use built-in Pull Up/Down resistors to hold button at a given state wh
+  34:../libDaisy//src/hid/switch.h ****     enum Pull
+  35:../libDaisy//src/hid/switch.h ****     {
+  36:../libDaisy//src/hid/switch.h ****         PULL_UP,   /**< & */
+  37:../libDaisy//src/hid/switch.h ****         PULL_DOWN, /**< & */
+  38:../libDaisy//src/hid/switch.h ****         PULL_NONE, /**< & */
+  39:../libDaisy//src/hid/switch.h ****     };
+  40:../libDaisy//src/hid/switch.h **** 
+  41:../libDaisy//src/hid/switch.h ****     Switch() {}
+  42:../libDaisy//src/hid/switch.h ****     ~Switch() {}
+  43:../libDaisy//src/hid/switch.h **** 
+  44:../libDaisy//src/hid/switch.h ****     /** 
+  45:../libDaisy//src/hid/switch.h ****     Initializes the switch object with a given port/pin combo.
+  46:../libDaisy//src/hid/switch.h ****     \param pin port/pin object to tell the switch which hardware pin to use.
+  47:../libDaisy//src/hid/switch.h ****     \param update_rate Does nothing. Backwards compatibility until next breaking update.
+  48:../libDaisy//src/hid/switch.h ****     \param t switch type -- Default: TYPE_MOMENTARY
+  49:../libDaisy//src/hid/switch.h ****     \param pol switch polarity -- Default: POLARITY_INVERTED
+  50:../libDaisy//src/hid/switch.h ****     \param pu switch pull up/down -- Default: PULL_UP
+  51:../libDaisy//src/hid/switch.h ****     */
+  52:../libDaisy//src/hid/switch.h ****     void
+  53:../libDaisy//src/hid/switch.h ****     Init(dsy_gpio_pin pin, float update_rate, Type t, Polarity pol, Pull pu);
+  54:../libDaisy//src/hid/switch.h **** 
+  55:../libDaisy//src/hid/switch.h ****     /**
+  56:../libDaisy//src/hid/switch.h ****        Simplified Init.
+  57:../libDaisy//src/hid/switch.h ****        \param pin port/pin object to tell the switch which hardware pin to use.
+  58:../libDaisy//src/hid/switch.h ****        \param update_rate Left for backwards compatibility until next breaking change.
+  59:../libDaisy//src/hid/switch.h ****     */
+  60:../libDaisy//src/hid/switch.h ****     void Init(dsy_gpio_pin pin, float update_rate = 0.f);
+  61:../libDaisy//src/hid/switch.h **** 
+  62:../libDaisy//src/hid/switch.h ****     /** 
+  63:../libDaisy//src/hid/switch.h ****     Called at update_rate to debounce and handle timing for the switch.
+  64:../libDaisy//src/hid/switch.h ****     In order for events not to be missed, its important that the Edge/Pressed checks
+  65:../libDaisy//src/hid/switch.h ****     be made at the same rate as the debounce function is being called.
+  66:../libDaisy//src/hid/switch.h ****     */
+  67:../libDaisy//src/hid/switch.h ****     void Debounce();
+  68:../libDaisy//src/hid/switch.h **** 
+  69:../libDaisy//src/hid/switch.h ****     /** \return true if a button was just pressed. */
+  70:../libDaisy//src/hid/switch.h ****     inline bool RisingEdge() const { return state_ == 0x7f; }
  780              		.loc 3 70 38 view .LVU194
  161:LEDs.cpp      ****         {
  781              		.loc 1 161 9 is_stmt 0 view .LVU195
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  783 0026 7F2B     		cmp	r3, #127
  784 0028 FBD1     		bne	.L34
  163:LEDs.cpp      ****         }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 23
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 23
 
 
  785              		.loc 1 163 13 is_stmt 1 view .LVU196
@@ -1345,12 +1345,12 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  802              		.loc 1 177 5 is_stmt 1 view .LVU200
  178:LEDs.cpp      ****         {
  803              		.loc 1 178 9 view .LVU201
-  71:../libDaisy/src/hid/switch.h **** 
-  72:../libDaisy/src/hid/switch.h ****     /** \return true if the button was just released */
-  73:../libDaisy/src/hid/switch.h ****     inline bool FallingEdge() const { return state_ == 0x80; }
-  74:../libDaisy/src/hid/switch.h **** 
-  75:../libDaisy/src/hid/switch.h ****     /** \return true if the button is held down (or if the toggle is on) */
-  76:../libDaisy/src/hid/switch.h ****     inline bool Pressed() const { return state_ == 0xff; }
+  71:../libDaisy//src/hid/switch.h **** 
+  72:../libDaisy//src/hid/switch.h ****     /** \return true if the button was just released */
+  73:../libDaisy//src/hid/switch.h ****     inline bool FallingEdge() const { return state_ == 0x80; }
+  74:../libDaisy//src/hid/switch.h **** 
+  75:../libDaisy//src/hid/switch.h ****     /** \return true if the button is held down (or if the toggle is on) */
+  76:../libDaisy//src/hid/switch.h ****     inline bool Pressed() const { return state_ == 0xff; }
  804              		.loc 3 76 35 view .LVU202
  178:LEDs.cpp      ****         {
  805              		.loc 1 178 9 is_stmt 0 view .LVU203
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  213:LEDs.cpp      **** {
  214:LEDs.cpp      ****     isON = false;
  816              		.loc 1 214 5 view .LVU206
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 24
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 24
 
 
  817              		.loc 1 214 10 is_stmt 0 view .LVU207
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  861 0052 2846     		mov	r0, r5
  208:LEDs.cpp      ****     led.Set(1.0f);
  862              		.loc 1 208 10 view .LVU222
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 25
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 25
 
 
  863 0054 2370     		strb	r3, [r4]
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  904              		.loc 1 191 1 is_stmt 0 view .LVU235
  905 006c BDE83840 		pop	{r3, r4, r5, lr}
  906              		.cfi_restore 14
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 26
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 26
 
 
  907              		.cfi_restore 5
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  954 000a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
  955              	.LVL74:
  209:LEDs.cpp      **** }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 27
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 27
 
 
  956              		.loc 1 209 12 view .LVU245
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  217:LEDs.cpp      **** 
  218:LEDs.cpp      **** bool ButtonLED::getState() //getter function, so nothing else can change isON
  219:LEDs.cpp      **** {
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 28
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 28
 
 
  1009              		.loc 1 219 1 is_stmt 1 view -0
@@ -1659,16 +1659,16 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  1040              		.loc 1 225 5 view .LVU259
  1041              	.LBB84:
  1042              	.LBI84:
-  70:../libDaisy/src/hid/switch.h **** 
+  70:../libDaisy//src/hid/switch.h **** 
  1043              		.loc 3 70 17 view .LVU260
  1044              	.LBB85:
-  70:../libDaisy/src/hid/switch.h **** 
+  70:../libDaisy//src/hid/switch.h **** 
  1045              		.loc 3 70 38 view .LVU261
-  70:../libDaisy/src/hid/switch.h **** 
+  70:../libDaisy//src/hid/switch.h **** 
  1046              		.loc 3 70 55 is_stmt 0 view .LVU262
  1047 0000 407A     		ldrb	r0, [r0, #9]	@ zero_extendqisi2
  1048              	.LVL81:
-  70:../libDaisy/src/hid/switch.h **** 
+  70:../libDaisy//src/hid/switch.h **** 
  1049              		.loc 3 70 55 view .LVU263
  1050              	.LBE85:
  1051              	.LBE84:
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  1054 0006 B0FA80F0 		clz	r0, r0
  1055 000a 4009     		lsrs	r0, r0, #5
  1056 000c 7047     		bx	lr
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 29
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 29
 
 
  1057              		.cfi_endproc
@@ -1706,16 +1706,16 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  1077              		.loc 1 230 5 view .LVU266
  1078              	.LBB86:
  1079              	.LBI86:
-  73:../libDaisy/src/hid/switch.h **** 
+  73:../libDaisy//src/hid/switch.h **** 
  1080              		.loc 3 73 17 view .LVU267
  1081              	.LBB87:
-  73:../libDaisy/src/hid/switch.h **** 
+  73:../libDaisy//src/hid/switch.h **** 
  1082              		.loc 3 73 39 view .LVU268
-  73:../libDaisy/src/hid/switch.h **** 
+  73:../libDaisy//src/hid/switch.h **** 
  1083              		.loc 3 73 56 is_stmt 0 view .LVU269
  1084 0000 407A     		ldrb	r0, [r0, #9]	@ zero_extendqisi2
  1085              	.LVL83:
-  73:../libDaisy/src/hid/switch.h **** 
+  73:../libDaisy//src/hid/switch.h **** 
  1086              		.loc 3 73 56 view .LVU270
  1087              	.LBE87:
  1088              	.LBE86:
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  1106              	_ZN9ButtonLED7LED_setEf:
  1107              	.LVL84:
  1108              	.LFB4385:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 30
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 30
 
 
  232:LEDs.cpp      **** 
@@ -1780,8 +1780,8 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  1144              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
  1145              		.file 5 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
  1146              		.file 6 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
- 1147              		.file 7 "../libDaisy/Drivers/CMSIS/Include/core_cm7.h"
- 1148              		.file 8 "../libDaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
+ 1147              		.file 7 "../libDaisy//Drivers/CMSIS/Include/core_cm7.h"
+ 1148              		.file 8 "../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
  1149              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
  1150              		.file 10 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  1151              		.file 11 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  1162              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  1163              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  1164              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 31
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 31
 
 
  1165              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
@@ -1814,10 +1814,10 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  1175              		.file 35 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
  1176              		.file 36 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
  1177              		.file 37 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 1178              		.file 38 "../libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
- 1179              		.file 39 "../libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
- 1180              		.file 40 "../DaisySP/Source/Control/adenv.h"
- 1181              		.file 41 "../DaisySP/Source/Utility/dsp.h"
+ 1178              		.file 38 "../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
+ 1179              		.file 39 "../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
+ 1180              		.file 40 "../DaisySP//Source/Control/adenv.h"
+ 1181              		.file 41 "../DaisySP//Source/Utility/dsp.h"
  1182              		.file 42 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
  1183              		.file 43 "<built-in>"
  1184              		.file 44 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
@@ -1827,64 +1827,64 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 1
  1188              		.file 48 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
  1189              		.file 49 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  1190              		.file 50 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
- 1191              		.file 51 "../libDaisy/src/daisy_core.h"
- 1192              		.file 52 "../libDaisy/src/util/wav_format.h"
- 1193              		.file 53 "../libDaisy/src/hid/led.h"
- 1194              		.file 54 "../libDaisy/src/daisy_seed.h"
- 1195              		.file 55 "../libDaisy/src/per/gpio.h"
+ 1191              		.file 51 "../libDaisy//src/daisy_core.h"
+ 1192              		.file 52 "../libDaisy//src/util/wav_format.h"
+ 1193              		.file 53 "../libDaisy//src/hid/led.h"
+ 1194              		.file 54 "../libDaisy//src/daisy_seed.h"
+ 1195              		.file 55 "../libDaisy//src/per/gpio.h"
  1196              		.file 56 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/unistd
- 1197              		.file 57 "../libDaisy/src/util/oled_fonts.h"
+ 1197              		.file 57 "../libDaisy//src/util/oled_fonts.h"
  1198              		.file 58 "constants.h"
  1199              		.file 59 "LEDs.h"
- 1200              		.file 60 "../libDaisy/src/dev/sr_595.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s 			page 32
+ 1200              		.file 60 "../libDaisy//src/dev/sr_595.h"
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s 			page 32
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 LEDs.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:17     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:26     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 _ZN8TempoLED4initE12dsy_gpio_pinf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:233    .text._ZN8TempoLED4initE12dsy_gpio_pinf:000000000000008c $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:239    .text._ZN8TempoLED8setTempoEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:247    .text._ZN8TempoLED8setTempoEf:0000000000000000 _ZN8TempoLED8setTempoEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:290    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:298    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 _ZN8TempoLED10resetPhaseEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:325    .text._ZN8TempoLED6updateEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:333    .text._ZN8TempoLED6updateEv:0000000000000000 _ZN8TempoLED6updateEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:387    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:395    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 _ZN8TempoLED6updateE9TempoDivsf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:483    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000050 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:489    .text._ZN8TempoLED7LED_setEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:497    .text._ZN8TempoLED7LED_setEf:0000000000000000 _ZN8TempoLED7LED_setEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:514    .text._ZN8TempoLED5isEOCEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:522    .text._ZN8TempoLED5isEOCEv:0000000000000000 _ZN8TempoLED5isEOCEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:541    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:549    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 _ZN8TempoLED9GetDivIntE9TempoDivs
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:578    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000018 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:583    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:591    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 _ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:673    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000050 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:678    .text._ZN9ButtonLED6toggleEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:686    .text._ZN9ButtonLED6toggleEv:0000000000000000 _ZN9ButtonLED6toggleEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:720    .text._ZN9ButtonLED6toggleEv:0000000000000020 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:725    .text._ZN9ButtonLED6updateEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:733    .text._ZN9ButtonLED6updateEv:0000000000000000 _ZN9ButtonLED6updateEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:921    .text._ZN9ButtonLED6updateEv:0000000000000074 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:928    .text._ZN9ButtonLED6turnONEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:936    .text._ZN9ButtonLED6turnONEv:0000000000000000 _ZN9ButtonLED6turnONEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:961    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:969    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 _ZN9ButtonLED7turnOFFEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:993    .text._ZN9ButtonLED7turnOFFEv:0000000000000010 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:998    .text._ZN9ButtonLED8getStateEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:1006   .text._ZN9ButtonLED8getStateEv:0000000000000000 _ZN9ButtonLED8getStateEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:1024   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:1032   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 _ZN9ButtonLED10RisingEdgeEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:1061   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:1069   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 _ZN9ButtonLED11FallingEdgeEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:1098   .text._ZN9ButtonLED7LED_setEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:1106   .text._ZN9ButtonLED7LED_setEf:0000000000000000 _ZN9ButtonLED7LED_setEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:1126   .rodata.CSWTCH.28:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmD8Dj5.s:1130   .rodata.CSWTCH.28:0000000000000000 CSWTCH.28
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:17     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:26     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 _ZN8TempoLED4initE12dsy_gpio_pinf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:233    .text._ZN8TempoLED4initE12dsy_gpio_pinf:000000000000008c $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:239    .text._ZN8TempoLED8setTempoEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:247    .text._ZN8TempoLED8setTempoEf:0000000000000000 _ZN8TempoLED8setTempoEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:290    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:298    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 _ZN8TempoLED10resetPhaseEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:325    .text._ZN8TempoLED6updateEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:333    .text._ZN8TempoLED6updateEv:0000000000000000 _ZN8TempoLED6updateEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:387    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:395    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 _ZN8TempoLED6updateE9TempoDivsf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:483    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000050 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:489    .text._ZN8TempoLED7LED_setEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:497    .text._ZN8TempoLED7LED_setEf:0000000000000000 _ZN8TempoLED7LED_setEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:514    .text._ZN8TempoLED5isEOCEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:522    .text._ZN8TempoLED5isEOCEv:0000000000000000 _ZN8TempoLED5isEOCEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:541    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:549    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 _ZN8TempoLED9GetDivIntE9TempoDivs
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:578    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000018 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:583    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:591    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 _ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:673    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000050 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:678    .text._ZN9ButtonLED6toggleEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:686    .text._ZN9ButtonLED6toggleEv:0000000000000000 _ZN9ButtonLED6toggleEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:720    .text._ZN9ButtonLED6toggleEv:0000000000000020 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:725    .text._ZN9ButtonLED6updateEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:733    .text._ZN9ButtonLED6updateEv:0000000000000000 _ZN9ButtonLED6updateEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:921    .text._ZN9ButtonLED6updateEv:0000000000000074 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:928    .text._ZN9ButtonLED6turnONEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:936    .text._ZN9ButtonLED6turnONEv:0000000000000000 _ZN9ButtonLED6turnONEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:961    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:969    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 _ZN9ButtonLED7turnOFFEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:993    .text._ZN9ButtonLED7turnOFFEv:0000000000000010 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:998    .text._ZN9ButtonLED8getStateEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:1006   .text._ZN9ButtonLED8getStateEv:0000000000000000 _ZN9ButtonLED8getStateEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:1024   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:1032   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 _ZN9ButtonLED10RisingEdgeEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:1061   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:1069   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 _ZN9ButtonLED11FallingEdgeEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:1098   .text._ZN9ButtonLED7LED_setEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:1106   .text._ZN9ButtonLED7LED_setEf:0000000000000000 _ZN9ButtonLED7LED_setEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:1126   .rodata.CSWTCH.28:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cchUCJo6.s:1130   .rodata.CSWTCH.28:0000000000000000 CSWTCH.28
 
 UNDEFINED SYMBOLS
 _ZN5daisy3Led4InitE12dsy_gpio_pinbf

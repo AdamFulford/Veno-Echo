@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccjaBIsE.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 1
   27:scale.cpp     **** {
   30              		.loc 1 27 1 view -0
   31              		.cfi_startproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccjaBIsE.s 			page 2
 
 
   32              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 1
   77 003a 032C     		cmp	r4, #3
   78 003c 30D8     		bhi	.L10
   79 003e DFE804F0 		tbb	[pc, r4]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccjaBIsE.s 			page 3
 
 
   80              	.L5:
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 1
  112              	.LVL9:
  113              		.loc 1 54 1 view .LVU24
  114 005e 10BD     		pop	{r4, pc}
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccjaBIsE.s 			page 4
 
 
  115              	.LVL10:
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 1
  157              	.LVL19:
   40:scale.cpp     **** 
  158              		.loc 1 40 9 is_stmt 1 view .LVU39
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccjaBIsE.s 			page 5
 
 
  159              		.loc 1 54 1 is_stmt 0 view .LVU40
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 1
  204 00a4 D9E7     		b	.L1
  205              	.L14:
  206 00a6 00BF     		.align	2
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccjaBIsE.s 			page 6
 
 
  207              	.L13:
@@ -311,8 +311,8 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 1
  215              		.file 2 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
  216              		.file 3 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/_stdint
  217              		.file 4 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdint.h"
- 218              		.file 5 "../libDaisy/Drivers/CMSIS/Include/core_cm7.h"
- 219              		.file 6 "../libDaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
+ 218              		.file 5 "../libDaisy//Drivers/CMSIS/Include/core_cm7.h"
+ 219              		.file 6 "../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h"
  220              		.file 7 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/inclu
  221              		.file 8 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/c
  222              		.file 9 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/b
@@ -340,10 +340,10 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 1
  244              		.file 31 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/math.h"
  245              		.file 32 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/stdlib.h"
  246              		.file 33 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
- 247              		.file 34 "../libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
- 248              		.file 35 "../libDaisy/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
- 249              		.file 36 "../DaisySP/Source/Control/adenv.h"
- 250              		.file 37 "../DaisySP/Source/Utility/dsp.h"
+ 247              		.file 34 "../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h"
+ 248              		.file 35 "../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h"
+ 249              		.file 36 "../DaisySP//Source/Control/adenv.h"
+ 250              		.file 37 "../DaisySP//Source/Utility/dsp.h"
  251              		.file 38 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/lib/gcc/arm-none-eabi/9.2.1/incl
  252              		.file 39 "<built-in>"
  253              		.file 40 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/wchar.h"
@@ -354,16 +354,16 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 1
  258              		.file 45 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  259              		.file 46 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/string.h"
  260              		.file 47 "scale.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccjaBIsE.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 scale.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s:17     .text._Z5scalefff9CurveType:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s:26     .text._Z5scalefff9CurveType:0000000000000000 _Z5scalefff9CurveType
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s:81     .text._Z5scalefff9CurveType:0000000000000042 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s:85     .text._Z5scalefff9CurveType:0000000000000046 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccomgpmd.s:208    .text._Z5scalefff9CurveType:00000000000000a8 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccjaBIsE.s:17     .text._Z5scalefff9CurveType:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccjaBIsE.s:26     .text._Z5scalefff9CurveType:0000000000000000 _Z5scalefff9CurveType
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccjaBIsE.s:81     .text._Z5scalefff9CurveType:0000000000000042 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccjaBIsE.s:85     .text._Z5scalefff9CurveType:0000000000000046 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccjaBIsE.s:208    .text._Z5scalefff9CurveType:00000000000000a8 $d
 
 UNDEFINED SYMBOLS
 logf
