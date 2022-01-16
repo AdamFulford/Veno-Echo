@@ -47,7 +47,7 @@ struct Settings
 //extern Settings AltControls;
 
 //save settings to flash memory
-int SaveSettings(const Settings &currentSetting);
+QSPIHandle::Result SaveSettings(const Settings &currentSetting);
 
 //load memory from flash memory
 Settings LoadSettings();
