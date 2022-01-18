@@ -139,9 +139,9 @@ build/DelayMulti.o: DelayMulti.cpp \
  ../DaisySP/Source/Synthesis/variableshapeosc.h \
  ../DaisySP/Source/Synthesis/vosim.h \
  ../DaisySP/Source/Synthesis/zoscillator.h \
- ../DaisySP/Source/Utility/jitter.h ../DaisySP/Source/Utility/maytrig.h \
- ../DaisySP/Source/Utility/metro.h ../DaisySP/Source/Utility/port.h \
- ../DaisySP/Source/Utility/samplehold.h \
+ ../DaisySP/Source/Utility/jitter.h ../DaisySP/Source/Utility/looper.h \
+ ../DaisySP/Source/Utility/maytrig.h ../DaisySP/Source/Utility/metro.h \
+ ../DaisySP/Source/Utility/port.h ../DaisySP/Source/Utility/samplehold.h \
  ../DaisySP/Source/Utility/smooth_random.h ../libdaisy/src/daisy_seed.h \
  ../libdaisy/src/daisy.h ../libdaisy/src/daisy_core.h \
  ../libdaisy/src/version.h ../libdaisy/src/sys/system.h \
@@ -503,6 +503,8 @@ DelayMulti.h:
 ../DaisySP/Source/Synthesis/zoscillator.h:
 
 ../DaisySP/Source/Utility/jitter.h:
+
+../DaisySP/Source/Utility/looper.h:
 
 ../DaisySP/Source/Utility/maytrig.h:
 

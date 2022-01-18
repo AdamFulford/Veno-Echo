@@ -139,9 +139,9 @@ build/scale.o: scale.cpp \
  ../DaisySP/Source/Synthesis/variableshapeosc.h \
  ../DaisySP/Source/Synthesis/vosim.h \
  ../DaisySP/Source/Synthesis/zoscillator.h \
- ../DaisySP/Source/Utility/jitter.h ../DaisySP/Source/Utility/maytrig.h \
- ../DaisySP/Source/Utility/metro.h ../DaisySP/Source/Utility/port.h \
- ../DaisySP/Source/Utility/samplehold.h \
+ ../DaisySP/Source/Utility/jitter.h ../DaisySP/Source/Utility/looper.h \
+ ../DaisySP/Source/Utility/maytrig.h ../DaisySP/Source/Utility/metro.h \
+ ../DaisySP/Source/Utility/port.h ../DaisySP/Source/Utility/samplehold.h \
  ../DaisySP/Source/Utility/smooth_random.h
 
 ../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
@@ -459,6 +459,8 @@ scale.h:
 ../DaisySP/Source/Synthesis/zoscillator.h:
 
 ../DaisySP/Source/Utility/jitter.h:
+
+../DaisySP/Source/Utility/looper.h:
 
 ../DaisySP/Source/Utility/maytrig.h:
 

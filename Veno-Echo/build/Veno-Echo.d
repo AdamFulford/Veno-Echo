@@ -182,9 +182,9 @@ build/Veno-Echo.o: Veno-Echo.cpp \
  ../DaisySP/Source/Synthesis/variableshapeosc.h \
  ../DaisySP/Source/Synthesis/vosim.h \
  ../DaisySP/Source/Synthesis/zoscillator.h \
- ../DaisySP/Source/Utility/jitter.h ../DaisySP/Source/Utility/maytrig.h \
- ../DaisySP/Source/Utility/metro.h ../DaisySP/Source/Utility/port.h \
- ../DaisySP/Source/Utility/samplehold.h \
+ ../DaisySP/Source/Utility/jitter.h ../DaisySP/Source/Utility/looper.h \
+ ../DaisySP/Source/Utility/maytrig.h ../DaisySP/Source/Utility/metro.h \
+ ../DaisySP/Source/Utility/port.h ../DaisySP/Source/Utility/samplehold.h \
  ../DaisySP/Source/Utility/smooth_random.h delayline_multitap.h \
  delayline_reverse.h envFollow.h scale.h constants.h taptempo.h LEDs.h \
  oscillator_p.h DelayMulti.h
@@ -656,6 +656,8 @@ QSPI_Settings.h:
 ../DaisySP/Source/Synthesis/zoscillator.h:
 
 ../DaisySP/Source/Utility/jitter.h:
+
+../DaisySP/Source/Utility/looper.h:
 
 ../DaisySP/Source/Utility/maytrig.h:
 

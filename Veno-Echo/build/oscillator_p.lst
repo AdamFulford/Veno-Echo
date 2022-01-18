@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -27,7 +27,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
   24              		.fpu fpv5-d16
   26              	_ZN7daisysp12Oscillator_p7ProcessEv:
   27              	.LVL0:
-  28              	.LFB2770:
+  28              	.LFB2771:
   29              		.file 1 "oscillator_p.cpp"
    1:oscillator_p.cpp **** //#include "dsp.h"
    2:oscillator_p.cpp **** #include "oscillator_p.h"
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
   43 0006 2DED028B 		vpush.64	{d8}
   44              		.cfi_def_cfa_offset 16
   45              		.cfi_offset 80, -16
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 2
 
 
   46              		.cfi_offset 81, -12
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
   69              		.loc 1 42 33 view .LVU9
   70 0030 FFEE008A 		vmov.f32	s17, #-1.0e+0
   71 0034 DFEDDF6A 		vldr.32	s13, .L79+4
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 3
 
 
   72              	.LBB12:
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
   93              	.LBB15:
   72:oscillator_p.cpp ****     if(t < dt)
   94              		.loc 1 72 5 view .LVU16
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 4
 
 
   95 004c F4EEC87A 		vcmpe.f32	s15, s16
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
   44:oscillator_p.cpp ****             out *= 0.707f; // ?
  131              		.loc 1 44 13 is_stmt 1 view .LVU29
   44:oscillator_p.cpp ****             out *= 0.707f; // ?
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 5
 
 
  132              		.loc 1 44 28 is_stmt 0 view .LVU30
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
  172              		.loc 1 80 32 view .LVU44
  173              	.LBE23:
  174              	.LBE22:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 6
 
 
   45:oscillator_p.cpp ****             break;
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
  213 00fe 0123     		movs	r3, #1
  214 0100 84F82530 		strb	r3, [r4, #37]
   52:oscillator_p.cpp ****         eoc_ = true;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 7
 
 
  215              		.loc 1 52 16 view .LVU61
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
   16:oscillator_p.cpp ****             out = 2.0f * (fabsf(t) - 0.5f);
  256              		.loc 1 16 17 view .LVU75
  257 0140 BFEE000A 		vmov.f32	s0, #-1.0e+0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 8
 
 
  258 0144 DFED9A6A 		vldr.32	s13, .L79
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
  295              		.loc 1 20 17 view .LVU92
  296 0182 B1EE400A 		vneg.f32	s0, s0
  297              	.LVL20:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 9
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 9
 
 
   21:oscillator_p.cpp ****         case WAVE_RAMP: out = ((phase_ * TWO_PI_RECIP * 2.0f)) - 1.0f; break;
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
   25:oscillator_p.cpp ****             out = phase_ < PI_F ? 1.0f : -1.0f;
  337              		.loc 1 25 13 view .LVU108
   25:oscillator_p.cpp ****             out = phase_ < PI_F ? 1.0f : -1.0f;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 10
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 10
 
 
  338              		.loc 1 25 19 is_stmt 0 view .LVU109
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
   69:oscillator_p.cpp **** {
  380              		.loc 1 69 14 view .LVU122
  381              	.LBB29:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 11
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 11
 
 
   71:oscillator_p.cpp ****     if(t < dt)
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
  422 0230 B7EE007A 		vmov.f32	s14, #1.0e+0
  423 0234 77EE487A 		vsub.f32	s15, s14, s16
   77:oscillator_p.cpp ****     {
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 12
 
 
  424              		.loc 1 77 10 view .LVU139
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
  463 0276 A7EE280A 		vfma.f32	s0, s14, s17
  464              	.LVL33:
   32:oscillator_p.cpp ****             break;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 13
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 13
 
 
  465              		.loc 1 32 13 is_stmt 1 view .LVU155
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
   72:oscillator_p.cpp ****     {
  503              		.loc 1 72 5 view .LVU172
  504 02a0 F4EEE76A 		vcmpe.f32	s13, s15
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 14
 
 
  505 02a4 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
  544 02dc 01E7     		b	.L12
  545              	.LVL43:
  546              	.L69:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 15
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 15
 
 
   59:oscillator_p.cpp **** 
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
  587 0304 77EEC06A 		vsub.f32	s13, s15, s0
   79:oscillator_p.cpp ****         return t * t + t + t + 1.0f;
  588              		.loc 1 79 11 view .LVU202
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 16
 
 
  589 0308 86EE887A 		vdiv.f32	s14, s13, s16
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
  629              	.L78:
   75:oscillator_p.cpp ****     }
  630              		.loc 1 75 32 view .LVU217
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 17
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 17
 
 
  631              	.LBE37:
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
  670              		.loc 1 75 22 view .LVU232
  671 0362 67EE477A 		vnmul.f32	s15, s14, s14
  672 0366 E7EE067A 		vfma.f32	s15, s14, s12
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 18
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 18
 
 
   75:oscillator_p.cpp ****     }
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
   75:oscillator_p.cpp ****     }
  714              		.loc 1 75 32 view .LVU246
  715 039a 37EE400A 		vsub.f32	s0, s14, s0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 19
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 19
 
 
  716 039e 68E6     		b	.L31
@@ -1103,7 +1103,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
  733 03bc F4FD343F 		.word	1060437492
  734 03c0 DB0FC940 		.word	1086918619
  735              		.cfi_endproc
- 736              	.LFE2770:
+ 736              	.LFE2771:
  738              		.section	.text._ZN7daisysp12Oscillator_p12CalcPhaseIncEf,"ax",%progbits
  739              		.align	1
  740              		.p2align 2,,3
@@ -1114,7 +1114,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
  745              		.fpu fpv5-d16
  747              	_ZN7daisysp12Oscillator_p12CalcPhaseIncEf:
  748              	.LVL68:
- 749              	.LFB2771:
+ 749              	.LFB2772:
   65:oscillator_p.cpp ****     return (TWOPI_F * f) * sr_recip_;
  750              		.loc 1 65 1 is_stmt 1 view -0
  751              		.cfi_startproc
@@ -1138,12 +1138,12 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
  765              	.L83:
  766 0012 00BF     		.align	2
  767              	.L82:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 20
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 20
 
 
  768 0014 DB0FC940 		.word	1086918619
  769              		.cfi_endproc
- 770              	.LFE2771:
+ 770              	.LFE2772:
  772              		.text
  773              	.Letext0:
  774              		.file 2 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/machine/_de
@@ -1188,19 +1188,19 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 1
  813              		.file 41 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/sys/errno.
  814              		.file 42 "../DaisySP/Source/Utility/dsp.h"
  815              		.file 43 "oscillator_p.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s 			page 21
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 oscillator_p.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s:17     .text._ZN7daisysp12Oscillator_p7ProcessEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s:26     .text._ZN7daisysp12Oscillator_p7ProcessEv:0000000000000000 _ZN7daisysp12Oscillator_p7ProcessEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s:51     .text._ZN7daisysp12Oscillator_p7ProcessEv:0000000000000014 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s:59     .text._ZN7daisysp12Oscillator_p7ProcessEv:0000000000000024 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s:730    .text._ZN7daisysp12Oscillator_p7ProcessEv:00000000000003b0 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s:739    .text._ZN7daisysp12Oscillator_p12CalcPhaseIncEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s:747    .text._ZN7daisysp12Oscillator_p12CalcPhaseIncEf:0000000000000000 _ZN7daisysp12Oscillator_p12CalcPhaseIncEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccX6HEQz.s:768    .text._ZN7daisysp12Oscillator_p12CalcPhaseIncEf:0000000000000014 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s:17     .text._ZN7daisysp12Oscillator_p7ProcessEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s:26     .text._ZN7daisysp12Oscillator_p7ProcessEv:0000000000000000 _ZN7daisysp12Oscillator_p7ProcessEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s:51     .text._ZN7daisysp12Oscillator_p7ProcessEv:0000000000000014 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s:59     .text._ZN7daisysp12Oscillator_p7ProcessEv:0000000000000024 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s:730    .text._ZN7daisysp12Oscillator_p7ProcessEv:00000000000003b0 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s:739    .text._ZN7daisysp12Oscillator_p12CalcPhaseIncEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s:747    .text._ZN7daisysp12Oscillator_p12CalcPhaseIncEf:0000000000000000 _ZN7daisysp12Oscillator_p12CalcPhaseIncEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//cceCEJDk.s:768    .text._ZN7daisysp12Oscillator_p12CalcPhaseIncEf:0000000000000014 $d
 
 UNDEFINED SYMBOLS
 fmodf
