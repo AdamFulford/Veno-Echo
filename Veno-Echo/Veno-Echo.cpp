@@ -246,7 +246,8 @@ float PotCVCombo(float Pot_Val, float CV_Val);
 bool checkPickupState(float value, float lastvalue, bool lastState, bool ShiftChange);
 pickupState checkPickupState_alt(float value, float lastValue, pickupState lastState, bool ShiftChange);
 
-static void AudioCallback(float *in, float *out, size_t size)
+//static void AudioCallback(float *in, float *out, size_t size)
+static void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
 
 /*
@@ -379,7 +380,7 @@ Counter = (Counter + 1) % updateDiv;
             break;
         }
 
-    for(size_t i = 0; i < size; i += 2)
+    for(size_t i = 0; i < size; i ++)
     {   
         UpdateClock(); 
         Update_Mod();
@@ -391,6 +392,8 @@ Counter = (Counter + 1) % updateDiv;
         
         float HPFXFadepos = HPF_Env.Process(HPF_sw.getState());
         float LPFXFadepos = LPF_Env.Process(LPF_sw.getState());
+        float Left_In = in[0][i];
+        float Right_In = in[1][i];
 
         //set xfade positions      
         FwdRevLXfade.SetPos(FwdRevLXFadepos);
@@ -417,14 +420,14 @@ Counter = (Counter + 1) % updateDiv;
         float delayRevSignalR = delaysR_REV.Read();
 
         //write input to reverse delay (no feedback)
-        delaysL_REV.Write(in[i]);
-        delaysR_REV.Write(in[i+1]);
+        delaysL_REV.Write(Left_In);
+        delaysR_REV.Write(Right_In);
         //delaysL_REV.Write(Input_L);
         //delaysR_REV.Write(Input_R);
 
         //process Xfade between reverse and direct input
-        float FwdRevSignalLXFade = FwdRevLXfade.Process(in[i],delayRevSignalL);
-        float FwdRevSignalRXFade = FwdRevRXfade.Process(in[i+1],delayRevSignalR);
+        float FwdRevSignalLXFade = FwdRevLXfade.Process(Left_In,delayRevSignalL);
+        float FwdRevSignalRXFade = FwdRevRXfade.Process(Right_In,delayRevSignalR);
 
         //Get combined output from all delay heads
         float delaySignal_L{delayL.GetOutput()};   
@@ -578,30 +581,30 @@ else
 }
         if(drywet < 0.5f)
         {
-            mixL = in[i] + (2.0f * drywet * delaySignal_L_SUM);
-            mixR = in[i+1] + (2.0f * drywet * delaySignal_R_SUM);
+            mixL = Left_In + (2.0f * drywet * delaySignal_L_SUM);
+            mixR = Right_In + (2.0f * drywet * delaySignal_R_SUM);
         }
         else if(drywet > 0.5f)
         {
-            mixL = ((1 - drywet)* 2.0f * in[i]) + delaySignal_L_SUM;
-            mixR = ((1 - drywet)* 2.0f * in[i+1]) + delaySignal_R_SUM;
+            mixL = ((1 - drywet)* 2.0f * Left_In) + delaySignal_L_SUM;
+            mixR = ((1 - drywet)* 2.0f * Right_In) + delaySignal_R_SUM;
         }
         else
         {
-            mixL = in[i] + delaySignal_L_SUM;
-            mixR = in[i+1] + delaySignal_R_SUM;
+            mixL = Left_In + delaySignal_L_SUM;
+            mixR = Right_In + delaySignal_R_SUM;
         }
 
         //send mixes to outputs
         if(mute)
         {
-            out[i] = 0.0f;
-            out[i+1] = 0.0f;
+            out[0][i] = 0.0f;
+            out[1][i] = 0.0f;
         }
         else
         {
-            out[i] = mixL;
-            out[i+1] = mixR;
+            out[0][i] = mixL;
+            out[1][i] = mixR;
         }
 
         //write to DAC for debug
@@ -818,7 +821,7 @@ int main(void)
                     saveState = SAVING; //stop reading ADCs temporarily
                     
                     Settings ToSave{AltControls};   //copy settings
-                    if (SaveSettings(ToSave) == DSY_MEMORY_OK)  //save settings
+                    if (SaveSettings(ToSave) == QSPIHandle::Result::OK)  //save settings
                     {
                     }
                 }

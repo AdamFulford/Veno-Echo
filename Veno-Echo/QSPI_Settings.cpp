@@ -34,7 +34,7 @@ static uint32_t DSY_QSPI_BSS membuff[(4 * BUFF_SIZE) + 1];   //block of memory i
 uint32_t base = (uint32_t) &membuff[0]; //this gives same address as above
 
 //save data to flash memory
-int SaveSettings(const Settings &currentSetting)
+QSPIHandle::Result SaveSettings(const Settings &currentSetting)
 {
     float inbuff[BUFF_SIZE];
 
@@ -66,15 +66,15 @@ int SaveSettings(const Settings &currentSetting)
         writebuff[(4*i) + 4] = bytes[3];
     }
 
-    hw.qspi_handle.mode = DSY_QSPI_MODE_INDIRECT_POLLING;
-	dsy_qspi_init(&hw.qspi_handle);
-    //dsy_qspi_erase( base, base + ( BUFF_SIZE * sizeof(membuff[0]) ) );  //this appears to cause problems?
-    dsy_qspi_erase( base, base + sizeof(membuff) );  //this appears to cause problems?
+    hw.Set_QSPI_INDIRECT_POLLING();
+    hw.qspi_init();
     
-    int retvalue{1};    //initialise as not 0
-    //retvalue = dsy_qspi_write(base, BUFF_SIZE * sizeof(membuff[0]), (uint8_t*)writebuff );
-    retvalue = dsy_qspi_write(base, sizeof(membuff), (uint8_t*)writebuff );
-    dsy_qspi_deinit();
+    hw.qspi.Erase(base, base + sizeof(membuff));
+
+    QSPIHandle::Result retvalue{};    //initialise return value
+    retvalue = hw.qspi.Write(base, sizeof(membuff), (uint8_t*)writebuff);
+
+    hw.qspi_deinit();
     return retvalue;
 }
 
@@ -85,12 +85,12 @@ Settings LoadSettings()
     float readbuff[BUFF_SIZE];
     Settings SettingsInFlash{};
 
-    hw.qspi_handle.mode = DSY_QSPI_MODE_DSY_MEMORY_MAPPED;
-    dsy_qspi_init(&hw.qspi_handle);
+    hw.Set_QSPI_MAPPED_MEMORY();
+    hw.qspi_init();
 
     //memcpy(outbuff,membuff,sizeof(membuff[0]) * TEST_BUFF_SIZE);
     memcpy((void*)&outbuff,(void*)membuff,sizeof(outbuff));
-    dsy_qspi_deinit();
+    hw.qspi_deinit();
     uint8_t bytes[sizeof(float)];
 
     for(uint8_t i = 0; i < BUFF_SIZE; i++)

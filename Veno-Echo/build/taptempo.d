@@ -144,36 +144,48 @@ build/taptempo.o: taptempo.cpp \
  ../DaisySP/Source/Utility/samplehold.h \
  ../DaisySP/Source/Utility/smooth_random.h ../libdaisy/src/daisy_seed.h \
  ../libdaisy/src/daisy.h ../libdaisy/src/daisy_core.h \
- ../libdaisy/src/sys/system.h ../libdaisy/src/per/tim.h \
- ../libdaisy/src/per/qspi.h ../libdaisy/src/per/dac.h \
- ../libdaisy/src/per/gpio.h ../libdaisy/src/dev/leddriver.h \
- ../libdaisy/src/per/i2c.h ../libdaisy/src/dev/sdram.h \
- ../libdaisy/src/dev/sr_4021.h ../libdaisy/src/sys/system.h \
- ../libdaisy/src/hid/audio.h ../libdaisy/src/per/sai.h \
- ../libdaisy/src/util/unique_id.h ../libdaisy/src/per/adc.h \
- ../libdaisy/src/per/uart.h ../libdaisy/src/hid/midi.h \
- ../libdaisy/src/util/ringbuffer.h ../libdaisy/src/hid/encoder.h \
+ ../libdaisy/src/version.h ../libdaisy/src/sys/system.h \
+ ../libdaisy/src/per/tim.h ../libdaisy/src/per/qspi.h \
+ ../libdaisy/src/per/dac.h ../libdaisy/src/per/gpio.h \
+ ../libdaisy/src/dev/leddriver.h ../libdaisy/src/per/i2c.h \
+ ../libdaisy/src/dev/sdram.h ../libdaisy/src/dev/sr_4021.h \
+ ../libdaisy/src/sys/system.h ../libdaisy/src/hid/audio.h \
+ ../libdaisy/src/per/sai.h ../libdaisy/src/util/unique_id.h \
+ ../libdaisy/src/per/adc.h ../libdaisy/src/per/uart.h \
+ ../libdaisy/src/hid/midi.h ../libdaisy/src/util/ringbuffer.h \
+ ../libdaisy/src/hid/MidiEvent.h ../libdaisy/src/hid/usb_midi.h \
+ ../libdaisy/src/hid/usb.h ../libdaisy/src/hid/encoder.h \
  ../libdaisy/src/hid/switch.h ../libdaisy/src/hid/switch3.h \
  ../libdaisy/src/hid/ctrl.h ../libdaisy/src/hid/gatein.h \
- ../libdaisy/src/hid/parameter.h ../libdaisy/src/hid/usb.h \
- ../libdaisy/src/hid/logger.h ../libdaisy/src/hid/logger_impl.h \
+ ../libdaisy/src/hid/parameter.h ../libdaisy/src/hid/logger.h \
+ ../libdaisy/src/hid/logger_impl.h ../libdaisy/src/hid/usb_host.h \
  ../libdaisy/src/per/sdmmc.h ../libdaisy/src/per/spi.h \
- ../libdaisy/src/hid/oled_display.h ../libdaisy/src/util/oled_fonts.h \
- ../libdaisy/src/hid/wavplayer.h ../libdaisy/src/util/wav_format.h \
- ../libdaisy/src/hid/led.h ../libdaisy/src/hid/rgb_led.h \
- ../libdaisy/src/util/color.h ../libdaisy/src/dev/sr_595.h \
- ../libdaisy/src/dev/codec_pcm3060.h ../libdaisy/src/dev/codec_wm8731.h \
- ../libdaisy/src/dev/lcd_hd44780.h \
- ../libdaisy/src/util/scopedirqblocker.h \
- ../libdaisy/Drivers/CMSIS/Include/cmsis_gcc.h \
- ../libdaisy/src/util/WaveTableLoader.h ../libdaisy/src/sys/fatfs.h \
+ ../libdaisy/src/per/rng.h ../libdaisy/src/hid/disp/display.h \
+ ../libdaisy/src/util/oled_fonts.h \
+ ../libdaisy/src/hid/disp/graphics_common.h \
+ ../libdaisy/src/hid/disp/oled_display.h ../libdaisy/src/hid/wavplayer.h \
+ ../libdaisy/src/util/wav_format.h \
  ../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h \
  ../libdaisy/Middlewares/Third_Party/FatFs/src/integer.h \
  ../libdaisy/src/sys/ffconf.h ../libdaisy/src/util/bsp_sd_diskio.h \
- ../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
- ../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h \
- ../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h \
- ../libdaisy/src/util/sd_diskio.h ../libdaisy/src/util/WavWriter.h
+ ../libdaisy/src/hid/led.h ../libdaisy/src/hid/rgb_led.h \
+ ../libdaisy/src/util/color.h ../libdaisy/src/dev/sr_595.h \
+ ../libdaisy/src/dev/codec_pcm3060.h ../libdaisy/src/dev/codec_wm8731.h \
+ ../libdaisy/src/dev/lcd_hd44780.h ../libdaisy/src/dev/mcp23x17.h \
+ ../libdaisy/src/dev/max11300.h ../libdaisy/src/ui/ButtonMonitor.h \
+ ../libdaisy/src/ui/UiEventQueue.h ../libdaisy/src/ui/../util/FIFO.h \
+ ../libdaisy/src/ui/../util/scopedirqblocker.h \
+ ../libdaisy/Drivers/CMSIS/Include/cmsis_gcc.h \
+ ../libdaisy/src/ui/../sys/system.h ../libdaisy/src/ui/PotMonitor.h \
+ ../libdaisy/src/ui/UI.h ../libdaisy/src/ui/../util/Stack.h \
+ ../libdaisy/src/ui/AbstractMenu.h ../libdaisy/src/util/MappedValue.h \
+ ../libdaisy/src/util/FixedCapStr.h \
+ ../libdaisy/src/ui/FullScreenItemMenu.h \
+ ../libdaisy/src/util/CpuLoadMeter.h \
+ ../libdaisy/src/util/PersistentStorage.h ../libdaisy/src/per/qspi.h \
+ ../libdaisy/src/util/VoctCalibration.h \
+ ../libdaisy/src/util/WaveTableLoader.h ../libdaisy/src/sys/fatfs.h \
+ ../libdaisy/src/util/WavWriter.h
 
 ../libdaisy/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 
@@ -507,6 +519,8 @@ taptempo.h:
 
 ../libdaisy/src/daisy_core.h:
 
+../libdaisy/src/version.h:
+
 ../libdaisy/src/sys/system.h:
 
 ../libdaisy/src/per/tim.h:
@@ -541,6 +555,12 @@ taptempo.h:
 
 ../libdaisy/src/util/ringbuffer.h:
 
+../libdaisy/src/hid/MidiEvent.h:
+
+../libdaisy/src/hid/usb_midi.h:
+
+../libdaisy/src/hid/usb.h:
+
 ../libdaisy/src/hid/encoder.h:
 
 ../libdaisy/src/hid/switch.h:
@@ -553,23 +573,37 @@ taptempo.h:
 
 ../libdaisy/src/hid/parameter.h:
 
-../libdaisy/src/hid/usb.h:
-
 ../libdaisy/src/hid/logger.h:
 
 ../libdaisy/src/hid/logger_impl.h:
+
+../libdaisy/src/hid/usb_host.h:
 
 ../libdaisy/src/per/sdmmc.h:
 
 ../libdaisy/src/per/spi.h:
 
-../libdaisy/src/hid/oled_display.h:
+../libdaisy/src/per/rng.h:
+
+../libdaisy/src/hid/disp/display.h:
 
 ../libdaisy/src/util/oled_fonts.h:
+
+../libdaisy/src/hid/disp/graphics_common.h:
+
+../libdaisy/src/hid/disp/oled_display.h:
 
 ../libdaisy/src/hid/wavplayer.h:
 
 ../libdaisy/src/util/wav_format.h:
+
+../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h:
+
+../libdaisy/Middlewares/Third_Party/FatFs/src/integer.h:
+
+../libdaisy/src/sys/ffconf.h:
+
+../libdaisy/src/util/bsp_sd_diskio.h:
 
 ../libdaisy/src/hid/led.h:
 
@@ -585,28 +619,46 @@ taptempo.h:
 
 ../libdaisy/src/dev/lcd_hd44780.h:
 
-../libdaisy/src/util/scopedirqblocker.h:
+../libdaisy/src/dev/mcp23x17.h:
+
+../libdaisy/src/dev/max11300.h:
+
+../libdaisy/src/ui/ButtonMonitor.h:
+
+../libdaisy/src/ui/UiEventQueue.h:
+
+../libdaisy/src/ui/../util/FIFO.h:
+
+../libdaisy/src/ui/../util/scopedirqblocker.h:
 
 ../libdaisy/Drivers/CMSIS/Include/cmsis_gcc.h:
+
+../libdaisy/src/ui/../sys/system.h:
+
+../libdaisy/src/ui/PotMonitor.h:
+
+../libdaisy/src/ui/UI.h:
+
+../libdaisy/src/ui/../util/Stack.h:
+
+../libdaisy/src/ui/AbstractMenu.h:
+
+../libdaisy/src/util/MappedValue.h:
+
+../libdaisy/src/util/FixedCapStr.h:
+
+../libdaisy/src/ui/FullScreenItemMenu.h:
+
+../libdaisy/src/util/CpuLoadMeter.h:
+
+../libdaisy/src/util/PersistentStorage.h:
+
+../libdaisy/src/per/qspi.h:
+
+../libdaisy/src/util/VoctCalibration.h:
 
 ../libdaisy/src/util/WaveTableLoader.h:
 
 ../libdaisy/src/sys/fatfs.h:
-
-../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h:
-
-../libdaisy/Middlewares/Third_Party/FatFs/src/integer.h:
-
-../libdaisy/src/sys/ffconf.h:
-
-../libdaisy/src/util/bsp_sd_diskio.h:
-
-../libdaisy/Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:
-
-../libdaisy/Middlewares/Third_Party/FatFs/src/diskio.h:
-
-../libdaisy/Middlewares/Third_Party/FatFs/src/ff.h:
-
-../libdaisy/src/util/sd_diskio.h:
 
 ../libdaisy/src/util/WavWriter.h:
