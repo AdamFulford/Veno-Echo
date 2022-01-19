@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
   27:LEDs.cpp      **** void TempoLED::init(dsy_gpio_pin ledpin, float samplerate)  //led pin number
   28:LEDs.cpp      **** {
   30              		.loc 1 28 1 view -0
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 2
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 2
 
 
   31              		.cfi_startproc
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
   19:oscillator_p.h ****     enum
   20:oscillator_p.h ****     {
   21:oscillator_p.h ****         WAVE_SIN,
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 3
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 3
 
 
   22:oscillator_p.h ****         WAVE_TRI,
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
   46:oscillator_p.h ****         freq_      = 100.0f;
   86              		.loc 2 46 20 view .LVU16
   87 003a 9FED150A 		vldr.32	s0, .L4+4
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 4
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 4
 
 
   88              	.LBE38:
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
   58:oscillator_p.h ****     inline void SetFreq(const float f)
   59:oscillator_p.h ****     {
   60:oscillator_p.h ****         freq_      = f;
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 5
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 5
 
 
  123              		.loc 2 60 20 view .LVU33
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  158              	.LBE48:
  159              	.LBE56:
  160              	.LBB57:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 6
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 6
 
 
  161              	.LBB58:
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  202 0078 C4ED097A 		vstr.32	s15, [r4, #36]
   61:oscillator_p.h ****     }
  203              		.loc 2 61 9 is_stmt 1 view .LVU58
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 7
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 7
 
 
   61:oscillator_p.h ****     }
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  252              		@ args = 0, pretend = 0, frame = 0
  253              		@ frame_needed = 0, uses_anonymous_args = 0
   41:LEDs.cpp      ****     blink.SetFreq(tempo);
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 8
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 8
 
 
  254              		.loc 1 41 5 view .LVU67
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  299              	.LVL18:
  300              	.LFB4399:
   43:LEDs.cpp      **** 
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 9
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 9
 
 
   44:LEDs.cpp      **** void TempoLED::resetPhase()
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  319              		.loc 1 47 1 view .LVU86
  320 0004 7047     		bx	lr
  321              		.cfi_endproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 10
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 10
 
 
  322              	.LFE4399:
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  362 0014 30EE070A 		vadd.f32	s0, s0, s14
  363              	.LVL23:
  364              		.loc 1 58 12 view .LVU98
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 11
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 11
 
 
  365 0018 20EE270A 		vmul.f32	s0, s0, s15
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
   72:LEDs.cpp      ****     led.Set(ledvalue);
   73:LEDs.cpp      ****     led.Update();
   74:LEDs.cpp      **** }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 12
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 12
 
 
   75:LEDs.cpp      **** 
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  104:LEDs.cpp      ****             retVal = 3 * 6;
  105:LEDs.cpp      ****         break;
  106:LEDs.cpp      ****         case DIV2:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 13
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 13
 
 
  107:LEDs.cpp      ****             retVal = 2 * 6;
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
   72:LEDs.cpp      ****     led.Update();
  445              		.loc 1 72 12 view .LVU120
  446 0024 0198     		ldr	r0, [sp, #4]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 14
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 14
 
 
   71:LEDs.cpp      ****     led.Set(ledvalue);
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  493              		.thumb
  494              		.thumb_func
  495              		.fpu fpv5-d16
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 15
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 15
 
 
  497              	_ZN8TempoLED7LED_setEf:
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  545              		.thumb
  546              		.thumb_func
  547              		.fpu fpv5-d16
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 16
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 16
 
 
  549              	_ZN8TempoLED9GetDivIntE9TempoDivs:
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  146:LEDs.cpp      **** {
  594              		.loc 1 146 1 is_stmt 1 view -0
  595              		.cfi_startproc
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 17
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 17
 
 
  596              		@ args = 0, pretend = 0, frame = 8
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  151:LEDs.cpp      ****     led.Set(0.0f);
  640              		.loc 1 151 12 view .LVU159
  641 0034 3046     		mov	r0, r6
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 18
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 18
 
 
  642 0036 9FED060A 		vldr.32	s0, .L28
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  156:LEDs.cpp      **** led.Update();
  157:LEDs.cpp      **** sw.Debounce();
  158:LEDs.cpp      **** switch (switchtype_)
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 19
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 19
 
 
  159:LEDs.cpp      **** {
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  195:LEDs.cpp      ****     isON = !isON;
  702              		.loc 1 195 10 view .LVU173
  703 0008 00F8103C 		strb	r3, [r0, #-16]
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 20
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 20
 
 
  196:LEDs.cpp      ****     if(isON)
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  750              		.loc 1 155 1 view .LVU183
  751 0006 0446     		mov	r4, r0
  156:LEDs.cpp      **** sw.Debounce();
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 21
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 21
 
 
  752              		.loc 1 156 11 view .LVU184
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
   18:../libdaisy/src/hid/switch.h **** {
   19:../libdaisy/src/hid/switch.h ****   public:
   20:../libdaisy/src/hid/switch.h ****     /** Specifies the expected behavior of the switch */
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 22
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 22
 
 
   21:../libdaisy/src/hid/switch.h ****     enum Type
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  783 0026 7F2B     		cmp	r3, #127
  784 0028 FBD1     		bne	.L34
  163:LEDs.cpp      ****         }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 23
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 23
 
 
  785              		.loc 1 163 13 is_stmt 1 view .LVU196
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  213:LEDs.cpp      **** {
  214:LEDs.cpp      ****     isON = false;
  816              		.loc 1 214 5 view .LVU206
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 24
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 24
 
 
  817              		.loc 1 214 10 is_stmt 0 view .LVU207
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  861 0052 2846     		mov	r0, r5
  208:LEDs.cpp      ****     led.Set(1.0f);
  862              		.loc 1 208 10 view .LVU222
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 25
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 25
 
 
  863 0054 2370     		strb	r3, [r4]
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  904              		.loc 1 191 1 is_stmt 0 view .LVU235
  905 006c BDE83840 		pop	{r3, r4, r5, lr}
  906              		.cfi_restore 14
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 26
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 26
 
 
  907              		.cfi_restore 5
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  954 000a FFF7FEBF 		b	_ZN5daisy3Led3SetEf
  955              	.LVL74:
  209:LEDs.cpp      **** }
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 27
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 27
 
 
  956              		.loc 1 209 12 view .LVU245
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  217:LEDs.cpp      **** 
  218:LEDs.cpp      **** bool ButtonLED::getState() //getter function, so nothing else can change isON
  219:LEDs.cpp      **** {
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 28
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 28
 
 
  1009              		.loc 1 219 1 is_stmt 1 view -0
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  1054 0006 B0FA80F0 		clz	r0, r0
  1055 000a 4009     		lsrs	r0, r0, #5
  1056 000c 7047     		bx	lr
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 29
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 29
 
 
  1057              		.cfi_endproc
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  1106              	_ZN9ButtonLED7LED_setEf:
  1107              	.LVL84:
  1108              	.LFB4413:
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 30
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 30
 
 
  232:LEDs.cpp      **** 
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  1162              		.file 22 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  1163              		.file 23 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
  1164              		.file 24 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 31
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 31
 
 
  1165              		.file 25 "/usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/arm-none-eabi/include/c++/9.2.1/
@@ -1837,54 +1837,54 @@ ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 1
  1198              		.file 58 "constants.h"
  1199              		.file 59 "LEDs.h"
  1200              		.file 60 "../libdaisy/src/dev/sr_595.h"
-ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s 			page 32
+ARM GAS  /var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s 			page 32
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 LEDs.cpp
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:17     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:26     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 _ZN8TempoLED4initE12dsy_gpio_pinf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:233    .text._ZN8TempoLED4initE12dsy_gpio_pinf:000000000000008c $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:239    .text._ZN8TempoLED8setTempoEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:247    .text._ZN8TempoLED8setTempoEf:0000000000000000 _ZN8TempoLED8setTempoEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:290    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:298    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 _ZN8TempoLED10resetPhaseEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:325    .text._ZN8TempoLED6updateEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:333    .text._ZN8TempoLED6updateEv:0000000000000000 _ZN8TempoLED6updateEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:387    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:395    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 _ZN8TempoLED6updateE9TempoDivsf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:483    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000050 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:489    .text._ZN8TempoLED7LED_setEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:497    .text._ZN8TempoLED7LED_setEf:0000000000000000 _ZN8TempoLED7LED_setEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:514    .text._ZN8TempoLED5isEOCEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:522    .text._ZN8TempoLED5isEOCEv:0000000000000000 _ZN8TempoLED5isEOCEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:541    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:549    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 _ZN8TempoLED9GetDivIntE9TempoDivs
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:578    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000018 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:583    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:591    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 _ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:673    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000050 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:678    .text._ZN9ButtonLED6toggleEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:686    .text._ZN9ButtonLED6toggleEv:0000000000000000 _ZN9ButtonLED6toggleEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:720    .text._ZN9ButtonLED6toggleEv:0000000000000020 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:725    .text._ZN9ButtonLED6updateEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:733    .text._ZN9ButtonLED6updateEv:0000000000000000 _ZN9ButtonLED6updateEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:921    .text._ZN9ButtonLED6updateEv:0000000000000074 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:928    .text._ZN9ButtonLED6turnONEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:936    .text._ZN9ButtonLED6turnONEv:0000000000000000 _ZN9ButtonLED6turnONEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:961    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:969    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 _ZN9ButtonLED7turnOFFEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:993    .text._ZN9ButtonLED7turnOFFEv:0000000000000010 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:998    .text._ZN9ButtonLED8getStateEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:1006   .text._ZN9ButtonLED8getStateEv:0000000000000000 _ZN9ButtonLED8getStateEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:1024   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:1032   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 _ZN9ButtonLED10RisingEdgeEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:1061   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:1069   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 _ZN9ButtonLED11FallingEdgeEv
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:1098   .text._ZN9ButtonLED7LED_setEf:0000000000000000 $t
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:1106   .text._ZN9ButtonLED7LED_setEf:0000000000000000 _ZN9ButtonLED7LED_setEf
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:1126   .rodata.CSWTCH.28:0000000000000000 $d
-/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccpEc7fA.s:1130   .rodata.CSWTCH.28:0000000000000000 CSWTCH.28
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:17     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:26     .text._ZN8TempoLED4initE12dsy_gpio_pinf:0000000000000000 _ZN8TempoLED4initE12dsy_gpio_pinf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:233    .text._ZN8TempoLED4initE12dsy_gpio_pinf:000000000000008c $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:239    .text._ZN8TempoLED8setTempoEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:247    .text._ZN8TempoLED8setTempoEf:0000000000000000 _ZN8TempoLED8setTempoEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:290    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:298    .text._ZN8TempoLED10resetPhaseEv:0000000000000000 _ZN8TempoLED10resetPhaseEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:325    .text._ZN8TempoLED6updateEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:333    .text._ZN8TempoLED6updateEv:0000000000000000 _ZN8TempoLED6updateEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:387    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:395    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000000 _ZN8TempoLED6updateE9TempoDivsf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:483    .text._ZN8TempoLED6updateE9TempoDivsf:0000000000000050 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:489    .text._ZN8TempoLED7LED_setEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:497    .text._ZN8TempoLED7LED_setEf:0000000000000000 _ZN8TempoLED7LED_setEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:514    .text._ZN8TempoLED5isEOCEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:522    .text._ZN8TempoLED5isEOCEv:0000000000000000 _ZN8TempoLED5isEOCEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:541    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:549    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000000 _ZN8TempoLED9GetDivIntE9TempoDivs
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:578    .text._ZN8TempoLED9GetDivIntE9TempoDivs:0000000000000018 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:583    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:591    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000000 _ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:673    .text._ZN9ButtonLED4initE12dsy_gpio_pinS0_NS_10SwitchTypeEf:0000000000000050 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:678    .text._ZN9ButtonLED6toggleEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:686    .text._ZN9ButtonLED6toggleEv:0000000000000000 _ZN9ButtonLED6toggleEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:720    .text._ZN9ButtonLED6toggleEv:0000000000000020 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:725    .text._ZN9ButtonLED6updateEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:733    .text._ZN9ButtonLED6updateEv:0000000000000000 _ZN9ButtonLED6updateEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:921    .text._ZN9ButtonLED6updateEv:0000000000000074 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:928    .text._ZN9ButtonLED6turnONEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:936    .text._ZN9ButtonLED6turnONEv:0000000000000000 _ZN9ButtonLED6turnONEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:961    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:969    .text._ZN9ButtonLED7turnOFFEv:0000000000000000 _ZN9ButtonLED7turnOFFEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:993    .text._ZN9ButtonLED7turnOFFEv:0000000000000010 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:998    .text._ZN9ButtonLED8getStateEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:1006   .text._ZN9ButtonLED8getStateEv:0000000000000000 _ZN9ButtonLED8getStateEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:1024   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:1032   .text._ZN9ButtonLED10RisingEdgeEv:0000000000000000 _ZN9ButtonLED10RisingEdgeEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:1061   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:1069   .text._ZN9ButtonLED11FallingEdgeEv:0000000000000000 _ZN9ButtonLED11FallingEdgeEv
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:1098   .text._ZN9ButtonLED7LED_setEf:0000000000000000 $t
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:1106   .text._ZN9ButtonLED7LED_setEf:0000000000000000 _ZN9ButtonLED7LED_setEf
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:1126   .rodata.CSWTCH.28:0000000000000000 $d
+/var/folders/0d/2ntwfkp1791d52chq7d_xwdm0000gn/T//ccmfJFsx.s:1130   .rodata.CSWTCH.28:0000000000000000 CSWTCH.28
 
 UNDEFINED SYMBOLS
 _ZN5daisy3Led4InitE12dsy_gpio_pinbf
