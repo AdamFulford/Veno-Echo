@@ -756,7 +756,7 @@ int main(void)
     lfo.SetFreq(1.0f);
     lfo.SetAmp(1.0f);
 
-    BaseTempo.init(mintap,maxtap,1.25f,24);  //max 6 second tap
+    BaseTempo.init(mintap,maxtap,1.25f,1);  //max 6 second tap
 
     //setup tempo indicators
     //tempoLED_BASE.init(hw.GetPin(14),hw.AudioSampleRate());
